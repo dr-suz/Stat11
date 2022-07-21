@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Statistical Methods in General</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week12-part2_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week12-part2_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week12-part2_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statistical Methods in General
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Overview of statistical methods and concepts 
+
+2. Group worksheet 
+
+3. Review test 2  
+
+4. Looking ahead 
+
+5. Preparing for Test 3 
+
+
+---
+## A Quick Reminder: Key Concepts 
+
+
+**Data science: Collecting and exploring data**
+
+* &lt;font size="3"&gt;The best two pieces of information for any variable are a measure of the location and of the spread of the different possible values.&lt;/font&gt;
+
+* &lt;font size="3"&gt;In exploring data, the more perspectives we can get, the better we can understand the data.&lt;/font&gt;
+
+**Probability: The laws of mathematics that enable statistical inference**
+
+* &lt;font size="3"&gt;A random variable consists of possible values and their corresponding probabilities.&lt;/font&gt;
+
+* &lt;font size="3"&gt;Independence is a crucial, multi-layered concept but is not statistically determinable.&lt;/font&gt;
+
+* &lt;font size="3"&gt;Normal random variables are special for three main reasons...&lt;/font&gt;
+
+  - &lt;font size="3"&gt;Expectation and variance tell us everything we need to know about the distribution.&lt;/font&gt;
+
+  - &lt;font size="3"&gt;They can be combined with other Normal random variables in a satisfying way.&lt;/font&gt;
+
+  - &lt;font size="3"&gt;The ubiquity of the central limit theorem.&lt;/font&gt;
+
+---
+## A Quick Reminder: Key Concepts 
+
+**Statistical inference: Answering the question "how unexpected/weird is your data?"**
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the repeated sampling principle of repeatedly sampling from a larger population.
+
+* Statistical inference *almost always* requires us to have a larger population in mind.
+
+* The scope of the conclusions always depends on the quality of the data and the design of the study. Garbage in means garbage out, from the most basic to the most advanced statistical methods.
+
+--
+* In statistics, we can never prove that a hypothesis (or theory) is true. Rather we can evaluate evidence, in the form of high quality data, in favor of or against a hypothesis (or theory). 
+
+---
+## A look at all statistical inferential methods we've covered 
+
+
+* Inference for proportions 
+
+  - Single proportion or difference in proportions 
+  
+  - Test (one sided or two sided) 
+  
+  - Confidence interval
+
+&lt;br&gt; 
+
+--
+**Q:** What assumptions are necessary for these procedures?
+
+
+---
+## A look at all statistical inferential methods we've covered 
+
+
+* Inference for means 
+
+  - Single mean or difference in means 
+  
+  - Paired or unpaired 
+  
+  - Test (one sided or two sided) 
+  
+  - Confidence interval
+
+&lt;br&gt; 
+
+--
+**Q:** What assumptions are necessary for these procedures?
+
+
+
+---
+## A look at all statistical inferential methods we've covered 
+
+* Inference regarding non-binary categorical variables 
+
+  - Test of homogeneity for a single categorical variable 
+  
+  - Test for goodness-of-fit for a single categorical variable 
+  
+  - Test of independence between two categorical variables 
+  
+&lt;br&gt;
+
+--
+The assumptions necessary for these chi-squared procedures are 
+
+1. The variable(s) of interest is/are categorical and can be represented/counted in a contingency table. 
+
+2. That each cell of the one or two way contingency table has at least 5 observations in it. 
+
+3. If we want to generalize beyond our sample to a larger population, then we must have data from a random sample of the population. 
+
+
+
+---
+## A look at all statistical methods we've covered 
+### In-class worksheet: Which statistical method to use? 
+
+For the next 15 minutes, work with your group mates on the Class 23 worksheet. 
+
+
+**Steps to help answer each question:**
+
+1. What are the observational units and what's the population of interest? 
+
+2. Are there more than one populations of interest? 
+
+3. What are the variables involved (what information is being collected for each observational unit) and what type are they (categorical or numeric)? 
+
+4. What is the parameter of interest? That is, what parameter is your null hypothesis going to be about? 
+
+
+
+.footnote[Source: DANA Center for Mathematics Pathways]
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

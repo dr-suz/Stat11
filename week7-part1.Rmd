@@ -1,9 +1,7 @@
 ---
 title: "Randomness and Probability"
-subtitle: "Class 12"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/19/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -373,18 +371,8 @@ Suppose a magician decides to let you try to determine if a coin he has been usi
 
 How many times would you tell the magician to flip the coin? And, based on the outcomes of these coin flips, how many times would you need to see "heads" to make you confident in asserting that the coin is not fair? 
 
+--
+### Looking ahead 
 
----
-## Looking ahead 
-
-* Print out and read through the definitions and terms to know files at the bottom of our course Moodle page. 
-
-* HW 5 will be posted by the end of the day. Knit the template and read over the questions before class on Thursday.
-
-* Prepare to submit your final project proposal by Thursday Oct 28. Take a look at the assignment on Moodle and the questions that you will need to answer for this.  
-
-* Please submit the mid-semester feedback form under Week 7 on Moodle. 
-
-<br> 
 
 Next class we will discover what is meant by a "sampling distribution" and begin to understand the reasoning behind questions of statistical inference.  

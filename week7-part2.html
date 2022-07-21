@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Randomness and Probability: Sampling Distributions</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week7-part2_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week7-part2_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week7-part2_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Randomness and Probability: Sampling Distributions
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Mid-semester feedback results 
+
+2. Sampling distributions 
+
+  - R simulations for HW 5 
+
+  - Revisiting the reflection prompt - group work 
+  
+3. Types of independence - group work 
+
+4. Looking ahead 
+
+
+---
+### Mid-semester feedback results 
+
+Thanks to those of you who took the time to complete the mid-semester evaluation form. You can take a look at a summary of the responses [here](https://docs.google.com/document/d/1QWvtehgOz4NS1nyVtYjVnRIy9mBqVf6ZjlMSyTXWWtc/edit?usp=sharing).
+
+
+---
+### Sampling distributions
+
+
+**Probability distributions** - describe a random variable and tell us the possible values and the probabilities with which these values occur.
+
+&lt;br&gt; 
+
+--
+*Math world:* Random variables can be made up as long as their probability distributions follow the laws of probability. However, there are some common random variables that are very useful in statistical analysis, such as Normal random variables or Binomial random variables.    
+
+
+--
+*Data/Applied world:* Variables in a data set can be categorical or quantitative and although we can't make up a distribution for these observations, we can explore how a variable is distributed within an observed random sample. 
+
+&lt;br&gt; 
+
+--
+**Q:** What is a sampling distribution? 
+
+
+&lt;br&gt; 
+--
+This is a challenging concept to understand because it is a very abstract/hypothetical idea. To make it more clear, let's draw a picture. 
+
+
+---
+### Group work - revisiting last class's reflection prompt 
+
+Suppose a magician decides to let you try to determine if a coin he has been using in his tricks is fair (that is, there is a `\(50/50\)` chance of either heads or tails). The magician won't let you touch the coin but instead lets you choose the number of times he will flip the coin and show you the result. 
+
+
+How many times would you tell the magician to flip the coin? And, based on the outcomes of these coin flips, how many times would you need to see "heads" to make you confident in asserting that the coin is not fair? 
+
+&lt;br&gt; 
+
+&lt;br&gt; 
+
+**Instructions:** Spend the next `\(7\)` minutes talking with your group about your responses to this reflection prompt. There is nothing for you to hand in, but make sure at least one group member is prepared to share with the class a strategy that you all agree upon. 
+
+
+---
+### Sampling distributions
+
+Recall that Normal random variables are special because of these three main things
+
+* Expectation and variance tell us everything we need to know about the distribution.   
+
+* They can be combined with other Normal random variables in a satisfying way.    
+
+* The ubiquity of the central limit theorem. 
+
+&lt;br&gt; 
+
+--
+The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means* approaches a Normal distribution as the sample size increases. 
+
+&lt;br&gt;
+--
+This means that it doesn't really matter what the distribution of the population from whence the data is drawn is!  
+
+
+
+---
+### R Practice 
+
+Open the Rmd template for HW 5. We are going to go over Problem 8 together. (Problems 9 and 10 are very similar to this problem.)
+
+---
+### Group work - independence 
+
+**Instructions:** You will work with your group for the next few minutes to answer part (b) and (c) below. We'll go over part (a) as a class first. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit.  
+
+&lt;br&gt; 
+
+--
+**Question:** 
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+&lt;br&gt;
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+
+(a) What are the two ways in which independence is relevant in this study?
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+
+
+---
+## Looking ahead 
+
+Next week we are going to start using statistical inference methods! First beginning in the case where we have a binary variable and are interested in the proportion or probability of one particular outcome, then in the case where we have a continuous, numeric variable and are interested in the mean/average value it takes on.  
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

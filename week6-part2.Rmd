@@ -1,9 +1,7 @@
 ---
 title: "Randomness and Probability"
-subtitle: "Class 11"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/7/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -185,50 +183,3 @@ Then use this table to calculate the probability that one of these individuals a
 You will be looking at another group's answers to determine which were incorrect. Identify (write on their worksheet)
  which probability misconception may have been involved. 
  
- 
-**Answers:**
-
-1. E 
-
-2. B 
-
-3. B 
-
-4. C 
-
-5. B 
-
-6. A
-
-
----
-### Final Project Options 
-
-I will upload some final project ideas/examples to Moodle later today. 
-
-<br> 
-You may complete the final project by yourself or in a group of no more than five.  
-
-<br> 
-
-You will submit your project proposal on Moodle by the 21st. 
-
-
-<br>
-
-The first draft of your report will be evaluated by your peers. I will evaluate the final version which is due on the last day of class. 
-
----
-### Test 1 Review 
-
-You may submit corrections for half-credit to my mailbox outside my office SC 136 by 6pm this Friday. You may work with others on these corrections! 
-
----
-## Looking ahead 
-
-
-* Start to think about which final project option you'd like to do and outline a proposal. 
-
-* I will check my email on Monday and Friday over break and spend no more than 60 minutes on student emails. 
-
-I hope you have a restful and enjoyable fall break! 

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Statistical Methods in General</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week12-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week12-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week12-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statistical Methods in General
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Lecturette for inference concerning categorical variables (15 min)
+
+2. Test 2 review and group work (20 min)
+
+3. HW 8 coding focus (10 min)
+
+4. Reflection prompt (10 min)
+
+5. Looking ahead - due dates (5 min)
+
+6. Looking ahead - final project and test 3 (10 min)
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Test of homogeneity
+
+Are the different possible outcomes (that is, the, say `\(k\)`, different levels) of a (categorical) variable equally likely? 
+
+`\begin{cases}
+H_0: p_1 = p_2 = p_3 = \dots = p_k \\
+H_A: \text{At least one of the } k \text{ probabilities in the null}\\
+\quad \quad \text{ is different from the others.} 
+\end{cases}`
+
+--
+
+```r
+# chisq.test(x = vector_of_varb_counts)
+```
+
+
+
+**Q:** What happens if our categorical variable only has two levels? 
+
+
+--
+**A:** In this case, the test for homogeneity is the same as the test for a single population proportion where the null is `\(H_0: p = 0.5\)`! 
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Goodness-of-fit test 
+
+Does a hypothesized probability distribution for the (say, `\(k\)`) levels of your categorical variable fit your data well?
+
+`\begin{cases}
+H_0: p_1 = p{1,0}, p_2 = p_{2,0}, p_3 = p_{3,0}, \dots p_k = p_{k,0} \\
+H_A: \text{At least one of the } k \text{ probabilities stated in} \\
+\quad \quad \text{ the null is incorrect.} 
+\end{cases}`
+
+
+Just as in our other hypothesis tests, the values stated in the null `\(p_{1,0}, p_{2,0}, \dots\)` are actual numbers (proportions/probabilities) between zero and one. 
+
+
+--
+
+```r
+# chisq.test(x = vector_of_varb_counts, p = c(prob1_null, prob2_null, prob3_null, ..., probk_null))
+```
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+`\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}`
+
+
+Unlike every other test we have discussed in this class, there are no parameters involved in this test! 
+
+
+--
+**Q:** What happens if both categorical variables only have two levels each? 
+
+
+--
+**A:** In this case, the test for independence is the same as the two sample test for a difference in proportions where the null is `\(H_0: p_1 - p_2 = 0\)`! 
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+`\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}`
+
+
+
+
+```r
+# chisq.test(x = two_way_contingency_table_as_a_matrix)
+```
+
+See the next few slides for details on the **three step coding process** for this test. 
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+Recall the `gss_cat` data from last class. 
+
+```r
+library(forcats)
+head(gss_cat) 
+```
+
+```
+## # A tibble: 6 x 9
+##    year marital      age race  rincome    partyid     relig     denom    tvhours
+##   &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt; &lt;fct&gt;      &lt;fct&gt;       &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt;
+## 1  2000 Never mar…    26 White $8000 to … Ind,near r… Protesta… Souther…      12
+## 2  2000 Divorced      48 White $8000 to … Not str re… Protesta… Baptist…      NA
+## 3  2000 Widowed       67 White Not appli… Independent Protesta… No deno…       2
+## 4  2000 Never mar…    39 White Not appli… Ind,near r… Orthodox… Not app…       4
+## 5  2000 Divorced      25 White Not appli… Not str de… None      Not app…       1
+## 6  2000 Married       25 White $20000 - … Strong dem… Protesta… Souther…      NA
+```
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 1: Create a two-way contingency table of all possible combinations of levels** 
+
+.scroll-small[
+We can create a two-way contingency table, called `my_table` for two categorical variables (say, `marital` and `reilg`) with the following R code: 
+
+```r
+my_table &lt;- gss_cat %&gt;% filter(!is.na(marital) &amp; !is.na(relig)) %&gt;%  ## this eliminates any rows that are missing values for the two variables of interest 
+                        group_by(marital, relig) %&gt;%  ## specify which categorical variables you want to tabulate
+                        summarise(counts = n())  %&gt;%  ## this specifies that we are creating a summary called "counts" which counts the number of observation in each level of each variable
+                        spread(relig, counts)         ## specify which variable you want in the columns 
+my_table
+```
+
+```
+## # A tibble: 6 x 16
+## # Groups:   marital [6]
+##   marital  `No answer` `Don't know` `Inter-nondenomi… `Native america… Christian
+##   &lt;fct&gt;          &lt;int&gt;        &lt;int&gt;             &lt;int&gt;            &lt;int&gt;     &lt;int&gt;
+## 1 No answ…           4           NA                NA               NA         1
+## 2 Never m…          22            6                30                8       218
+## 3 Separat…           3            3                 3                2        32
+## 4 Divorced          13            1                26                4       132
+## 5 Widowed            7           NA                 3                2        24
+## 6 Married           44            5                47                7       282
+## # … with 10 more variables: Orthodox-christian &lt;int&gt;, Moslem/islam &lt;int&gt;,
+## #   Other eastern &lt;int&gt;, Hinduism &lt;int&gt;, Buddhism &lt;int&gt;, Other &lt;int&gt;,
+## #   None &lt;int&gt;, Jewish &lt;int&gt;, Catholic &lt;int&gt;, Protestant &lt;int&gt;
+```
+]
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 2: Convert your contingency table into a matrix.** 
+
+.scroll-small[Then we can convert `my_table` into a matrix using the `as.matrix()` function. 
+
+```r
+my_matrix &lt;- as.matrix(my_table)
+my_matrix 
+```
+
+```
+##      marital         No answer Don't know Inter-nondenominational
+## [1,] "No answer"     " 4"      NA         NA                     
+## [2,] "Never married" "22"      " 6"       "30"                   
+## [3,] "Separated"     " 3"      " 3"       " 3"                   
+## [4,] "Divorced"      "13"      " 1"       "26"                   
+## [5,] "Widowed"       " 7"      NA         " 3"                   
+## [6,] "Married"       "44"      " 5"       "47"                   
+##      Native american Christian Orthodox-christian Moslem/islam Other eastern
+## [1,] NA              "  1"     NA                 NA           NA           
+## [2,] " 8"            "218"     "13"               "31"         "10"         
+## [3,] " 2"            " 32"     " 2"               " 3"         " 1"         
+## [4,] " 4"            "132"     "14"               "15"         " 6"         
+## [5,] " 2"            " 24"     " 3"               NA           " 2"         
+## [6,] " 7"            "282"     "63"               "55"         "13"         
+##      Hinduism Buddhism Other None   Jewish Catholic Protestant
+## [1,] NA       " 1"     " 1"  "   2" NA     "   1"   "   7"    
+## [2,] "22"     "49"     "84"  "1413" " 92"  "1283"   "2135"    
+## [3,] NA       " 4"     " 5"  " 123" "  9"  " 180"   " 373"    
+## [4,] " 2"     "21"     "47"  " 573" " 53"  " 684"   "1792"    
+## [5,] NA       " 7"     " 9"  " 119" " 38"  " 433"   "1160"    
+## [6,] "47"     "65"     "78"  "1293" "196"  "2543"   "5379"
+```
+]
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 3: Plug the matrix of counts into the `chisq.test()` function**
+.scroll-small[
+Now (*if we didn't have any empty cells*) we could plug this *matrix* into the `chisq.test()` function to do a test for the independence of the two categorical variables `marital` and `relig`. Since we do have at least one religious affiliation and marital status combination without any observations (e.g. "Hinduism" and "Widowed"), we cannot actually do a chi squared test for independence! (So the following code doesn't actually work but is meant to give you a sense of how to code this test in cases where it does apply.)
+
+```r
+#chisq.test(x = my_matrix)
+```
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

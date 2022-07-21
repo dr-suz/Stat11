@@ -1,8 +1,7 @@
 ---
 title: "Poster Presentations!"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "12/7/21 (updated: `r Sys.Date()`)"
 output:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
   xaringan::moon_reader:
@@ -43,7 +42,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 

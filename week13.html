@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Poster Presentations!</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 11 with Prof. Suzy" />
+    <script src="week13_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week13_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week13_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Poster Presentations!
+### STAT 11 with Prof. Suzy
+### Swarthmore College
+### 12/7/21 (updated: 2022-07-21)
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+
+## Today's agenda 
+
+1.  .green[9:55am - 10:05am]  Poster set-up 
+
+2. .green[10:05am - 10:45am]  Mingle and discuss projects 
+
+3. .green[10:45am - 11:00am]  Pause to complete peer-review questionnaire. 
+
+4. .green[11:00am - 11:10am]  Looking ahead and cookies 
+
+
+
+---
+## Preparing for test 3 
+
+
+* See the updated formula sheet. 
+
+* You are allowed to use non-graphing calculators and the formula sheet on the test and I will have scrap paper for you if you need it. 
+
+* I will also print out copies of the R documentation for each of the following functions so you can reference them during the test: `prop.test()`, `t.test()`, and `chisq.test()`. 
+
+* See this [study guide](https://moodle.swarthmore.edu/pluginfile.php/706658/mod_resource/content/1/course_study_guide.pdf) for what is expected in Stat 21 (I made this last year so ignore the dates).  
+
+
+--
+
+### Office hours
+
+* Thursday, Dec 9 from 11:00am - 12:30pm in SCI 136 (no appointment necessary)
+
+* Monday Dec 13 from 2:30pm - 4:00pm in SCI 136 (no appointment necessary)
+
+* Zoom appointments available upon request but subject to my schedule constraints (appointment necessary)
+
+---
+## Preparing for test 3 
+
+.green[**Some advice**] 
+
+* Review all class material (HW, slides, reflection prompts, etc) and use the textbook to supplement your review for any parts that you feel less confident or confused about. 
+  
+* Create your own study guide/cheat sheets for each topic or section (data science, probability, and inference).  
+  
+* Use the formula sheet while you are studying to become familiar with the symbols and notation and where to look for what so it is not unfamiliar to you on test day. 
+  
+* *Get at least 7 hours of sleep each night and eat at least two meals each day.*
+
+---
+### Looking ahead 
+
+* Test 2 graded by end of this week 
+
+* Final projects graded by Test 3 
+
+* Course evaluations and .green[the value of this educational opportunity] 
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+--
+.center[**Thank you for your participation in this learning community!**]
+
+.center[...and enjoy your break!]
+
+
+
+     
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,9 +1,7 @@
 ---
 title: "Using the laws of probability to draw statistical conclusions"
-subtitle: "Class 18"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/9/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -76,21 +74,14 @@ pre {
      
 ## Today 
 
-1.  Reflection prompt - warm up (until 10:05am)
+1.  Reflection prompt - warm up 
 
-2.  Review concepts (10:05am - 10:40am) - ask me questions! 
+2.  Review concepts - ask me questions! 
 
-3.  Group work - sample size determination (time permitting)   
+3.  Group work - sample size determination   
 
 4.  Looking ahead  
 
-<br>
-
-<br>
-
-<br>
-
-**Note:** Test 2 will NOT cover Ch 17 Confidence Intervals for Means. This is where we will pick up next week. The course calendar has been updated accordingly. 
 
 
 
@@ -196,48 +187,3 @@ Suppose we are interested in detecting whether the incidence of a certain side e
 
 **Instructions:** Work with your group to address the above prompts. You may make use of this [sample size calculator](https://select-statistics.co.uk/calculators/sample-size-calculator-population-proportion/) online if you'd like. 
 
-
-
----
-## R stuff to know for Test 2 
-
-* Understanding how a data object (e.g. a `tibble`) is structured in general. 
-
-* Interpret output from the `summarise()` function as applied to a data object. 
-
-* Using the `pnorm()` and `qnorm()` functions. 
-
-* Using the `prop.test()` function to calculate a p-value or to calculate a confidence interval.  
-
-
-
----
-## Prepare for next class
-
-
-Next class will be the second mid-term exam/quiz. Come prepared to class by 
-
-* Bring a black or blue pen or pencil; 
-
-* Bring a non-graphing calculator if desired; 
-
-* Getting a full night's sleep!  
-
-
-The first five minutes we will be setting up, then remaining $70$ minutes are for you to complete your answers. The formula sheet has been updated and is available on Moodle under the Announcements at the top of the page. 
-
-
-**Content warning:** the data you will examine on the test is relevant to current events and reflects information about the real world in which we live. Topics may include things such as the COVID pandemic and/or economic and social trends and patterns.  
-
----
-## Prepare for next week 
-
-* HW 7 will be released this Thursday. Please knit and read over the questions before class on Tuesday next week. It is due next Friday, the 19th.   
-
-* Read Chapters 17 and 20 in the 5th edition of your textbook for class next week. 
-
-* Make sure everyone in your group knows what they need to do for your final project. The rough draft of your report is due at the end of the month.
-
-  - Nov 30 for group projects 
-  
-  - Nov 24 for individual projects 

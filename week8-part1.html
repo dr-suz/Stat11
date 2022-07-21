@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Statistical inference - answering the question: how weird is your data?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week8-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week8-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week8-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statistical inference - answering the question: how weird is your data?
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Transitioning from probability to statistics
+  
+  - Group activity - independence is multi-layered 
+  
+2. Statistics and the CLT
+
+  - Group activity - independence of random variables vs random events 
+ 
+3. Final project speed dating (time permitting)
+
+4. Reflection prompt 
+
+5. Looking ahead 
+
+
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about data science 
+
+
+**Data science: Collecting and exploring data** 
+
+--
+* The best two pieces of information for any variable are a measure of the *location* and of the *spread* of the different possible values.
+
+--
+* In exploring data, the more perspectives we can get, the better we can understand the data. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about probability
+
+**Probability: the laws of mathematics that enable statistical inference**
+
+--
+* A random variable consists of possible values and their corresponding probabilities. 
+
+--
+* *Independence* is a crucial, multi-layered concept but is not statistically determinable. 
+
+
+
+---
+## Independence 
+### Group work
+
+
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+&lt;br&gt;
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+&lt;br&gt;
+**Instructions:** You will work with your group for the next few minutes to answer part (b) and (c). We'll go over part (a) as a class first. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit.  
+
+---
+## Independence 
+### Group work
+
+
+**Question:** 
+
+(a) What are the two ways in which independence is relevant in this study?
+
+
+--
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about probability
+
+**Probability: the laws of mathematics that enable statistical inference**
+
+* A random variable is two things: possible values and their corresponding probabilities. 
+
+* *Independence* is a crucial, multi-layered concept but is not statistically determinable. 
+
+--
+* Normal random variables are special for three main reasons...
+
+--
+  - Expectation and variance tell us everything we need to know about the distribution.   
+
+  - They can be combined with other Normal random variables in a satisfying way.    
+
+  - The ubiquity of the *central limit theorem*. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about statistics
+
+**Statistics: Answering the question - how weird is your data?** 
+
+* The *sampling distribution* of the sample mean (or sample proportion) is a hypothetical distribution based on the *repeated sampling principle* of repeatedly sampling from a larger population. 
+
+
+
+
+---
+## Transitioning from probability to statistics 
+
+The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means* approaches a Normal distribution as the sample size increases. 
+
+&lt;br&gt; 
+--
+**Q:** What are the conditions necessary for the CLT to apply? 
+
+&lt;br&gt;
+--
+**A:** The assumptions necessary for the CLT to apply to a sample mean or sample proportion are that: 
+
+- The number of observational units is large (usually at least `\(n&gt;30\)`) BUT the sample must not represent more than `\(10\%\)` of the larger population. 
+
+- The data (observed values of the assumed random variable) are *independent* - meaning the sample is drawn randomly (wherever possible) from some population so that the sample is representative of the population.  
+
+
+
+
+---
+## Independence 
+### Group work  
+
+**HW 5 Problem 3:** "In your own words, describe what it means for two random variables to be independent. Also describe what it means for two random events to be independent. Make sure your descriptions can distinguish these two types of independence."
+
+**Instructions:** Spend the next `\(5\)` minutes talking with your group about your answer to this question. Assign a (new) reporter who will share your ideas with the class afterwards. 
+
+&lt;br&gt;
+
+Hint: Consider two random variables `\(X\)` and `\(Y\)` and their respective sample spaces. Then, consider two arbitrary random events (from any sample space) `\(A\)` and `\(B\)` and the mathematical definition of independent events. 
+
+
+
+---
+### Reflection prompt 
+
+
+From your perspective, what are the three key ideas you have learned about probability, the mathematical laws that enable statistical conclusions from a random sample of data? 
+
+
+
+--
+### Looking ahead 
+
+Next class, we are going to revisit the magician and his possibly un-fair coin example using 
+
+* a confidence interval for the actual probability of a heads and 
+
+* a hypothesis test about the probability of a heads. 
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

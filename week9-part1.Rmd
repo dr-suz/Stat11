@@ -1,9 +1,7 @@
 ---
 title: "Statistical inference for a proportion"
-subtitle: "Class 16"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/2/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -85,20 +83,6 @@ pre {
 4. Group work - Class 15 worksheet and reflection prompt
 
 5. Looking ahead  
-
----
-### Before we begin.... 
-
-This is a good time of the semester to revisit the class [syllabus](https://docs.google.com/document/d/1ETuLogK7_9RueU3X4LIdQyQ1jZ80IJFu/edit) and reflect on your plan for the rest of the course. 
-
-* Is there anywhere you could improve your grade besides HW and Exam scores? 
-
-* Have you been taking advantage of office hours? 
-
-* Have you been reviewing the HW solutions carefully? 
-
-
-Also, I spoke with the Muses yesterday and went over HW 5 and 6 with them. I want to remind you of this **R tip:** Chunks without any code are to be used as space for doing calculations "by hand", chunks with structured code that you have to fill in are based on work we've done in class and that is the most coding you are expected to do.  
 
 
 
@@ -227,46 +211,7 @@ What significance level would you choose to evaluate a hypothesis test about whe
 
 Interpret this significance level in terms of how frequently you would expect an event to happen "by chance". Explain what is meant by the phrase "by chance" in this context. 
 
-
-
-
----
-## Looking ahead 
-
-* HW 6 is due this Friday by 6:00pm. No late homework is accepted!  
-
-* Exam 2 is next Thursday, in class, same policies as for Exam 1. 
-
-* Final project feedback will be available on Moodle by Friday.
-
-* Exam 1 re-grades will be published on Gradescope by the end of today. 
-
-* Today is voting day! 
+--
+### Looking ahead 
 
 Next class, we will continue to talk about statistical inference for an unknown proportion. Next Tuesday will be review and a general discussion about hypothesis tests and confidence intervals. 
-
----
-## Announcements 
-
-**Math/Stat Career Panel**
-<br>
-Are you curious about what you can do with a math/stat degree?
-
-Come meet Swarthmore math and statistics alumni. Hear about their career experiences and journeys. Find out about summer job and internship opportunities. Ask questions and get valuable advice for your own career!
-<br> 
-
-**When:** Friday, November 5, 3:30-4:30pm
-**Where:** SC 105
-<br> 
-
-**Who:**
-
-- Allison Gantt '14 Mathematics Educator and Ph.D. Student in Education, University of Delaware
-
-- Jessica Larson '06, Biostatistician, Natera
-
-- Brendan McVeigh '11, Data Scientist, Waymo
-
-- Jason Mendoza '16, Vice President and Risk Manager, Citi
-
-- Kenny Ning '14, Analytics Engineer, Supergrain

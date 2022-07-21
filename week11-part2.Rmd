@@ -1,9 +1,7 @@
 ---
 title: "Introducing common statistical methods"
-subtitle: "Class 20"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/18/21 (updated: `r Sys.Date()`)"
 output:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
   xaringan::moon_reader:
@@ -44,7 +42,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -305,36 +303,4 @@ or
 .footnote[\* Source: https://online.stat.psu.edu/stat415/lesson/3/3.3]
 
 
-
----
-## Looking Ahead
-### Final Project 
-
-  - The deadline for the rough draft of your project report has been extended (Nov 30 for individual projects, Dec 1 for individual projects). Your final report and posters are due on Dec 7. 
-
-  - The last day of class you will have 5 minutes to present your final project to the class. Bring your poster and assign a person to be the reporter/presenter. The remainder of the class will be time to explore other peoples projects and ask questions about them. Each person will have a questionnaire to fill out for another project to encourage everyone to explore another project and explain their own.  
   
-  - Every group member should contribute to the report or to the poster, not just the individuals responsible for printing or submitting them. By contribute I mean, write something, or create an image or plot, or find relevant sources, etc.
-  
-  
-
----
-## Looking ahead 
-
-* Next class
-
-  - Test 2 will be handed back to you for corrections which are due on Friday, Dec 3rd.
-  
-  - We will cover how to conduct the different Chi-square procedures in R and practice determining which procedure to use for different scenarios. 
-
-  - Last reading assignment: Ch 21 and 22 (5th edition) 
-  
-  - Take a look at our [course calendar](https://docs.google.com/document/d/1d8kF77EoqvAgjfTyNRDUF3HOJvxFu9IQ2JJwpem9B_8/edit#heading=h.ijnwiall66zb) to make sure you are aware of the adjusted deadlines
-  
-* Homework
-
-  - HW 7 will is due this Friday by 6pm. Office hours start after class and last until 12:30pm today.
-
-  - HW 8 will be due over Thanksgiving break. This will involve practice setting up, conducting, and interpreting the results of the different inferential methods from HW 7 Problem 1. It will be posted tomorrow. 
-
-  - Your last HW assignment, HW 9, will be different from the others and will be graded entirely for completion and is worth $15$ HW points. 

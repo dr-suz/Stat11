@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Statistical inference for a proportion</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week9-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week9-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week9-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statistical inference for a proportion
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Review Class 15 Worksheet probs 1-5 and key concepts 
+
+2. Hypothesis tests for proportions - lecturette 
+
+3. CIs for proportions - vocabulary 
+
+4. Group work - Class 15 worksheet and reflection prompt
+
+5. Looking ahead  
+
+
+
+---
+## Review
+### Class 15 Worksheet and key concepts 
+
+**Data science**
+
+1. What are the two most important pieces of information for any variable? 
+
+2. What do we mean by "more perspectives is better"? 
+
+
+**Probability**
+
+1. What is a RV? 
+
+2. What does it mean for a sample of data to be independent or for RVs to be independent? 
+
+3. What are the three special features of Normal RVs? 
+
+
+**Statistics**
+
+1. Can you explain what a sampling distribution of a sample estimate is with respect to the repeated sampling principle? 
+
+
+
+---
+## Review
+### Class 15 Worksheet and key concepts 
+
+
+When can `\(\hat{p}\)` be random? 
+
+When is `\(\hat{p}\)` an observed, calculated number? 
+
+
+
+
+
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+The test statistic associated with either a one-sided or two-sided hypothesis test for an unknown proportion, `\(p\)` is 
+`$$T.S. = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \hspace{.5cm} \widetilde{\tiny H_{0}}  \hspace{.5cm} N(0,1).$$`
+--
+This is because of the CLT which states conditions under which 
+`$$\hat{p} \sim N\left(p, \frac{p(1-p)}n\right)$$`
+and hypotheses are evaluated under the assumption that the null, `\(H_0\)` is actually correct. 
+
+
+--
+**Q:** What is the standard deviation of the sampling distribution of the sample proportions? 
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+
+**New terminology:**
+
+1. A *p-value* is the conditional probability that the sampling distribution of `\(\hat{p}\)` takes on the value you observe based on your data, `\(\hat{y}_{obs}\)`, or something more extreme, given that the null hypothesis is true. In other words: A p-value quantifies how weird/rare your observed value of `\(\hat{p}\)` is, if the null hypothesis were in fact correct. 
+
+
+2. A *significance level* is a pre-specified value between `\(0\)` and `\(1\)` that indicates the researchers threshold for describing an observed value of `\(\hat{p}\)` as rare (or, significant) under the null hypothesis. 
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+**Q:** What does "more extreme" mean?
+
+
+--
+**A:** This depends entirely on the direction of the alternative hypothesis. It could be a value greater than or equal to, or less than or equal to for one-sided alternative hypothesis tests. 
+
+For two-sided alternative hypothesis tests, more extreme means greater than or less than the absolute value of the observed `\(\hat{p}\)`. 
+
+
+---
+## Formulas for inference about a proportion 
+### Confidence intervals
+
+A `\((1-\alpha)\times 100\%\)` CI for an unknown proportion, `\(p\)`, is 
+`$$\hat{p}_{obs} \pm \left( z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\right),$$`
+where `\(z_{\alpha/2}\)` is the lower `\(\alpha/2^{th}\)` quantile of a `\(N(0,1)\)` distribution. 
+
+
+---
+## Formulas for inference about a proportion 
+### Confidence intervals
+
+A `\((1-\alpha)\times 100\%\)` CI for an unknown proportion, `\(p\)`, is: 
+`$$\hat{p}_{obs} \pm \left( z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\right).$$`
+
+
+**New terminology:** 
+
+1. `\(\sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\)` is called the *standard error* of the sampling proportion, often abbreviated `\(SE(\hat{p})\)`.
+
+2. Half of the width of the CI is `\(z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\)`, which is called the *margin of error*, often abbreviated `\(ME\)`. 
+
+
+&lt;br&gt; 
+We will revisit CIs for an unknown proportion next class. 
+
+---
+### Group work 
+
+**Instructions:** Complete the rest of the Class 15 worksheet with your group. Draw your pictures for Problem 10 on the whiteboard. Choose one person to be the reporter. The reporter will be responsible for explaining your picture to the rest of the class. 
+
+
+
+
+
+---
+### Reflection prompt 
+
+Refer to your response to the Week 7 reflection prompt and to your notes for today's class. 
+
+What significance level would you choose to evaluate a hypothesis test about whether or not the coin is biased (towards heads)? 
+
+Interpret this significance level in terms of how frequently you would expect an event to happen "by chance". Explain what is meant by the phrase "by chance" in this context. 
+
+--
+### Looking ahead 
+
+Next class, we will continue to talk about statistical inference for an unknown proportion. Next Tuesday will be review and a general discussion about hypothesis tests and confidence intervals. 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

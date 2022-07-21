@@ -1,9 +1,7 @@
 ---
 title: "Statistical Methods in General"
-subtitle: "Class 22"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/30/21 (updated: `r Sys.Date()`)"
 output:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
   xaringan::moon_reader:
@@ -44,7 +42,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -233,105 +231,3 @@ Now (*if we didn't have any empty cells*) we could plug this *matrix* into the `
 ```
 ]
 
-
-
-
----
-## Test 2 Review and Group Work 
-
-.scroll-output[
-Problem 1: Which do you suspect are made-up and why? Not "which are possible"! 
-
-Problem 2 and 3: The expectation of a RV is equal to the sum of all it's possible values times the probabilities with which they occur. The variance of a RV is sum of the (squared) difference between each possible value and the expected value time the probabilities with which these values occur. 
-
-Problem 4: Make sure you review the R code for the different methods we have covered in class. 
-
-Problem 5: One statement is accurate, one statement is the worst of the three and another is somewhat ambiguous. 
-
-Problem 6: Pretend you have a random sample of $1000$ individuals in total and complete the table to then find the requested conditional probability. 
-
-Problem 7: What does it mean for two RVs to be independent of one another? 
-
-Problem 8: For this problem, you need to understand the difference between a population and a population parameter and you are taking a position that challenges the effectiveness of the housing first initiative. Ask yourself, what is the probability of a major negative life change if the housing first policy is no more effective (or is less effective) than other interventions meant to reduce homelessness? 
-
-Problem 9: Your hypotheses should follow directly from your answer to Problem 8. For this problem, take the perspective of an advocate for the housing first initiative. 
-
-Problem 10: Review the images we drew in Class 17 (for example) starting at minute 36:50. 
-
-]
-
----
-## Homework 8 Coding Details 
-
-Let's take a look at the latest version of the HW 8 template, particularly for Problems 2 and 3. 
-
-<br> 
-
-These problems require a bit more involved coding than on your previous homework so I want to take a few minutes to go over this code together as a class. 
-
-
----
-## Reflection prompt 
-
-Today's reflection prompt will be one of the five free response questions on your final exam. This is an opportunity for you to brainstorm an answer that you can improve upon for your final. 
-
-
-
----
-## Looking ahead 
-### Due Dates and Next Class
-
-[Calendar Updates](https://docs.google.com/document/d/1d8kF77EoqvAgjfTyNRDUF3HOJvxFu9IQ2JJwpem9B_8/edit#)
-
-.scroll-output[
-* Test 2 
-
-  - Test 2 corrections are due to be submitted online on Friday, Dec 3rd. by midnight. No extensions!
-  
-  - You must upload both your original answer and your corrected answer. If you got full credit for a problem, then select your original answer for both the original and corrected parts on Gradescope. 
-  
-  - Please make sure you get the entire page in your pictures and that you have enough lighting. [Camscanner](https://www.camscanner.com/download) is a free app that takes really high quality photos of documents.  
-
-* Homework
-
-  - HW 8 is due on Friday, Dec 3 by midnight. 
-
-  - HW 9 will be graded entirely for completion and is worth $15$ HW points. It is due by Tuesday, Dec 7 at midnight and you are encouraged to work with your group mates on this assignment (so you MAY turn in identical copies and still receive full credit as long as all collaborators are listed). There will be a free response question on Test 3 related to HW 9. 
-  
-* Next class
-
-  - We will further discuss the notion of independence. 
-  
-  - We will go through an exercise to determine which statistical method to use in different scenarios.
-  
-  - I will go over a brief introduction to simple linear regression and analysis of variance (ANOVA) methods which will NOT be on Test 3. 
-  
-]
-
-
----
-## Looking Ahead
-
-.scroll-output[
-### Final Project 
-
-  - The rough draft of your project report is due next week. (Nov 30 for individual projects, Dec 1 for individual projects). 
-  
-  - Your final report and posters are due on Dec 7. 
-  
-  - The first part of your peer review is due to be submitted to Gradescope by midnight on Dec 7. Upload the completed sheet as a PDF file, just as you have done for our homework assignments. 
-
-  - The last day of class will be an academic poster presentation session. You must bring your poster and each person should be ready to discuss your project with others. You will have the entire class time to explore other peoples projects and ask questions about them. Each person will have a [questionnaire](https://drive.google.com/file/d/1aSNbKdwDUvVWLC9LuSMGresAT5z-ppvK/view?usp=sharing) to fill out and hand in at the end of class. This will count as the second part of your peer review component. You will be graded for demonstrating critical thinking skills in both peer review components.
-  
-  - Before the poster session, make sure you take some time (30 minutes or so) to read through the report drafts uploaded to Moodle. You can find uploaded drafts on the "Submit the First Draft of Your Report" link on Moodle. This will make the poster session move more smoothly and will give you a sense of which three projects you want to evaluate in class for the second part of the peer review. 
-  
-  - Please let me know of any severe food allergies! 
-  
-### Test 3 
-
-  - Location: Science Center, Chang Hou Hall (Room 101) 
-  
-  - $20$ multiple choice questions, $5$ free response questions (two of which you know already), and an extra credit opportunity 
-  
-  - You have three hours to complete your exam but you are not obligated to use the entire time. ]
-  

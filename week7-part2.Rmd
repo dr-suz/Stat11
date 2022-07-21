@@ -1,9 +1,7 @@
 ---
 title: "Randomness and Probability: Sampling Distributions"
-subtitle: "Class 13"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/21/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -191,11 +189,4 @@ There are two ways in which independence is relevant in the sampling and data co
 ---
 ## Looking ahead 
 
-* Read chapters 15, 16, and 17 (from 5th edition)
-
-* Complete HW 5 -- due date, class consensus? Note that HW 4, 5, and 6 are all meant to prepare you for Test 2. 
-
-* Prepare your final project proposal and submit it on Moodle by next Thursday. 
-
-
-Next week we are going to start using statistical inference methods! First beginning in the case where we have a binary variable and are interested in the proportion or probability of one particular outcome, then in the case where we have a continuous, numberic variable and are interested in the mean/average value it takes on.  
+Next week we are going to start using statistical inference methods! First beginning in the case where we have a binary variable and are interested in the proportion or probability of one particular outcome, then in the case where we have a continuous, numeric variable and are interested in the mean/average value it takes on.  

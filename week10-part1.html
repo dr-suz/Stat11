@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Using the laws of probability to draw statistical conclusions</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week10-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week10-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week10-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Using the laws of probability to draw statistical conclusions
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1.  Reflection prompt - warm up 
+
+2.  Review concepts - ask me questions! 
+
+3.  Group work - sample size determination   
+
+4.  Looking ahead  
+
+
+
+
+---
+## Review concepts 
+
+Thus far in the semester we have not only how to organize and explore collected data, but we have also learned how to use the mathematical laws of probability to help us determine whether our data are *statistically significantly* unusual.   
+
+
+To answer the question "how weird is my data?" we must have an assumption about what kind of natural variation we would expect. This natural randomness is described based on a particular *statistical model*. Typically, the statistical model we use to describe "usual" data is the Normal model. 
+
+
+Using the CLT and laws about probability and the idea of a random (independent) sample, we can compare our observed data to what we would expect it to look like under the Normal model. 
+
+--
+### Reflection prompt
+
+Take the next few minutes to complete the reflection prompt for today's class. This is meant to serve as a warm up activity before we jump into our concept review discussion. 
+
+
+
+---
+## Review of main concepts 
+### Probability: The laws of mathematics that enable statistical inference 
+
+* A random variable is two things: possible values and their corresponding probabilities.
+
+
+--
+* Independence is a crucial, many-layered concept but is not statistically determinable.
+
+
+--
+* Normal random variables are special for three main reasons...
+
+  - Their expectation and variance tell us everything we need to know about the distribution.
+
+  - They can be combined with other Normal random variables in a satisfying way.
+
+  - The ubiquity of the central limit theorem means that we can often describe the behavior of a *sample estimate* with a Normal distribution.
+
+
+---
+## Review of main concepts 
+### Statistical inference 
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the idea of repeatedly obtaining a random sample from the population of interest.
+
+
+&lt;br&gt; 
+--
+
+As a follow up question, what does it mean for us to conclude that an outcome of a statistical analysis is/is not likely "due to chance"? 
+
+---
+### Statistical inference - general 
+
+* When should we use a hypothesis test vs a confidence interval? 
+
+
+* What are the significance level and confidence level and how are these determined? 
+
+
+* A p-value is a conditional probability that is conditioned upon what? 
+
+
+* What are the possible mistakes we could make when drawing conclusions from a hypothesis test or a confidence interval? 
+
+
+---
+### Statistical inference - for a proportion 
+
+* What does the Central Limit Theorem tell us about the *sample* proportion?
+
+
+--
+* What are the two conditions necessary for the CLT to apply to a particular sample of data? 
+
+
+--
+The assumptions necessary for the CLT to apply to a sample mean or sample proportion are that:
+
+1. The number of observational units is large (usually at least `\(n&gt;30\)`) BUT the sample size must not be more than `\(10\%\)` of the size of the population.
+
+2. The observed data are independent - meaning that the sample is drawn randomly (wherever possible) from some population so that it is representative of the population and collected without bias.
+
+
+--
+**Note:** For inference about a proportion, the sample size condition is often stated as: there are at least `\(10\)` observed successes and at least `\(10\)` observed failures in your data set. 
+
+
+---
+## Group work
+### Sample size determination 
+
+Suppose we are interested in detecting whether the incidence of a certain side effect of a drug is different from the rate stated on the label. The label states that this particular side effect occurs in `\(13\%\)` of the population. In order to perform our analysis, we need to test the drug on a representative sample of willing participants. Since there is an associated health risk, participant consent is mandatory and since it takes time to observe whether or not side effects occur, we want to keep our sample size as small as possible. 
+
+* Determine what significance level you are going to work with and state what this level means in terms of us potentially making an incorrect conclusion from our analysis.
+
+
+* If the margin of error we are willing to tolerate is `\(2\%\)`, then how many participants do we need to recruit in order to be able to draw a conclusion about the incident rate of this side effect? 
+
+
+**Instructions:** Work with your group to address the above prompts. You may make use of this [sample size calculator](https://select-statistics.co.uk/calculators/sample-size-calculator-population-proportion/) online if you'd like. 
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

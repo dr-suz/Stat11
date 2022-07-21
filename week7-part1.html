@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Randomness and Probability</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week7-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week7-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week7-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Randomness and Probability
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Properties of expectation and variance 
+
+2. Independence 
+
+3. Normal random variables 
+
+4. Reflection prompt
+
+5. Looking ahead  
+
+
+---
+### Big picture 
+
+
+**Data science** 
+
+* Collecting data 
+
+* Measuring variables of interest for each observational unit 
+
+* Designing a study 
+
+* Standardizing quantitative data 
+
+* Describing distributions visually and mathematically 
+
+
+**Mathematics**
+
+* Laws of probability 
+
+* Defining a random variable with it's distribution 
+
+* Properties and laws of random variables 
+
+* Concept of independence 
+
+* Special properties of Normal random variables
+
+
+---
+### Big picture 
+
+
+**Statistics** 
+
+* Inferential conclusions and statements about statistical significance
+
+* Answers the question: "how weird is your data?" 
+
+
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. `\(E(aX+b) = aE(x) + b\)`
+
+2. `\(Var(aX+b) = a^2 Var(X)\)` 
+
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. `\(E(aX+b) = aE(x) + b\)`
+
+2. `\(Var(aX+b) = a^2 Var(X)\)` 
+
+3. `\(E(X \pm Y) = E(x) \pm E(Y)\)` 
+ 
+ 
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. `\(E(aX+b) = aE(x) + b\)`
+
+2. `\(Var(aX+b) = a^2 Var(X)\)` 
+
+3. `\(E(X \pm Y) = E(x) \pm E(Y)\)` 
+
+4. `\(Var(X \pm Y) = Var(X) \pm 2Cov(X,Y) + Var(Y)\)` 
+
+
+&lt;br&gt; 
+
+What is `\(Cov(X,Y)\)`? 
+
+
+
+
+
+---
+### Covariance 
+
+`$$Cor(X,Y) = \frac{\mathbf{Cov(X,Y)}}{\sqrt{Var(X)Var(Y)}}$$`
+
+
+Mathematically, the *correlation* between two random variables is just a standardized version of something called the *covariance* between the two random variables. 
+
+&lt;br&gt; 
+
+&lt;br&gt; 
+
+What does the correlation between two random variables, `\(X\)` and `\(Y\)`, tell us? 
+
+&lt;br&gt;
+
+--
+The covariance between `\(X\)` and `\(Y\)` tells us the same thing! (It's just in different units.)
+
+
+
+---
+### Independence 
+
+If two random variables, `\(X\)` and `\(Y\)`, are independent, then they cannot be correlated! Therefore, if `\(X\)` and `\(Y\)` are independent, `\(Cov(X,Y)=0\)` and the fourth property simplifies to
+
+`$$Var(X \pm Y) = Var(X) + Var(Y).$$` 
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+&lt;br&gt;
+&lt;br&gt; 
+--
+Note that this is different (but related) to the question "How can we tell if an observed sample of data are independently drawn from the population?"
+
+
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+&lt;br&gt;
+&lt;br&gt; 
+
+Random variables have 
+
+* possibilities (events in the sample space)
+
+* probabilities (defined by some statistical model).
+
+&lt;br&gt; 
+
+We can sometimes use tables to actually see if the mathematical definition of independence seems to be true. 
+
+&lt;br&gt; 
+
+--
+If `\(P(A \cap B) = P(A) \times P(B)\)` or equivalently, `\(P(A\mid B) = P(A)\)`, the the random events `\(A\)` and `\(B\)` are independent. If this is true for any events in the sample spaces of two random variables, then the random variables are said to be independent. 
+
+
+---
+### Example  
+
+Suppose `\(X\)` is a random variable that represents the outcome of a diagnostic test which can be only: positive, negative, or inconclusive. Suppose `\(Y\)` is a random variable that represents birth order of an individual which can be only: eldest, youngest, middle, or only child. 
+&lt;br&gt; 
+
+If we observe a data set of `\(n\)` individuals who have all recorded their birth order and who have all taken this diagnostic test, we can tabulate the results. 
+
+&lt;br&gt; 
+
+From this table, we can calculate the proportion of people in our sample who are, say, the eldest and have a negative test result. If these two random variables, `\(X\)` and `\(Y\)` are independent, then we could expect this number to be approximately the same as the proportion of people in our sample who are the eldest times the proportion of people in our sample who have a negative test result. 
+
+
+
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+&lt;br&gt;
+&lt;br&gt; 
+
+Random variables have 
+
+* possibilities (events in the sample space)
+
+* probabilities (defined by some statistical model).
+
+&lt;br&gt; 
+
+We can sometimes use tables to actually see if the mathematical definition of independence seems to be true. 
+
+&lt;br&gt; 
+
+
+Most often however, we must critically analyse the situation using domain knowledge to assess whether or not two random variables are independent. 
+
+
+
+
+
+
+---
+### Normal random variables 
+
+Normal random variables are special because of these three things
+
+* Expectation and variance tell us everything we need to know about the distribution.   
+
+* They can be combined with other Normal random variables in a satisfying way.    
+
+* The ubiquity of the central limit theorem. 
+
+
+
+---
+### Normal random variables in R 
+
+
+We can simulate draws from a Normal distribution in R with the following command: 
+
+```r
+rnorm(n, mean=?, sd=?)
+```
+
+&lt;br&gt; 
+
+Here `\(n\)` is the size of the sample, that is, the number of observations, we want to collect from the specified Normal distribution. 
+
+
+---
+### Normal random variables in R 
+
+If we observe a data value from a Normal distribution with a particular mean and standard deviation, we can determine the probability with which we would expect this value or something smaller to occur using the following command: 
+
+
+```r
+pnorm(q, mean=?, sd=?, lower.tail=TRUE)
+```
+
+&lt;br&gt; 
+
+Here `\(q\)` stands for quantile, that is the observed value we are given. 
+
+&lt;br&gt;
+
+You can change the argement `lower.tail=FALSE` to instead find the probability that the value `\(q\)` or something larger than `\(q\)` is observed. 
+
+
+---
+### Normal random variables in R 
+
+
+If we instead want to know the value a Normally distributed random variable would need to take on to occur with a particular probability then we can use the following command:   
+
+```r
+qnorm(p, mean=?, sd=?, lower.tail=TRUE)
+```
+
+&lt;br&gt; 
+Here `\(p\)` stands for the probability we are given or are interested in. 
+
+
+
+
+---
+### Group work - independence 
+
+**Instructions:** Work with your group for the next few minutes to answer the two prompts below. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit. We will go over the answers to this prompt next class. 
+
+&lt;br&gt; 
+
+--
+**Question:** 
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+&lt;br&gt;
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+
+(a) What are the two ways in which independence is relevant in this study?
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+
+---
+### Reflection prompt 
+
+Suppose a magician decides to let you try to determine if a coin he has been using in his tricks is fair (that is, there is a `\(50/50\)` chance of either heads or tails). The magician won't let you touch the coin but instead lets you choose the number of times he will flip the coin and show you the result. 
+
+
+How many times would you tell the magician to flip the coin? And, based on the outcomes of these coin flips, how many times would you need to see "heads" to make you confident in asserting that the coin is not fair? 
+
+--
+### Looking ahead 
+
+
+Next class we will discover what is meant by a "sampling distribution" and begin to understand the reasoning behind questions of statistical inference.  
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

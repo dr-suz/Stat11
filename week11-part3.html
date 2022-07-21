@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Intro to Categorical Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week11-part3_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week11-part3_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week11-part3_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Intro to Categorical Data Analysis
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. Details for inference concerning categorical variables
+
+2. R coding practice - group worksheet 
+
+3. Video and reflection prompt
+
+4. Looking ahead  
+  
+  
+---
+## Key concepts 
+### Statistical inference 
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the idea of repeatedly obtaining a random sample from the population of interest. 
+
+
+--
+* Statistical inference requires us to have a larger population in mind.  
+
+
+--
+* The scope of the conclusions always depends on the quality of the data and the design of the study. Garbage in means garbage out, from the most basic to the most advanced statistical methods.   
+
+
+---
+## Inference for categorical variables  
+
+Today we are going to discuss how to conduct the different Chi-square procedures in R and practice determining which procedure to use for different scenarios. 
+
+
+The coding part for these chi-square procedures can be a little confusing, which is why it is so important to keep in mind what type of and how many variables are involved for each procedure. The complication comes from the way categorical data is represented in a data set. 
+
+
+---
+## Inference for categorical variables  
+
+From a statisticians point of view... 
+
+
+
+
+|    Observational Units    |  First variable |   Second variable   |    . . .    |    Last variable    |
+|:------------|-----:|--------------:|--------------:|-------:|
+|  First data point      |   |          |         |   |  
+|  Second data point  |    |           |        |        |     
+|  .   |     |        |           |        |     
+|  .   |     |           |           |        |                
+|  .   |     |          |           |        |             
+|  Last `\((n^{th})\)` data point   |     |           |            |    . . .    |          
+
+---
+## Inference for categorical variables  
+
+So for two categorical variables (say, class year and discipline of major) collected for each observational unit, we would represent that data set in the following way. 
+
+|    Observational Units    |  Class year |   Major discipline   |   
+|:------------|-----:|--------------:| 
+|  Student 1    | Freshman   |   Natural Sciences       |        
+|  Student 2  |    Freshman     |  Social Sciences      |     
+|  .   |     |        |      
+|  .   |     |           |    
+|  .   |     |          |    
+|  .   |  Junior   |    Social Sciences      |    
+|  Student n   | Senior    |   Humanities        |       
+
+---
+## Inference for categorical variables  
+
+When presenting such data however, we typically summarize the values of categorical variables within a particular data set in a table of counts, called a *contingency table*. This way it's easier for us to tell how many levels there are for each variable and we get a sense of the distribution of the data across each level. 
+
+
+--
+For example, 
+
+|     |     |   Major discipline   |        |     
+|:------------|-----:|--------------:|--------------:| 
+|   Class year       |  Natural Sciences |  Social Sciences       |  Humanities       |  
+|  Freshman      | 5   |   10   |    3   |  
+|  Sophomore   |  3  |    5     |     0     |      
+|  Junior   | 2   |   0     |   0    |        |    
+|  Senior   |  0  |     1 |     0   |     
+
+---
+## Producing a contingency table in R 
+
+Consider the data set in the `forcats` package called `gss_cat`. This is a sample of data from the General Social survey [General Social survey](https://gssdataexplorer.norc.org/)
+
+
+```r
+library(forcats)
+head(gss_cat) 
+```
+
+```
+## # A tibble: 6 x 9
+##    year marital      age race  rincome    partyid     relig     denom    tvhours
+##   &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt; &lt;fct&gt;      &lt;fct&gt;       &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt;
+## 1  2000 Never mar…    26 White $8000 to … Ind,near r… Protesta… Souther…      12
+## 2  2000 Divorced      48 White $8000 to … Not str re… Protesta… Baptist…      NA
+## 3  2000 Widowed       67 White Not appli… Independent Protesta… No deno…       2
+## 4  2000 Never mar…    39 White Not appli… Ind,near r… Orthodox… Not app…       4
+## 5  2000 Divorced      25 White Not appli… Not str de… None      Not app…       1
+## 6  2000 Married       25 White $20000 - … Strong dem… Protesta… Souther…      NA
+```
+
+
+---
+## Producing a contingency table in R 
+
+If you have a data set that contains categorical variables, you can create a contingency table with the following code: 
+
+
+```r
+gss_cat %&gt;% group_by(marital, relig) %&gt;%  ## specify which categorical variables you want to tabulate
+            summarise(counts = n())  %&gt;%  ## this specifies that we are creating a feature of our data set called "counts" and this is computed by counting up the number of observations using the function n()
+            spread(relig, counts)    ##specify which counts you want to span the columns, this step is not necessary if you are creating a table of counts for a single categorical variable 
+```
+
+```
+## # A tibble: 6 x 16
+## # Groups:   marital [6]
+##   marital  `No answer` `Don't know` `Inter-nondenomi… `Native america… Christian
+##   &lt;fct&gt;          &lt;int&gt;        &lt;int&gt;             &lt;int&gt;            &lt;int&gt;     &lt;int&gt;
+## 1 No answ…           4           NA                NA               NA         1
+## 2 Never m…          22            6                30                8       218
+## 3 Separat…           3            3                 3                2        32
+## 4 Divorced          13            1                26                4       132
+## 5 Widowed            7           NA                 3                2        24
+## 6 Married           44            5                47                7       282
+## # … with 10 more variables: Orthodox-christian &lt;int&gt;, Moslem/islam &lt;int&gt;,
+## #   Other eastern &lt;int&gt;, Hinduism &lt;int&gt;, Buddhism &lt;int&gt;, Other &lt;int&gt;,
+## #   None &lt;int&gt;, Jewish &lt;int&gt;, Catholic &lt;int&gt;, Protestant &lt;int&gt;
+```
+
+
+---
+## Producing a contingency table in R 
+
+
+For more instructions on creating tables in R with the `tidyverse` package, see this [page](http://analyticswithr.com/contingencytables.html).
+
+
+---
+## Producing a contingency table in R 
+### Group work 
+
+With your group, complete the Class 21 Worksheet R markdown template. (This can be found on Moodle or in our shared RStudio folder.)
+
+
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Test of homogeneity
+
+Are the different possible outcomes (that is, the, say `\(k\)`, different levels) of a (categorical) variable equally likely? 
+
+`\begin{cases}
+H_0: p_1 = p_2 = p_3 = \dots = p_k \\
+H_A: \text{At least one of the } k \text{ probabilities in the null}\\
+\quad \quad \text{ is different from the others.} 
+\end{cases}`
+
+--
+
+```r
+# chisq.test(x = vector_of_varb_counts)
+```
+
+
+--
+**Q:** What happens if our categorical variable only has two levels? 
+
+---
+## Inference for the distribution of a single categorical variable 
+###Goodness-of-fit test 
+
+Does a hypothesized probability distribution for the (say, `\(k\)`) levels of your categorical variable fit your data well?
+
+`\begin{cases}
+H_0: p_1 = p{1,0}, p_2 = p_{2,0}, p_3 = p_{3,0}, \dots p_k = p_{k,0} \\
+H_A: \text{At least one of the } k \text{ probabilities stated in} \\
+\quad \quad \text{ the null is incorrect.} 
+\end{cases}`
+
+
+Just as in our other hypothesis tests, the values stated in the null `\(p_{1,0}, p_{2,0}, \dots\)` are actual numbers (proportions/probabilities) between zero and one. 
+
+
+--
+
+```r
+# chisq.test(x = vector_of_varb_counts, p = c(prob1_null, prob2_null, prob3_null, ..., probk_null))
+```
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+`\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}`
+
+
+Unlike every other test we have discussed in this class, there are no parameters involved in this test! 
+
+We will go over the R code for this test next class. 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,9 +1,7 @@
 ---
 title: "Randomness and Probability"
-subtitle: "Class 10"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/5/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -327,30 +325,9 @@ We will go over the answers next class.
 Spend the next $7$ minutes answering the reflection prompt question in Moodle. 
 
 
----
 ## Looking ahead 
 
 
 For Thursday's class 
 
-* Knit the HW 4 template and read over the questions 
-
-* Read Chapters 12, 13, 14 in the 5th edition of your textbook 
-
 * We are going to do more hands-on work with probability in the form of tables. 
-
-* You will get your graded Test 1 back at the end of class. You may submit corrections for half-credit to my mailbox outside room SC 135 by 2pm this Friday. 
-
-
-
-Final project  
-
-* Proposals are due after break on Oct 21.   
-
-* Very customizable! You'll have the opportunity to ask questions next class.  
-
-* I will check my email on Monday and Friday over break and spend no more than 60 minutes on student emails. 
-
-
-Announcement from the new Math/Stat Academic Coordinator: Laura Dangridge! 
-

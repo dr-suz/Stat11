@@ -1,9 +1,7 @@
 ---
 title: "Statistical inference for a proportion"
-subtitle: "Class 17"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/4/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -44,7 +42,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -250,17 +248,4 @@ You decided that the margin of error you are willing to tolerate is $5\%$ and th
 <br> 
 --
 **Hint:** If you don't have any previous data to use, how might you play it safe in choosing a value to substitute in for $\hat{p}$? 
-
-
-
----
-## Looking ahead 
-
-* HW 6 is due tomorrow by 6:00pm.  
-
-* Exam 2 is next Thursday, in class, same policies as for Exam 1. 
-
-* Final project feedback will available by the end of the day tomorrow. 
-
-Next class will be a review and we'll focus on a more general discussion about hypothesis tests and confidence intervals. 
 

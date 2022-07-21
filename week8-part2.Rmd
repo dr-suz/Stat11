@@ -1,9 +1,7 @@
 ---
 title: "Statistical inference - answering the question: how weird is your data?" 
-subtitle: "Class 15"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/28/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -160,27 +158,10 @@ To conduct an $\alpha$-level hypothesis test for an unknown proportion/probabili
 #prop.test(x=?, n=?, p=?, alternative = "?", conf.level = 1-alpha)
 ```
 
----
-## HW 5 R Simulation Studies 
-
-
-Let's talk about Problems 6-10 of HW 5 to make sure we understand the purpose of these code-heavy exercises. 
-
 
 ---
 ## Looking ahead 
 
 
-* Submit HW 5 by 6pm tomorrow. (Note there is a typo in the code for Problem 7 (c), please see the comment on Moodle for the correction.)  
-
-* Submit you final project proposal on Moodle by 11pm tonight. 
-
-* Knit and read over the problems for HW 6 before class on Tuesday. It will be due by 6pm on Friday, Nov 5th. 
-
-* Catch up on the assigned readings (ideally before starting HW 6). 
-
-* Read the *Crash Course to Academic Writing* article on Moodle and the two *Definitions and Terms to Know* documents on CIs and hypothesis tests. 
-
-<br> 
 
 Next week, we are going to dig into the details for statistical inference about a population proportion and, time permitting, also get into details about inference for a population mean. 

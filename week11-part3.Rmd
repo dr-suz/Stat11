@@ -1,9 +1,7 @@
 ---
 title: "Intro to Categorical Data Analysis"
-subtitle: "Class 21"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "11/23/21 (updated: `r Sys.Date()`)"
 output:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
   xaringan::moon_reader:
@@ -44,7 +42,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -186,6 +184,10 @@ gss_cat %>% group_by(marital, relig) %>%  ## specify which categorical variables
 ```
 
 
+---
+## Producing a contingency table in R 
+
+
 For more instructions on creating tables in R with the `tidyverse` package, see this [page](http://analyticswithr.com/contingencytables.html).
 
 
@@ -255,41 +257,3 @@ H_A: \text{Categorical variable 1 and categorical variable 2 are not independent
 Unlike every other test we have discussed in this class, there are no parameters involved in this test! 
 
 We will go over the R code for this test next class. 
-
----
-## Reflection prompt 
-
-We're going to watch a $6$ minute video from The Amber Ruffin Show about AI and algorithmic bias. After watching the clip, you will have $7$ minutes to respond to the reflection prompt. 
-
----
-## Looking Ahead
-### Final Project 
-
-  - The rough draft of your project report is due next week. (Nov 30 for individual projects, Dec 1 for individual projects). 
-  
-  - Your final report and posters are due on Dec 7. 
-
-  - .blue[The last day of class] ~~you will have 5 minutes to present your final project to the class~~ .blue[will be an academic poster presentation session. You must bring your poster] ~~and assign a person to be the reporter/presenter~~ .blue[and each person should be ready to discuss your project with others.] ~~The remainder of the class time will be~~ .blue[You will have the entire class time to explore other peoples projects and ask questions about them. Each person will have a questionnaire to fill out about other people's projects and this will count towards your peer review component of your final project grade.]
-  
-
----
-## Looking ahead 
-
-[Calendar Updates](https://docs.google.com/document/d/1d8kF77EoqvAgjfTyNRDUF3HOJvxFu9IQ2JJwpem9B_8/edit#)
-
-.scroll-output[
-* Test 2 
-
-  - Test 2 corrections are due to be submitted online by Friday, Dec 3rd. 
-  
-  - You must upload both your original answer and your corrected answer. If you got full credit for a problem, then select your original answer for both the original and corrected parts on Gradescope. 
-  
-  - Please make sure you get the entire page in your pictures and that you have enough lighting. [Camscanner](https://www.camscanner.com/download) is a free app that takes really high quality photos of documents.  
-  
-* Read Ch 21 and 22 (5th edition) to help you complete HW 8 
-
-* Homework
-
-  - HW 8 will NOT be due over Thanksgiving break. It is due next Tuesday, Nov 30th by midnight. 
-
-  - HW 9 will be graded entirely for completion and is worth $15$ HW points. Instructions will be posted by Monday, Nov 30th and it will be due on the following Monday, Dec 6. ]

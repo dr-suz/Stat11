@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Statistical inference - answering the question: how weird is your data?</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week8-part2_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week8-part2_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week8-part2_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Statistical inference - answering the question: how weird is your data?
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1. R session: Plotting in the `tidyverse`
+  
+2. Inference for a proportion: Magician's coin example - group work 
+ 
+3. HW 5 Simulation Studies 
+
+4. Looking ahead 
+
+
+---
+## Plotting in the `tidyverse` 
+
+Data objects are given a name but they also contain columns which have their own names:
+
+```r
+#my.data = tibble(col1 = ?, col2 = ?, col3=?)
+#my.data
+```
+
+
+We plug the data object into the `ggplot` function and then specify which columns are to be plotted on the different axes with the `aes()` argument: 
+
+```r
+#my.data %&gt;% ggplot(aes(x=?)) + geom_histogram(bins=?)
+
+#my.data %&gt;% ggplot(aes(x=?, y=?)) + geom_point()
+
+#my.data %&gt;% ggplot(aes(x=?, y=?)) + geom_boxplot()
+```
+
+
+---
+## Plotting in the `tidyverse` - Practice 
+
+First: 
+
+1. Open RStudio and create a new R Markdown document, keeping the template that R automatically fills in for you. 
+
+2. In the existing chunk of R code from the template, add a new line of code that calls the `tidyverse` packing into your working library: `library(tidyverse)`
+
+3. At the end of the template, start a new R code chunk and type `cars %&gt;% names` in this chunk. 
+
+4. Knit the document and take a look at the column names of this data set called `cars`. 
+
+
+Then:
+
+5. Go back to the template and add another R code chunk where you will create a histogram for one of the variables contained in this `cars` data set. 
+
+6. Knit the document and see what the histogram looks like. 
+
+
+---
+## Sampling distributions and the CLT 
+
+
+* The *sampling distribution* of the sample means (or sample proportions) is a hypothetical distribution based on the *repeated sampling principle*. 
+
+
+* The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means or sample proportions* approaches a Normal distribution as `\(n\)` increases. 
+
+
+
+---
+## Analyzing the formulas 
+### Inference for a population proportion/probability 
+
+**Instructions:** Complete as much of the class 15 worksheet with your group as you can. I will be circulating around the room to answer any questions. Choose one person to be the reporter. This person is responsible for handing in your worksheet at the end of class. We will not be going over the answers today as a class; instead, we will reference this worksheet as we cover more material about this topic next week. 
+
+
+---
+## R code
+### Inference for a population proportion/probability
+
+To find a `\(100 \times (1-\alpha) \%\)` CI for an unknown proportion/probability:
+
+```r
+#prop.test(x=?, n=?, conf.level = 1-alpha)
+```
+
+
+To conduct an `\(\alpha\)`-level hypothesis test for an unknown proportion/probability:
+
+
+```r
+#prop.test(x=?, n=?, p=?, alternative = "?", conf.level = 1-alpha)
+```
+
+
+---
+## Looking ahead 
+
+
+
+Next week, we are going to dig into the details for statistical inference about a population proportion and, time permitting, also get into details about inference for a population mean. 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

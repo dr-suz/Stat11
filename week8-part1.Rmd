@@ -1,9 +1,7 @@
 ---
 title: "Statistical inference - answering the question: how weird is your data?" 
-subtitle: "Class 14"
-author: "STAT 11 with Prof. Suzy"
+author: "STAT 011 with Prof Suzy"
 institute: "Swarthmore College"
-date: "10/26/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
   #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
@@ -42,7 +40,7 @@ rm(list=ls())
 library(tidyverse)
 #library('gridExtra')
 #library(broom)
-data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data <- read_csv("Data/global_wealth_and_health.csv")
 data2 <- data  %>% filter(!is.na(Value)) %>% 
                filter(Time=="2018") %>% 
                select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
@@ -217,13 +215,6 @@ The **Central Limit Theorem** states that in general, the *sampling distribution
 Hint: Consider two random variables $X$ and $Y$ and their respective sample spaces. Then, consider two arbitrary random events (from any sample space) $A$ and $B$ and the mathematical definition of independent events. 
 
 
----
-## Obie 
-
-```{r echo = FALSE, out.height=400}
-knitr::include_graphics("obie.jpg")
-```
-
 
 ---
 ### Reflection prompt 
@@ -233,19 +224,8 @@ From your perspective, what are the three key ideas you have learned about proba
 
 
 
----
-## Looking ahead 
-
-
-* Complete HW 5 by Friday, 6pm ET. 
-
-* Submit you final project proposal on Moodle by Thursday. 
-
-* HW 6 will be posted on Moodle tomorrow. Knit and read before class on Thursday. It will be due by 6pm on Friday, Nov 5th. 
-
-* Catch up on assigned readings 
-
-<br> 
+--
+### Looking ahead 
 
 Next class, we are going to revisit the magician and his possibly un-fair coin example using 
 
