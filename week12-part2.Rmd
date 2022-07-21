@@ -1,0 +1,309 @@
+---
+title: "Statistical Methods in General"
+subtitle: "Class 23"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "12/2/21 (updated: `r Sys.Date()`)"
+output:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  xaringan::moon_reader:
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+header-includes:
+  - usepackage{xcolor}
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Overview of statistical methods and concepts 
+
+2. Group worksheet 
+
+3. Review test 2  
+
+4. Looking ahead 
+
+5. Preparing for Test 3 
+
+
+---
+## A Quick Reminder: Key Concepts 
+
+
+**Data science: Collecting and exploring data**
+
+* <font size="3">The best two pieces of information for any variable are a measure of the location and of the spread of the different possible values.</font>
+
+* <font size="3">In exploring data, the more perspectives we can get, the better we can understand the data.</font>
+
+**Probability: The laws of mathematics that enable statistical inference**
+
+* <font size="3">A random variable consists of possible values and their corresponding probabilities.</font>
+
+* <font size="3">Independence is a crucial, multi-layered concept but is not statistically determinable.</font>
+
+* <font size="3">Normal random variables are special for three main reasons...</font>
+
+  - <font size="3">Expectation and variance tell us everything we need to know about the distribution.</font>
+
+  - <font size="3">They can be combined with other Normal random variables in a satisfying way.</font>
+
+  - <font size="3">The ubiquity of the central limit theorem.</font>
+
+---
+## A Quick Reminder: Key Concepts 
+
+**Statistical inference: Answering the question "how unexpected/weird is your data?"**
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the repeated sampling principle of repeatedly sampling from a larger population.
+
+* Statistical inference *almost always* requires us to have a larger population in mind.
+
+* The scope of the conclusions always depends on the quality of the data and the design of the study. Garbage in means garbage out, from the most basic to the most advanced statistical methods.
+
+--
+* In statistics, we can never prove that a hypothesis (or theory) is true. Rather we can evaluate evidence, in the form of high quality data, in favor of or against a hypothesis (or theory). 
+
+---
+## A look at all statistical inferential methods we've covered 
+
+
+* Inference for proportions 
+
+  - Single proportion or difference in proportions 
+  
+  - Test (one sided or two sided) 
+  
+  - Confidence interval
+
+<br> 
+
+--
+**Q:** What assumptions are necessary for these procedures?
+
+
+---
+## A look at all statistical inferential methods we've covered 
+
+
+* Inference for means 
+
+  - Single mean or difference in means 
+  
+  - Paired or unpaired 
+  
+  - Test (one sided or two sided) 
+  
+  - Confidence interval
+
+<br> 
+
+--
+**Q:** What assumptions are necessary for these procedures?
+
+
+
+---
+## A look at all statistical inferential methods we've covered 
+
+* Inference regarding non-binary categorical variables 
+
+  - Test of homogeneity for a single categorical variable 
+  
+  - Test for goodness-of-fit for a single categorical variable 
+  
+  - Test of independence between two categorical variables 
+  
+<br>
+
+--
+The assumptions necessary for these chi-squared procedures are 
+
+1. The variable(s) of interest is/are categorical and can be represented/counted in a contingency table. 
+
+2. That each cell of the one or two way contingency table has at least 5 observations in it. 
+
+3. If we want to generalize beyond our sample to a larger population, then we must have data from a random sample of the population. 
+
+
+
+---
+## A look at all statistical methods we've covered 
+### In-class worksheet: Which statistical method to use? 
+
+For the next 15 minutes, work with your group mates on the Class 23 worksheet. 
+
+
+**Steps to help answer each question:**
+
+1. What are the observational units and what's the population of interest? 
+
+2. Are there more than one populations of interest? 
+
+3. What are the variables involved (what information is being collected for each observational unit) and what type are they (categorical or numeric)? 
+
+4. What is the parameter of interest? That is, what parameter is your null hypothesis going to be about? 
+
+
+
+.footnote[Source: DANA Center for Mathematics Pathways]
+
+
+---
+## Test 2 Review - Group Work (15 mins)
+
+.scroll-output[
+Problem 1: Which do you suspect are made-up and why? Not "which are possible"! 
+
+Problem 2 and 3: The expectation of a RV is equal to the sum of all it's possible values times the probabilities with which they occur. The variance of a RV is sum of the (squared) difference between each possible value and the expected value time the probabilities with which these values occur. 
+
+Problem 4: Make sure you review the R code for the different methods we have covered in class. 
+
+Problem 5: One statement is accurate, one statement is the worst of the three and another is somewhat ambiguous. 
+
+Problem 6: Pretend you have a random sample of $1000$ individuals in total and complete the table to then find the requested conditional probability. 
+
+Problem 7: What does it mean for two RVs to be independent of one another? 
+
+Problem 8: For this problem, you need to understand the difference between a population and a population parameter and you are taking a position that challenges the effectiveness of the housing first initiative. Ask yourself, what is the probability of a major negative life change if the housing first policy is no more effective (or is less effective) than other interventions meant to reduce homelessness? 
+
+Problem 9: Your hypotheses should follow directly from your answer to Problem 8. For this problem, take the perspective of an advocate for the housing first initiative. 
+
+Problem 10: Review the images we drew in Class 17 (for example) starting at minute 36:50. 
+
+]
+
+---
+## Test 2 Review 
+### Class discussion (15 mins)
+
+
+Let's revisit the concept of independence. 
+
+- Two (or more) random variables may be independent of one another.  
+
+- Two (or more) populations may be independent of one another. 
+
+- A random sample from a population must be drawn independently. 
+
+
+
+---
+## Looking ahead 
+
+* HW 8 - only problems 1 and 4 will be graded for correctness, the others for completion. 
+
+* Are there any reflection prompts you'd like for me to share my thoughts on? If so, please fill out this quick [questionnaire](https://docs.google.com/forms/d/e/1FAIpQLScXiorWQwuTUv3vOeEjQ9A4-fdcIy_tixilJNuyYNu6vE63Eg/viewform?usp=sf_link) telling me which ones. 
+
+* I will hold my usual office hours next week and you are free to email me any questions that come up. 
+
+* Additionally, I will hold office hours in my office (SCI 163) on Monday Dec 13 from 2:30pm to 4:00pm. (No need to schedule a time slot.)
+
+### Wrapping up your final project
+
+* If you want feedback on your report draft, it must be uploaded to Moodle by midnight tonight. 
+
+* Please arrive to class on-time, first five minutes are set-up, next 60 minutes are mingle and discuss posters, last 10 minutes for reflection and wrapping up questionnaires.  
+
+* Your peer review elements will be graded for both (1) critical thinking and (2) statistical literacy\*.
+
+.footnote[\* I will post a rubric describing different levels of these two components tomorrow.]
+
+---
+## Preparing for test 3 
+
+.scroll-output[
+* 20 multiple choice or select all that apply questions 
+
+* 5 free response questions will be graded for 
+
+  1. Evidence of critical thinking and  
+  
+  2. Statistical literacy
+  
+* I have posted a [study guide](https://moodle.swarthmore.edu/pluginfile.php/706658/mod_resource/content/1/course_study_guide.pdf) for what is expected in Stat 21 (I made this last year so ignore the dates). This may also be helpful in directing your prep for Test 3. 
+
+* I will post an updated version of the formula sheet on Monday next week. 
+
+* You are allowed to use non-graphic calculators and the formula sheet on the test and I will have scrap paper for you if you need it. 
+
+* I will also print out copies of the R documentation for each of the following functions so you can reference them during the test: `prop.test()`, `t.test()`, and `chisq.test()`. 
+
+* .green[Some advice] 
+
+  - Review all class material (HW, slides, reflection prompts, etc) and use the textbook to supplement your review for any parts that you feel less confident or confused about. 
+  
+  - Create your own study guide/cheat sheets for each topic or section (data science, probability, and inference).  
+  
+  - Use the formula sheet while you are studying to become familiar with the symbols and notation and where to look for what so it is not unfamiliar to you on test day. 
+  
+  - Get at least 7 hours of sleep each night and eat at least two meals each day.
+]
+
+
+
+
+

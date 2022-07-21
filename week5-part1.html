@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploring, Understanding, and Gathering Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week5-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week5-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week5-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Exploring, Understanding, and Gathering Data
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1.  Reflection prompt - warm up (until 10:05)
+
+2.  Review concepts (10:05 - 10:40) - ask me questions! 
+
+3.  Study types and conclusions - Class 8 worksheet revisited  (10:40-11:05)
+
+4.  Looking ahead (11:05-11:10)
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+**Note:** Test 1 will NOT cover Ch 12 From Randomness to Probability. This is where we will pick up next week. The course calendar has been updated accordingly. 
+
+
+
+---
+## Review concepts 
+
+Thus far in the semester we have learned many different things about data. 
+
+We've learned that data is composed of observational units and random variables. 
+
+
+We've explored different ways in which we can describe or explore different types of random variables and have an understanding of data collection methods and study designs can impact the conclusions we may draw from our analyses. 
+
+
+### Reflection prompt
+
+Take the next few minutes to complete the reflection prompt for today's class. This is meant to serve as a warm up activity before we jump into our concept review discussion. 
+
+
+---
+
+
+```
+##    Country             FertRate       LifeExpect       MortRate     
+##  Length:233         Min.   :1.000   Min.   :53.00   Min.   :-4.000  
+##  Class :character   1st Qu.:1.700   1st Qu.:68.00   1st Qu.: 0.500  
+##  Mode  :character   Median :2.200   Median :74.00   Median : 1.200  
+##                     Mean   :2.652   Mean   :72.73   Mean   : 1.241  
+##                     3rd Qu.:3.600   3rd Qu.:78.00   3rd Qu.: 2.000  
+##                     Max.   :6.900   Max.   :85.00   Max.   : 4.900  
+##                     NA's   :34      NA's   :36      NA's   :26      
+##     HIVPrev          RuralPop          GDP         TotalExpenditure
+##  Min.   : 0.100   Min.   : 1.00   Min.   :   272   Min.   :  280   
+##  1st Qu.: 0.200   1st Qu.:21.75   1st Qu.:  2218   1st Qu.: 2020   
+##  Median : 0.400   Median :40.50   Median :  6546   Median : 5700   
+##  Mean   : 2.053   Mean   :41.02   Mean   : 16793   Mean   :13972   
+##  3rd Qu.: 1.375   3rd Qu.:58.25   3rd Qu.: 19762   3rd Qu.:16990   
+##  Max.   :27.700   Max.   :87.00   Max.   :185829   Max.   :84430   
+##  NA's   :111      NA's   :29      NA's   :37       NA's   :46      
+##     TotalPop             SrPop             YoungPop         PovertyCount   
+##  Min.   :      1.0   Min.   :     1.0   Min.   :     587   Min.   : 0.400  
+##  1st Qu.:    407.2   1st Qu.:    33.5   1st Qu.:   21904   1st Qu.: 3.425  
+##  Median :   5291.0   Median :   368.5   Median :   65762   Median : 7.350  
+##  Mean   :  31410.5   Mean   :  2610.4   Mean   : 1921147   Mean   :14.593  
+##  3rd Qu.:  18990.8   3rd Qu.:  1390.8   3rd Qu.:  486083   3rd Qu.:10.950  
+##  Max.   :1427648.0   Max.   :155912.0   Max.   :53951546   Max.   :76.000  
+##  NA's   :7           NA's   :11         NA's   :46         NA's   :205
+```
+
+
+---
+## Exploring Data 
+
+
+### Variables: "what" is being measured?
+
+* Categorical vs quantitative
+
+* Describing variables 
+
+* Standard Deviation as "the statistician's ruler"  
+
+### Observational units: "who" is being measured?  
+
+* Population vs sample 
+
+* How is the data obtained? 
+
+### The Normal Model 
+
+
+
+---
+## Understanding Data 
+
+
+### Associations and relationships among variables 
+
+* Contingency Tables 
+
+* Scatterplots and Correlation 
+
+* Multi-variable Graphs
+
+
+
+---
+## Gathering Data 
+
+### Sampling 
+
+* Population parameters vs sample statistics/estimates  
+
+* Simple Random Sampling 
+
+* Sampling Design 
+
+* Sampling mistakes 
+
+---
+## Gathering Data 
+
+### Experiments and Observational Studies 
+
+* Observational Studies 
+
+* Randomized, Comparative Experiments 
+
+* Principles of Experimental Design 
+
+* Control Groups 
+
+* Blocking 
+
+* Confounding 
+
+---
+## Revisiting the Class 8 worksheet
+
+
+Recall our previous discussion on the following elements of a two different studies: 
+
+
+- What are the subjects being studied and how are they selected? 
+
+
+- For investigative studies 
+
+  (a) Retrospective or prospective? 
+
+  (b) Population parameter of interest?
+  
+  
+---
+## Revisiting the Class 8 worksheet
+
+
+
+- For experiments, 
+
+  (a) What factors and how many levels of each? 
+
+  (b) Number of treatments? 
+
+  (c) Response variable?
+
+  (d) Completely randomized, blocked, or matched design? And blind? 
+  
+---
+## Revisiting the Class 8 worksheet
+  
+
+- What is the scope and nature of the conclusions the study can reach
+
+  - Generalizable? 
+
+  - Cause and effect? 
+  
+
+---
+## Revisiting the Class 8 worksheet
+### Seccond Study   
+
+Recall [this article](https://doi.org/10.3945/ajcn.114.092189) in The American Journal of Clinical Nutrition. 
+
+
+--
+
+* Last class we identified this study as an experiment and noted that there are three response variables that all correspond to test scores on evaluations of cognitive ability. 
+
+* There are also three treatment levels, high, medium, and low. There is no control group, rather this is a matched study where test scores are compared for each observational unit before and after receiving the treatment. 
+
+* The abstract indicates that this study was randomized through random treatment assignment and double blind regarding treatment assignment. 
+* A key factor involved in this study is the age of participants however attention was restricted to only elderly individuals. (So this factor only has one level.) Other factors such as sex, blood pressure, smoker/nonsmoker, and more were considered in this study but this is not apparant in the abstract. 
+
+---
+## Revisiting the Class 8 worksheet
+### Seccond Study   
+
+
+What we didn't get to are: 
+
+* Who are the study subjects and how are they selected? 
+
+* Are the conclusions of this study generalizable and if so to which population? 
+
+* Does this study provide evidence of a cause and effect relationship between the treatment and the response variable? 
+
+---
+## From the Methods section 
+
+
+Participants were recruited among those referred to senior centers in the L’Aquila district, in central Italy. Criteria included participants who reported themselves as unconcerned about their own memory functions and with no clinically significant coexisting medical conditions... 
+
+To avoid confounding due to the influence of concomitant depression on the performance on cognitive tests, subjects with a [high] score on the Geriatric Depression Scale were excluded. 
+
+Current smokers, habitual users of antioxidant supplements, habitual consumers of chocolate or other cocoa products, or individuals prescribed medications known to have antioxident properties or to interfere with cognitive functions were excluded participation. 
+
+Individuals with a large change in BMI... within the past 6 mo before entering the study were also excluded. 
+
+A total of 174 subjects were screened... Sixty-six individuals did not meet eligibility criteria. Eighteen individuals refused to participate. The remaining 90 individuals were enrolled in the study.  
+
+
+---
+## Revisiting the Class 8 worksheet
+### Third study 
+
+Read the study abstract for [this article](https://doi.org/10.1038/srep10913) in Scientific Reports. The abstract includes the study background, objective, design, results and conclusions.  
+
+Let's work through the same questions for this study together. 
+
+
+--
+* Who are the study subjects and how are they selected? 
+
+
+---
+## From the Methods section 
+
+We used 5-week old C57BL/6 male mice purchased from Charles River for all experiments. Animals were housed in groups of maximum 6 mice per cage under specific-pathogen-free conditions and with free access to food and water. Mice were housed for 7 days prior to testing, making them 6 weeks old when the massage treatment began. 
+
+All tests were conducted in a blinded fashion and according to the UK Animals Act, 1986. All experimental protocols were approved by the local biological service unit at Queen Mary University of London. 
+
+Mice treated with hydrocortisone received a suspension of 2.5 mg of hydrocortisone hemisuccinate in 200 `\(\mu l\)` of PBS.
+
+
+
+
+---
+## From the Methods section 
+
+Tests were performed double-blind during the light phase of the light-dark cycle. All efforts were made to minimize mouse discomfort in these behavioural experiments. Mice were brought to the testing room at least 30 minutes before the start of the test session to allow habituation to the testing environment. Unless otherwise specified, standard lighting and quiet conditions were maintained throughout each experiment.
+
+
+
+---
+## From the Methods section 
+
+
+Mice were divided into three groups: 1) control (non-stroked) mice; 2) brush-stroked mice; 3) hand-stroked mice, each involving 6 mice per group, per experiment. Treatments were administered by placing a single mouse into a new cage every day as previously described. These cages were identical to the home cage, however the lid, shredded paper, food and water were removed. New cages were used for each mouse to reduce odour from the previous mouse. Brush and hand stroked mice were stroked at a pressure of 100-150 mmH2O at a speed of about 3cm/sec... 
+
+[C]ontrol mice were not touched (by hand or brush) throughout the 60-minute treatment. Brush stroking was applied using a No.5 da Vinci paintbrush while hand stroking was applied using three fingers of the preferred hand of the investigator...
+
+Mice were stroked on the hairy skin found on the posterior dorsal thoracic and proximal hind limb from head to tail. Both brush and hand stroked mice received approximately 20 strokes every 5 minutes. Experiments were performed by 3 different experimenters trained to perform the same procedure...
+
+
+
+
+---
+## Revisiting the Class 8 worksheet
+### Third study 
+
+Read the study abstract for [this article](https://doi.org/10.1038/srep10913) in Scientific Reports. The abstract includes the study background, objective, design, results and conclusions.  
+
+
+
+* Is this an experiment or an observational study? 
+
+--
+
+(a) What factors are being considered and how many levels are there of each? 
+
+(b) How many treatments are there? 
+
+(c) What is the response variable?
+
+(d) Which of the following apply to this experiment: completely randomized, blocked, matched design, blind? 
+
+
+---
+## Revisiting the Class 8 worksheet
+### Third study 
+
+Read the study abstract for [this article](https://doi.org/10.1038/srep10913) in Scientific Reports. The abstract includes the study background, objective, design, results and conclusions.  
+
+
+* Are the conclusions of this study generalizable and if so to which population? 
+
+* Does this study provide evidence of a cause and effect relationship between the treatment and the response variable? 
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+---
+title: "Using the laws of probability to draw statistical conclusions"
+subtitle: "Class 18"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "11/9/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1.  Reflection prompt - warm up (until 10:05am)
+
+2.  Review concepts (10:05am - 10:40am) - ask me questions! 
+
+3.  Group work - sample size determination (time permitting)   
+
+4.  Looking ahead  
+
+<br>
+
+<br>
+
+<br>
+
+**Note:** Test 2 will NOT cover Ch 17 Confidence Intervals for Means. This is where we will pick up next week. The course calendar has been updated accordingly. 
+
+
+
+---
+## Review concepts 
+
+Thus far in the semester we have not only how to organize and explore collected data, but we have also learned how to use the mathematical laws of probability to help us determine whether our data are *statistically significantly* unusual.   
+
+
+To answer the question "how weird is my data?" we must have an assumption about what kind of natural variation we would expect. This natural randomness is described based on a particular *statistical model*. Typically, the statistical model we use to describe "usual" data is the Normal model. 
+
+
+Using the CLT and laws about probability and the idea of a random (independent) sample, we can compare our observed data to what we would expect it to look like under the Normal model. 
+
+--
+### Reflection prompt
+
+Take the next few minutes to complete the reflection prompt for today's class. This is meant to serve as a warm up activity before we jump into our concept review discussion. 
+
+
+
+---
+## Review of main concepts 
+### Probability: The laws of mathematics that enable statistical inference 
+
+* A random variable is two things: possible values and their corresponding probabilities.
+
+
+--
+* Independence is a crucial, many-layered concept but is not statistically determinable.
+
+
+--
+* Normal random variables are special for three main reasons...
+
+  - Their expectation and variance tell us everything we need to know about the distribution.
+
+  - They can be combined with other Normal random variables in a satisfying way.
+
+  - The ubiquity of the central limit theorem means that we can often describe the behavior of a *sample estimate* with a Normal distribution.
+
+
+---
+## Review of main concepts 
+### Statistical inference 
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the idea of repeatedly obtaining a random sample from the population of interest.
+
+
+<br> 
+--
+
+As a follow up question, what does it mean for us to conclude that an outcome of a statistical analysis is/is not likely "due to chance"? 
+
+---
+### Statistical inference - general 
+
+* When should we use a hypothesis test vs a confidence interval? 
+
+
+* What are the significance level and confidence level and how are these determined? 
+
+
+* A p-value is a conditional probability that is conditioned upon what? 
+
+
+* What are the possible mistakes we could make when drawing conclusions from a hypothesis test or a confidence interval? 
+
+
+---
+### Statistical inference - for a proportion 
+
+* What does the Central Limit Theorem tell us about the *sample* proportion?
+
+
+--
+* What are the two conditions necessary for the CLT to apply to a particular sample of data? 
+
+
+--
+The assumptions necessary for the CLT to apply to a sample mean or sample proportion are that:
+
+1. The number of observational units is large (usually at least $n>30$) BUT the sample size must not be more than $10\%$ of the size of the population.
+
+2. The observed data are independent - meaning that the sample is drawn randomly (wherever possible) from some population so that it is representative of the population and collected without bias.
+
+
+--
+**Note:** For inference about a proportion, the sample size condition is often stated as: there are at least $10$ observed successes and at least $10$ observed failures in your data set. 
+
+
+---
+## Group work
+### Sample size determination 
+
+Suppose we are interested in detecting whether the incidence of a certain side effect of a drug is different from the rate stated on the label. The label states that this particular side effect occurs in $13\%$ of the population. In order to perform our analysis, we need to test the drug on a representative sample of willing participants. Since there is an associated health risk, participant consent is mandatory and since it takes time to observe whether or not side effects occur, we want to keep our sample size as small as possible. 
+
+* Determine what significance level you are going to work with and state what this level means in terms of us potentially making an incorrect conclusion from our analysis.
+
+
+* If the margin of error we are willing to tolerate is $2\%$, then how many participants do we need to recruit in order to be able to draw a conclusion about the incident rate of this side effect? 
+
+
+**Instructions:** Work with your group to address the above prompts. You may make use of this [sample size calculator](https://select-statistics.co.uk/calculators/sample-size-calculator-population-proportion/) online if you'd like. 
+
+
+
+---
+## R stuff to know for Test 2 
+
+* Understanding how a data object (e.g. a `tibble`) is structured in general. 
+
+* Interpret output from the `summarise()` function as applied to a data object. 
+
+* Using the `pnorm()` and `qnorm()` functions. 
+
+* Using the `prop.test()` function to calculate a p-value or to calculate a confidence interval.  
+
+
+
+---
+## Prepare for next class
+
+
+Next class will be the second mid-term exam/quiz. Come prepared to class by 
+
+* Bring a black or blue pen or pencil; 
+
+* Bring a non-graphing calculator if desired; 
+
+* Getting a full night's sleep!  
+
+
+The first five minutes we will be setting up, then remaining $70$ minutes are for you to complete your answers. The formula sheet has been updated and is available on Moodle under the Announcements at the top of the page. 
+
+
+**Content warning:** the data you will examine on the test is relevant to current events and reflects information about the real world in which we live. Topics may include things such as the COVID pandemic and/or economic and social trends and patterns.  
+
+---
+## Prepare for next week 
+
+* HW 7 will be released this Thursday. Please knit and read over the questions before class on Tuesday next week. It is due next Friday, the 19th.   
+
+* Read Chapters 17 and 20 in the 5th edition of your textbook for class next week. 
+
+* Make sure everyone in your group knows what they need to do for your final project. The rough draft of your report is due at the end of the month.
+
+  - Nov 30 for group projects 
+  
+  - Nov 24 for individual projects 

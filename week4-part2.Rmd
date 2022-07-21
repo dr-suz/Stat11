@@ -1,0 +1,167 @@
+---
+title: "Collecting data for analysis"
+author: "STAT 011 with Prof Suzy"
+institute: "Swarthmore College"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+#data <- read_csv("global_wealth_and_health.csv")
+#data2 <- data  %>% filter(!is.na(Value)) %>% 
+#               filter(Time=="2018") %>% 
+#               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+#data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+#global_wealth_and_health <- data3[,-c(4,9,13)]
+#colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+#      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1.  Lecturette on collecting data for statistical analysis  (continued)
+
+2.  Troubleshooting in RStudio 
+
+3.  Study types and conclusions 
+
+4.  Preparing for your first test and poll results 
+
+
+
+---
+## Collecting data for statistical analysis 
+
+- Samples vs populations 
+
+  * Similarities: observational units and variables of interest  
+  
+  * Differences: parameters vs estimates, source of randomness, sizes  
+  
+- Getting a quality sample is of the utmost importance! 
+
+  * Representative of the population 
+  
+  * As unbiased as possible 
+  
+- We can't always control the study type, but we can often control the way data is collected
+
+  * Experiment 
+  
+  * Observational study 
+  
+- What is *significant*? 
+
+---
+## Troubleshooting in RStudio 
+
+
+Computers are logical, we are not! This often means an error is due to some typo.... 
+
+
+Error messages often provide information about problematic
+  
+  - line numbers 
+  
+  - variable names 
+  
+  - data objects not found 
+
+
+
+Always start by: downloading/uploading the template and any necessary data files to your Stat 11 folder (either in the Swat cloud or on your laptop)
+
+
+If you've been filling out the template and can't get it to knit, determine if it is an R coding issues. Comment out all R code chunks and see if template will knit or use the "Run all" option to see if there are any R code specific errors. 
+
+
+If you've had to update or install new packages or if you've been creating multiple copies of your R Markdown document and/or the data file, you may need to restart RStudio.  
+
+
+
+---
+## Group work on class 8 worksheet 
+
+Before we begin on group work for today's class, take the next $10$ minutes to read and consider the three different studies listed here. 
+
+1) Concerned about reports of discolored scales on a fish caught downstream from a newly sited chemical plant, scientists set up a field station in a shoreline public park. For one week they asked fishermen there to bring any fish they caught to the field station for a brief inspection. At the end of the week, the scientists said that $18\%$ of the $234$ fish that were submitted for inspection displayed the discoloration. From this information, can the researchers estimate what proportion of fish in the river have discolored scales? 
+
+
+2) Read the study abstract for [this article](https://doi.org/10.3945/ajcn.114.092189) in The American Journal of Clinical Nutrition. The abstract includes the study background, objective, design, results and conclusions.  
+
+
+3) Read the study abstract for [this article](https://doi.org/10.1038/srep10913) in Scientific Reports. The abstract includes the study background, objective, design, results and conclusions.  
+
+
+
+---
+## Preparting for Test 1  
+### General suggestions
+
+
+
+* Study in small increments each day. Start studying this weekend so that you have some time to go to office hours or stat help sessions before the test. Plan for about 6-10 study hours in total. Work in 15-30 minute chunks to not get overwhelmed. 
+
+* Catch up on assigned reading and review parts you felt unsure about. Review the main ideas highlighted in the textbook. Find videos online about basic concepts to get more perspectives and diverse instruction. Reread/skim the assigned chapters.  
+
+* Call it a quiz not a test.  
+
+* Try some problems on your own without any help or resources or distractions, re-create a test setting, in chunks of 20-30 mins. 
+
+* Be patient with yourself. 
+

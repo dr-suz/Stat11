@@ -1,0 +1,67 @@
+---
+title: "Class 21 Group Worksheet"
+subtitle: "Stat 11 with Prof. Suzy"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+Consider the data set in the `forcats` package called `gss_cat`. This is a sample of data from the General Social survey [General Social survey](https://gssdataexplorer.norc.org/)
+
+First install the `forcats` package. 
+```{r}
+# install.packages("forcats") ## Uncomment this line and run it by itself once. Then comment it out again and knit your document. 
+```
+
+Then we can view the first few rows of the data set. 
+```{r}
+library(forcats)
+head(gss_cat) 
+```
+
+
+We can create a contingency table with the following code: 
+
+```{r}
+gss_cat %>% group_by(marital, relig) %>%  ## specify which categorical variables you want to tabulate
+            summarise(counts = n())  %>%  ## this specifies that we are creating a feature of our data set called "counts" and this is computed by counting up the number of observations using the function n()
+            spread(relig, counts)    ##specify which counts you want to span the columns, this step is not necessary if you are creating a table of counts for a single categorical variable 
+```
+
+Note that you have to click the little black arrow in the upper corner of the table to see all the different levels associated with the variable  `relig`.
+
+***
+## 1. How many categorical variables are there in this data set and what are their names?  
+
+[Write your answer here.]
+
+## 2. How many levels are there for the categorical variable "relig" and what are their names?
+
+[Write your answer here.]
+
+## 3. Create a vector representing the different marital status counts for individuals who practice Hinduism. 
+
+```{r}
+#martical_counts <- c()
+#martical_counts
+```
+
+## 4. Create a vector representing the counts of different religions represented for individuals who have divorced.  
+
+```{r}
+# religious_counts <- c()
+# religious_counts
+```
+
+
+## 5. Complete the code below to conduct a Chi-squared test for homogeneity to determine if peoples' religions are distributed evenly among this sample. 
+
+```{r}
+#gss_cat %>% group_by(?) %>%   
+#            summarise(counts = n()) 
+#religions_counts <- c( )
+
+#chisq.test(x = religions_counts)
+```

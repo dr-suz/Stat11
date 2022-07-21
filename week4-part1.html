@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Collecting data for analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 11 with Prof. Suzy" />
+    <script src="week4-part1_files/header-attrs-2.10/header-attrs.js"></script>
+    <link href="week4-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week4-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Collecting data for analysis
+## Class 7
+### STAT 11 with Prof. Suzy
+### Swarthmore College
+### 9/21/21 (updated: 2021-09-21)
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1.  Homework 3 Problem 3 
+
+2.  Lecturette on collecting data for statistical analysis  
+
+3.  Reminders and announcements
+
+4.  Reflection prompt and poll 
+
+
+---
+## Homework 3 Problem 3 
+
+While only `\(5\%\)` of babies have learned to walk by the age of `\(10\)` months, `\(75\%\)` are walking by `\(13\)` months of age. Assuming the age at which babies develop the ability to walk can be described by a Normal model, find the mean and standard deviation of the distribution of the age at which babies learn to walk. 
+
+
+Additional information: The lower `\(5^{th}\)` quantile of a standard Normal distribution is `\(-1.65\)` and the lower `\(75^{th}\)` quantile is `\(0.67\)`. 
+
+### 1. Strategize/outline Solution  (5 mins)
+
+Note: If you've already solved this problem and are confident in your solution, try to think of a way to answer the question without the additional information. It turns out that this is actually possible to do with some extra creativity! 
+
+---
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+.center[**Quick check:** Is your mask covering your nose and your mouth?]
+
+
+---
+## Homework 3 Problem 3 
+
+While only `\(5\%\)` of babies have learned to walk by the age of `\(10\)` months, `\(75\%\)` are walking by `\(13\)` months of age. Assuming the age at which babies develop the ability to walk can be described by a Normal model, find the mean and standard deviation of the distribution of the age at which babies learn to walk. 
+
+
+Additional information: The lower `\(5^{th}\)` quantile of a standard Normal distribution is `\(-1.65\)` and the lower `\(75^{th}\)` quantile is `\(0.67\)`. 
+
+### 2. Work with your group to outline a solution on a whiteboard. (10 mins)
+
+
+---
+## Homework 3 Problem 3 
+
+While only `\(5\%\)` of babies have learned to walk by the age of `\(10\)` months, `\(75\%\)` are walking by `\(13\)` months of age. Assuming the age at which babies develop the ability to walk can be described by a Normal model, find the mean and standard deviation of the distribution of the age at which babies learn to walk. 
+
+
+Additional information: The lower `\(5^{th}\)` quantile of a standard Normal distribution is `\(-1.65\)` and the lower `\(75^{th}\)` quantile is `\(0.67\)`. 
+
+### 3. A group reporter will start our discussion by presenting your group's strategy to the class. 
+
+
+---
+## Quick R Tip
+### Finding normal distribution quantiles 
+
+The following code will produce the lower `\(5^{th}\)` quantile of a standard Normal distribution: 
+
+```r
+qnorm(p=0.05, mean=0, sd=1)
+```
+
+```
+## [1] -1.644854
+```
+
+
+---
+## Collecting data for statistical analysis 
+
+- Samples vs populations 
+
+  * Similarities: observational units and variables of interest  
+  
+  * Differences: parameters vs estimates, source of randomness, sizes  
+  
+- Getting a quality sample is of the utmost importance! 
+
+  * Representative of the population 
+  
+  * As unbiased as possible 
+  
+- We can't always control the study type, but we can often control the way data is collected
+
+  * Experiment 
+  
+  * Observational study 
+  
+- What is *significant*? 
+
+
+---
+## Reminders
+
+* Community guidelines 
+
+  - Scholarly community where we strive to make sure everyone is respected and heard. 
+  
+  - Use respectful language and not interrupt others. 
+  
+  - Assume good intentions. 
+  
+  - Ask questions. 
+  
+  - We will wear our masks throughout the entire class session. 
+
+---
+## Reminders
+
+* Homework policy 
+
+  - No late homework is going to be accepted because solutions are released after the due date and your lowest HW grade is dropped. 
+  
+  - Knit your HW template the day of/after it is released. Any data or R issues should be identified by the next class!  
+  
+  - Read all instructions carefully! "Each answer must be supported by written statements". Show your work/explain your reasoning and be specific (use units when appropriate). Write so that my granddad can understand your answer! 
+
+---
+## Announcements 
+
+* If you need to eat or drink during class, please step outside the classroom to do so. 
+
+* For test 1 and 2, you will be able to submit corrections to missed problems for half credit. 
+
+* Homework deadlines are extended until the end of the day (11:59pm). 
+
+
+
+
+
+---
+## Reflection prompt 
+### Test prep 
+
+Fill out the worksheet for today's class. 
+
+
+---
+## Prepare for Thursday's class 
+
+* Read chapter 11 and 12 (5th edition)
+
+* Plan your preparation for test 1 
+
+Next class, we will spend out time on the following topics:
+
+* Troubleshooting R tips and tricks 
+
+* Critical thinking practice regarding collecting data for statistical analyses 
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

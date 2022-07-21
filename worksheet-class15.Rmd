@@ -1,0 +1,80 @@
+---
+title: "STAT011 Class 15 Worksheet"
+output: 
+  pdf_document: 
+    toc: no 
+---
+
+
+Group name: 
+
+***
+
+Reporter: 
+
+
+*** 
+
+\vspace{.3in}
+
+
+Consider the example of a magician who has a possibly un-fair coin and let's you specify how many times he will flip the coin and show you the result. Suppose you suspect the coin is biased towards "heads" and you tell the magician to flip the coin $n=30$ times.  
+
+
+You keep a record of your observations and create a data set of values from a binary categorical variable, $\{x_1, x_2, \dots, x_{30}\}$. 
+
+We assume that across the entire population of interest, this categorical variable is a random variable with a $Bernoulli(p)$ distribution, where $p=$ the probability of a "heads". 
+
+**1.** How can you describe the population of interest in this example? 
+
+\vspace{.8in}
+
+
+**2.** What are the possibilities and the corresponding probabilities that define this categorical random variable? 
+
+\vspace{.8in}
+
+**3.** What is the expected value and the variance of this categorical random variable? (Hint: See the Definitions and Terms to Know file on Random Variables.)
+
+\vspace{.8in}
+
+Based on the sample of $30$ flips of this coin, we can calculate an estimate for $p$ with the formula:
+$$\hat{p} = \frac{1}{n} \sum_{i=1}^{n}x_i.$$
+
+
+**4.** What does the word *estimate* mean in this context?
+
+\vspace{.8in}
+
+**5.** What can you say about the value of $\hat{p}$ even before you even see the data? 
+
+\vspace{.8in}
+
+
+
+**6.**
+In good faith, let's assume that the coin is actually fair. If this were the case, what is $p$? 
+
+\vspace{.8in}
+
+
+The CLT tells us that, if our sample size is large and our data is drawn independently from the population, then the sampling distribution of the sample proportion is a Normal distribution. More specifically, this will follow a Normal distribution with mean $\mu = p$ and variance $\sigma^2 = \frac{p(1-p)}{30}$. 
+
+
+
+**7.** 
+Draw a picture of the density curve for the sampling distribution of the sample proportion, supposing that the coin is fair. Label the mean and one standard deviation above and below the mean.
+
+\vspace{1.8in}
+
+
+**8.**
+After $n=30$ flips of the coin, you observe $18$ heads and $12$ tails. What is the value of $\hat{p}$? 
+
+\vspace{.8in}
+
+**9.**
+How far away from the expected value (or mean) of the sampling distribution of the sample proportions is the estimate in question 8? 
+\vspace{1in}
+
+**10.** What is the probability that, repeating this experiment again and again produces the same value of $\hat{p}$ or something larger? Draw a picture and specify the R code you would use to calculate this probability. 

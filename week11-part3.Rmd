@@ -1,0 +1,295 @@
+---
+title: "Intro to Categorical Data Analysis"
+subtitle: "Class 21"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "11/23/21 (updated: `r Sys.Date()`)"
+output:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  xaringan::moon_reader:
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+header-includes:
+  - usepackage{xcolor}
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Details for inference concerning categorical variables
+
+2. R coding practice - group worksheet 
+
+3. Video and reflection prompt
+
+4. Looking ahead  
+  
+  
+---
+## Key concepts 
+### Statistical inference 
+
+* The sampling distribution of the sample mean (or sample proportion) is a hypothetical distribution based on the idea of repeatedly obtaining a random sample from the population of interest. 
+
+
+--
+* Statistical inference requires us to have a larger population in mind.  
+
+
+--
+* The scope of the conclusions always depends on the quality of the data and the design of the study. Garbage in means garbage out, from the most basic to the most advanced statistical methods.   
+
+
+---
+## Inference for categorical variables  
+
+Today we are going to discuss how to conduct the different Chi-square procedures in R and practice determining which procedure to use for different scenarios. 
+
+
+The coding part for these chi-square procedures can be a little confusing, which is why it is so important to keep in mind what type of and how many variables are involved for each procedure. The complication comes from the way categorical data is represented in a data set. 
+
+
+---
+## Inference for categorical variables  
+
+From a statisticians point of view... 
+
+
+```{r echo=FALSE, eval=FALSE}
+#table1 <- rbind(c(" ", "First variable", "Second variable", ". . . ", "Last variable"), c("First data point", " ", " ", " ", " "), c(".", " ", " ", " ", " "), c(".", " ", " ", " ", " "), c(".", " ", " ", " ", " "), c("Last data point", " ", " ", " ", " "))
+#knitr::kable( table1 )
+```
+
+|    Observational Units    |  First variable |   Second variable   |    . . .    |    Last variable    |
+|:------------|-----:|--------------:|--------------:|-------:|
+|  First data point      |   |          |         |   |  
+|  Second data point  |    |           |        |        |     
+|  .   |     |        |           |        |     
+|  .   |     |           |           |        |                
+|  .   |     |          |           |        |             
+|  Last $(n^{th})$ data point   |     |           |            |    . . .    |          
+
+---
+## Inference for categorical variables  
+
+So for two categorical variables (say, class year and discipline of major) collected for each observational unit, we would represent that data set in the following way. 
+
+|    Observational Units    |  Class year |   Major discipline   |   
+|:------------|-----:|--------------:| 
+|  Student 1    | Freshman   |   Natural Sciences       |        
+|  Student 2  |    Freshman     |  Social Sciences      |     
+|  .   |     |        |      
+|  .   |     |           |    
+|  .   |     |          |    
+|  .   |  Junior   |    Social Sciences      |    
+|  Student n   | Senior    |   Humanities        |       
+
+---
+## Inference for categorical variables  
+
+When presenting such data however, we typically summarize the values of categorical variables within a particular data set in a table of counts, called a *contingency table*. This way it's easier for us to tell how many levels there are for each variable and we get a sense of the distribution of the data across each level. 
+
+
+--
+For example, 
+
+|     |     |   Major discipline   |        |     
+|:------------|-----:|--------------:|--------------:| 
+|   Class year       |  Natural Sciences |  Social Sciences       |  Humanities       |  
+|  Freshman      | 5   |   10   |    3   |  
+|  Sophomore   |  3  |    5     |     0     |      
+|  Junior   | 2   |   0     |   0    |        |    
+|  Senior   |  0  |     1 |     0   |     
+
+---
+## Producing a contingency table in R 
+
+Consider the data set in the `forcats` package called `gss_cat`. This is a sample of data from the General Social survey [General Social survey](https://gssdataexplorer.norc.org/)
+
+```{r}
+library(forcats)
+head(gss_cat) 
+```
+
+
+---
+## Producing a contingency table in R 
+
+If you have a data set that contains categorical variables, you can create a contingency table with the following code: 
+
+```{r}
+gss_cat %>% group_by(marital, relig) %>%  ## specify which categorical variables you want to tabulate
+            summarise(counts = n())  %>%  ## this specifies that we are creating a feature of our data set called "counts" and this is computed by counting up the number of observations using the function n()
+            spread(relig, counts)    ##specify which counts you want to span the columns, this step is not necessary if you are creating a table of counts for a single categorical variable 
+```
+
+
+For more instructions on creating tables in R with the `tidyverse` package, see this [page](http://analyticswithr.com/contingencytables.html).
+
+
+---
+## Producing a contingency table in R 
+### Group work 
+
+With your group, complete the Class 21 Worksheet R markdown template. (This can be found on Moodle or in our shared RStudio folder.)
+
+
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Test of homogeneity
+
+Are the different possible outcomes (that is, the, say $k$, different levels) of a (categorical) variable equally likely? 
+
+\begin{cases}
+H_0: p_1 = p_2 = p_3 = \dots = p_k \\
+H_A: \text{At least one of the } k \text{ probabilities in the null}\\
+\quad \quad \text{ is different from the others.} 
+\end{cases}
+
+--
+```{r}
+# chisq.test(x = vector_of_varb_counts)
+```
+
+
+--
+**Q:** What happens if our categorical variable only has two levels? 
+
+---
+## Inference for the distribution of a single categorical variable 
+###Goodness-of-fit test 
+
+Does a hypothesized probability distribution for the (say, $k$) levels of your categorical variable fit your data well?
+
+\begin{cases}
+H_0: p_1 = p{1,0}, p_2 = p_{2,0}, p_3 = p_{3,0}, \dots p_k = p_{k,0} \\
+H_A: \text{At least one of the } k \text{ probabilities stated in} \\
+\quad \quad \text{ the null is incorrect.} 
+\end{cases}
+
+
+Just as in our other hypothesis tests, the values stated in the null $p_{1,0}, p_{2,0}, \dots$ are actual numbers (proportions/probabilities) between zero and one. 
+
+
+--
+```{r}
+# chisq.test(x = vector_of_varb_counts, p = c(prob1_null, prob2_null, prob3_null, ..., probk_null))
+```
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}
+
+
+Unlike every other test we have discussed in this class, there are no parameters involved in this test! 
+
+We will go over the R code for this test next class. 
+
+---
+## Reflection prompt 
+
+We're going to watch a $6$ minute video from The Amber Ruffin Show about AI and algorithmic bias. After watching the clip, you will have $7$ minutes to respond to the reflection prompt. 
+
+---
+## Looking Ahead
+### Final Project 
+
+  - The rough draft of your project report is due next week. (Nov 30 for individual projects, Dec 1 for individual projects). 
+  
+  - Your final report and posters are due on Dec 7. 
+
+  - .blue[The last day of class] ~~you will have 5 minutes to present your final project to the class~~ .blue[will be an academic poster presentation session. You must bring your poster] ~~and assign a person to be the reporter/presenter~~ .blue[and each person should be ready to discuss your project with others.] ~~The remainder of the class time will be~~ .blue[You will have the entire class time to explore other peoples projects and ask questions about them. Each person will have a questionnaire to fill out about other people's projects and this will count towards your peer review component of your final project grade.]
+  
+
+---
+## Looking ahead 
+
+[Calendar Updates](https://docs.google.com/document/d/1d8kF77EoqvAgjfTyNRDUF3HOJvxFu9IQ2JJwpem9B_8/edit#)
+
+.scroll-output[
+* Test 2 
+
+  - Test 2 corrections are due to be submitted online by Friday, Dec 3rd. 
+  
+  - You must upload both your original answer and your corrected answer. If you got full credit for a problem, then select your original answer for both the original and corrected parts on Gradescope. 
+  
+  - Please make sure you get the entire page in your pictures and that you have enough lighting. [Camscanner](https://www.camscanner.com/download) is a free app that takes really high quality photos of documents.  
+  
+* Read Ch 21 and 22 (5th edition) to help you complete HW 8 
+
+* Homework
+
+  - HW 8 will NOT be due over Thanksgiving break. It is due next Tuesday, Nov 30th by midnight. 
+
+  - HW 9 will be graded entirely for completion and is worth $15$ HW points. Instructions will be posted by Monday, Nov 30th and it will be due on the following Monday, Dec 6. ]

@@ -1,0 +1,256 @@
+---
+title: "Statistical inference - answering the question: how weird is your data?" 
+subtitle: "Class 14"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/26/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Transitioning from probability to statistics
+  
+  - Group activity - independence is multi-layered 
+  
+2. Statistics and the CLT
+
+  - Group activity - independence of random variables vs random events 
+ 
+3. Final project speed dating (time permitting)
+
+4. Reflection prompt 
+
+5. Looking ahead 
+
+
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about data science 
+
+
+**Data science: Collecting and exploring data** 
+
+--
+* The best two pieces of information for any variable are a measure of the *location* and of the *spread* of the different possible values.
+
+--
+* In exploring data, the more perspectives we can get, the better we can understand the data. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about probability
+
+**Probability: the laws of mathematics that enable statistical inference**
+
+--
+* A random variable consists of possible values and their corresponding probabilities. 
+
+--
+* *Independence* is a crucial, multi-layered concept but is not statistically determinable. 
+
+
+
+---
+## Independence 
+### Group work
+
+
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+<br>
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+<br>
+**Instructions:** You will work with your group for the next few minutes to answer part (b) and (c). We'll go over part (a) as a class first. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit.  
+
+---
+## Independence 
+### Group work
+
+
+**Question:** 
+
+(a) What are the two ways in which independence is relevant in this study?
+
+
+--
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about probability
+
+**Probability: the laws of mathematics that enable statistical inference**
+
+* A random variable is two things: possible values and their corresponding probabilities. 
+
+* *Independence* is a crucial, multi-layered concept but is not statistically determinable. 
+
+--
+* Normal random variables are special for three main reasons...
+
+--
+  - Expectation and variance tell us everything we need to know about the distribution.   
+
+  - They can be combined with other Normal random variables in a satisfying way.    
+
+  - The ubiquity of the *central limit theorem*. 
+
+
+---
+## Transitioning from probability to statistics 
+### Key points about statistics
+
+**Statistics: Answering the question - how weird is your data?** 
+
+* The *sampling distribution* of the sample mean (or sample proportion) is a hypothetical distribution based on the *repeated sampling principle* of repeatedly sampling from a larger population. 
+
+
+
+
+---
+## Transitioning from probability to statistics 
+
+The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means* approaches a Normal distribution as the sample size increases. 
+
+<br> 
+--
+**Q:** What are the conditions necessary for the CLT to apply? 
+
+<br>
+--
+**A:** The assumptions necessary for the CLT to apply to a sample mean or sample proportion are that: 
+
+- The number of observational units is large (usually at least $n>30$) BUT the sample must not represent more than $10\%$ of the larger population. 
+
+- The data (observed values of the assumed random variable) are *independent* - meaning the sample is drawn randomly (wherever possible) from some population so that the sample is representative of the population.  
+
+
+
+
+---
+## Independence 
+### Group work  
+
+**HW 5 Problem 3:** "In your own words, describe what it means for two random variables to be independent. Also describe what it means for two random events to be independent. Make sure your descriptions can distinguish these two types of independence."
+
+**Instructions:** Spend the next $5$ minutes talking with your group about your answer to this question. Assign a (new) reporter who will share your ideas with the class afterwards. 
+
+<br>
+
+Hint: Consider two random variables $X$ and $Y$ and their respective sample spaces. Then, consider two arbitrary random events (from any sample space) $A$ and $B$ and the mathematical definition of independent events. 
+
+
+---
+## Obie 
+
+```{r echo = FALSE, out.height=400}
+knitr::include_graphics("obie.jpg")
+```
+
+
+---
+### Reflection prompt 
+
+
+From your perspective, what are the three key ideas you have learned about probability, the mathematical laws that enable statistical conclusions from a random sample of data? 
+
+
+
+---
+## Looking ahead 
+
+
+* Complete HW 5 by Friday, 6pm ET. 
+
+* Submit you final project proposal on Moodle by Thursday. 
+
+* HW 6 will be posted on Moodle tomorrow. Knit and read before class on Thursday. It will be due by 6pm on Friday, Nov 5th. 
+
+* Catch up on assigned readings 
+
+<br> 
+
+Next class, we are going to revisit the magician and his possibly un-fair coin example using 
+
+* a confidence interval for the actual probability of a heads and 
+
+* a hypothesis test about the probability of a heads. 
+
+

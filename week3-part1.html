@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploring data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week3-part1_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week3-part1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week3-part1_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Exploring data
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1.  Final group round-up and meet and greet 
+
+2.  Quick summary of describing and exploring data 
+
+3.  Continue with class 4's worksheet 
+
+4.  Reflection prompt 
+
+5.  Prep for next class 
+
+
+---
+## Final group round-up (10 mins)
+
+Now that drop-add has ended we have `\(39\)` students enrolled in this class. Please separate yourselves into `\(7\)` groups of five and `\(1\)` group of four. 
+
+Raise your hand if you do not have a group **or** are in a group of size `\(3\)`.  
+
+If there's any one new in your group, take a minute to introduce everyone. Then, go over your group contracts once more and finalize your group name. 
+
+**Note about seating arrangements:** 
+
+Try to sit near your group mates for the rest of the semester. There should be exactly four groups situated on each side of the class room. Please leave the aisles open for me to walk around and answer questions. 
+
+The best arrangement for group communication seems to be three people at one desk and two people at another desk in front of the others. This way, only two people have to turn around for the group work and discussions and everyone is facing one another in a circle-ish arrangement. 
+
+
+*If you have any concerns about your group or this seating arrangement, please send me an email so I can take your comments into consideration.*
+
+
+---
+## Describing and Exploring Data 
+
+
+What is an *observational unit*? How does this compare to *units of measurement*? 
+
+
+--
+What is a *variable*? 
+
+
+--
+Relationships between variables 
+
+   * two quantitative 
+   
+   * one quantitative, one categorical 
+   
+   * two categorical 
+   
+Determining if a quantitative variable seems to follow a Normal distribution 
+
+  * Look for symmetry and unimodality 
+  
+  * Determine if the 68, 95, 99.7 percent rule applies 
+  
+  * Create a Normal Probability Plot and compare deviations from the diagonal line 
+
+
+
+
+---
+## Group work
+### 20 mins 
+
+* Download or open the Class 4 R Markdown worksheet in RStudio. Make sure you can knit the template first! 
+
+* Then work with your group members to answer the `\(7\)` questions. 
+
+* The group reporter will submit your completed R Markdown document via Moodle for participation credit before the end of class. 
+
+* Raise your hand if your group has a question! 
+
+
+**Note:** If your group finishes early, use this time to either review HW 2 together or get started on today's reflection prompt. 
+
+
+---
+## Class discussion follow-up
+
+* Normally distributed data (AKA Gaussian data) 
+
+* Histograms and density curves 
+
+* Normal probability plots and quantiles 
+
+* 68/95/99.7 rule 
+
+
+---
+## Reflection prompt 
+### Spurious Correlations
+
+* Complete the reflection prompt under the Week 3 section of our Moodle page for a participation point. 
+
+
+* We will stop at 11:05 to discuss preparing for our next class. 
+
+
+**Note:** This prompt is only open for edits until noon today so do your best to finish it in class! 
+
+
+---
+## Prepare for Thursday's class 
+
+* Read chapter 10 in your textbook. (And catch up on any reading for chapters 1-6 if needed!)
+
+* Submit your HW 2 solutions by noon tomorrow. Solutions to HW 1 will be posted tonight. Solutions to HW 2 will be posted tomorrow afternoon. 
+
+* Read and knit the HW 3 template. Note that you first need to download the `class_survey.csv` file to the same location as your HW 3 R Markdown document for this template to knit! 
+  
+* If you have a planned absence from class **during an exam day**, you must notify me by the end of September. In general, no other late exam arrangements will be permitted.
+
+Next class, we will dig deeper into the concepts of randomness and variability and consider the pros and cons of different sampling strategies. 
+
+**BTW:** The new Mu-se schedule has been posted on our calendar and on the Math/Stat department's website. 
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

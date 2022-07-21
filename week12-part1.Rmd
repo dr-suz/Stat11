@@ -1,0 +1,337 @@
+---
+title: "Statistical Methods in General"
+subtitle: "Class 22"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "11/30/21 (updated: `r Sys.Date()`)"
+output:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  xaringan::moon_reader:
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+header-includes:
+  - usepackage{xcolor}
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Lecturette for inference concerning categorical variables (15 min)
+
+2. Test 2 review and group work (20 min)
+
+3. HW 8 coding focus (10 min)
+
+4. Reflection prompt (10 min)
+
+5. Looking ahead - due dates (5 min)
+
+6. Looking ahead - final project and test 3 (10 min)
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Test of homogeneity
+
+Are the different possible outcomes (that is, the, say $k$, different levels) of a (categorical) variable equally likely? 
+
+\begin{cases}
+H_0: p_1 = p_2 = p_3 = \dots = p_k \\
+H_A: \text{At least one of the } k \text{ probabilities in the null}\\
+\quad \quad \text{ is different from the others.} 
+\end{cases}
+
+--
+```{r}
+# chisq.test(x = vector_of_varb_counts)
+```
+
+
+
+**Q:** What happens if our categorical variable only has two levels? 
+
+
+--
+**A:** In this case, the test for homogeneity is the same as the test for a single population proportion where the null is $H_0: p = 0.5$! 
+
+
+---
+## Inference for the distribution of a single categorical variable 
+###Goodness-of-fit test 
+
+Does a hypothesized probability distribution for the (say, $k$) levels of your categorical variable fit your data well?
+
+\begin{cases}
+H_0: p_1 = p{1,0}, p_2 = p_{2,0}, p_3 = p_{3,0}, \dots p_k = p_{k,0} \\
+H_A: \text{At least one of the } k \text{ probabilities stated in} \\
+\quad \quad \text{ the null is incorrect.} 
+\end{cases}
+
+
+Just as in our other hypothesis tests, the values stated in the null $p_{1,0}, p_{2,0}, \dots$ are actual numbers (proportions/probabilities) between zero and one. 
+
+
+--
+```{r}
+# chisq.test(x = vector_of_varb_counts, p = c(prob1_null, prob2_null, prob3_null, ..., probk_null))
+```
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}
+
+
+Unlike every other test we have discussed in this class, there are no parameters involved in this test! 
+
+
+--
+**Q:** What happens if both categorical variables only have two levels each? 
+
+
+--
+**A:** In this case, the test for independence is the same as the two sample test for a difference in proportions where the null is $H_0: p_1 - p_2 = 0$! 
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence
+
+Does the data suggest that one variable may be associated with another? 
+
+\begin{cases}
+H_0: \text{Categorical variable 1 is independent of categorical variable 2.} \\
+H_A: \text{Categorical variable 1 and categorical variable 2 are not independent.} 
+\end{cases}
+
+
+
+```{r}
+# chisq.test(x = two_way_contingency_table_as_a_matrix)
+```
+
+See the next few slides for details on the **three step coding process** for this test. 
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+Recall the `gss_cat` data from last class. 
+```{r}
+library(forcats)
+head(gss_cat) 
+```
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 1: Create a two-way contingency table of all possible combinations of levels** 
+
+.scroll-small[
+We can create a two-way contingency table, called `my_table` for two categorical variables (say, `marital` and `reilg`) with the following R code: 
+```{r}
+my_table <- gss_cat %>% filter(!is.na(marital) & !is.na(relig)) %>%  ## this eliminates any rows that are missing values for the two variables of interest 
+                        group_by(marital, relig) %>%  ## specify which categorical variables you want to tabulate
+                        summarise(counts = n())  %>%  ## this specifies that we are creating a summary called "counts" which counts the number of observation in each level of each variable
+                        spread(relig, counts)         ## specify which variable you want in the columns 
+my_table
+```
+]
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 2: Convert your contingency table into a matrix.** 
+
+.scroll-small[Then we can convert `my_table` into a matrix using the `as.matrix()` function. 
+```{r}
+my_matrix <- as.matrix(my_table)
+my_matrix 
+```
+]
+
+
+---
+## Inference to understand the relationship between two categorical variables 
+### Chi-squared test of independence - Coding 
+
+**Step 3: Plug the matrix of counts into the `chisq.test()` function**
+.scroll-small[
+Now (*if we didn't have any empty cells*) we could plug this *matrix* into the `chisq.test()` function to do a test for the independence of the two categorical variables `marital` and `relig`. Since we do have at least one religious affiliation and marital status combination without any observations (e.g. "Hinduism" and "Widowed"), we cannot actually do a chi squared test for independence! (So the following code doesn't actually work but is meant to give you a sense of how to code this test in cases where it does apply.)
+```{r}
+#chisq.test(x = my_matrix)
+```
+]
+
+
+
+
+---
+## Test 2 Review and Group Work 
+
+.scroll-output[
+Problem 1: Which do you suspect are made-up and why? Not "which are possible"! 
+
+Problem 2 and 3: The expectation of a RV is equal to the sum of all it's possible values times the probabilities with which they occur. The variance of a RV is sum of the (squared) difference between each possible value and the expected value time the probabilities with which these values occur. 
+
+Problem 4: Make sure you review the R code for the different methods we have covered in class. 
+
+Problem 5: One statement is accurate, one statement is the worst of the three and another is somewhat ambiguous. 
+
+Problem 6: Pretend you have a random sample of $1000$ individuals in total and complete the table to then find the requested conditional probability. 
+
+Problem 7: What does it mean for two RVs to be independent of one another? 
+
+Problem 8: For this problem, you need to understand the difference between a population and a population parameter and you are taking a position that challenges the effectiveness of the housing first initiative. Ask yourself, what is the probability of a major negative life change if the housing first policy is no more effective (or is less effective) than other interventions meant to reduce homelessness? 
+
+Problem 9: Your hypotheses should follow directly from your answer to Problem 8. For this problem, take the perspective of an advocate for the housing first initiative. 
+
+Problem 10: Review the images we drew in Class 17 (for example) starting at minute 36:50. 
+
+]
+
+---
+## Homework 8 Coding Details 
+
+Let's take a look at the latest version of the HW 8 template, particularly for Problems 2 and 3. 
+
+<br> 
+
+These problems require a bit more involved coding than on your previous homework so I want to take a few minutes to go over this code together as a class. 
+
+
+---
+## Reflection prompt 
+
+Today's reflection prompt will be one of the five free response questions on your final exam. This is an opportunity for you to brainstorm an answer that you can improve upon for your final. 
+
+
+
+---
+## Looking ahead 
+### Due Dates and Next Class
+
+[Calendar Updates](https://docs.google.com/document/d/1d8kF77EoqvAgjfTyNRDUF3HOJvxFu9IQ2JJwpem9B_8/edit#)
+
+.scroll-output[
+* Test 2 
+
+  - Test 2 corrections are due to be submitted online on Friday, Dec 3rd. by midnight. No extensions!
+  
+  - You must upload both your original answer and your corrected answer. If you got full credit for a problem, then select your original answer for both the original and corrected parts on Gradescope. 
+  
+  - Please make sure you get the entire page in your pictures and that you have enough lighting. [Camscanner](https://www.camscanner.com/download) is a free app that takes really high quality photos of documents.  
+
+* Homework
+
+  - HW 8 is due on Friday, Dec 3 by midnight. 
+
+  - HW 9 will be graded entirely for completion and is worth $15$ HW points. It is due by Tuesday, Dec 7 at midnight and you are encouraged to work with your group mates on this assignment (so you MAY turn in identical copies and still receive full credit as long as all collaborators are listed). There will be a free response question on Test 3 related to HW 9. 
+  
+* Next class
+
+  - We will further discuss the notion of independence. 
+  
+  - We will go through an exercise to determine which statistical method to use in different scenarios.
+  
+  - I will go over a brief introduction to simple linear regression and analysis of variance (ANOVA) methods which will NOT be on Test 3. 
+  
+]
+
+
+---
+## Looking Ahead
+
+.scroll-output[
+### Final Project 
+
+  - The rough draft of your project report is due next week. (Nov 30 for individual projects, Dec 1 for individual projects). 
+  
+  - Your final report and posters are due on Dec 7. 
+  
+  - The first part of your peer review is due to be submitted to Gradescope by midnight on Dec 7. Upload the completed sheet as a PDF file, just as you have done for our homework assignments. 
+
+  - The last day of class will be an academic poster presentation session. You must bring your poster and each person should be ready to discuss your project with others. You will have the entire class time to explore other peoples projects and ask questions about them. Each person will have a [questionnaire](https://drive.google.com/file/d/1aSNbKdwDUvVWLC9LuSMGresAT5z-ppvK/view?usp=sharing) to fill out and hand in at the end of class. This will count as the second part of your peer review component. You will be graded for demonstrating critical thinking skills in both peer review components.
+  
+  - Before the poster session, make sure you take some time (30 minutes or so) to read through the report drafts uploaded to Moodle. You can find uploaded drafts on the "Submit the First Draft of Your Report" link on Moodle. This will make the poster session move more smoothly and will give you a sense of which three projects you want to evaluate in class for the second part of the peer review. 
+  
+  - Please let me know of any severe food allergies! 
+  
+### Test 3 
+
+  - Location: Science Center, Chang Hou Hall (Room 101) 
+  
+  - $20$ multiple choice questions, $5$ free response questions (two of which you know already), and an extra credit opportunity 
+  
+  - You have three hours to complete your exam but you are not obligated to use the entire time. ]
+  

@@ -1,0 +1,201 @@
+---
+title: "Randomness and Probability: Sampling Distributions"
+subtitle: "Class 13"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/21/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Mid-semester feedback results 
+
+2. Sampling distributions 
+
+  - R simulations for HW 5 
+
+  - Revisiting the reflection prompt - group work 
+  
+3. Types of independence - group work 
+
+4. Looking ahead 
+
+
+---
+### Mid-semester feedback results 
+
+Thanks to those of you who took the time to complete the mid-semester evaluation form. You can take a look at a summary of the responses [here](https://docs.google.com/document/d/1QWvtehgOz4NS1nyVtYjVnRIy9mBqVf6ZjlMSyTXWWtc/edit?usp=sharing).
+
+
+---
+### Sampling distributions
+
+
+**Probability distributions** - describe a random variable and tell us the possible values and the probabilities with which these values occur.
+
+<br> 
+
+--
+*Math world:* Random variables can be made up as long as their probability distributions follow the laws of probability. However, there are some common random variables that are very useful in statistical analysis, such as Normal random variables or Binomial random variables.    
+
+
+--
+*Data/Applied world:* Variables in a data set can be categorical or quantitative and although we can't make up a distribution for these observations, we can explore how a variable is distributed within an observed random sample. 
+
+<br> 
+
+--
+**Q:** What is a sampling distribution? 
+
+
+<br> 
+--
+This is a challenging concept to understand because it is a very abstract/hypothetical idea. To make it more clear, let's draw a picture. 
+
+
+---
+### Group work - revisiting last class's reflection prompt 
+
+Suppose a magician decides to let you try to determine if a coin he has been using in his tricks is fair (that is, there is a $50/50$ chance of either heads or tails). The magician won't let you touch the coin but instead lets you choose the number of times he will flip the coin and show you the result. 
+
+
+How many times would you tell the magician to flip the coin? And, based on the outcomes of these coin flips, how many times would you need to see "heads" to make you confident in asserting that the coin is not fair? 
+
+<br> 
+
+<br> 
+
+**Instructions:** Spend the next $7$ minutes talking with your group about your responses to this reflection prompt. There is nothing for you to hand in, but make sure at least one group member is prepared to share with the class a strategy that you all agree upon. 
+
+
+---
+### Sampling distributions
+
+Recall that Normal random variables are special because of these three main things
+
+* Expectation and variance tell us everything we need to know about the distribution.   
+
+* They can be combined with other Normal random variables in a satisfying way.    
+
+* The ubiquity of the central limit theorem. 
+
+<br> 
+
+--
+The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means* approaches a Normal distribution as the sample size increases. 
+
+<br>
+--
+This means that it doesn't really matter what the distribution of the population from whence the data is drawn is!  
+
+
+
+---
+### R Practice 
+
+Open the Rmd template for HW 5. We are going to go over Problem 8 together. (Problems 9 and 10 are very similar to this problem.)
+
+---
+### Group work - independence 
+
+**Instructions:** You will work with your group for the next few minutes to answer part (b) and (c) below. We'll go over part (a) as a class first. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit.  
+
+<br> 
+
+--
+**Question:** 
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+<br>
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+
+(a) What are the two ways in which independence is relevant in this study?
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+
+
+---
+## Looking ahead 
+
+* Read chapters 15, 16, and 17 (from 5th edition)
+
+* Complete HW 5 -- due date, class consensus? Note that HW 4, 5, and 6 are all meant to prepare you for Test 2. 
+
+* Prepare your final project proposal and submit it on Moodle by next Thursday. 
+
+
+Next week we are going to start using statistical inference methods! First beginning in the case where we have a binary variable and are interested in the proportion or probability of one particular outcome, then in the case where we have a continuous, numberic variable and are interested in the mean/average value it takes on.  

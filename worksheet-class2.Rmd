@@ -1,0 +1,108 @@
+---
+title: "STAT 11 In-Class Worksheet"
+subtitle: "Exploratory data analysis for a single quantitative variable"
+author:
+- "Person 1"
+- "Person 2"
+- "Person 3"
+- "Person 4"
+date: "9/2/2021"
+output:
+  html_document:
+    code_folding: show
+    toc: yes
+    toc_float: yes
+---
+
+
+__Instructions:__ Complete this worksheet with your group mates. Make sure you fill in each group member's name in the "author" section of this code above. Choose one person to be the reporter, they will be the ones to type in your responses and who will share the output document on Moodle. Fill in the name of the reporter below. Before you can _knit_ this document, you must make sure that the `tidyverse` package is installed on RStudio. (Follow the instructions on Moodle to do this!)
+
+__Reproter:__ 
+
+_Before submitting:_ Change the name of this document to your group name 
+
+
+```{r, include=FALSE}
+###########################
+# DEFAULT SETTINGS  -- you can ignore this for now! 
+###########################
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+knitr::opts_chunk$set(echo=TRUE) # set echo=FALSE to hide code from html output
+
+###########################
+# LIBRARIES
+###########################
+
+#library(ggplot2)
+#library(dplyr)
+#library(patchwork)
+library(tidyverse)
+
+df <- read_csv("global_wealth_and_health.csv")  ## This is where the data file is "read" into R! 
+#class(df)
+#glimpse(df)
+
+#extract only complete data points from the year 2018 
+#df %>% distinct(Indicator)
+
+df2 = df  %>% filter(!is.na(Value)) %>% filter(Time=="2018") %>% select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+df3 = pivot_wider(df2, id_cols=Country, names_from = Indicator, values_from = Value)
+df3 = df3[,-c(4,9,13)]
+colnames(df3) = c("Country", "FertRate", "LifeExpect", "MortRate", "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+
+dataset = df3 %>% filter(!is.na(FertRate))
+```
+
+
+The following code generates a histogram and boxplot for the fertility rate of 199 different countries as recorded in 2018. 
+
+```{r}
+dataset %>% ggplot(aes(x = FertRate)) + geom_histogram()
+```
+
+```{r}
+dataset %>% ggplot(aes(x = FertRate)) + geom_boxplot()
+```
+
+
+The code below generates what we call a _five number summary_ for the selected variable `FertRate`.  
+```{r}
+dataset %>% select(FertRate) %>% summary
+```
+
+
+__1.__ What is the mean fertility rate and what is the median fertility rate? 
+
+[Write your answer here.]
+
+
+__2.__ Why do you think they are so different? 
+
+[Write your answer here.]
+
+
+__3.__ What is the average distance of each country's fertility rate to the mean fertility rate from Q1? Hint: Un-comment the line of code below and fill in the correct variable name for the question mark. 
+
+```{r}
+#dataset %>% select(?) %>% var
+```
+
+[Write your answer here.]
+
+
+__4.__ What is the range of fertility rates across all of these 199 countries? 
+
+[Write your answer here.]
+
+
+__5.__ What is the 25th percentile of fertility rates across all of these 199 countries? What about the 75th percentile? 
+
+[Write your answer here.]
+
+
+__6.__ Which of these measures of spread (from Q3-Q5) are most useful for this data set and why? 
+
+[Write your answer here.]
+

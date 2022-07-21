@@ -1,0 +1,241 @@
+---
+title: "Introducing common statistical methods"
+subtitle: "Class 19"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "11/16/21 (updated: `r Sys.Date()`)"
+output:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  xaringan::moon_reader:
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Lecturette introducing the t-distribution 
+
+2. Group work on HW 7 Problem 1 followed by class discussion 
+
+3. Reflection prompt 
+
+4. Looking ahead  
+
+---
+## Introducing the t-distribution 
+
+
+**Central Limit Theorem**
+If (1) a sample is random and independently drawn from some population and (2) the number of observations $n$ is large (but not more than $10\%$ of the size of the population) then... the sampling distribution of the sample means (or sample proportions) follows a Normal distribution. 
+
+
+--
+More specifically, 
+
+* the sampling distribution of the sample proportions is: $\hat{p} \sim N\left(p, \frac{p(1-p)}{n} \right)$ and
+
+* the sampling distribution of the sample means is: $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n} \right)$. 
+
+---
+## Introducing the t-distribution 
+
+
+**Central Limit Theorem**
+If (1) a sample is random and independently drawn from some population and (2) the number of observations $n$ is large (but not more than $10\%$ of the size of the population) then... the sampling distribution of the sample means (or sample proportions) follows a Normal distribution. 
+
+
+
+More specifically, 
+
+* the sampling distribution of the sample proportions is: $\hat{p} \sim N\left(p, \frac{p(1-p)}{n} \right)$ and
+
+* the sampling distribution of the sample means is: $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n} \right)$. $\leftarrow$ .blue[There are two unknown population parameters here!] 
+
+
+---
+## Introducing the t-distribution 
+
+The standard error of a sample estimate (such as a mean or proportion) is an approximation to the standard deviation of it's sampling distribution. 
+
+For proportions: $sd(\hat{p}) = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}} = SE(\hat{p})$
+
+For means: $sd(\bar{X}) = \sqrt{\frac{\sigma^2}{n}} \approx \sqrt{\frac{s^2}{n}} = SE(\bar{X})$
+
+
+--
+Because there are *two* unknown population parameters in the sampling distribution of the sample means, we have to use the same data set .blue[twice] to estimate the sampling distribution of the sample mean. This implies that we have more uncertainty in the accuracy of estimating the sampling distribution of $\bar{X}$ with a Normal distribution - especially for smaller sample sizes. 
+
+Former head brewer of Guinness and self-taught data scientist William Sealy Gosset, realized this discrepancy when studying the chemical properties of barley for samples that could be as small as $n=3$.   
+
+
+---
+## Introducing the t-distribution 
+
+In the context of hypothesis tests, recall that for tests about a population proportion, the test statistic is 
+
+$$T.S. = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \hspace{.2cm} \widetilde{\tiny H_{0}} \hspace{.2cm} N(0,1).$$ 
+
+
+For tests about a population mean, the test statistic is similar but instead follows a t-distribution with $n-1$ degrees of freedom
+
+$$T.S. = \frac{\bar{X} - \mu_0}{\sqrt{\frac{s^2}{n}}} \hspace{.2cm} \widetilde{\tiny H_{0}} \hspace{.2cm} t_{(n-1)}.$$
+
+---
+## Introducing the t-distribution 
+
+![](~/Desktop/wikipedia_tdist.jpg)
+
+```{r echo=FALSE, fig.align="center"}
+
+#knitr::include_graphics("~/Desktop/wikipedia_tdist.jpg")
+```
+
+---
+## Introducing the t-distribution 
+
+In R, the same functions for generating a random sample or calculating a quantile or a probability for a Normal RV exist for a *Student's t* RV. The only difference is that now we need only to specify the *degrees of freedom* parameter rather than the distribution mean and standard deviation. 
+```{r}
+#rt(n = sample size, df = degrees of freedom parameter)
+#qt(p = probability, df = degrees of freedom parameter, lower.tail=TRUE)
+#pt(q = quantile, df = degrees of freedom parameter, lower.tail=TRUE)
+```
+
+Since the *t-distribution* is similar to the standard Normal distribution (i.e. symmetric, unimodal, centered at zero), the probability and quantile calculations are done in the same manner as they are for Normally distributed RVs. 
+
+
+
+
+---
+## When to use the t-distribution or the Normal distribution 
+
+* For inference about proportions, always use the Normal distribution (but make sure you have enough observed "success" and "failures"!).
+
+* For inference about means, if the sample size is large, use the Normal distribution. 
+
+* For inference about means, if the sample size is small, use the t-distribution. 
+
+
+---
+## Group work
+### HW 7 Problem 1 
+
+**Instructions:** Spend the next $20$ minutes working with your group to answer the questions on the worksheet for Class 19. 
+
+Use the internet to do a search to help you find your answers. We will go over these answers in class either today or Thursday. 
+
+As I walk around, feel free to ask me questions. I may listen in to your group discussion for a bit to guide your discussions. 
+
+<br> 
+
+<br> 
+
+**Hint:** There may not be any parameters for some of the chi-squared tests! 
+
+
+---
+## Reflection prompt 
+
+
+
+
+
+When you are finished with the reflection prompt, please take one minute (it seriously won't take any longer) to complete the [survey for Team Java](https://docs.google.com/forms/d/e/1FAIpQLScW7vzX9NG6t2mw4TPg93O68F1kJ1nGUBrsA7-wioEzsGZMWQ/viewform) which can be under the Final Project section of our Moodle page. 
+
+
+
+---
+## Looking ahead 
+
+* Read Chapters 17 and 20 in the 5th edition of your textbook by next class. 
+
+* Homework
+
+  - HW 7 will is due this Friday by 6pm. Start on the problems (besides Problem 1) tonight! 
+
+  - HW 8 will be due over Thanksgiving break. 
+
+  - Your last HW assignment, HW 9, will be different from the others in that you won't be deriving solutions to particular problems, rather you will be constructing a road map for evaluating the quality of a statistical analysis. This HW assignment will be graded entirely for completion and is worth $15$ HW points. (This grading policy for HW 9 is meant to make up for any confusion from earlier HW assignments regarding due dates or typos or other miscommunications on my part.)    
+
+
+
+---
+## Looking ahead 
+
+* Test 2 
+
+  - Will be graded and handed back on Tuesday, Nov 23.  
+
+  - Corrections are due on Friday, Dec 3rd, the same day that your last HW assignment is due. 
+  
+  - The second round of grading for half-credit will be complete by the last day of class. 
+
+
+--
+* Final Project 
+
+  - The rough draft of your report is due at the end of the month (Nov 30 for group projects, Nov 24 for individual projects). 
+
+  - The last day of class you will have 5 minutes to present your final project to the class. Bring your poster and assign a person to be the reporter/presenter. The remainder of the class will be time to explore other peoples projects and ask questions about them. Each person will have a questionnaire to fill out for another project to encourage everyone to explore another project and explain their own.  

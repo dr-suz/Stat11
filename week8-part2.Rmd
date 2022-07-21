@@ -1,0 +1,186 @@
+---
+title: "Statistical inference - answering the question: how weird is your data?" 
+subtitle: "Class 15"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/28/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. R session: Plotting in the `tidyverse`
+  
+2. Inference for a proportion: Magician's coin example - group work 
+ 
+3. HW 5 Simulation Studies 
+
+4. Looking ahead 
+
+
+---
+## Plotting in the `tidyverse` 
+
+Data objects are given a name but they also contain columns which have their own names:
+```{r}
+#my.data = tibble(col1 = ?, col2 = ?, col3=?)
+#my.data
+```
+
+
+We plug the data object into the `ggplot` function and then specify which columns are to be plotted on the different axes with the `aes()` argument: 
+```{r}
+#my.data %>% ggplot(aes(x=?)) + geom_histogram(bins=?)
+
+#my.data %>% ggplot(aes(x=?, y=?)) + geom_point()
+
+#my.data %>% ggplot(aes(x=?, y=?)) + geom_boxplot()
+```
+
+
+---
+## Plotting in the `tidyverse` - Practice 
+
+First: 
+
+1. Open RStudio and create a new R Markdown document, keeping the template that R automatically fills in for you. 
+
+2. In the existing chunk of R code from the template, add a new line of code that calls the `tidyverse` packing into your working library: `library(tidyverse)`
+
+3. At the end of the template, start a new R code chunk and type `cars %>% names` in this chunk. 
+
+4. Knit the document and take a look at the column names of this data set called `cars`. 
+
+
+Then:
+
+5. Go back to the template and add another R code chunk where you will create a histogram for one of the variables contained in this `cars` data set. 
+
+6. Knit the document and see what the histogram looks like. 
+
+
+---
+## Sampling distributions and the CLT 
+
+
+* The *sampling distribution* of the sample means (or sample proportions) is a hypothetical distribution based on the *repeated sampling principle*. 
+
+
+* The **Central Limit Theorem** states that in general, the *sampling distribution* of the *sample means or sample proportions* approaches a Normal distribution as $n$ increases. 
+
+
+
+---
+## Analyzing the formulas 
+### Inference for a population proportion/probability 
+
+**Instructions:** Complete as much of the class 15 worksheet with your group as you can. I will be circulating around the room to answer any questions. Choose one person to be the reporter. This person is responsible for handing in your worksheet at the end of class. We will not be going over the answers today as a class; instead, we will reference this worksheet as we cover more material about this topic next week. 
+
+
+---
+## R code
+### Inference for a population proportion/probability
+
+To find a $100 \times (1-\alpha) \%$ CI for an unknown proportion/probability:
+```{r}
+#prop.test(x=?, n=?, conf.level = 1-alpha)
+```
+
+
+To conduct an $\alpha$-level hypothesis test for an unknown proportion/probability:
+
+```{r}
+#prop.test(x=?, n=?, p=?, alternative = "?", conf.level = 1-alpha)
+```
+
+---
+## HW 5 R Simulation Studies 
+
+
+Let's talk about Problems 6-10 of HW 5 to make sure we understand the purpose of these code-heavy exercises. 
+
+
+---
+## Looking ahead 
+
+
+* Submit HW 5 by 6pm tomorrow. (Note there is a typo in the code for Problem 7 (c), please see the comment on Moodle for the correction.)  
+
+* Submit you final project proposal on Moodle by 11pm tonight. 
+
+* Knit and read over the problems for HW 6 before class on Tuesday. It will be due by 6pm on Friday, Nov 5th. 
+
+* Catch up on the assigned readings (ideally before starting HW 6). 
+
+* Read the *Crash Course to Academic Writing* article on Moodle and the two *Definitions and Terms to Know* documents on CIs and hypothesis tests. 
+
+<br> 
+
+Next week, we are going to dig into the details for statistical inference about a population proportion and, time permitting, also get into details about inference for a population mean. 

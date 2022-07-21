@@ -1,0 +1,272 @@
+---
+title: "Statistical inference for a proportion"
+subtitle: "Class 16"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "11/2/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+header-includes:
+   - \usepackage{amsmath}
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Review Class 15 Worksheet probs 1-5 and key concepts 
+
+2. Hypothesis tests for proportions - lecturette 
+
+3. CIs for proportions - vocabulary 
+
+4. Group work - Class 15 worksheet and reflection prompt
+
+5. Looking ahead  
+
+---
+### Before we begin.... 
+
+This is a good time of the semester to revisit the class [syllabus](https://docs.google.com/document/d/1ETuLogK7_9RueU3X4LIdQyQ1jZ80IJFu/edit) and reflect on your plan for the rest of the course. 
+
+* Is there anywhere you could improve your grade besides HW and Exam scores? 
+
+* Have you been taking advantage of office hours? 
+
+* Have you been reviewing the HW solutions carefully? 
+
+
+Also, I spoke with the Muses yesterday and went over HW 5 and 6 with them. I want to remind you of this **R tip:** Chunks without any code are to be used as space for doing calculations "by hand", chunks with structured code that you have to fill in are based on work we've done in class and that is the most coding you are expected to do.  
+
+
+
+---
+## Review
+### Class 15 Worksheet and key concepts 
+
+**Data science**
+
+1. What are the two most important pieces of information for any variable? 
+
+2. What do we mean by "more perspectives is better"? 
+
+
+**Probability**
+
+1. What is a RV? 
+
+2. What does it mean for a sample of data to be independent or for RVs to be independent? 
+
+3. What are the three special features of Normal RVs? 
+
+
+**Statistics**
+
+1. Can you explain what a sampling distribution of a sample estimate is with respect to the repeated sampling principle? 
+
+
+
+---
+## Review
+### Class 15 Worksheet and key concepts 
+
+
+When can $\hat{p}$ be random? 
+
+When is $\hat{p}$ an observed, calculated number? 
+
+
+
+
+
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+The test statistic associated with either a one-sided or two-sided hypothesis test for an unknown proportion, $p$ is 
+$$T.S. = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \hspace{.5cm} \widetilde{\tiny H_{0}}  \hspace{.5cm} N(0,1).$$
+--
+This is because of the CLT which states conditions under which 
+$$\hat{p} \sim N\left(p, \frac{p(1-p)}n\right)$$
+and hypotheses are evaluated under the assumption that the null, $H_0$ is actually correct. 
+
+
+--
+**Q:** What is the standard deviation of the sampling distribution of the sample proportions? 
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+
+**New terminology:**
+
+1. A *p-value* is the conditional probability that the sampling distribution of $\hat{p}$ takes on the value you observe based on your data, $\hat{y}_{obs}$, or something more extreme, given that the null hypothesis is true. In other words: A p-value quantifies how weird/rare your observed value of $\hat{p}$ is, if the null hypothesis were in fact correct. 
+
+
+2. A *significance level* is a pre-specified value between $0$ and $1$ that indicates the researchers threshold for describing an observed value of $\hat{p}$ as rare (or, significant) under the null hypothesis. 
+
+---
+## Formulas for inference about a proportion 
+### Hypothesis tests
+
+**Q:** What does "more extreme" mean?
+
+
+--
+**A:** This depends entirely on the direction of the alternative hypothesis. It could be a value greater than or equal to, or less than or equal to for one-sided alternative hypothesis tests. 
+
+For two-sided alternative hypothesis tests, more extreme means greater than or less than the absolute value of the observed $\hat{p}$. 
+
+
+---
+## Formulas for inference about a proportion 
+### Confidence intervals
+
+A $(1-\alpha)\times 100\%$ CI for an unknown proportion, $p$, is 
+$$\hat{p}_{obs} \pm \left( z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\right),$$
+where $z_{\alpha/2}$ is the lower $\alpha/2^{th}$ quantile of a $N(0,1)$ distribution. 
+
+
+---
+## Formulas for inference about a proportion 
+### Confidence intervals
+
+A $(1-\alpha)\times 100\%$ CI for an unknown proportion, $p$, is: 
+$$\hat{p}_{obs} \pm \left( z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}\right).$$
+
+
+**New terminology:** 
+
+1. $\sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}$ is called the *standard error* of the sampling proportion, often abbreviated $SE(\hat{p})$.
+
+2. Half of the width of the CI is $z_{\alpha/2} \times \sqrt{\frac{\hat{p}_{obs}(1-\hat{p}_{obs})}{n}}$, which is called the *margin of error*, often abbreviated $ME$. 
+
+
+<br> 
+We will revisit CIs for an unknown proportion next class. 
+
+---
+### Group work 
+
+**Instructions:** Complete the rest of the Class 15 worksheet with your group. Draw your pictures for Problem 10 on the whiteboard. Choose one person to be the reporter. The reporter will be responsible for explaining your picture to the rest of the class. 
+
+
+
+
+
+---
+### Reflection prompt 
+
+Refer to your response to the Week 7 reflection prompt and to your notes for today's class. 
+
+What significance level would you choose to evaluate a hypothesis test about whether or not the coin is biased (towards heads)? 
+
+Interpret this significance level in terms of how frequently you would expect an event to happen "by chance". Explain what is meant by the phrase "by chance" in this context. 
+
+
+
+
+---
+## Looking ahead 
+
+* HW 6 is due this Friday by 6:00pm. No late homework is accepted!  
+
+* Exam 2 is next Thursday, in class, same policies as for Exam 1. 
+
+* Final project feedback will be available on Moodle by Friday.
+
+* Exam 1 re-grades will be published on Gradescope by the end of today. 
+
+* Today is voting day! 
+
+Next class, we will continue to talk about statistical inference for an unknown proportion. Next Tuesday will be review and a general discussion about hypothesis tests and confidence intervals. 
+
+---
+## Announcements 
+
+**Math/Stat Career Panel**
+<br>
+Are you curious about what you can do with a math/stat degree?
+
+Come meet Swarthmore math and statistics alumni. Hear about their career experiences and journeys. Find out about summer job and internship opportunities. Ask questions and get valuable advice for your own career!
+<br> 
+
+**When:** Friday, November 5, 3:30-4:30pm
+**Where:** SC 105
+<br> 
+
+**Who:**
+
+- Allison Gantt '14 Mathematics Educator and Ph.D. Student in Education, University of Delaware
+
+- Jessica Larson '06, Biostatistician, Natera
+
+- Brendan McVeigh '11, Data Scientist, Waymo
+
+- Jason Mendoza '16, Vice President and Risk Manager, Citi
+
+- Kenny Ning '14, Analytics Engineer, Supergrain

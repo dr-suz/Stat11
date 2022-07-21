@@ -1,0 +1,146 @@
+---
+title: "Poster Presentations!"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "12/7/21 (updated: `r Sys.Date()`)"
+output:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  xaringan::moon_reader:
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+header-includes:
+  - usepackage{xcolor}
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+
+## Today's agenda 
+
+1.  .green[9:55am - 10:05am]  Poster set-up 
+
+2. .green[10:05am - 10:45am]  Mingle and discuss projects 
+
+3. .green[10:45am - 11:00am]  Pause to complete peer-review questionnaire. 
+
+4. .green[11:00am - 11:10am]  Looking ahead and cookies 
+
+
+
+---
+## Preparing for test 3 
+
+
+* See the updated formula sheet. 
+
+* You are allowed to use non-graphing calculators and the formula sheet on the test and I will have scrap paper for you if you need it. 
+
+* I will also print out copies of the R documentation for each of the following functions so you can reference them during the test: `prop.test()`, `t.test()`, and `chisq.test()`. 
+
+* See this [study guide](https://moodle.swarthmore.edu/pluginfile.php/706658/mod_resource/content/1/course_study_guide.pdf) for what is expected in Stat 21 (I made this last year so ignore the dates).  
+
+
+--
+
+### Office hours
+
+* Thursday, Dec 9 from 11:00am - 12:30pm in SCI 136 (no appointment necessary)
+
+* Monday Dec 13 from 2:30pm - 4:00pm in SCI 136 (no appointment necessary)
+
+* Zoom appointments available upon request but subject to my schedule constraints (appointment necessary)
+
+---
+## Preparing for test 3 
+
+.green[**Some advice**] 
+
+* Review all class material (HW, slides, reflection prompts, etc) and use the textbook to supplement your review for any parts that you feel less confident or confused about. 
+  
+* Create your own study guide/cheat sheets for each topic or section (data science, probability, and inference).  
+  
+* Use the formula sheet while you are studying to become familiar with the symbols and notation and where to look for what so it is not unfamiliar to you on test day. 
+  
+* *Get at least 7 hours of sleep each night and eat at least two meals each day.*
+
+---
+### Looking ahead 
+
+* Test 2 graded by end of this week 
+
+* Final projects graded by Test 3 
+
+* Course evaluations and .green[the value of this educational opportunity] 
+
+<br>
+
+<br>
+
+--
+.center[**Thank you for your participation in this learning community!**]
+
+.center[...and enjoy your break!]
+
+
+
+     

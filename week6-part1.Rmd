@@ -1,0 +1,356 @@
+---
+title: "Randomness and Probability"
+subtitle: "Class 10"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/5/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Road map of core concepts 
+
+2. Lecturette on randomness and probability
+
+3. Group discussion on probability misconceptions 
+
+4. Reflection prompt  
+
+5. Looking ahead and an announcement 
+
+
+---
+### Course road map 
+
+Topics for Test 1: How to explore or describe data? 
+
+* What is data?  What is quality data? 
+
+* How to collect data? 
+
+* How to design a study to investigate a research question? 
+
+* Using R to import and describe data. 
+
+<br> 
+--
+Two key ideas so far: 
+
+* More perspectives the better 
+
+* The most useful descriptors for **any** variable tell us:  
+
+  1. What values occur most frequently (location) and 
+  
+  2. What are the different possible values (spread).
+
+
+
+---
+### Course road map 
+
+Now we are moving on to the topics of randomness and probability. 
+
+  - Mathematical constructs 
+  
+  - Real-world connection 
+  
+  - Using R for simulation 
+
+After this section, we will the put everything together to see how we can statistically answer the question: *how weird is that?* 
+
+  - Hypothesis tests 
+  
+  - Confidence intervals 
+  
+  - Using R for these analysis methods  
+  
+  - Statistical methods alone can't answer this question! Domain knowledge is key if we want to get a sense of what is *practically* unusual in a particular context. 
+
+
+
+---
+### Different types of randomness 
+
+
+What is randomness? 
+
+<br>
+
+
+--
+What is a random variable? 
+
+
+--
+1. Possibilities 
+
+2. Probabilities 
+
+<br> 
+
+
+--
+What's the distinction between a random variable and a variable in a data set? 
+
+<br> 
+--
+There are actually (at least) two levels of randomness we refer to in statistical analyses:  
+
+1. Random sampling (sampling procedure);
+
+2. The random variable itself (the statistical model).
+
+
+
+---
+### Probability rules 
+
+What is probability? 
+
+
+<br>
+
+<br>
+
+--
+Are there any features/qualities about probability that must always be true?   **This is a big idea** 
+
+<br> 
+
+See the *Definitions and Terms to Know* Section on Moodle. 
+
+---
+### Probability rules 
+
+
+
+1. A probability is always a number between zero and one 
+
+2. The probability that any of the possible outcomes occurs is always one. 
+
+3. The probability that a particular event occurs can be found by taking one minus the probability that that event *does not* occur. 
+
+4. The probability that one event occurs or another event occurs (or both occur) can be calculated from a Venn diagram that accounts for their possible overlap/intersection. 
+
+5. If two events are independent, then the probability that both events occur is the same thing as multiplying together the probabilities that each one occurs separately.  
+
+
+---
+### Practice problem - Venn diagrams 
+
+Suppose that 78% of the students at a particular college have a Facebook account and 43% have a Twitter account.
+
+<br> 
+
+a) Using only this information, what is the largest possible value for the percentage who 
+have both a Facebook account and a Twitter account?  Describe the (unrealistic) 
+situation in which this occurs.
+
+<br> 
+
+b) Using only this information, what is the smallest possible value for the percentage 
+who have both a Facebook account and a Twitter account?  Describe the (unrealistic) 
+situation in which this occurs.
+
+
+
+---
+### Special random variables 
+
+
+Random variables can be continuous or discrete. This is a mathematical description and is not really as simple as considering rather a variable is categorical or quantitative. 
+
+There are many common random variables that are useful to assume as the underlying statistical model
+
+- Normal random variables 
+
+- Binomoal random variables 
+
+- Poisson random variables 
+
+- Uniform random varaible
+
+- And many more....
+
+
+--
+You can make your own random variable! All you need to do is define the 
+
+1. Possibilities and 
+
+2. Probabilities 
+
+in a way that is consistent with the five common features of probability. 
+
+
+---
+### Relating random phenomena 
+
+
+Independence is an important concept with many subtleties **(This is another big idea!)** 
+
+- There is a colloquial definition. 
+
+- There is a role with respect to the data collection/sampling procedure. 
+
+- There is a mathematical definition based on common feature number $5$ of formal probability.
+
+It is almost always a required assumption for statistical inference, i.e. answering the question how weird is that? 
+
+But... it is hardly ever true in reality!  
+
+
+---
+### Relating random phenomena 
+
+
+**Independence: How can we tell?**
+
+Statistical methods alone can't answer this question. However, statistical methods can lend support to domain knowledge to help assess the reasonableness of assuming independence in a particular setting.  
+
+
+We will go over one way to assess independence for categorical variables with probability tables next class.   
+
+We will return to this idea of independence tthroughout the remainder of the semester. 
+
+---
+### Class Discussion - Probability misconceptions 
+
+
+Spend 5 minutes reading through the six common probability misconceptions. Try to rewrite each misconception in your own words, in a way that is easy for you to understand. 
+
+
+**Misconceptions**
+
+1. All outcomes of a chance experiment are equally likely.
+
+2. In independent trials, the probability of an event occurring changes based on prior outcomes.
+
+3. In experiments involving random selection, the likelihood of an outcome depends on numbers rather than proportions.
+
+4. $P(A\mid B) = P(B\mid A)$
+
+5. $P(A \cup B)$ can be smaller than $P(A)$ or $P(B)$.
+
+6. $P(A \cap B)$ can be greater than $P(A)$ or $P(B)$.
+
+
+
+
+.footnote[Source: DANA Center for Mathematics Pathways]
+
+
+
+
+---
+### Group Discussion - Class 10 worksheet 
+
+Spend the next 10 minutes looking over the Class 10 worksheet with your group mates. Try to answer as many questions as possible. The group reporter should record your answers and turn in one worksheet for your group to me when you are finished. 
+
+If your group finishes before the time is up, then spend some time thinking about which of the six probability misconceptions might be crucial to avoid in answering each of the questions. 
+
+We will go over the answers next class.  
+
+
+---
+### Reflection prompt
+
+Spend the next $7$ minutes answering the reflection prompt question in Moodle. 
+
+
+---
+## Looking ahead 
+
+
+For Thursday's class 
+
+* Knit the HW 4 template and read over the questions 
+
+* Read Chapters 12, 13, 14 in the 5th edition of your textbook 
+
+* We are going to do more hands-on work with probability in the form of tables. 
+
+* You will get your graded Test 1 back at the end of class. You may submit corrections for half-credit to my mailbox outside room SC 135 by 2pm this Friday. 
+
+
+
+Final project  
+
+* Proposals are due after break on Oct 21.   
+
+* Very customizable! You'll have the opportunity to ask questions next class.  
+
+* I will check my email on Monday and Friday over break and spend no more than 60 minutes on student emails. 
+
+
+Announcement from the new Math/Stat Academic Coordinator: Laura Dangridge! 
+

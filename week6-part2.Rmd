@@ -1,0 +1,234 @@
+---
+title: "Randomness and Probability"
+subtitle: "Class 11"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/7/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Creating tables in R - group work 
+
+2. Revisit group worksheet - group work 
+
+3. Final project discussion 
+
+4. Test 1 review 
+
+5. Looking ahead  
+
+
+---
+### Using Tables 
+
+
+* We can use tables to help us assess whether or not two categorical variables might be independent. $\leftarrow$ we'll talk about this after break. 
+
+
+* We can also use tables to calculate a reversed conditional probability (AKA Bayes' rule)
+
+
+
+<br>
+
+<br> 
+
+
+Note: there is another "Definitions and Terms to Know" document uploaded to Moodle. 
+
+
+---
+## Using tables to reverse a conditional probability  
+### Example 
+
+According to the Centers for Disease Control, in most regions of the U.S., the evidence of SARS-CoV-2 antibody is thought to range from $5\%$ to $25\%$.$^{[1]}$ It is also known that the current antibody tests are not $100\%$ accurate, sometimes resulting in false positive results and false negative results. Some tests have been reported to have false positive and false negative rates of around $10\%$.$^{[2]}$
+
+
+
+<br>
+
+<br>
+
+<br> 
+
+.footnote[
+[1] Fox, M. (CNN, 2020, May 26)
+
+[2] Cairns, E. (Evaluate.com, 2020, April 22)
+]
+
+
+---
+## Using tables to reverse a conditional probability  
+### Example 
+
+Suppose that the prevalence of antibodies in a particular region is $5\%$ and that the antibody test being used in that region has a false positive rate of $10\%$ and a false negative rate of $10\%$.
+
+
+
+**Question of interest:** If someone in this region tests positive, what is the probability that they actually do have antibodies for COVID-19?
+
+
+---
+## Using tables to reverse a conditional probability  
+### Example 
+
+Suppose that the prevalence of antibodies in a particular region is $5\%$ and that the antibody test being used in that region has a false positive rate of $10\%$ and a false negative rate of $10\%$.
+
+
+<br>
+
+<br> 
+
+
+By yourself, determine what the values of the following probabilities will be. 
+
+
+* P(antibodies present) 
+
+* P(positive test result | no antibodies)  
+
+* P(negative test result | antibodies)  
+
+
+---
+## Using tables to reverse a conditional probability  
+### Example 
+
+
+Suppose we have a random sample of $1000$ individuals from this particular region who took the antibody test. 
+
+
+By yourself, determine how many individuals you would expect to have antibodies based on the previous information. Also think about how many individuals you would expect to not have antibodies but would still test positive for antibodies. 
+
+
+--
+With your group, complete the table on the board for this sample of $1000$ individuals. 
+
+<br> 
+Then use this table to calculate the probability that one of these individuals actually does have antibodies given that they tested positive. 
+
+
+
+---
+### Revisiting worksheet for class 10 
+
+You will be looking at another group's answers to determine which were incorrect. Identify (write on their worksheet)
+ which probability misconception may have been involved. 
+ 
+ 
+**Answers:**
+
+1. E 
+
+2. B 
+
+3. B 
+
+4. C 
+
+5. B 
+
+6. A
+
+
+---
+### Final Project Options 
+
+I will upload some final project ideas/examples to Moodle later today. 
+
+<br> 
+You may complete the final project by yourself or in a group of no more than five.  
+
+<br> 
+
+You will submit your project proposal on Moodle by the 21st. 
+
+
+<br>
+
+The first draft of your report will be evaluated by your peers. I will evaluate the final version which is due on the last day of class. 
+
+---
+### Test 1 Review 
+
+You may submit corrections for half-credit to my mailbox outside my office SC 136 by 6pm this Friday. You may work with others on these corrections! 
+
+---
+## Looking ahead 
+
+
+* Start to think about which final project option you'd like to do and outline a proposal. 
+
+* I will check my email on Monday and Friday over break and spend no more than 60 minutes on student emails. 
+
+I hope you have a restful and enjoyable fall break! 

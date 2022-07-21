@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploring data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="STAT 011 with Prof Suzy" />
+    <script src="week2-2_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="week2-2_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="week2-2_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Exploring data
+## Relationships between variables and the Normal model
+### STAT 011 with Prof Suzy
+### Swarthmore College
+
+---
+
+  
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+&lt;/style&gt;
+     
+## Today 
+
+1.  Announcements 
+
+2.  Hands on with RMarkdown 
+
+3.  Group concept questions 
+
+4.  Class discussion  
+
+5.  Looking ahead 
+
+
+---
+## Announcements 
+
+It is really important to read and follow all instructions! Also, all material you hand in for this class should be written in compplete sentences with proper punctuation. As a rule of thumb, pretend your work will be read by my grandfather who knows nothing about computers or R or statistics. 
+
+
+In general, no late homework will be accepted. Each problem is worth 1 point and only graded as 0, 1/2, or 1 point credit per problem.  Recall you all have one drop HW grade!
+
+Special accomodations for HW 1 
+
+- For students who have been in class since day 1: you may submit corrections to HW 1 on Gradescope using the re-grade request option. 
+
+- For students who have joined us after day 1: both HW 1 and 2 are both due by the beginning of class next Tuesday and you will not be able to submit corrections for either.  
+
+
+---
+## Announcements 
+
+What should you do if you can't get your R Markdown file to knit? 
+
+
+--
+Email me your .Rmd file before the deadline. In the future there will be a penalty for submitting .Rmd files instead of PDFs uploaded through Gradescope. Anything emailed to me after the deadline will recieve a grade of 0.  
+
+
+
+**Note:** More stats help is available starting today! Check the calendar for my explanded office hours and expect an announcement regarding new Muse sessions next week. 
+
+
+---
+## Hands on with RMarkdown 
+### Preparation 
+
+**Do this now:** 
+
+- Open our course Moodle page.  
+
+  * If you have a working version of R and RStudio on your laptop, open it.
+
+  * If you are using the Swarthmore server, log in to rstudio.swarthmore.edu now. 
+
+- Read over the R user guide uploaded to Moodle. 
+
+---
+## Hands on with RMarkdown 
+### Overview 
+
+By yourself, you will complete the following four steps today. We will spend `\(25\)` mins on this activity. 
+
+Step 1: Open a new R Markdown document, give the file a name and select the option to create an HTML file. Save this file with the name "testingR"
+
+Step 2: Knit the document as-is and read through the RMarkdown code and output. 
+
+Step 3: Complete the following tasks within the template the R automatically provided you for your RMarkdown document
+
+Step 4: Submit your edited RMarkdown file (ends in .rmd) to me on Moodle. If you finish early, begin to work on HW 2! 
+
+---
+## Hands on with RMarkdown 
+### Instructions
+
+Complete the following tasks within the template the R automatically provided you for your RMarkdown document
+
+  * Add a new section header using the `##` prefix followed by a space and then the title "Venting about R"
+  
+  * Spend a minute or two expressing your R fustrations and honest opinions about the coding part of this class. (Don't write more than 5 sentences... otherwise you may not finish the activity!)
+  
+---
+## Hands on with RMarkdown 
+### Instructions continued...  
+  
+  * Add another header (again using the `##` prefix followed by a space) with the title "Anyway, let's try R out..." 
+
+  * In this section add a new R code chunk labeled "testplot" by typing the following exactly but without the #'s
+  
+```{r}`r''`
+# {r testplot}
+#     library(tidyverse)
+#     head(cars)
+```
+
+    
+---
+## Hands on with RMarkdown 
+### Instructions continued...
+    
+  * Use the code below to create a scatterplot for the two quantitative variables within the R code chunk "testplot"
+  
+
+```r
+  cars %&gt;% ggplot(aes(x=speed, y=dist)) + geom_point()
+```
+  
+  
+   * Now create a new R code chunk labeled "testcalc" by typing the following but without the #'s which calculates a correlation matrix for the quantitative variables `speed` and `dist` 
+  
+```{r}`r''`
+# {r testcalc}    
+# cars %&gt;% select(speed, dist) %&gt;% cor
+
+```
+  
+Write a sentence below this R code chunk interpreting the correlation between speed and stopping distance and then knit your document to see the output! 
+  
+
+
+---
+## Group concept questions 
+### 25 mins
+
+Download or open the Class 4 R Markdown worksheet in RStudio. Make sure you can knit the template first! 
+
+Then work with your group members to answer the `\(7\)` questions. 
+
+The group reporter will email me your group's completed RMarkdown worksheet for participation credit before the end of class. 
+
+Raise your hand if your group has a question! 
+
+
+---
+## Class discussion and overview 
+
+
+Relationships between variables 
+
+   * two quantitative 
+   
+   * one quantitative, one categorical 
+   
+   * two categorical 
+   
+Determining if a quantitative variable seems to follow a Normal distribution 
+
+  * Look for symmetry and unimodality 
+  
+  * Determine if the 68, 95, 99.7 percent rule applies 
+  
+  * Create a Normal Probability Plot and compare deviations from the diagonal line 
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

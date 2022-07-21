@@ -1,0 +1,165 @@
+---
+title: "STAT 11 In-Class Worksheet"
+subtitle: "Exploratory data analysis for a single quantitative variable"
+author:
+- "Person 1"
+- "Person 2"
+- "Person 3"
+- "Person 4"
+date: "9/9/2021"
+output:
+  html_document:
+    code_folding: show
+    toc: yes
+    toc_float: yes
+---
+
+
+__Instructions:__ Complete this worksheet with your group mates. Make sure you fill in each group member's name in the "author" section of the _preamble_ above. (Don't erase any of the quotation marks!) Choose one person to be the reporter, they will be the ones to type in your responses and who will share the output document on Moodle. Fill in the name of the reporter below. Before you can _knit_ this document, you must make sure that the `tidyverse` package is installed on RStudio.  
+
+__Reproter:__ 
+
+_Before submitting:_ Change the subtitle of this document to your group name.  
+
+
+```{r, include=FALSE}
+###########################
+# DEFAULT SETTINGS  -- do not delete any of the code inside this chunk! 
+###########################
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+knitr::opts_chunk$set(echo=TRUE) # set echo=FALSE to hide code from html output
+
+###########################
+# LIBRARIES
+###########################
+
+library(tidyverse)
+data <- read_csv("global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+data4 <- data3[,-c(4,9,13)] 
+colnames(data4) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+        "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", 
+        "YoungPop", "PovertyCount")
+global_wealth_and_health <- data4 
+```
+
+***
+
+Let's take a look at the global wealth and health data set again. 
+
+```{r}
+head(global_wealth_and_health)
+```
+
+
+The code below generates a scatterplot for the two quantitative variables `FertRate` and `LifeExpect`.
+
+```{r}
+global_wealth_and_health %>% ggplot(aes(x=FertRate, y=LifeExpect)) + geom_point()
+```
+
+
+The code below calculates a correlation matrix for the two quantitative variables `FertRate` and `LifeExpect` using only the observations (rows) that do not have a missing value for either variable. 
+```{r}
+global_wealth_and_health %>% select(FertRate, LifeExpect) %>% cor(use="complete.obs")
+```
+
+***
+
+Suppose we want to determine if the variable `LifeExpect` follows a Normal distribution. Let's take a look at a histogram of this data.
+
+```{r}
+global_wealth_and_health %>% ggplot(aes(x=LifeExpect)) + geom_histogram(bins=30)
+```
+
+
+__1.__ Play around with the number of bins in the histogram above (hint: try $10$, $25$, and $40$). Does the variable `LifeExpect` appear to follow a Normal distribution based on this sample of countries? Give at least two reasons. 
+
+[Write your answer here.]
+
+
+__2.__ Uncomment and complete the code below to calculate the mean, variance and standard deviation of the life expectancy over all countries. What are the units of measurement for these three values? 
+
+```{r problematic_chunk}
+## The problem with the old code was that it confused how data objects and vectors of data are used within the tidyverse. The code below works and in fewer lines! 
+#summary_stats <- global_wealth_and_health %>% summarise(data_mean = ?(LifeExpect), data_var = ?(LifeExpect), data_sd = ?(LifeExpect))
+#summary_stats
+```
+
+[Write your answer here.]
+
+
+__3.__ The code below calculates the number of data points that lie within one standard deviation of the mean of `LifeExpect` and reports the length of the entire data set. What percent of the countries have life expectancies within one standard deviation of the mean?
+
+```{r}
+## Note that the $ allows us to extract a particular number (or vector) from a data object (AKA a tibble or data frame) with named columns 
+#lower_bound <- summary_stats$data_mean - summary_stats$data_sd
+#upper_bound <-summary_stats$data_mean + summary_stats$data_sd
+#global_wealth_and_health %>% filter((LifeExpect<=upper_bound)&(LifeExpect>=lower_bound)) %>% count 
+#global_wealth_and_health %>% select(LifeExpect) %>% count
+```
+
+[Write your answer here.]
+
+
+__4.__ Complete the code below to determine what percent of the countries have life expectancies within three standard deviations of the mean of `LifeExpect`. 
+
+```{r}
+#lower_bound <- ?
+#upper_bound <- ?
+#global_wealth_and_health %>% filter((LifeExpect<=upper_bound)&(LifeExpect>=lower_bound)) %>% count 
+```
+
+[Write your answer here.]
+
+***
+
+Another way to determine if a quantitative variable may reasonably follow a Normal distribution is to create a Normal Probability Plot of the sample quantiles. If the Normal Probablity Plot for a variable follows a relatively straight line, then the quantiles of the sample of data match up with the quantiles of a hypothetical random sample of data actually drawn from a Normal distribution. 
+
+
+The code below creates a Normal Probability Plot for `LifeExpect`. 
+```{r}
+global_wealth_and_health %>% ggplot(aes(sample=LifeExpect)) + stat_qq() + stat_qq_line()
+```
+
+__5.__ Does the variable `LifeExpect` seem to follow a Normal distribution based on this plot? Why or why not? 
+
+[Write your answer here.]
+
+
+***
+
+The `scale()` function in R can be used to standardize any quantitative variable. It does this by computing the mean and standard deviation of the input variable and then it takes each individual data point and transforms them by subtracting the mean and dividing by the standard deviation. 
+
+The code below creates a new data set called "global_wealth_and_health2" that contains a standardized value for the variable `LifeExpect` which is called `LifeExpectStand`.
+
+```{r}
+global_wealth_and_health2 <- global_wealth_and_health %>% mutate(LifeExpectStand = scale(LifeExpect))
+```
+
+__6.__ What is the mean, standard deviation, and variance for this new variable `LifeExpectStand`?
+
+[Write your answer here.]
+
+
+__7.__ Do you expect the Normal Probability Plots for the variable `LifeExpect` and `LifeExpectStand` to look different? Why or why not? 
+
+[Write your answer here.]
+
+
+You can use the space below to create another Normal Probability Plot for the variable `LifeExpectStand` and use this to check your answer to Problem 7. 
+```{r}
+#global_wealth_and_health2 %>% ggplot(aes(sample=?)) + stat_qq() + stat_qq_line()
+```
+
+
+
+**If your group finishes early** work together to answer the same questions above but for now for the variable `FertRate`.  
+
+
+

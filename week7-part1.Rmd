@@ -1,0 +1,390 @@
+---
+title: "Randomness and Probability"
+subtitle: "Class 12"
+author: "STAT 11 with Prof. Suzy"
+institute: "Swarthmore College"
+date: "10/19/21 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+  #   css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+  self_contained: false # if true, fonts will be stored locally
+#    includes:
+#     in_header: "assets/mathjax-equation-numbers.html"
+nature:
+  #      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+navigation:
+  scroll: false # disable slide transitions by scrolling
+includes:
+  in_header: mystyles.sty
+---
+  
+
+```{r setup_pres, include=FALSE, echo=FALSE}
+#devtools::install_github("ropenscilabs/icon")
+#devtools::session_info('rmarkdown')
+
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy = FALSE, # display code as typed
+  size = "small" # slightly smaller font for code
+)
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+
+rm(list=ls())
+library(tidyverse)
+#library('gridExtra')
+#library(broom)
+data <- read_csv("~/Documents/global_wealth_and_health.csv")
+data2 <- data  %>% filter(!is.na(Value)) %>% 
+               filter(Time=="2018") %>% 
+               select(-c('Flag Codes', Flags, LOCATION, TIME, Time, DEMO_IND)) 
+data3 <- pivot_wider(data2, id_cols=Country, names_from = Indicator, values_from = Value)
+global_wealth_and_health <- data3[,-c(4,9,13)]
+colnames(global_wealth_and_health) = c("Country", "FertRate", "LifeExpect", "MortRate", 
+      "HIVPrev", "RuralPop", "GDP", "TotalExpenditure", "TotalPop", "SrPop", "YoungPop", "PovertyCount")
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.scroll-output {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.scroll-small {
+  height: 50%;
+  overflow-y: scroll;
+}
+   
+.red{color: #ce151e;}
+.green{color: #26b421;}
+.blue{color: #426EF0;}
+```
+     
+## Today 
+
+1. Properties of expectation and variance 
+
+2. Independence 
+
+3. Normal random variables 
+
+4. Reflection prompt
+
+5. Looking ahead  
+
+
+---
+### Big picture 
+
+
+**Data science** 
+
+* Collecting data 
+
+* Measuring variables of interest for each observational unit 
+
+* Designing a study 
+
+* Standardizing quantitative data 
+
+* Describing distributions visually and mathematically 
+
+
+**Mathematics**
+
+* Laws of probability 
+
+* Defining a random variable with it's distribution 
+
+* Properties and laws of random variables 
+
+* Concept of independence 
+
+* Special properties of Normal random variables
+
+
+---
+### Big picture 
+
+
+**Statistics** 
+
+* Inferential conclusions and statements about statistical significance
+
+* Answers the question: "how weird is your data?" 
+
+
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. $E(aX+b) = aE(x) + b$
+
+2. $Var(aX+b) = a^2 Var(X)$ 
+
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. $E(aX+b) = aE(x) + b$
+
+2. $Var(aX+b) = a^2 Var(X)$ 
+
+3. $E(X \pm Y) = E(x) \pm E(Y)$ 
+ 
+ 
+
+---
+### Properties of expectation and variance 
+
+**These properties are true for ANY random variables!** 
+
+1. $E(aX+b) = aE(x) + b$
+
+2. $Var(aX+b) = a^2 Var(X)$ 
+
+3. $E(X \pm Y) = E(x) \pm E(Y)$ 
+
+4. $Var(X \pm Y) = Var(X) \pm 2Cov(X,Y) + Var(Y)$ 
+
+
+<br> 
+
+What is $Cov(X,Y)$? 
+
+
+
+
+
+---
+### Covariance 
+
+$$Cor(X,Y) = \frac{\mathbf{Cov(X,Y)}}{\sqrt{Var(X)Var(Y)}}$$
+
+
+Mathematically, the *correlation* between two random variables is just a standardized version of something called the *covariance* between the two random variables. 
+
+<br> 
+
+<br> 
+
+What does the correlation between two random variables, $X$ and $Y$, tell us? 
+
+<br>
+
+--
+The covariance between $X$ and $Y$ tells us the same thing! (It's just in different units.)
+
+
+
+---
+### Independence 
+
+If two random variables, $X$ and $Y$, are independent, then they cannot be correlated! Therefore, if $X$ and $Y$ are independent, $Cov(X,Y)=0$ and the fourth property simplifies to
+
+$$Var(X \pm Y) = Var(X) + Var(Y).$$ 
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+<br>
+<br> 
+--
+Note that this is different (but related) to the question "How can we tell if an observed sample of data are independently drawn from the population?"
+
+
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+<br>
+<br> 
+
+Random variables have 
+
+* possibilities (events in the sample space)
+
+* probabilities (defined by some statistical model).
+
+<br> 
+
+We can sometimes use tables to actually see if the mathematical definition of independence seems to be true. 
+
+<br> 
+
+--
+If $P(A \cap B) = P(A) \times P(B)$ or equivalently, $P(A\mid B) = P(A)$, the the random events $A$ and $B$ are independent. If this is true for any events in the sample spaces of two random variables, then the random variables are said to be independent. 
+
+
+---
+### Example  
+
+Suppose $X$ is a random variable that represents the outcome of a diagnostic test which can be only: positive, negative, or inconclusive. Suppose $Y$ is a random variable that represents birth order of an individual which can be only: eldest, youngest, middle, or only child. 
+<br> 
+
+If we observe a data set of $n$ individuals who have all recorded their birth order and who have all taken this diagnostic test, we can tabulate the results. 
+
+<br> 
+
+From this table, we can calculate the proportion of people in our sample who are, say, the eldest and have a negative test result. If these two random variables, $X$ and $Y$ are independent, then we could expect this number to be approximately the same as the proportion of people in our sample who are the eldest times the proportion of people in our sample who have a negative test result. 
+
+
+
+---
+### Independence  
+
+
+How can we tell if two random variables are independent? 
+
+<br>
+<br> 
+
+Random variables have 
+
+* possibilities (events in the sample space)
+
+* probabilities (defined by some statistical model).
+
+<br> 
+
+We can sometimes use tables to actually see if the mathematical definition of independence seems to be true. 
+
+<br> 
+
+
+Most often however, we must critically analyse the situation using domain knowledge to assess whether or not two random variables are independent. 
+
+
+
+
+
+
+---
+### Normal random variables 
+
+Normal random variables are special because of these three things
+
+* Expectation and variance tell us everything we need to know about the distribution.   
+
+* They can be combined with other Normal random variables in a satisfying way.    
+
+* The ubiquity of the central limit theorem. 
+
+
+
+---
+### Normal random variables in R 
+
+
+We can simulate draws from a Normal distribution in R with the following command: 
+```{r eval=FALSE}
+rnorm(n, mean=?, sd=?)
+```
+
+<br> 
+
+Here $n$ is the size of the sample, that is, the number of observations, we want to collect from the specified Normal distribution. 
+
+
+---
+### Normal random variables in R 
+
+If we observe a data value from a Normal distribution with a particular mean and standard deviation, we can determine the probability with which we would expect this value or something smaller to occur using the following command: 
+
+```{r eval=FALSE}
+pnorm(q, mean=?, sd=?, lower.tail=TRUE)
+```
+
+<br> 
+
+Here $q$ stands for quantile, that is the observed value we are given. 
+
+<br>
+
+You can change the argement `lower.tail=FALSE` to instead find the probability that the value $q$ or something larger than $q$ is observed. 
+
+
+---
+### Normal random variables in R 
+
+
+If we instead want to know the value a Normally distributed random variable would need to take on to occur with a particular probability then we can use the following command:   
+```{r eval=FALSE}
+qnorm(p, mean=?, sd=?, lower.tail=TRUE)
+```
+
+<br> 
+Here $p$ stands for the probability we are given or are interested in. 
+
+
+
+
+---
+### Group work - independence 
+
+**Instructions:** Work with your group for the next few minutes to answer the two prompts below. Choose someone to be the group reporter. The reporter should write down your responses on a piece of paper to submit to me at the end of class. Make sure your group's name and the reporter's name is on the paper you submit. We will go over the answers to this prompt next class. 
+
+<br> 
+
+--
+**Question:** 
+
+Consider an observational study of the effects of second-hand smoke on health in which we want to compare non-smokers (i) who live with a smoker to (ii) those who do not live with a smoker.
+<br>
+
+There are two ways in which independence is relevant in the sampling and data collection process. 
+
+
+(a) What are the two ways in which independence is relevant in this study?
+
+(b) Give an example in which one type of independence is met but the other is not; 
+
+(c) give an example in which the other type of independence is met but the first is not. 
+
+
+
+---
+### Reflection prompt 
+
+Suppose a magician decides to let you try to determine if a coin he has been using in his tricks is fair (that is, there is a $50/50$ chance of either heads or tails). The magician won't let you touch the coin but instead lets you choose the number of times he will flip the coin and show you the result. 
+
+
+How many times would you tell the magician to flip the coin? And, based on the outcomes of these coin flips, how many times would you need to see "heads" to make you confident in asserting that the coin is not fair? 
+
+
+---
+## Looking ahead 
+
+* Print out and read through the definitions and terms to know files at the bottom of our course Moodle page. 
+
+* HW 5 will be posted by the end of the day. Knit the template and read over the questions before class on Thursday.
+
+* Prepare to submit your final project proposal by Thursday Oct 28. Take a look at the assignment on Moodle and the questions that you will need to answer for this.  
+
+* Please submit the mid-semester feedback form under Week 7 on Moodle. 
+
+<br> 
+
+Next class we will discover what is meant by a "sampling distribution" and begin to understand the reasoning behind questions of statistical inference.  
