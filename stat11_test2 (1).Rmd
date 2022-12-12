@@ -1,0 +1,217 @@
+---
+title: "Stat 011 Test 2"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 12pt
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(png)
+options(knitr.kable.NA = '')
+
+#vg_data <- read_csv("~/Google Drive/Swat docs/Stat11_S20/Midterm1/vgsalesGlobale.csv")
+#vg_subset <- vg_data %>% filter((Publisher=="Nintendo")|
+#                                (Publisher=="Namco Bandai Games")|(Publisher=="Electronic Arts")) %>% 
+#                         filter(Global_Sales <= 4)
+theme_set(theme_bw())
+```
+
+You must show all work and/or explain your reasoning in order to get full credit or be considered for partial credit. You do not need a calculator but can use one if you'd like. For any calculation problems, simply writing out the formula to find the answer will suffice. You are not allowed to receive or share any information during the exam.
+
+\vspace{.5in}
+
+**First and Last Name:** _____________________________
+
+\vspace{.5in}
+
+**Swarthmore Username:** ______________________________
+
+\vspace{0.5cm}
+
+
+You did a great job listening to and participating in our class discussions about this material. **Take a deep breath.** The purpose of this test is to measure your understanding of the material we have covered so far. This is not a perfect measure of your knowledge and does not predict your future statistical skills. Remember that you will have the opportunity to submit corrections to any problems you do not get full credit for the first time. 
+
+There are 10 questions in total on this test and they are organized into XX subsections: problems about XX, problems about XX, and critical thinking problems. If you need additional paper you may come to the front of the class and pick some up. 
+
+Problems XXXX do not require any supporting written statements. All of the other problems do. You **do not** need to write in complete sentences for any of these questions but make sure that I can understand you clearly and can read your handwriting. 
+
+\vspace{1in}
+
+
+\hspace{1in} **Do not flip this page until instructed to do so.** 
+
+
+
+
+
+\pagebreak
+
+
+
+## Section 1 - general concepts 
+
+[THIS SECTION WILL TEST ON THINGS LIKE INTERPRETATIONS OF P-VALUES AND CIS, CONCEPT OF INDEPENDENT SAMPLING AND INDEPENDENT RVS, AND MAYBE 1-2 CONCEPT QS ABOUT CLT OR LLN OR GAMBLER'S FALLACY]
+
+**X.** (circle one) A p-value indicates:
+(a) the probability that the null hypothesis is true
+(b) the probability that the alternative hypothesis is true
+(c) the probability of the observed statistic given that the null hypothesis is true
+(d) the probability that the null hypothesis is true given the observed statistic
+(e) the probability of the observed statistic given that the alternative hypothesis is true
+
+
+**X.** Circle all correct statements (possibly more than one) about a 95% confidence interval
+based on a given sample
+(a) The interval contains 95% of the population
+(b) Results from 95% of all samples will lie in the interval
+(c) There is a 95% probability that the interval contains the population parameter
+(d) The interval is narrower than a 98% confidence interval would be
+
+**X.**
+During an angiogram, heart problems can be examined through a small tube (a
+catheter) threaded into the heart from a vein in the patient’s leg. Manufacturers
+must make sure the catheters they produce have a diameter of exactly 2mm.
+
+Suppose, a quality control personnel from some catheter manufacturer makes several measurements to test (at an \alpha = 0.05 significance level)
+
+H0 : \mu = 2mm vs HA : \mu \neq 2mm.
+(a) What is the consequence of making a Type I error?
+(b) What is the consequence of making a Type II error?
+
+
+**X.** 
+normal RVs and/or mean and variance calculations 
+
+
+**X.** 
+laws/rules of probability 
+
+
+
+**X.**
+Explain what the following sentence means:
+The interval (2.25, 2.75) is a 99% confidence interval for the mean
+GPA of UT students having between 45 and 60 credit hours.
+
+**X.**
+Critique the following responses for clarity and correctness.
+1. A 99% confidence interval is used to show that 99% of the time when you pick a sample from
+the population (students having between 45 and 60 credit hours) you will find a mean GPA in the
+interval (2.25, 2.75).
+
+2. There is a 99% chance that 2.25 ≤ µ ≤ 2.75.
+
+3. This means that if we took many, many simple random samples and constructed a confidence
+interval based on each sample, 99% of the resulting confidence intervals would contain the true
+mean
+
+
+**X.**
+For each of the following, circle your answer to indicate whether the quantity can NEVER be
+negative or can SOMETIMES be negative:
+1. z-score SOMETIMES NEVER
+2. Probability SOMETIMES NEVER
+3. Test statistic SOMETIMES NEVER
+4. Sample proportion SOMETIMES NEVER
+5. Standard deviation SOMETIMES NEVER
+6. Inter-quartile range SOMETIMES NEVER
+7. Standard error SOMETIMES NEVER
+8. p-value SOMETIMES NEVER
+9. Slope coefficient SOMETIMES NEVER
+10. Correlation coefficient SOMETIMES NEVER
+
+
+For disparities definitions and terms: https://www.cdc.gov/nchs/ppt/nchs2010/41_klein.pdf 
+Get actual proportions and such here: https://www.healthypeople.gov/2020/ 
+References to individual studies on infnat mortality, obesity, etc identifying racism not race as the issue: https://ajph.aphapublications.org/doi/pdf/10.2105/AJPH.2015.302706 
+Journal to look for example studies: https://link.springer.com/journal/40615/volumes-and-issues 
+
+## Section 2 - Applied Context 1
+
+Another study specific example specifically for proportions. 
+
+table calculations for conditional probabilities and/or checking independence  
+
+calculations and interpretations of p-value and CI and margin of error in this context. choose which hypothesis to test given output of several different runs 
+
+does CLT apply in this problem, why or why not (independence and sample size)
+
+introduce replication study with slightly different results. analyse both analyses to identify potential mistakes or due to random chance. 
+
+interpretation and prioritization of type I and II errors 
+
+
+Rosiglitazone is the active ingredient in the controversial Type 2 diabetes medicine Avandia and
+has been linked to an increased risk of serious cardiovascular problems such as stroke, heart
+failure, and death. A common alternative treatment is pioglitazone, the active ingredient in a
+diabetes medicine called Actos. In a nationwide retrospective observational study of 227,571
+Medicare beneficiaries aged 65 years or older, it was found that 2,593 of the 67,593 patients
+using rosiglitazone and 5,386 of the 159,978 using pioglitazone had serious cardiovascular
+problems. These data are summarized in the contingency table below.
+ Cardiovascular problems
+ Yes No Total
+Treatment Rosiglitazone 2,593 65,000 67,593
+ Pioglitazone 5,386 154,592 159,978
+ Total 7,979 219,592 227,571
+
+Determine if each of the following statements is true or false. If false, explain why. Be careful:
+The reasoning may be wrong even if the statement's conclusion is correct. In such cases, the
+statement should be considered false.
+
+1. Since more patients on pioglitazone had cardiovascular problems (5,386 vs. 2,593), we can
+conclude that the rate of cardiovascular problems for those on a pioglitazone treatment is higher.
+
+2. The data suggest that diabetic patients who are taking rosiglitazone are more likely to have
+cardiovascular problems since the rate of incidence was (2,593 / 67,593 = 0.038) 3.8% for
+patients on this treatment, while it was only (5,386 / 159,978 = 0.034) 3.4% for patients on
+pioglitazone.
+
+3. The fact that the rate of incidence is higher for the rosiglitazone group proves that
+rosiglitazone causes serious cardiovascular problems.
+
+4. Based on the information provided so far, we cannot tell if the difference between the rates of
+incidences is due to a relationship between the two variables or due to chance. 
+
+
+
+A group of physicians subjected polygraph testing to the same careful testing given to medical
+diagnostic tests. They found that if 1,000 people were subjected to the polygraph and 500 told
+the truth and 500 lied, the polygraph would indicate that approximately 185 of the truth-tellers
+were liars and 120 of the liars were truth-tellers. In the application of the polygraph test, an
+individual is presumed to be a truth-teller until indicated that s/he is a liar. What is a Type I error
+in the context of this problem? What is the probability of a Type I error in the context of this
+problem? What is a Type II error in the context of this problem? What is the probability of a
+Type II error in the context of this problem? 
+
+
+## Section 3 - Applied Context 2
+
+Study specific example for means, questions about meaning of the LLN/CLT in this context
+
+Question about gambler's fallacy 
+
+no questions about specific hypotheses or CIs here 
+
+practically significant results, what does that mean in this context 
+
+
+**Sources** 
+
+$[1]$  
+
+$[2]$  
+
+$[3]$  
+
+$[4]$  
+
+$[5]$  
