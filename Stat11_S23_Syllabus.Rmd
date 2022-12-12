@@ -1,0 +1,138 @@
+---
+title: "Stat 11 Introduction to Statistical Methods"
+subtitle: "Syllabus and Course Policies"
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+output: html_notebook
+---
+
+```{r include=FALSE}
+library("accessrmd")
+
+```
+
+# Course Description 
+
+STAT 11 prepares students to think statistically and to be able to perform basic statistical analyses using the statistical software package R. Topics include exploratory data analysis, design of surveys and experiments, hypothesis testing and confidence intervals, and an introduction to linear regression. Applications will be drawn from interdisciplinary case studies spanning the humanities, social sciences, public policy, medicine, and the sciences. This course is intended for students who want a practical introduction to statistical methods. 
+
+## Textbook 
+
+We will be using the 5th edition of [Stats: Data and Models](https://www.pearson.com/en-us/subject-catalog/p/stats-data-and-models/P200000006160/9780136880790). 
+
+## Other Required Course Items 
+
+We will also use the MyLab Statistics with Pearson eText throughout the semester. [Information on how to access this will be provided by your instructor]. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio to complete your assessment items but course instruction will be provided for RStudio only. 
+
+You may access [Swarthmore's RStudio Server](https://rstudio.swarthmore.edu/) through your browser (requires internet access and Swarthmore VPN). Alternatively you may download the software to run RStudio on your personal computer (does not require internet access). To do so, first download the [base software R](https://www.r-project.org/). Then, once you have completed that installation of base R, you can download the [RStudio user interface](https://www.rstudio.com/).	 
+
+
+# Learning Objectives 
+
+Upon successful completion of the course, students are expected to be able to:
+
+* Collect and explore various types of data;
+* Choose the appropriate statistical analysis or graphics for a given data and research question;
+* Apply statistical analysis methods using the software package R and interpret results;
+* Critically examine analyses of data and applications of common statistical methods, 
+
+
+# Course Components 
+
+## Class Meetings 
+
+There are three course meetings per week. Course meetings will combine: statistical knowledge and applied examples, applications using R, and in-class exercises/discussions. To be best prepared for class please bring with you a laptop and a note-taking device. Please don’t be a distraction to those around you. If you do not have access to a laptop, let me know so I can arrange one for you to borrow. The textbook is meant to serve as an accompaniment to your in-class notes and you are expected to prepare for class by reading the assigned chapters from the course calendar. 
+
+
+## Practice Items 
+
+### Individual Homework 
+
+No late homework will be accepted except in the case of an unforeseen emergency or illness. 
+
+### Group Homework 
+
+No late homework will be accepted except in the case of an unforeseen emergency or illness. 
+
+## Assessment Items 
+
+### Quizzes
+
+There will be three in-class quizzes emphasizing the most recent material covered in class. These quizzes are closed book but you may be permitted to use a handwritten "cheat sheet" according to specifications set forth by your professor. If you have a scheduling conflict due to a religious holiday or travel plans on a quiz day, you must let me know at least two weeks ahead of time. Otherwise, no late quizzes will be permitted except in the case of an unforeseen emergency or illness. 
+
+### Final Exam 
+
+The final exam will take place during the finals period (exact time/day TBD) and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted except in the case of an unforeseen emergency or illness. 
+
+## Summative Item 
+
+### Final Project
+
+There will be one group project that will be presented on the last day of class (more details to come). The goal of this project is to gain hands-on experience collecting and analyzing data. You will have the option to be assigned to a group or to work with your own group.  
+
+
+
+
+# Course Policies 
+
+## Course Grade 
+
+Your entire course grade is determined by each course component listed above. Note that this includes your attendance in class. If there are no penalties accrued from unexcused absences then homework assignments will account for $25\%$ of your overall grade, each of the three in-class quizzes will account for $10\%$ of your overall course grade, your group final project will account for $25\%$ of your overall course grade, and the final exam will account for $20\%$ of your overall course grade.
+
+## Attendance
+
+Your attendance in class is mandatory. Occasionally, your professor will record classroom attendance. After your second unexcused absence, your course grade will be penalized $1\%$ point for each subsequent unexcused absence. The way to determine if an absence is excused is by communicating with your professor. 
+
+## Academic Integrity 
+
+Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions, please ask for clarification. [Something about ethical statistical practice and responsibilities to provide honest assessment of current abilitty.]
+
+## Inclusion and Respect 
+
+We all come to class with different backgrounds and experiences and this diversity of thought and perspective will enrich our learning environment. Respect for one another’s identities and contributions to class discussions is mandatory. This helps us maintain a supportive learning environment where everyone feels comfortable participating. Questions are encouraged and not to be looked down upon. [Add something about diminutive math language too.]
+
+## Course feedback
+
+Your professor will solicit explicit feedback from you twice throughout the semester. Each time, the feedback forms will be identical and anonymous. The first time your feedback is requested will be about halfway through the semester. Your feedback here helps your professor identify what is and isn't working for you and to make reasonable adjustments accordingly. The last time your professor requests your feedback is at the end of the semester. You are welcome to submit feedback before or after the final exam. This feedback helps your professor prepare for and improve upon future sessions of this course. 
+
+As you may know, this type of feedback, although informative, is heavily biased. Not only is volunteer response bias inevitable, there are studies that indicate strong emotional and social biases influence course evaluations based on identity factors such as the instructor's race, gender, sexuality, and age and based on external factors that influence respondents' emotions related to the course material. (See, for example [1] and [2], among others.) You may wish to read over [this quick guide on how to avoid bias in your course evaluation responses](https://kalilajo.github.io/Teaching/BiasInCourseEvals.pdf).
+
+
+If you find that you have more feedback and ideas that you'd like to share with the department at large, please consider joining one of the Math/Stat department student groups. Currently these groups consist of Gender Minorities in Math/Stat (GeMS), Black in Math/Stat (BIMS), and the Math/Stat Student Advisory Council (MSSAC). Participation in these groups is a great way to communicate with the Math/Stat faculty and staff directly as we work together to build a more equitable learning environment for all students. Feel free to ask your professor about how to get involved! 
+
+
+# Additional Resources 
+
+## Office Hours 
+
+Office hours are located in SCI 136. The dates and times will be determined after the start of class. 
+
+You are expected to attend office hours as often as you need. If you are unable to attend your professor's regular office hours due to academic scheduling conflicts, you may contact her  to arrange another time to meet.
+
+During office hours, your professor will try to make sure that everyone who shows up gets a chance to ask a question. Typically, student questions are prioritized according to whoever arrives first but sometimes your professor may prioritize questions that are shared by more than one student. When it’s your turn to ask a question, please limit yourself to only one question (even if it is a question with a very short answer). Once everyone present has gotten a chance to ask their question, you will get the opportunity to ask another question. When others are asking questions, pay attention because you might learn something from the discussion.  
+
+## Stat Clinic Hours 
+
+[Include blurb once Laura sends it out to us]
+
+## Accommodations 
+
+Your professor will not provide individual accommodations unless you provide her with proof of registration with Student Disability Services (SDS). Accommodations require early planning and are not retroactive.
+
+If you believe you need accommodations for a disability or a chronic medical condition, you may contact SDS via email at studentdisabilityservices@swarthmore.edu to arrange an appointment to discuss your needs. As appropriate, the office will issue students with documented disabilities or medical conditions a formal Accommodations Letter. For details about the accommodations process, visit the [Student Disability Services website](https://www.swarthmore.edu/office-academic-success/welcome-to-student-disability-services).  
+
+## Counseling and Pschological Services 
+
+Swarthmore provides support to students who are experiencing academic stress, difficult life events, or feelings of anxiety or depression through the Counseling and Psychological Services (CAPS). If you or someone you know needs support please call 610-328-7768 to speak with a licensed counselor at any time or visit the [CAPS website](https://www.swarthmore.edu/counseling-and-psychological-services) to schedule an appointment.
+
+As your professor knows through first-hand experience, it's incredibly difficult to "do math" under stress. For example, give [this game](https://www.tomscott.com/usvsth3m/maths/) a try! 
+
+### Title IX 
+
+Please be aware that all faculty are “responsible employees”, which means that if you a professor about a situation involving sexual harassment or assault, dating violence, domestic violence, or stalking, they must share that information with the Title IX Coordinator. Although professors are responsible for this notification, you have complete control over how your case will be handled, including whether or not you wish to meet with the Title IX coordinator or pursue a formal complaint.
+
+
+# References
+
+[1] Fan Y, Shepherd LJ, Slavich E, Waters D, Stone M, Abel R, et al. (2019) Gender and cultural bias in student evaluations: Why representation matters. PLoS ONE 14(2). doi:10.1371/journal.pone.0209749.
+
+[2] Mitchell, K., & Martin, J. (2018). Gender Bias in Student Evaluations. PS: Political Science & Politics, 51(3), 648-652. doi:10.1017/S104909651800001X.
