@@ -1,0 +1,70 @@
+---
+title: "Stat 11 Assessment Plans"
+output: html_notebook
+---
+
+
+# Quiz 1 
+
+
+## Collect/Gather Data
+- consider confounding variables 
+- ethical issues for experimental design 
+- basics of experimental design (random sampling vs random assignment, blocking, control)
+
+
+## Describe Data 
+- describe distributions in terms of variability and location 
+- interpret plots like density curves or histograms, bar charts, boxplots 
+- switch perspectives from trend lines to histograms 
+- use correlation to describe trends 
+- summary stats including means and sample proportions
+- standard deviation vs standard error 
+
+
+## Intro to RVs 
+
+- identify population, parameters
+- able to distinguish randomness vs arbitrariness 
+- fundamentals of random variables and sample spaces 
+- expected value and variance of a random variable 
+
+
+# Quiz 2 
+
+## Connecting RVs to data 
+- probability (and conditional probability) calculations based on contingency tables 
+- independence based on contingency tables 
+- sampling distributions compared to distributions of population RVs 
+- visualize sampling distribution of sample proportion 
+
+
+## Inference for a single proportion
+- how to generate valid CI for proportion 
+- identify test statistic and p-value for single population proportion 
+- define hypothesis for single proportion 
+
+## Principles of inference more generally 
+- different info in tests vs CIs 
+- valid vs invalid interpretation of CIs 
+- understand type I error rate 
+- idea of sampling distribution revisited 
+
+
+# Quiz 3 
+
+## More methods 
+- inference for single mean (especially sampling distribution)
+- inference for difference in proportions 
+- inference for difference in means 
+- chi square procedures 
+
+## Metacognitive 
+- comparing one sided tests to two-sided tests 
+- interpret test statistics relative to sd of sampling distribution 
+- when to use different procedures 
+- how to assess reliability of study conclusions 
+
+
+
+# Final exam 
