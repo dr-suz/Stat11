@@ -1,15 +1,32 @@
 ---
 title: "Stat 11 Introduction to Statistical Methods"
-subtitle: "Syllabus and Course Policies"
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
+subtitle: Syllabus and Course Policies
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
 ---
 
 ```{r include=FALSE}
 library("accessrmd")
 
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
 ```
+
 
 # Course Description 
 
@@ -21,14 +38,15 @@ We will be using the 5th edition of [Stats: Data and Models](https://www.pearson
 
 ## Other Required Course Items 
 
-We will also use the MyLab Statistics with Pearson eText throughout the semester. [Information on how to access this will be provided by your instructor]. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio to complete your assessment items but course instruction will be provided for RStudio only. 
+We will also use the MyLab Statistics that accompanies our Pearson eText. Links to this lab will be provided on our course Moodle page. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio to complete your assessment items. 
 
 You may access [Swarthmore's RStudio Server](https://rstudio.swarthmore.edu/) through your browser (requires internet access and Swarthmore VPN). Alternatively you may download the software to run RStudio on your personal computer (does not require internet access). To do so, first download the [base software R](https://www.r-project.org/). Then, once you have completed that installation of base R, you can download the [RStudio user interface](https://www.rstudio.com/).	 
 
 
 # Learning Objectives 
 
-Upon successful completion of the course, students are expected to be able to:
+
+`r colorize("Upon successful completion of the course, students are expected to be able to:", "red")`
 
 * Collect and explore various types of data;
 * Choose the appropriate statistical analysis or graphics for a given data and research question;
@@ -40,30 +58,28 @@ Upon successful completion of the course, students are expected to be able to:
 
 ## Class Meetings 
 
-There are three course meetings per week. Course meetings will combine: statistical knowledge and applied examples, applications using R, and in-class exercises/discussions. To be best prepared for class please bring with you a laptop and a note-taking device. Please don’t be a distraction to those around you. If you do not have access to a laptop, let me know so I can arrange one for you to borrow. The textbook is meant to serve as an accompaniment to your in-class notes and you are expected to prepare for class by reading the assigned chapters from the course calendar. 
+There are three course meetings per week and attendance is mandatory. Course meetings will combine: statistical knowledge and applied examples, applications using R, and in-class exercises/discussions. To be best prepared for class please bring with you a laptop and a note-taking device. Please don’t be a distraction to those around you. If you do not have access to a laptop, tell your professor who can arrange for you to borrow one. The textbook is meant to serve as an accompaniment to your in-class notes and you are expected to prepare for class by reading the assigned chapters. 
 
 
 ## Practice Items 
 
 ### Individual Homework 
 
-No late homework will be accepted except in the case of an unforeseen emergency or illness. 
+Each week, you will be assigned homework practice problems to be completed in the Pearson myLab that accompanies your textbook. These assignments are meant to be completed by yourself alone to practice your own understanding of the topics we cover in class and in your textbook. Your homework grade for these assignments is entirely based upon your completion of the assignments. You have until the day of our final exam to finish all of these individual homework assignments. Do not wait until the end of the semester to get started on these. No extensions whatsoever will be given for these homework assignments.
 
 ### Group Homework 
 
-No late homework will be accepted except in the case of an unforeseen emergency or illness. 
+Over the semester, you will be assigned $5$ longer homework problem sets that will each be graded for correctness. You are encouraged to work with one another one these homework assignments although each student must hand in their own copy of the solutions. We may occasionally use class time to work on some of these assignments. Your group homework grade will be the average of all $5$ assignments. No late homework will be accepted except in the case of an unforeseen emergency or illness. 
 
 ## Assessment Items 
 
 ### Quizzes
 
-There will be three in-class quizzes emphasizing the most recent material covered in class. These quizzes are closed book but you may be permitted to use a handwritten "cheat sheet" according to specifications set forth by your professor. If you have a scheduling conflict due to a religious holiday or travel plans on a quiz day, you must let me know at least two weeks ahead of time. Otherwise, no late quizzes will be permitted except in the case of an unforeseen emergency or illness. 
+There will be three in-class quizzes emphasizing the most recent material covered in class. These quizzes are closed book but you may be permitted to use a handwritten "cheat sheet" according to specifications set forth by your professor. If you have a scheduling conflict due to a religious holiday or travel plans on a quiz day, you must let me know at least **two weeks** ahead of time. Otherwise, **no make-up quizzes** will be permitted except in the case of an unforeseen emergency or illness. 
 
 ### Final Exam 
 
-The final exam will take place during the finals period (exact time/day TBD) and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted except in the case of an unforeseen emergency or illness. 
-
-## Summative Item 
+The final exam will take place during the finals period `r colorize("(exact time/day TBD)", "red")` and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted except in the case of an unforeseen emergency or illness. 
 
 ### Final Project
 
@@ -76,7 +92,7 @@ There will be one group project that will be presented on the last day of class 
 
 ## Course Grade 
 
-Your entire course grade is determined by each course component listed above. Note that this includes your attendance in class. If there are no penalties accrued from unexcused absences then homework assignments will account for $25\%$ of your overall grade, each of the three in-class quizzes will account for $10\%$ of your overall course grade, your group final project will account for $25\%$ of your overall course grade, and the final exam will account for $20\%$ of your overall course grade.
+Your entire course grade is determined by each course component listed above. Note that this includes your attendance in class. If there are no penalties accrued from unexcused absences then homework assignments will account for $25\%$ of your overall grade (individual assignments count for $15\%$ and group assignments count for $10\%$), each of the three in-class quizzes will account for $10\%$ of your overall course grade, your group final project will account for $25\%$ of your overall course grade, and the final exam will account for $20\%$ of your overall course grade. 
 
 ## Attendance
 
@@ -84,11 +100,11 @@ Your attendance in class is mandatory. Occasionally, your professor will record 
 
 ## Academic Integrity 
 
-Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions, please ask for clarification. [Something about ethical statistical practice and responsibilities to provide honest assessment of current abilitty.]
+Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions, please ask for clarification. `r colorize("[Something about ethical statistical practice and responsibilities to provide honest assessment of current abilitty.]", "red")`
 
 ## Inclusion and Respect 
 
-We all come to class with different backgrounds and experiences and this diversity of thought and perspective will enrich our learning environment. Respect for one another’s identities and contributions to class discussions is mandatory. This helps us maintain a supportive learning environment where everyone feels comfortable participating. Questions are encouraged and not to be looked down upon. [Add something about diminutive math language too.]
+We all come to class with different backgrounds and experiences and this diversity of thought and perspective will enrich our learning environment. Respect for one another’s identities and contributions to class discussions is mandatory. This includes attempting to avoid using diminutive language that is not uncommon to hear within other mathematics settings. Although you may hear phrases such as "that's trivial", "it's obvious that", "clearly...", or "it's intuitive that", your professor makes a conscious effort to avoid this language in her lectures and she expects you to try to avoid this language in her classroom too. What is obvious to one person could be another person's PhD thesis and what is "intuitive" is entirely subject to one's own experiences. These efforts from you and your professor will help maintain a supportive learning environment where everyone feels comfortable participating and questions are encouraged and not looked down upon.  
 
 ## Course feedback
 
@@ -112,7 +128,8 @@ During office hours, your professor will try to make sure that everyone who show
 
 ## Stat Clinic Hours 
 
-[Include blurb once Laura sends it out to us]
+
+`r colorize("Include blurb once Laura sends it out to us", "red")`
 
 ## Accommodations 
 
