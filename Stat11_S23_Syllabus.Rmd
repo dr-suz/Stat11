@@ -65,11 +65,11 @@ There are three course meetings per week and attendance is mandatory. Course mee
 
 ### Individual Homework 
 
-Each week, you will be assigned homework practice problems to be completed in the Pearson myLab that accompanies your textbook. These assignments are meant to be completed by yourself alone to practice your own understanding of the topics we cover in class and in your textbook. Your homework grade for these assignments is entirely based upon your completion of the assignments. You have until the day of our final exam to finish all of these individual homework assignments. Do not wait until the end of the semester to get started on these. No extensions whatsoever will be given for these homework assignments.
+Each week, you will be assigned homework practice problems to be completed in the Pearson myLab that accompanies your textbook. These assignments are meant to be completed by yourself alone to practice your own understanding of the topics we cover in class and in your textbook. Your homework grade for these assignments is entirely based upon your completion of the assignments. These assignments are due on the day of our final exam. Do not wait until the end of the semester to get started on these. No extensions whatsoever will be given for the individual homework assignments.
 
 ### Group Homework 
 
-Over the semester, you will be assigned $5$ longer homework problem sets that will each be graded for correctness. You are encouraged to work with one another one these homework assignments although each student must hand in their own copy of the solutions. We may occasionally use class time to work on some of these assignments. Your group homework grade will be the average of all $5$ assignments. No late homework will be accepted except in the case of an unforeseen emergency or illness. 
+Over the semester, you will be assigned $5$ longer homework problem sets that will each be graded for correctness. You are encouraged to work with one another one these homework assignments although each student must hand in their own copy of the solutions. We may occasionally use class time to work on some of these assignments. Your group homework grade will be the average of all $5$ assignments. No late group homework assignments will be accepted. 
 
 ## Assessment Items 
 
@@ -100,11 +100,13 @@ Your attendance in class is mandatory. Occasionally, your professor will record 
 
 ## Academic Integrity 
 
-Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions, please ask for clarification. `r colorize("[Something about ethical statistical practice and responsibilities to provide honest assessment of current abilitty.]", "red")`
+Statistics is a powerful tool for scientific discovery and communication. Statistics instructors play an important role in equipping new practitioners with the knowledge, skills, and abilities to practice statistics ethically and transparently. As such, it is your professor's duty to provide you with an honest, accurate assessment of your current abilities throughout the semester. Your assessments (and grades) are designed to inform you so you are confident about what you have mastered and so you can pinpoint where you have the most room for growth and improvement. Your grades do not determine your future success in statistics nor are they reflective of your general intelligence. Nevertheless, your grades provide indispensable feedback that is integral towards supporting the widespread practice of ethical, transparent, and reproducible statistics. Therefore, **it is your duty to hold yourself to the highest standards of academic integrity**. 
+
+Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. Upon the first offense, all parties involved will receive a zero grade. Upon the second offense, a case will be filed with the College Judiciary Committee. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions,  ask for clarification. If you are feeling desperate enough to consider cheating, contact your professor and explain what is going on so you can get additional support. 
 
 ## Inclusion and Respect 
 
-We all come to class with different backgrounds and experiences and this diversity of thought and perspective will enrich our learning environment. Respect for one another’s identities and contributions to class discussions is mandatory. This includes attempting to avoid using diminutive language that is not uncommon to hear within other mathematics settings. Although you may hear phrases such as "that's trivial", "it's obvious that", "clearly...", or "it's intuitive that", your professor makes a conscious effort to avoid this language in her lectures and she expects you to try to avoid this language in her classroom too. What is obvious to one person could be another person's PhD thesis and what is "intuitive" is entirely subject to one's own experiences. These efforts from you and your professor will help maintain a supportive learning environment where everyone feels comfortable participating and questions are encouraged and not looked down upon.  
+We all come to class with different backgrounds and experiences and this diversity of thought and perspective will enrich our learning environment. Respect for one another’s identities and contributions to class discussions is mandatory. This includes attempting to avoid using diminutive language that is not uncommon to hear within other mathematics settings. Although you may hear phrases such as \"that's trivial\", \"it's obvious that\", \"clearly...\", or \"it's intuitive that\" in many math and statistics courses, your professor makes a conscious effort to avoid this language in her lectures and she expects you to avoid using this language in her classroom too. What is obvious to one person could be another person's PhD thesis and what is "intuitive" is entirely subject to one's own experiences. These efforts from you and your professor will help maintain a supportive learning environment where everyone feels comfortable participating and questions are encouraged and not looked down upon.  
 
 ## Course feedback
 
@@ -141,7 +143,8 @@ If you believe you need accommodations for a disability or a chronic medical con
 
 Swarthmore provides support to students who are experiencing academic stress, difficult life events, or feelings of anxiety or depression through the Counseling and Psychological Services (CAPS). If you or someone you know needs support please call 610-328-7768 to speak with a licensed counselor at any time or visit the [CAPS website](https://www.swarthmore.edu/counseling-and-psychological-services) to schedule an appointment.
 
-As your professor knows through first-hand experience, it's incredibly difficult to "do math" under stress. For example, give [this game](https://www.tomscott.com/usvsth3m/maths/) a try! 
+
+Part of why it is important to your professor to maintain an inclusive and respectful classroom is because it's incredibly difficult to "do math" under stress. For example, give [this game](https://www.tomscott.com/usvsth3m/maths/) a try! If you are experience stress inside the classroom, your professor is here to help you. If you are experiencing stress outside the classroom, CAPS is here to help you.
 
 ### Title IX 
 
