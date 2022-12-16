@@ -1,0 +1,39 @@
+---
+title: "Stat 11 Week 1"
+subtitle: "Data and Statistics" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r include=FALSE}
+library("accessrmd")
+
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
+```
+
+# What is data? 
+
+
+
+# What is statistics? 
+
+
+# About this class 
+
+

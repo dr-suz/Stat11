@@ -1,0 +1,28 @@
+---
+title: "Stat 11 Week 2"
+subtitle: "Practice with Data" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r include=FALSE}
+library("accessrmd")
+
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
+```
