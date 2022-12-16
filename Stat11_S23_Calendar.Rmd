@@ -5,7 +5,6 @@ date: "Spring 2023"
 output:
   html_document:
     df_print: paged
-subtitle: Syllabus and Course Policies
 header-includes:
 - \usepackage{amsmath}
 - \usepackage{amssymb}
@@ -70,8 +69,8 @@ In the calendar below **IHW** corresponds to an individual homework assignment a
 | 12 | Apr 3 | 3 | Comparing grouped numeric data | Part 6: Ch 20-21 <br> IHW 13+14 |
 | 13 | Apr 10 | 3 | All previous topics | IHW 15 <br> **Quiz 3** |
 | 14 | Apr 17 | 3 | Comparing grouped categorical data | Part 6: Ch 22 <br> GHW 5 |
-| 15 | Apr 24 |  | Review | **Final Project Presentations** |
-| 16 |  May 4-11  |  |  Final Exam |  |
+| 15 | Apr 24 | 3 | Inference for linear relationships | Part 2: Ch 9 and Part 7: Ch 23-24 <br> IHW 16 <br> **Final Project Presentations** |
+| 16 |  May 4-11  |  |  **Final Exam** |  |
 
 
 <br><br>
