@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 2"
-subtitle: "Standard deviation and Normality" 
+subtitle: "Standard Deviation and Normality" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 output:
