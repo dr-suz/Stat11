@@ -3,6 +3,7 @@ title: "Stat 11 Week 1"
 subtitle: "Data and Statistics" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
+lang: "en-us"
 output:
   html_document:
     df_print: paged
@@ -27,6 +28,8 @@ colorize <- function(x, color) {
 }
 
 ```
+
+
 
 # 1. What is data? 
 
