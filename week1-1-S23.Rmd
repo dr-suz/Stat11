@@ -12,7 +12,6 @@ header-includes:
 - \usepackage{amssymb}
 - \usepackage{amsfonts}
 - \usepackage{xcolor}
-- \usepackage[english]{babel}
 ---
 
 ```{r include=FALSE}
