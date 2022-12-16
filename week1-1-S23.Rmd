@@ -3,7 +3,7 @@ title: "Stat 11 Week 1"
 subtitle: "Data and Statistics" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
-lang: "en-GB"
+lang: "en-US"
 output:
   html_document:
     df_print: paged
