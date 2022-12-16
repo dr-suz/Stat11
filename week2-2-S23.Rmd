@@ -26,3 +26,11 @@ colorize <- function(x, color) {
 }
 
 ```
+
+# What is variance (or standard deviation)? 
+
+
+# What is the Normal model? 
+
+
+# Percentiles 

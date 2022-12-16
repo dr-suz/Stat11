@@ -38,9 +38,9 @@ We will be using the 5th edition of [Stats: Data and Models](https://www.pearson
 
 ## Other Required Course Items 
 
-We will also use the MyLab Statistics that accompanies our Pearson eText. Links to this lab will be provided on our course Moodle page. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio to complete your assessment items. 
+We will also use the MyLab Statistics that accompanies our Pearson eText. Links to this lab will be provided on our course Moodle page. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio. 
 
-You may access [Swarthmore's RStudio Server](https://rstudio.swarthmore.edu/) through your browser (requires internet access and Swarthmore VPN). Alternatively you may download the software to run RStudio on your personal computer (does not require internet access). To do so, first download the [base software R](https://www.r-project.org/). Then, once you have completed that installation of base R, you can download the [RStudio user interface](https://www.rstudio.com/).	 
+If you wish to use RStudio, you may access [Swarthmore's RStudio Server](https://rstudio.swarthmore.edu/) through your browser (this requires internet access and Swarthmore VPN if off-campus). Alternatively you may download the software to run RStudio on your personal computer (this does not require internet access but can be a bit of a headache). To do so, first download the [base software R](https://www.r-project.org/). Then, once you have completed that installation of base R, you can download the [RStudio user interface](https://www.rstudio.com/).	 
 
 
 # Learning Objectives 
@@ -75,15 +75,15 @@ Over the semester, you will be assigned $5$ longer homework problem sets that wi
 
 ### Quizzes
 
-There will be three in-class quizzes emphasizing the most recent material covered in class. These quizzes are closed book but you may be permitted to use a handwritten "cheat sheet" according to specifications set forth by your professor. If you have a scheduling conflict due to a religious holiday or travel plans on a quiz day, you must let me know at least **two weeks** ahead of time. Otherwise, **no make-up quizzes** will be permitted except in the case of an unforeseen emergency or illness. 
+There will be three in-class quizzes emphasizing the most recent material covered in class. These quizzes are closed book but you may be permitted to use a handwritten "cheat sheet" according to specifications set forth by your professor. If you have a scheduling conflict due to a religious holiday or travel plans on a quiz day, you must let me know at least **two weeks** ahead of time. Otherwise, **no make-up quizzes** will be permitted. 
 
 ### Final Exam 
 
-The final exam will take place during the finals period `r colorize("(exact time/day TBD)", "red")` and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted except in the case of an unforeseen emergency or illness. 
+The final exam will take place during the finals period `r colorize("(exact time/day TBD)", "red")` and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted  for the final exam. 
 
 ### Final Project
 
-There will be one group project that will be presented on the last day of class (more details to come). The goal of this project is to gain hands-on experience collecting and analyzing data. You will have the option to be assigned to a group or to work with your own group.  
+There will be one group project that will be presented on the last week of class. The goal of this project is to gain hands-on experience collecting and analyzing data. You will have the option to be assigned to a group or to work with your own group.  
 
 
 

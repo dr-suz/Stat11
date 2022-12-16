@@ -26,3 +26,20 @@ colorize <- function(x, color) {
 }
 
 ```
+
+
+# 1. Data Introduction 
+
+
+# 2. Analysis Goal  
+
+
+
+
+# 3. Report and Summarize 
+
+
+
+
+
+

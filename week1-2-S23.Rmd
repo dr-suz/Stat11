@@ -26,3 +26,26 @@ colorize <- function(x, color) {
 }
 
 ```
+
+
+# Exploring and Describing Data 
+
+
+
+
+# Numeric Data 
+
+
+
+
+# Categorical Data 
+
+
+
+# Relationships Among Multiple Variables 
+
+
+
+# About this class 
+
+

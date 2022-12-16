@@ -26,3 +26,12 @@ colorize <- function(x, color) {
 }
 
 ```
+
+
+# What is a distribution? 
+
+
+# Comparing Distributions 
+
+
+# Quantiles 
