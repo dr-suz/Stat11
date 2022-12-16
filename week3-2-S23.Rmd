@@ -3,6 +3,7 @@ title: "Stat 11 Week 3"
 subtitle: "Good Linear Regression" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
+lang: "en-US"
 output:
   html_document:
     df_print: paged

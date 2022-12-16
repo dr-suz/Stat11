@@ -3,6 +3,7 @@ title: "Stat 11 Week 3"
 subtitle: "Practice with Data: Modeling Two Numeric Variables" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
+lang: "en-US"
 output:
   html_document:
     df_print: paged
