@@ -47,12 +47,12 @@ If you wish to use RStudio, you may access [Swarthmore's RStudio Server](https:/
 # Learning Objectives 
 
 
-`r colorize("Upon successful completion of the course, students are expected to be able to:", "red")`
+Upon successful completion of the course, students are expected to be able to:
 
-* Collect and explore various types of data;
-* Choose the appropriate statistical analysis or graphics for a given data and research question;
-* Apply statistical analysis methods using the software package R and interpret results;
-* Critically examine analyses of data and applications of common statistical methods, 
+* Understand how to properly collect and organize quantifiable information in the form of data;
+* Choose an appropriate statistical analysis and/or graphic for different data types;
+* Apply statistical analysis methods using software (RStudio, Excel, or other) and interpret these results within the context of the data;
+* Critically examine (identify strengths and weaknesses of) exploratory analyses of data and applications of common inferential methods in quantitative reports.   
 
 
 # Course Components 
@@ -103,7 +103,7 @@ Your attendance in class is mandatory. Occasionally, your professor will record 
 
 Statistics is a powerful tool for scientific discovery and communication. Statistics instructors play an important role in equipping new practitioners with the knowledge, skills, and abilities to practice statistics ethically and transparently. As such, it is your professor's duty to provide you with an honest, accurate assessment of your current abilities throughout the semester. Your assessments (and grades) are designed to inform you so you are confident about what you have mastered and so you can pinpoint where you have the most room for growth and improvement. Your grades do not determine your future success in statistics nor are they reflective of your general intelligence. Nevertheless, your grades provide indispensable feedback that is integral towards supporting the widespread practice of ethical, transparent, and reproducible statistics. Therefore, **it is your duty to hold yourself to the highest standards of academic integrity**. 
 
-Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. Upon the first offense, all parties involved will receive a zero grade. Upon the second offense, a case will be filed with the College Judiciary Committee. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions,  ask for clarification. If you are feeling desperate enough to consider cheating, contact your professor and explain what is going on so you can get additional support. 
+Quizzes and exams must be completed by yourself without communicating to others and all work must be your own. Cheating, copying, etc. will not be tolerated. Upon the first offense, all parties involved will receive a zero grade and must schedule a subsequent in-person meeting with your professor. Failure to meet with your professor within two weeks of the offense will result in having your case filed with the College Judiciary Committee. Upon a second offense, a case will be filed with the College Judiciary Committee for all parties involved. If you are unsure of whether or not your actions are complying with the assignment/quiz/exam instructions,  ask for clarification. If you are feeling desperate enough to consider cheating, contact your professor and explain what is going on so you can get additional support. 
 
 ## Inclusion and Respect 
 

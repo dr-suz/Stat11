@@ -1,0 +1,95 @@
+---
+title: "Group Homework 1"
+author: "STAT011-S23"
+date: 'Due: X/X/23'
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(nycflights13)
+```
+
+
+
+Make sure the R packages `tidyverse` and `nycflights13` are installed on your version of R. Call these packages into your library with the commands
+```{r, eval=FALSE}
+library("tidyverse")
+library("nycflights13")
+```
+In this package is a data set called `flights` which records information for different flights. A table (which is actually called a ``tibble`` in the R `tidyverse`) called `airlines` defines the abbreviations for the different airline carriers in the `flights` data set. To see these objects type in the commands
+```{r, eval=FALSE}
+flights
+airlines
+```
+Choose one of the 16 different carriers to study in this homework assignment. Then run the code below to define a subset of the `airlines` data set for any one of the carriers you select. You will use this subset of the data for Problems 1-5 and it will be referred to as `myData`.
+```{r, eval=FALSE}
+myData <- flights %>% na.omit() %>% filter(carrier=="MQ")  
+dim(myData)
+## you can change AA to whichever of the 16 codes you'd like from the "airlines" tibble
+write.table(myData, "Data/EnvoyAir_flights.txt", sep = ",", row.names=FALSE)
+```
+
+
+## Problem 1 
+
+Answer the following questions about you data set called `myData`:
+
+  1. What constitutes an observational unit? 
+  
+  2. What are the different variables being collected?
+  
+  3. Which of the variables are quantitative and which are categorical? 
+
+Hint: You can use the following code to extract the column names of the data set `flights`.
+```{r, eval=FALSE}
+names(flights)
+```
+
+
+# Problem 2
+
+Referencing the R notes from class, for the variable `distance` perform a one variable exploratory data analysis by providing:
+
+  1. A labeled histogram __with a reasonable number of bins__;
+
+  2. A labeled box plot;
+
+  3. A five-number summary.
+
+
+# Problem 3
+
+Referencing the R notes from class, for the variable `origin` perform a one variable exploratory data analysis by providing:
+
+  1. A labeled bar chart;
+  
+  2. A table of frequencies of different airports of origin. 
+
+
+# Problem 4
+
+Using the code below, generate a scatter plot of the variables `dep_delay` and `arr_delay`. Write 1-2 sentences describing any apparent relationship between these variables and providing an explanation for this relationship. 
+
+```{r, eval=FALSE}
+ggplot(myData) + 
+  geom_point(aes(x = dep_delay, y = arr_delay)) +
+  labs(title="Scatter plot of flight data", x="Departure delay", y="Arrival delay")
+```
+
+# Problem 5
+
+Does the variable `distance` look like it could be from a Normal (Gaussian) population? Justify your answer with a histogram and with 1-2 sentences. 
+
+
+# Problem 6
+
+How much of your course grade is determined by your participation in class? List three different ways to get participation credit. 
+
+
+# Note to future self: 
+
+Remove problem 3, have problem 5 be a part of problem 2, add more problems on mean and standard deviation concepts 
+
