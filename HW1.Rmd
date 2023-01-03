@@ -32,6 +32,17 @@ dim(myData)
 write.table(myData, "Data/EnvoyAir_flights.txt", sep = ",", row.names=FALSE)
 ```
 
+Describe data 
+
+Download the 2.38 MB EnvoyAir_flights.txt data file from our [Stat 11 Github Data] page(https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt). (Either click on the button labeled "Download" or right click the link "View Raw" and save this link.) 
+
+Excel instructions:
+If you are analyzing this data in Excel then you will want to convert this file to a comma separated file (.csv); this conversion may take a few moments as it is a large data set.  
+
+RStudio (server) instructions: 
+
+
+
 
 ## Problem 1 
 
