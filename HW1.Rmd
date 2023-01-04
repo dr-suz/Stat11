@@ -1,7 +1,7 @@
 ---
 title: "Group Homework 1"
 author: "STAT011-S23"
-date: 'Due: X/X/23'
+date: 'Due: 2/3/23'
 output:
   html_document: default
 ---
