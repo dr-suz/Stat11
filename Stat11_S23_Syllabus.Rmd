@@ -5,7 +5,6 @@ date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
-    df_print: paged
 subtitle: Syllabus and Course Policies
 header-includes:
 - \usepackage{amsmath}
