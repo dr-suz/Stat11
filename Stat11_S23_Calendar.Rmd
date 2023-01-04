@@ -5,27 +5,12 @@ date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
-    df_print: paged
 header-includes:
 - \usepackage{amsmath}
 - \usepackage{amssymb}
 - \usepackage{amsfonts}
 - \usepackage{xcolor}
 ---
-
-```{r include=FALSE}
-library("accessrmd")
-
-colorize <- function(x, color) {
-  if (knitr::is_latex_output()) {
-    sprintf("\\textcolor{%s}{%s}", color, x)
-  } else if (knitr::is_html_output()) {
-    sprintf("<span style='color: %s;'>%s</span>", color,
-      x)
-  } else x
-}
-
-```
 
 
 
@@ -52,6 +37,10 @@ We will cover three different, but related, units in this one-semester course. T
 
 <br><br>
 
+<span style="color:blue">Please understand that this calendar is subject to change depending on the discretion of your professor. Check back regularly for updates.</span>.
+
+<br><br>
+
 In the calendar below **IHW** corresponds to an individual homework assignment and **GHW** corresponds to group homework assignments.
 
 |Week |Date |Unit |Topics |Reading and homework assignments and assessment items |
@@ -73,10 +62,6 @@ In the calendar below **IHW** corresponds to an individual homework assignment a
 | 15 | Apr 24 | 3 | Inference for linear relationships | Part 2: Ch 9 and Part 7: Ch 23-24 <br> IHW 16 <br> **Final Project Presentations** |
 | 16 |  May 4-11  |  |  **Final Exam** |  |
 
-
-<br><br>
-
-`r colorize("Please understand that this calendar is subject to change depending on the discression of your professor. Check back regularly for updates.", "red")`
 
 
 

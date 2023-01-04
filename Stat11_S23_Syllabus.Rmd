@@ -13,19 +13,6 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-```{r include=FALSE}
-library("accessrmd")
-
-colorize <- function(x, color) {
-  if (knitr::is_latex_output()) {
-    sprintf("\\textcolor{%s}{%s}", color, x)
-  } else if (knitr::is_html_output()) {
-    sprintf("<span style='color: %s;'>%s</span>", color,
-      x)
-  } else x
-}
-
-```
 
 
 # Course Description 
@@ -79,7 +66,7 @@ There will be three in-class quizzes emphasizing the most recent material covere
 
 ### Final Exam 
 
-The final exam will take place during the finals period `r colorize("(exact time/day TBD)", "red")` and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted  for the final exam. 
+The final exam will take place during the finals period <span style="color:red">(exact time/day TBD)</span> and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as makeups will not be permitted  for the final exam. 
 
 ### Final Project
 
@@ -130,8 +117,8 @@ During office hours, your professor will try to make sure that everyone who show
 
 ## Stat Clinic Hours 
 
+<span style="color:red">Include blurb once Laura sends it out to us</span>
 
-`r colorize("Include blurb once Laura sends it out to us", "red")`
 
 ## Accommodations 
 
