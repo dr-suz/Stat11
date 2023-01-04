@@ -46,10 +46,10 @@ In the calendar below **IHW** corresponds to an individual homework assignment a
 |Week |Date |Unit |Topics |Reading and homework assignments and assessment items |
 |:--- |:--- |:--- |:--- |:--- |
 | 1 | Jan 17 | 1 | Visualizing and summarizing numeric data | Part 1: Ch 1-3 <br> IHW 1+2 |
-| 2 | Jan 23 | 1 |  Describing distributions with variability  | Part 1: Ch 4-5 <br> GHW 1  |
-| 3 | Jan 30 | 1 |  Describing relationships between two numeric variables | Part 2: Ch 6-8 <br> IHW 3+4 |
-| 4 | Feb 6 | 1   | Collecting data from experiments and observational studies | Part 3: Ch 10-11 <br> GHW 2 |
-| 5 | Feb 13 | 1  | All previous topics | IHW 5 <br> **Quiz 1** |
+| 2 | Jan 23 | 1 |  Describing distributions with variability  | Part 1: Ch 4-5 <br> IHW 3+4  |
+| 3 | Jan 30 | 1 |  Describing relationships between two numeric variables | Part 2: Ch 6-8 <br> GHW 1 |
+| 4 | Feb 6 | 1   | Collecting data from experiments and observational studies | Part 3: Ch 10-11 <br> IHW 5 |
+| 5 | Feb 13 | 1  | All previous topics | GHW 2 <br> **Quiz 1** |
 | 6 | Feb 20 | 2 |  From randomness to probability and the laws of probability | Part 4: Ch 12-13 <br> IHW 6+7 |
 | 7 | Feb 27 | 2 |  Random variables and probability models | Part 4: Ch 14-15 <br> GHW 3 <br> IHW 8 |
 | 8 | Mar 6 |   | Spring Break |   | 
