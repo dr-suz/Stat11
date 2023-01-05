@@ -59,3 +59,29 @@ Once you have access to the data set, complete all parts of the six problems in 
 
 
 ## Problem 1 
+
+
+a) The population
+b) The population parameter of interest
+c) The sampling frame
+d) The sample
+e) The sampling method, including whether or not random selection and/or random assignment was employed
+f) Who (if anyone) was left out of the study
+g) Any potential sources of bias you can detect and any problems you see in generalizing to the population of interest
+
+Or 
+
+Analyze the design of each research 
+example reported. Is it a sample survey, an observational study, or 
+an experiment? If a sample, what are the population, the parameter 
+of interest, and the sampling procedure? If an observational study, 
+was it retrospective or prospective? If an experiment, describe the 
+factors, treatments, randomization, response variable, and any block-ing, matching, or blinding that may be present. In each, what kind of 
+conclusions can be reached?
+
+
+Review of Part I R1.15, R1.16, R1.40
+Review of Part II R2.3, R2.4, R2.22, R2.44, R2.47
+Review of Part III problems R3.19, R3.20
+
+Idea: maybe make GHW 1 a bit simpler? 
