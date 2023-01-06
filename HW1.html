@@ -410,9 +410,10 @@ right clicking on the link “View Raw” and save the link with the name
 a large data set.</p>
 <p>If you are analyzing this data in RStudio, you will import the data
 with the following command</p>
-<pre class="r"><code>EnvoyAir_flights &lt;- read.csv(&quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt&quot;)</code></pre>
+<pre class="r"><code>EnvoyAir_flights &lt;- 
+  read.csv(&quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt&quot;)</code></pre>
 <p>The data object is called <code>EnvoyAir_flights</code>.</p>
-<p>Once you have access to the data set, complete all parts of the six
+<p>Once you have access to the data set, complete all parts of the five
 problems in this assignment. You are encouraged to work with your
 classmates on this assignment but you must hand in your own, unique
 write up of the solutions. In a Word document, clearly label each
@@ -421,20 +422,20 @@ copied from Excel or RStudio and pasted into your solution document. All
 solutions require a written component. When you are ready to submit your
 assignment, save the Word document as a PDF and upload it to the Moodle
 link for Group Homework #1.</p>
-<div id="problem-1" class="section level2">
-<h2>Problem 1</h2>
-<p>Answer the following questions about you data set called
-<code>myData</code>:</p>
+</div>
+<div id="problem-1" class="section level1">
+<h1>Problem 1</h1>
+<p>Answer the following questions about the data set called
+<code>EnvoyAir_flights</code>:</p>
 <ol style="list-style-type: decimal">
 <li><p>What constitutes an observational unit?</p></li>
 <li><p>What are the different variables being collected?</p></li>
 <li><p>Which of the variables are quantitative and which are
-categorical?</p></li>
+categorical? Are there any that could be both?</p></li>
 <li><p>What kind of relationship would you expect (if any) between the
 variables <code>dep_delay</code> (departure delay) and
 <code>arr_delay</code> (arrival delay)?</p></li>
 </ol>
-</div>
 </div>
 <div id="problem-2" class="section level1">
 <h1>Problem 2</h1>
@@ -442,7 +443,6 @@ variables <code>dep_delay</code> (departure delay) and
 variable <code>distance</code> by creating:</p>
 <ol style="list-style-type: decimal">
 <li><p>A labeled histogram (with a reasonable number of bins);</p></li>
-<li><p>A labeled box plot;</p></li>
 <li><p>A five-number summary of the minimum, maximum, lower 25%
 quantile, lower 75% quantile, and the mean.</p></li>
 </ol>
@@ -451,14 +451,9 @@ quantile, lower 75% quantile, and the mean.</p></li>
 </div>
 <div id="problem-3" class="section level1">
 <h1>Problem 3</h1>
-<p>For the variable <code>origin</code> perform a one variable
-exploratory data analysis by creating:</p>
-<ol style="list-style-type: decimal">
-<li><p>A labeled bar/frequency chart;</p></li>
-<li><p>A table of frequencies for different airports of origin.</p></li>
-</ol>
-<p>What story do these analyses tell about the variable
-<code>origin</code>?</p>
+<p>Create a labeled bar/frequency chart for the variable
+<code>origin</code>. What story do these analyses tell about the
+variable <code>origin</code>?</p>
 </div>
 <div id="problem-4" class="section level1">
 <h1>Problem 4</h1>
@@ -472,12 +467,6 @@ these variables? Is this consistent with your answer from Problem 1?</p>
 <p>Does the variable <code>air_time</code> look like it could be from a
 Normal (Gaussian) population? Provide a yes or no answer accompanied by
 a histogram and 1-2 sentences interpreting this histogram.</p>
-</div>
-<div id="problem-6" class="section level1">
-<h1>Problem 6</h1>
-<p>What is the standard deviation of the variable <code>air_time</code>?
-How many standard deviations away from the mean <code>air_time</code> is
-a flight that takes 60 hours?</p>
 </div>
 
 

@@ -1,0 +1,326 @@
+---
+title: "STAT011 Homework 2"
+subtitle: "Solutions and Rubric"
+date: "Due: 9/14/2021"
+output:
+  pdf_document:
+    toc: no
+---
+
+```{r, include=FALSE}
+###########################
+# R Instructions 
+###########################
+
+# R code chunks are always in a shaded block of your RMarkdown homework document and have a little green arrow in the upper right hand corner that allows you to only evaluate the R code, rather than knit the entire document. Make sure you run this chunk of R code before you try to run any of the following ones! 
+
+###########################
+# DEFAULT SETTINGS 
+###########################
+
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+knitr::opts_chunk$set(echo=TRUE) # set echo=FALSE to hide code from html output
+
+###########################
+# LIBRARIES
+###########################
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(tidyverse)
+```
+
+
+# Part 1: Math Practice 
+
+
+## Problem 1 
+
+Let's consider a random sample of size $n=6$ student grades on the final exam for a large class. The grades for this sample of students are (out of $100$ possible points): $\{ x_1, x_2, x_3, x_4, x_5, x_6\} = \{ 76, 86, 70, 92, 88, 91\}$. Answer the following questions about this sample and round all answers to two decimal places. (You may do your calculations in the R code chunk below if you'd like.)
+
+
+```{r}
+samp_mean <- (76+86+70+92+88+91)/6  ##mean
+samp_mean
+# 70, 76, 86, 88, 91, 92  ##sorted data 
+samp_var <- (1/5)*((76-samp_mean)^2+(86-samp_mean)^2+(70-samp_mean)^2+(92-samp_mean)^2+(88-samp_mean)^2+(91-samp_mean)^2) ##variance
+samp_var 
+samp_sd <- sqrt(samp_var)  ##standard deviation
+samp_sd
+```
+
+(a) the mean grade $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i$;
+  
+(b) the median grade $Median(x_1, \dots, x_{n})$;
+
+(c) the standard deviation of the grades $sd(x) = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}\left[x_i - \left(\frac{1}{n}\sum_{i=1}^{n}x_i\right)\right]^2}$;
+
+(d) the variance of the grades $Var(x) = \frac{1}{n-1}\sum_{i=1}^{n}\left[x_i - \left(\frac{1}{n}\sum_{i=1}^{n}x_i\right)\right]^2$.
+
+**Solution:**
+
+(a) The average grade of this sample is `r samp_mean` points. 
+
+(b) The sample median is halfway between the middle two scores of $86$ and $88$ points. Therefore the median is `r mean(c(86,88))` points.
+
+(c) The standard deviation of these grades is `r samp_sd` points. 
+
+(d) The standard deviation of these grades is `r samp_var` points-squared. 
+
+
+**Rubric:** 
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+## Problem 2 
+
+Regarding the same set of $n=6$ student grades as in Problem 1, answer the following questions and round all answers to two decimal places. (You may do your calculations in the R code chunk below if you'd like.)
+
+```{r}
+2/6  #part (b)
+
+1/6 * 3  #part (c)
+1/6 * 4
+```
+
+(a) What is the proportion (or percent) the students sampled who got a passing grade?  
+
+(b) What is the proportion (percent) of the students sampled who got between an A and a B grade? 
+
+(c) Which data point, $x_i$, is the $60^{th}$ percentile of these sampled grades? 
+
+**Solution:**
+
+(a) Since all scores of this sample are a $70$ or higher, the proporion of students who passed is $1$ or $100\%$. 
+
+(b) The proportion of students who got between and A and B grade from this sample is $2/6=$ `r round(2/6,2)`. 
+
+(c) Each data point represents $1/6 = $`r round(1/6,2)` of the sample. We want to find the value of a grade such that at least $0.6n=3.6$ individuals from this sample have a grade less than (or equal to) this value. That grade will be a value between the third and fourth ordered data point, i.e. between $86$ and $88$. (It will be closer to $88$ that it is to $86$.) 
+
+**Rubric:**
+
+- 0 points: If the student got all three answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write all answers as complete sentences. 
+
+- 1 point: If the student got all three answers correct and wrote in complete sentences. Full credit for part (c) if they responsed with some grade between $86$ and $88$. 
+
+## Problem 3 
+
+Sometimes we may want to __standardize__ a set of quantitative data. This process transforms the original data, $x_i$, into a *unitless* variable, $z_i$, and forces the mean of the standardized data to be zero and the standard deviation of the standardized data to be one using this formula: 
+$$z_i = \frac{x_i - \bar{x}}{sd(x)}, \quad \text{for }i =1,\dots,n.$$
+Fill in the table below (replace the underscores in the last row) with the standardized versions of the student grades.
+
+|     ---        |     |    |    |    |    |    |
+|----------------|-----|----|----|----|----|----|
+| original score | 76 | 86  | 70 | 92 | 88 | 91 |
+| standardized   | `r round((76-samp_mean)/samp_sd,2)`  | `r round((86-samp_mean)/samp_sd,2)` | `r round((70-samp_mean)/samp_sd,2)` | `r round((92-samp_mean)/samp_sd,2)` | `r round((88-samp_mean)/samp_sd,2)` | `r round((91-samp_mean)/samp_sd,2)` | 
+
+```{r}
+(76-samp_mean)/samp_sd
+(86-samp_mean)/samp_sd
+(70-samp_mean)/samp_sd
+(92-samp_mean)/samp_sd
+(88-samp_mean)/samp_sd
+(91-samp_mean)/samp_sd
+```
+
+**Rubric:**
+
+- 0 points: If the student did not fill in the table correctly.
+
+- 1/2 point: If the student correctly filled in the table but did not show any work. 
+
+- 1 point: If the student correctly filled in the table and showed their work in the R code above. 
+
+## Problem 4 
+
+Suppose the professor of this class standardized the exam scores for her entire class of $33$ students. She found that the mean score was $84$ with a standard deviation of $6$ points and used this information to standardize the exam grades for all her students. If a student's standardized score is $1.8$, what was this student's original (un-standardized) grade? 
+
+**Solution:** We have to back-solve for the original grade, $x$, in the following equation:
+$$\frac{x-84}{6} = 1.8.$$
+Thus the original grade was `r 1.8*6 + 84`.
+
+**Rubric:** 
+
+- 0 points: If the student left this blank.
+
+- 1/2 point: If the student got the wrong answer. 
+
+- 1 point: If the student got the right score. 
+
+
+\newpage
+
+# Part 2: Concepts and Word Problems 
+
+## Problem 5 
+
+
+The correlation between the number of hours that a person is awake during a 24 hour period and the number of hours that same person is asleep during a 24 hour period is most likely to be:
+
+A) Exactly 1
+B) Near 0.8
+C) Near 0
+D) Near -0.8
+E) Exactly -1
+F) No way to tell without the data
+
+Explain your answer in 1-2 sentences.
+
+**Solution:** 
+
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+## Problem 6
+
+Developing countries often have a relatively low average age. For instance, Belize and Chad each have a mean age of about $24$, while the US has a mean age of about $34$. Would you expect a histogram for the age of people living in a developing Country to be skewed right or skewed left or symmetric? Explain why in 1-2 sentences. 
+
+**Solution:** 
+
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+## Problem 7
+
+You roll a standard six-sided die three times and then calculate the standard deviation for these rolls. What is the largest possible value for the standard deviation? What is the smallest possible value? Explain how you derived these values in 2-4 sentences. 
+
+**Solution:** 
+
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+## Problem 8
+
+(a) A chemistry professor saw that her class had a mean of 60 points (out of 100) on the midterm, with a standard deviation of 12 points. To “curve” the results, she adds 12 points to each student's score. What is the new mean and SD after she added the 12 points?
+
+(b) A biology class midterm had a mean of 60 points on the midterm, with a
+standard deviation of 12 points. To “curve” the results, the biology professor multiplies each student's score by 1.2. What is the new mean and standard deviation after multiplying by 1.2?
+
+(c) Which way of adjusting scores seems more fair and why?
+
+
+**Solution:**
+
+(a) [Write your answer to part (a) here.]
+
+(b) [Write your answer to part (b) here.]
+
+(c) [Write your answer to part (c) here.]
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+
+\newpage 
+
+# Part 3: Data Analysis
+
+For this part of your homework, we are going to revisit the penguin data set from HW 1. When you run the following chunk of R code, any observational units that have missing values for one or more variables are erased from the data set. This cleaned version of the `penguins` data set has creatively been called `Penguins`. **Note:** Capitalization and spacing matters when coding! `Penguins` and `penguins` are different things to R! 
+
+
+```{r}
+library(palmerpenguins)
+Penguins <- penguins %>% na.omit()
+head(Penguins)
+```
+
+## Problem 9
+
+Edit the chunk of R code below to create a box plot to compare the __bill lengths__ for each __species__ of penguin in the cleaned data set. Then, write a 2-3 sentence summary that compares and contrasts the distribution of bill length for these __three__ different species. 
+
+```{r}
+Penguins %>% ggplot(aes(x=flipper_length_mm, y=sex)) + geom_boxplot()
+```
+
+**Solution:** 
+
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 
+
+
+
+## Problem 10
+
+Edit the following code to create 
+
+(a) a histogram of the __bill length__ for all types of the penguins combined and 
+
+(b) a histogram of the __bill length__ for each species of penguins separately.
+
+Edit the bin size of each of these four histograms to make then look as symmetric and unimodal as possible. 
+
+Based on your plot manipulation, do you think that the variable __bill length__ could follow a Normal model? Justify your answer with 1-2 sentences. 
+
+
+```{r}
+Penguins %>% 
+  ggplot(aes(x=flipper_length_mm)) + geom_histogram(bins=30) + 
+  labs(title="All Penguins")
+```
+
+```{r}
+Penguins %>% filter(species=="Gentoo") %>%   
+  ggplot(aes(x=flipper_length_mm)) + geom_histogram(bins=30) +
+  labs(title="Gentoo Penguins")
+## Note: The filter function let's us analyze specific observational units (rows) of the data set 
+##       based on a particular value of some variable(s) (column)
+```
+
+```{r}
+Penguins %>% filter(species=="Adelie") %>%   
+  ggplot(aes(x=flipper_length_mm)) + geom_histogram(bins=30) +
+  labs(title="Adelie Penguins")
+```
+
+```{r}
+Penguins %>% filter(species=="Chinstrap") %>%   
+  ggplot(aes(x=flipper_length_mm)) + geom_histogram(bins=30) +
+  labs(title="Chinstrap Penguins")
+```
+
+**Solution:** 
+
+
+**Rubric:**
+
+- 0 points: If the student got all four answers incorrect or did not attempt an answer. 
+
+- 1/2 point: If the student got one or more answers correct and one or more answer wrong or if the student provided the correct values but did not write in complete sentences. 
+
+- 1 point: If the student got all four answers correct and wrote in complete sentences. 

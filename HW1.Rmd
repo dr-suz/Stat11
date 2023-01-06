@@ -51,22 +51,23 @@ If you are analyzing this data in Excel you first need to [download the data set
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
-EnvoyAir_flights <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt")
+EnvoyAir_flights <- 
+  read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt")
 ```
 The data object is called `EnvoyAir_flights`. 
 
-Once you have access to the data set, complete all parts of the six problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework #1.
+Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework #1.
 
 
-## Problem 1 
+# Problem 1 
 
-Answer the following questions about you data set called `myData`:
+Answer the following questions about the data set called `EnvoyAir_flights`:
 
   1. What constitutes an observational unit? 
   
   2. What are the different variables being collected?
   
-  3. Which of the variables are quantitative and which are categorical? 
+  3. Which of the variables are quantitative and which are categorical? Are there any that could be both? 
   
   4. What kind of relationship would you expect (if any) between the variables `dep_delay` (departure delay) and `arr_delay` (arrival delay)?
 
@@ -78,22 +79,14 @@ Perform a one variable exploratory data analysis by providing of the variable `d
 
   1. A labeled histogram (with a reasonable number of bins);
 
-  2. A labeled box plot;
-
-  3. A five-number summary of the minimum, maximum, lower 25\% quantile, lower 75\% quantile, and the mean.   
+  2. A five-number summary of the minimum, maximum, lower 25\% quantile, lower 75\% quantile, and the mean.   
 
 What story do these analyses tell about the variable `distance`? 
 
 
 # Problem 3
 
-For the variable `origin` perform a one variable exploratory data analysis by creating:
-
-  1. A labeled bar/frequency chart;
-  
-  2. A table of frequencies for different airports of origin. 
-
-What story do these analyses tell about the variable `origin`? 
+Create a labeled bar/frequency chart for the variable `origin`. What story do these analyses tell about the variable `origin`? 
 
 
 # Problem 4
@@ -106,9 +99,5 @@ Generate a scatter plot of the variables `dep_delay` (departure delay) and `arr_
 
 Does the variable `air_time` look like it could be from a Normal (Gaussian) population? Provide a yes or no answer accompanied by a histogram and 1-2 sentences interpreting this histogram. 
 
-
-# Problem 6
-
-What is the standard deviation of the variable `air_time`? How many standard deviations away from the mean `air_time` is a flight that takes 60 hours? 
 
  
