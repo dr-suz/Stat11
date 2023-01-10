@@ -1569,23 +1569,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1640,8 +1634,11 @@ display: none;
 <h2>Structure of data</h2>
 <p>Variables - something that varies</p>
 <p>Observational units</p>
-<p><span style="color:blue">How would you describe the concept of
-<em>randomness</em>?</span>.</p>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["ID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Variable1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Variable2"],"name":[3],"type":["int"],"align":["right"]},{"label":["Variable3"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"observational unit 1","2":"9.347927","3":"3","4":"Red"},{"1":"observational unit 2","2":"11.104924","3":"5","4":"Red"},{"1":"observational unit 3","2":"8.650112","3":"1","4":"Red"},{"1":"observational unit 4","2":"10.428719","3":"2","4":"Green"},{"1":"observational unit 5","2":"10.621538","3":"4","4":"Green"},{"1":"observational unit 6","2":"12.347933","3":"3","4":"Green"},{"1":"observational unit 7","2":"11.237580","3":"0","4":"Green"},{"1":"observational unit 8","2":"9.774531","3":"1","4":"Red"},{"1":"observational unit 9","2":"11.834057","3":"2","4":"Green"},{"1":"observational unit 10","2":"9.553481","3":"2","4":"Green"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <div id="measurability-or-countability" class="section level2">
 <h2>Measurability or countability</h2>
@@ -1654,26 +1651,22 @@ display: none;
 </div>
 <div id="what-is-statistics" class="section level1">
 <h1>2. What is statistics?</h1>
+<p>Machine learning, computer science, data science, demography,
+modeling, mathematics, natural science, liberal art?</p>
 <p><span style="color:blue">What is your relationship to
-statistics?</span>.</p>
+statistics?</span></p>
 <div id="exploring-vs-confirming" class="section level2">
 <h2>Exploring vs confirming</h2>
 <p><span style="color:blue">What is a question you would like to answer
-with statistics?</span>.</p>
-</div>
-<div id="models-vs-reality" class="section level2">
-<h2>Models vs reality</h2>
-<p><span style="color:blue">What does the concept of a <em>model</em>
-mean to you?</span>.</p>
-<p><span style="color:purple">How would you describe the concept of
-<em>randomness</em>?</span>.</p>
+with statistics?</span></p>
+<p>Is it exploratory or confirmatory?</p>
 </div>
 </div>
 <div id="about-this-class" class="section level1">
 <h1>3. About this class</h1>
-<p>Everything’s on Moodle!</p>
-<p>Textbook and myLab are required. Attendance is required.</p>
-<p><span style="color:purple">By yourself:</span>. Take a few minutes to
+<p>Everything is on Moodle!</p>
+<p>Textbook and Pearson myLab are required. Attendance is required.</p>
+<p><span style="color:purple">By yourself:</span> Take a few minutes to
 read over the syllabus.</p>
 <ul>
 <li><p>What stands out to you?</p></li>
@@ -1681,16 +1674,20 @@ read over the syllabus.</p>
 do to succeed in this class?</p></li>
 <li><p>What do you think will be your biggest obstacle?</p></li>
 </ul>
-<p><span style="color:purple">With someone else:</span>.</p>
+<p><span style="color:purple">With someone else:</span></p>
 <p>Share your answers with a neighbor. Strategize how to handle what you
 each expect will be your biggest obstacles.</p>
 <p><strong>Prof Suzy’s Recommendations</strong></p>
 <ul>
-<li><p>Read</p></li>
-<li><p>Practice</p></li>
-<li><p>Office hours</p></li>
-<li><p>Communicate</p></li>
-<li><p>Allow yourself room to grow</p></li>
+<li><p><em>Read</em> your textbook!</p></li>
+<li><p><em>Practice</em> asking and answering questions in class and
+while you read your textbook or do your homework.</p></li>
+<li><p>Attend <em>Office Hours</em> as often as possible, this time is
+for you so use it!</p></li>
+<li><p><em>Communicate</em> with your professor. Keep me in the
+loop!</p></li>
+<li><p>Allow yourself <em>room to grow</em>. We learn and live at our
+own paces. You’re not perfect and you don’t have to be.</p></li>
 </ul>
 </div>
 

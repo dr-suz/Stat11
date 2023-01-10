@@ -25,7 +25,19 @@ Variables - something that varies
 
 Observational units 
 
-<span style="color:blue">How would you describe the concept of *randomness*?</span>.
+```{r echo=FALSE}
+rows = NULL
+for(i in 1:10){
+rows = c(rows,paste0("observational unit ", i))
+}
+set.seed(101)
+sample_data <- data.frame(ID = rows,
+            Variable1 = rnorm(10, 10, 2),
+            Variable2 = rpois(10, 2),
+            Variable3 = sample(c("Red", "Green"), size=10, replace=TRUE))
+
+sample_data
+```
 
 ## Measurability or countability 
 
@@ -36,27 +48,26 @@ Observational units
 
 # 2. What is statistics? 
 
+Machine learning, computer science, data science, demography, modeling, mathematics, natural science, liberal art? 
 
-<span style="color:blue">What is your relationship to statistics?</span>.
+<span style="color:blue">What is your relationship to statistics?</span>
 
 
 ## Exploring vs confirming 
 
-<span style="color:blue">What is a question you would like to answer with statistics?</span>.
+<span style="color:blue">What is a question you would like to answer with statistics?</span>
 
-## Models vs reality 
+Is it exploratory or confirmatory? 
 
-<span style="color:blue">What does the concept of a *model* mean to you?</span>.
 
-<span style="color:purple">How would you describe the concept of *randomness*?</span>.
 
 # 3. About this class 
 
-Everything's on Moodle! 
+Everything is on Moodle! 
 
-Textbook and myLab are required. Attendance is required. 
+Textbook and Pearson myLab are required. Attendance is required. 
 
-<span style="color:purple">By yourself:</span>.
+<span style="color:purple">By yourself:</span>
 Take a few minutes to read over the syllabus. 
 
 - What stands out to you? 
@@ -65,19 +76,21 @@ Take a few minutes to read over the syllabus.
 
 - What do you think will be your biggest obstacle? 
 
-<span style="color:purple">With someone else:</span>.
+<span style="color:purple">With someone else:</span>
 
 Share your answers with a neighbor. Strategize how to handle what you each expect will be your biggest obstacles. 
 
 
 **Prof Suzy's Recommendations** 
 
-- Read 
+- *Read* your textbook!
 
-- Practice 
+- *Practice* asking and answering questions in class and while you read your textbook or do your homework.
 
-- Office hours 
+- Attend *Office Hours* as often as possible, this time is for you so use it!
 
-- Communicate 
+- *Communicate* with your professor. Keep me in the loop! 
 
-- Allow yourself room to grow 
+- Allow yourself *room to grow*. We learn and live at our own paces. You're not perfect and you don't have to be.
+
+

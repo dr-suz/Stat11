@@ -18,24 +18,64 @@ header-includes:
 <span style="color:purple">example text</span>
 
 
+
+# Models vs reality 
+
+<span style="color:blue">What does the concept of a *model* mean to you?</span>
+
+Introduce RV as a model for a variable in sample of data.
+
+Compare/contrast laws and models.
+
+
 # Exploring and Describing Data 
 
+data vs stories 
+
+Brene Brown quote: "stories are data with a soul" 
+
+## Numeric Data 
+
+histograms, bin size, what are we looking for? what's the story? 
+
+boxplot, interpretation, what's the difference between this and a histogram? 
+
+stem and leaf plot
 
 
+## Categorical Data 
 
-# Numeric Data 
+tables of counts or proportions 
 
+bar charts 
 
-
-
-# Categorical Data 
-
+pie chart 
 
 
 # Relationships Among Multiple Variables 
 
+What does the word "relationship" entail in a statistical or data science context? (compare/contrast human relationships with variable relationships)
 
 
-# About this class 
+scatterplots, correlation not causation
+
+stacked boxplots 
+
+stacked bar charts 
+
+Explore examples from https://www.data-to-viz.com/  
+
+
+# Reminders about this class  
+
+- *Read* your textbook! <span style="color:purple">By next class, you should have read all of chapters 1-3 in your textbook.</span>
+
+- *Practice* asking and answering questions in class and while you read your textbook or do your homework. <span style="color:purple">By next class, you should have attempted Individual Homeworks 1 and 2.</span> 
+
+- Attend *Office Hours* as often as possible, this time is for you so use it! <span style="color:purple">My office hours have been updated on the course syllabus on Moodle.</span>
+
+- *Communicate* with your professor. <span style="color:purple">Do you not yet have your textbook? Can you not attend any of my office hours? Let me know ASAP!</span> 
+
+- Allow yourself *room to grow*. We learn and live at our own paces. You're not perfect and you don't have to be.
 
 
