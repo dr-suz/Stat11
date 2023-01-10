@@ -8,7 +8,7 @@ output:
 
 # Introduction and Purpose 
 
-The data set you will analyse in this homework records information about different items on the menu at a local Burger King restaurant. The purpose of this assignment is to practice using software to explore and summaries qualities of this data set consisting of $17$ columns (the first identifies the item name, the next $16$ are variables) and $122$ observations. 
+The data set you will analyse in this homework records information from different flights for an airline carrier named Envoy Air in the year 2013. The purpose of this assignment is to practice using software to investigate and describe a rather large data set consisting of $19$ variables and $25,037$ observations. 
 
 
 # Required Tech 
@@ -47,42 +47,63 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 
 # Instructions
 
-If you are analyzing this data in Excel you first need to [download the data set for HW 2](https://github.com/ProfSuzy/Stat11/blob/main/Data/Burger_King_items.csv) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `Burger_King_items.csv`.  
+If you are analyzing this data in Excel you first need to [download the data set for HW 1](https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `EnvoyAir_flights.csv`. This may take a few moments as it is a large data set.
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
-Burger_King_items <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv")
+EnvoyAir_flights <- 
+  read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt")
 ```
-The data object is called `Burger_King_items`. 
+The data object is called `EnvoyAir_flights`. 
 
-Once you have access to the data set, complete all parts of the **X** problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework #2.
+Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#2.
 
 
 # Problem 1 
 
-Answer the following questions about the data set called `Burger_King_items`:
+Answer the following questions about the data set called `EnvoyAir_flights`:
 
   1. What constitutes an observational unit? 
   
   2. What are the different variables being collected?
   
-  3. Which of the variables are quantitative and which are categorical? Are there any variables that could be both?
+  3. Which of the variables are quantitative and which are categorical? Are there any that could be both? 
   
+  4. What kind of relationship would you expect (if any) between the variables `dep_delay` (departure delay) and `arr_delay` (arrival delay)?
+
+
+
 # Problem 2
 
-boxplots, histograms (compare info from each). for histogram: Edit the bin size of each of these four histograms to make then look as symmetric and unimodal as possible. 
+Perform a one variable exploratory data analysis by providing of the variable `distance` by creating:
 
-standard deviations away from mean; calculate mean, median, standard deviation, variance
+  1. A labeled histogram (with a reasonable number of bins);
 
-quantiles  and percentiles. What is the proportion (or percent) of X less than X? What is the proportion (percent) of X between A and B? Which item on the menu is the $60^{th}$ percentile of X? 
+  2. A five-number summary of the minimum, maximum, lower 25\% quantile, lower 75\% quantile, and the mean.   
 
-standardization (get sodium and sat.fat in same units)
-Sometimes we may want to __standardize__ a set of quantitative data. This process transforms the original data, $x_i$, into a *unitless* variable, $z_i$, and forces the mean of the standardized data to be zero and the standard deviation of the standardized data to be one using this formula: 
-$$z_i = \frac{x_i - \bar{x}}{sd(x)}, \quad \text{for }i =1,\dots,n.$$
-If standardized X is X, what was the value in the original units? 
+What story do these analyses tell about the variable `distance`? 
 
 
+# Problem 3
 
-Idea: maybe swap order of HW 1 and 2? (move all boxplots to second assignment)
+Create a labeled bar/frequency chart for the variable `origin`. What story do these analyses tell about the variable `origin`? 
 
 
+# Problem 4
+
+Generate a scatter plot of the variables `dep_delay` (departure delay) and `arr_delay` (arrival delay). What story does this scatter plot tell about any apparent relationship between these variables? Is this consistent with your answer from Problem 1? 
+
+
+
+# Problem 5
+
+Does the variable `air_time` look like it could be from a Normal (Gaussian) population? Provide a yes or no answer accompanied by a histogram and 1-2 sentences interpreting this histogram. 
+
+
+# Question with boxblots 
+boxplots, histograms (compare info from each).
+
+
+
+
+ 
