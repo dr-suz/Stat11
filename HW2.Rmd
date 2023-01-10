@@ -51,10 +51,11 @@ If you are analyzing this data in Excel you first need to [download the data set
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
-EnvoyAir_flights <- 
-  read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt")
+EnvoyAir_flights <- read.delim(
+        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt",
+        sep=",")
 ```
-The data object is called `EnvoyAir_flights`. 
+This may take a few moments as it is a large data set. The data object is called `EnvoyAir_flights`. 
 
 Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#2.
 
@@ -86,22 +87,23 @@ What story do these analyses tell about the variable `distance`?
 
 # Problem 3
 
-Create a labeled bar/frequency chart for the variable `origin`. What story do these analyses tell about the variable `origin`? 
+Create a labeled bar/frequency chart for the variable `origin`. What story does this tell about the variable `origin`? 
+
+
+
 
 
 # Problem 4
 
-Generate a scatter plot of the variables `dep_delay` (departure delay) and `arr_delay` (arrival delay). What story does this scatter plot tell about any apparent relationship between these variables? Is this consistent with your answer from Problem 1? 
+To compare the flight distance across all airports of origin we could either create three boxplots or create three histograms, one for each airport of origin. Create a boxplot for the distance of Envoy Air flights by each of the three airports of origin. Then, answer the following two questions. What story does this plot tell you about any apparent relationship between these variables? Hypothetically, is there something else you could see if you plotted three separate histograms for distance (one for each origin) instead of three boxplots?
+
 
 
 
 # Problem 5
 
-Does the variable `air_time` look like it could be from a Normal (Gaussian) population? Provide a yes or no answer accompanied by a histogram and 1-2 sentences interpreting this histogram. 
+Generate a scatter plot of the variables `dep_delay` (departure delay) and `arr_delay` (arrival delay). Then, answer the following questions. What story does this scatter plot tell about any apparent relationship between these variables? Is this consistent with your answer from Problem 1? 
 
-
-# Question with boxblots 
-boxplots, histograms (compare info from each).
 
 
 
