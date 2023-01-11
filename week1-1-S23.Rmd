@@ -63,9 +63,20 @@ Is it exploratory or confirmatory?
 
 # 3. About this class 
 
-Everything is on Moodle! 
+The Textbook and Pearson MyLab are required. Attendance is required. 
 
-Textbook and Pearson myLab are required. Attendance is required. 
+Everything you need for this class can be found on Moodle! 
+
+## Analyzing data 
+
+You will be using software (either Excel or RStudio) to analyze data. There is an Intro to R (and RStudio) two-part workshop being held by the Stat Clinicians. Bring your own laptop! (Let me know if you need to borrow one from the department.)
+
+* Part 1 in SC 104 - Either Jan 18 (W) or Jan 19 (Th) from 8-10pm. 
+
+* Part 2 in SC 105 - Either Jan 22 (Su) or Jan 24 (Tu) from 8-10pm. 
+
+
+## Syllabus 
 
 <span style="color:purple">By yourself:</span>
 Take a few minutes to read over the syllabus. 
