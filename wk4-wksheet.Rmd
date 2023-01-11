@@ -1,0 +1,12 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: "Week 4: Designing a Statistical Study"
+output:
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** 

@@ -1,0 +1,55 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: "Week 3: Fitting a Linear Regression Model"
+output:
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** Wildlife researchers are monitoring a Florida alligator population by taking areal photographs and attempting to estimate the weights of the gators based on the length of the gators in the images. The data set `Gators.csv` contains the variables `Length` and `Weight` for a sample of alligators who have been captured and studied. This data is shown in the scatterplot below. Import the `Gators` data set into either Excel or RStudio and then answer the following questions. 
+<br>
+```{r echo=FALSE}
+gators <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Gators.csv")
+
+ggplot(gators, aes(x=Weight, y=Length)) +
+  geom_scatter()
+```
+<br>
+
+# 1. What are the slope and intercept of the line of best fit through this data? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 2. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 3. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 4. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 5. 
+
+<br>
+<br>
+<br>
+<br>

@@ -22,4 +22,4 @@ header-includes:
 # What is the Normal model? 
 
 
-# Percentiles 
+# Quantiles and percentiles  

@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: "Week 2"
+date: "Week 2: Interpreting Multi-variable Plots"
 output:
   html_document: default
 ---
