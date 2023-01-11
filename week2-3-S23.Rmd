@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 2"
-subtitle: "Practice with Data" 
+subtitle: "Practicing with Data" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -17,18 +17,8 @@ header-includes:
 <span style="color:purple">example text</span>
 
 
-# 1. Data Introduction 
+# Intro to Excel and RStudio with GHW1 data 
 
 
-# 2. Analysis Goal  
-
-
-
-
-# 3. Report and Summarize 
-
-
-
-
-
+# Group work on [Week 2 worksheet](https://profsuzy.github.io/Stat11/wk2-wksheet.html)
 

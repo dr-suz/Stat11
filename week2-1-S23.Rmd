@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 2"
-subtitle: "Comparing Distributions" 
+subtitle: "Standard Deviation and Statistical Normality" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -16,10 +16,10 @@ header-includes:
 
 <span style="color:purple">example text</span>
 
-# What is a distribution? 
+# What is variance (or standard deviation)? 
 
 
-# Comparing Distributions 
+# What is the Normal model? 
 
 
-# Quantiles 
+# Percentiles 

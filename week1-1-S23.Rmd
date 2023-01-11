@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 1"
-subtitle: "Data and Statistics" 
+subtitle: "What are Data and Statistics?" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -17,11 +17,9 @@ header-includes:
 
 
 
-# 1. What is data? 
+# 1. What is data? (ch1)
 
 ## Structure of data 
-
-Variables - something that varies 
 
 Observational units 
 
@@ -38,6 +36,16 @@ sample_data <- data.frame(ID = rows,
 
 sample_data
 ```
+
+Variables - something that varies (ch1)
+
+<span style="color:blue">What does the concept of a *model* mean to you?</span>
+
+Introduce RV as a model for a variable in sample of data.
+
+Compare/contrast laws and models.
+
+
 
 ## Measurability or countability 
 
@@ -59,6 +67,8 @@ Machine learning, computer science, data science, demography, modeling, mathemat
 
 Is it exploratory or confirmatory? 
 
+
+## Models (ch1)
 
 
 # 3. About this class 

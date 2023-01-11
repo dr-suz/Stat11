@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 1"
-subtitle: "Data and Statistics" 
+subtitle: "What are Data and Statistics?" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -19,22 +19,13 @@ header-includes:
 
 
 
-# Models vs reality 
-
-<span style="color:blue">What does the concept of a *model* mean to you?</span>
-
-Introduce RV as a model for a variable in sample of data.
-
-Compare/contrast laws and models.
-
-
-# Exploring and Describing Data 
+Ways to exploring and describing data 
 
 data vs stories 
 
 Brene Brown quote: "stories are data with a soul" 
 
-## Numeric Data 
+# 1. How to explore numeric (or quantitative) data?  
 
 histograms, bin size, what are we looking for? what's the story? 
 
@@ -42,8 +33,14 @@ boxplot, interpretation, what's the difference between this and a histogram?
 
 stem and leaf plot
 
+time plots 
 
-## Categorical Data 
+outliers 
+
+transformations/re-expressions 
+
+
+# 2. How to explore categorical data?  
 
 tables of counts or proportions 
 
@@ -51,8 +48,10 @@ bar charts
 
 pie chart 
 
+Contingency table examples (Ch 3)
 
-# Relationships Among Multiple Variables 
+
+# 3. How to explore relationships among multiple variables? 
 
 What does the word "relationship" entail in a statistical or data science context? (compare/contrast human relationships with variable relationships)
 
@@ -66,7 +65,7 @@ stacked bar charts
 Explore examples from https://www.data-to-viz.com/  
 
 
-# Reminders about this class  
+# 4. Reminders about this class  
 
 - *Read* your textbook! <span style="color:purple">By next class, you should have read all of chapters 1-3 in your textbook.</span>
 
