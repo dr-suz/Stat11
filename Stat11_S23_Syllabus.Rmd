@@ -21,7 +21,21 @@ STAT 11 prepares students to think statistically and to be able to perform basic
 
 ## Textbook 
 
-We will be using the 5th edition of [Stats: Data and Models](https://www.pearson.com/en-us/subject-catalog/p/stats-data-and-models/P200000006160/9780136880790). 
+We will be using the 5th edition of [Stats: Data and Models](https://www.pearson.com/en-us/subject-catalog/p/stats-data-and-models/P200000006160/9780136880790).You are required to have access to Pearson's MyLab. You can purchase an 18 week access package through the campus bookstore.  The following details this package. 
+
+STATS: DATA AND MODELS, LOOSE-LEAF EDITION PLUS MYLAB STATISTICS WITH PEARSON ETEXT -- 18 WEEK ACCESS CARD PACKAGE
+
+ISBN: 9780135991206
+
+BY DE VEAUX, RICHARD D., VELLEMAN, PAUL F., AND BOCK, DAVID E.
+
+PUBLISHED BY PEARSON EDUCATION
+
+Edition 5
+
+PUBLICATION DATE: JUL. 31, 2019
+
+LIST PRICE: $179.99
 
 ## Other Required Course Items 
 
