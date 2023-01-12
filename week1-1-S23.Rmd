@@ -17,11 +17,20 @@ header-includes:
 
 
 
-# 1. What is data? (ch1)
+# 1. What is data? 
+
+<span style="color:blue">If not data, what else?</span>
+
 
 ## Structure of data 
 
-Observational units 
+**Observational units** - any individual (human or otherwise) upon which we are collecting information in a systematic way. 
+
+In general, we usually say we have a sample of size $n$ observational units, where $n$ can be an integer greater than or equal to one. 
+
+<br>
+
+**Variables** - a measurable or categorizable quality that tends to varies from one observational unit to another.
 
 ```{r echo=FALSE}
 rows = NULL
@@ -37,21 +46,15 @@ sample_data <- data.frame(ID = rows,
 sample_data
 ```
 
-Variables - something that varies (ch1)
-
-<span style="color:blue">What does the concept of a *model* mean to you?</span>
-
-Introduce RV as a model for a variable in sample of data.
-
-Compare/contrast laws and models.
 
 
+## Type of variables
 
-## Measurability or countability 
-
-   - numeric or quantitative 
-   - categorical or qualitative 
-   - context matters 
+   - Numeric/Quantitative variables are *measurable* and typically have some units of measurement associated with them
+   - Categorical/Qualitative variables which you may not be able to measure but the outcomes are distinct enough to *label* according to different qualities.   
+   - *Context matters* determine what type of variable is being used 
+   
+E.g. the office difference in salary
 
 
 # 2. What is statistics? 
@@ -61,14 +64,19 @@ Machine learning, computer science, data science, demography, modeling, mathemat
 <span style="color:blue">What is your relationship to statistics?</span>
 
 
+## Models (ch1)
+
+<span style="color:blue">What does the concept of a *model* mean to you?</span>
+
+Introduce RV as a model for a variable in sample of data.
+
+Compare/contrast laws and models.
+
 ## Exploring vs confirming 
 
 <span style="color:blue">What is a question you would like to answer with statistics?</span>
 
 Is it exploratory or confirmatory? 
-
-
-## Models (ch1)
 
 
 # 3. About this class 

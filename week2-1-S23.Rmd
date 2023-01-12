@@ -19,7 +19,7 @@ header-includes:
 
 # Describing quantitative data 
 
-For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand the data is to create a histogram with a reasonable number of bins. The next best way to understand the data is to consider numerical summaries that describe the **center** and the **spread** of the data values.
+For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand the data is to create a histogram with a reasonable number of bins. The next best way to understand the data is to consider numerical summaries of the data (i.e. sample statistics) that describe the **center** and the **spread** of the data values.
 
 <span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
 
@@ -116,6 +116,7 @@ The first two conditions can be assessed visually by looking at a histogram of t
 
 [picture]
 
+The Normal model has two model parameters: $\mu$ the mean and $\sigma$ the standard deviation.
 
 # Quantiles and percentiles of a standard Normal distribution
 
@@ -146,3 +147,5 @@ If the data appears to follow a Normal/Gaussian model, then the standardized ver
 Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. Now it is much easier to answer questions like "which groups performance was more impressive, the runners or the long jumpers?" because both sets of data are measured on the same scale. 
 
 [draw pic highlight values for quantiles changed, 68/95/99.7]
+
+Normal probability plots - plot each data point against it's z-score. Straight line means these values match up well and a Normal/Gaussian model is likely reasonable. 
