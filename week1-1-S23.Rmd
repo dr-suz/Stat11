@@ -14,9 +14,6 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-
-
-
 # 1. What is data? 
 
 <span style="color:blue">If not data, what else?</span>
@@ -53,30 +50,62 @@ sample_data
    - Numeric/Quantitative variables are *measurable* and typically have some units of measurement associated with them
    - Categorical/Qualitative variables which you may not be able to measure but the outcomes are distinct enough to *label* according to different qualities.   
    - *Context matters* determine what type of variable is being used 
-   
-E.g. the office difference in salary
 
+<br> 
+
+![](./images/week1-1-dwight.png)
+
+  Dwight: We need to talk!
+  
+  Michael: Not now.
+  
+  Dwight: Which is higher? Assistant Regional Manager or Regional Director in Charge of Sales?
+  
+  Michael: I told you the titles are irrelevant. They just relate to pay scale.
+  
+  Dwight: Okay. So who gets paid more? Me or Andy?
+  
+  Michael: It is not a matter of more or less. Your pay is just different. Okay?^[Source: NBC's The Office S3E8] 
+
+<br>
+
+E.g. Age, time of day, birth order, etc. could all be either numeric or categorical depending on the discretion of the data analyst. 
 
 # 2. What is statistics? 
 
 Machine learning, computer science, data science, demography, modeling, mathematics, natural science, liberal art? 
 
-<span style="color:blue">What is your relationship to statistics?</span>
+![](./images/probability_vs_statistics.jpg)^[Source: www.distilled.net/statistical-significance-for-cro/]
 
 
-## Models (ch1)
+## Models  
 
 <span style="color:blue">What does the concept of a *model* mean to you?</span>
 
-Introduce RV as a model for a variable in sample of data.
+Probability is a mathematical construct which defines a function called a **random variable**. In statistics, we use these mathematical functions (random variables) to model the behavior of a variable in a data set. 
 
-Compare/contrast laws and models.
+Models (including random variables) exist in the mathematical world. Data exists in the real world. Statistics uses tools from the mathematical world to investigate data that is carefully observed and draw conclusions about huge (but often unobservable) populations that exist in the real world.  
+
+
 
 ## Exploring vs confirming 
 
-<span style="color:blue">What is a question you would like to answer with statistics?</span>
+Statistical analyses can be used to explore data or to draw conclusions about the strength of observable evidence in support of (or against) a proposed theory. 
 
-Is it exploratory or confirmatory? 
+For example...
+
+* An economist wants to determine if there is evidence for a neo-classical business cycle within the global paper industry. 
+
+* A CEO wants to get a sense of which of his store branches are consistently performing well or not. 
+
+* A job-seeker wants to quantify the turnover rate at his current place of employment to the turnover rates of other similar local paper suppliers in the north east. 
+
+* Warehouse employees interested in forming a union want to quantify the risk associated with branch closure to see if it really is as close to $100\%$ as indicated by their company's CFO.
+
+
+
+<span style="color:blue">What is a question you would like to answer with statistics? Is it exploratory or confirmatory?</span>
+
 
 
 # 3. About this class 
