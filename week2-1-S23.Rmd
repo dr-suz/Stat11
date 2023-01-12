@@ -14,12 +14,135 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">example text</span>
+<span style="color:purple">example</span>
+
+
+# Describing quantitative data 
+
+For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand the data is to create a histogram with a reasonable number of bins. The next best way to understand the data is to consider numerical summaries that describe the **center** and the **spread** of the data values.
+
+<span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
+
+<span style="color:purple">Example 2:</span> The length of Olympic long jumps in meters. 
+
+## Numerical measures of centrality 
+
+* Mean: $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i = \frac{1}{n}\left(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_{n} \right)$
+
+* Mode: the highest peak(s)
+
+* Median: 50\% of the data is larger and 50\% of the data is smaller than this value 
+
+
+### When to use which? 
+
+For data that is 
+
+- unimodal <span style="color:purple">exactly one peak</span>
+
+- symmetric about the mode <span style="color:purple">mirrored at the mode</span>
+
+the mode, the mean, and the median are all the same value! 
+
+[Draw pic] 
+
+For data this is unimodal but not symmetric...
+
+
+For data that is not unimodal but is symmetric...
+
+
+For data that is not unimodal and not symmetric... 
+
+
+## Numerical measures of spread 
+
+* Range: $(x_{min}, x_{max})$ 
+
+* Interquartile range: the range of two values where 25\% of the data are smaller than the lower number and 75\% of the data are smaller than the higher number  
+
+* Variance (or standard deviation): Average distance from the mean (or square root of this average distance)
+
+### When to use which? 
+
+For data that is 
+
+- unimodal 
+
+- symmetric about the mode 
+
+we use variance (or standard deviation) because these represent average distances from the mean. 
+
+
+For data this is unimodal but not symmetric...
+
+
+For data that is not unimodal but is symmetric...
+
+
+For data that is not unimodal and not symmetric... 
+
+
 
 # What is variance (or standard deviation)? 
 
 
+Variance of a sample (more commonly called "sample variance"): $\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2 = \frac{1}{n-1}\left((x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots + (x_{n-1} - \bar{x})^2 + (x_n - \bar{x})^2 \right)$
+
+Standard deviation of a sample (more commonly called sample standard deviation): $\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$
+
+<span style="color:purple">Q:</span> what are the units of measurement for variance and for standard deviation?  
+
+
+<span style="color:purple">Example:</span> Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you more impressed by? 
+
+A statistician would answer this question by comparing how many standard deviations away from the mean Thiam's jump was vs how many standard deviations away from the mean was Johnson-Thompson's run. 
+
+Standard deviation is called the "statistician's ruler" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
+
+
+
 # What is the Normal model? 
 
+Normal/Gaussian model 
 
-# Quantiles and percentiles  
+- unimodal
+
+- symmetric about the mode 
+
+- not too spread out from the mode <span style="color:purple">almost no data points lie really far away from the mode</span>
+
+The first two conditions can be assessed visually by looking at a histogram of the data. The last condition can be assessed mathematically using what is called the **68/95/99.7 Rule**.
+
+[picture]
+
+
+# Quantiles and percentiles of a standard Normal distribution
+
+Example question: 
+
+[draw pic]
+
+Example assessing 68/95/99.7 rule 
+
+
+# Standardizing data into z-scores
+
+When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data set relative to their respective means and standard deviations by converting them into **z-scores**:
+
+
+
+Shift the data point according to the value of the mean of the data, then scale the data point according to the standard deviation of the data. 
+
+
+$$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}$$ 
+
+<span style="color:purple">Q:</span> what are the units of measurement for standardized numeric data points?  
+
+If the data appears to follow a Normal/Gaussian model, then the standardized version of the data follows what is called a **Standard Normal/Gaussian Model**. 
+
+<span style="color:purple">Q:</span> Does a shift up or down affect the spread of the data? Does a scale affect the spread? 
+
+Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. Now it is much easier to answer questions like "which groups performance was more impressive, the runners or the long jumpers?" because both sets of data are measured on the same scale. 
+
+[draw pic highlight values for quantiles changed, 68/95/99.7]

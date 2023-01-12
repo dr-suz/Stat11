@@ -1569,23 +1569,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1627,22 +1621,148 @@ display: none;
 
 
 <h1 class="title toc-ignore">Stat 11 Week 2</h1>
-<h3 class="subtitle">Comparing Distributions</h3>
+<h3 class="subtitle">Standard Deviation and Statistical Normality</h3>
 <h4 class="author">Prof. Suzy Thornton</h4>
 <h4 class="date">Spring 2023</h4>
 
 </div>
 
 
-<p><span style="color:purple">example text</span></p>
-<div id="what-is-a-distribution" class="section level1">
-<h1>What is a distribution?</h1>
+<p><span style="color:purple">example</span></p>
+<div id="describing-quantitative-data" class="section level1">
+<h1>Describing quantitative data</h1>
+<p>For a set of <span class="math inline">\(n\)</span> numeric data
+points, <span class="math inline">\(x_1, x_2, \dots, x_{n-1},
+x_n\)</span>, that correspond to the same variable but different
+observational units, the best way to understand the data is to create a
+histogram with a reasonable number of bins. The next best way to
+understand the data is to consider numerical summaries that describe the
+<strong>center</strong> and the <strong>spread</strong> of the data
+values.</p>
+<p><span style="color:purple">Example 1:</span> The time it takes
+Olympic runners to complete a race in seconds.</p>
+<p><span style="color:purple">Example 2:</span> The length of Olympic
+long jumps in meters.</p>
+<div id="numerical-measures-of-centrality" class="section level2">
+<h2>Numerical measures of centrality</h2>
+<ul>
+<li><p>Mean: <span class="math inline">\(\bar{x} =
+\frac{1}{n}\sum_{i=1}^{n}x_i = \frac{1}{n}\left(x_1 + x_2 + x_3 + \dots
++ x_{n-1} + x_{n} \right)\)</span></p></li>
+<li><p>Mode: the highest peak(s)</p></li>
+<li><p>Median: 50% of the data is larger and 50% of the data is smaller
+than this value</p></li>
+</ul>
+<div id="when-to-use-which" class="section level3">
+<h3>When to use which?</h3>
+<p>For data that is</p>
+<ul>
+<li><p>unimodal <span style="color:purple">exactly one
+peak</span></p></li>
+<li><p>symmetric about the mode <span style="color:purple">mirrored at
+the mode</span></p></li>
+</ul>
+<p>the mode, the mean, and the median are all the same value!</p>
+<p>[Draw pic]</p>
+<p>For data this is unimodal but not symmetric…</p>
+<p>For data that is not unimodal but is symmetric…</p>
+<p>For data that is not unimodal and not symmetric…</p>
 </div>
-<div id="comparing-distributions" class="section level1">
-<h1>Comparing Distributions</h1>
 </div>
-<div id="quantiles" class="section level1">
-<h1>Quantiles</h1>
+<div id="numerical-measures-of-spread" class="section level2">
+<h2>Numerical measures of spread</h2>
+<ul>
+<li><p>Range: <span class="math inline">\((x_{min},
+x_{max})\)</span></p></li>
+<li><p>Interquartile range: the range of two values where 25% of the
+data are smaller than the lower number and 75% of the data are smaller
+than the higher number</p></li>
+<li><p>Variance (or standard deviation): Average distance from the mean
+(or square root of this average distance)</p></li>
+</ul>
+<div id="when-to-use-which-1" class="section level3">
+<h3>When to use which?</h3>
+<p>For data that is</p>
+<ul>
+<li><p>unimodal</p></li>
+<li><p>symmetric about the mode</p></li>
+</ul>
+<p>we use variance (or standard deviation) because these represent
+average distances from the mean.</p>
+<p>For data this is unimodal but not symmetric…</p>
+<p>For data that is not unimodal but is symmetric…</p>
+<p>For data that is not unimodal and not symmetric…</p>
+</div>
+</div>
+</div>
+<div id="what-is-variance-or-standard-deviation" class="section level1">
+<h1>What is variance (or standard deviation)?</h1>
+<p>Variance of a sample (more commonly called “sample variance”): <span class="math inline">\(\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2 =
+\frac{1}{n-1}\left((x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots +
+(x_{n-1} - \bar{x})^2 + (x_n - \bar{x})^2 \right)\)</span></p>
+<p>Standard deviation of a sample (more commonly called sample standard
+deviation): <span class="math inline">\(\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i -
+\bar{x})^2}\)</span></p>
+<p><span style="color:purple">Q:</span> what are the units of
+measurement for variance and for standard deviation?</p>
+<p><span style="color:purple">Example:</span> Thiam took the gold in the
+Olympics with a long jump of <span class="math inline">\(6.58 m\)</span>
+which was <span class="math inline">\(0.41 m\)</span> longer than the
+average jump. Johnson-Thompson won the <span class="math inline">\(200
+m\)</span> race with a time of <span class="math inline">\(23.26
+s\)</span> which was <span class="math inline">\(1.32 s\)</span> faster
+than the average run. Whose performance are you more impressed by?</p>
+<p>A statistician would answer this question by comparing how many
+standard deviations away from the mean Thiam’s jump was vs how many
+standard deviations away from the mean was Johnson-Thompson’s run.</p>
+<p>Standard deviation is called the “statistician’s ruler” because it
+allows us to compare the spread of data relative to it’s own mean. In
+other words, standard deviation is a measure that allows us to compare
+apples to oranges!</p>
+</div>
+<div id="what-is-the-normal-model" class="section level1">
+<h1>What is the Normal model?</h1>
+<p>Normal/Gaussian model</p>
+<ul>
+<li><p>unimodal</p></li>
+<li><p>symmetric about the mode</p></li>
+<li><p>not too spread out from the mode <span style="color:purple">almost no data points lie really far away from the
+mode</span></p></li>
+</ul>
+<p>The first two conditions can be assessed visually by looking at a
+histogram of the data. The last condition can be assessed mathematically
+using what is called the <strong>68/95/99.7 Rule</strong>.</p>
+<p>[picture]</p>
+</div>
+<div id="quantiles-and-percentiles-of-a-standard-normal-distribution" class="section level1">
+<h1>Quantiles and percentiles of a standard Normal distribution</h1>
+<p>Example question:</p>
+<p>[draw pic]</p>
+<p>Example assessing 68/95/99.7 rule</p>
+</div>
+<div id="standardizing-data-into-z-scores" class="section level1">
+<h1>Standardizing data into z-scores</h1>
+<p>When comparing many variables that are all measured in different
+units, we might decide that we want to convert each variable into the
+same units so that the different data sets are easier to compare. To do
+this, we first must compute the mean and standard deviation of each data
+set, relative to its own units of measurement (e.g. average length in
+<span class="math inline">\(m\)</span> or average run in <span class="math inline">\(s\)</span>). Then, we standardize each data set
+relative to their respective means and standard deviations by converting
+them into <strong>z-scores</strong>:</p>
+<p><span class="math display">\[z_i = \frac{x_i - \bar{x}}{st.dev.(x_1,
+x_2, \dots, x_n)}\]</span></p>
+<p><span style="color:purple">Q:</span> what are the units of
+measurement for standardized numeric data points?</p>
+<p>If the data appears to follow a Normal/Gaussian model, then the
+standardized version of the data follows what is called a
+<strong>Standard Normal/Gaussian Model</strong>. The key here is that
+the standardization process makes it so that <span class="math inline">\(\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) =
+0\)</span> and <span class="math inline">\(st.dev.(z_1, z_2, \dots, z_n)
+= 1\)</span>. Now it is much easier to answer questions like “which
+groups performance was more impressive, the runners or the long
+jumpers?” because both sets of data are measured on the same scale.</p>
+<p>[draw pic highlight values for quantiles changed, 68/95/99.7]</p>
 </div>
 
 
