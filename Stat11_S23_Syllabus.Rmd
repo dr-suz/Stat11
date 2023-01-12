@@ -29,11 +29,7 @@ ISBN: 9780135991206
 
 BY DE VEAUX, RICHARD D., VELLEMAN, PAUL F., AND BOCK, DAVID E.
 
-PUBLISHED BY PEARSON EDUCATION
-
-Edition 5
-
-PUBLICATION DATE: JUL. 31, 2019
+PUBLISHED BY PEARSON EDUCATION, Edition 5, PUBLICATION DATE: JUL. 31, 2019
 
 LIST PRICE: $179.99
 
@@ -42,6 +38,23 @@ LIST PRICE: $179.99
 We will also use the MyLab Statistics that accompanies our Pearson eText. Links to this lab will be provided on our course Moodle page. You will also work with software to perform statistical analyses in this class. You may use either Excel (or Google sheets) or RStudio. 
 
 If you wish to use RStudio, you may access [Swarthmore's RStudio Server](https://rstudio.swarthmore.edu/) through your browser (this requires internet access and Swarthmore VPN if off-campus). Alternatively you may download the software to run RStudio on your personal computer (this does not require internet access but can be a bit of a headache). To do so, first download the [base software R](https://www.r-project.org/). Then, once you have completed that installation of base R, you can download the [RStudio user interface](https://www.rstudio.com/).	 
+
+## Intro to R Workshop
+
+A two-part workshop designed and led by our Stat clinicians will introduce students to R statistical computing.  Although geared toward students enrolled in Stat 11 or Stat 21, anyone with an interest in learning R is welcome to attend.  Each workshop will include instruction from 8-9 pm and an optional Q&A time from 9-10 pm.  
+
+### Part 1
+
+* Wednesday January 18 in SC 104 
+
+* Thursday January 19 in SC 104
+
+### Part 2
+
+* Sunday January 22 in SC 105 
+
+* Tuesday January 24 in SC 105
+
 
 
 # Learning Objectives 
@@ -70,7 +83,7 @@ Each week, you will be assigned homework practice problems to be completed in th
 
 ### Group Homework 
 
-Over the semester, you will be assigned $5$ longer homework problem sets that will each be graded for correctness. You are encouraged to work with one another one these homework assignments although each student must hand in their own copy of the solutions. We may occasionally use class time to work on some of these assignments. Your group homework grade will be the average of all $5$ assignments. No late group homework assignments will be accepted. 
+Over the semester, you will be assigned $5$ data-analysis homework problem sets that will each be graded for correctness. You are encouraged to work with one another one these homework assignments although each student must hand in their own copy of the solutions. You may use either Excel or RStudio to analyze the data in these assignments. We may occasionally use class time to work on some of these assignments. Your group homework grade will be the average of all $5$ assignments. No late group homework assignments will be accepted. 
 
 ## Assessment Items 
 
@@ -131,7 +144,21 @@ During office hours, your professor will try to make sure that everyone who show
 
 ## Stat Clinic Hours 
 
-<span style="color:red">Include blurb once Laura sends it out to us</span>
+Stat 11 Clinics will be held on Sunday, Monday, and Tuesday nights in SC 105 from 7-10 pm and are exclusively for students enrolled in Stat 11.  These study sessions are a wonderful opportunity to study, do homework, meet and work with classmates, and ask questions about statistics.  Because study sessions are drop-in, you are welcome to come and go as you please.   Please write your name and course in the sign-in binder and the time you enter and leave the clinic so the Math/Stat Department has a record of your attendance.  To make the most of your time at study sessions, be sure to first try problems on your own, or bring questions you have from your text or lecture.  Having your textbook, lecture notes and online resources handy is essential because these are helpful resources for both you and the Clinician working with you.  There will likely be other students at study sessions with questions for the Clinicians, so do not expect to get individual attention the entire time you are there.  Be open to working on other problems, thinking about and trying to work through the question you have for the Clinicians, working with classmates, or doing other coursework while you wait to speak with the Clinician.  
+
+|Stat 11 Clinic |SC 105 from 7-10pm |
+|--------|------|
+| Su | Anne French and Felicia Yi | 
+| M | Quinn Basewitz and Joyce Ben |
+| Tu | Lizbeth Zarate-Hernandez and Leia Donoway |
+
+In addition to the course specific Clinics for Stat 11, you are welcome to attend the general Stat Clinic nights 7-10 pm on Sunday, Wednesday, and Thursday nights in SC 104.  Utilizing the general Stat Clinic is similar to making use of Stat 11 Clinic, but there may be students from different courses in attendance as well.  For questions about the Stat 11 Clinic and the general Stat Clinic please visit https://www.swarthmore.edu/mathematics-statistics/math-and-stat-clinic-study-sessions  or contact Laura Dandridge ldandri1@swarthmore.edu,  Academic Support Coordinator for the Math/Stat Department. Laura also has office hours to directly support students working on Stat 11  material, and you may sign up for an appointment on WASE.  
+
+|General Stat Clinic |SC 104 from 7-10pm | 
+|--- |--- |
+| Atesh | Stat 11, 21, 51 |
+| Alex | Stat 11, 23, 51, Math 39 |
+| Ella | Stat 11, 21, 51, 111 |
 
 
 ## Accommodations 
