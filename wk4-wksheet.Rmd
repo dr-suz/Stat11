@@ -9,4 +9,69 @@ output:
 **Name:** _____________________________________
 
 <br>
-**Instructions:** 
+**Instructions:** There are two parts to this worksheet. First, work on the five questions in Part 1 by yourself. Then, when instructed by your professor, get into groups to discuss your answers to Part 1 and move on to complete Part 2. 
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+# 1. Consider Random Sampling in Phone Surveys 
+
+A sociologist plans to select $500$ names from the city phone book, call these numbers between noon and 4pm, and will interview whoever answers for their research project. The researcher anticipates contacting at least $200$ people. 
+
+## 1.1) Why is it difficult to use a simple random sample here? 
+
+<br>
+<br>
+<br>
+<br>
+
+
+## 1.2) What is a more convenient, but still random, sampling strategy? 
+
+<br>
+<br>
+<br>
+<br>
+
+## 1.3) What kinds of households are likely to be included/excluded in the eventual sample of opinions? 
+
+<br>
+<br>
+<br>
+<br>
+
+## 1.4) Suppose the researcher decides to continue callinng each number, perhaps in the morning or evening, until an adult is contacted and interviewed. How does this improve the sampling design? 
+
+<br>
+<br>
+<br>
+<br>
+
+## 1.5) Random-digit dialing machines can generate the phone calls for us. How would this improve the design of this sociologist's study? Is anyone still excluded? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 2. Design an Experiment for the Baseball Team 
+
+It's generally believed that baseball players can hit the ball farther with aluminum bats than with the traditional wooden ones. Is this true? And if so, how much farther? 
+
+Suppose Swarthmore's baseball team has agreed to help us answer these questions. Design an appropriate experiment.  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
