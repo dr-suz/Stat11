@@ -69,7 +69,7 @@ sample_data
 
 <br>
 
-E.g. Age, time of day, birth order, etc. could all be either numeric or categorical depending on the discretion of the data analyst. 
+E.g. Age, time of day, or satisfaction level could all be treated as numeric or categorical variables depending on the discretion of the data analyst. 
 
 # 2. What is statistics? 
 
@@ -98,9 +98,9 @@ For example...
 
 * A CEO wants to get a sense of which of his store branches are consistently performing well or not. 
 
-* A job-seeker wants to quantify the turnover rate at his current place of employment to the turnover rates of other similar local paper suppliers in the north east. 
+* A branch manager needs to determine if the proportion of faulty printers being sold by the company is larger than $5\%$.
 
-* Warehouse employees interested in forming a union want to quantify the risk associated with branch closure to see if it really is as close to $100\%$ as indicated by their company's CFO.
+* Employees have experienced a lot of changes in management and think that this is related to changes in their productivity.  
 
 
 
