@@ -1,0 +1,31 @@
+---
+title: "Stat 11 Week 4"
+subtitle: "Experiments and Observational Studies" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+<span style="color:purple">example text</span>
+
+ch 11 
+
+# Observational studies 
+
+# Randomized, Comparative Experiments 
+
+# Four principles of experimental design 
+
+## Control groups 
+
+## Blocking 
+
+## Confounding 
