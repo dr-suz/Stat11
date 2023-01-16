@@ -15,3 +15,29 @@ header-includes:
 ---
 
 <span style="color:purple">example text</span>
+
+
+Association
+
+- Direction 
+
+- Form 
+
+- Strength 
+
+
+# Scatterplots 
+
+# Time plots 
+
+# Correlation 
+
+
+## Transformations (re-expressing data)
+
+root, exponents, natural logs 
+
+
+Explanatory variable and response variable 
+
+Lurking variables 

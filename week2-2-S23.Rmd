@@ -17,14 +17,50 @@ header-includes:
 <span style="color:purple">example text</span>
 
 
-
+Math world (RV as a model) vs real world (observable sample data)
 
 # What is a distribution? 
 
+Possibilities and Probabilities 
 
-# Comparing Distributions 
+## Recap: Normal/Gaussian Distribution 
+
+## Examples 
+
+Uniform
+
+Chi-square 
 
 
-# Quantiles and percentiles revisited 
+For now, going to focus on numeric variables. 
 
-compare/contrast for std normal model and binomial (or another continuous) model 
+
+
+# Comparing Distributions of Numeric Variables 
+
+Five number summary 
+
+Q: When to use the mean vs the median? When to use standard deviation vs IQR? 
+
+Histograms or bar charts 
+
+Grouped data displays 
+
+## Quantiles and percentiles  
+
+compare/contrast for std normal model, non-std normal, and binomial (or another continuous) model 
+
+[draw pic highlight values for quantiles changed, 68/95/99.7]
+
+Normal probability plots - plot each data point against it's z-score. Straight line means these values match up well and a Normal/Gaussian model is likely reasonable. 
+
+### Quantiles and percentiles of a standard Normal distribution
+
+Example question: 
+
+[draw pic]
+
+
+## Re-expressing (transforming) data 
+
+Recall Week 1 notes 

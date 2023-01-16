@@ -15,3 +15,53 @@ header-includes:
 ---
 
 <span style="color:purple">example text</span>
+
+
+# Line of best fit 
+
+least squares model coefficients 
+
+$$b_1 = r \frac{s_y}{s_x}\quad\text{and}\quad b_0 = \bar{y} - b_1 \bar{x}$$
+slope will change from one sample to the next; changes in one unit of $x$ associated with changes of $b_1$ units in $y$ 
+
+$$\hat{y} = b_0 + b_1 x$$ 
+
+# Regression to the mean 
+
+b/c correlation is between -1 and 1, each predicted response tends to be closer (in standard deviations) to the mean of $y$ than the corresponding value of the explanatory variable was from $\bar{x}$ 
+
+can occur when two variables measure similar, correlated things (?) 
+
+# Assessing the model residuals 
+
+$$\text{Residual} = e = y - \hat{y} = \text{observed value} - \text{predicted value}$$
+
+standard deviation of the residuals
+$$s_e = \frac{\sum e^2 }{n-1}$$
+
+Normal model (and 68-95-99.7 rule) applies when assumptions are reasonable
+
+
+# Correlation coefficient 
+
+is the number of std devs by which one variable is expected to change for a one standard deviation change in the other 
+
+is unitless 
+
+will change from one sample to the next 
+
+# Coefficient of determination 
+
+is the square of the correlation coefficient 
+
+is the fraction/proportion of the variation/variability in $y$ accounted for by a linear model of $x$ 
+
+reflects the successfullness of the model at relating $y$ to $x$ (goodness of fit measure)
+
+# Assumptions 
+
+- linear enough 
+
+- no thickening or thinning of the scatterplot when read from left to right 
+
+- no outliers 

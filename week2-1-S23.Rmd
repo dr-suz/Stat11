@@ -118,13 +118,8 @@ The first two conditions can be assessed visually by looking at a histogram of t
 
 The Normal model has two model parameters: $\mu$ the mean and $\sigma$ the standard deviation.
 
-# Quantiles and percentiles of a standard Normal distribution
 
-Example question: 
-
-[draw pic]
-
-Example assessing 68/95/99.7 rule 
+[Example assessing 68/95/99.7 rule]
 
 
 # Standardizing data into z-scores
@@ -146,6 +141,3 @@ If the data appears to follow a Normal/Gaussian model, then the standardized ver
 
 Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. Now it is much easier to answer questions like "which groups performance was more impressive, the runners or the long jumpers?" because both sets of data are measured on the same scale. 
 
-[draw pic highlight values for quantiles changed, 68/95/99.7]
-
-Normal probability plots - plot each data point against it's z-score. Straight line means these values match up well and a Normal/Gaussian model is likely reasonable. 
