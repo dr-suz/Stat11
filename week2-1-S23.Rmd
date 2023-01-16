@@ -14,18 +14,27 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">example</span>
+# Exploratory data analysis - Numeric Variables
 
+## Recap
 
-# Describing quantitative data 
+Last week we discussed the structure of statistical data and the kinds of questions we can answer from a statistical analysis. 
+
+Data consists of observational units (rows) and variables (columns). We covered a few ways to conduct an exploratory data analysis for numeric and/or categorical variables. 
+
+For the next couple of weeks we are going to focus specifically on exploring numeric data. 
+
+## The structure of numeric data
 
 For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand the data is to create a histogram with a reasonable number of bins. The next best way to understand the data is to consider numerical summaries of the data (i.e. sample statistics) that describe the **center** and the **spread** of the data values.
+
+## Examples
 
 <span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
 
 <span style="color:purple">Example 2:</span> The length of Olympic long jumps in meters. 
 
-## Numerical measures of centrality 
+# 1. Numerical measures of centrality 
 
 * Mean: $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i = \frac{1}{n}\left(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_{n} \right)$
 
@@ -34,7 +43,7 @@ For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that corr
 * Median: 50\% of the data is larger and 50\% of the data is smaller than this value 
 
 
-### When to use which? 
+## When to use which? 
 
 For data that is 
 
@@ -44,18 +53,21 @@ For data that is
 
 the mode, the mean, and the median are all the same value! 
 
-[Draw pic] 
+![](./images/symmetric unimodal.png)
 
-For data this is unimodal but not symmetric...
+For data that is unimodal but not symmetric...
 
+![*The median is a better representation of the center of skewed data.*](./images/skew.png)
 
 For data that is not unimodal but is symmetric...
 
+![*It is useful to know how many modes occur and where they are located.*](./images/bimodal symmetric.png)
 
 For data that is not unimodal and not symmetric... 
 
+![*Histograms are indespensible because numerical summaries can be misleading by themselves.*](./images/neither symmetric nor unimodal.png)
 
-## Numerical measures of spread 
+# 2. Numerical measures of spread 
 
 * Range: $(x_{min}, x_{max})$ 
 
@@ -63,7 +75,7 @@ For data that is not unimodal and not symmetric...
 
 * Variance (or standard deviation): Average distance from the mean (or square root of this average distance)
 
-### When to use which? 
+## When to use which? 
 
 For data that is 
 
@@ -74,27 +86,26 @@ For data that is
 we use variance (or standard deviation) because these represent average distances from the mean. 
 
 
-For data this is unimodal but not symmetric...
+For data that is unimodal but not symmetric, i.e. skewed, the inter-quartile range or the range are more realistically informative about the spread of the data than the standard deviation. 
 
 
-For data that is not unimodal but is symmetric...
-
-
-For data that is not unimodal and not symmetric... 
+For data that is not unimodal but is symmetric... or for data that is not unimodal and not symmetric... there isn't necessarily a preferable way to numerically summarize the spread. But in general, the more information (e.g. plots, ranges, etc) the better our description of the numeric data! 
 
 
 
-# What is variance (or standard deviation)? 
+# 3. What is variance (or standard deviation)? 
 
 
 Variance of a sample (more commonly called "sample variance"): $\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2 = \frac{1}{n-1}\left((x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots + (x_{n-1} - \bar{x})^2 + (x_n - \bar{x})^2 \right)$
 
 Standard deviation of a sample (more commonly called sample standard deviation): $\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$
 
-<span style="color:purple">Q:</span> what are the units of measurement for variance and for standard deviation?  
+<span style="color:purple">Suppose the numeric data is measuring centimeters. What are the units of measurement for the variance? For standard deviation?</span>  
 
 
-<span style="color:purple">Example:</span> Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you more impressed by? 
+## Example 
+
+Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you more impressed by? 
 
 A statistician would answer this question by comparing how many standard deviations away from the mean Thiam's jump was vs how many standard deviations away from the mean was Johnson-Thompson's run. 
 
@@ -102,7 +113,7 @@ Standard deviation is called the "statistician's ruler" because it allows us to 
 
 
 
-# What is the Normal model? 
+# 4. What is the Normal model? 
 
 Normal/Gaussian model 
 
@@ -114,15 +125,29 @@ Normal/Gaussian model
 
 The first two conditions can be assessed visually by looking at a histogram of the data. The last condition can be assessed mathematically using what is called the **68/95/99.7 Rule**.
 
-[picture]
+![](./images/normal 68-95-997.png)
 
-The Normal model has two model parameters: $\mu$ the mean and $\sigma$ the standard deviation.
-
-
-[Example assessing 68/95/99.7 rule]
+The Normal model has two model parameters: $\mu$ the mean and $\sigma$ the standard deviation. These two parameters correspond directly to a measure of centrality and a measure of spread. (This isn't the case with all types of probability models.)
 
 
-# Standardizing data into z-scores
+## Example 
+
+```{r echo=FALSE}
+set.seed(101)
+data <- rt(n=18, 3)
+hist(data)
+```
+
+Let's check to see if the data plotted above could plausibly com from a Normal distribution: `r data`
+
+The mean of this data is `r mean(data)` and the standard deviation is `r sd(data)`.
+
+
+<span style="color:purple">What proportion of the data lies within one/two/three standard deviations of the mean?</span> 
+
+
+
+# 5. Re-expressing Data: Standardization 
 
 When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data set relative to their respective means and standard deviations by converting them into **z-scores**:
 

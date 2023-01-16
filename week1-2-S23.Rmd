@@ -41,10 +41,16 @@ Although exploratory statistical analyses are incredibly powerful in science and
 > `r tufte::quote_footer('-- Brene Brown')`
 
 
-For now, we will focus on visual ways to explore some different kinds of data. Next class we will discuss common ways to mathematically summarize information from an exploratory analysis. 
 
 
 # 1. How to explore numeric (or quantitative) data?  
+
+**Recall:** 
+
+Statistical stories are oriented around organized, observable forms of information... data! A data set consists of **rows** corresponding to the individual things being collected as "data points", i.e. the *observational units*. The other feature of a data set is the **columns** which correspond to the stuff that's being measured or counted, i.e. the *variables*. 
+
+Today, we're going to cover a few ways to conduct an exploratory data analysis when the data consist of one or two variables, numeric, or categorical, or one of each. 
+
 
 ## Histogram 
 
