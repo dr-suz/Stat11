@@ -298,23 +298,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -365,9 +359,15 @@ display: none;
 <div id="introduction-and-purpose" class="section level1">
 <h1>Introduction and Purpose</h1>
 <p>The data set you will analyse in this homework records information
-from different flights for an airline carrier named Envoy Air in the
-year 2013. The purpose of this assignment is to practice using software
-to investigate and describe a rather large data set consisting of <span class="math inline">\(19\)</span> variables and <span class="math inline">\(25,037\)</span> observations.</p>
+about different items on the menu at a local Burger King restaurant. One
+purpose of this assignment is to practice using software to explore and
+summarize qualities of these data consisting of <span class="math inline">\(122\)</span> observations and <span class="math inline">\(17\)</span> columns (the first column identifies
+the item name, the next <span class="math inline">\(16\)</span> columns
+are different variables). Another purpose of this assignment is to begin
+to practice working with data through software. Most of your time on
+this assignment will be spent getting your software set up and on
+learning how to do basic exploratory statistics with either Excel or
+RStudio.</p>
 </div>
 <div id="required-tech" class="section level1">
 <h1>Required Tech</h1>
@@ -403,16 +403,14 @@ Scatterplots (4:08)</p></li>
 </div>
 <div id="instructions" class="section level1">
 <h1>Instructions</h1>
-<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt">download
-the data set for HW 1</a> from our Stat 11 Github Data page. Do this by
+<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/Burger_King_items.csv">download
+the data set for HW 2</a> from our Stat 11 Github Data page. Do this by
 right clicking on the link “View Raw” and save the link with the name
-<code>EnvoyAir_flights.csv</code>. This may take a few moments as it is
-a large data set.</p>
+<code>Burger_King_items.csv</code>.</p>
 <p>If you are analyzing this data in RStudio, you will import the data
 with the following command</p>
-<pre class="r"><code>EnvoyAir_flights &lt;- 
-  read.csv(&quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt&quot;)</code></pre>
-<p>The data object is called <code>EnvoyAir_flights</code>.</p>
+<pre class="r"><code>Burger_King_items &lt;- read.csv(&quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv&quot;)</code></pre>
+<p>The data object is called <code>Burger_King_items</code>.</p>
 <p>Once you have access to the data set, complete all parts of the five
 problems in this assignment. You are encouraged to work with your
 classmates on this assignment but you must hand in your own, unique
@@ -425,48 +423,57 @@ link for Group Homework #1.</p>
 </div>
 <div id="problem-1" class="section level1">
 <h1>Problem 1</h1>
-<p>Answer the following questions about the data set called
-<code>EnvoyAir_flights</code>:</p>
-<ol style="list-style-type: decimal">
-<li><p>What constitutes an observational unit?</p></li>
-<li><p>What are the different variables being collected?</p></li>
-<li><p>Which of the variables are quantitative and which are
-categorical? Are there any that could be both?</p></li>
-<li><p>What kind of relationship would you expect (if any) between the
-variables <code>dep_delay</code> (departure delay) and
-<code>arr_delay</code> (arrival delay)?</p></li>
-</ol>
+<p>This is a three part question. For this data set, what constitutes an
+observational unit? What are the different variables being collected?
+Finally, which of the variables are quantitative and which are
+categorical and are there any variables that could be either/both?</p>
 </div>
 <div id="problem-2" class="section level1">
 <h1>Problem 2</h1>
-<p>Perform a one variable exploratory data analysis by providing of the
-variable <code>distance</code> by creating:</p>
-<ol style="list-style-type: decimal">
-<li><p>A labeled histogram (with a reasonable number of bins);</p></li>
-<li><p>A five-number summary of the minimum, maximum, lower 25%
-quantile, lower 75% quantile, and the mean.</p></li>
-</ol>
-<p>What story do these analyses tell about the variable
-<code>distance</code>?</p>
+<p>This is a three part question. Create a histogram for the variable
+<code>Sugar.g.</code> and determine if it looks like this sample could
+have been drawn from a Normal/Gaussian population. Then compute a five
+number summary of the amount of sugar in these items that includes the
+mean, median, minimum, maximum, lower 25% quantile, and lower 75%
+quantile. Which measure of location (mean or median) is a more
+appropriate and why?</p>
 </div>
 <div id="problem-3" class="section level1">
 <h1>Problem 3</h1>
-<p>Create a labeled bar/frequency chart for the variable
-<code>origin</code>. What story do these analyses tell about the
-variable <code>origin</code>?</p>
+<p>This is a three part question. Create a histogram for the variable
+<code>Sodium.mg.</code> and determine if it looks like this sample could
+have been drawn from a Normal/Gaussian population. Then, calculate the
+mean, standard deviation, and variance of the amount of sodium in each
+of the sampled items. How many standard deviations away from the mean
+sodium amount is the Sausage Egg &amp; Cheese Biscuit?</p>
 </div>
 <div id="problem-4" class="section level1">
 <h1>Problem 4</h1>
-<p>Generate a scatter plot of the variables <code>dep_delay</code>
-(departure delay) and <code>arr_delay</code> (arrival delay). What story
-does this scatter plot tell about any apparent relationship between
-these variables? Is this consistent with your answer from Problem 1?</p>
+<p>This is a three part question. What is the proportion (or percent) of
+menu items have more than the daily recommended intake of <span class="math inline">\(2300mg\)</span> of sodium? What is the proportion
+(or percent) of menu items that have between <span class="math inline">\(500mg\)</span> and <span class="math inline">\(1000mg\)</span> of sodium? Which item(s) on the
+menu is (are) at the lower <span class="math inline">\(20^{th}\)</span>
+percentile for the amount of sodium they contain?</p>
 </div>
 <div id="problem-5" class="section level1">
 <h1>Problem 5</h1>
-<p>Does the variable <code>air_time</code> look like it could be from a
-Normal (Gaussian) population? Provide a yes or no answer accompanied by
-a histogram and 1-2 sentences interpreting this histogram.</p>
+<p>Sometimes we may want to <strong>standardize</strong> a set of
+quantitative data. This process transforms the original data, <span class="math inline">\(x_i\)</span>, into a <em>unitless</em> variable,
+<span class="math inline">\(z_i\)</span>, and forces the mean of the
+standardized data to be zero and the standard deviation of the
+standardized data to be one using this formula: <span class="math display">\[z_i = \frac{x_i - \bar{x}}{sd(x)}, \quad
+\text{for }i =1,\dots,n.\]</span> For example, directly comparing sodium
+content to sugar content could be challenging as they are measured in
+different units (<span class="math inline">\(mg\)</span> and <span class="math inline">\(g\)</span>, respectively). If we standardize these
+variables then we get rid of the units for each of these variables and
+can compare the sodium and sugar content on the same (unitless) scale,
+centered at zero with standard deviation one. Sometimes these
+standardized values are called “z-scores”.</p>
+<p>This is a two part question. Suppose we decide to standardize the
+variable for sodium content. The Double Whopper contains 980mg of
+sodium. What is the standardized (unitless) amount of sodium in a Double
+Whopper? If the standardized sodium content of an item is -1.23, what
+was the sodium content in <span class="math inline">\(mg\)</span>?</p>
 </div>
 
 

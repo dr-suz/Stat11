@@ -298,23 +298,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -377,7 +371,16 @@ students who want a practical introduction to statistical methods.</p>
 <div id="textbook" class="section level2">
 <h2>Textbook</h2>
 <p>We will be using the 5th edition of <a href="https://www.pearson.com/en-us/subject-catalog/p/stats-data-and-models/P200000006160/9780136880790">Stats:
-Data and Models</a>.</p>
+Data and Models</a>.You are required to have access to Pearson’s MyLab.
+You can purchase an 18 week access package through the campus bookstore.
+The following details this package.</p>
+<p>STATS: DATA AND MODELS, LOOSE-LEAF EDITION PLUS MYLAB STATISTICS WITH
+PEARSON ETEXT – 18 WEEK ACCESS CARD PACKAGE</p>
+<p>ISBN: 9780135991206</p>
+<p>BY DE VEAUX, RICHARD D., VELLEMAN, PAUL F., AND BOCK, DAVID E.</p>
+<p>PUBLISHED BY PEARSON EDUCATION, Edition 5, PUBLICATION DATE: JUL. 31,
+2019</p>
+<p>LIST PRICE: $179.99</p>
 </div>
 <div id="other-required-course-items" class="section level2">
 <h2>Other Required Course Items</h2>
@@ -391,6 +394,28 @@ if off-campus). Alternatively you may download the software to run
 RStudio on your personal computer (this does not require internet access
 but can be a bit of a headache). To do so, first download the <a href="https://www.r-project.org/">base software R</a>. Then, once you
 have completed that installation of base R, you can download the <a href="https://www.rstudio.com/">RStudio user interface</a>.</p>
+</div>
+<div id="intro-to-r-workshop" class="section level2">
+<h2>Intro to R Workshop</h2>
+<p>A two-part workshop designed and led by our Stat clinicians will
+introduce students to R statistical computing. Although geared toward
+students enrolled in Stat 11 or Stat 21, anyone with an interest in
+learning R is welcome to attend. Each workshop will include instruction
+from 8-9 pm and an optional Q&amp;A time from 9-10 pm.</p>
+<div id="part-1" class="section level3">
+<h3>Part 1</h3>
+<ul>
+<li><p>Wednesday January 18 in SC 104</p></li>
+<li><p>Thursday January 19 in SC 104</p></li>
+</ul>
+</div>
+<div id="part-2" class="section level3">
+<h3>Part 2</h3>
+<ul>
+<li><p>Sunday January 22 in SC 105</p></li>
+<li><p>Tuesday January 24 in SC 105</p></li>
+</ul>
+</div>
 </div>
 </div>
 <div id="learning-objectives" class="section level1">
@@ -440,13 +465,14 @@ homework assignments.</p>
 </div>
 <div id="group-homework" class="section level3">
 <h3>Group Homework</h3>
-<p>Over the semester, you will be assigned <span class="math inline">\(5\)</span> longer homework problem sets that will
-each be graded for correctness. You are encouraged to work with one
-another one these homework assignments although each student must hand
-in their own copy of the solutions. We may occasionally use class time
-to work on some of these assignments. Your group homework grade will be
-the average of all <span class="math inline">\(5\)</span> assignments.
-No late group homework assignments will be accepted.</p>
+<p>Over the semester, you will be assigned <span class="math inline">\(5\)</span> data-analysis homework problem sets
+that will each be graded for correctness. You are encouraged to work
+with one another one these homework assignments although each student
+must hand in their own copy of the solutions. You may use either Excel
+or RStudio to analyze the data in these assignments. We may occasionally
+use class time to work on some of these assignments. Your group homework
+grade will be the average of all <span class="math inline">\(5\)</span>
+assignments. No late group homework assignments will be accepted.</p>
 </div>
 </div>
 <div id="assessment-items" class="section level2">
@@ -603,8 +629,78 @@ something from the discussion.</p>
 </div>
 <div id="stat-clinic-hours" class="section level2">
 <h2>Stat Clinic Hours</h2>
-<p><span style="color:red">Include blurb once Laura sends it out to
-us</span></p>
+<p>Stat 11 Clinics will be held on Sunday, Monday, and Tuesday nights in
+SC 105 from 7-10 pm and are exclusively for students enrolled in Stat
+11. These study sessions are a wonderful opportunity to study, do
+homework, meet and work with classmates, and ask questions about
+statistics. Because study sessions are drop-in, you are welcome to come
+and go as you please. Please write your name and course in the sign-in
+binder and the time you enter and leave the clinic so the Math/Stat
+Department has a record of your attendance. To make the most of your
+time at study sessions, be sure to first try problems on your own, or
+bring questions you have from your text or lecture. Having your
+textbook, lecture notes and online resources handy is essential because
+these are helpful resources for both you and the Clinician working with
+you. There will likely be other students at study sessions with
+questions for the Clinicians, so do not expect to get individual
+attention the entire time you are there. Be open to working on other
+problems, thinking about and trying to work through the question you
+have for the Clinicians, working with classmates, or doing other
+coursework while you wait to speak with the Clinician.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Stat 11 Clinic</th>
+<th>SC 105 from 7-10pm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Su</td>
+<td>Anne French and Felicia Yi</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>Quinn Basewitz and Joyce Ben</td>
+</tr>
+<tr class="odd">
+<td>Tu</td>
+<td>Lizbeth Zarate-Hernandez and Leia Donoway</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to the course specific Clinics for Stat 11, you are
+welcome to attend the general Stat Clinic nights 7-10 pm on Sunday,
+Wednesday, and Thursday nights in SC 104. Utilizing the general Stat
+Clinic is similar to making use of Stat 11 Clinic, but there may be
+students from different courses in attendance as well. For questions
+about the Stat 11 Clinic and the general Stat Clinic please visit <a href="https://www.swarthmore.edu/mathematics-statistics/math-and-stat-clinic-study-sessions" class="uri">https://www.swarthmore.edu/mathematics-statistics/math-and-stat-clinic-study-sessions</a>
+or contact Laura Dandridge <a href="mailto:ldandri1@swarthmore.edu" class="email">ldandri1@swarthmore.edu</a>, Academic Support Coordinator
+for the Math/Stat Department. Laura also has office hours to directly
+support students working on Stat 11 material, and you may sign up for an
+appointment on WASE.</p>
+<table>
+<thead>
+<tr class="header">
+<th>General Stat Clinic</th>
+<th>SC 104 from 7-10pm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Atesh</td>
+<td>Stat 11, 21, 51</td>
+</tr>
+<tr class="even">
+<td>Alex</td>
+<td>Stat 11, 23, 51, Math 39</td>
+</tr>
+<tr class="odd">
+<td>Ella</td>
+<td>Stat 11, 21, 51, 111</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="accommodations" class="section level2">
 <h2>Accommodations</h2>

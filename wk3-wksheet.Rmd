@@ -1,0 +1,68 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: "Week 3: Fitting a Linear Regression Model"
+output:
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** Wildlife researchers are monitoring a Florida alligator population by taking areal photographs and attempting to estimate the weights of the gators based on the length of the gators in the images. The data set `Gators.csv` contains the variables `Length` and `Weight` for a sample of alligators who have been captured and studied. This data is shown in the scatterplot below. Import the `Gators` data set into either Excel or RStudio and then answer the following questions. 
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+```{r echo=FALSE, verbose=FALSE}
+
+gators <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Gators.csv")
+
+ggplot(gators, aes(x=Weight.lbs., y=Length.in.)) +
+  geom_point() + 
+  labs(title = "Weight and Length of Captured Alligators") +
+  xlab("Weight (lbs)") + ylab("Length (in)")
+
+#lm(Weight.lbs.~Length.in., gators)$residuals %>% abs() %>% max
+```
+<br>
+
+# 1. Choose which variable should be the response and justify this choice in 1-2 sentences.  
+
+<br>
+<br>
+<br>
+<br>
+
+# 2. What are the slope and intercept of the line of best fit through this data? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 3.  Does the linear model seem to be a good fit for this data? If so, describe why. If not, what could be done to make a linear model more appropriate? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 4. The largest residual has a value of 165.62 Explain the meaning of this value in 1-2 sentences. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 5. If you were a wildlife researcher who needed to know the different weights of alligators, would you decide to use this method? Give a statistically informed justification of your answer.  
+
+<br>
+<br>
+<br>
+<br>
