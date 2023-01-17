@@ -72,7 +72,7 @@ Upon successful completion of the course, students are expected to be able to:
 
 ## Class Meetings 
 
-There are three course meetings per week and attendance is mandatory. Course meetings will combine: statistical knowledge and applied examples, applications using R, and in-class exercises/discussions. To be best prepared for class please bring with you a laptop and a note-taking device. Please don’t be a distraction to those around you. If you do not have access to a laptop, tell your professor who can arrange for you to borrow one. The textbook is meant to serve as an accompaniment to your in-class notes and you are expected to prepare for class by reading the assigned chapters. 
+There are three course meetings per week and attendance is mandatory. Class meetings will be held in the Science Center room 105. Course meetings will combine: statistical knowledge and applied examples, applications using R, and in-class exercises/discussions. To be best prepared for class please bring with you a laptop and a note-taking device. Please don’t be a distraction to those around you. If you do not have access to a laptop, tell your professor who can arrange for you to borrow one. The textbook is meant to serve as an accompaniment to your in-class notes and you are expected to prepare for class by reading the assigned chapters. 
 
 
 ## Practice Items 

@@ -42,14 +42,15 @@ For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that corr
 
 * Median: 50\% of the data is larger and 50\% of the data is smaller than this value 
 
+<span style="color:purple">Suppose the numeric data is measuring centimeters. What are the units of measurement for the mean? For the median? For the mode?</span>  
 
 ## When to use which? 
 
 For data that is 
 
-- unimodal <span style="color:purple">exactly one peak</span>
+- unimodal <span style="color:green">(exactly one peak)</span>
 
-- symmetric about the mode <span style="color:purple">mirrored at the mode</span>
+- symmetric about the mode <span style="color:green">(mirrored at the mode)</span>
 
 the mode, the mean, and the median are all the same value! 
 
@@ -121,7 +122,7 @@ Normal/Gaussian model
 
 - symmetric about the mode 
 
-- not too spread out from the mode <span style="color:purple">almost no data points lie really far away from the mode</span>
+- not too spread out from the mode <span style="color:green">(almost no data points lie really far away from the mode)</span>
 
 The first two conditions can be assessed visually by looking at a histogram of the data. The last condition can be assessed mathematically using what is called the **68/95/99.7 Rule**.
 
@@ -158,11 +159,11 @@ Shift the data point according to the value of the mean of the data, then scale 
 
 $$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}$$ 
 
-<span style="color:purple">Q:</span> what are the units of measurement for standardized numeric data points?  
+<span style="color:purple">What are the units of measurement for standardized numeric data points?</span> 
 
 If the data appears to follow a Normal/Gaussian model, then the standardized version of the data follows what is called a **Standard Normal/Gaussian Model**. 
 
-<span style="color:purple">Q:</span> Does a shift up or down affect the spread of the data? Does a scale affect the spread? 
+<span style="color:purple"Does a shift up or down affect the spread of the data? Does a scale affect the spread?</span>  
 
 Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. Now it is much easier to answer questions like "which groups performance was more impressive, the runners or the long jumpers?" because both sets of data are measured on the same scale. 
 

@@ -14,17 +14,27 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">example text</span>
 
 
 
 # 1. Data Introduction 
 
+Wildlife researchers are monitoring a Florida alligator population by taking areal photographs and attempting to estimate the weights of the gators based on the length of the gators in the images. The data set `Gators.csv` contains the variables `Length` and `Weight` for a sample of alligators who have been captured and studied.  
+
+![](./images/gators.png)
+
 
 # 2. Analysis Goal  
 
+We are going to design a simple linear regression model and then assess the model fit and interpretation. 
 
-# 3. Report and Summarize 
+
+
+# 3. Summary of Results 
+
+* It's important to consider the roles of the explanatory variable and the response variable. 
+
+* Just because R (or Excel) fits a line and gives us a slope and intercept doesn't mean that the model is appropriate or information. 
 
 
 

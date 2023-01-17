@@ -19,7 +19,7 @@ header-includes:
 
 Math world (RV as a model) vs real world (observable sample data)
 
-# What is a distribution? 
+# What is a (probability) distribution? 
 
 Possibilities and Probabilities 
 
@@ -37,6 +37,17 @@ For now, going to focus on numeric variables.
 
 
 # Comparing Distributions of Numeric Variables 
+
+
+For data that is not unimodal but is symmetric...
+
+![*It is useful to know how many modes occur and where they are located.*](./images/bimodal symmetric.png)
+
+For data that is not unimodal and not symmetric... 
+
+![*Histograms are indespensible because numerical summaries can be misleading by themselves.*](./images/neither symmetric nor unimodal.png)
+
+
 
 Five number summary 
 
