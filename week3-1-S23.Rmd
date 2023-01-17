@@ -14,7 +14,9 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">example text</span>
+<span style="color:purple">answer</span>
+<span style="color:blue">rhetorical</span>
+<span style="color:green">definition</span>
 
 
 Association
