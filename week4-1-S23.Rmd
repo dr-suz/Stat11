@@ -22,9 +22,9 @@ ch 10
 
 # Main Ideas 
 
-# Populations and Their Parameters 
+# 1. Populations and Their Parameters 
 
-# The elusive Simple Random Samples 
+# 2. The elusive Simple Random Samples 
 
-# Practical Sampling Designs 
+# 3. Practical Sampling Designs 
 

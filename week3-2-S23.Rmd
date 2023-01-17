@@ -19,7 +19,7 @@ header-includes:
 <span style="color:green">definition</span>
 
 
-# Line of best fit 
+# 1. Line of best fit 
 
 least squares model coefficients 
 
@@ -28,13 +28,13 @@ slope will change from one sample to the next; changes in one unit of $x$ associ
 
 $$\hat{y} = b_0 + b_1 x$$ 
 
-# Regression to the mean 
+## Regression to the mean 
 
 b/c correlation is between -1 and 1, each predicted response tends to be closer (in standard deviations) to the mean of $y$ than the corresponding value of the explanatory variable was from $\bar{x}$ 
 
 can occur when two variables measure similar, correlated things (?) 
 
-# Assessing the model residuals 
+## Assessing the model residuals 
 
 $$\text{Residual} = e = y - \hat{y} = \text{observed value} - \text{predicted value}$$
 
@@ -44,7 +44,12 @@ $$s_e = \frac{\sum e^2 }{n-1}$$
 Normal model (and 68-95-99.7 rule) applies when assumptions are reasonable
 
 
-# Correlation coefficient 
+# 2. Informative coefficients 
+
+
+## Slope 
+
+## Correlation coefficient 
 
 is the number of std devs by which one variable is expected to change for a one standard deviation change in the other 
 
@@ -52,7 +57,7 @@ is unitless
 
 will change from one sample to the next 
 
-# Coefficient of determination 
+## Coefficient of determination 
 
 is the square of the correlation coefficient 
 
@@ -60,7 +65,7 @@ is the fraction/proportion of the variation/variability in $y$ accounted for by 
 
 reflects the successfullness of the model at relating $y$ to $x$ (goodness of fit measure)
 
-# Assumptions 
+# 3. Assumptions for a linear model
 
 - linear enough 
 

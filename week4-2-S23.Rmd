@@ -20,14 +20,14 @@ header-includes:
 
 ch 11 
 
-# Observational studies 
+# 1. Observational studies 
 
-# Randomized, Comparative Experiments 
+# 2. Randomized, Comparative Experiments 
 
-# Four principles of experimental design 
+## Four principles of experimental design 
 
-## Control groups 
+### Control groups 
 
-## Blocking 
+### Blocking 
 
-## Confounding 
+### Confounding 

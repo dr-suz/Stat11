@@ -27,16 +27,16 @@ Association
 
 - Strength 
 
-# Time plots 
+# 1. Time plots 
 
 
-# Scatterplots 
+# 2. Scatterplots 
 
 
 ## Correlation 
 
 
-# Transforming/Re-expressing data
+# 3. Transforming/Re-expressing data
 
 in addition to shifts and scales... 
 
