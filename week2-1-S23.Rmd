@@ -26,13 +26,14 @@ For the next couple of weeks we are going to focus specifically on exploring num
 
 ## The structure of numeric data
 
-For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand the data is to create a histogram with a reasonable number of bins. The next best way to understand the data is to consider numerical summaries of the data (i.e. sample statistics) that describe the **center** and the **spread** of the data values.
+For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that correspond to the same variable but different observational units, the best way to understand numerical data is to create a histogram with a reasonable number of bins. The next best way to understand numerical data is to consider numerical summaries of the data (i.e. **sample statistics**) that describe the **center** and the **spread** of the data values.
 
 ## Examples
 
 <span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
 
 <span style="color:purple">Example 2:</span> The length of Olympic long jumps in meters. 
+
 
 # 1. Numerical measures of centrality 
 
@@ -106,9 +107,11 @@ Standard deviation of a sample (more commonly called sample standard deviation):
 
 ## Example 
 
-Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you more impressed by? 
+![](./images/Thaim_long_jump.png){width=300px}![](./images/johnson-thompson_race.png){width=200px}
 
-A statistician would answer this question by comparing how many standard deviations away from the mean Thiam's jump was vs how many standard deviations away from the mean was Johnson-Thompson's run. 
+Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you most impressed by? 
+
+A statistician would answer this question by comparing how many standard deviations away from the mean Thiam's jump distance was vs how many standard deviations away from the mean  Johnson-Thompson's run time was. 
 
 Standard deviation is called the "statistician's ruler" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
 
@@ -128,20 +131,21 @@ The first two conditions can be assessed visually by looking at a histogram of t
 
 ![](./images/normal 68-95-997.png)
 
-The Normal model has two model parameters: $\mu$ the mean and $\sigma$ the standard deviation. These two parameters correspond directly to a measure of centrality and a measure of spread. (This isn't the case with all types of probability models.)
+The Normal model has two model parameters: $\mu$, the mean, and $\sigma$, the standard deviation. These two parameters correspond directly to a measure of centrality and a measure of spread. (This isn't the case with other probability models and their model parameters.)
 
 
 ## Example 
 
+Let's check to see if the data plotted in the histogram and stemplots below could plausibly com from a Normal distribution.
+
 ```{r echo=FALSE}
 set.seed(101)
 data <- rt(n=18, 3)
-hist(data)
+hist(data, xlab="Example Data")
+stem(data)
 ```
 
-Let's check to see if the data plotted above could plausibly com from a Normal distribution: `r data`
-
-The mean of this data is `r mean(data)` and the standard deviation is `r sd(data)`.
+The mean of this data is `r round(mean(data),2)` and the standard deviation is `r round(sd(data),2)`.
 
 
 <span style="color:purple">What proportion of the data lies within one/two/three standard deviations of the mean?</span> 
@@ -163,7 +167,13 @@ $$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}$$
 
 If the data appears to follow a Normal/Gaussian model, then the standardized version of the data follows what is called a **Standard Normal/Gaussian Model**. 
 
-<span style="color:purple"Does a shift up or down affect the spread of the data? Does a scale affect the spread?</span>  
+<span style="color:purple">Does a shift up or down affect the spread of the data? Does a scale affect the spread?</span>  
 
-Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. Now it is much easier to answer questions like "which groups performance was more impressive, the runners or the long jumpers?" because both sets of data are measured on the same scale. 
+Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_1+ \dots + z_n) = 0$ and $st.dev.(z_1, z_2, \dots, z_n) = 1$. 
+
+## Example
+
+If we standardize the race time for all Olympic $200 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the jump distance for all Olympic long jumpers and make this distance unitless. 
+
+The magnitude and order still are meaningful but now it is much easier to answer questions like "whose performance was more impressive, Thiam or Johnson-Thompson?" because both sets of data are measured on the same (unitless) scale. 
 

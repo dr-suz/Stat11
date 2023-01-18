@@ -62,10 +62,12 @@ set.seed(101)
 
 library(tidyverse)
 
-samp <- rt(70, 4)
-hist(samp, breaks=30, main="Sample of size n=70", xlab="Numeric Data", ylab="Frequency", xlim=c(-4,4))
+samp <- rt(70, 2.2)
 
-hist(samp, breaks=10, main="Sample of size n=70", xlab="Numeric Data", ylab="Frequency", xlim=c(-4,4))
+hist(samp, breaks=5, main="Sample of size n=70", xlab="Numeric Data", ylab="Frequency") #, xlim=c(-4,4))
+
+hist(samp, breaks=30, main="Sample of size n=70", xlab="Numeric Data", ylab="Frequency") #, xlim=c(-4,4))
+
 ```
 
 <span style="color:blue">What kind of story can you tell about this data from the histograms above?</span>
@@ -161,7 +163,7 @@ pie(table(cur_sec))
 
 ![](./images/wk1-scatter.png)^[Source: https://www.vulture.com/2012/08/meryl-streep-matrix.html]
 
-<span style="color:blue">How could we incorporate a third categorical variable?</span>
+<span style="color:blue">How could we incorporate a third categorical variable for, say, lead or supporting role?</span>
 
 
  
