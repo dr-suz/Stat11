@@ -104,7 +104,7 @@ For example...
 
 
 
-<span style="color:blue">What is a question you would like to answer with statistics? Is it exploratory or confirmatory?</span>
+<span style="color:purple">What is a question you would like to answer with statistics? Is it exploratory or confirmatory?</span>
 
 
 
