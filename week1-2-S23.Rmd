@@ -125,7 +125,7 @@ t1 = 5; t2 = 1
 fo1 =  2; fo2 = 0
 sec1 <- c(rep("First", fi1), rep("Second", s1), rep("Third", t1), rep("Fourth (or more)", fo1))
 sec2 <- c(rep("First", fi2), rep("Second", s2), rep("Third", t2), rep("Fourth (or more)", fo2))
-cur_sec <- sec1
+cur_sec <- sec2
 ```
 
 ## Tables of Counts or Proportions 
