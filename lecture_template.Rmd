@@ -1,0 +1,28 @@
+---
+title: "Stat 11 Week X"
+subtitle: "Topics Covered" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+<span style="color:purple">answer</span>
+<span style="color:blue">rhetorical</span>
+<span style="color:green">definition</span>
+
+
+# 1. 
+
+
+# 2. 
+
+
+# 3. 
