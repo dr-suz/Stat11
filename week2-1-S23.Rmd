@@ -20,7 +20,7 @@ header-includes:
 
 Last week we discussed the structure of statistical data and the kinds of questions we can answer from a statistical analysis. 
 
-Data consists of observational units (rows) and variables (columns). We covered a few ways to conduct an exploratory data analysis for numeric and/or categorical variables. 
+Data consists of observational units (rows) and variables (columns). We covered a few ways to conduct an exploratory data analysis for numeric and/or categorical variables. Here you can find [a couple of examples of what data might look like](https://docs.google.com/spreadsheets/d/1N_gAm3cUKGUSRWOw15zwtQa-eLLw0-OsNsBxdp-s16k/edit?usp=sharing) if we want to conduct a confirmatory analysis of the claim that Swarthmore grads have a higher acceptance rate for grad school compared to other schools. 
 
 For the next couple of weeks we are going to focus specifically on exploring numeric data. 
 
