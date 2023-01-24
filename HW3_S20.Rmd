@@ -1,0 +1,75 @@
+---
+title: "Homework 3"
+author: "STAT011-S20"
+date: 'Due: 2/14/2020'
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE, message=FALSE)
+library("tidyverse")
+```
+
+<center>This assignment is due on __Friday__ the 14th by __6:00pm__. You must submit your completed assignment as a single __PDF__ document uploaded on Moodle. You can use LateX, R markdown, Word, and/or handwritten notes to write out your solutions. For any questions that involve coding in R, you must provide __both__ the code and the requested output. (You can copy and paste code from an R script file into a Word document for example.) Please make sure each problem is __clearly labeled__ and that any handwritten components are easily readable. You are allowed to work with your classmates on this homework assignment but you must disclose the names of anyone you collaborate with at the top of your solutions. Each homework assignment is worth 20 points.</center>
+
+Also, please make sure that your full name is at the top of the first page of your pdf document. This makes grading much easier. 
+
+***
+
+## Categorical, quantitative, and mixed variable EDA  
+
+Install the package called "vcd" in your version of R. For problems 1-3, you will be answering questions related to the arthritis treatment data set contained in this package. In particular, we are considering a data set consisting of 84 patients who either recieved a drug or a placebo and who rated the level of improvement in their symptoms. The drug or placebo label is the first categorical variable of interest, and the level of improvement in symptoms (none, some, or marked) is the second categorical variable of interest. 
+
+Run the following lines of code to view the documentation on this data set and to create a frequency table for the 84 patients in this study:
+```{r, eval=FALSE}
+library("tidyverse")
+library("vcd")
+
+?Arthritis 
+arthritis_table <- table(Arthritis[,c(2,5)])
+arthritis_table
+```
+
+You must generate (and display) appropriate proportion tables to answer the next two questions. 
+
+
+### Problem 1 
+
+What proportion of the patients recieved a placebo and had marked improvement?
+
+
+### Problem 2 
+
+Of all the patients who recieved a placebo, what proportion of them saw 
+
+  (a) no improvement;
+
+  (b) some improvement;
+  
+  (d) marked improvement? 
+ 
+
+### Problem 3
+
+Explain in words the meaning of the two values in the third column of this table:
+```{r, eval=FALSE}
+prop.table(arthritis_table, 2)
+```
+
+
+## Bias and experimental design  
+
+### Problem 4
+
+Name and describe the kind of bias that might be present if administrators decide that instead of subjecting people to random drug testing they’ll just
+
+a) hold hospital-wide meetings and drug test the employees that attend; or instead
+
+b) offer additional employee discounts for those employees who agree to be drug tested.
+
+
+### Problem 5
+
+Researchers believe that a new drug called AX319 will help bones heal after children have broken or fractured a bone. The researchers believe that AX319 will work differently on bone breaks than on bone fractures. AX319 will be used in conjunction with traditional casts. To test the impact of AX319 on bone healing, the researchers recruit 18 children with bone breaks and 30 children with bone fractures. Design an appropriate experiment to determine if AX319 will help bones heal.
+
