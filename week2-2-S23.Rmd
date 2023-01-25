@@ -43,6 +43,7 @@ However, there are about a dozen common probability distributions that a frequen
 The Uniform$(a,b)$ distribution evenly divides the range of the possible values of numbers from $a$ to $b$ so that any number (even infinite decimals) have an equal chance of occurring. The density plot is show below. 
 
 ```{r echo=FALSE, message=FALSE}
+library("tidyverse")
 set.seed(101)
 unif_dat <- runif(4000, -2, 4)
 plot(density(unif_dat, bw=.6), main="Uniform Density", xlab = " ")
@@ -100,14 +101,13 @@ But, if there are over a dozen or so samples of data, comparing histograms is pr
 Another notable descriptive feature of a distribution are its **quantiles** and **percentiles**, although this is just a somewhat fancier way of saying its possibilities (quantiles) and probabilities (percentiles)! The five number summary of a distribution is actually a list of the five quantiles that corresponding to $0\%$, $25\%$, $50\%$, $75\%$, and $100\%$ percentiles (often called **quar**tiles since they break the data values into fourths). 
 
 
-## Standard Normal distribution
 
-![draw pic](./images/std_norm_plot.png)
-
-```{r echo=FALSE, eval=FALSE, message=FALSE}
+```{r echo=FALSE,message=FALSE}
 library(tidyverse)
 norm_dat <- data.frame(std_norm = rnorm(1e6), non_std = rnorm(1e6, -75, 3.3))
+```
 
+```{r eval=FALSE, echo=FALSE}
 ggplot(data=norm_dat,aes(x=std_norm)) +
   geom_histogram(aes(y=..density..),colour =1, fill="white") + 
   geom_density(col="blue") + 
@@ -125,7 +125,7 @@ ggplot(data=norm_dat,aes(x=non_std)) +
 
 ## General Normal distribution
 
-![draw pic](./images/non_std_norm_plot.png)
+![](./images/week2_quantiles.png)
 
 
 # 4. Re-expressing (transforming) data 
