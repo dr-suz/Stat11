@@ -1,10 +1,10 @@
 ---
 title: "Group Homework 1"
 author: "STAT011-S23"
-date: 'Due: 2/3/23'
+date: 'Due: 2/6/23'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 

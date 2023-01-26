@@ -12,7 +12,7 @@
 <meta name="author" content="STAT011-S23" />
 
 
-<title>Group Homework 1</title>
+<title>Group Homework 3</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -355,25 +355,31 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Group Homework 1</h1>
+<h1 class="title toc-ignore">Group Homework 3</h1>
 <h4 class="author">STAT011-S23</h4>
-<h4 class="date">Due: 2/6/23</h4>
+<h4 class="date">Due: 3/5/23</h4>
 
 </div>
 
 
 <div id="introduction-and-purpose" class="section level1">
 <h1>Introduction and Purpose</h1>
-<p>The data set you will analyse in this homework records information
-about different items on the menu at a local Burger King restaurant. One
-purpose of this assignment is to practice using software to explore and
-summarize qualities of these data consisting of <span class="math inline">\(122\)</span> observations and <span class="math inline">\(17\)</span> columns (the first column identifies
-the item name, the next <span class="math inline">\(16\)</span> columns
-are different variables). Another purpose of this assignment is to begin
-to practice working with data through software. Most of your time on
-this assignment will be spent getting your software set up and on
-learning how to do basic exploratory statistics with either Excel or
-RStudio.</p>
+<p>You will analyze two data sets in this homework assignment. The first
+data set contains information about a clinical trial testing treatment
+for arthritis. This data set consists of <span class="math inline">\(84\)</span> patients who either received a drug or
+a placebo and who rated the level of improvement in their arthritis
+symptoms. The drug or placebo label is the first categorical variable of
+interest, and the level of improvement in symptoms (none, some, or
+marked) is the second categorical variable of interest. This data set is
+referenced in Problems 1 – 3.</p>
+<p>The second data set you will analyze for Problem 4 is the data you
+saw in the second week of class on the survival of different class
+passengers aboard the ship Titanic. This data consists of <span class="math inline">\(2201\)</span> passengers who either survived the
+wreck or died and their status as a passenger in first, second, or third
+class, or as a crew member of the ship.</p>
+<p>Problem 5 requires no data analysis.</p>
+<p>The purpose of this assignment is to practice exploring categorical
+data, designing an experiment, and the laws of probability.</p>
 </div>
 <div id="required-tech" class="section level1">
 <h1>Required Tech</h1>
@@ -389,6 +395,10 @@ with Data Analysis Toolpak: Common Procedures (3:08)</p></li>
 <li><p>Excel 2016 with Data Analysis Toolpak Descriptive Statistics and
 Confidence Intervals for a Mean (2:57)</p></li>
 <li><p>Excel 2016 with Data Analysis Toolpak Histogram (3:08)</p></li>
+<li><p>Excel 2016 with XLSTAT Video - Frequency Tables, Contingency
+Tables, Chi-square Test of Independence and Homogeneity (2:42)</p></li>
+<li><p>Excel 2010 with XLSTAT Video - Finding the Area Under the Normal
+Curve and Inverse Normality (4:04)</p></li>
 </ul>
 </div>
 <div id="rstudio" class="section level2">
@@ -404,21 +414,30 @@ covered in the following seven videos:</p>
 <li><p>R Studio Video Descriptive Statistics (3:33)</p></li>
 <li><p>R Studio Video Plotting - Histograms, Bar Charts, Boxplots,
 Scatterplots (4:08)</p></li>
+<li><p>RStudio Video Probability Distributions (4:39)</p></li>
 </ul>
 </div>
 </div>
 <div id="instructions" class="section level1">
 <h1>Instructions</h1>
-<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/Burger_King_items.csv">download
-the data set for HW 2</a> from our Stat 11 Github Data page. Do this by
-right clicking on the link “View Raw” and save the link with the name
-<code>Burger_King_items.csv</code>.</p>
+<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/arthritis.csv">download
+the arthritis data set for HW 3</a> and <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/titanic.csv">download
+the Titanic data set for HW 3</a> from our Stat 11 Github Data page. Do
+this by right clicking on the link “View Raw”. Save each link with the
+names <code>arthritis.csv</code> and <code>titanic.csv</code>,
+respectively.</p>
 <p>If you are analyzing this data in RStudio, you will import the data
-with the following command</p>
-<pre class="r"><code>Burger_King_items &lt;- read.csv(
-    &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv&quot;)</code></pre>
-<p>The data object is called <code>Burger_King_items</code>.</p>
-<p>Once you have access to the data set, complete all parts of the five
+with the following commands</p>
+<pre class="r"><code>arthritis &lt;- read.delim(
+        &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/arthritis.csv&quot;,
+        sep=&quot;,&quot;)
+
+titanic &lt;- read.delim(
+        &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/titanic.csv&quot;,
+        sep=&quot;,&quot;)</code></pre>
+<p>The first data object is called <code>arthritis</code> and the second
+data object is called <code>titanic</code>.</p>
+<p>Once you have access to the data set, complete all parts of the XX
 problems in this assignment. You are encouraged to work with your
 classmates on this assignment but you must hand in your own, unique
 write up of the solutions. In a Word document, clearly label each
@@ -426,61 +445,104 @@ problem’s solution. Most solutions will include graphics which can be
 copied from Excel or RStudio and pasted into your solution document. All
 solutions require a written component. When you are ready to submit your
 assignment, save the Word document as a PDF and upload it to the Moodle
-link for Group Homework #1.</p>
+link for Group Homework #3.</p>
 </div>
 <div id="problem-1" class="section level1">
 <h1>Problem 1</h1>
-<p>This is a three part question. For this data set, what constitutes an
-observational unit? What are the different variables being collected?
-Finally, which of the variables are quantitative and which are
-categorical and are there any variables that could be either/both?</p>
+<p>Create a proportions table for the <span class="math inline">\(84\)</span> patients in this study and use it to
+answer the next two questions.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What proportion of the patients received a placebo and had marked
+improvement?</p></li>
+<li><p>Of all the patients who received a placebo, what proportion of
+them saw</p>
+<p>(b.1) no improvement?</p>
+<p>(b.2) some improvement?</p>
+<p>(b.3) marked improvement?</p></li>
+</ol>
 </div>
 <div id="problem-2" class="section level1">
 <h1>Problem 2</h1>
-<p>This is a three part question. Create a histogram for the variable
-<code>Sugar.g.</code> and determine if it looks like this sample could
-have been drawn from a Normal/Gaussian population. Then compute a five
-number summary of the amount of sugar in these items that includes the
-mean, median, minimum, maximum, lower 25% quantile, and lower 75%
-quantile. Which measure of location (mean or median) is a more
-appropriate and why?</p>
+<p>Name and describe the kind of bias that might be present if
+administrators decide that instead of subjecting people to random drug
+testing they’ll just</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>hold hospital-wide meetings and drug test the employees that
+attend; or instead</p></li>
+<li><p>offer additional employee discounts for those employees who agree
+to be drug tested.</p></li>
+</ol>
 </div>
 <div id="problem-3" class="section level1">
 <h1>Problem 3</h1>
-<p>This is a three part question. Create a histogram for the variable
-<code>Sodium.mg.</code> and determine if it looks like this sample could
-have been drawn from a Normal/Gaussian population. Then, calculate the
-mean, standard deviation, and variance of the amount of sodium in each
-of the sampled items. How many standard deviations away from the mean
-sodium amount is the Sausage Egg &amp; Cheese Biscuit?</p>
+<p>Researchers believe that a new drug called AX319 will help bones heal
+after children have broken or fractured a bone. The researchers believe
+that AX319 will work differently on bone breaks than on bone fractures.
+AX319 will be used in conjunction with traditional casts. To test the
+impact of AX319 on bone healing, the researchers recruit 18 children
+with bone breaks and 30 children with bone fractures.</p>
+<p>Describe the design of an appropriate experiment to determine if
+AX319 will help bones heal.</p>
+<hr />
 </div>
 <div id="problem-4" class="section level1">
 <h1>Problem 4</h1>
-<p>This is a three part question. What is the proportion (or percent) of
-menu items have more than the daily recommended intake of <span class="math inline">\(2300mg\)</span> of sodium? What is the proportion
-(or percent) of menu items that have between <span class="math inline">\(500mg\)</span> and <span class="math inline">\(1000mg\)</span> of sodium? Which item(s) on the
-menu is (are) at the lower <span class="math inline">\(20^{th}\)</span>
-percentile for the amount of sodium they contain?</p>
+<p>Create a contingency table (of counts) for the Titanic data. Then
+answer the following questions about this data.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What is the probability that a crew member survived the
+wreck?</p></li>
+<li><p>What is the probability that someone aboard survived the wreck,
+given that they were a third class passenger?</p></li>
+<li><p>What is the probability that someone aboard was a third class
+passenger?</p></li>
+<li><p>Does it appear that class status and survival are independent
+variables? Why/why not?</p></li>
+</ol>
+<hr />
 </div>
 <div id="problem-5" class="section level1">
 <h1>Problem 5</h1>
-<p>Sometimes we may want to <strong>standardize</strong> a set of
-quantitative data. This process transforms the original data, <span class="math inline">\(x_i\)</span>, into a <em>unitless</em> variable,
-<span class="math inline">\(z_i\)</span>, and forces the mean of the
-standardized data to be zero and the standard deviation of the
-standardized data to be one using this formula: <span class="math display">\[z_i = \frac{x_i - \bar{x}}{sd(x)}, \quad
-\text{for }i =1,\dots,n.\]</span> For example, directly comparing sodium
-content to sugar content could be challenging as they are measured in
-different units (<span class="math inline">\(mg\)</span> and <span class="math inline">\(g\)</span>, respectively). If we standardize these
-variables then we get rid of the units for each of these variables and
-can compare the sodium and sugar content on the same (unitless) scale,
-centered at zero with standard deviation one. Sometimes these
-standardized values are called “z-scores”.</p>
-<p>This is a two part question. Suppose we decide to standardize the
-variable for sodium content. The Double Whopper contains 980mg of
-sodium. What is the standardized (unitless) amount of sodium in a Double
-Whopper? If the standardized sodium content of an item is -1.23, what
-was the sodium content in <span class="math inline">\(mg\)</span>?</p>
+<p>Answer all parts to the following three questions. Show your work
+and/or justify your reasoning in addition to providing an answer.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The American Red Cross says that about <span class="math inline">\(45\%\)</span> of the U.S. population has Type O
+blood, <span class="math inline">\(40\%\)</span> Type A, <span class="math inline">\(11\%\)</span> Type B, and the rest Type AB.
+Someone volunteers to give blood. Calculate the probability that this
+donor (a.1) has Type AB blood, (a.2) has Type A or Type B blood, and
+(a.3) does not have Type O blood.</p></li>
+<li><p>Suppose IQ scores tend to follow a <span class="math inline">\(N(100, 16)\)</span> distribution. What is the
+percent of people that you would expect to have an IQ between 112 and
+132? (Hint: Draw a picture of the Normal curve and shade the region of
+interest. Note, RStudio software can compute this percentage for you
+exactly with a quantile function. If you’re using Excel, you may wish to
+use a <a href="https://www.z-table.com/">Z-table</a> instead of
+R.)</p></li>
+<li><p>Consider the made-up probability distribution for a (discrete)
+random variable X shown in the table below.</p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th align="left">X</th>
+<th align="left">0</th>
+<th align="left">1</th>
+<th align="left">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>P(X=x)</strong></td>
+<td align="left"><strong>0.2</strong></td>
+<td align="left"><strong>0.4</strong></td>
+<td align="left"><strong>0.4</strong></td>
+</tr>
+</tbody>
+</table>
+<p>(c.1) Find the mean and standard deviation of this distribution and
+(c.2) Suppose another random variable <span class="math inline">\(Y\)</span> is found by <span class="math inline">\(Y = 3X - 2\)</span>. Use the rules for means (or
+expectations) and variances to find the mean and standard deviation of
+<span class="math inline">\(Y\)</span>.</p>
 </div>
 
 
