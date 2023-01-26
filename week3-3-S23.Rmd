@@ -26,7 +26,7 @@ Wildlife researchers are monitoring a Florida alligator population by taking are
 
 # 2. Analysis Goal  
 
-We are going to design a simple linear regression model and then assess the model fit and interpretation. 
+We are going to design a simple linear regression model and then assess the model fit and interpretation. Click this link to the [worksheet for this gator data analysis problem](https://profsuzy.github.io/Stat11/wk3-wksheet.html). 
 
 
 

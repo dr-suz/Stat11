@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 3"
-subtitle: "Analyzing and Modeling Two Numeric Variables" 
+subtitle: "Comparing Entire Distributions" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -14,35 +14,178 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">answer</span>
-<span style="color:blue">rhetorical</span>
-<span style="color:green">definition</span>
+
+# 1. What is a (probability) distribution? 
+
+The (probability) distribution of a random variable must supply information about all possible values the variable can take on and how frequently (or infrequently) the random variable will take on these values. 
+
+In short, a distribution specifies the **possibilities** and corresponding **probabilities** of a random variable. A <span style="color:green">density plot</span> can reflect this information graphically. (You can think of a density plot/curve as a smoothed-out version of a histogram.)
+
+## Recall: Normal/Gaussian Distribution 
+
+Last class we introduced the Normal (probability) model. A special feature of the Normal model is the **68/95/99.7** rule that describes how common (or rare) certain number values around the mean are. This rule applies to the *density plot* of the Normal model below.
+
+![](./images/normal 68-95-997.png)
+
+We also discussed how for a sample of numeric data, it is helpful to have a sense of the **center** value(s) and the **spread** of the values. The same is true for numeric random variables, i.e. numeric variables that live in the math world and are used as *models* for observable samples of numeric data. 
+
+When talking about a distribution of a sample of data (from the real world), we can refer to the distribution of the sample as the <span style="color:green">sampling distribution</span>. When referring to a probability distribution (that exists in the mathematical modeling world), we just call this a distribution for a random variable. 
 
 
-Association
+## Examples of more distributions
 
-- Direction 
+You can get as creative as you want with defining distributions, there are infinitely many and you can make up new ones too! (These distributions do have to follow some mathematical rules though as we will discuss later in Unit 2.)
 
-- Form 
+However, there are about a dozen common probability distributions that a frequently used to model real world phenomena. These common distributions (like the Normal distribution) are named for convenience. 
 
-- Strength 
+### Uniform random variables 
 
-# 1. Time plots 
+The Uniform$(a,b)$ distribution evenly divides the range of the possible values of numbers from $a$ to $b$ so that any number (even infinite decimals) have an equal chance of occurring. The density plot is show below. 
+
+```{r echo=FALSE, message=FALSE}
+library("tidyverse")
+set.seed(101)
+unif_dat <- runif(4000, -2, 4)
+plot(density(unif_dat, bw=.6), main="Uniform Density", xlab = " ")
+```
+
+### Chi-square random variables 
+
+The Chi-square distribution is a bit different in that it is a skewed left distribution that describes the probabilities associated with only positive possible numbers. 
+
+```{r echo=FALSE, message=FALSE}
+chi_dat <- rchisq(4000, 2)
+plot(density(chi_dat, bw=.6), main="Chi Square Density", xlab = " ")
+```
 
 
-# 2. Scatterplots 
+
+# 2. Comparing distributions of numeric variables 
+
+When we have two or more different samples of data (for the same variable), an exploratory analysis of this data will include describing any similarities or differences between/among the sample distributions.  
+
+A useful mathematical summary of a (sample or random variable) distribution is the **five number summary** which consists of the
+
+* Smallest value possible (<span style="color:green">minimum</span>);
+
+* <span style="color:green">First quartile</span> (where $25\%$ of the data is smaller than this value);
+
+* <span style="color:green">Median</span> (where $50\%$ of the data is smaller than this value and the other $50\%$ of the data is larger than this value);
+
+* <span style="color:green">Third quartile</span> (where $75\%$ of the data is smaller than this value);
+
+* Largest value possible (<span style="color:green">maximum</span>).
 
 
-## Correlation 
+<span style="color:purple">For the sample of data pictured below, what can you tell from its histogram that you can't tell from its five number summary?</span>
+
+```{r}
+set.seed(102)
+my_samp <- round(rnorm(20, 8, 2), 3)
+summary(my_samp)
+hist(my_samp, breaks=15)
+```
+
+If we have less than a handful of different samples of data (for the same variable), then we can compare their histograms side-by-side or overlapped.
 
 
-# 3. Transforming/Re-expressing data
-
-in addition to shifts and scales... 
-
-root, exponents, natural logs 
+![](./images/wk2_overlap_hists.png)^[Source: https://blogs.sas.com/content/graphicallyspeaking/2012/02/06/comparative-densities/]
 
 
-Explanatory variable and response variable 
+But, if there are over a dozen or so samples of data, comparing histograms is pretty messy to look at so we'll typically visualize the different sample distributions with side-by-side boxplots. Recall the following plot from last class:
 
-Lurking variables 
+![](./images/wk1-stacked-boxplots.png)
+
+# 3. Quantiles and percentiles  
+
+Another notable descriptive feature of a distribution are its **quantiles** and **percentiles**, although this is just a somewhat fancier way of saying its possibilities (quantiles) and probabilities (percentiles)! The five number summary of a distribution is actually a list of the five quantiles that corresponding to $0\%$, $25\%$, $50\%$, $75\%$, and $100\%$ percentiles (often called **quar**tiles since they break the data values into fourths). 
+
+
+
+```{r echo=FALSE,message=FALSE}
+library(tidyverse)
+norm_dat <- data.frame(std_norm = rnorm(1e6), non_std = rnorm(1e6, -75, 3.3))
+```
+
+```{r eval=FALSE, echo=FALSE}
+ggplot(data=norm_dat,aes(x=std_norm)) +
+  geom_histogram(aes(y=..density..),colour =1, fill="white") + 
+  geom_density(col="blue") + 
+  labs(title="Standard Normal Distribution", x="Quantiles", y=" ") +
+  theme(axis.text.y = element_blank())
+
+ggplot(data=norm_dat,aes(x=non_std)) +
+  geom_histogram(aes(y=..density..),colour =1, fill="white") + 
+  geom_density(col="blue") + 
+  labs(title="Normal Distribution (non-standard)", x="Quantiles", y=" ") +
+  theme(axis.text.y = element_blank())
+
+#hist(rnorm(1e6), main="Standard Normal Density and Histogram", xlab="Quantiles", density=1)
+```
+
+## General Normal distribution
+
+![](./images/week2_quantiles.png)
+
+
+# 4. Re-expressing (transforming) data 
+
+Last week, we discussed a common way to re-express numerical data to get rid of any units of measurement. The transformation of a data point into its z-score is called the **standardization transformation** and it involves both **shifting** the data values (to the left or right according to their mean) and **scaling** the data values according to their standard deviation (scaling up if the standard deviation is $>1$ or scaling down if the standard deviation is $<1$). 
+
+
+We could shift or scale data by any amount we'd like and it would be helpful to know if and how these transformations affect the sample distribution, including descriptors of the distribution such as the five number summary or quantiles and percentiles. 
+
+## Shifted and/or scaled mean and standard deviation 
+
+```{r}
+mean(my_samp); sd(my_samp)
+mean(my_samp+30); sd(my_samp + 30)
+mean(15*my_samp); sd(15*my_samp)
+```
+
+
+## Shfited and/or scaled Normal distributions 
+
+The original data (in gray) comes from a $N(\mu=-75,sd=3.3)$ distribution. 
+
+* The data scaled by a factor of 2 is in green, 
+
+* The data shifted by 3 units is in orange,
+
+* The data scaled and shifted is shown in blue. 
+```{r echo=FALSE, message=FALSE}
+## use GGplot2 here to show shift and scaling effects on a normal distribution 
+trans_dat <- norm_dat %>% mutate(shift = non_std + 3,
+                                 scale = non_std * 2,
+                                 both = non_std * 2 + 3)
+#ggplot(trans_dat) +
+#  geom_density(aes(x=non_std,y = ..scaled..)) + 
+#  geom_density(aes(x=shift,y = ..scaled..), col="blue") + 
+#  geom_density(aes(x=scale,y = ..scaled..), col = "green") + 
+#  geom_density(aes(x=both,y = ..scaled..), col = "purple") 
+
+ggplot(trans_dat) +
+  geom_histogram(aes(x=non_std), col=1) + 
+  geom_histogram(aes(x=shift), fill="orange", col=1, alpha=0.3) + 
+  geom_histogram(aes(x=scale), fill = "green", col=1, alpha=0.3) + 
+  geom_histogram(aes(x=both), fill = "blue", col=1, alpha=0.3) + 
+  labs(title="Shifts and Scales of Data from a Normal Distribution", x="Quantiles", y=" ") +
+  theme(axis.text.y = element_blank())
+
+#density(trans_dat$both)$y %>% names
+#sum(density(trans_dat$non_std)$y)
+  
+#plot(density(my_norm))
+#plot(density(15*my_norm))
+#plot(density(my_norm+30))
+#plot(density(15*my_norm+30))
+```
+
+## Assessing Normality 
+
+We can often assess whether or not a sample of data seems to follow a Normal distribution by investigating the quantiles of the sample distribution. In a <span style="color:green">Normal probability plot</span> each sample quantile (vertical axis below) is plotted against its corresponding standarized value (its z-score - horizontal axis below). A straight line relating these values indicates a strong match with the Normal model. 
+
+
+```{r message=FALSE}
+qqnorm(my_samp)
+```

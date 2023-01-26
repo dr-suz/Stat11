@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 2"
-subtitle: "Comparing Entire Distributions" 
+subtitle: "Comparing Entire Distributions -- Didn't get to - Moved to Wk 3" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
