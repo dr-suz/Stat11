@@ -37,4 +37,21 @@ We are going to design a simple linear regression model and then assess the mode
 * Just because R (or Excel) fits a line and gives us a slope and intercept doesn't mean that the model is appropriate or information. 
 
 
+## Transforming/Re-expressing data
+
+in addition to shifts and scales... 
+
+root, exponents, natural logs 
+
+
+Explanatory variable and response variable 
+
+Lurking variables 
+
+## Regression to the mean 
+
+b/c correlation is between -1 and 1, each predicted response tends to be closer (in standard deviations) to the mean of $y$ than the corresponding value of the explanatory variable was from $\bar{x}$ 
+
+can occur when two variables measure similar, correlated things (?) 
+
 

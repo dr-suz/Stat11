@@ -14,13 +14,13 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">answer</span>
-<span style="color:blue">rhetorical</span>
-<span style="color:green">definition</span>
 
-# Analyzing and Modeling Two Numeric Variables
+# 1. Analyzing Two Numeric Variables
 
 
+## Scatterplots 
+
+![](./images/foot and height.png)
 
 Association
 
@@ -30,31 +30,17 @@ Association
 
 - Strength 
 
-# 1. Time plots 
-
-
-# 2. Scatterplots 
-
 
 ## Correlation 
 
+If the association/relationship between two numeric variables seems to follow a linear trend, then we can describe the strength of the linear trend with the <span style="color:green">sample correlation</span> (or correlation coefficient).
 
-# 3. Transforming/Re-expressing data
+<span style="color:purple">Can we still report the correlation if the relationship between the two variables is **not** linear?</span> 
 
-in addition to shifts and scales... 
-
-root, exponents, natural logs 
-
-
-Explanatory variable and response variable 
-
-Lurking variables 
+[Guess the correlation](http://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html)
 
 
-***
-# Good linear regression 
-
-# 1. Line of best fit 
+# 2. Modeling Two Numeric Variables with the Line of Best Fit 
 
 least squares model coefficients 
 
@@ -63,13 +49,11 @@ slope will change from one sample to the next; changes in one unit of $x$ associ
 
 $$\hat{y} = b_0 + b_1 x$$ 
 
-## Regression to the mean 
 
-b/c correlation is between -1 and 1, each predicted response tends to be closer (in standard deviations) to the mean of $y$ than the corresponding value of the explanatory variable was from $\bar{x}$ 
+[Data consisting of foot length and height for 20 individuals](http://www.rossmanchance.com/applets/2021/regshuffle/regshuffle.htm)
 
-can occur when two variables measure similar, correlated things (?) 
 
-## Assessing the model residuals 
+## Assessing the residuals 
 
 $$\text{Residual} = e = y - \hat{y} = \text{observed value} - \text{predicted value}$$
 
@@ -79,7 +63,7 @@ $$s_e = \frac{\sum e^2 }{n-1}$$
 Normal model (and 68-95-99.7 rule) applies when assumptions are reasonable
 
 
-# 2. Informative coefficients 
+# 3. Summary Statistics for Simple Linear Regression
 
 
 ## Slope 
@@ -100,10 +84,12 @@ is the fraction/proportion of the variation/variability in $y$ accounted for by 
 
 reflects the successfullness of the model at relating $y$ to $x$ (goodness of fit measure)
 
-# 3. Assumptions for a linear model
+# 4. Assumptions Behind a Simple Linear Model
 
 - linear enough 
 
 - no thickening or thinning of the scatterplot when read from left to right 
 
 - no outliers 
+
+
