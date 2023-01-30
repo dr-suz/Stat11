@@ -20,20 +20,21 @@ header-includes:
 
 ## Scatterplots 
 
-![](./images/foot and height.png)
+When viewing a scatterplot, we are looking for different types of association present between at least two numeric variables. Descriptions of an association between two numeric variables should mention:
 
-Association
+- Direction, 
 
-- Direction 
+- Form, and  
 
-- Form 
+- Strength.  
 
-- Strength 
+![](./images/foot and height.png){width=4in}
 
 
 ## Correlation 
 
 If the association/relationship between two numeric variables seems to follow a linear trend, then we can describe the strength of the linear trend with the <span style="color:green">sample correlation</span> (or correlation coefficient).
+
 
 <span style="color:purple">Can we still report the correlation if the relationship between the two variables is **not** linear?</span> 
 
@@ -41,6 +42,11 @@ If the association/relationship between two numeric variables seems to follow a 
 
 
 # 2. Modeling Two Numeric Variables with the Line of Best Fit 
+
+
+## Sum of squares notation
+
+$$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2 \quad s_x = \sum_{i=1}^{n}(y_i - \bar{y})^2, \quad s_{xy} = \sum_{i=1}^{n}(x_i - \bar{x})(y_i-\bar{y})$$
 
 least squares model coefficients 
 
@@ -76,6 +82,9 @@ is unitless
 
 will change from one sample to the next 
 
+For a sample of size $n$, with a numeric variable $(x_1, x_2, \dots, x_n)$, and another numeric variable, $(y_1, y_2, \dots, y_n)$, we can calculate the sample correlation by finding:
+$$r = \frac{s_{xy}}{\sqrt{s_x s_y}}.$$
+
 ## Coefficient of determination 
 
 is the square of the correlation coefficient 
@@ -83,6 +92,8 @@ is the square of the correlation coefficient
 is the fraction/proportion of the variation/variability in $y$ accounted for by a linear model of $x$ 
 
 reflects the successfullness of the model at relating $y$ to $x$ (goodness of fit measure)
+
+For simple linear regression: $R^2 = r^2$
 
 # 4. Assumptions Behind a Simple Linear Model
 
