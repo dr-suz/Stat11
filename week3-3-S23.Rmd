@@ -37,6 +37,18 @@ We are going to design a simple linear regression model and then assess the mode
 * Just because R (or Excel) fits a line and gives us a slope and intercept doesn't mean that the model is appropriate or information. 
 
 
+***
+
+## Assumptions Behind a Simple Linear Model
+
+- linear enough 
+
+- no thickening or thinning of the scatterplot when read from left to right 
+
+- no outliers 
+
+
+
 ## Transforming/Re-expressing data
 
 in addition to shifts and scales... 
