@@ -50,7 +50,7 @@ If the association/relationship between two numeric variables seems to follow a 
 
 Because it can quickly become tiring (and quite frankly, look pretty ugly) we will use the following abbreviations extensively:
 
-$$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2, \quad s_x = \sum_{i=1}^{n}(y_i - \bar{y})^2, \quad s_{xy} = \sum_{i=1}^{n}(x_i - \bar{x})(y_i-\bar{y})$$
+$$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2, \quad s_y = \sum_{i=1}^{n}(y_i - \bar{y})^2, \quad s_{xy} = \sum_{i=1}^{n}(x_i - \bar{x})(y_i-\bar{y})$$
 <span style="color:purple">Q: Using the abbreviations above, how could you write the formula for the variance of a sample of numeric data, $(y_1, y_2, \dots, y_n)$?</span>
 
 ## Line of best fit: minimizes the sum of the squared residuals

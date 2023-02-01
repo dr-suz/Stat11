@@ -3,6 +3,7 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: "Week 3: Fitting a Linear Regression Model"
 output:
+  pdf_document: default
   html_document: default
 ---
 <br>
@@ -34,35 +35,19 @@ ggplot(gators, aes(x=Weight.lbs., y=Length.in.)) +
 
 # 1. Choose which variable should be the response and justify this choice in 1-2 sentences.  
 
-<br>
-<br>
-<br>
-<br>
+\vspace{2cm}
 
 # 2. What are the slope and intercept of the line of best fit through this data? What is the interpretation of the slop within this context? 
 
-<br>
-<br>
-<br>
-<br>
+\vspace{2cm}
 
 # 3.  Does the linear model seem to be a good fit for this data? If so, describe why. If not, what could be done to make a linear model more appropriate? 
 
-<br>
-<br>
-<br>
-<br>
+\vspace{3cm}
 
 # 4. The largest residual has a value of 165.62. Explain the meaning of this value in 1-2 sentences. 
 
-<br>
-<br>
-<br>
-<br>
+\vspace{3cm}
 
-# 5. If you were a wildlife researcher who needed to know the different weights of alligators, would you decide to use this method? Give a statistically informed justification of your answer.  
+# 5. If you were a wildlife researcher who needed to know the different weights of alligators, would you decide to use this method? Give a statistically informed justification of your answer. (Hint: Report and interpret the $R^2$ value and/or the correlation coefficient.)
 
-<br>
-<br>
-<br>
-<br>
