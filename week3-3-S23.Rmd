@@ -30,6 +30,12 @@ Wildlife researchers are monitoring a Florida alligator population by taking are
 We are going to design a simple linear regression model and then assess the model fit and interpretation. Click this link to view the [worksheet for this gator data analysis problem](https://profsuzy.github.io/Stat11/wk3-wksheet.html). 
 
 
+* To open this data set in RStudio you'll need the following code:
+```{r message=FALSE}
+gators <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Gators.csv")
+```
+
+* To open this data set in Excel go to the [link to download the Gator data set](https://github.com/ProfSuzy/Stat11/blob/main/Data/Gators.csv). Right click on the button called "Raw" and select "Save Link As". Erase the pre-filled name - and file extension! - and fill in "Gators.xlsx" and select "Save". Then navigate to this file and open it in Microsoft Excel (NOT Apple Numbers and NOT Google Sheets, although they are pretty much the same thing in practice).  
 
 # 3. Summary of Results 
 
