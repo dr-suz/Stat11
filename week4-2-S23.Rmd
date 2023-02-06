@@ -20,6 +20,8 @@ header-includes:
 
 ch 11 
 
+attendance poll: what is your favorite kind of sampling bias and why? name required 
+
 # 1. Observational studies 
 
 # 2. Randomized, Comparative Experiments 

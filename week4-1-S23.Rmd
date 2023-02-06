@@ -14,17 +14,40 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">answer</span>
-<span style="color:blue">rhetorical</span>
-<span style="color:green">definition</span>
 
-ch 10 
 
 # Main Ideas 
 
+* Examine part (sample) of the whole (population)
+
+* Randomize to avoid bias 
+
+* Sample size need not be relative to population size  
+
 # 1. Populations and Their Parameters 
 
-# 2. The elusive Simple Random Samples 
+![](./images/wk4-populations-samples.png)
+
+
+<span style="color:purple">Q: What is the difference between *variance* and variability/variation?</span>
+
+
+# 2. The elusive Simple Random Sample (SRS)
+
+
+
+![](./images/wk4-123.png)
+
+**Important:** Random $\neq$ Arbitrary 
 
 # 3. Practical Sampling Designs 
+
+**Goal:** Representative and (somehow) random sample 
+
+* Stratified random sampling
+
+* Cluster and multistage sampling 
+
+* Systematic sampling 
+
 
