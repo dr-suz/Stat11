@@ -14,22 +14,77 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-<span style="color:purple">answer</span>
-<span style="color:blue">rhetorical</span>
-<span style="color:green">definition</span>
 
-ch 11 
-
-attendance poll: what is your favorite kind of sampling bias and why? name required 
 
 # 1. Observational studies 
 
+<span style="color:green">retrospective</span> 
+
+<span style="color:green">prospective</span> 
+
+Causation impossible to establish with a single observational study, even if random sampling selection is employed 
+
+[insert table about causation and generalization]
+
+
 # 2. Randomized, Comparative Experiments 
+
+<span style="color:green">random assignment</span> of subjects/participants/experimental units to <span style="color:green">treatment</span> levels 
+
+<span style="color:green">explanatory variables</span>: factors (some numerical, others categorical with treatment levels)
+
+<span style="color:green">response variable</span>: categorical or numerical, the main thing we want to compare or answer a question about (e.g. is medicine effective) 
 
 ## Four principles of experimental design 
 
-### Control groups 
+1. **Control** for extraneous sources of variation (besides the main comparative grouping)
 
-### Blocking 
+control group (<span style="color:green">placebo effect</span>) vs treatment group(s)
 
-### Confounding 
+<span style="color:green">blind</span> wherever possible - subjects, technicians, data collector, doctor, surveyor 
+
+[short video scene in House with clinical trial, any other examples? big bang theory?]
+
+2. Randomize the assignment of treatment levels (including a control level)
+
+*Can* determine *effects* of the treatment 
+
+<span style="color:green">confounding</span> in experiments means: levels of one factor are associated with the levels of another factor (possibly a factor that has not yet been identified or for which data was not collected - i.e. a <span style="color:green">lurking</span> variable (hidden confounder))
+
+randomization helps to correct for unknown confounding variables (lurking variables)
+
+[marshmellow experiment on kids]
+
+3. Replicate treatment to several observational units (to get a sense of variation within a trt level) and repeat study on a new sample of experimental units 
+
+4. <span style="color:green">Block</span> into homogenous groups whenever possible and randomize treatment levels within each block 
+
+helps to correct for known confounders 
+
+<span style="color:purple">Q: Can we collect data for experiments from sample surveys?</span>
+
+# 3. Putting it all together: Designing a Good Study 
+
+* Often it isn't possible (for ethical, monetary, practice) reasons to design and implement an experiment. In these cases aim for a carefully designed observational study (think about representativeness of sample and if there is any way to incorporate randomness) 
+
+[historical examples of unethical experiments]
+
+* Generally we need to strike a balance between collecting enough data (for different variables in our data set) to help in case of <natural disasters> or missing information but not so much data that it's unlikely to get many willing participants 
+
+* Experiments control for confounders (known and unknown ) *on average* and known confounders can be further controlled by blocking. In an observational study, we can only control for known confounders via stratifying.  
+
+* Take to heart the most common statistical advice: you're gonna need more data to answer your question. Budget for the reality that humans aren't perfect. Pre-test a survey method. Run a pilot study before conducting an entire randomized, controlled experiment. 
+
+
+<br>
+<br>
+<br>
+
+
+# Pop attendance quiz: What is your favorite kind of bias and why? 
+
+[Wikipedia has a nice collection of common types of sampling biases.](https://en.wikipedia.org/wiki/Sampling_bias)
+
+This is also a friendly reminder that your attendance in class is required and repeated unexcused absences will negatively impact your course grade.  
+
+# Reminder: GHW #2 is due in one week (Feb 15)
