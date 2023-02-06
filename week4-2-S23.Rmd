@@ -69,6 +69,8 @@ helps to correct for known confounders
 
 [historical examples of unethical experiments]
 
+[read through some ASA ethical principle]
+
 * Generally we need to strike a balance between collecting enough data (for different variables in our data set) to help in case of <natural disasters> or missing information but not so much data that it's unlikely to get many willing participants 
 
 * Experiments control for confounders (known and unknown ) *on average* and known confounders can be further controlled by blocking. In an observational study, we can only control for known confounders via stratifying.  
