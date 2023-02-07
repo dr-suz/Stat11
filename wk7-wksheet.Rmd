@@ -1,0 +1,135 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: "Week 7: Working with random variables and probability models"
+output:
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** There are X parts to this worksheet. First, work on the X questions. Then, when instructed by your professor, get into groups to discuss your answers to Part X and move on to complete Part X. Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+<br>
+<br>
+<br>
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+topics 
+
+laws of expectation and variance and covariance 
+
+sketch normal model picture of z-score and probabilities [have them use a Normal prob. table]
+
+normal approximation to the binomial model; R4.40 coin tossing example, could bring coins to class and have students flip them
+
+[maybe conduct simulation exercise to have class demonstrate that RVs can't just be added together or multiplied]
+
+# 1.  
+
+<br>
+<br>
+<br>
+<br>
+
+
+# 2.  
+
+<br>
+<br>
+<br>
+<br>
+
+# 3. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 4. 
+
+<br>
+<br>
+<br>
+<br>
+
+# 5.  
+
+<br>
+<br>
+<br>
+<br>
+
+
+# From old worksheet
+
+Consider the example of a magician who has a possibly un-fair coin and let's you specify how many times he will flip the coin and show you the result. Suppose you suspect the coin is biased towards "heads" and you tell the magician to flip the coin $n=30$ times.  
+
+
+You keep a record of your observations and create a data set of values from a binary categorical variable, $\{x_1, x_2, \dots, x_{30}\}$. 
+
+We assume that across the entire population of interest, this categorical variable is a random variable with a $Bernoulli(p)$ distribution, where $p=$ the probability of a "heads". 
+
+**1.** How can you describe the population of interest in this example? 
+
+\vspace{.8in}
+
+
+**2.** What are the possibilities and the corresponding probabilities that define this categorical random variable? 
+
+\vspace{.8in}
+
+**3.** What is the expected value and the variance of this categorical random variable? (Hint: See the Definitions and Terms to Know file on Random Variables.)
+
+\vspace{.8in}
+
+Based on the sample of $30$ flips of this coin, we can calculate an estimate for $p$ with the formula:
+$$\hat{p} = \frac{1}{n} \sum_{i=1}^{n}x_i.$$
+
+
+**4.** What does the word *estimate* mean in this context?
+
+\vspace{.8in}
+
+**5.** What can you say about the value of $\hat{p}$ even before you even see the data? 
+
+\vspace{.8in}
+
+
+
+**6.**
+In good faith, let's assume that the coin is actually fair. If this were the case, what is $p$? 
+
+\vspace{.8in}
+
+
+The CLT tells us that, if our sample size is large and our data is drawn independently from the population, then the sampling distribution of the sample proportion is a Normal distribution. More specifically, this will follow a Normal distribution with mean $\mu = p$ and variance $\sigma^2 = \frac{p(1-p)}{30}$. 
+
+
+
+**7.** 
+Draw a picture of the density curve for the sampling distribution of the sample proportion, supposing that the coin is fair. Label the mean and one standard deviation above and below the mean.
+
+\vspace{1.8in}
+
+
+**8.**
+After $n=30$ flips of the coin, you observe $18$ heads and $12$ tails. What is the value of $\hat{p}$? 
+
+\vspace{.8in}
+
+**9.**
+How far away from the expected value (or mean) of the sampling distribution of the sample proportions is the estimate in question 8? 
+\vspace{1in}
+
+**10.** What is the probability that, repeating this experiment again and again produces the same value of $\hat{p}$ or something larger? Draw a picture and specify the R code you would use to calculate this probability. 

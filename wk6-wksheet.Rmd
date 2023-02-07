@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: "Week 6: XXXXX"
+date: "Week 6: Practicing with randomness and probability"
 output:
   html_document: default
 ---
@@ -9,7 +9,7 @@ output:
 **Name:** _____________________________________
 
 <br>
-**Instructions:** There are two parts to this worksheet. First, work on the five questions in Part 1 by yourself. Then, when instructed by your professor, get into groups to discuss your answers to Part 1 and move on to complete Part 2. Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+**Instructions:** There are X parts to this worksheet. First, work on the X questions. Then, when instructed by your professor, get into groups to discuss your answers to Part X and move on to complete Part X. Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
 
 **Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
 <br>
@@ -26,7 +26,22 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 
 
-# 1. Why is it difficult to use a simple random sample here? 
+LLN and long run frequencies vs subjective probability 
+
+Formal laws of probability (conditional prob and Bayes rule)
+
+Independent events vs disjoint 
+
+[hands on M&M example? collect classroom data use FB or Twitter? draw tree diagram]
+
+R4.3 plan a trip and estimate the costs for random flight costs 
+
+R4.41 Understanding the expectations and probabilities involved in the Drake equation to estimate the number of extraterrestrial civilizations in our galaxy 
+
+
+
+
+# 1.  
 
 <br>
 <br>
@@ -34,28 +49,28 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 <br>
 
 
-# 2. What is a more convenient, but still random, sampling strategy? 
+# 2.  
 
 <br>
 <br>
 <br>
 <br>
 
-# 3. What kinds of households are likely to be included/excluded in the eventual sample of opinions? 
+# 3. 
 
 <br>
 <br>
 <br>
 <br>
 
-# 4. Suppose the researcher decides to continue callinng each number, perhaps in the morning or evening, until an adult is contacted and interviewed. How does this improve the sampling design? 
+# 4. 
 
 <br>
 <br>
 <br>
 <br>
 
-# 5. Random-digit dialing machines can generate the phone calls for us. How would this improve the design of this sociologist's study? Is anyone still excluded? 
+# 5.  
 
 <br>
 <br>

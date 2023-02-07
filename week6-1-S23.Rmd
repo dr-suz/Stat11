@@ -1,0 +1,106 @@
+---
+title: "Stat 11 Week 6"
+subtitle: "Random Variables and Probability Rules" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+
+
+##----------------------
+
+##Example 1 - discrete random variable 
+population <- c(3,3,3,2,2,2)  ## this is our box containing 6 labeled balls
+
+## Let X represents a single random draw from the population. 
+## So X is random variable whose distribution is defined by the population (box)
+## The (theoretical) expectation of the random variable X is:
+(3*(3/6)) + (2*(3/6))   
+
+## Now we are going to SRS of size n and calculate the sample mean/expectation
+n=10000
+SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
+mean(SRS_discrete_pop)  
+
+## Why are these two values slightly different? 
+
+## Similarly, the (theoretical) variance of the random variable X is:
+(  (( (3-2.5) ^2) * (3/6) ) + 
+    (( (2-2.5) ^2) * (3/6) )   )
+
+## and the sample variance is 
+n=10000
+SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
+var(SRS_discrete_pop)
+
+## These two values are slightly different for the exact same reason as the mean calculations.
+
+
+##----------------------
+
+R4.8, R4.10, R4.19 practical example with insurance deductibles [good examples to include in class notes]
+
+
+##-----------------------
+
+1.	If a fair die is rolled five times, which of the following sequences is most likely to result?
+
+a)	2 6 1 5 3
+b)	6 4 2 1 5
+c)	2 4 4 4 4
+d)	2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
+e)	2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
+
+2.	If you flip a fair coin and get heads 5 times in a row, what is the chance of getting tails on the next flip?
+
+a) Greater than 0.5
+b) 0.5
+b) Less than 0.5
+
+3.	Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball at random from each box, which of the following are more likely 
+
+a)	You choose a blue ball from Box 1. 
+b)	You choose a blue ball from Box 2.
+c)	There is no way to tell. 
+
+4.	Suppose a fair coin will be flipped twice. Consider the following three events:
+A: 0 heads are observed
+B: 1 head is observed
+C: 2 heads are observed
+Which of the following is true?
+
+a)	P(A) $<$ P(B) $<$ P(C)
+b)	P(A) = P(B) = P(C)
+c)	P(B) is greater than P(A) and P(B)
+d)	None of the above. 
+
+
+5.	Think about the following two probabilities:
+The probability that a man that is over 6 feet tall is a professional basketball player
+The probability that a man is over 6 feet tall given that he is a professional basketball player
+Which of the following most likely to be true?
+
+a)	Probability 1 is greater than probability 2.
+b)	Probability 2 is greater than probability 1.
+c)	The two probabilities are equal.
+d)	It is impossible to tell.
+
+6.	Think about the following two probabilities:
+The probability that a randomly selected adult American likes to surf
+The probability that a randomly selected adult American lives in California and likes to 
+surf
+Which of the following is most likely to be true?
+
+a)	Probability 1 is greater than probability 2.
+b)	Probability 2 is greater than probability 1.
+c)	The two probabilities are equal.
+d)	It is impossible to tell. 
