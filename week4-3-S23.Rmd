@@ -23,13 +23,15 @@ header-includes:
 
 * Second, we'll consider a question related to baseball bats and their hitting distance. 
 
-![](./images/baseball_phone.png)
+![](./images/baseball_phone.png){height=4in}
 
 # 2. Analysis Goal  
 
 * For the phone survey data we will critique and try to improve upon a proposed sampling design. 
 
 * For the baseball data we are going to design an experiment to answer a statistical question. 
+
+Click this link to view the [worksheet for sampling and study design](https://profsuzy.github.io/Stat11/wk4-wksheet.html). 
 
 # 3. Summary of Results  
 

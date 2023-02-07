@@ -1,0 +1,63 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: "Week 6: XXXXX"
+output:
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** There are two parts to this worksheet. First, work on the five questions in Part 1 by yourself. Then, when instructed by your professor, get into groups to discuss your answers to Part 1 and move on to complete Part 2. Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+<br>
+<br>
+<br>
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+
+
+# 1. Why is it difficult to use a simple random sample here? 
+
+<br>
+<br>
+<br>
+<br>
+
+
+# 2. What is a more convenient, but still random, sampling strategy? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 3. What kinds of households are likely to be included/excluded in the eventual sample of opinions? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 4. Suppose the researcher decides to continue callinng each number, perhaps in the morning or evening, until an adult is contacted and interviewed. How does this improve the sampling design? 
+
+<br>
+<br>
+<br>
+<br>
+
+# 5. Random-digit dialing machines can generate the phone calls for us. How would this improve the design of this sociologist's study? Is anyone still excluded? 
+
+<br>
+<br>
+<br>
+<br>

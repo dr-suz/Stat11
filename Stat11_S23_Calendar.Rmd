@@ -52,7 +52,7 @@ In the calendar below **IHW** corresponds to an individual homework assignment a
 
 |Week |Date |Unit |Topics |Reading and homework assignments and assessment items |
 |:--- |:--- |:--- |:--- |:--- |
-| 1 | Jan 17 | 1 | Visualizing and summarizing numeric data | Part 1: Ch 1-3 <br> IHW 1+2 |
+| 1 | Jan 17 | 1 | Visualizing and summarizing data | Part 1: Ch 1-3 <br> IHW 1+2 |
 | 2 | Jan 23 | 1 |  Describing distributions with variability  | Part 1: Ch 4-5 <br> IHW 3+4  |
 | 3 | Jan 30 | 1 |  Describing relationships between two numeric variables | Part 2: Ch 6 all, Ch 7 all, Ch 8.1-8.3 <br> GHW 1 |
 | 4 | Feb 6 | 2   | Collecting data from experiments and observational studies | Part 3: Ch 10-11 (all) <br> GHW 2  |
