@@ -404,9 +404,9 @@ right clicking on the link “View Raw” and save the link with the name
 a large data set.</p>
 <p>If you are analyzing this data in RStudio, you will import the data
 with the following command</p>
-<pre class="r"><code>EnvoyAir_flights &lt;- 
-  read.delim(&quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt&quot;,
-             sep=&quot;,&quot;)</code></pre>
+<pre class="r"><code>EnvoyAir_flights &lt;- read.delim(
+        &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt&quot;,
+        sep=&quot;,&quot;)</code></pre>
 <p>This may take a few moments as it is a large data set. The data
 object is called <code>EnvoyAir_flights</code>.</p>
 <p>Once you have access to the data set, complete all parts of the five
@@ -449,7 +449,9 @@ quantile, lower 75% quantile, and the mean.</p></li>
 <h1>Problem 3</h1>
 <p>Create a labeled bar/frequency chart for the variable
 <code>origin</code>. What story does this tell about the variable
-<code>origin</code>?</p>
+<code>origin</code>? (Hint for R users: First create a table from this
+data and then put that table inside the <code>barplot</code>
+function.)</p>
 </div>
 <div id="problem-4" class="section level1">
 <h1>Problem 4</h1>

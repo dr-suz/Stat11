@@ -87,7 +87,7 @@ What story do these analyses tell about the variable `distance`?
 
 # Problem 3
 
-Create a labeled bar/frequency chart for the variable `origin`. What story does this tell about the variable `origin`? 
+Create a labeled bar/frequency chart for the variable `origin`. What story does this tell about the variable `origin`? (Hint for R users: First create a table from this data and then put that table inside the `barplot` function.) 
 
 
 
