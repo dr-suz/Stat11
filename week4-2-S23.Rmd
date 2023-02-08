@@ -73,8 +73,6 @@ This could mean incorporating a <span style="color:green">control group</span> t
 
 The purpose of random assignment is to be able to draw cause and effect conclusions about a particular treatment. Randomization (in sample selection and in treatment assignment) helps to correct for unknown confounding variables (AKA <span style="color:green">lurking variables</span>).
 
-[Simpson's paradox ex]
-
 3. **Replicate** treatment to several observational units (to get a sense of variation within a treatment level) and replicate a study on a new sample of experimental units to validate the results. 
 
 4. **Blocking** participants into homogeneous groups whenever possible and randomly assigning treatment levels within each block helps to correct for the impact of known confounders. 
@@ -102,6 +100,6 @@ The American Statistical Association has also developed [Ethical Guidelines for 
 
 ## Reference Sheet 
 
-As there is a lot of new terminology that we have covered, I've put together a brief [reference sheet for the Unit 1 material](https://profsuzy.github.io/Stat11/Cheat-sheet-1.html). If you notice any typos or mistakes in this sheet please let me know. It is meant as an additional reference for you to use while you study the Unit 1 material.   
+As there is a lot of new terminology that we have covered, I've put together a brief [reference sheet for sampling and study design](https://profsuzy.github.io/Stat11/Cheat-sheet-1.html). If you notice any typos or mistakes in this sheet please let me know. It is meant as an additional reference for you to use while you study the Unit 1 material.   
 
 # Reminder: GHW #2 is due in one week (Feb 15)
