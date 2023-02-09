@@ -1,0 +1,30 @@
+---
+title: "Stat 11 Week 7"
+subtitle: "Experiments with Random Variables" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+
+# 1. Data Introduction 
+
+
+
+# 2. Analysis Goal  
+
+
+
+Click this link to view the [worksheet for experiments with random variables](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
+
+# 3. Summary of Results  
+
+

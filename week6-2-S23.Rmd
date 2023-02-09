@@ -14,6 +14,7 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
+  
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
@@ -23,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 <span style="color:blue">hypothetical</span>
 <span style="color:green">new terms</span>
   
-Ch12 material, some of 13 
+Ch13 material  
   
 # 1. 
   
@@ -32,6 +33,7 @@ Ch12 material, some of 13
   
   
 # 3. 
+
 
 
 ##Example 1 - discrete random variable 
