@@ -21,10 +21,13 @@ header-includes:
 
 # 2. Analysis Goal  
 
+Use the fact that the sampling distribution of $\hat{p}$ approximately fits a Normal distribution. 
 
 
 Click this link to view the [worksheet for experiments with random variables](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
 
 # 3. Summary of Results  
 
+* 
 
+* 

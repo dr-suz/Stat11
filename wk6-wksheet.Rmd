@@ -26,51 +26,75 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 
 
-LLN and long run frequencies vs subjective probability 
+[LLN and long run frequencies vs subjective probability] 
+[Formal laws of probability (conditional prob and Bayes rule)]
+[Independent events vs disjoint] 
+[draw tree diagram]
 
-Formal laws of probability (conditional prob and Bayes rule)
 
-Independent events vs disjoint 
 
-[hands on M&M example? collect classroom data use FB or Twitter? draw tree diagram]
+The Drake Equation 
+
+In 1961 astronomer Frank Drake developed an equation to try to estimate the number of extraterrestrial civilizations in our galaxy that might be able to communicate with us via radio transmissions. Now largely accepted by the scientific community, the Drake equation has helped spur efforts by radio astronomers to search for extraterrestrial intelligence. Here is the equation:
+$$N_{C} = N \cdot f_p \cdot n_e\cdot f_l \cdot f_i \cdot f_{c} \cdot f_{L}.$$
+OK, it looks a little messy, but here’s what it means:
+
+!()[./images/wk6-drake-eqn.png]
+
+
+So, how many ETs are out there? That depends; values chosen for the many factors in the equation depend on ever-evolving scientific knowledge and one’s personal guesses. But now, some questions.
+
+# 1.  What quantity is calculated by 
+
+(a) the first product, $N \cdot f_p$?
+
+(b) the product, $N \cdot f_p \cdot n_e \cdot f_l$?
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+# 2.  What probability is calculated by the product $f_l \cdot f_i$? 
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+# 3. Which of the factors in the formula are conditional probabilities? Restate each in a way that makes the condition clear.
+
+<br>
+<br>
+<br>
+<br>
+
+***
 
 R4.3 plan a trip and estimate the costs for random flight costs 
 
-R4.41 Understanding the expectations and probabilities involved in the Drake equation to estimate the number of extraterrestrial civilizations in our galaxy 
+Each year a company must send 3 officials to a meeting in China and 5 officials to a meeting in France. 
+
+Airline ticket prices vary from time to time, but the company purchases all tickets for a country at the same price. 
+
+Past experience has shown that tickets to China have a mean price of $\$1000$, with a standard deviation of $\$150$, while the 
+mean airfare to France is $\$500$, with a standard deviation of $\$100$.
 
 
 
+# 4. Define random variables and use them to express the total amount the company will have to spend to send these delegations to the two meetings.
 
-# 1.  
-
-<br>
-<br>
-<br>
-<br>
-
-
-# 2.  
 
 <br>
 <br>
 <br>
 <br>
 
-# 3. 
-
-<br>
-<br>
-<br>
-<br>
-
-# 4. 
-
-<br>
-<br>
-<br>
-<br>
-
-# 5.  
+# 5. Find the mean and standard deviation of the total cost of the trip in Problem 4. Do you need to make any assumptions in calculating these means? How about the standard deviations
 
 <br>
 <br>

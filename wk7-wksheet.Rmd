@@ -24,17 +24,13 @@ knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown
 knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
 ```
 
-topics 
+[bring coins to class and have students flip them (at least 35 coins or one large coin to pass around)]
 
-laws of expectation and variance and covariance 
+Class tosses same coin $36$ times.
 
-sketch normal model picture of z-score and probabilities [have them use a Normal prob. table]
 
-normal approximation to the binomial model; R4.40 coin tossing example, could bring coins to class and have students flip them
+# 1.  What are the mean and standard deviation of the number of heads? How many standard deviations above (or below) the mean is the number of heads observed (via actual coin tossing)?
 
-[maybe conduct simulation exercise to have class demonstrate that RVs can't just be added together or multiplied]
-
-# 1.  
 
 <br>
 <br>
@@ -42,28 +38,8 @@ normal approximation to the binomial model; R4.40 coin tossing example, could br
 <br>
 
 
-# 2.  
 
-<br>
-<br>
-<br>
-<br>
-
-# 3. 
-
-<br>
-<br>
-<br>
-<br>
-
-# 4. 
-
-<br>
-<br>
-<br>
-<br>
-
-# 5.  
+# 2.  What would be the observed number of heads if we observed an amount that was two standard deviations above the mean? If instead we tossed the coin $100$ times, would this same number of heads still be unusual? If not, how many more heads would we need to see to get to an amount that is two standard deviations above the mean? Explain how these results refute the “Law of Averages” but confirm the Law of Large Numbers
 
 <br>
 <br>
@@ -71,65 +47,75 @@ normal approximation to the binomial model; R4.40 coin tossing example, could br
 <br>
 
 
-# From old worksheet
 
-Consider the example of a magician who has a possibly un-fair coin and let's you specify how many times he will flip the coin and show you the result. Suppose you suspect the coin is biased towards "heads" and you tell the magician to flip the coin $n=30$ times.  
+***
 
+normal approximation to the binomial model:
+The CLT tells us that, if our sample size is large and our data is drawn independently from the population, then the sampling distribution of the sample proportion is a Normal distribution. More specifically, this will follow a Normal distribution with mean $\mu = p$ and variance $\sigma^2 = \frac{p(1-p)}{30}$.
 
-You keep a record of your observations and create a data set of values from a binary categorical variable, $\{x_1, x_2, \dots, x_{30}\}$. 
-
-We assume that across the entire population of interest, this categorical variable is a random variable with a $Bernoulli(p)$ distribution, where $p=$ the probability of a "heads". 
-
-**1.** How can you describe the population of interest in this example? 
-
-\vspace{.8in}
-
-
-**2.** What are the possibilities and the corresponding probabilities that define this categorical random variable? 
-
-\vspace{.8in}
-
-**3.** What is the expected value and the variance of this categorical random variable? (Hint: See the Definitions and Terms to Know file on Random Variables.)
-
-\vspace{.8in}
-
-Based on the sample of $30$ flips of this coin, we can calculate an estimate for $p$ with the formula:
+We're not going to generate a sample of $100$ flips of this coin in reality but we can still calculate an estimate for $p$ with the formula:
 $$\hat{p} = \frac{1}{n} \sum_{i=1}^{n}x_i.$$
 
-
-**4.** What does the word *estimate* mean in this context?
-
-\vspace{.8in}
-
-**5.** What can you say about the value of $\hat{p}$ even before you even see the data? 
-
-\vspace{.8in}
+# 3. What can you say about the value of $\hat{p}$ even before you even see the data? Draw a picture of the density curve for the sampling distribution of the sample proportion. Label the mean and one standard deviation above and below the mean on the curve.
 
 
-
-**6.**
-In good faith, let's assume that the coin is actually fair. If this were the case, what is $p$? 
-
-\vspace{.8in}
-
-
-The CLT tells us that, if our sample size is large and our data is drawn independently from the population, then the sampling distribution of the sample proportion is a Normal distribution. More specifically, this will follow a Normal distribution with mean $\mu = p$ and variance $\sigma^2 = \frac{p(1-p)}{30}$. 
+<br>
+<br>
+<br>
+<br>
+ 
 
 
+# 4. After $n=100$ flips of the coin, suppose we observe $41$ heads and $59$ tails. What is the value of $\hat{p}$ and how far away from the expected value (or mean) of the sampling distribution of the sample proportions is this? 
 
-**7.** 
-Draw a picture of the density curve for the sampling distribution of the sample proportion, supposing that the coin is fair. Label the mean and one standard deviation above and below the mean.
+<br>
+<br>
+<br>
+<br>
 
-\vspace{1.8in}
+
+# 5.  What is the probability that, repeating this experiment again and again produces the same value of $\hat{p}$ or something larger? Draw a picture shading the region corresponding to this probability and use the Z-table below to approximate its value.
 
 
-**8.**
-After $n=30$ flips of the coin, you observe $18$ heads and $12$ tails. What is the value of $\hat{p}$? 
+<br>
+<br>
+<br>
+<br>
 
-\vspace{.8in}
 
-**9.**
-How far away from the expected value (or mean) of the sampling distribution of the sample proportions is the estimate in question 8? 
-\vspace{1in}
 
-**10.** What is the probability that, repeating this experiment again and again produces the same value of $\hat{p}$ or something larger? Draw a picture and specify the R code you would use to calculate this probability. 
+![](./images/wk7-ztable.png)
+
+
+
+
+*** 
+
+
+TO DELETE
+
+Ask class: each coin represents a random variable. specify possibilities and probabilities. 
+
+then conduct simulation exercise to have class demonstrate that RVs can't just be added together or multiplied
+
+One Group represent RV X1, indep of second Group representing RV X2. Each flip their own "group" coin (say 15 times each). identify the probability model and expected heads. Calculate separate sample means, then add together, $\bar{x}_1 + \bar{x}_2$
+
+Then add together and flip coin or use simulator again (simplicity benefit flip coin) and count expected wins, $\bar{y}$
+and laws of expectation and variance and covariance 
+
+[can do similar thing with standard deviations. be careful about theory world $E(Y) = E(X_1+X+2) = E(X_1) +E(X_2)]$ vs observable real world with samples, particular instances of RVs, not the actual RVs themselves 
+
+```{r}
+#set.seed(101)
+X1 <- rbinom(n=1, size = 14, p=0.5)
+X2 <- rbinom(n=1, size = 14, p=0.5)
+mean(X1) + mean(X2)
+
+
+Y <- rbinom(n=1, size = 14, p=0.5) + rbinom(n=1, size = 14, p=0.5)
+mean(Y)
+```
+
+
+
+
