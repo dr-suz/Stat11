@@ -100,3 +100,88 @@ mean airfare to France is $\$500$, with a standard deviation of $\$100$.
 <br>
 <br>
 <br>
+
+
+***
+
+# Part 1 
+
+![](./images/wk6-spotthefake.png)
+# Part 2 
+
+Each student flip a coin 30 times and note the number of heads. Have each student repeat. this process again so there are a total of at least 50 observations of the number of heads in 30 flips. Using data from the entire class construct a dotplot of the observed values. 
+
+
+After looking at the dotplot created in class, reconsider your answer to the first question. For each of the three students, explain why you now think they did or did not actually do the experiment. 
+
+
+# Probability Misconceptions
+
+![](./images/wk6-prob-misconception.png)
+
+1. If a fair die is rolled five times, which of the following sequences is most likely to result?
+
+a. 2 6 1 5 3
+b. 6 4 2 1 5
+c. 2 4 4 4 4
+d. 2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
+e. 2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
+
+
+2. If you flip a fair coin and get heads 5 times in a row, what is the chance of getting tails on the next flip?
+
+a. Greater than 0.5
+b. 0.5
+c. Less than 0.5
+
+
+3. Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10
+blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball
+at random from each box, are you more likely to choose a blue ball from Box 1 or Box 2?
+
+
+4. Suppose a fair coin will be flipped twice. Consider the following three events:
+
+A: 0 heads are observed
+B: 1 head is observed
+C: 2 heads are observed
+
+Which of the following in true?
+a. P(A) < P(B) < P(C)
+b. P(A) = P(B) = P(C)
+c. P(B) is greater than P(A) and P(B)
+ 
+5.Think about the following two probabilities:
+
+1. The probability that a man that is over 6 feet tall is a professional basketball player
+2. The probability that a man is over 6 feet tall given that he is a professional
+basketball player
+
+Which of the following is true?
+
+a. Probability 1 is greater than probability 2
+b. Probability 2 is greater than probability 1
+c. The two probabilities are equal
+
+
+6. Think about the following two probabilities:
+1. The probability that a randomly selected adult American likes to surf
+2. The probability that a randomly selected adult American lives in California and likes
+to surf
+
+Which of the following is true?
+
+a. Probability 1 is greater than probability 2
+b. Probability 2 is greater than probability 1
+c. The two probabilities are equal
+
+7. Suppose that 78% of the students at a particular college have a Facebook account and 43%
+have a Twitter account.
+
+a) Using only this information, what is the largest possible value for the percentage who
+have both a Facebook account and a Twitter account? Describe the (unrealistic)
+situation in which this occurs.
+
+b) Using only this information, what is the smallest possible value for the percentage who
+have both a Facebook account and a Twitter account? Describe the (unrealistic)
+situation in which this occurs.
