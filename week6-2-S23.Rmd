@@ -68,38 +68,30 @@ var(SRS_discrete_pop)
 R4.8, R4.10, R4.19 practical example with insurance deductibles [good examples to include in class notes]
 
 
-##-----------------------
+# Example: The Drake Equation 
 
-1.	If a fair die is rolled five times, which of the following sequences is most likely to result?
+In 1961 astronomer Frank Drake developed an equation to try to estimate the number of extraterrestrial civilizations in our galaxy that might be able to communicate with us via radio transmissions. Now largely accepted by the scientific community, the Drake equation has helped spur efforts by radio astronomers to search for extraterrestrial intelligence. Here is the equation:
+$$N_{C} = N \cdot f_p \cdot n_e\cdot f_l \cdot f_i \cdot f_{c} \cdot f_{L}.$$
+OK, it looks a little messy, but here’s what it means:
 
-a)	2 6 1 5 3
-b)	6 4 2 1 5
-c)	2 4 4 4 4
-d)	2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
-e)	2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
+!()[./images/wk6-drake-eqn.png]
 
-2.	If you flip a fair coin and get heads 5 times in a row, what is the chance of getting tails on the next flip?
 
-a) Greater than 0.5
-b) 0.5
-b) Less than 0.5
+So, how many ETs are out there? That depends; values chosen for the many factors in the equation depend on ever-evolving scientific knowledge and one’s personal guesses. But now, some questions.
 
-3.	Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball at random from each box, which of the following are more likely 
+What quantity is calculated by 
+(a) the first product, $N \cdot f_p$?
 
-a)	You choose a blue ball from Box 1. 
-b)	You choose a blue ball from Box 2.
-c)	There is no way to tell. 
+(b) the product, $N \cdot f_p \cdot n_e \cdot f_l$?
 
-4.	Suppose a fair coin will be flipped twice. Consider the following three events:
-A: 0 heads are observed
-B: 1 head is observed
-C: 2 heads are observed
-Which of the following is true?
+What probability is calculated by the product $f_l \cdot f_i$? 
 
-a)	P(A) $<$ P(B) $<$ P(C)
-b)	P(A) = P(B) = P(C)
-c)	P(B) is greater than P(A) and P(B)
-d)	None of the above. 
+Which of the factors in the formula are conditional probabilities? Restate each in a way that makes the condition clear.
+
+
+# Probability Misconceptions
+
+![](./images/wk6-prob-misconception.png)
 
 
 5.	Think about the following two probabilities:
@@ -122,3 +114,35 @@ a)	Probability 1 is greater than probability 2.
 b)	Probability 2 is greater than probability 1.
 c)	The two probabilities are equal.
 d)	It is impossible to tell. 
+
+
+7. Suppose that 78% of the students at a particular college have a Facebook account and 43%
+have a Twitter account.
+
+a) Using only this information, what is the largest possible value for the percentage who
+have both a Facebook account and a Twitter account? Describe the (unrealistic)
+situation in which this occurs.
+
+b) Using only this information, what is the smallest possible value for the percentage who
+have both a Facebook account and a Twitter account? Describe the (unrealistic)
+situation in which this occurs.
+
+If a fair die is rolled five times, which of the following sequences is most likely to result?
+
+a. 2 6 1 5 3
+b. 6 4 2 1 5
+c. 2 4 4 4 4
+d. 2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
+e. 2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
+
+
+Have every individual student flip a coin 4 times. Find someone who gets 4 heads in a row. Ask students what is the chance that that student gets a tail on the next flip.
+
+Have groups flip a coin 3 times and record the results. Then determine of any of the results are more rare than the others. 
+
+
+
+3. Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10
+blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball
+at random from each box, are you more likely to choose a blue ball from Box 1 or Box 2?
+

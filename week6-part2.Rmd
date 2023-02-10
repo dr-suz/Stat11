@@ -183,3 +183,23 @@ Then use this table to calculate the probability that one of these individuals a
 You will be looking at another group's answers to determine which were incorrect. Identify (write on their worksheet)
  which probability misconception may have been involved. 
  
+ 
+# Example: The Drake Equation 
+
+In 1961 astronomer Frank Drake developed an equation to try to estimate the number of extraterrestrial civilizations in our galaxy that might be able to communicate with us via radio transmissions. Now largely accepted by the scientific community, the Drake equation has helped spur efforts by radio astronomers to search for extraterrestrial intelligence. Here is the equation:
+$$N_{C} = N \cdot f_p \cdot n_e\cdot f_l \cdot f_i \cdot f_{c} \cdot f_{L}.$$
+OK, it looks a little messy, but here’s what it means:
+
+!()[./images/wk6-drake-eqn.png]
+
+So, how many ETs are out there? That depends; values chosen for the many factors in the equation depend on ever-evolving scientific knowledge and one’s personal guesses. But now, some questions.
+
+What quantity is calculated by 
+(a) the first product, $N \cdot f_p$?
+
+(b) the product, $N \cdot f_p \cdot n_e \cdot f_l$?
+
+What probability is calculated by the product $f_l \cdot f_i$? 
+
+Which of the factors in the formula are conditional probabilities? Restate each in a way that makes the condition clear.
+ 

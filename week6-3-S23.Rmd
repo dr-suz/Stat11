@@ -29,3 +29,16 @@ Click this link to view the [worksheet for experiments with random variables](ht
 
 
 
+
+# Possible additional material 
+
+
+![](./images/wk6-spotthefake.png)
+
+
+Each student flip a coin 30 times and note the number of heads. Have each student repeat. this process again so there are a total of at least 50 observations of the number of heads in 30 flips. Using data from the entire class construct a dotplot of the observed values. 
+
+
+After looking at the dotplot created in class, reconsider your answer to the first question. For each of the three students, explain why you now think they did or did not actually do the experiment. 
+
+
