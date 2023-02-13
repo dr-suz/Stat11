@@ -14,33 +14,81 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-Unit 1 topics 
+# Unit 1 topics 
 
 * Exploring and understanding data
 
 * Exploring and understanding relationships between variables
 
+
 # Week 1 - Visualizing and summarizing data 
 
-Categorical or numeric 
 
-observational units 
+* Data 
 
-sample statistics 
+  * Observational units 
+
+  * Variables - categorical or numeric - and their distributions 
+
+* Analysis 
+
+  * Confirmatory or exploratory 
+
+  * Sample statistics 
+  
+## For categorical variables 
+
+* Contingency tables and independence 
+
+* <span style="color:green">Simpson's Paradox and lurking variables</span> 
+
+# Week 2 - Describing distributions of numeric variables with variance 
 
 
-# Week 2 - Describing distributions with variability 
+* Shape and measures of center and spread 
 
-Normal model 
+  * Mean vs median 
+  
+  * Variance vs IQR 
 
-variance vs IQR 
+* Normal model and the 68/95/99.7% rule 
 
-standardization 
+* Transforming variables 
+
+  * Shifts and scales 
+  
+  * Standardization 
+
+* Quantiles and quartiles  
+
+  * Normal QQ Plots 
+
 
 # Week 3 - Describing relationships between two numeric variables 
 
-SLR
+* Simple linear regression model 
 
-Correlation
+  * Predicted/fitted values and residuals 
 
-transformations
+  * Standard error of the residuals 
+
+* Correlation and the coefficient of determination 
+
+* Variable roles 
+
+* Variable transformations
+
+* <span style="color:green">Regression to the mean</span> 
+
+
+
+## Watch out for 
+
+* <span style="color:green"><span style="color:green">Extrapolation</span> 
+
+* Outliers, <span style="color:green">leverage</span>, and <span style="color:green">influence</span> 
+
+* Model assumptions met  
+
+
+

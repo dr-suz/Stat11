@@ -96,9 +96,9 @@ But, if there are over a dozen or so samples of data, comparing histograms is pr
 
 ![](./images/wk1-stacked-boxplots.png)
 
-# 3. Quantiles and percentiles  
+# 3. Quantiles and percentages  
 
-Another notable descriptive feature of a distribution are its **quantiles** and **percentiles**, although this is just a somewhat fancier way of saying its possibilities (quantiles) and probabilities (percentiles)! The five number summary of a distribution is actually a list of the five quantiles that corresponding to $0\%$, $25\%$, $50\%$, $75\%$, and $100\%$ percentiles (often called **quar**tiles since they break the data values into fourths). 
+Another notable descriptive feature of a distribution are its **quantiles/percentiles** and **percentages**, although this is just a somewhat fancier way of saying its possibilities (quantiles) and probabilities (percentiles)! The five number summary of a distribution is actually a list of the five quantiles that corresponding to $0\%$, $25\%$, $50\%$, $75\%$, and $100\%$ percentiles (often called **quar**tiles since they break the data values into fourths). 
 
 
 
