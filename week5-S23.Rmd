@@ -144,8 +144,12 @@ A CEO complains that the winners of his "rookie junior executive of the year" aw
 
 # Student Requested Examples 
 
+## Detecting independence between two categorical variables 
+
 ## Interpreting results of transformed data 
 
 ## When to use $r$ vs $R^2$? 
 
 ## Formula for the slope of a SLR 
+
+## Normal QQ Plots 
