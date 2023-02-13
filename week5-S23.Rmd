@@ -23,7 +23,6 @@ header-includes:
 
 # Week 1 - Visualizing and summarizing data 
 
-
 * Data 
 
   * Observational units 
@@ -41,6 +40,27 @@ header-includes:
 * Contingency tables and independence 
 
 * <span style="color:green">Simpson's Paradox and lurking variables</span> 
+
+## Example 
+
+Below are the batting averages for Derek Jeter and David Justice for the 1995 and 1996 seasons, as well as their combined batting averages across the two seasons. Derek Jeter has a lower batting average in both 1995 and 1996, but a higher combined average. <span style="color:blue">What’s going on here?</span>
+
+
+|  | 1995 | 1996 | Combined | 
+|:--- |:--- |:--- |:--- |
+| Derek Jeter | $0.250$ | $0.314$ | $0.310$ | 
+| David Justice | $0.253$ | $0.321$ | $0.270$ | 
+
+
+Simpson’s paradox - the imbalance of the groups that makes it possible for the overall average to be weighted differently then the trend in each subgroup. The lurking variable that we couldn't see if we just reported the proportions as in the table above is the number of times each player went up to bat in each year.
+
+
+|  | 1995 | 1996 | Combined | 
+|:--- |:--- |:--- |:--- |
+| Derek Jeter | $0.250 = 12/48$ | $0.314=183/582$ | $0.310 = 195/630$ | 
+| David Justice | $0.253=104/411$ | $0.321=45/140$ | $0.270=149/551$ | 
+
+
 
 # Week 2 - Describing distributions of numeric variables with variance 
 
@@ -63,6 +83,14 @@ header-includes:
 
   * Normal QQ Plots 
 
+## Example 
+
+Corey has 4929 songs in his computer's music library. The lengths of the songs have a mean of 242.4 seconds and standard deviation of 114.51 seconds with the accompanying Normal probability plot of song lengths.
+
+![](./images/wk5-qqplot.png)
+
+<span style="color:purple">Q: Is this distribution Normal? If not, how does it differ from a Normal model?</span>
+
 
 # Week 3 - Describing relationships between two numeric variables 
 
@@ -80,6 +108,17 @@ header-includes:
 
 * <span style="color:green">Regression to the mean</span> 
 
+## Example 
+
+A CEO complains that the winners of his "rookie junior executive of the year" award often turn out to have less impressive performance the following year. He wonders whether the award actually encourages them to slack off. 
+
+<span style="color:purple">Q: What is a better explanation for why the winners of the "rookie junior executive of the year" award often turn out to have less impressive performance the following year?</span>
+
+
+## Example 
+
+<span style="color:purple">Q: An online investment blogger advises investing in mutual funds that have performed badly the past year because "regression to the mean tells us that they will do well next year." Is she correct?</span> 
+
 
 
 ## Watch out for 
@@ -88,7 +127,18 @@ header-includes:
 
 * Outliers, <span style="color:green">leverage</span>, and <span style="color:green">influence</span> 
 
+  * Outliers don't seem to follow the trend of the majority of the data points. 
+  
+  * Leverage points are outliers with respect to the $x$-axis only  
+  
+  * Influential points are those data points that can drastically change the slope or intercept of the regression equation 
+
 * Model assumptions met  
 
+  * Linearity 
+  
+  * No outliers 
+  
+  * No thickening or thinning 
 
 
