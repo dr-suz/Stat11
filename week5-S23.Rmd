@@ -142,3 +142,10 @@ A CEO complains that the winners of his "rookie junior executive of the year" aw
   * No thickening or thinning 
 
 
+# Student Requested Examples 
+
+## Interpreting results of transformed data 
+
+## When to use $r$ vs $R^2$? 
+
+## Formula for the slope of a SLR 
