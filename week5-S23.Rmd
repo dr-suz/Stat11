@@ -156,23 +156,43 @@ From pg 82 of your textbook: "variables are said to be independent if the condit
 
 ### 1. Comparing athletes' performance 
 
+**200 $m$ race** $(x_1, \dots x_n)$
+
+$\bar{x} =24.58s , \quad sd(x_1, \dots, x_n) = 0.654s$
+
+Johnson-Thompson's time: $23.26s$
+
+**Long jump** $(y_1, \dots, y_m)$ 
+
+$\bar{y} = 6.17m , \quad sd(y_1, \dots, y_m) = 0.247m$ 
+
+Thiam's distance: $6.58m$
 
 ### 2. Transformations in SLR models 
 
 
 Recall our in-class example of fitting a SLR model to predict gator weight based on the length of alligators in areal photographs. 
 
-The fitted regression equation was: $\hat{y}_i =$. Plotting the regression equation on top of the scatterplot of the original data indicates there is a problem with the assumption of a linear relationship between the variables length (in inches on a photograph) and weight (in lbs). 
+The fitted regression equation was: $\hat{weight}_i = -393.26 + 5.90(length)$. Plotting the regression equation on top of the scatterplot of the original data indicates there is a problem with the assumption of a linear relationship between the variables length (in inches on a photograph) and weight (in lbs). 
 
 ```{r}
+gators = read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Gators.csv")
 
+mod1 = lm(Weight.lbs. ~ Length.in., gators) 
+summary(mod1)
 
+plot(x=gators$Length.in., y=gators$Weight.lbs., xlab = "Length (in)", ylab="Weight (lbs)", main= "Original gator data")
+abline(mod1, col="red")
 ```
 
-Many of you explored this data further and discovered that a logarithmic transformation of the variable *inches* produces a scatterplot with a more linear trend. The fitted regression equation for the transformed data was: $\hat{y}_i = \ln (x_i)$. The plot of the transformed data and fitted regression equation looks like a much better fit for a linear model. 
+Many of you explored this data further and discovered that a logarithmic transformation of the variable *inches* produces a scatterplot with a more linear trend. The fitted regression equation for the transformed data was: $\hat{\ln(weight)}_i = 1.34 + 0.04(length_i)$. The plot of the transformed data and fitted regression equation looks like a much better fit for a linear model. 
 
 ```{r}
+mod2 = lm(log(Weight.lbs.) ~ Length.in., gators) 
+summary(mod2)
 
+plot(x=gators$Length.in., y=log(gators$Weight.lbs.), xlab = "Length (in)", ylab="log Weight (ln(lbs))", main= "Transformed gator data")
+abline(mod2, col="red")
 ```
 
 ## Questions about SLR modeling 
@@ -185,14 +205,14 @@ Many of you explored this data further and discovered that a logarithmic transfo
 
 * Both $r$ and $R^2$ are numerical summaries of strength of a relationship between two numeric variables; however, these summaries are only appropriate if the trend between the variables is **linear**. 
 
-* In the gator model above, the regression model for the original data has a correlation coefficient of $x$ and an $R^2$ value of $x$. The regression model for the transformed data has a correlation coefficient of $x$ and an $R^2$ value of $x$. 
+* In the gator model above, the regression model for the original data has a correlation coefficient of `r cor(gators$Length.in., gators$Weight.lbs.)` and an $R^2$ value of `r summary(mod1)$r.squared`. The regression model for the transformed data has a correlation coefficient of `r cor(gators$Length.in., log(gators$Weight.lbs.))` and an $R^2$ value of `r summary(mod1)$r.squared`. 
 
 ### 2. Formula for the slope of a SLR 
 
-In the gator model above, the slope of the regression model for the original data is $x$ which means that, based on this model, each additional inch of length (in the areal photograph), corresponds to an additional weight of $xlbs$.  
+In the gator model above, the slope of the regression model for the original data is $5.90$ which means that, based on this model, each additional inch of length (in the areal photograph), corresponds to an additional weight of $5.9 lbs$.  
 
 
-The slope of the regression model for the transformed data is a little more complicated to interpret. The slope of $x$ means that, based on this model, each additional logarithm of an inch of length (in the areal photograph) corresponds to an additional weight of $xlbs$. Since it is difficult to think in terms of logarithm of inches, we would most likely want to report the interpretation of the slope within the context of the original units of the data.  
+The slope of the regression model for the transformed data is a little more complicated to interpret. The slope of $0.04$ means that, based on this model, each additional inch of length (in the areal photograph) corresponds to an average increase in log(weight) of $0.04 \ln (lbs)$. (Note that since it is difficult to think in terms of logarithm of $lbs$, we would most likely want to report the interpretation of the slope within the context of the original units of the data. That is, each additional inch corresponds to a multiplicative increase in weight by `r exp(0.04)` $lbs$.)   
 
 
 ### 3. Normal QQ Plots to assess residuals 
@@ -200,13 +220,15 @@ The slope of the regression model for the transformed data is a little more comp
 A Normal QQ plot of the residuals for the regression model of the original gator data is shown below. 
 
 ```{r}
-
+qqnorm(mod1$residuals)
+qqline(mod1$residuals)
 ```
 
 A Normal QQ plot of the residuals for the regression model of the transformed gator data is shown next.  
 
 ```{r}
-
+qqnorm(mod2$residuals)
+qqline(mod2$residuals)
 ```
 
 Ideally, we'd see an rather strong linear trend between the sample quantiles of the residuals and the theoretical residuals from a standard Normal distribution. 
