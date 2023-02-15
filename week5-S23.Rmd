@@ -144,12 +144,69 @@ A CEO complains that the winners of his "rookie junior executive of the year" aw
 
 # Student Requested Examples 
 
-## Detecting independence between two categorical variables 
+## Contingency tables for two categorical variables 
+
+### 1. Determining independence 
+
+
 
 ## Interpreting results of transformed data 
 
-## When to use $r$ vs $R^2$? 
+### 1. Comparing athletes' performance 
 
-## Formula for the slope of a SLR 
 
-## Normal QQ Plots 
+### 2. Transformations in SLR models 
+
+
+Recall our in-class example of fitting a SLR model to predict gator weight based on the length of alligators in areal photographs. 
+
+The fitted regression equation was: $\hat{y}_i =$. Plotting the regression equation on top of the scatterplot of the original data indicates there is a problem with the assumption of a linear relationship between the variables length (in inches on a photograph) and weight (in lbs). 
+
+```{r}
+
+
+```
+
+Many of you explored this data further and discovered that a logarithmic transformation of the variable *inches* produces a scatterplot with a more linear trend. The fitted regression equation for the transformed data was: $\hat{y}_i = \ln (x_i)$. The plot of the transformed data and fitted regression equation looks like a much better fit for a linear model. 
+
+```{r}
+
+```
+
+## Questions about SLR modeling 
+
+### 1. When to use $r$ vs $R^2$? 
+
+* The only difference between $r$ and $R^2$ for SLR models is that $r$ indicates not only the strength of a linear trend but also the direction of the trend. 
+
+* $R^2$ has a convenient interpretation as the proportion of variation in the response, $Y$, that is explained by (or accounted for by) the predictor, $X$. 
+
+* Both $r$ and $R^2$ are numerical summaries of strength of a relationship between two numeric variables; however, these summaries are only appropriate if the trend between the variables is **linear**. 
+
+* In the gator model above, the regression model for the original data has a correlation coefficient of $x$ and an $R^2$ value of $x$. The regression model for the transformed data has a correlation coefficient of $x$ and an $R^2$ value of $x$. 
+
+### 2. Formula for the slope of a SLR 
+
+In the gator model above, the slope of the regression model for the original data is $x$ which means that, based on this model, each additional inch of length (in the areal photograph), corresponds to an additional weight of $xlbs$.  
+
+
+The slope of the regression model for the transformed data is a little more complicated to interpret. The slope of $x$ means that, based on this model, each additional logarithm of an inch of length (in the areal photograph) corresponds to an additional weight of $xlbs$. Since it is difficult to think in terms of logarithm of inches, we would most likely want to report the interpretation of the slope within the context of the original units of the data.  
+
+
+### 3. Normal QQ Plots to assess residuals 
+
+A Normal QQ plot of the residuals for the regression model of the original gator data is shown below. 
+
+```{r}
+
+```
+
+A Normal QQ plot of the residuals for the regression model of the transformed gator data is shown next.  
+
+```{r}
+
+```
+
+Ideally, we'd see an rather strong linear trend between the sample quantiles of the residuals and the theoretical residuals from a standard Normal distribution. 
+
+

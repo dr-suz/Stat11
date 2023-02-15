@@ -1569,17 +1569,23 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+content: "";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "\e258";
-font-family: 'Glyphicons Halflings';
+content: "";
 border: none;
+}
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "";
+font-family: 'Glyphicons Halflings';
+display: inline-block;
+padding: 10px;
+border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1806,20 +1812,76 @@ change the slope or intercept of the regression equation</p></li>
 </div>
 <div id="student-requested-examples" class="section level1">
 <h1>Student Requested Examples</h1>
-<div id="detecting-independence-between-two-categorical-variables" class="section level2">
-<h2>Detecting independence between two categorical variables</h2>
+<div id="contingency-tables-for-two-categorical-variables" class="section level2">
+<h2>Contingency tables for two categorical variables</h2>
+<div id="determining-independence" class="section level3">
+<h3>1. Determining independence</h3>
+</div>
 </div>
 <div id="interpreting-results-of-transformed-data" class="section level2">
 <h2>Interpreting results of transformed data</h2>
+<div id="comparing-athletes-performance" class="section level3">
+<h3>1. Comparing athletes’ performance</h3>
 </div>
-<div id="when-to-use-r-vs-r2" class="section level2">
-<h2>When to use <span class="math inline">\(r\)</span> vs <span class="math inline">\(R^2\)</span>?</h2>
+<div id="transformations-in-slr-models" class="section level3">
+<h3>2. Transformations in SLR models</h3>
+<p>Recall our in-class example of fitting a SLR model to predict gator
+weight based on the length of alligators in areal photographs.</p>
+<p>The fitted regression equation was: <span class="math inline">\(\hat{y}_i =\)</span>. Plotting the regression
+equation on top of the scatterplot of the original data indicates there
+is a problem with the assumption of a linear relationship between the
+variables length (in inches on a photograph) and weight (in lbs).</p>
+<p>Many of you explored this data further and discovered that a
+logarithmic transformation of the variable <em>inches</em> produces a
+scatterplot with a more linear trend. The fitted regression equation for
+the transformed data was: <span class="math inline">\(\hat{y}_i = \ln
+(x_i)\)</span>. The plot of the transformed data and fitted regression
+equation looks like a much better fit for a linear model.</p>
 </div>
-<div id="formula-for-the-slope-of-a-slr" class="section level2">
-<h2>Formula for the slope of a SLR</h2>
 </div>
-<div id="normal-qq-plots" class="section level2">
-<h2>Normal QQ Plots</h2>
+<div id="questions-about-slr-modeling" class="section level2">
+<h2>Questions about SLR modeling</h2>
+<div id="when-to-use-r-vs-r2" class="section level3">
+<h3>1. When to use <span class="math inline">\(r\)</span> vs <span class="math inline">\(R^2\)</span>?</h3>
+<ul>
+<li><p>The only difference between <span class="math inline">\(r\)</span> and <span class="math inline">\(R^2\)</span> for SLR models is that <span class="math inline">\(r\)</span> indicates not only the strength of a
+linear trend but also the direction of the trend.</p></li>
+<li><p><span class="math inline">\(R^2\)</span> has a convenient
+interpretation as the proportion of variation in the response, <span class="math inline">\(Y\)</span>, that is explained by (or accounted for
+by) the predictor, <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Both <span class="math inline">\(r\)</span> and <span class="math inline">\(R^2\)</span> are numerical summaries of strength
+of a relationship between two numeric variables; however, these
+summaries are only appropriate if the trend between the variables is
+<strong>linear</strong>.</p></li>
+<li><p>In the gator model above, the regression model for the original
+data has a correlation coefficient of <span class="math inline">\(x\)</span> and an <span class="math inline">\(R^2\)</span> value of <span class="math inline">\(x\)</span>. The regression model for the
+transformed data has a correlation coefficient of <span class="math inline">\(x\)</span> and an <span class="math inline">\(R^2\)</span> value of <span class="math inline">\(x\)</span>.</p></li>
+</ul>
+</div>
+<div id="formula-for-the-slope-of-a-slr" class="section level3">
+<h3>2. Formula for the slope of a SLR</h3>
+<p>In the gator model above, the slope of the regression model for the
+original data is <span class="math inline">\(x\)</span> which means
+that, based on this model, each additional inch of length (in the areal
+photograph), corresponds to an additional weight of <span class="math inline">\(xlbs\)</span>.</p>
+<p>The slope of the regression model for the transformed data is a
+little more complicated to interpret. The slope of <span class="math inline">\(x\)</span> means that, based on this model, each
+additional logarithm of an inch of length (in the areal photograph)
+corresponds to an additional weight of <span class="math inline">\(xlbs\)</span>. Since it is difficult to think in
+terms of logarithm of inches, we would most likely want to report the
+interpretation of the slope within the context of the original units of
+the data.</p>
+</div>
+<div id="normal-qq-plots-to-assess-residuals" class="section level3">
+<h3>3. Normal QQ Plots to assess residuals</h3>
+<p>A Normal QQ plot of the residuals for the regression model of the
+original gator data is shown below.</p>
+<p>A Normal QQ plot of the residuals for the regression model of the
+transformed gator data is shown next.</p>
+<p>Ideally, we’d see an rather strong linear trend between the sample
+quantiles of the residuals and the theoretical residuals from a standard
+Normal distribution.</p>
+</div>
 </div>
 </div>
 
