@@ -1,0 +1,322 @@
+---
+title: "Quiz 1"
+author: "STAT011 with Prof Suzy"
+date: "Feb 17, 2023"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+\vspace{4mm}
+**Name:** _____________________________________
+
+\vspace{1cm}
+**Instructions:**  
+\vspace{1cm}
+
+
+
+**X.** A university is interested in gauging student satisfaction in its online MBA program. A survey is designed and administered via the Internet to a sample of students currently active in the program. Which of the following would best describe the cases?
+
+(a) Variables 
+
+(b) Subjects 
+
+(c) Participants 
+
+(d) Experimental units 
+
+(e) Respondents 
+
+
+**X.** Researchers in e-commerce design an experiment to determine what factors are most important to online consumers when completing a transaction via the Internet. Individuals perform tasks on a set of Web sites and record their impressions about various attributes. Which of the following would best describe the cases?
+
+(a) Identifiers 
+
+(b) Participants 
+
+(c) Variables 
+
+(d) Respondents 
+
+(e) Experimental units 
+
+
+**X.** A clothing store uses comment cards to get feedback from its customers about newly added items. It recently introduced plus size fashion wear. Customers who purchased the items were asked to fill out an online comment survey giving $10\%$ off the next purchase. The data are summarized in the table below. What percentage of customers were at least satisfied with the item(s) purchased (Satisfied or Very satisfied)?
+
+| Response | Frequency | 
+| --- | --- |
+| Very satisfied | 15 |
+| Satisfied | 30 |
+| Less than fully satisfied | 12 |
+| Not satisfied | 4 |
+
+(a) $68.9\%$
+
+(b) $73.8\%$
+
+(c) $49.2\%$ 
+
+(d) $26.2\%$ 
+
+(e) $24.5\%$ 
+
+
+
+**X.** Which is TRUE of the data shown in the histogram below?
+
+![](stat11/images/Q1_hist.png)
+
+I. The distribution is skewed to the right.
+II. The mean is probably smaller than the median.
+III. We should use median and IQR to summarize these data.
+
+(a) I only 
+
+(b) II only 
+
+(c) III only 
+
+(d) II and III only 
+
+(e) I, II, and III
+
+
+
+**X.** A regional survey was carried out to gauge public opinion on the controversial Arizona Immigration Law (results shown below). What percent oppose the law? 
+
+| Response | Democrat | Republican | Independent | 
+|:--- |:--- |:--- |:--- |
+| Favor | 50 | 93 | 35 |
+| Oppose | 85 | 45 | 60 | 
+| Don't know | 5 | 7 | 20 | 
+
+
+(a) $45\%$
+
+(b) $48\%$ 
+
+(c) $25\%$ 
+
+(d) $61\%$ 
+
+(e) $32\%$ 
+
+
+
+**X.** The following boxplots show the closing share prices for a sample of technology companies on the first trading days in August 2007 and in August 2002. 
+
+![](stat11/images/Q1_boxplots.png)
+
+Which of the following statements is TRUE?
+
+
+(a) The median closing share price is higher in August 2007 compared to August 2002. 
+
+(b) Closing prices are more variable in August 2007 compared to August 2002.
+
+(c) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
+
+(d) Both A and B
+
+(e) All of the above
+
+
+**X.** The boxplots show prices of used cars (in thousands of dollars) advertised for sale at three different car dealers. 
+
+![](stat11/images/Q1_boxplots2.png)
+
+Which dealer has the smallest price range, and what is it?
+
+(a) BuyIt: \$5000
+ 
+(b) CarZ:  \$8000
+
+(c) Ace: \$10000
+
+(d) CarZ: \$11000
+
+(e) Cannot say for the boxplots only 
+
+
+**X.** A company's manufacturing process uses 500 gallons of water at a time. A "scrubbing" machine then removes most of a chemical pollutant before pumping the water into a nearby lake. To meet federal regulations the treated water must not contain more than 80 parts per million (ppm) of the chemical. Because a fine is charged if regulations are not met, the company sets the machine to attain an average of 75 ppm in the treated water. The machine's output can be described by a normal model with standard deviation 4.2 ppm. What percent of the batches of water discharged exceed the 80 ppm standard?
+
+(a) $3.89\%$ 
+
+(b) $11.7\%$ 
+
+(c) $8.83\%$ 
+
+(d) $1.17\%$ 
+
+(e) $88.3\%$ 
+
+
+
+**X.** Based on data collected from its production processes, Crosstiles Inc. determines that the breaking strength of its most popular porcelain tile is normally distributed with a mean of 400 pounds per square inch and a standard deviation of 12.5 pounds per square inch. Based on the 68-95-99.7 Rule, about what percent of its popular porcelain tile will have breaking strengths between 375 and 425 pounds per square inch? 
+
+(a) $32\%$
+
+(b) $68\%$  
+
+(c) $84\%$ 
+
+(d) $47.5\%$ 
+
+(e) $95\%$ 
+
+
+
+**X.** At a local manufacturing plant, employees must complete new machine set ups within 30 minutes. New machine set-up times can be described by a normal model with a mean of 22 minutes and a standard deviation of four minutes. What percent of new machine set ups take more than 30 minutes?
+
+(a) $2.28\%$ 
+
+(b) $47.72\%$ 
+
+(c) $52.28\%$
+
+(d) $97.72\%$
+
+(e) none of the above 
+
+
+**X.** The time it takes to process phone orders in a small florist/gift shop is normally distributed with a mean of 6 minutes and a standard deviation of 1.24 minutes. What cutoff value would separate the 2.5\% of orders that take the most time to process?
+
+(a) 4.76 minutes 
+
+(b) 10.01 minutes 
+
+(c) 3.52 minutes 
+
+(d) 8.48 minutes 
+
+(e) 11.98 minutes 
+
+
+**X.** All but one of the statements below contain a mistake. Which one could be TRUE? 
+
+(a) The correlation between your golf score and the number of hours you practice is 0.36. 
+
+(b) The number of apricots on a tree and the amount of fertilizer have a 1.12 correlation. 
+
+(c) There is a strong correlation between type of preferred pet and income level.
+
+(d) The correlation between the height of a bean plant and the day is 0.78 in/day. 
+
+
+**X.** A company's sales increase by the same amount each year. This growth is ________
+
+(a) exponential 
+
+(b) logarithmic 
+
+(c) power 
+
+(d) linear 
+
+(e) quadratic 
+
+
+**X.** A regression analysis of company profits and the amount of money the company spent on advertising found $r^2 =0.72$. Which of these is TRUE? 
+
+I. This model can correctly predict the profit for $72\%$ of companies. 
+
+II. On average, about $72\%$ of a company's profit results from advertising. 
+
+III. On average, companies spend about $72\%$ of their profits on advertising.
+
+(a) none 
+
+(b) I only 
+
+(c) II only 
+
+(d) III only 
+
+(e) I and III 
+
+
+**X.** A small independent organic food store offers a variety of specialty coffees. To determine whether price has an impact on sales, the managers kept track of how many pounds of each variety of coffee were sold last month. Based on the data and summary statistics, what is the intercept of the estimated regression line that relates the response variable (monthly sales) to the predictor variable (price per pound)?
+
+![](stat11/images/Q1_table.png)
+
+(a) $-0.858$
+
+(b) $-4.684$ 
+
+(c) $95.459$ 
+
+(d) $0.858$ 
+
+(e) $-8.999$ 
+
+
+**X.** The residuals plot for a linear model is shown. Which is TRUE? 
+
+![](stat11/images/Q1_residuals.png)
+
+(a) The linear model is no good since some residuals are large. 
+
+(b) The linear model is okay because the association between the two variables is fairly strong.
+
+(c) The linear model is no good since the correlation is near 0.
+
+(d) The linear model is okay because approximately the same number of points are above the line as below it.
+
+(e) The linear model is no good because of the curve in the residuals.
+
+
+**X.** Data were collected on monthly sales revenues (in \$1,000s) and monthly advertising expenditures (\$100s) for a sample of drug stores. The regression line relating revenues $(Y)$ to advertising expenditure $(X)$ is estimated to be $\hat{y}_{i} = -48.3 + 9.00x_i$. What is the correct interpretation of the slope?
+
+
+(a) For every \$100 spent on advertising, predicted sales revenue decreases by \$9,000.
+
+(b) For every \$100 spent on advertising, predicted sales revenue increases by \$9,000.
+
+(c) For every \$1,000 in sales revenue, advertising expenditures decrease by \$48.30.
+
+(d) For every \$1 spent on advertising, predicted sales revenue increases by \$9,000.
+
+(e) For every \$100 in sales revenue, advertising expenditures decrease by \$48.30.
+
+
+
+**X.** If a data point is influential, then which of the following is TRUE?
+
+(a) It is guaranteed to be extreme in the horizontal direction.
+
+(b) It is guaranteed to be extreme in the vertical direction.
+
+(c) It has a small residual. 
+
+(d) It will change the slope of the regression equation.
+
+(e) none of these
+
+
+
+**X.** A residual plot that has no pattern is a sign of what?
+
+(a) The original data is curved and the regression line is a good model. 
+
+(b) The original data is curved and the regression line is not a good model. 
+
+(c) The model is not a good one, because there is no pattern. 
+
+(d) The original data is straight and the regression line is not a good model. 
+
+(e) The original data is straight and the regression line is a good model. 
+
+
+**X.** Which of the following is NOT a goal of re-expressing data? 
+
+(a) Make the distribution of a variable more symmetric. 
+
+(b) Make the form of a scatterplot more nearly linear. 
+
+(c) Make the scatter in a scatterplot spread out evenly rather than following a fan shape. 
+
+(d) Make the spread of several groups more alike. 
+
+(e) All of these are goals of re-expressing data. 
+
+
