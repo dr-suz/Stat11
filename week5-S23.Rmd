@@ -205,7 +205,7 @@ abline(mod2, col="red")
 
 * Both $r$ and $R^2$ are numerical summaries of strength of a relationship between two numeric variables; however, these summaries are only appropriate if the trend between the variables is **linear**. 
 
-* In the gator model above, the regression model for the original data has a correlation coefficient of `r cor(gators$Length.in., gators$Weight.lbs.)` and an $R^2$ value of `r summary(mod1)$r.squared`. The regression model for the transformed data has a correlation coefficient of `r cor(gators$Length.in., log(gators$Weight.lbs.))` and an $R^2$ value of `r summary(mod1)$r.squared`. 
+* In the gator model above, the regression model for the original data has a correlation coefficient of `r cor(gators$Length.in., gators$Weight.lbs.)` and an $R^2$ value of `r summary(mod1)$r.squared`. The regression model for the transformed data has a correlation coefficient of `r cor(gators$Length.in., log(gators$Weight.lbs.))` and an $R^2$ value of `r summary(mod2)$r.squared`. 
 
 ### 2. Formula for the slope of a SLR 
 

@@ -1569,17 +1569,23 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+content: "";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "\e258";
-font-family: 'Glyphicons Halflings';
+content: "";
 border: none;
+}
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "";
+font-family: 'Glyphicons Halflings';
+display: inline-block;
+padding: 10px;
+border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1914,7 +1920,7 @@ summaries are only appropriate if the trend between the variables is
 data has a correlation coefficient of 0.9144007 and an <span class="math inline">\(R^2\)</span> value of 0.8361287. The regression
 model for the transformed data has a correlation coefficient of
 0.9798302 and an <span class="math inline">\(R^2\)</span> value of
-0.8361287.</p></li>
+0.9600673.</p></li>
 </ul>
 </div>
 <div id="formula-for-the-slope-of-a-slr" class="section level3">
