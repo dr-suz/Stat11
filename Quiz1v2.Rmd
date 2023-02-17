@@ -8,173 +8,283 @@ output:
 \vspace{4mm}
 **Name:** _____________________________________
 
+
 # Part 1: Multiple Choice
 
-**X.** Which is TRUE of the data shown in the histogram below?
+**1.** Which is TRUE of the data shown in the histogram below?
 
 ![](./images/Q1_hist.png){height=1.2in}
 
-I. The distribution is skewed to the right.
-II. The mean is probably smaller than the median.
+I. The mean is probably smaller than the median.
+
+II. The distribution is skewed to the right.
+
 III. We should use median and IQR to summarize these data.
 
+\vspace{.5cm}
 (a) I only 
+\vspace{.5cm}
 
 (b) II only 
+\vspace{.5cm}
 
 (c) III only 
+\vspace{.5cm}
 
 (d) II and III only 
+\vspace{.5cm}
 
 (e) I, II, and III
 
+\vspace{.5cm}
 
-\vspace{1cm}
-**X.** The following boxplots show the closing share prices for a sample of technology companies on the first trading days in August 2007 and in August 2002. 
+**2.** The following boxplots show the closing share prices for a sample of technology companies on the first trading days in August 2007 and in August 2002. 
 
 ![](./images/Q1_boxplots.png){height=3in}
 
 Which of the following statements is TRUE?
 
+\vspace{.5cm}
+
 (a) The median closing share price is higher in August 2007 compared to August 2002. 
 
-(b) Closing prices are more variable in August 2007 compared to August 2002.
+\vspace{.5cm}
 
-(c) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
+(b) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
+
+\vspace{.5cm}
+
+(c) Closing prices are more variable in August 2007 compared to August 2002.
+
+\vspace{.5cm}
 
 (d) Both A and B
+
+\vspace{.5cm}
 
 (e) All of the above
 
 
-\vspace{1cm}
-**X.** All but one of the statements below contain a mistake. Which one could be TRUE? 
+\vspace{.5cm}
+
+**3.** All but one of the statements below contain a mistake. Which one could be TRUE? 
+
+\vspace{.5cm}
 
 (a) The correlation between your golf score and the number of hours you practice is 0.36. 
 
-(b) The number of apricots on a tree and the amount of fertilizer have a 1.12 correlation. 
+\vspace{.5cm}
+
+(b) The correlation between the height of a bean plant and the day is 0.78 in/day. 
+
+\vspace{.5cm}
 
 (c) There is a strong correlation between type of preferred pet and income level.
 
-(d) The correlation between the height of a bean plant and the day is 0.78 in/day. 
+\vspace{.5cm}
 
-\vspace{1cm}
-**X.** A company's sales increase by the same amount each year. This growth is ________
+(d) The number of apricots on a tree and the amount of fertilizer have a 1.12 correlation. 
+
+\vspace{.5cm}
+
+**4.** A company's sales increase by the same amount each year. This growth is ________
+
+\vspace{.5cm}
 
 (a) exponential 
 
+\vspace{.5cm}
+
 (b) logarithmic 
+
+\vspace{.5cm}
 
 (c) power 
 
+\vspace{.5cm}
+
 (d) linear 
+
+\vspace{.5cm}
 
 (e) quadratic 
 
-\vspace{1cm}
-**X.** A regression analysis of company profits and the amount of money the company spent on advertising found $r^2 =0.72$. Which of these is TRUE? 
+\vspace{.5cm}
 
-I. This model can correctly predict the profit for $72\%$ of companies. 
+**5.** A regression analysis of company profits and the amount of money the company spent on advertising found $r^2 =0.72$. Which of these is TRUE? 
 
-II. On average, about $72\%$ of a company's profit results from advertising. 
+\vspace{.5cm}
+
+I. On average, about $72\%$ of a company's profit results from advertising. 
+
+\vspace{.5cm}
+
+II. This model can correctly predict the profit for $72\%$ of companies. 
+
+\vspace{.5cm}
 
 III. On average, companies spend about $72\%$ of their profits on advertising.
 
+\vspace{.5cm}
+
 (a) none 
+
+\vspace{.5cm}
 
 (b) I only 
 
+\vspace{.5cm}
+
 (c) II only 
+
+\vspace{.5cm}
 
 (d) III only 
 
+\vspace{.5cm}
+
 (e) I and III 
 
-\vspace{1cm}
-**X.** The residuals plot for a linear model is shown. Which is TRUE? 
+\vspace{.5cm}
+
+**6.** The residuals plot for a linear model is shown. Which is TRUE? 
 
 ![](./images/Q1_residuals.png){height=1.5in}
+\vspace{.5cm}
 
 (a) The linear model is no good since some residuals are large. 
 
+\vspace{.5cm}
+
 (b) The linear model is okay because the association between the two variables is fairly strong.
 
-(c) The linear model is no good since the correlation is near 0.
+\vspace{.5cm}
+
+(c) The linear model is no good because of the curve in the residuals.
+
+\vspace{.5cm}
 
 (d) The linear model is okay because about the same number of points are above and below the it. 
 
-(e) The linear model is no good because of the curve in the residuals.
+\vspace{.5cm}
 
-\vspace{1cm}
-**X.** A residual plot that has no pattern is a sign of what?
+(e) The linear model is no good since the correlation is near 0.
+
+\vspace{.5cm}
+
+**7.** A residual plot that has no pattern is a sign of what?
+
+\vspace{.5cm}
 
 (a) The original data is curved and the regression line is a good model. 
 
-(b) The original data is curved and the regression line is not a good model. 
+\vspace{.5cm}
+
+(b) The original data is straight and the regression line is not a good model. 
+
+\vspace{.5cm}
 
 (c) The model is not a good one, because there is no pattern. 
 
-(d) The original data is straight and the regression line is not a good model. 
+\vspace{.5cm}
+
+(d) The original data is curved and the regression line is not a good model. 
+
+\vspace{.5cm}
 
 (e) The original data is straight and the regression line is a good model. 
 
-\vspace{1cm}
-**X.** Which of the following is NOT a goal of re-expressing data? 
+\vspace{.5cm}
 
-(a) Make the distribution of a variable more symmetric. 
+**8.** Which of the following is NOT a goal of re-expressing data? 
 
-(b) Make the form of a scatterplot more nearly linear. 
+\vspace{.5cm}
 
-(c) Make the scatter in a scatterplot spread out evenly rather than following a fan shape. 
+(a) Make the form of a scatterplot more nearly linear. 
 
-(d) Make the spread of several groups more alike. 
+\vspace{.5cm}
+
+(b) Make the distribution of a variable more symmetric. 
+
+\vspace{.5cm}
+
+(c) Make the spread of several groups more alike.  
+
+\vspace{.5cm}
+
+(d) Make the scatter in a scatterplot spread out evenly rather than following a fan shape.
+
+\vspace{.5cm}
 
 (e) All of these are goals of re-expressing data. 
 
 
-\vspace{1cm}
-**X.** A clothing store uses comment cards to get feedback from its customers about newly added items. It recently introduced plus size fashion wear. Customers who purchased the items were asked to fill out an online comment survey giving $10\%$ off the next purchase. The data are summarized in the table below. What percentage of customers were at least satisfied with the item(s) purchased (Satisfied or Very satisfied)?
+\vspace{.5cm}
+
+**9.** A clothing store uses comment cards to get feedback from its customers about newly added items. It recently introduced maternity fashion wear. Customers who purchased these items were asked to fill out an online comment survey in return for a discount on their next purchase. The data are summarized below. What percentage of customers were at least satisfied with the item(s) purchased (Satisfied or Very satisfied)?
 
 | Response | Frequency | 
 | --- | --- |
-| Very satisfied | 15 |
-| Satisfied | 30 |
-| Less than fully satisfied | 12 |
-| Not satisfied | 4 |
+| Very satisfied.           | 15 |
+| Satisfied                 | 30 |  
+| Less than fully satisfied | 10 |  
+| Not satisfied.            |  5 |   
 
-(a) $68.9\%$
+\vspace{.5cm}
 
-(b) $73.8\%$
+(a) $20\%$
 
-(c) $49.2\%$ 
+\vspace{.5cm}
 
-(d) $26.2\%$ 
+(b) $50\%$ 
 
-(e) $24.5\%$ 
+\vspace{.5cm}
 
-\vspace{1cm}
-**X.** A company's manufacturing process uses 500 gallons of water at a time. A "scrubbing" machine then removes most of a chemical pollutant before pumping the water into a nearby lake. To meet federal regulations the treated water must not contain more than 80 parts per million (ppm) of the chemical. Because a fine is charged if regulations are not met, the company sets the machine to attain an average of 75 ppm in the treated water. The machine's output can be described by a normal model with standard deviation 4.2 ppm. 
+(c) $25\%$ 
 
-What percent of the batches of water discharged exceed the 80 ppm standard?
+\vspace{.5cm}
 
-(a) $3.89\%$ 
+(d) $10\%$
 
-(b) $11.7\%$ 
+\vspace{.5cm}
 
-(c) $8.83\%$ 
+(e) $75\%$ 
 
-(d) $1.17\%$ 
+\vspace{.5cm}
 
-(e) $88.3\%$ 
+**10.** A company's manufacturing process uses hundreds of gallons of water at a time while a "scrubbing" machine removes most of a chemical pollutant before pumping the water into a nearby lake. To meet federal regulations imposed through heavy fines, the company sets the machine to attain an average of 75 ppm in the treated water. The machine's output can be described by a normal model with standard deviation 5 ppm. 
 
+What percent of the batches of water discharged exceed the 85 ppm standard?
+
+\vspace{.5cm}
+
+(a) $2.5\%$ 
+
+\vspace{.5cm}
+
+(b) $50\%$ 
+
+\vspace{.5cm}
+
+(c) $10\%$ 
+
+\vspace{.5cm}
+
+(d) $5\%$ 
+
+\vspace{.5cm}
+
+(e) $100\%$ 
+
+\vspace{.5cm}
 
 # Part 2: Fill in the blank
 
-**X.** A regional survey was carried out to gauge public opinion on the controversial Arizona Immigration Law 
+**11.** Recently, a regional survey was carried out to gauge public opinion on a controversial Arizona Immigration Law. 
 
 \vspace{.25cm}
 
-(results shown below). $\rule{3cm}{0.15mm}$ percent of the public oppose the law. 
+The results below indicate that approximately $\rule{3cm}{0.15mm}$ percent of the public in Arizona favor the law. (Hint: There's no need to simplify your work, just writing out the formula to calculate will suffice.)
 
 | Response | Democrat | Republican | Independent | 
 |:--- |:--- |:--- |:--- |
@@ -182,16 +292,15 @@ What percent of the batches of water discharged exceed the 80 ppm standard?
 | Oppose | 85 | 45 | 60 | 
 | Don't know | 5 | 7 | 20 | 
 
+\pagebreak 
 
-**X.** Based on data collected from its production processes, Crosstiles Inc. determines that the breaking strength of its most popular porcelain tile is normally distributed with a mean of 400 pounds per square inch and a standard deviation of 12.5 pounds per square inch. Based on the 68-95-99.7 Rule, about 
+**12.** Based on data collected from its production processes, Crosstiles Inc. determines that the breaking strength of its most popular porcelain tile is normally distributed with a mean of $400$ pounds per square inch and a standard deviation of $10$ pounds per square inch. Based on the 68-95-99.7 Rule, about 
 
-\vspace{.25cm}
+\vspace{.25cm} $\rule{3cm}{0.15mm}$ percent of the popular porcelain tile will have breaking strengths between 370 and 420 pounds per square inch. (Hint: Draw a Normal curve and label the mean and one/two/three standard deviations away from the mean.)
 
-$\rule{3cm}{0.15mm}$ percent of the popular porcelain tile will have breaking strengths between 375 and 425 pounds per square inch. 
+\vspace{3cm}
 
-
-\vspace{1cm}
-**X.** The boxplots show prices of used cars (in thousands of dollars) advertised for sale at three different car dealers. 
+**13.** The boxplots show prices of used cars (in thousands of dollars) advertised for sale at three different car dealers. 
 
 ![](./images/Q1_boxplots2.png){height=3.5in}
 
@@ -200,20 +309,22 @@ $\rule{3cm}{0.15mm}$ percent of the popular porcelain tile will have breaking st
 $\rule{3cm}{0.15mm}$ is the dealer with the smallest price range of approximately $\rule{3cm}{0.15mm}$ dollars.  
 
 
-\vspace{1cm}
-**X.** At a local manufacturing plant, employees must complete new machine set ups within 30 minutes. Suppose new machine set-up times can be described by a normal model with a mean of 22 minutes and a standard deviation of 4 minutes. 
+\vspace{.5cm}
+
+**14.** At a local manufacturing plant, employees must complete new machine set ups within $30$ minutes. Suppose new machine set-up times can be described by a normal model with a mean of $22$ minutes and a standard deviation of $4$ minutes. 
 
 \vspace{.25cm}
 
-$\rule{3cm}{0.15mm}$ percent of new machine set ups take more than 30 minutes. 
+$\rule{3cm}{0.15mm}$ percent of new machine set ups take $30$ minutes or more. 
 
 
-\vspace{1cm}
-**X.** Suppose the time it takes to process phone orders in a small florist/gift shop is normally distributed with a 
+\vspace{.5cm}
 
-\vspace{.25cm}
+**15.** Suppose the time it takes to process phone orders in a small florist/gift shop is normally distributed with a mean of 6 minutes and a standard deviation of 1 minute. 
 
-mean of 6 minutes and a standard deviation of 1.24 minutes. An order that processes in $\rule{3cm}{0.15mm}$ minutes separates the 5\% of orders that take the most time to process from the rest of the orders.
+\vspace{.25cm} 
+
+An order that processes in $\rule{3cm}{0.15mm}$ minutes separates the $5\%$ of orders that take the most time to process from the rest of the quicker $95\%$ of orders.
 
 # Part 3: Free response 
 
@@ -222,39 +333,43 @@ mean of 6 minutes and a standard deviation of 1.24 minutes. An order that proces
 ![](./images/Q1_table.png){height=3.5in}
 
 
-**X.** Interpret the correlation within the context of the data. 
+**16.** Interpret the correlation within the context of the data. 
 
 \vspace{0.5cm}
+
 $\rule{15cm}{0.15mm}$
 
-\vspace{0.5cm}
+\vspace{0.25cm}
 $\rule{15cm}{0.15mm}$
 
-\vspace{0.5cm}
+\vspace{0.25cm}
 $\rule{15cm}{0.15mm}$
 
-\vspace{1cm}
+\vspace{.25cm}
 
-**X.** Most likely, in a simple linear regression model for this data, $\rule{3cm}{0.15mm}$ is the predictor variable and
+**17.** Most likely, in a simple linear regression model for this data, $\rule{3cm}{0.15mm}$ is the predictor variable 
 
-\vspace{.5cm}
+\vspace{.25cm} 
 
-$\rule{3cm}{0.15mm}$ is the response variable. 
+and $\rule{3cm}{0.15mm}$ is the response variable. 
 
 
 
 *Data were collected on monthly sales revenues (in \$1,000s) and monthly advertising expenditures (\$100s) for a sample of drug stores. The regression line relating revenues $(Y)$ to advertising expenditure $(X)$ is estimated to be $\hat{y}_{i} = -48.3 + 9.00x_i$.*
 
-\vspace{1cm}
+\vspace{.5cm}
 
-**X.** Interpret the slope within the context of this data. (Make sure you specify the correct units of measurement.) 
+**18.** Interpret the slope within the context of this data. (Make sure you specify the correct units of measurement.) 
 
-\vspace{0.5cm}
+\vspace{0.25cm}
+
 $\rule{15cm}{0.15mm}$
 
-\vspace{0.5cm}
+\vspace{0.25cm}
+
 $\rule{15cm}{0.15mm}$
 
-\vspace{0.5cm}
+\vspace{0.25cm}
+
 $\rule{15cm}{0.15mm}$
 

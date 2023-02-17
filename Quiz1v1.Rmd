@@ -1,6 +1,6 @@
 ---
 title: "Quiz 1 for Stat 11"
-date: "2/17/23"
+date: "2.17.23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
@@ -8,17 +8,18 @@ output:
 \vspace{4mm}
 **Name:** _____________________________________
 
+
 # Part 1: Multiple Choice
 
 **1.** Which is TRUE of the data shown in the histogram below?
 
 ![](./images/Q1_hist.png){height=1.2in}
 
-I. We should use median and IQR to summarize these data.
+I. The distribution is skewed to the right.
 
 II. The mean is probably smaller than the median.
 
-III. The distribution is skewed to the right.
+III. We should use median and IQR to summarize these data.
 
 \vspace{.5cm}
 (a) I only 
@@ -45,7 +46,7 @@ Which of the following statements is TRUE?
 
 \vspace{.5cm}
 
-(a) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
+(a) The median closing share price is higher in August 2007 compared to August 2002. 
 
 \vspace{.5cm}
 
@@ -53,7 +54,7 @@ Which of the following statements is TRUE?
 
 \vspace{.5cm}
 
-(c) The median closing share price is higher in August 2007 compared to August 2002. 
+(c) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
 
 \vspace{.5cm}
 
@@ -78,11 +79,11 @@ Which of the following statements is TRUE?
 
 \vspace{.5cm}
 
-(c) The correlation between the height of a bean plant and the day is 0.78 in/day. 
+(c) There is a strong correlation between type of preferred pet and income level.
 
 \vspace{.5cm}
 
-(d) There is a strong correlation between type of preferred pet and income level.
+(d) The correlation between the height of a bean plant and the day is 0.78 in/day. 
 
 \vspace{.5cm}
 
@@ -114,7 +115,7 @@ Which of the following statements is TRUE?
 
 \vspace{.5cm}
 
-I. On average, companies spend about $72\%$ of their profits on advertising.
+I. This model can correctly predict the profit for $72\%$ of companies. 
 
 \vspace{.5cm}
 
@@ -122,7 +123,7 @@ II. On average, about $72\%$ of a company's profit results from advertising.
 
 \vspace{.5cm}
 
-III. This model can correctly predict the profit for $72\%$ of companies. 
+III. On average, companies spend about $72\%$ of their profits on advertising.
 
 \vspace{.5cm}
 
@@ -151,7 +152,7 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 ![](./images/Q1_residuals.png){height=1.5in}
 \vspace{.5cm}
 
-(a)  The linear model is no good since the correlation is near 0.
+(a) The linear model is no good since some residuals are large. 
 
 \vspace{.5cm}
 
@@ -159,7 +160,7 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(c) The linear model is no good since some residuals are large.
+(c) The linear model is no good since the correlation is near 0.
 
 \vspace{.5cm}
 
@@ -183,7 +184,7 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(c) The original data is straight and the regression line is a good model.
+(c) The model is not a good one, because there is no pattern. 
 
 \vspace{.5cm}
 
@@ -191,7 +192,7 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(e)  The model is not a good one, because there is no pattern. 
+(e) The original data is straight and the regression line is a good model. 
 
 \vspace{.5cm}
 
@@ -199,19 +200,19 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(a) Make the scatter in a scatterplot spread out evenly rather than following a fan shape. 
+(a) Make the distribution of a variable more symmetric. 
 
 \vspace{.5cm}
 
-(b) Make the spread of several groups more alike. 
+(b) Make the form of a scatterplot more nearly linear. 
 
 \vspace{.5cm}
 
-(c) Make the distribution of a variable more symmetric. 
+(c) Make the scatter in a scatterplot spread out evenly rather than following a fan shape. 
 
 \vspace{.5cm}
 
-(d) Make the form of a scatterplot more nearly linear. 
+(d) Make the spread of several groups more alike. 
 
 \vspace{.5cm}
 
@@ -231,11 +232,11 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(a) $75\%$
+(a) $25\%$
 
 \vspace{.5cm}
 
-(b) $50\%$
+(b) $10\%$
 
 \vspace{.5cm}
 
@@ -243,11 +244,11 @@ III. This model can correctly predict the profit for $72\%$ of companies.
 
 \vspace{.5cm}
 
-(d) $10\%$ 
+(d) $50\%$ 
 
 \vspace{.5cm}
 
-(e)  $25\%$
+(e) $75\%$ 
 
 \vspace{.5cm}
 
@@ -261,7 +262,7 @@ What percent of the batches of water discharged exceed the 85 ppm standard?
 
 \vspace{.5cm}
 
-(b) $100\%$
+(b) $5\%$ 
 
 \vspace{.5cm}
 
@@ -269,11 +270,11 @@ What percent of the batches of water discharged exceed the 85 ppm standard?
 
 \vspace{.5cm}
 
-(d) $5\%$  
+(d) $50\%$ 
 
 \vspace{.5cm}
 
-(e) $50\%$ 
+(e) $100\%$ 
 
 \vspace{.5cm}
 
