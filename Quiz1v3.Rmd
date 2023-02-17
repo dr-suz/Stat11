@@ -1,6 +1,6 @@
 ---
 title: "Quiz 1 for Stat 11"
-date: "2.17.23"
+date: "2/17/23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
