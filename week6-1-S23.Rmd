@@ -132,7 +132,7 @@ $$Pr(A\text{ and } B) = Pr(A)\times Pr(B), \quad\text{when $A$ and $B$ are indep
 
 ## Example: Selecting colored balls from a box 
 
-![](./images/wk6_boxes.png)
+![](./images/wk6-boxes.png)
 
 *Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls.*
 
