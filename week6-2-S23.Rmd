@@ -63,9 +63,6 @@ var(SRS_discrete_pop)
 ## These two values are slightly different for the exact same reason as the mean calculations.
 
 
-##----------------------
-
-R4.8, R4.10, R4.19 practical example with insurance deductibles [good examples to include in class notes]
 
 
 # Example: The Drake Equation 
@@ -127,22 +124,18 @@ b) Using only this information, what is the smallest possible value for the perc
 have both a Facebook account and a Twitter account? Describe the (unrealistic)
 situation in which this occurs.
 
-If a fair die is rolled five times, which of the following sequences is most likely to result?
-
-a. 2 6 1 5 3
-b. 6 4 2 1 5
-c. 2 4 4 4 4
-d. 2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
-e. 2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
 
 
-Have every individual student flip a coin 4 times. Find someone who gets 4 heads in a row. Ask students what is the chance that that student gets a tail on the next flip.
+# Example: Insurance deductibles 
 
-Have groups flip a coin 3 times and record the results. Then determine of any of the results are more rare than the others. 
+A car owner can buy insurance that will pay the full price of repairing the car after an at-fault accident, or they can save \$12 per year by getting a policy with a \$500 deductible. 
 
+According the the data from the insurance company, about $0.5\%$ of drivers in your area have an at-fault auto accident during any given year. 
 
+Based on this information, should you buy the policy with the deductibe or not? How would the value of your car influence your decision? 
 
-3. Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10
-blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball
-at random from each box, are you more likely to choose a blue ball from Box 1 or Box 2?
+Suppose this insurance company insures $1355$ drivers in your area. 
 
+What are the mean and standard deviation of the number who may have at-fault accidents? 
+
+Can you describe the distribution of these accidents with a Normal model? 
