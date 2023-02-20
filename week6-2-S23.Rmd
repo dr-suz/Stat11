@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 6"
-subtitle: "Random Variables and Probability Rules" 
+subtitle: "More Probability Rules" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -19,123 +19,77 @@ header-includes:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
-
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-  
-Ch13 material  
-  
-# 1. 
   
   
-# 2. 
+# 1. The general addition rule 
+  
+For any events in the sample space of a random variable, say, $A$ and $B$, we compute the probability of event A or event B or both events A and B occurring with the  formula:
+
+$$Pr(A \text{ or } B) = Pr(A) + Pr(B) + Pr(A \text{ and } B)$$
+In mathematics and statistics, when we use the word *or*, we typically mean the inclusive version of this word. That is either option or both are possibilities. This is called a logical <span style="color:green">union</span>. On the other hand, the word *and* is what we call an <span style="color:green">intersection</span> and is used to refer to two things co-occurring. 
+
+
+## Independent vs. disjoint 
+
+* If two events are independent, this means that the results of the first event are in no way related to the results of the second. The probability of the intersection of two independent events is always equal to the product of the individual (marginal) probabilities of each event occurring by itself. 
+
+* If two events are disjoint, this means that they cannot co-occur. That is, the probability of their intersection is zero. 
+
+
+## Example: Social media probabilities 
+
+Suppose that, upon begining their work at the college, $78\%$ of Swarthmore students, faculty, and staff have a Twitter account and $43\%$ have a Facebook account.
+
+* <span style="color:purple">What is the largest possible value for the percentage of people at Swarthmore who have both a Facebook account and a Twitter account?</span> 
+
+* <span style="color:purple">What is the smallest possible value for the percentage of people at Swarthmore who have both a Facebook account and a Twitter account?</span> 
+
+  
+# 2. Conditional probability 
+
+When two random events are not disjoint (i.e. they can co-occur), we may want to consider whether knowing the outcome of one event, say $A$, impacts the outcome of the other event, say $B$. We can do this with a <span style="color:green">conditional probability</span> of event $B$ given that we know (or observe) event $A$:  
+
+$$P(B \text{ given } A) = Pr(B \mid A) = \frac{Pr(A \text{ and } B)}{Pr(A)}.$$
+
+As you might expect, if events $A$ and $B$ are independent, then conditioning on $A$ won't give us any information at all on the outcome of $B$. We can see this property mathematically by applying the multiplication rule for independent events:
+$$P(B \mid A) = \frac{Pr(A \text{ and } B)}{Pr(A)} = \frac{Pr(A) \times Pr(B)}{Pr(A)} = Pr(B).$$ 
+
   
   
-# 3. 
+# 3. The multiplication rule 
+
+Just as there is a general version of the addition rule (that applies even if events are not disjoint), there is a general version of the multiplication rule (that applies even when events are not independent). This rule is actually just an artifact of rearranging the definition of conditional probability above. 
+
+For any events $A$ and $B$ (they may or may not be independent), $Pr(A \text{ and }B) = Pr(A) \times Pr(B \mid A)$. If these events are independent, then we can substitute $Pr(B)$ for $Pr(B \mid A)$ and this simplifies to the multiplication rule we saw last class: $Pr(A \text{ and }B) = Pr(A) \times Pr(B)$. 
 
 
 
-##Example 1 - discrete random variable 
-population <- c(3,3,3,2,2,2)  ## this is our box containing 6 labeled balls
+## Example: The Drake Equation 
 
-## Let X represents a single random draw from the population. 
-## So X is random variable whose distribution is defined by the population (box)
-## The (theoretical) expectation of the random variable X is:
-(3*(3/6)) + (2*(3/6))   
+In 1961 astronomer Frank Drake developed an equation to try to estimate the number of extraterrestrial civilizations in our galaxy that might be able to communicate with us via radio transmissions. Now largely accepted by the scientific community, the *Drake equation* has helped spur efforts by radio astronomers to search for extraterrestrial intelligence. Here is the equation:
 
-## Now we are going to SRS of size n and calculate the sample mean/expectation
-n=10000
-SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
-mean(SRS_discrete_pop)  
-
-## Why are these two values slightly different? 
-
-## Similarly, the (theoretical) variance of the random variable X is:
-(  (( (3-2.5) ^2) * (3/6) ) + 
-    (( (2-2.5) ^2) * (3/6) )   )
-
-## and the sample variance is 
-n=10000
-SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
-var(SRS_discrete_pop)
-
-## These two values are slightly different for the exact same reason as the mean calculations.
-
-
-
-
-# Example: The Drake Equation 
-
-In 1961 astronomer Frank Drake developed an equation to try to estimate the number of extraterrestrial civilizations in our galaxy that might be able to communicate with us via radio transmissions. Now largely accepted by the scientific community, the Drake equation has helped spur efforts by radio astronomers to search for extraterrestrial intelligence. Here is the equation:
 $$N_{C} = N \cdot f_p \cdot n_e\cdot f_l \cdot f_i \cdot f_{c} \cdot f_{L}.$$
-OK, it looks a little messy, but here’s what it means:
+And here’s what it means:
 
 !()[./images/wk6-drake-eqn.png]
 
 
-So, how many ETs are out there? That depends; values chosen for the many factors in the equation depend on ever-evolving scientific knowledge and one’s personal guesses. But now, some questions.
+So, how many ETs are out there? Unfortunately, I don't have an answer for you. The answer depends on values chosen for the many factors in the equation and on our ever-evolving scientific knowledge and our own personal guesses. But we can now make sense of this equation and answer the following questions.
 
-What quantity is calculated by 
-(a) the first product, $N \cdot f_p$?
+* <span style="color:purple">What quantity is calculated by</span> 
 
-(b) the product, $N \cdot f_p \cdot n_e \cdot f_l$?
+<span style="color:purple">(a) the first product, $N \cdot f_p$?</span> 
 
-What probability is calculated by the product $f_l \cdot f_i$? 
+<span style="color:purple">(b) the product, $N \cdot f_p \cdot n_e \cdot f_l$?</span> 
 
-Which of the factors in the formula are conditional probabilities? Restate each in a way that makes the condition clear.
+* <span style="color:purple">What probability is calculated by the product $f_l \cdot f_i$?</span>  
 
-
-# Probability Misconceptions
-
-![](./images/wk6-prob-misconception.png)
-
-
-5.	Think about the following two probabilities:
-The probability that a man that is over 6 feet tall is a professional basketball player
-The probability that a man is over 6 feet tall given that he is a professional basketball player
-Which of the following most likely to be true?
-
-a)	Probability 1 is greater than probability 2.
-b)	Probability 2 is greater than probability 1.
-c)	The two probabilities are equal.
-d)	It is impossible to tell.
-
-6.	Think about the following two probabilities:
-The probability that a randomly selected adult American likes to surf
-The probability that a randomly selected adult American lives in California and likes to 
-surf
-Which of the following is most likely to be true?
-
-a)	Probability 1 is greater than probability 2.
-b)	Probability 2 is greater than probability 1.
-c)	The two probabilities are equal.
-d)	It is impossible to tell. 
-
-
-7. Suppose that 78% of the students at a particular college have a Facebook account and 43%
-have a Twitter account.
-
-a) Using only this information, what is the largest possible value for the percentage who
-have both a Facebook account and a Twitter account? Describe the (unrealistic)
-situation in which this occurs.
-
-b) Using only this information, what is the smallest possible value for the percentage who
-have both a Facebook account and a Twitter account? Describe the (unrealistic)
-situation in which this occurs.
+* <span style="color:purple">Which of the factors in the formula are conditional probabilities?</span> 
 
 
 
-# Example: Insurance deductibles 
+## Example: Insurance deductibles 
 
-A car owner can buy insurance that will pay the full price of repairing the car after an at-fault accident, or they can save \$12 per year by getting a policy with a \$500 deductible. 
+Suppose you can buy car insurance that will pay the full price of repairing your car after an at-fault accident, or you can save \$12 per year by getting a policy with a \$500 deductible. According to the data from the insurance company, about $0.5\%$ of drivers in your area have an at-fault auto accident during any given year. 
 
-According the the data from the insurance company, about $0.5\%$ of drivers in your area have an at-fault auto accident during any given year. 
-
-Based on this information, should you buy the policy with the deductibe or not? How would the value of your car influence your decision? 
-
-Suppose this insurance company insures $1355$ drivers in your area. 
-
-What are the mean and standard deviation of the number who may have at-fault accidents? 
-
-Can you describe the distribution of these accidents with a Normal model? 
+<span style="color:purple">Based on this information, should you buy the policy with the deductibe or not? How would the value of your car influence your decision?</span>

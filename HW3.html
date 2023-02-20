@@ -298,23 +298,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -357,7 +351,7 @@ display: none;
 
 <h1 class="title toc-ignore">Group Homework 3</h1>
 <h4 class="author">STAT011-S23</h4>
-<h4 class="date">Due: 3/5/23</h4>
+<h4 class="date">Due: 3/3/23</h4>
 
 </div>
 
@@ -365,21 +359,22 @@ display: none;
 <div id="introduction-and-purpose" class="section level1">
 <h1>Introduction and Purpose</h1>
 <p>You will analyze two data sets in this homework assignment. The first
-data set contains information about a clinical trial testing treatment
-for arthritis. This data set consists of <span class="math inline">\(84\)</span> patients who either received a drug or
+data set contains information about a clinical trial testing drug to
+treat arthritis. This data set consists of <span class="math inline">\(84\)</span> patients who either received a drug or
 a placebo and who rated the level of improvement in their arthritis
 symptoms. The drug or placebo label is the first categorical variable of
 interest, and the level of improvement in symptoms (none, some, or
 marked) is the second categorical variable of interest. This data set is
 referenced in Problems 1 – 3.</p>
-<p>The second data set you will analyze for Problem 4 is the data you
-saw in the second week of class on the survival of different class
-passengers aboard the ship Titanic. This data consists of <span class="math inline">\(2201\)</span> passengers who either survived the
+<p>The second data set you will analyze in Problem 4 is the data you saw
+in the second week of class on the survival of different class
+passengers aboard the Titanic. This data consists of <span class="math inline">\(2201\)</span> passengers who either survived the
 wreck or died and their status as a passenger in first, second, or third
 class, or as a crew member of the ship.</p>
 <p>Problem 5 requires no data analysis.</p>
 <p>The purpose of this assignment is to practice exploring categorical
-data, designing an experiment, and the laws of probability.</p>
+data, designing an experiment, and the using the laws of
+probability.</p>
 </div>
 <div id="required-tech" class="section level1">
 <h1>Required Tech</h1>
@@ -437,15 +432,16 @@ titanic &lt;- read.delim(
         sep=&quot;,&quot;)</code></pre>
 <p>The first data object is called <code>arthritis</code> and the second
 data object is called <code>titanic</code>.</p>
-<p>Once you have access to the data set, complete all parts of the XX
-problems in this assignment. You are encouraged to work with your
-classmates on this assignment but you must hand in your own, unique
-write up of the solutions. In a Word document, clearly label each
-problem’s solution. Most solutions will include graphics which can be
-copied from Excel or RStudio and pasted into your solution document. All
-solutions require a written component. When you are ready to submit your
-assignment, save the Word document as a PDF and upload it to the Moodle
-link for Group Homework #3.</p>
+<p>Once you have access to the data, complete all parts of the first
+four problems in this assignment. There is not data set associated with
+problem five. You are encouraged to work with your classmates on this
+assignment but you must hand in your own, unique write up of the
+solutions. In a Word document, clearly label each problem’s solution.
+Most solutions will include graphics which can be copied from Excel or
+RStudio and pasted into your solution document. All solutions require a
+written component. When you are ready to submit your assignment, save
+the Word document as a PDF and upload it to the Moodle link for Group
+Homework #3.</p>
 </div>
 <div id="problem-1" class="section level1">
 <h1>Problem 1</h1>
@@ -467,9 +463,9 @@ them saw</p>
 administrators decide that instead of subjecting people to random drug
 testing they’ll just</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>hold hospital-wide meetings and drug test the employees that
+<li><p>Hold hospital-wide meetings and drug test the employees that
 attend; or instead</p></li>
-<li><p>offer additional employee discounts for those employees who agree
+<li><p>Offer additional employee discounts for those employees who agree
 to be drug tested.</p></li>
 </ol>
 </div>

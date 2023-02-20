@@ -1,20 +1,21 @@
 ---
 title: "Group Homework 3"
 author: "STAT011-S23"
-date: 'Due: 3/5/23'
+date: 'Due: 3/3/23'
 output:
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
 
-You will analyze two data sets in this homework assignment. The first data set contains information about a clinical trial testing treatment for arthritis. This data set consists of $84$ patients who either received a drug or a placebo and who rated the level of improvement in their arthritis symptoms. The drug or placebo label is the first categorical variable of interest, and the level of improvement in symptoms (none, some, or marked) is the second categorical variable of interest. This data set is referenced in Problems 1 -- 3. 
+You will analyze two data sets in this homework assignment. The first data set contains information about a clinical trial testing drug to treat arthritis. This data set consists of $84$ patients who either received a drug or a placebo and who rated the level of improvement in their arthritis symptoms. The drug or placebo label is the first categorical variable of interest, and the level of improvement in symptoms (none, some, or marked) is the second categorical variable of interest. This data set is referenced in Problems 1 -- 3. 
 
-The second data set you will analyze for Problem 4 is the data you saw in the second week of class on the survival of different class passengers aboard the ship Titanic. This data consists of $2201$ passengers who either survived the wreck or died and their status as a passenger in first, second, or third class, or as a crew member of the ship. 
+The second data set you will analyze in Problem 4 is the data you saw in the second week of class on the survival of different class passengers aboard the Titanic. This data consists of $2201$ passengers who either survived the wreck or died and their status as a passenger in first, second, or third class, or as a crew member of the ship. 
 
 Problem 5 requires no data analysis.
 
-The purpose of this assignment is to practice exploring categorical data, designing an experiment, and the laws of probability. 
+The purpose of this assignment is to practice exploring categorical data, designing an experiment, and the using the laws of probability. 
 
 
 ```{r eval=FALSE, echo=FALSE}
@@ -92,7 +93,7 @@ titanic <- read.delim(
 ```
 The first data object is called `arthritis` and the second data object is called `titanic`. 
 
-Once you have access to the data set, complete all parts of the XX problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#3.
+Once you have access to the data, complete all parts of the first four problems in this assignment. There is not data set associated with problem five. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#3.
 
 
 # Problem 1 
@@ -113,9 +114,9 @@ Create a proportions table for the $84$ patients in this study and use it to ans
 
 Name and describe the kind of bias that might be present if administrators decide that instead of subjecting people to random drug testing they’ll just
 
-(a) hold hospital-wide meetings and drug test the employees that attend; or instead
+(a) Hold hospital-wide meetings and drug test the employees that attend; or instead
 
-(b) offer additional employee discounts for those employees who agree to be drug tested.
+(b) Offer additional employee discounts for those employees who agree to be drug tested.
 
 # Problem 3
 

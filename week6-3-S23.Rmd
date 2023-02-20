@@ -17,28 +17,23 @@ header-includes:
 
 # 1. Data Introduction 
 
+We are going to use the laws of probability and properties of random variables to plan a trip. We will warm up by considering how conditional probabilities differ from marginal probabilities. 
 
+![](./images/wk6-map1.png){width=8in} ![](./images/wk6-map2.png){height=3in}
 
 # 2. Analysis Goal  
 
-
+Ultimately, the goal of this analysis is the estimate the cost to fly several of us across the globe for a statistics conference. We will do this by using random variables to model the airline ticket prices of two different destinations. 
 
 Click this link to view the [worksheet for experiments with random variables](https://profsuzy.github.io/Stat11/wk6-wksheet.html). 
 
 # 3. Summary of Results  
 
+* It's not easy to predict the outcome of a random phenomena but the mean and standard deviation are helpful in this regard. 
 
+* Consider two **independent** random variables, $X$ and $Y$. Suppose the theoretical mean and standard deviation of $X$ are $E(X)$ and $\sqrt{Var(X)}$, respectively. Suppose something similar holds for $Y$. We can consider a new random variable $W = X + Y$ and compute it's theoretical mean and standard deviation using the fact that
 
+$$E(W) = E(X) + E(Y), \quad\text{and } Var(W) = Var(X) + Var(Y).$$ 
 
-# Possible additional material 
-
-
-![](./images/wk6-spotthefake.png)
-
-
-Each student flip a coin 30 times and note the number of heads. Have each student repeat. this process again so there are a total of at least 50 observations of the number of heads in 30 flips. Using data from the entire class construct a dotplot of the observed values. 
-
-
-After looking at the dotplot created in class, reconsider your answer to the first question. For each of the three students, explain why you now think they did or did not actually do the experiment. 
 
 
