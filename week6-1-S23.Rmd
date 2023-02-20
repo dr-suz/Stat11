@@ -19,104 +19,127 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
+
+# 1. Random Phenomena
   
-Ch12 material, some of 13 
+Random variables result in random events. Each random variable has a sample space of outcome events. A trials results in an observed event.  
+
+
+## Example: Rolling a six-sided die
+
+![](./images/wk6_dice.png)
+
+* The random event is the face of the die that lands upward. 
+
+* The sample space of outcomes is this six faces of the die. 
+
+* A trial represents the act of physically rolling a six-sided die and producing an observation of this random phenomena. 
+
+## Example: Flipping an unfair coin
+
+![](./images/wk6_coin.png)
+
+* <span style="color:purple">What is the random event?</span>
+
+* <span style="color:purple">What is the sample space of outcomes?</span>
+
+* A trial represents the act of physically flipping the coin and producing an observation of this random phenomena. 
+
   
-# 1. 
+# 2. Law of Large Numbers 
+
+As we repeat a random process over and over again, the proportion of times that an event occurs eventually settles down to a single probability that describes the relative frequency with which this event occurs. In short, the Law of Large Numbers (LLN) asserts that relative frequencies settle down to a single value in the long run.  
+
+<span style="color:green">Empirical probability</span> - uses the laws of probability to describe the long-run behavior of repeated observations of a random event. 
+
+
+## Example: Rolling a six-sided die
+
+
+```{r echo=FALSE}
+set.seed(102)
+```
+
+```{r}
+# Consider a six sided die 
+S = c(1,2,3,4,5,6)
+
+# Roll the die once 
+sample(S, size=1, replace=TRUE)
+```
+
+<span style="color:blue">Q) What's the probability that the die lands on a "six"?</span>
+
+A) $1/6=$ `r 1/6`
+
+
+<span style="color:purple">Q) What's the probability that we roll the dice again and it lands on a "six" again?<\span>
+
+
+**Note:** There is no such thing as a "law of averages". This is also known as "the gambler's fallacy".  
+
+
+```{r}
+# Roll the die 10000 times 
+trials = 10000
+SRS = sample(S, size=trials, replace=TRUE)
+SRS
+```
+
+<span style="color:blue">Q) How frequently did the die land on a "six"?</span> 
+
+A) `r sum(SRS == 6)/trials`
+
+
+FYI you can find this probability with the R code: 
+```{r eval-FALSE}
+sum(SRS == 6)/trials
+```
+
+## Example: Flipping an unfair coin
+
+<span style="color:blue">Q) How could we figure out the probability that our unfair coin lands on a "heads"?</span>
+
+
+**Note:** There is another way to use the laws of probability. For example, perhaps I'm a magician and I'm flipping a coin and you don't know whether or not the coin is fair. You could express your doubts with a subjective probability. 
+
+<span style="color:green">Subjective probability</span> - uses the laws of probability to describe a personal degree of (un)certainty, unrelated to any kind of long-run behavior.
+
   
-  
-# 2. 
-  
-  
-# 3. 
+# 3. Laws of Probability 
 
 
-##Example 1 - discrete random variable 
-population <- c(3,3,3,2,2,2)  ## this is our box containing 6 labeled balls
+## 1) A probability is a number between 0 and 1. 
 
-## Let X represents a single random draw from the population. 
-## So X is random variable whose distribution is defined by the population (box)
-## The (theoretical) expectation of the random variable X is:
-(3*(3/6)) + (2*(3/6))   
+$$0 \leq Pr(A) \leq 1, \quad\text{for $A \in S$}$$ 
 
-## Now we are going to SRS of size n and calculate the sample mean/expectation
-n=10000
-SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
-mean(SRS_discrete_pop)  
+## 2) The probability of the set of all possible outcomes of a trial is 1. 
 
-## Why are these two values slightly different? 
+$$Pr(S)=1$$
 
-## Similarly, the (theoretical) variance of the random variable X is:
-(  (( (3-2.5) ^2) * (3/6) ) + 
-    (( (2-2.5) ^2) * (3/6) )   )
+## 3) The probability of an event not occuring is equal to 1 minus the probability the event does occur. 
 
-## and the sample variance is 
-n=10000
-SRS_discrete_pop <- sample(population, size=n, replace=TRUE)
-var(SRS_discrete_pop)
+$$Pr(A^{C}) = 1 - Pr(A)$$
 
-## These two values are slightly different for the exact same reason as the mean calculations.
+## 4) If an event $A$ is disjoint from another event $B$, then the probability that one event or the other event occurs is the sum of their two individual probabilities.
+
+$$Pr(A\text{ or }B) = Pr(A) + Pr(B), \quad\text{when }Pr(A\text{ and }B) = 0$$ 
+
+## 5) If an event $A$ is independent of another event $B$, then the probability that both events occur is the product of the probabilities of the two individual events. 
+
+$$Pr(A\text{ and } B) = Pr(A)\times Pr(B), \quad\text{when $A$ and $B$ are independent events}$$ 
 
 
-##----------------------
+## Example: Selecting colored balls from a box 
 
-R4.8, R4.10, R4.19 practical example with insurance deductibles [good examples to include in class notes]
+![](./images/wk6_boxes.png)
 
+*Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls.*
 
-##-----------------------
+The random phenomena we are considering is drawing a single ball from each of the two boxes without looking. 
 
-1.	If a fair die is rolled five times, which of the following sequences is most likely to result?
+* <span style="color:purple">What is the sample space for this random phenomena?</span>
 
-a)	2 6 1 5 3
-b)	6 4 2 1 5
-c)	2 4 4 4 4
-d)	2 6 1 5 3 and 6 4 2 1 5 are equally likely and they are more likely than 2 4 4 4 4
-e)	2 6 1 5 3, 6 4 2 1 5, and 2 4 4 4 4 are all equally likely
+* <span style="color:purple">Are you more likely to choose a blue ball from Box 1 or Box 2?</span>
 
-2.	If you flip a fair coin and get heads 5 times in a row, what is the chance of getting tails on the next flip?
-
-a) Greater than 0.5
-b) 0.5
-b) Less than 0.5
-
-3.	Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls. There are more blue balls in Box 1 than Box 2. If you pick one ball at random from each box, which of the following are more likely 
-
-a)	You choose a blue ball from Box 1. 
-b)	You choose a blue ball from Box 2.
-c)	There is no way to tell. 
-
-4.	Suppose a fair coin will be flipped twice. Consider the following three events:
-A: 0 heads are observed
-B: 1 head is observed
-C: 2 heads are observed
-Which of the following is true?
-
-a)	P(A) $<$ P(B) $<$ P(C)
-b)	P(A) = P(B) = P(C)
-c)	P(B) is greater than P(A) and P(B)
-d)	None of the above. 
-
-
-5.	Think about the following two probabilities:
-The probability that a man that is over 6 feet tall is a professional basketball player
-The probability that a man is over 6 feet tall given that he is a professional basketball player
-Which of the following most likely to be true?
-
-a)	Probability 1 is greater than probability 2.
-b)	Probability 2 is greater than probability 1.
-c)	The two probabilities are equal.
-d)	It is impossible to tell.
-
-6.	Think about the following two probabilities:
-The probability that a randomly selected adult American likes to surf
-The probability that a randomly selected adult American lives in California and likes to 
-surf
-Which of the following is most likely to be true?
-
-a)	Probability 1 is greater than probability 2.
-b)	Probability 2 is greater than probability 1.
-c)	The two probabilities are equal.
-d)	It is impossible to tell. 
+* <span style="color:purple">What is the probability that you select a blue ball from Box 1 and a blue ball from Box 2</span>
