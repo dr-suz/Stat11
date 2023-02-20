@@ -60,7 +60,7 @@ As we repeat a random process over and over again, the proportion of times that 
 set.seed(102)
 ```
 
-```{r}
+```{r echo=TRUE}
 # Consider a six sided die 
 S = c(1,2,3,4,5,6)
 
@@ -79,21 +79,21 @@ A) $1/6=$ `r 1/6`
 **Note:** There is no such thing as a "law of averages". This is also known as "the gambler's fallacy".  
 
 
-```{r}
+```{r echo=TRUE}
 # Roll the die 10000 times 
 trials = 10000
-SRS = sample(S, size=trials, replace=TRUE)
-SRS
+observations = sample(S, size=trials, replace=TRUE)
+observations
 ```
 
 <span style="color:blue">Q) How frequently did the die land on a "six"?</span> 
 
-A) `r sum(SRS == 6)/trials`
+A) `r sum(observations == 6)/trials`
 
 
 FYI you can find this probability with the R code: 
-```{r eval-FALSE}
-sum(SRS == 6)/trials
+```{r eval=FALSE, echo=TRUE}
+sum(obbservations == 6)/trials
 ```
 
 ## Example: Flipping an unfair coin

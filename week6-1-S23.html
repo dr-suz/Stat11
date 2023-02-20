@@ -1670,6 +1670,11 @@ laws of probability to describe the long-run behavior of repeated
 observations of a random event.</p>
 <div id="example-rolling-a-six-sided-die-1" class="section level2">
 <h2>Example: Rolling a six-sided die</h2>
+<pre class="r"><code># Consider a six sided die 
+S = c(1,2,3,4,5,6)
+
+# Roll the die once 
+sample(S, size=1, replace=TRUE)</code></pre>
 <pre><code>## [1] 6</code></pre>
 <p><span style="color:blue">Q) What’s the probability that the die lands
 on a “six”?</span></p>
@@ -1680,6 +1685,10 @@ on a “six”?</span></p>
 dice again and it lands on a “six” again?&lt;&gt;</p>
 <p><strong>Note:</strong> There is no such thing as a “law of averages”.
 This is also known as “the gambler’s fallacy”.</p>
+<pre class="r"><code># Roll the die 10000 times 
+trials = 10000
+observations = sample(S, size=trials, replace=TRUE)
+observations</code></pre>
 <pre><code>##     [1] 1 4 1 2 4 3 3 5 3 6 5 4 4 4 1 1 6 2 2 3 4 3 1 4 5 3 4 3 1 2 1 1 2 3 2 4
 ##    [37] 2 1 2 4 2 5 4 5 6 3 2 1 6 2 1 3 4 3 5 3 4 4 2 3 2 1 5 2 1 5 3 3 6 6 5 6
 ##    [73] 2 6 1 4 1 1 4 4 5 2 2 3 6 6 3 3 2 4 2 1 4 6 6 4 2 2 6 4 2 6 2 2 5 6 5 2
@@ -1964,7 +1973,7 @@ This is also known as “the gambler’s fallacy”.</p>
 <li>0.1616</li>
 </ol>
 <p>FYI you can find this probability with the R code:</p>
-<pre><code>## [1] 0.1616</code></pre>
+<pre class="r"><code>sum(obbservations == 6)/trials</code></pre>
 </div>
 <div id="example-flipping-an-unfair-coin-1" class="section level2">
 <h2>Example: Flipping an unfair coin</h2>
