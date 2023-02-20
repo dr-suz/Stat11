@@ -100,7 +100,7 @@ What story do these analyses tell about the variable `distance`?
 
 ## Solution 2
 
-The distance traveled by these Envoy Air flights does not seem to follow a unimodal distribution. There are at least three (possibly four) prominent modes around which the data is clustered. The data is roughly symmetric however. The majority of the flights are between 400 and 600 miles long. There are almost no flights between 800 and 1000 miles long. In summary, very long flights would be those over 1000 miles and very short flights are under 400 miles. These very long and very short flights don't occur as often as the mid-range flights but there is a noticible dip in the amount of flights around the mean. 
+The distance traveled by these Envoy Air flights does not seem to follow a unimodal distribution. There are at least two (possibly four) prominent modes around which the data is clustered. The data is roughly symmetric however which we can tell from the histogram and by the fact that the mean and median are so close (also we can see this from the fact that the difference between the minimum and first quartile approximately the same as the distance between the maximum and the third quartile, the latter distance being a bit longer indicates a slight right skew but not a severe one). The majority of the flights are between 400 and 600 miles long. There are almost no flights between 800 and 1000 miles long. In summary, very long flights would be those over 1000 miles and very short flights are under 400 miles. These very long and very short flights don't occur as often as the mid-range flights but there is a noticeable dip in the amount of flights around the mean. From this we can gather that this is a regional airline and not one that provides cross continental travel.  
 
 **For graders:** Must include the five number summary, a histogram, and an interpretation of these to receive full credit. 
 
@@ -135,7 +135,7 @@ To compare the flight distance across all airports of origin we could either cre
 
 ## Solution 4 
 
-[answer] 
+Right away, we can see that flights out of EWR only go to a single destination. Flights originating in LGA tend to fly longer distances than those from JFK, and, flights out of LGA cover a broader range of distances ($\approx 1700-400=1300$) than those from JFK ($\approx 1000 - 200$). There is one flight out of JFK that is much longer than the others at around 1000 miles (assuming the units of distance are miles). If we were to compare three histograms for distance as opposed to three boxplots, we would see a strong right skew for LGA and a single, large bin for EWR. The histogram for JFK may appear somewhat symmetric because of the large outlier and because the median is also quite large. 
 
 **For graders:** For full credit, answers must include a boxplot for each airport of origin in addition to answering the two questions above. 
 
@@ -153,15 +153,16 @@ Generate a scatter plot of the variables `dep_delay` (departure delay) and `arr_
 
 ## Solution 5 
 
-[answer]
+From the scatterplot we see a strong, positive linear trend between these two variables. More specifically, the data falls really close to the diagonal line $y=x$ (dotted line below), which is what we might expect since it seems likely that all other things equal, the amount of time a flight is delayed departing will also be the amount of time it's delayed arriving. In the plot below, we see that the most deviation from this linear trend occurs in the negative direction. This means that when the arrival and departure delays are not the same, the arrival delays tend to be longer than the departure delays. (As a student pointed out in office hours, this makes sense as there is a limit to how many flights can fit at the airline's gates.) Finally, although the five data points in the upper right hand corner are further away from the rest of the data, they are not likely to be very influential as removing them doesn't look like it would change the line of best fit through all the data points. 
 
-**For graders:** (Blue lines aren't necessary) For full credit answers must display this scatterplot and contain answers to both questions above. 
+**For graders:** (The lines aren't necessary) For full credit answers must display this scatterplot and contain answers to both questions above. 
 
 **Potentially useful R Code**: 
 ```{r}
 plot(dep_delay ~ arr_delay, EnvoyAir_flights)
 abline(h=0, col="blue")
 abline(v=0, col="blue")
+abline(a=0, b=1, lty=2)
 ```
 
 
