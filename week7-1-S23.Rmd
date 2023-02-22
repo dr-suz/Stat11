@@ -23,12 +23,44 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 <span style="color:blue">hypothetical</span>
 <span style="color:green">new terms</span>
   
- 
+# Recall 
+
+Random phenomena are often modeled as random variables. Random variables are mathematical objects that have an associated probability distribution function. 
+
+A probability distribution must always specify:
+
+* possibilities 
+
+* probabilities 
   
-# 1. 
+# 1. Expected value 
+
+sum of all possibilities times their corresponding probabilities 
   
+$$E(X) = \sum x \times Pr(x)$$   
   
-# 2. 
+# 2. Variance and standard deviation  
+
+approximate average (squared) distance of each possible value from the mean (expected value) times the corresponding probabilities 
+
+$$Var(X) = \sum (x-E(X))^2\times Pr(x)$$ 
+
+square root of the variance 
+
+
+
+## Correlation and Covariance 
+
+
+Correlation and covariance measure the same thing: strength of a linear trend between two random variables 
+
+Correlation is a standardized version of covariance, always between -1 and 1 
+
+$$Cov(X,Y) = E\left[(X-E(X))\cdot(Y-E(Y)) \right]$$
+
   
-  
-# 3. 
+# 3. Linear transformations of a random Variable 
+
+$$E(aX) = aE(X), \quad E(a \pm X) = a \pm E(X)$$
+
+$$Var(aX) = a^2 Var(X), \quad Var(a + X) = Var(X)$$ 
