@@ -25,25 +25,44 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
   
 For any events in the sample space of a random variable, say, $A$ and $B$, we compute the probability of event A or event B or both events A and B occurring with the  formula:
 
-$$Pr(A \text{ or } B) = Pr(A) + Pr(B) + Pr(A \text{ and } B)$$
+$$Pr(A \text{ or } B) = Pr(A) + Pr(B) - Pr(A \text{ and } B)$$
 In mathematics and statistics, when we use the word *or*, we typically mean the inclusive version of this word. That is either option or both are possibilities. This is called a logical <span style="color:green">union</span>. On the other hand, the word *and* is what we call an <span style="color:green">intersection</span> and is used to refer to two things co-occurring. 
 
 
 ## Independent vs. disjoint 
 
-* If two events are independent, this means that the results of the first event are in no way related to the results of the second. The probability of the intersection of two independent events is always equal to the product of the individual (marginal) probabilities of each event occurring by itself. 
+* If two events are independent, this means that the results of the first event are in no way related to the results of the second. The probability of the intersection of two independent events is always equal to the product of the individual (marginal) probabilities of each event occurring by itself: $Pr(A \text{ and }B) = Pr(A)\times Pr(B)$.
 
-* If two events are disjoint, this means that they cannot co-occur. That is, the probability of their intersection is zero. 
+* If two events are disjoint, this means that they cannot co-occur. That is, the probability of their intersection is zero: $Pr( A \text{ and } B) = 0$.
 
+
+## Example: Selecting colored balls from a box 
+
+![](./images/wk6-boxes.png)
+
+*Two boxes contain red and blue balls. Box 1 has 14 blue balls and 4 red balls. Box 2 has 10 blue balls and 2 red balls.*
+
+The random phenomena we are considering is drawing (without looking) a single ball from Box 1 with our right hand and a single ball from Box 2 with our left hand. The sample space for this random phenomena is $S = \{RB, BR, BB, RR\}$.
+
+Define event $A$ as the event that we draw at least one red ball; define event $B$ as the event that we draw at least one blue ball.
+
+* <span style="color:purple">Are events $A$ and $B$ disjoint?</span> 
+
+* <span style="color:purple">What is the probability that event $A$ or event $B$ or both events $A$ and $B$ occur?</span>
+
+Now define event $A$ as the event that we draw exactly two red balls; define event $B$ as the event that we draw exactly two blue balls. 
+
+* <span style="color:purple">Are events $A$ and $B$ disjoint?</span>
 
 ## Example: Social media probabilities 
 
-Suppose that, upon begining their work at the college, $78\%$ of Swarthmore students, faculty, and staff have a Twitter account and $43\%$ have a Facebook account.
+Suppose that, upon beginning their work at the college, $78\%$ of Swarthmore students, faculty, and staff have a Twitter account and $43\%$ have a Facebook account. Consider the possibilities for the percentage of people at Swarthmore who have both a Twitter account and a Facebook account.
 
-* <span style="color:purple">What is the largest possible value for the percentage of people at Swarthmore who have both a Facebook account and a Twitter account?</span> 
+* <span style="color:purple">What is the largest possible value for this intersection?</span> 
 
-* <span style="color:purple">What is the smallest possible value for the percentage of people at Swarthmore who have both a Facebook account and a Twitter account?</span> 
+* <span style="color:purple">What is the smallest possible value for this intersection?</span> 
 
+<span style="color:blue">Are the events $A$, that a Swattie has a Twitter account and $B$, that a Swattie has a Facebook account disjoint?</span> 
   
 # 2. Conditional probability 
 
@@ -71,7 +90,7 @@ In 1961 astronomer Frank Drake developed an equation to try to estimate the numb
 $$N_{C} = N \cdot f_p \cdot n_e\cdot f_l \cdot f_i \cdot f_{c} \cdot f_{L}.$$
 And here’s what it means:
 
-!()[./images/wk6-drake-eqn.png]
+![](./images/wk6-drake-eqn.png)
 
 
 So, how many ETs are out there? Unfortunately, I don't have an answer for you. The answer depends on values chosen for the many factors in the equation and on our ever-evolving scientific knowledge and our own personal guesses. But we can now make sense of this equation and answer the following questions.
@@ -86,10 +105,3 @@ So, how many ETs are out there? Unfortunately, I don't have an answer for you. T
 
 * <span style="color:purple">Which of the factors in the formula are conditional probabilities?</span> 
 
-
-
-## Example: Insurance deductibles 
-
-Suppose you can buy car insurance that will pay the full price of repairing your car after an at-fault accident, or you can save \$12 per year by getting a policy with a \$500 deductible. According to the data from the insurance company, about $0.5\%$ of drivers in your area have an at-fault auto accident during any given year. 
-
-<span style="color:purple">Based on this information, should you buy the policy with the deductibe or not? How would the value of your car influence your decision?</span>
