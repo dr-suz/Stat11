@@ -17,32 +17,26 @@ The data set you will analyse in this homework..... The purpose of this assignme
 
 The skills necessary to complete this assignment in Excel are covered in the following seven videos:
 
-* Excel 2016 with Data Analysis Toolpak Introduction to Excel 2016 with Data Analysis Toolpak (1:52)
+* Excel 2016 with Data Analysis Toolpak - Introduction to Common Procedures 
 
-* Excel 2016 with Data Analysis Toolpak Introduction to Excel 2016 with Data Analysis Toolpak: Common Procedures (3:08)
+* Excel 2016 with Data Analysis Toolpak - Descriptive Statistics and Confidence Intervals for a Mean 
 
-* Excel 2016 with Data Analysis Toolpak Descriptive Statistics and Confidence Intervals for a Mean (2:57)
+* Excel 2016 with **XLSTAT** Video - Hypothesis Tests and Confidence Intervals for a Proportion 
 
-* Excel 2016 with Data Analysis Toolpak Histogram (3:08)
+* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for the Difference Between Proportions
+
+* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for One Mean
 
 
 ## RStudio
 
 The skills necessary to complete this assignment in RStudio are covered in the following seven videos:
 
-* R Studio Video Introduction to R and RStudio  (1:52)
+* RStudio Video - Probability Distributions
 
-* R Studio Video Getting Started (3:51)
+* RStudio Video - Statistical Inference - Inference on Proportions - One Sample  
 
-* R Studio Video Working with Data Objects 1 (3:29)
-
-* R Studio Video Working with Data Objects 2 (5:15)
-
-* R Studio Video Importing Data (4:36)
-
-* R Studio Video Descriptive Statistics (3:33)
-
-* R Studio Video Plotting - Histograms, Bar Charts, Boxplots, Scatterplots (4:08)
+* RStudio Video - Statistical Inference - Inference on Mean - One Sample
 
 
 # Instructions
@@ -59,5 +53,77 @@ This may take a few moments as it is a large data set. The data object is called
 
 Once you have access to the data set, complete all parts of the XX problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#4.
 
+Topics: CIs and tests for proportion or mean, sampling distributions 
+
+In class and on this assignment see: hw06 and hw07 from F21 class 
+For in class only: see hw05 from F21 
+
+
+
+Use either the `pnorm()` function in R or a [table of standard normal probabilities]() if you are used to using Excel. 
 
 # Problem 1 
+
+Direct mail advertisers send junk mail to thousands of potential customers in the hope that some will buy the company's produce. The response rate is usually quite low. Suppose a company wants to determine what the response rate is for a new flyer. They send the flyer to $1000$ people randomly selected from their mailing list of over $200,000$ people. They get orders from $123$ of the $1000$ random recipients.
+
+
+Find a $93\%$ confidence interval for the true response rate for the new flyer and explain what your confidence interval means in context. 
+
+
+
+
+# Problem 2 
+
+State police believe that $70\%$ of the drivers traveling on I-95 exceed the speed limit. They plan to set up a radar trap and check the speeds of $80$ cars. 
+
+(a) Do do think that the two conditions necessary for the CLT to hold are reasonable in this example? Why/why not? 
+
+(b) A newspaper reports that $80\%$ of the cars traveling on I-95 in the greater Philadelphia region are speeding. The article adds that this data is based on a random sample of $30$ cars traveling on a regular work day and that the margin of error was set at $3\%$. What level of confidence did the investigators use in their survey? 
+
+
+
+# Probleem 3 
+
+Suppose that $30\%$ of Swarthmore students wear contact lenses. The population of interest is all Swarthmore students and the variable we are measuring for each student is the binary, categorical variable that equals one if the individual wears contact lenses and equals zero if the individual does not wear contact lenses. 
+
+**(a)** Describe a way we can obtain a simple random sample of size $100$ from this population. 
+
+**(b)** Suppose we follow your recommendations for part (a) and so we can use the CLT to model the sample proportion of students who wear contacts. Based on the CLT, find the approximate probability that more than one third of this random sample of students wear contacts.
+
+
+
+
+# Problem 4 
+
+Ayrshire cows produce, on average, $47$ lbs of milk per day with a standard deviation of $6$ lbs. Jersey cows on the other hand produce an average of $43$ lbs per day with a standard deviation of $5$ lbs. Assume that Normal models describe the milk production of these types of cows and use this information to answer the following questions. 
+
+
+**(a)** Find the probability that a randomly selected Ayrshire cow produces more milk than a randomly selected Jersey cow.
+
+
+**(b)** Suppose a farmer has $20$ Jersey cows. Find the probability that the average production for this small herd exceeds $45$ lbs of milk a day. 
+
+
+
+
+# Problem 5 
+
+A newspaper reports that the governor's approval rating stands at $65\%$. The article adds that the poll is based on a random sample of $972$ adults and has a margin of error of $2.5\%$. What level of confidence did the pollsters use? 
+
+
+
+# Car and fuel economy 
+
+ Find and interpret a 95% confidence interval for the gas mileage of 2010 vehicles. Select the correct choice below and fill in the answer boxes within your choice.
+ 
+# yogurt 
+
+A consumer group tested 11 brands of vanilla yogurt and found the numbers below for calories per serving.
+a) Check the assumptions and conditions.
+b) A diet guide claims that you will get an average of  calories from a serving of vanilla yogurt. Use an appropriate hypothesis test to comment on their claim.
+
+
+# wax for skiing 
+
+
+A company is developing a new high performance wax for cross country ski racing. In order to justify the price marketing wants, the wax needs to be very fast. Specifically, the mean time to finish their standard test course should be less than  seconds for a former Olympic champion. To test it, the champion will ski the course 8 times. The champion's times (selected at random) are XXXXXX seconds to complete the test course. Should they market the wax? Assume the assumptions and conditions for appropriate hypothesis testing are met for the sample. Use 0.05 as the P-value cutoff level.

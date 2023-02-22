@@ -33,6 +33,8 @@ A probability distribution must always specify:
 
 * probabilities 
   
+HW5 from F21 for relevant examples   
+  
 # 1. Expected value 
 
 sum of all possibilities times their corresponding probabilities 
