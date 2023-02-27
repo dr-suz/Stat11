@@ -31,7 +31,7 @@ arthritis_table <- table(Arthritis[,c(2,5)])
 arthritis_table
 ```
 
-You must generate (and display) appropriate proportion tables to answer the next two questions. 
+You must generate (and display) appropriate proportion or contingency tables to answer the next two questions. 
 
 
 ### Problem 1 

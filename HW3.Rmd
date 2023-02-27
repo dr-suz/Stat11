@@ -4,7 +4,6 @@ author: "STAT011-S23"
 date: 'Due: 3/3/23'
 output:
   html_document: default
-  pdf_document: default
 ---
 
 # Introduction and Purpose 
@@ -98,7 +97,7 @@ Once you have access to the data, complete all parts of the first four problems 
 
 # Problem 1 
 
-Create a proportions table for the $84$ patients in this study and use it to answer the next two questions.
+Create either a proportions table or a contingency table for the $84$ patients in this study and use it to answer the next two questions.
 
 (a) What proportion of the patients received a placebo and had marked improvement?
 
@@ -129,7 +128,7 @@ Describe the design of an appropriate experiment to determine if AX319 will help
 
 # Problem 4
 
-Create a contingency table (of counts) for the Titanic data. Then answer the following questions about this data.
+Create either a proportions table or a contingency table for the Titanic data. Then answer the following questions about this data.
 
 (a) What is the probability that a crew member survived the wreck? 
 
@@ -152,11 +151,8 @@ Answer all parts to the following three questions. Show your work and/or justify
 
 (b) Suppose IQ scores tend to follow a $N(100, 16)$ distribution. What is the percent of people that you would expect to have an IQ between 112 and 132? (Hint: Draw a picture of the Normal curve and shade the region of interest. Note, RStudio software can compute this percentage for you exactly with a quantile function. If you're using Excel, you may wish to use a [Z-table](https://www.z-table.com/) instead of R.)
 
-(c) Consider the made-up probability distribution for a (discrete) random variable X shown in the table below.
+(c) Consider the made-up probability distribution for a (discrete) random variable X shown in the table below. (c.1) Find the mean and standard deviation of this distribution and (c.2) Suppose another random variable $Y$ is found by $Y = 3X - 2$. Use the rules for means (or expectations) and variances to find the mean and standard deviation of $Y$. 
 
 | X | 0 | 1 | 2 |
 |:-- |:-- |:-- |:-- |
 | **P(X=x)** | **0.2** | **0.4** | **0.4** |
-
-(c.1) Find the mean and standard deviation of this distribution and (c.2) Suppose another random variable $Y$ is found by $Y = 3X - 2$. Use the rules for means (or expectations) and variances to find the mean and standard deviation of $Y$. 
-

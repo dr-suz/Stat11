@@ -105,6 +105,15 @@ Model parameter(s):
 Sample estimate(s): 
 [pic showing that 68/99/99/7 rule no longer applies]  
 
+# Quantiles and probabilities 
+
+ [Z-table](https://www.z-table.com/) 
+ 
+ and in RStudio with `pnorm()` or `qnorm()` functions.
+
+
+# Independence from a contingency table 
+
 
 # Example 
 
