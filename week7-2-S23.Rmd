@@ -24,6 +24,11 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 <span style="color:green">new terms</span>
   
  
+# 3. Linear transformations of a random Variable 
+
+$$E(aX) = aE(X), \quad E(a \pm X) = a \pm E(X)$$
+
+$$Var(aX) = a^2 Var(X), \quad Var(a + X) = Var(X)$$ 
   
 # 1. Linear transformations of two random variables 
   
@@ -32,6 +37,24 @@ $$E(X \pm Y) = E(X) \pm E(Y)$$
 $$Var(X \pm Y) = Var(X) + Var(Y) \pm 2Cov(X,Y)$$ 
 
 If $X$ and $Y$ are independent random variables, then $Cov(X,Y)=0$. 
+
+
+## Week 6 In-Class Worksheet: Part 2 
+
+**Instructions:** Let's plan a trip. Suppose $8$ of us are going to travel to attend one of two international statistics conferences. (The rest of us are attending non-statistical conferences, naturally.) We need to request funding so we can travel to and from our destinations. Suppose $3$ of us are flying to Toronto, Canada for the 2023 Joint Statistical Meeting and $5$ of us are flying to the International Chinese Statistical Association conference in Chengdu, China.  
+
+Airline ticket prices vary from time to time, but for simplicity, let's assume we're going to purchase all tickets for the same destination at the same price. Suppose also that past experience has shown that tickets to Toronto have a mean price of $\$563$, with a standard deviation of $\$70$, while the mean airfare to Chengdu is $\$5400$, with a standard deviation of $\$750$.
+
+4. Define two random variables and use them to express the total amount of funding we will need to request to fly to both of these statistics conferences.
+
+<br>
+<br>
+
+5. Find the mean and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?
+
+<br>
+<br>
+
 
 ## Example: 
 
@@ -81,3 +104,38 @@ Model parameter(s):
 
 Sample estimate(s): 
 [pic showing that 68/99/99/7 rule no longer applies]  
+
+
+# Example 
+
+Some scientists who study penguins have to choose between using two different tracking options. The first is a metal band with an identifying number that is placed around a penguin’s flipper, the second is an electronic chip that emits radio waves and is injected under the skin of a penguin. Though in many cases, tracking penguins with a metal band is more informative (the electronic chips must be detectable within a particular radius of a sensor), there is some concern as to whether or not the metal bands are harmful to the penguins. 
+
+To investigate this question, researchers randomly selected $100$ young penguins from a colony of $400$ king penguins that already had radio tags. Half of these $100$ penguins were randomly assigned to a group that were banded with the metal band and the other half were not banded. (The average lifespan of a king penguin in the wild is $26$ years.)
+
+The researchers tracked these penguins for a decade. At the end of the study period they found that 
+
+- $10$ of the metal banded penguins were still alive and
+
+- $18$ of those without the metal bands were still alive.
+
+(a) What is the observed difference in the survival proportions between these two groups (not banded $-$ banded)? 
+
+(b) Practically speaking, is this difference large enough to warrent concern? 
+
+(c) Suppose we know for a fact that the metal band is not harmful to the penguins. How can you explain the observed difference in survival proportions? (Answer in no more than three sentences.)
+
+
+Q) What's the difference between saying two random events are independent vs two random variables are independent? 
+
+A) For any two random events, $A$ and $B$, to be independent, they must satisfy either $P(A \cap B) = P(A) \times P(B)$ or, equivalently, satisfy $P(A \mid B) = P(A)$. We say that two random variables, $X$ and $Y$, are independent if the values that $X$ takes on have no bearing on the values that $Y$ takes on. In terms of events, this means that any random event in the sample space of $X$ is independent (by one of the formulas above) of any random event in the sample space of $Y$. 
+
+
+## Example 
+
+Prof. Suzy has a cat, Obie, who likes to sleep a lot. Sometimes Obie is awake when Prof. Suzy is awake, but usually Obie sleeps during the day and is awake to "hunt" at night. Typically, Obie gets far more sleep than Prof. Suzy. 
+
+Draw a Venn diagram that represents the random event that $A=$ Prof. Suzy is awake and $B=$ Obie is awake. Draw this diagram to scale, meaning, the relative sizes of the circles for each event matters as does their relative size to the entire sample space (the rectangle) as does the size of any intersecting regions. Then answer the question: Is the amount of time Obie is awake independent of the amount of time he is asleep? Justify your answer with a sentence or two. 
+
+
+**Solution:** Obie cannot be both awake and asleep, therefore, if he is awake, we know the probability he is asleep is $0$, and vice versa. Thus the amount of time Obie is awake is entirely *dependent* upon the amount of time he is asleep (i.e. these are not independent). 
+
