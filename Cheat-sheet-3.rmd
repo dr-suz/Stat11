@@ -1,27 +1,36 @@
 ---
-title: "Definitions and terms to know - part 3"
-output: pdf_document
-fontsize: 14pt 
+title: "Stat 11 Study Guides"
+subtitle: "Definitions and Terms to Know: Random Variables and Probability Distributions" 
+author: "Prof. Suzy Thornton"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
 ---
+
 
 # Notation for random variables 
 
-Often it is useful to suppose that some real world phenomena can be modeled as a random process. So we might say, for example, let $X$ be a random variable that represents the height of all people ages 18-25. Then we'd have to decide what distribution makes the most sense for this random variable. E.g. Is a Normally distributed random variable ok? Are there some numbers that are not possible to observe?  
-$\vspace{1cm}$
+Typically we denote random variables with capital letters from the end of the English alphabet: $X$, $Y$, $W$, $Z$. Realized values of a random variable, or a particular possible value of a random variable use the lower case version of these same letters: $x$, $y$, $w$, $z$. If the distribution of a random variable is one of the more common ones (like those listed below) we'll use the short-hand $\sim$ following the random variable which means "is distributed as".
 
-Typically we denote random variables with capital letters from the end of the English alphabet: $X$, $Y$, $W$, $Z$. If the distribution of a random variable is one of the more common ones (like those listed below) we'll use the short-hand $\sim$ following the random variable which means "is distributed as".
-$\vspace{1cm}$
+<br>
 
 Sometimes we talk about two random variables with the same distribution. In this case, we generally use the same letter but index the random variables to be able to differentiate among them: $X_1$, $X_2$, $X_3$. 
-$\vspace{1cm}$
+
+<br>
 
 The **sample space** of a random variable is the set of all possible values that is could possibly take. Once the random variable takes on a particular value, we denote that value with the lowercase version of the same letter. If we have multiple observations of the same random variable, we index these observations to distinguish among them. The last observation has the index $n$, where $n$ corresponds to the total number of observations, i.e. the sample size.
-$\vspace{1cm}$
+
+<br>
 
 Often we may need to consider a (simple) **random sample** from the same population (modeled by some random variable). A random sample is always drawn so that each observation is independent of another and so that all observations are drawn from the same population. We call this an "independent and identically distributed" (often abbreviated **IID**) sample or just a "random" sample. 
 
 
-\pagebreak 
 
 # Common random variables: discrete 
 
@@ -31,7 +40,7 @@ Often we may need to consider a (simple) **random sample** from the same populat
 
 - **Notation:** $X \sim Bern(p)$ 
 
-- **R functions:** `rbinom(n, size=1, prob)` Note a Binomial random variable (below) is just the sum of the number of success of $n$ (independent) Bernouli random variable. 
+- **R functions:** `rbinom(n, size=1, prob)` Note a Binomial random variable (below) is just the sum of the number of success of $n$ (independent) Bernoulli random variable. 
 
 - **Distribution parameters:** $p$ the probability of a "success"
 
@@ -60,7 +69,7 @@ Often we may need to consider a (simple) **random sample** from the same populat
 
 - **Distribution parameters:** $n=$ the number of trials/rolls of the die, $p_1=$ the probability of landing on the first die face, $p_2=$ the probability of landing on the second die face, etc. 
 
-- **Sample space:** The sample space $S$ is a bit difficult to visualize (since it's multidimensional) but it consists of a finte number of elements. Each element represents, over these $n$ rolls, how many times did we observe $1$, the first face of our die, how many times did we observe $2$, the second face of our die, $\dots$, how many times did we observe $k$, the last face of our die. 
+- **Sample space:** The sample space $S$ is a bit difficult to visualize (since it's multidimensional) but it consists of a finite number of elements. Each element represents, over these $n$ rolls, how many times did we observe $1$, the first face of our die, how many times did we observe $2$, the second face of our die, $\dots$, how many times did we observe $k$, the last face of our die. 
 
 \pagebreak 
 
@@ -68,7 +77,7 @@ Often we may need to consider a (simple) **random sample** from the same populat
 
 ### Uniform 
 
-- **Intuitive defintiion:** Randomly choosing any real number (rational or irrational) between two specific numbers.
+- **Intuitive definition:** Randomly choosing any real number (rational or irrational) between two specific numbers.
 
 - **Notation:** $X\sim U(a,b)$ or sometimes $X\sim Unif(a,b)$ (note parentheses are used because of convention but really these are inclusive of the numbers $a$ and $b$ so sometimes I'll write $X \sim U[a, b]$)
 
@@ -120,6 +129,7 @@ Often we may need to consider a (simple) **random sample** from the same populat
 
 \pagebreak 
 
+
 # Important facts and theorems 
 
 ## Two special facts about Normal random variables
@@ -139,7 +149,7 @@ The only two **parameters** we need to know about anything that is Normally dist
 
 
 ## The Central limit theorem 
-If $n$ is large [read "as $n$ gets larger and larger and closer to infinity"], the standardized average ($\bar{z}$) of a random sample ($\{x_1, x_2, \dots, x_n\}$) will itself be Normally distributed, regardless of the original distribution of $X$. Specifically, if $X$ is a random variable with **any** distribution (e.g. Binomial, Uniform, Normal) and if we observe an infinitely large number of observations of $X$, $\{x_1, \dots, x_n\}$, then for the standardized version of these observations, say $\{z_1, z_2, \dots, z_n\}$ we have that
+As $n$ grows towards infinity, the standardized average ($\bar{z}$) of a random sample ($\{x_1, x_2, \dots, x_n\}$) will itself be Normally distributed, regardless of the original distribution of $X$. Specifically, if $X$ is a random variable with **any** distribution (e.g. Binomial, Uniform, Normal) and if we observe an infinitely large number of observations of $X$, $\{x_1, \dots, x_n\}$, then for the standardized version of these observations, say $\{z_1, z_2, \dots, z_n\}$ we have that
 $$\bar{z} \sim N(0,1).$$
 This theorem is a key concept because it implies that statistical methods that work for Normal distributions can be applicable to many problems involving other types of distributions.[1,2]
 

@@ -3,6 +3,7 @@ title: "Group Homework 3"
 author: "STAT011-S23"
 date: 'Due: 3/3/23'
 output:
+  pdf_document: default
   html_document: default
 ---
 
@@ -111,6 +112,11 @@ Create either a proportions table or a contingency table for the $84$ patients i
       
 # Solution 1 
 
+```{r}
+table(arthritis)
+```
+
+
 (a) $7/(7+29+7+21+13+7) = 0.083$ so $8.3\%$ of the patients received a placebo and had marked improvement
 
 (b) Placebo with No improvement: $29/(7+29+7) = 0.674$
@@ -119,12 +125,6 @@ Placebo with Some improvement: $7/(7+29+7) = 0.163$
 
 Placebo with Marked improvement: $7/(7+29+7) = 0.163$ 
 
-```{r}
-# Code for (a) 
-table(arthritis)
-
-# Code for (b) 
-```
 
 **Notes to graders:** Answers must display either a proportions table or a contingency table and provide the correct answers to (a) and (b) for full credit. 
 
@@ -140,11 +140,11 @@ Name and describe the kind of bias that might be present if administrators decid
 
 # Solution 2
 
-(a)
+(a) Response bias 
 
-(b)
+(b) Voluntary response bias 
 
-**Notes to graders:** 
+**Notes to graders:** Answers should be counted as correct if they accurately describe the type of bias present (e.g. list the ways in which these sampling strategies could introduce bias) even if they don't refer to the explict name of the bias listed above. 
 
 
 # Problem 3
@@ -155,7 +155,7 @@ Describe the design of an appropriate experiment to determine if AX319 will help
 
 # Solution 3
 
-
+Block the participants according to the type of injury and within each block, randomly assign one of two treatments to each participant. Of the participants with bone breaks, randomly select 9 to receive just a cast and for the other 9, they will receive a cast and AX319. Of the participants with a bone fracture, randomly select 15 to receive just a cast and for the other 15, they will receive a cast and AX319. The compare the rates of healing across each block and each treatment group. 
 
 **Notes to graders:** Answers may vary but should all clearly be experiments (and not observational studies) that involve the random assignment of the two treatments: casts alone or AX319 and casts. Answers should also mention blocking according to type of injury (bone break or fracture). 
 
@@ -187,7 +187,7 @@ Create either a proportions table or a contingency table for the Titanic data. T
 table(titanic)
 ```
 
-**Notes to graders:** 
+**Notes to graders:** The answers to parts (a) - (c) must be correct for full credit. The answer for (d) is graded for a valid attenpt at a solution. Please give partial credit if only some of these parts are correct. 
 
 ***
 
@@ -221,9 +221,9 @@ Not O: $1 - .45 = 0.55$
 pnorm(132, mean=100, sd=16, lower.tail=TRUE) - pnorm(112, mean=100, sd=16, lower.tail=TRUE)
 ```
 
-(c) For $X$: $E(X) = 0\times 0.2 + 1 \times 0.4 + 2 \times 0.4 = 1.2$ and $Var(X) = (0- 1.2)^2\times 0.2 + (1 - 1.2)^2 \times 0.4 + (2-1.2)^2 \times 0.4 = $
+(c) For $X$: $E(X) = 0\times 0.2 + 1 \times 0.4 + 2 \times 0.4 = 1.2$ and $Var(X) = (0- 1.2)^2\times 0.2 + (1 - 1.2)^2 \times 0.4 + (2-1.2)^2 \times 0.4 = 0.56$
 
-For $Y$: 
+For $Y$: $E(Y) = E(3X - 2) = 3E(X) - 2 = 1.6$ and $Var(Y) = Var(3X-2) = 3^2 \times Var(X) + 0 =5.04$
 
 
-**Notes to graders:** 
+**Notes to graders:** The answers to each part must be correct for full credit. Please give partial credit if only some of the parts are correct. 

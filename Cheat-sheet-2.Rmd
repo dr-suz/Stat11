@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Study Guides"
-subtitle: "Definitions and Terms to Know: Random Variables and Probabbility" 
+subtitle: "Definitions and Terms to Know: Random Variables and Probability" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
 output:

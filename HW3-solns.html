@@ -460,14 +460,23 @@ them saw</p>
 </div>
 <div id="solution-1" class="section level1">
 <h1>Solution 1</h1>
+<pre class="r"><code>table(arthritis)</code></pre>
+<pre><code>##          Improved
+## Treatment Marked None Some
+##   Placebo      7   29    7
+##   Treated     21   13    7</code></pre>
 <ol style="list-style-type: lower-alpha">
-<li></li>
-<li></li>
+<li><p><span class="math inline">\(7/(7+29+7+21+13+7) = 0.083\)</span>
+so <span class="math inline">\(8.3\%\)</span> of the patients received a
+placebo and had marked improvement</p></li>
+<li><p>Placebo with No improvement: <span class="math inline">\(29/(7+29+7) = 0.674\)</span></p></li>
 </ol>
-<pre class="r"><code># Code for (a) 
-
-# Code for (b) </code></pre>
-<p><strong>Notes to graders:</strong></p>
+<p>Placebo with Some improvement: <span class="math inline">\(7/(7+29+7)
+= 0.163\)</span></p>
+<p>Placebo with Marked improvement: <span class="math inline">\(7/(7+29+7) = 0.163\)</span></p>
+<p><strong>Notes to graders:</strong> Answers must display either a
+proportions table or a contingency table and provide the correct answers
+to (a) and (b) for full credit.</p>
 </div>
 <div id="problem-2" class="section level1">
 <h1>Problem 2</h1>
@@ -484,10 +493,13 @@ to be drug tested.</p></li>
 <div id="solution-2" class="section level1">
 <h1>Solution 2</h1>
 <ol style="list-style-type: lower-alpha">
-<li></li>
-<li></li>
+<li><p>Response bias</p></li>
+<li><p>Voluntary response bias</p></li>
 </ol>
-<p><strong>Notes to graders:</strong></p>
+<p><strong>Notes to graders:</strong> Answers should be counted as
+correct if they accurately describe the type of bias present (e.g. list
+the ways in which these sampling strategies could introduce bias) even
+if they don’t refer to the explict name of the bias listed above.</p>
 </div>
 <div id="problem-3" class="section level1">
 <h1>Problem 3</h1>
@@ -502,7 +514,19 @@ AX319 will help bones heal.</p>
 </div>
 <div id="solution-3" class="section level1">
 <h1>Solution 3</h1>
-<p><strong>Notes to graders:</strong></p>
+<p>Block the participants according to the type of injury and within
+each block, randomly assign one of two treatments to each participant.
+Of the participants with bone breaks, randomly select 9 to receive just
+a cast and for the other 9, they will receive a cast and AX319. Of the
+participants with a bone fracture, randomly select 15 to receive just a
+cast and for the other 15, they will receive a cast and AX319. The
+compare the rates of healing across each block and each treatment
+group.</p>
+<p><strong>Notes to graders:</strong> Answers may vary but should all
+clearly be experiments (and not observational studies) that involve the
+random assignment of the two treatments: casts alone or AX319 and casts.
+Answers should also mention blocking according to type of injury (bone
+break or fracture).</p>
 <hr />
 </div>
 <div id="problem-4" class="section level1">
@@ -523,19 +547,36 @@ variables? Why/why not?</p></li>
 <div id="solution-4" class="section level1">
 <h1>Solution 4</h1>
 <ol style="list-style-type: lower-alpha">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><span class="math inline">\(212/(673+212) = 0.240\)</span></li>
 </ol>
-<pre class="r"><code># Code for (a)
-
-# Code for (b)
-
-# Code for (c)
-
-# Code for (d)</code></pre>
-<p><strong>Notes to graders:</strong></p>
+<p>(b)<span class="math inline">\((178)/(523+178) = 0.254\)</span></p>
+<p>(c)<span class="math inline">\((528+178)/(673+212+122+203+167+118+528+178) =
+0.321\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>If class and survival are independent, then we would expect the
+probability that a passenger survived (<span class="math inline">\((212+203+118+178)/(673+212+122+203+167+118+528+178)=0.323\)</span>)
+to match (approximately) each of the following: the probability that a
+passenger survived given they were a third class passenger (<span class="math inline">\(0.254\)</span> from part (b)); the probability
+that a passenger survived given they were a second class passenger
+(<span class="math inline">\(118/(118+167)=0.414\)</span>); the
+probability that a passenger survived given they were a first class
+passenger (<span class="math inline">\(122/(122+203)=0.375\)</span>);
+the probability that a passenger survived given they were a crew member
+(<span class="math inline">\(212/(212+673)=0.240\)</span>). All
+conditional probabilities besides that of the first class passengers are
+quite different from the probability that a passenger survived.
+Therefore, there is evidence that class and survival were not
+independent factors in this tragedy.</li>
+</ol>
+<pre class="r"><code>table(titanic)</code></pre>
+<pre><code>##         class
+## survived Crew First Second Third
+##      No   673   122    167   528
+##      Yes  212   203    118   178</code></pre>
+<p><strong>Notes to graders:</strong> The answers to parts (a) - (c)
+must be correct for full credit. The answer for (d) is graded for a
+valid attenpt at a solution. Please give partial credit if only some of
+these parts are correct.</p>
 <hr />
 </div>
 <div id="problem-5" class="section level1">
@@ -584,16 +625,27 @@ expectations) and variances to find the mean and standard deviation of
 <div id="solution-5" class="section level1">
 <h1>Solution 5</h1>
 <ol style="list-style-type: lower-alpha">
-<li></li>
-<li></li>
-<li></li>
+<li>AB: <span class="math inline">\(1 - (.45+.40+.11)=
+0.04\)</span></li>
 </ol>
-<pre class="r"><code># Code for (a)
-
-# Code for (B)
-
-# Code for (c)</code></pre>
-<p><strong>Notes to graders:</strong></p>
+<p>A or B: <span class="math inline">\(.40+.11 = 0.51\)</span></p>
+<p>Not O: <span class="math inline">\(1 - .45 = 0.55\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Approximately <span class="math inline">\(20.4\%\)</span></li>
+</ol>
+<pre class="r"><code>pnorm(132, mean=100, sd=16, lower.tail=TRUE) - pnorm(112, mean=100, sd=16, lower.tail=TRUE)</code></pre>
+<pre><code>## [1] 0.2038772</code></pre>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>For <span class="math inline">\(X\)</span>: <span class="math inline">\(E(X) = 0\times 0.2 + 1 \times 0.4 + 2 \times 0.4 =
+1.2\)</span> and <span class="math inline">\(Var(X) = (0- 1.2)^2\times
+0.2 + (1 - 1.2)^2 \times 0.4 + (2-1.2)^2 \times 0.4 = 0.56\)</span></li>
+</ol>
+<p>For <span class="math inline">\(Y\)</span>: <span class="math inline">\(E(Y) = E(3X - 2) = 3E(X) - 2 = 1.6\)</span> and
+<span class="math inline">\(Var(Y) = Var(3X-2) = 3^2 \times Var(X) + 0
+=5.04\)</span></p>
+<p><strong>Notes to graders:</strong> The answers to each part must be
+correct for full credit. Please give partial credit if only some of the
+parts are correct.</p>
 </div>
 
 
