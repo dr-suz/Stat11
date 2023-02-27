@@ -69,7 +69,7 @@ $$X = \text{ cost of a flight from PHL to Toronto} \\ Y = \text{ cost of a fligh
 
 Then, according to the information above, we have that 
 
-$$E(X) = 563, \quad Var(X) = 563^2 \\ E(Y) = 5400, \quad Var(Y) = 750^2.$$
+$$E(X) = 563, \quad Var(X) = 70^2 \\ E(Y) = 5400, \quad Var(Y) = 750^2.$$
 
 
 

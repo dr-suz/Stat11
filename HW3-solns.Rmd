@@ -81,7 +81,7 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 If you are analyzing this data in Excel you first need to [download the arthritis data set for HW 3](https://github.com/ProfSuzy/Stat11/blob/main/Data/arthritis.csv) and [download the Titanic data set for HW 3](https://github.com/ProfSuzy/Stat11/blob/main/Data/titanic.csv) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw". Save each link with the names `arthritis.csv` and `titanic.csv`, respectively. 
 
 If you are analyzing this data in RStudio, you will import the data with the following commands
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 arthritis <- read.delim(
         "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/arthritis.csv",
         sep=",")
@@ -111,18 +111,22 @@ Create either a proportions table or a contingency table for the $84$ patients i
       
 # Solution 1 
 
-(a)
+(a) $7/(7+29+7+21+13+7) = 0.083$ so $8.3\%$ of the patients received a placebo and had marked improvement
 
-(b)
+(b) Placebo with No improvement: $29/(7+29+7) = 0.674$
+
+Placebo with Some improvement: $7/(7+29+7) = 0.163$
+
+Placebo with Marked improvement: $7/(7+29+7) = 0.163$ 
 
 ```{r}
 # Code for (a) 
+table(arthritis)
 
 # Code for (b) 
 ```
 
-**Notes to graders:** 
-
+**Notes to graders:** Answers must display either a proportions table or a contingency table and provide the correct answers to (a) and (b) for full credit. 
 
 
 # Problem 2
@@ -151,7 +155,9 @@ Describe the design of an appropriate experiment to determine if AX319 will help
 
 # Solution 3
 
-**Notes to graders:** 
+
+
+**Notes to graders:** Answers may vary but should all clearly be experiments (and not observational studies) that involve the random assignment of the two treatments: casts alone or AX319 and casts. Answers should also mention blocking according to type of injury (bone break or fracture). 
 
 ***
 
@@ -169,22 +175,16 @@ Create either a proportions table or a contingency table for the Titanic data. T
 
 # Solution 4
 
-(a)
+(a) $212/(673+212) = 0.240$
 
-(b)
+(b)$(178)/(523+178) = 0.254$
 
-(c)
+(c)$(528+178)/(673+212+122+203+167+118+528+178) = 0.321$
 
-(d) 
+(d) If class and survival are independent, then we would expect the probability that a passenger survived ($(212+203+118+178)/(673+212+122+203+167+118+528+178)=0.323$) to match (approximately) each of the following: the probability that a passenger survived given they were a third class passenger ($0.254$ from part (b)); the probability that a passenger survived given they were a second class passenger ($118/(118+167)=0.414$); the probability that a passenger survived given they were a first class passenger ($122/(122+203)=0.375$); the probability that a passenger survived given they were a crew member ($212/(212+673)=0.240$). All conditional probabilities besides that of the first class passengers are quite different from the probability that a passenger survived. Therefore, there is evidence that class and survival were not independent factors in this tragedy. 
 
 ```{r}
-# Code for (a)
-
-# Code for (b)
-
-# Code for (c)
-
-# Code for (d)
+table(titanic)
 ```
 
 **Notes to graders:** 
@@ -208,18 +208,22 @@ Answer all parts to the following three questions. Show your work and/or justify
 
 # Solution 5 
 
-(a) 
+(a) AB: $1 - (.45+.40+.11)= 0.04$
 
-(b) 
+A or B: $.40+.11 = 0.51$
 
-(c)
+Not O: $1 - .45 = 0.55$
+
+(b) Approximately $20.4\%$
+
 
 ```{r}
-# Code for (a)
-
-# Code for (B)
-
-# Code for (c)
+pnorm(132, mean=100, sd=16, lower.tail=TRUE) - pnorm(112, mean=100, sd=16, lower.tail=TRUE)
 ```
+
+(c) For $X$: $E(X) = 0\times 0.2 + 1 \times 0.4 + 2 \times 0.4 = 1.2$ and $Var(X) = (0- 1.2)^2\times 0.2 + (1 - 1.2)^2 \times 0.4 + (2-1.2)^2 \times 0.4 = $
+
+For $Y$: 
+
 
 **Notes to graders:** 
