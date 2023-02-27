@@ -79,7 +79,7 @@ Correlation and <span style="color:green">covariance</span> measure the same thi
 
 Conversely, when discussing theoretical random variables, we tend to describe their covariance rather than their correlation. 
 
-$$Cov(X,Y) = E\left[(X-E(X))\cdot(Y-E(Y)) \right] = \sum_{x \in S} \left[(x-E(X)(y-E(Y))\times Pr(x \text{ and }y)) \right]$$
+$$Cov(X,Y) = E\left[(X-E(X))\cdot(Y-E(Y)) \right] = \sum_{(x,y) \in S} \left[(x-E(X)(y-E(Y))\times Pr(x \text{ and }y)) \right]$$
 
 ## Example: Modeling ariline tickets 
 
