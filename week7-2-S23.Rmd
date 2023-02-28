@@ -15,31 +15,94 @@ header-includes:
 ---
 
 ```{r setup, echo=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 
 <span style="color:purple">notecard</span>
 <span style="color:blue">hypothetical</span>
 <span style="color:green">new terms</span>
-  
+
+# Recap 
+
+Last class we learned how to calculate the expected value of a random variable, say, $X$: 
+
+$$E(X) = \sum_{x\in S} \left[ x \times Pr(x) \right].$$   
+
+From this, we can also derive ways to compute $Var(X)$, $stdev(X)$, and, for another random variable, say, $Y$ we can also derive $Cov(X,Y)$ and $Cor(X,Y)$ with the following: 
+
+$$Cov(X,Y) = E\left[(X-E(X))\cdot(Y-E(Y)) \right] = \sum_{(x,y) \in S} \left[(x-E(X)(y-E(Y))\times Pr(x \text{ and }y)) \right]$$
+$$\text{and}$$
+
+$$Cor(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.$$
+
+## Example - Calculating covariance 
+
+Not: This isn't something you'll be asked to do on Quiz 2 or on the Final. 
+
+
+# 1. Independent Random Variables 
+
+
+<span style="color:purple">Q1) What does it mean for two *random events*, say, $A$ and $B$, to be independent?</span>
+
+<br>
+
+A1) For any two random events, $A$ and $B$, to be independent, they must satisfy $Pr(A \text{ and } B) = Pr(A) \times Pr(B)$ or, equivalently, $Pr(A \mid B) = Pr(A)$. 
+
+<br>
+
+## Example - Determining if two events are independent
+
+You play two games against the same opponent. The probability you win the first game is $0.4$. If you win the first game, the probability you also win the second is $0.2$. If you lose the first game, the probability that you win the second is $0.3$.
+
+<span style="color:purple">Are the two games independent?</span>  
+
+<br>
+<br>
+
+***
+
+<span style="color:blue">Q2) What does it mean for two *random variables*, say, $X$ and $Y$ to be independent?</span> 
+
+<br> 
+<br> 
+
+A2) We say that two random variables, $X$ and $Y$, are independent if the values that $X$ takes on are in no way related the values that $Y$ takes on. In terms of events, this means that any random event in the sample space of $X$ is independent (by one of the formulas above) of any random event in the sample space of $Y$. 
+
+
+## Example - Determining if two variables are independent
+
+|     | Drug A | Drug B | Placebo | Row totals |
+|:--- |:--- |:--- |:--- |:--- |
+| **Seizure(s)**    | 7 | 2 | 9  | **18** |
+| **No seizure(s)** | 5 | 10  | 3 | **18** |
+| **Column totals** | **12** | **12** | **12** | **36** |
  
-# 3. Linear transformations of a random Variable 
+*** 
+ 
+# 2. Properties of Expectation and Variance 
 
-$$E(aX) = aE(X), \quad E(a \pm X) = a \pm E(X)$$
+## Linear transformations of a random Variable 
 
-$$Var(aX) = a^2 Var(X), \quad Var(a + X) = Var(X)$$ 
+Suppose $a$ is some deterministic (non-random) number between $-\infty$ and $+\infty$. The following are properties of expectation and variance for linear transformations of a random variable $X$. 
+
+* $E(aX) = aE(X), \quad E(a \pm X) = a \pm E(X)$ 
+
+* $Var(aX) = a^2 Var(X), \quad Var(a + X) = Var(X)$
   
-# 1. Linear transformations of two random variables 
+## Linear transformations of two random variables 
+
+Suppose both $X$ and $Y$ are random variables that may or may not be related to one another. The following are properties of expectation and variance for linear transformations involving both random variables.   
   
-$$E(X \pm Y) = E(X) \pm E(Y)$$
+* $E(X \pm Y) = E(X) \pm E(Y)$
 
-$$Var(X \pm Y) = Var(X) + Var(Y) \pm 2Cov(X,Y)$$ 
+* $Var(X \pm Y) = Var(X) + Var(Y) \pm 2Cov(X,Y)$
 
-If $X$ and $Y$ are independent random variables, then $Cov(X,Y)=0$. 
+* If $X$ and $Y$ are independent random variables, then $Cov(X,Y)=0$. 
 
 
-## Week 6 In-Class Worksheet: Part 2 
+## Example - Week 6 In-Class Worksheet: Part 2 
 
 **Instructions:** Let's plan a trip. Suppose $8$ of us are going to travel to attend one of two international statistics conferences. (The rest of us are attending non-statistical conferences, naturally.) We need to request funding so we can travel to and from our destinations. Suppose $3$ of us are flying to Toronto, Canada for the 2023 Joint Statistical Meeting and $5$ of us are flying to the International Chinese Statistical Association conference in Chengdu, China.  
 
@@ -51,98 +114,56 @@ Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the c
 
 <span style="color:blue">How could we interpret the covariance between the price of a ticket from PHL to Toronto and the price of a ticket from PHL to Chengdu?</span> 
 
+
+<br>
+<br>
+
 <span style="color:purple">5. Find the mean and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
 
 <br>
 <br>
 
+***
 
-
-# 2. Discrete random variables 
-
-## Bernoulli distribution
-
-Model parameter(s): 
-
-Sample estimate(s): 
-
-### Example: Two-sided coin flip
-
-
-
-## Binomial distribution
-
-
-Model parameter(s): 
-
-Sample estimate(s): 
-
-### Example: Many consecutive, independent two-sided coin flips
-
-
-  
-# 3. Continuous random variables 
-
+# 3. Calculations with Common Probability Distribution Functions 
 
 ## Normal distribution 
 
+$$X \sim N(\mu, \sigma^2)$$
+**Model parameters**: $E(X) = \mu$ and $Var(X) = \sigma^2$
 
-Model parameter(s): 
+![](./images/normal 68-95-997.png)
 
-Sample estimate(s): 
+For a sample of data from this Normal distribution, we observe the values of $x_1, x_2, \dots, x_n$.
 
-[include pic of 68/95/99.7 rule]
+**Sample estimates**: $\bar{x} = \frac{1}{n} \sum_{i = 1}^{n} x_i$ and $s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})$ 
 
 
-## Student's t-distribution 
+### Quantiles and probabilities 
 
-analogy for degrees of freedom parameter 
+For the sake of this exercise, let's assume that the cost of airline tickets can be modeled with a Normal distribution. 
 
-Model parameter(s): 
+<span style="color:purple">What's the probability that the cost of a flight from PHL to Toronto exceeds $\$700$?</span>  
 
-Sample estimate(s): 
-[pic showing that 68/99/99/7 rule no longer applies]  
-
-# Quantiles and probabilities 
-
- [Z-table](https://www.z-table.com/) 
+<br>
+<br>
  
- and in RStudio with `pnorm()` or `qnorm()` functions.
+```{r}
+myQuantile = 700
+pnorm(myQuantile, mean = 563, sd = 70, lower.tail=TRUE)
+```
 
 
-# Independence from a contingency table 
+<span style="color:purple">$80\%$ of flights from PHL to Toronto cost less than how much?</span> 
 
+<br>
+<br>
 
-# Example 
+```{r}
+myProbability = .8
+qnorm(myProbability, mean = 563, sd = 70, lower.tail=TRUE)
+```
 
-Some scientists who study penguins have to choose between using two different tracking options. The first is a metal band with an identifying number that is placed around a penguin’s flipper, the second is an electronic chip that emits radio waves and is injected under the skin of a penguin. Though in many cases, tracking penguins with a metal band is more informative (the electronic chips must be detectable within a particular radius of a sensor), there is some concern as to whether or not the metal bands are harmful to the penguins. 
+<br>
 
-To investigate this question, researchers randomly selected $100$ young penguins from a colony of $400$ king penguins that already had radio tags. Half of these $100$ penguins were randomly assigned to a group that were banded with the metal band and the other half were not banded. (The average lifespan of a king penguin in the wild is $26$ years.)
-
-The researchers tracked these penguins for a decade. At the end of the study period they found that 
-
-- $10$ of the metal banded penguins were still alive and
-
-- $18$ of those without the metal bands were still alive.
-
-(a) What is the observed difference in the survival proportions between these two groups (not banded $-$ banded)? 
-
-(b) Practically speaking, is this difference large enough to warrent concern? 
-
-(c) Suppose we know for a fact that the metal band is not harmful to the penguins. How can you explain the observed difference in survival proportions? (Answer in no more than three sentences.)
-
-
-Q) What's the difference between saying two random events are independent vs two random variables are independent? 
-
-A) For any two random events, $A$ and $B$, to be independent, they must satisfy either $P(A \cap B) = P(A) \times P(B)$ or, equivalently, satisfy $P(A \mid B) = P(A)$. We say that two random variables, $X$ and $Y$, are independent if the values that $X$ takes on have no bearing on the values that $Y$ takes on. In terms of events, this means that any random event in the sample space of $X$ is independent (by one of the formulas above) of any random event in the sample space of $Y$. 
-
-
-## Example 
-
-Prof. Suzy has a cat, Obie, who likes to sleep a lot. Sometimes Obie is awake when Prof. Suzy is awake, but usually Obie sleeps during the day and is awake to "hunt" at night. Typically, Obie gets far more sleep than Prof. Suzy. 
-
-Draw a Venn diagram that represents the random event that $A=$ Prof. Suzy is awake and $B=$ Obie is awake. Draw this diagram to scale, meaning, the relative sizes of the circles for each event matters as does their relative size to the entire sample space (the rectangle) as does the size of any intersecting regions. Then answer the question: Is the amount of time Obie is awake independent of the amount of time he is asleep? Justify your answer with a sentence or two. 
-
-
-**Solution:** Obie cannot be both awake and asleep, therefore, if he is awake, we know the probability he is asleep is $0$, and vice versa. Thus the amount of time Obie is awake is entirely *dependent* upon the amount of time he is asleep (i.e. these are not independent). 
-
+If we'd rather not use R, we can find approximate answers to these two questions by checking a [Z-table](https://www.z-table.com/).  
