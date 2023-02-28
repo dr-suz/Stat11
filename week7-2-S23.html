@@ -1569,23 +1569,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1634,8 +1628,6 @@ display: none;
 </div>
 
 
-<p><span style="color:purple">notecard</span> <span style="color:blue">hypothetical</span> <span style="color:green">new
-terms</span></p>
 <div id="recap" class="section level1">
 <h1>Recap</h1>
 <p>Last class we learned how to calculate the expected value of a random
@@ -1650,15 +1642,20 @@ variable, say, <span class="math inline">\(Y\)</span> we can also derive
 }y)) \right]\]</span> <span class="math display">\[\text{and}\]</span></p>
 <p><span class="math display">\[Cor(X,Y) =
 \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.\]</span></p>
-<div id="example---calculating-covariance" class="section level2">
-<h2>Example - Calculating covariance</h2>
-<p>Not: This isn’t something you’ll be asked to do on Quiz 2 or on the
-Final.</p>
+<div id="student-question---how-to-calculate-covariance" class="section level2">
+<h2>Student Question - How to calculate covariance</h2>
+<p>Note: This isn’t something you’ll be asked to do on Quiz 2 or on the
+Final. If we have time, at the end of class today I will cover an
+example on how to calculate the covariance between two discrete random
+variables.</p>
 </div>
 </div>
 <div id="independent-random-variables" class="section level1">
 <h1>1. Independent Random Variables</h1>
-<p><span style="color:purple">Q1) What does it mean for two <em>random
+<p>Independence is a complicated concept in probability and statistics.
+We’re going to dig into the nitty gritty details to make sure we <a href="https://youtu.be/jCUiGArhW2M?start=1">really understand what
+independence means</a>.</p>
+<p><span style="color:blue">Q1) What does it mean for two <em>random
 events</em>, say, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, to be independent?</span></p>
 <p><br></p>
 <p>A1) For any two random events, <span class="math inline">\(A\)</span>
@@ -1667,27 +1664,44 @@ satisfy <span class="math inline">\(Pr(A \text{ and } B) = Pr(A) \times
 Pr(B)\)</span> or, equivalently, <span class="math inline">\(Pr(A \mid
 B) = Pr(A)\)</span>.</p>
 <p><br></p>
-<div id="example---determining-if-two-events-are-independent" class="section level2">
-<h2>Example - Determining if two events are independent</h2>
+<div id="example-1---determining-if-two-events-are-independent" class="section level2">
+<h2>Example 1 - Determining if two events are independent</h2>
 <p>You play two games against the same opponent. The probability you win
 the first game is <span class="math inline">\(0.4\)</span>. If you win
 the first game, the probability you also win the second is <span class="math inline">\(0.2\)</span>. If you lose the first game, the
-probability that you win the second is <span class="math inline">\(0.3\)</span>.</p>
-<p><span style="color:purple">Are the two games independent?</span></p>
+probability that you win the second is <span class="math inline">\(0.3\)</span>. Let <span class="math inline">\(A\)</span> be the event that you win the first
+game and let <span class="math inline">\(B\)</span> be the event that
+you win the second game.</p>
+<p><span style="color:purple">a) What is the probability that you win
+the second game?</span></p>
+<p><br></p>
+<p><span style="color:purple">b) What is the probability that you win
+both games?</span></p>
+<p><br></p>
+<p><span style="color:purple">c) Are the outcomes of these two games
+independent?</span></p>
 <p><br> <br></p>
+<p><strong>Note:</strong> There is a law of probability that we haven’t
+covered yet called <em>the law of total probability</em>. This law can
+be proved given the five laws of probability we have covered and it
+states that, for any events <span class="math inline">\(A\)</span> and
+<span class="math inline">\(B\)</span>, <span class="math display">\[Pr(B) = Pr(B\text{ and }A) + Pr(B \text{ and }
+A^C).\]</span> This law isn’t mentioned by name in your textbook but it
+is used implicitly in Bayes’ Rule which you will read about.</p>
 <hr />
 <p><span style="color:blue">Q2) What does it mean for two <em>random
 variables</em>, say, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to be independent?</span></p>
-<p><br> <br></p>
+<p><br></p>
 <p>A2) We say that two random variables, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, are independent if the values that
 <span class="math inline">\(X\)</span> takes on are in no way related
 the values that <span class="math inline">\(Y\)</span> takes on. In
 terms of events, this means that any random event in the sample space of
 <span class="math inline">\(X\)</span> is independent (by one of the
 formulas above) of any random event in the sample space of <span class="math inline">\(Y\)</span>.</p>
+<p><br></p>
 </div>
-<div id="example---determining-if-two-variables-are-independent" class="section level2">
-<h2>Example - Determining if two variables are independent</h2>
+<div id="example-2---determining-if-two-variables-are-independent" class="section level2">
+<h2>Example 2 - Determining if two variables are independent</h2>
 <table>
 <thead>
 <tr class="header">
@@ -1756,8 +1770,8 @@ E(Y)\)</span></p></li>
 <span class="math inline">\(Cov(X,Y)=0\)</span>.</p></li>
 </ul>
 </div>
-<div id="example---week-6-in-class-worksheet-part-2" class="section level2">
-<h2>Example - Week 6 In-Class Worksheet: Part 2</h2>
+<div id="example-3---week-6-in-class-worksheet-part-2" class="section level2">
+<h2>Example 3 - Week 6 In-Class Worksheet: Part 2</h2>
 <p><strong>Instructions:</strong> Let’s plan a trip. Suppose <span class="math inline">\(8\)</span> of us are going to travel to attend one
 of two international statistics conferences. (The rest of us are
 attending non-statistical conferences, naturally.) We need to request
@@ -1781,12 +1795,11 @@ airfare to these conferences is: <span class="math inline">\(3X +
 <p><span style="color:blue">How could we interpret the covariance
 between the price of a ticket from PHL to Toronto and the price of a
 ticket from PHL to Chengdu?</span></p>
-<p><br> <br></p>
+<p><br></p>
 <p><span style="color:purple">5. Find the mean and standard deviation of
 the total cost of the one-way-trip to our destinations. Do we need to
 make any assumptions in calculating these means or standard
 deviations?</span></p>
-<p><br> <br></p>
 <hr />
 </div>
 </div>
@@ -1810,21 +1823,122 @@ x_i\)</span> and <span class="math inline">\(s^2 =
 tickets can be modeled with a Normal distribution.</p>
 <p><span style="color:purple">What’s the probability that the cost of a
 flight from PHL to Toronto exceeds <span class="math inline">\(\$700\)</span>?</span></p>
-<p><br> <br></p>
+<p><br></p>
 <pre class="r"><code>myQuantile = 700
 pnorm(myQuantile, mean = 563, sd = 70, lower.tail=TRUE)</code></pre>
 <pre><code>## [1] 0.9748347</code></pre>
+<p><br></p>
 <p><span style="color:purple"><span class="math inline">\(80\%\)</span>
 of flights from PHL to Toronto cost less than how much?</span></p>
-<p><br> <br></p>
+<p><br></p>
 <pre class="r"><code>myProbability = .8
 qnorm(myProbability, mean = 563, sd = 70, lower.tail=TRUE)</code></pre>
 <pre><code>## [1] 621.9135</code></pre>
 <p><br></p>
-<p>If we’d rather not use R, we can find approximate answers to these
-two questions by checking a <a href="https://www.z-table.com/">Z-table</a>.</p>
+<p>If we’d rather not use R for these questions, we can still find
+approximate answers for both questions above by reading a <a href="https://www.z-table.com/">Z-table</a> consisting of probabilities
+and quantiles for a standard Normal distribution. (Note: This requires a
+little bit of additional work since we first have to transform our
+Normally distributed random variable to a standard Normal random
+variable.)<br />
+<span class="math display">\[Z = \frac{X - \mu}{\sigma} \sim N(0,
+1)\]</span></p>
 </div>
 </div>
+</div>
+<div id="time-permitting-example-calculating-the-covariance-between-two-discrete-random-variables" class="section level1">
+<h1>4. Time permitting: Example calculating the covariance between two
+discrete random variables</h1>
+<p>Suppose we have two discrete random variables, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, that follow the distributions
+below:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Possibilities for <span class="math inline">\(X\)</span></th>
+<th align="left">Probabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(1\)</span></td>
+<td align="left"><span class="math inline">\(0.4\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(7\)</span></td>
+<td align="left"><span class="math inline">\(0.6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>(therefore <span class="math inline">\(E(x) = 0.4 + 7(0.6) =
+4.6\)</span>)</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Possibilities for <span class="math inline">\(Y\)</span></th>
+<th align="left">Probabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(-3\)</span></td>
+<td align="left"><span class="math inline">\(0.3\bar{3}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(-1\)</span></td>
+<td align="left"><span class="math inline">\(0.3\bar{3}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(0\)</span></td>
+<td align="left"><span class="math inline">\(0.3\bar{3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>(therefore <span class="math inline">\(E(Y) = -3(1/3) + -1(1/3) +
+0(1/3) = -1.3\bar{3}\)</span>).</p>
+<p>Suppose further that we have the following joint probabilities:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Possibilities for <span class="math inline">\((X,Y)\)</span></th>
+<th align="left">Probabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\((1,-3)\)</span></td>
+<td align="left"><span class="math inline">\(0.1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\((1,-1)\)</span></td>
+<td align="left"><span class="math inline">\(0.2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\((1, 0)\)</span></td>
+<td align="left"><span class="math inline">\(0.1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\((7,-3)\)</span></td>
+<td align="left"><span class="math inline">\(0.3\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\((7,-1)\)</span></td>
+<td align="left"><span class="math inline">\(0.2\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\((7, 0)\)</span></td>
+<td align="left"><span class="math inline">\(0.1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Then, <span class="math display">\[\begin{align*}
+Cov(X,Y) &amp;= (1 - 4.6)(-3 + 1.3\bar{3})(0.1) +
+(1 - 4.6)(-1 + 1.3\bar{3})(0.2) +
+(1 - 4.6)(0 + 1.3\bar{3})(0.1)  \\
+&amp;\quad + (7 - 4.6)(-3 + 1.3\bar{3})(0.3) +
+(7 - 4.6)(-1 + 1.3\bar{3})(0.2) +
+(7 - 4.6)(0 + 1.3\bar{3})(0.1) \\
+&amp;= -0.84
+\end{align*}\]</span></p>
 </div>
 
 

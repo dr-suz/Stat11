@@ -19,10 +19,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-
 # Recap 
 
 Last class we learned how to calculate the expected value of a random variable, say, $X$: 
@@ -36,15 +32,16 @@ $$\text{and}$$
 
 $$Cor(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.$$
 
-## Example - Calculating covariance 
+## Student Question - How to calculate covariance 
 
-Not: This isn't something you'll be asked to do on Quiz 2 or on the Final. 
+Note: This isn't something you'll be asked to do on Quiz 2 or on the Final. If we have time, at the end of class today I will cover an example on how to calculate the covariance between two discrete random variables. 
 
 
 # 1. Independent Random Variables 
 
+Independence is a complicated concept in probability and statistics. We're going to dig into the nitty gritty details to make sure we [really understand what independence means](https://youtu.be/jCUiGArhW2M?start=1).
 
-<span style="color:purple">Q1) What does it mean for two *random events*, say, $A$ and $B$, to be independent?</span>
+<span style="color:blue">Q1) What does it mean for two *random events*, say, $A$ and $B$, to be independent?</span>
 
 <br>
 
@@ -52,26 +49,41 @@ A1) For any two random events, $A$ and $B$, to be independent, they must satisfy
 
 <br>
 
-## Example - Determining if two events are independent
+## Example 1 - Determining if two events are independent
 
-You play two games against the same opponent. The probability you win the first game is $0.4$. If you win the first game, the probability you also win the second is $0.2$. If you lose the first game, the probability that you win the second is $0.3$.
+You play two games against the same opponent. The probability you win the first game is $0.4$. If you win the first game, the probability you also win the second is $0.2$. If you lose the first game, the probability that you win the second is $0.3$. Let $A$ be the event that you win the first game and let $B$ be the event that you win the second game. 
 
-<span style="color:purple">Are the two games independent?</span>  
+<span style="color:purple">a) What is the probability that you win the second game?</span> 
 
+<br> 
+
+<span style="color:purple">b) What is the probability that you win both games?</span> 
+
+<br> 
+
+<span style="color:purple">c) Are the outcomes of these two games independent?</span> 
+
+<br> 
 <br>
-<br>
+
+**Note:** There is a law of probability that we haven't covered yet called *the law of total probability*. This law can be proved given the five laws of probability we have covered and it states that, for any events $A$ and $B$, 
+$$Pr(B) = Pr(B\text{ and }A) + Pr(B \text{ and } A^C).$$ 
+This law isn't mentioned by name in your textbook but it is used implicitly in Bayes' Rule which you will read about. 
+
 
 ***
+
+
 
 <span style="color:blue">Q2) What does it mean for two *random variables*, say, $X$ and $Y$ to be independent?</span> 
 
 <br> 
-<br> 
 
 A2) We say that two random variables, $X$ and $Y$, are independent if the values that $X$ takes on are in no way related the values that $Y$ takes on. In terms of events, this means that any random event in the sample space of $X$ is independent (by one of the formulas above) of any random event in the sample space of $Y$. 
 
+<br> 
 
-## Example - Determining if two variables are independent
+## Example 2 - Determining if two variables are independent
 
 |     | Drug A | Drug B | Placebo | Row totals |
 |:--- |:--- |:--- |:--- |:--- |
@@ -79,7 +91,7 @@ A2) We say that two random variables, $X$ and $Y$, are independent if the values
 | **No seizure(s)** | 5 | 10  | 3 | **18** |
 | **Column totals** | **12** | **12** | **12** | **36** |
  
-*** 
+***
  
 # 2. Properties of Expectation and Variance 
 
@@ -102,7 +114,7 @@ Suppose both $X$ and $Y$ are random variables that may or may not be related to 
 * If $X$ and $Y$ are independent random variables, then $Cov(X,Y)=0$. 
 
 
-## Example - Week 6 In-Class Worksheet: Part 2 
+## Example 3 - Week 6 In-Class Worksheet: Part 2 
 
 **Instructions:** Let's plan a trip. Suppose $8$ of us are going to travel to attend one of two international statistics conferences. (The rest of us are attending non-statistical conferences, naturally.) We need to request funding so we can travel to and from our destinations. Suppose $3$ of us are flying to Toronto, Canada for the 2023 Joint Statistical Meeting and $5$ of us are flying to the International Chinese Statistical Association conference in Chengdu, China.  
 
@@ -114,14 +126,10 @@ Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the c
 
 <span style="color:blue">How could we interpret the covariance between the price of a ticket from PHL to Toronto and the price of a ticket from PHL to Chengdu?</span> 
 
-
-<br>
 <br>
 
 <span style="color:purple">5. Find the mean and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
 
-<br>
-<br>
 
 ***
 
@@ -146,17 +154,17 @@ For the sake of this exercise, let's assume that the cost of airline tickets can
 <span style="color:purple">What's the probability that the cost of a flight from PHL to Toronto exceeds $\$700$?</span>  
 
 <br>
-<br>
+
  
 ```{r}
 myQuantile = 700
 pnorm(myQuantile, mean = 563, sd = 70, lower.tail=TRUE)
 ```
 
+<br>
 
 <span style="color:purple">$80\%$ of flights from PHL to Toronto cost less than how much?</span> 
 
-<br>
 <br>
 
 ```{r}
@@ -166,4 +174,46 @@ qnorm(myProbability, mean = 563, sd = 70, lower.tail=TRUE)
 
 <br>
 
-If we'd rather not use R, we can find approximate answers to these two questions by checking a [Z-table](https://www.z-table.com/).  
+If we'd rather not use R for these questions, we can still find approximate answers for both questions above by reading a [Z-table](https://www.z-table.com/) consisting of probabilities and quantiles for a standard Normal distribution. (Note: This requires a little bit of additional work since we first have to transform our Normally distributed random variable to a standard Normal random variable.)  
+$$Z = \frac{X - \mu}{\sigma} \sim N(0, 1)$$
+
+# 4. Time permitting: Example calculating the covariance between two discrete random variables 
+
+Suppose we have two discrete random variables, $X$ and $Y$, that follow the distributions below:
+
+| Possibilities for $X$ | Probabilities |
+|:--- |:--- |
+| $1$ | $0.4$ |
+| $7$ | $0.6$ |
+
+(therefore $E(x) = 0.4 + 7(0.6) = 4.6$)
+
+| Possibilities for $Y$ | Probabilities |
+|:--- |:--- |
+| $-3$ | $0.3\bar{3}$ |
+| $-1$ | $0.3\bar{3}$ |
+| $0$ | $0.3\bar{3}$ |
+
+(therefore $E(Y) = -3(1/3) + -1(1/3) + 0(1/3) = -1.3\bar{3}$).
+
+Suppose further that we have the following joint probabilities:
+
+| Possibilities for $(X,Y)$ | Probabilities |
+|:--- |:--- |
+| $(1,-3)$ | $0.1$ |
+| $(1,-1)$ | $0.2$ |
+| $(1, 0)$ | $0.1$ |
+| $(7,-3)$ | $0.3$ |
+| $(7,-1)$ | $0.2$ |
+| $(7, 0)$ | $0.1$ |
+
+Then,
+\begin{align*}
+Cov(X,Y) &= (1 - 4.6)(-3 + 1.3\bar{3})(0.1) +
+(1 - 4.6)(-1 + 1.3\bar{3})(0.2) +
+(1 - 4.6)(0 + 1.3\bar{3})(0.1)  \\
+&\quad + (7 - 4.6)(-3 + 1.3\bar{3})(0.3) +
+(7 - 4.6)(-1 + 1.3\bar{3})(0.2) +
+(7 - 4.6)(0 + 1.3\bar{3})(0.1) \\
+&= -0.84
+\end{align*}
