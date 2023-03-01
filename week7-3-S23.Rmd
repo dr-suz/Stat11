@@ -33,6 +33,12 @@ Click this link to view the [worksheet for experiments with random variables](ht
 * 
 
 
+# TO DO: 
+
+* include examples of calculating different probabilities including "at least one" or "one or more", etc. 
+
+* make this activity more about probability calculations than looking ahead. woould still be good to get students to practice with normal table and binomial table (no R use) and demonstrate how it can approximate. 
+
 
 ## Example 
 
