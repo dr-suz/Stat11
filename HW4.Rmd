@@ -127,3 +127,13 @@ b) A diet guide claims that you will get an average of  calories from a serving 
 
 
 A company is developing a new high performance wax for cross country ski racing. In order to justify the price marketing wants, the wax needs to be very fast. Specifically, the mean time to finish their standard test course should be less than  seconds for a former Olympic champion. To test it, the champion will ski the course 8 times. The champion's times (selected at random) are XXXXXX seconds to complete the test course. Should they market the wax? Assume the assumptions and conditions for appropriate hypothesis testing are met for the sample. Use 0.05 as the P-value cutoff level.
+
+
+# Relevant HWs 
+
+* HW 8 Spring 20
+
+* HW 9 Spring 20 
+
+
+# Idea: Use gardasil data from Stat 21 Data folder 

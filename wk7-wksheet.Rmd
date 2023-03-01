@@ -117,5 +117,13 @@ mean(Y)
 ```
 
 
+# Relevant HWs 
 
+* HW 5 Spring 20
+
+* HW 6 Spring 20 
+
+* HW 7 Spring 20 
+
+* Practice problems 3 S20 
 

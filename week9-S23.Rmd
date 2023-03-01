@@ -1,0 +1,69 @@
+---
+title: "Stat 11 Week 9"
+subtitle: "Review of Unit 2" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+<span style="color:purple">notecard</span>
+<span style="color:blue">hypothetical</span>
+<span style="color:green">new terms</span>
+
+
+# Unit 2 topics 
+
+* Collecting data
+
+* Randomness and probability
+
+
+# Week 4 - Collecting data from experiments and observational studies
+
+* 
+
+* 
+
+
+## Example 
+
+
+
+
+# Week 6 - From randomness to probability and the laws of probability
+
+* 
+
+* 
+
+
+## Example 
+
+
+
+# Week 7 - Random variables and probability models
+
+* 
+
+* 
+
+
+## Example 
+
+
+***
+
+# Student Requested Examples 
