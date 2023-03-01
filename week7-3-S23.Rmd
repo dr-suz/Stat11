@@ -15,6 +15,20 @@ header-includes:
 ---
 
 
+# Recap
+
+## Example 3 - Week 6 In-Class Worksheet: Part 2 
+
+Assume tickets to Toronto have a mean price of $\$563$, with a standard deviation of $\$70$, while the mean airfare to Chengdu is $\$5400$, with a standard deviation of $\$750$.
+
+Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the cost of a flight from PHL to Chengdu}$. Then the total cost of airfare to these conferences is: $3X + 5Y$.
+
+<br>
+
+<span style="color:purple">5. Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
+
+
+
 # 1. Data Introduction 
 
 
@@ -37,7 +51,7 @@ Click this link to view the [worksheet for experiments with random variables](ht
 
 * include examples of calculating different probabilities including "at least one" or "one or more", etc. 
 
-* make this activity more about probability calculations than looking ahead. woould still be good to get students to practice with normal table and binomial table (no R use) and demonstrate how it can approximate. 
+* make this activity more about probability calculations than looking ahead. woould still be good to get students to practice with normal table and binomial table (no R use) and demonstrate how it can approximate. give them problems that require them to use info from sec 3 of last class notes 
 
 
 ## Example 

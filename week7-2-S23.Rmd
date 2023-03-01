@@ -90,6 +90,8 @@ A2) We say that two random variables, $X$ and $Y$, are independent if the values
 | **Seizure(s)**    | 7 | 2 | 9  | **18** |
 | **No seizure(s)** | 5 | 10  | 3 | **18** |
 | **Column totals** | **12** | **12** | **12** | **36** |
+
+<br> 
  
 ***
  
@@ -101,7 +103,7 @@ Suppose $a$ is some deterministic (non-random) number between $-\infty$ and $+\i
 
 * $E(aX) = aE(X), \quad E(a \pm X) = a \pm E(X)$ 
 
-* $Var(aX) = a^2 Var(X), \quad Var(a + X) = Var(X)$
+* $Var(aX) = a^2 Var(X), \quad Var(a \pm X) = Var(X)$
   
 ## Linear transformations of two random variables 
 
@@ -128,7 +130,7 @@ Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the c
 
 <br>
 
-<span style="color:purple">5. Find the mean and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
+<span style="color:purple">5. Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
 
 
 ***
