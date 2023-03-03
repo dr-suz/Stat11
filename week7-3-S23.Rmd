@@ -31,21 +31,29 @@ Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the c
 
 # 1. Data Introduction 
 
+Candy company claims that they produce and randomly package Jelly Beans of which $10\%$ are licorice flavored. 
 
 ## Binomial distribution
 
+Random variable $X \sim Binom(n,p)$
 
-Model parameter(s): 
+$E(X) = np, \quad Var(X) = np(1-p)$
 
-Sample estimate(s): 
+Model parameter: $p=$ proportion of licorice candies 
+
+
+Sample estimate(s): $\hat{p} = \frac{\text{number of licorice candies}}{n}$ 
+
+Sample size: $n=25$ 
+
+
 
 
 
 # 2. Analysis Goal  
 
-Use the fact that the sampling distribution of $\hat{p}$ approximately fits a Normal distribution. 
 
-Binomial distribution and Normal approximation. Calculate expectation and variance. Characterize extreme outcomes. 
+Calculate expectation and variance. Characterize extreme outcomes. 
 
 For binomial model, calculate probability of X or more. 
 
@@ -53,7 +61,7 @@ Click this link to view the [worksheet for experiments with random variables](ht
 
 # 3. Summary of Results  
 
-* 
+* Use the fact that the sampling distribution of $\hat{p}$ approximately fits a Normal distribution. Binomial distribution and Normal approximation.
 
 * 
 

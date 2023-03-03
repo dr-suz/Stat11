@@ -24,9 +24,8 @@ knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown
 knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
 ```
 
-[bring coins to class and have students flip them (at least 35 coins or one large coin to pass around)]
+[have student groups draw random samples of size 20 or 30 from larger bag]
 
-Class tosses same coin $36$ times.
 
 
 # 1.  What are the mean and standard deviation of the number of heads? How many standard deviations above (or below) the mean is the number of heads observed (via actual coin tossing)?
