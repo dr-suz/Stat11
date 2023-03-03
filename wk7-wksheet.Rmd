@@ -1,8 +1,9 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: "Week 7: More Experiments with Probability"
+date: 'Week 7: More Experiments with Probability'
 output:
+  pdf_document: default
   html_document: default
 ---
 <br>
@@ -12,10 +13,7 @@ output:
 **Instructions:** There are 5 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
 
 **Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
-<br>
-<br>
-<br>
-<br>
+\vspace{1cm}
 
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
@@ -31,47 +29,29 @@ Send one member of your group to the front of the class to select one random sam
 
 # 1.  What are the expected value and standard deviation of the number of green candies in your sample? How many standard deviations above (or below) the expected value is the number of green candies you observed?
 
-
-<br>
-<br>
-<br>
-<br>
-
+\vspace{3cm}
 
 # 2. Repeat the steps above and answer the same questions as in Problem 1 with a new sample of $20$ candies.  
 
 What would be the observed number of heads if we observed an amount that was two standard deviations above the mean? If instead we tossed the coin $100$ times, would this same number of heads still be unusual? If not, how many more heads would we need to see to get to an amount that is two standard deviations above the mean? Explain how these results refute the “Law of Averages” but confirm the Law of Large Numbers
 
-<br>
-<br>
-<br>
-<br>
+\vspace{3cm}
 
 
 # 3. Based on the dot plot at the front of the class, we can tell what a histogram of the $\hat{p}$, the proportion of green candies in random samples of size 20 looks like. Describe the histogram and from this plot, determine the probability of a sample of size $20$ containing $4$ green candies or fewer.
 
 
-<br>
-<br>
-<br>
-<br>
- 
+\vspace{3cm}
 
 
 # 4. Use a binomial probability table to calculate the theoretical probability of of observing $4$ green candies or fewer in a random sample of size $20$. How close is this value to your answer in Problem 3? 
 
-<br>
-<br>
-<br>
-<br>
+\vspace{3cm}
 
 
 # 5. If we were to draw larger random samples of the candies, say $n=200$, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Using both the binomial probability table and the Normal (Z) table, find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. Explain why these values are so close. 
 
-<br>
-<br>
-<br>
-<br>
+\vspace{3cm}
 
 
 
