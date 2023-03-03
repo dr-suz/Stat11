@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 7"
-subtitle: "Experiments with Random Variables" 
+subtitle: "More Experiments with Probability" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -23,52 +23,39 @@ Assume tickets to Toronto have a mean price of $\$563$, with a standard deviatio
 
 Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the cost of a flight from PHL to Chengdu}$. Then the total cost of airfare to these conferences is: $3X + 5Y$.
 
+<span style="color:purple">Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
+
+
 <br>
-
-<span style="color:purple">5. Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
-
 
 
 # 1. Data Introduction 
 
-Candy company claims that they produce and randomly package Jelly Beans of which $10\%$ are licorice flavored. 
+There are 50 different flavored candies in a large bag of 1300 candy beans. Eight of these flavors are green colored. According to the company's website, $15\%$ of the candies in any given package are green.
 
-## Binomial distribution
+![](./images/candies.png)
 
-Random variable $X \sim Binom(n,p)$
-
-$E(X) = np, \quad Var(X) = np(1-p)$
-
-Model parameter: $p=$ proportion of licorice candies 
-
-
-Sample estimate(s): $\hat{p} = \frac{\text{number of licorice candies}}{n}$ 
-
-Sample size: $n=25$ 
-
-
-
+You are going to collect a random sample of these candies and evaluate the company's claim that $15\%$ are green. Along the way, you are going to practice finding probabilities using a [Binomial table of probabilities](https://uwf.edu/media/university-of-west-florida/colleges/cse/departments/mathematics-and-statistics/documents/student-resources/Binomial-Tables-1.pdf) and a [Normal (Z) table of probabilities](https://qcenter.uconn.edu/wp-content/uploads/sites/764/2018/05/Standard-Normal-Ztable.pdf). 
 
 
 # 2. Analysis Goal  
 
+One goal of this exercise is to explore features of the binomial probability distribution and eventually, to see how a Normal probability distribution can approximate a binomial distribution for a large enough sample size. The other goal is to use the expectation and standard deviation of random variables to characterize whether or not the observed proportions in a sample match up with the claims about the package contents from the candy company.  
 
-Calculate expectation and variance. Characterize extreme outcomes. 
+Click this link to view the [worksheet for more experiments with probability](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
 
-For binomial model, calculate probability of X or more. 
 
-Click this link to view the [worksheet for experiments with random variables](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
 
 # 3. Summary of Results  
 
-* Use the fact that the sampling distribution of $\hat{p}$ approximately fits a Normal distribution. Binomial distribution and Normal approximation.
+* Binomial probability distribution:
 
-* 
+Random variable $X \sim Binom(n,p)$ and $E(X) = np, \quad Var(X) = np(1-p)$. The model parameter is $p=$ proportion of successes.  
 
+From a sample of size $n$, we can derive the sample estimate $\hat{p} = \frac{\text{number of green candies}}{n}$. 
 
+* Normal approximation to the binomial distribution: 
 
-
-
-
+If $n$ is large enough, then $X \approx N(\mu = np, \sigma = \sqrt{np(1-p)})$. 
 
 
