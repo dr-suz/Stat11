@@ -77,4 +77,4 @@ The expected value (AKA the mean or the average) of a random variable is the sum
 $$E(X) = \sum_{x \in S}\left(x \times Pr(x) \right).$$
 
 The variance of a random variable is the sum of the squared distance between each possible value and the expected value times the probabilities of those possible values. (The standard deviation of a random variable is the square root of the variance of the random variable.) I.e. for some random variable $X$, that takes values in the sample space $S$:
-$$Var(X) = \sum_{x \in S} \left[(x - E(X)) \times Pr(x) \right].$$
+$$Var(X) = \sum_{x \in S} \left[(x - E(X))^2 \times Pr(x) \right].$$
