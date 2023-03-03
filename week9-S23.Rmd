@@ -67,3 +67,27 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ***
 
 # Student Requested Examples 
+
+
+## Student's t-distribution 
+
+analogy for degrees of freedom parameter 
+
+Model parameter(s): 
+
+Sample estimate(s): 
+[pic showing that 68/99/99/7 rule no longer applies]  
+
+
+[T-table](https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf)
+
+```{r}
+myT.Quantile = 3
+pt(myT.Quantile, df = 12)
+
+myT.Probability = .25
+qt(myT.Probability, df = 12)
+```
+
+### Quantiles and probabilities 
+

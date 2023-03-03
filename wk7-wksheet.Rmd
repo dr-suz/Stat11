@@ -91,29 +91,10 @@ $$\hat{p} = \frac{1}{n} \sum_{i=1}^{n}x_i.$$
 
 *** 
 
-
-TO DELETE
-
-Ask class: each coin represents a random variable. specify possibilities and probabilities. 
-
-then conduct simulation exercise to have class demonstrate that RVs can't just be added together or multiplied
-
-One Group represent RV X1, indep of second Group representing RV X2. Each flip their own "group" coin (say 15 times each). identify the probability model and expected heads. Calculate separate sample means, then add together, $\bar{x}_1 + \bar{x}_2$
-
-Then add together and flip coin or use simulator again (simplicity benefit flip coin) and count expected wins, $\bar{y}$
-and laws of expectation and variance and covariance 
-
-[can do similar thing with standard deviations. be careful about theory world $E(Y) = E(X_1+X+2) = E(X_1) +E(X_2)]$ vs observable real world with samples, particular instances of RVs, not the actual RVs themselves 
-
 ```{r}
 #set.seed(101)
-X1 <- rbinom(n=1, size = 14, p=0.5)
-X2 <- rbinom(n=1, size = 14, p=0.5)
-mean(X1) + mean(X2)
+X = rbinom(n=1, size = 14, p=0.05)
 
-
-Y <- rbinom(n=1, size = 14, p=0.5) + rbinom(n=1, size = 14, p=0.5)
-mean(Y)
 ```
 
 
@@ -126,4 +107,28 @@ mean(Y)
 * HW 7 Spring 20 
 
 * Practice problems 3 S20 
+
+# TO DO: 
+
+* include examples of calculating different probabilities including "at least one" or "one or more", etc. 
+
+* make this activity more about probability calculations than looking ahead. would still be good to get students to practice with normal table and binomial table (no R use) and demonstrate how it can approximate. give them problems that require them to use info from sec 3 of last class notes 
+
+***
+
+Candy company claims that 5\% of the Jelly Beans it produces are licorice flavor.Suppose that the candies are packaged at random in small bags containing about 50 Jelly Beans. A class of students open several bags , counts the various colors of the candies, and calculates the proportion that are licorice 
+
+The number of licorice candies in the sample follows a binomial distribution. A histogram of the proportion of licorice candies in random samples of size 50 looks like this.... 
+
+expected value $np$ and variance $np(1-p)$ 
+
+
+If $n$ is larger, say $100$, find the expected value and variance. Then compute probabilities and find quantiles and compare to those of a normal distbn  
+
+Find the probability of exactly 7 licorice candies. Find the probability of 7 or more licorice candies.
+
+
+say in a super-size bag of 1000 Jelly Beans we found $8\%$ licorice flavored. Is this an unusually larger proportion? 
+
+answer by calculating how many standard deviations above the mean this is from a Normal model 
 

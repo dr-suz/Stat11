@@ -32,11 +32,22 @@ Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the c
 # 1. Data Introduction 
 
 
+## Binomial distribution
+
+
+Model parameter(s): 
+
+Sample estimate(s): 
+
+
 
 # 2. Analysis Goal  
 
 Use the fact that the sampling distribution of $\hat{p}$ approximately fits a Normal distribution. 
 
+Binomial distribution and Normal approximation. Calculate expectation and variance. Characterize extreme outcomes. 
+
+For binomial model, calculate probability of X or more. 
 
 Click this link to view the [worksheet for experiments with random variables](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
 
@@ -47,78 +58,7 @@ Click this link to view the [worksheet for experiments with random variables](ht
 * 
 
 
-# TO DO: 
 
-* include examples of calculating different probabilities including "at least one" or "one or more", etc. 
-
-* make this activity more about probability calculations than looking ahead. woould still be good to get students to practice with normal table and binomial table (no R use) and demonstrate how it can approximate. give them problems that require them to use info from sec 3 of last class notes 
-
-
-## Example 
-
-Prof. Suzy has a cat, Obie, who likes to sleep a lot. Sometimes Obie is awake when Prof. Suzy is awake, but usually Obie sleeps during the day and is awake to "hunt" at night. Typically, Obie gets far more sleep than Prof. Suzy. 
-
-Draw a Venn diagram that represents the random event that $A=$ Prof. Suzy is awake and $B=$ Obie is awake. Draw this diagram to scale, meaning, the relative sizes of the circles for each event matters as does their relative size to the entire sample space (the rectangle) as does the size of any intersecting regions. Then answer the question: Is the amount of time Obie is awake independent of the amount of time he is asleep? Justify your answer with a sentence or two. 
-
-
-**Solution:** Obie cannot be both awake and asleep, therefore, if he is awake, we know the probability he is asleep is $0$, and vice versa. Thus the amount of time Obie is awake is entirely *dependent* upon the amount of time he is asleep (i.e. these are not independent). 
-
-
-
-
-
-# Example 
-
-Some scientists who study penguins have to choose between using two different tracking options. The first is a metal band with an identifying number that is placed around a penguin’s flipper, the second is an electronic chip that emits radio waves and is injected under the skin of a penguin. Though in many cases, tracking penguins with a metal band is more informative (the electronic chips must be detectable within a particular radius of a sensor), there is some concern as to whether or not the metal bands are harmful to the penguins. 
-
-To investigate this question, researchers randomly selected $100$ young penguins from a colony of $400$ king penguins that already had radio tags. Half of these $100$ penguins were randomly assigned to a group that were banded with the metal band and the other half were not banded. (The average lifespan of a king penguin in the wild is $26$ years.)
-
-The researchers tracked these penguins for a decade. At the end of the study period they found that 
-
-- $10$ of the metal banded penguins were still alive and
-
-- $18$ of those without the metal bands were still alive.
-
-(a) What is the observed difference in the survival proportions between these two groups (not banded $-$ banded)? 
-
-(b) Practically speaking, is this difference large enough to warrent concern? 
-
-(c) Suppose we know for a fact that the metal band is not harmful to the penguins. How can you explain the observed difference in survival proportions? (Answer in no more than three sentences.)
-
-
-
-
-
-## Student's t-distribution 
-
-analogy for degrees of freedom parameter 
-
-Model parameter(s): 
-
-Sample estimate(s): 
-[pic showing that 68/99/99/7 rule no longer applies]  
-
-
-[T-table](https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf)
-
-```{r}
-myT.Quantile = 3
-pt(myT.Quantile, df = 12)
-
-myT.Probability = .25
-qt(myT.Probability, df = 12)
-```
-
-### Quantiles and probabilities 
-
-
-
-## Binomial distribution
-
-
-Model parameter(s): 
-
-Sample estimate(s): 
 
 
 
