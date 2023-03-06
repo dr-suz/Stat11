@@ -64,10 +64,10 @@ In the calendar below **IHW** corresponds to an individual homework assignment a
 | 10 | Mar 20 | 3 | Sampling distributions and confidence intervals for a proportion and for a mean | Part 5: Ch 16-17 (all except 17.4) <br> IHW 11+12 |
 | 11 | Mar 27 | 3 | Hypothesis tests about a proportion or a mean | Part 5: Ch 18-19 (all) <br> GHW 4 |
 | 12 | Apr 3 | 3 | Comparing grouped numeric data | Part 6: Ch 20-21 (all) <br> IHW 13+14 |
-| 13 | Apr 10 | 3 | Week 10-12 topics | IHW 15 <br> **Quiz 3** |
-| 14 | Apr 17 | 3 | Comparing grouped categorical data | Part 6: Ch 22 (all) <br> GHW 5 |
-| 15 | Apr 24 | 3 | Inference for linear relationships | Part 2: Ch 9 (all except 9.4) and Part 7: Ch 23 (all) <br> IHW 16 <br> **Final Project Presentations** |
-| 16 |  May 4-11  |  |  **Final Exam** |  |
+| 13 | Apr 10 | 3 | Week 10-12 topics | GHW 5 <br> **Quiz 3** |
+| 14 | Apr 17 | 3 | Comparing grouped categorical data | Part 6: Ch 22 (all) <br> IHW 15 |
+| 15 | Apr 24 | 3 | Inference for linear relationships | Part 2: Ch 9 (all except 9.4) and Part 7: Ch 23.1-23.3 <br> IHW 16 <br> **Final Project Presentations** |
+| 16 |  May 5  |  |  **Final Exam** |  |
 
 
 
