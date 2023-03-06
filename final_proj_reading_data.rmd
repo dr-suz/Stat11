@@ -1,0 +1,12 @@
+---
+title: "Reading data into R"
+author: "STAT011-S20"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(nycflights13)
+```
