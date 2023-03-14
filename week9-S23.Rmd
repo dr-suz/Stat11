@@ -19,11 +19,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-
-
 # Unit 2 topics 
 
 * Collecting data
@@ -33,61 +28,102 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # Week 4 - Collecting data from experiments and observational studies
 
-* 
+* Sample surveys 
 
-* 
+* Experiments and observational studies 
 
 
 ## Example 
 
+<span style="color:purple">What role does randomness play in both observational studies and experiments?</span>
+
+
+<span style="color:purple">What role does randomness play in experiments alone?</span>
 
 
 
 # Week 6 - From randomness to probability and the laws of probability
 
-* 
+* Random variables 
 
-* 
+* Probability rules 
 
 
 ## Example 
 
+Suppose you are given four numbers in a bag that all add to 1.
 
+![](./images/wk-9-venn-1.png){height=5cm}
+
+The arbitrary numbers $a$, $b$, $c$, and $d$ are probabilities in the Venn diagram below where $a+b+c+d=1$. 
+
+![](./images/wk-9-venn2.png)
+
+
+<span style="color:purple">If we swap the numbers in the bag for $a$, $b$, $c$, and $d$ at random, what is the probability that the events $A$ and $B$ are independent?</span> (Hint: Consider showing that $A$ and $B$ are independent if and only if $ac=bd$.)
 
 # Week 7 - Random variables and probability models
 
-* 
+* Expectation of random variables 
 
-* 
+* Independence 
 
 
-## Example 
+## Example - Week 7 In-class Worksheet 
+
+Recall how we collected a sample of the number of green jelly beans out of random samples of size $20$ beans. 
+
+  > Calculate the proportion of these candies that are green colored and then send another group member to the front of the class to draw your observed count of green candies on the dot plot at the front of the class. The number of green candies in your random sample follows a binomial distribution, specifically, Bin(n=20,p=0.15).
+
+Altogether, across both of my Stat 11 sections, we did this $24$ times resulting in the dot plot below: 
+
+![](./images/wk7-dot-plot.png)
+
+
+Using these results, let's go over the answers for questions 3 - 5 on the worksheet: 
+
+
+3. Based on the dot plot above, we can tell what a histogram of the $\hat{p}$, the proportion of green candies in random samples of size 20 looks like. Describe the histogram and from this plot, determine the probability of a sample of size $20$ containing $4$ green candies or fewer.</span>
+
+<br>
+
+4. Use a [Binomial table of probabilities](https://uwf.edu/media/university-of-west-florida/colleges/cse/departments/mathematics-and-statistics/documents/student-resources/Binomial-Tables-1.pdf) ], calculate the theoretical probability of of observing $4$ green candies or fewer in a random sample of size $20$. How close is this value to your answer in Problem 3?
+
+<br>
+
+5. If we were to draw larger random samples of the candies, say $n=200$, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Using both a Binomial table of probabilities and the [Normal (Z) table of probabilities](https://qcenter.uconn.edu/wp-content/uploads/sites/764/2018/05/Standard-Normal-Ztable.pdf), find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. Explain why these values are so close. 
 
 
 ***
 
+# Study tips 
+
+## Have you....
+
+1. Read the relevant sections of Chapters 10 - 15? 
+
+2. Completed IHW #5 - #10? 
+
+3. Checked your answers to GHW #3 with the solution key? 
+
+4. Taken notes on which topics or examples are most challenging to you? 
+
+***
+  
 # Student Requested Examples 
+  
 
 
-## Student's t-distribution 
+***
 
-analogy for degrees of freedom parameter 
+# Looking ahead 
 
-Model parameter(s): 
+Start to think about who you would like to work with on your final group project. (Groups must be of 3-4 people each.) 
 
-Sample estimate(s): 
-[pic showing that 68/99/99/7 rule no longer applies]  
+What kind of question do you want to use your statistics skills to answer? And, just as importantly, what kind of question can you answer in five weeks? 
 
 
-[T-table](https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf)
 
-```{r}
-myT.Quantile = 3
-pt(myT.Quantile, df = 12)
 
-myT.Probability = .25
-qt(myT.Probability, df = 12)
-```
 
-### Quantiles and probabilities 
 
