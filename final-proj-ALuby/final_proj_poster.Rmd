@@ -1,0 +1,80 @@
+---
+title: "Creating your Final Project Poster"
+author: "STAT 011 with Prof Suzy"
+date: "Spring '23"
+output:
+  bookdown::pdf_document2: 
+    toc: no
+  bookdown::html_document2: 
+    code_folding: show
+    toc: yes
+    toc_float: yes
+urlcolor: blue
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE, message=FALSE}
+library(tidyverse)
+library(bookdown)
+library(gcookbook)
+options(digits = 3)
+```
+
+Instructions for printing your poster at the Media Center are available on their [website](https://www.swarthmore.edu/language-and-media-centers/media-center). Your poster should be 48x35 inches (landscape is standard, but you can also choose portrait). 
+
+$~$
+
+$~$ $~$  \Large  **Do not wait until the last minute to print your poster**
+
+\normalsize 
+
+Your poster should include:
+
+1. Title
+2. Group number and names of group members
+3. Statement of question or purpose
+4. Background and preparation
+    + If analyzing an existing dataset, include a description of your data here
+    + If conducting a research study, provide motivation for why your question is important
+    + If running an original study or experiment, include any prior work and examples of data you collected
+5. Methodology
+    + Existing dataset: overview of statisitcal methods you tried/used
+    + Research study: which statistical methods did your sources use? How will you evaluate the validity of the studies you read?
+    + Original survey/experiment: How did you try to take a random sample? How did you collect your sample? How did you decide when you had enough data points? 
+6. Results and Conclusions
+    + Data Analysis: Your main graphs/results that you'd like to highlight. This should constitute the bulk your poster.
+    + Research study: This is where you should synthesize your conclusions. This section will likely take up less physical space for you.
+    + Original Survey/Experiment: Your main graphs/results that you'd like to highlight. This might take up less space than data analysis posters, but you should still dedicate substantial space.
+7. Discussion, critique, and future work
+    + What did you learn?
+    + What went wrong, and how could you improve it?
+    + Were there any additional analyses that you would have liked to carry out had you had more time?
+
+
+*Note:* If you think different section headers would better represent your poster, you are welcome to change these sections. Please ask me if you have any questions. 
+
+
+
+# Creating Your Poster in PowerPoint, Google Slides, or Keynote
+
+There are many templates available online - if you find one you like better than the examples below, feel free to use it! Make sure you change the page size to be the appropriate dimensions, and edit away. Regardless of how you create your poster, *please* change the default color scheme. You can also start from scratch, but I find it's much easier to work from a template. 
+
+Resources: 
+
+1. Collin Purrington's [website](https://colinpurrington.com/tips/poster-design/) has a variety of templates
+2. More [templates](https://sites.google.com/a/georgetown.edu/facs/poster-templates)
+3. Some directions on setting up a poster in [google slides](https://www.bates.edu/curricular-research-computing/google-slides-poster-design-tips-basics/)
+
+
+***
+
+# A reminder about the USCLAP competition
+
+If your group is considering submitting to the Undergraduate Class Project Competition ([USCLAP](https://www.causeweb.org/usproc/usclap)) competition, please keep the following in mind:
+
++ Deadline: Friday, Dec 20 (day before our final exam)
++ 3 page paper, draft sent to me by noon on Saturday, Dec 14. I will get comments back to you by Wed, Dec 18 which you should incorporate before the deadline on Friday, December 20th. 
++ Take a look at the [past winners](https://www.causeweb.org/usproc/projects/winners) to get a sense of what your paper should look like
++ Max group size is four people
++ In addition to possibly winning a cash prize, 5 extra credit points on final project grade. 
+
