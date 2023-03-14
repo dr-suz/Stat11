@@ -8,6 +8,7 @@
   
   2. [Probability and random variables](https://profsuzy.github.io/Stat11/Cheat-sheet-2.html)
   
+***
 
 ## Unit 1
 
@@ -42,6 +43,12 @@
 2. [Hw 2](https://profsuzy.github.io/Stat11/HW2.html)
 
 
+### Quiz 1 
+
+* [Formula sheet for quiz 1](https://profsuzy.github.io/Stat11/formula_sheet_Q1.pdf)
+
+***
+
 ## Unit 2 
 
 * Collecting data 
@@ -66,13 +73,19 @@
 
 * [Independence and properties of expectation](https://profsuzy.github.io/Stat11/week7-2-S23.html)
 
-* [In-class practice with random variables]()
+* [In-class practice with random variables](https://profsuzy.github.io/Stat11/week7-3-S23.html)
 
-* [Review of Unit 2 topics]()
+* [Review of Unit 2 topics](https://profsuzy.github.io/Stat11/week9-S23.html)
 
 ### Group homework 
 
 3. [HW 3](https://profsuzy.github.io/Stat11/HW3.html)
+
+### Quiz 2
+
+* [Formula sheet for quiz 2](https://profsuzy.github.io/Stat11/formula_sheet_Q2.pdf)
+
+*** 
 
 ## Unit 3 
 
@@ -89,10 +102,11 @@
 
 ### Group homework 
 
-4. [HW 4]()
+4. [HW 4](https://profsuzy.github.io/Stat11/HW4.html)
 
-5. [HW 5]()
+5. [HW 5](https://profsuzy.github.io/Stat11/HW5.html)
 
+***
 
 ## Final project example 
 
