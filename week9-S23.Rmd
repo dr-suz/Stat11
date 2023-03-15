@@ -179,7 +179,7 @@ Events $A$ and $B$ are independent if and only if $Pr(A \mid B) = Pr(A)$. Based 
 $$\frac{b}{b+c} = a+ b = \frac{a+b}{a+b+c+d},$$
 which simplifies to $ac = bd$. 
 
-There are $4! = 24 total possible ways to assign, at random, these four numbers to the labeled parts of the Venn diagram. However, there are only eight different combinations of these four numbers that satisfy the equation above: 
+There are $4! = 24$ total possible ways to assign, at random, these four numbers to the labeled parts of the Venn diagram. However, there are only eight different combinations of these four numbers that satisfy the equation above: 
 
 1) $a=0.45$, $c=0.1$ and $b=0.3$, $d=0.15$
 
