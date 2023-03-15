@@ -81,6 +81,11 @@ $$Pr(A\text{ and } B) = Pr(A)\times Pr(B).$$
 
 $$Pr(B \mid A) = \frac{Pr(A \text{ and } B)}{Pr(A)}$$
 
+## General multiplication rule 
+
+For any random events $A$ and $B$ (that need not be independent),
+$$Pr(A \text{ and }B) = Pr(A) \times Pr(B \mid A).$$ 
+
 ## Law of total probability 
 
 $$Pr(B) = Pr(B\text{ and }A) + Pr(B \text{ and } A^C)$$ 

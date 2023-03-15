@@ -87,16 +87,14 @@ You can be as creative as our practical constraints allow in designing your own 
 
 * How much of a beverage is lost to the packaging? (E.g. Compare the left over amounts of liquid in cans, bottles, squeeze pouches, etc amounts after the product is consumed.)
 
-* 
+* Does mood and/or energy improve with daily exercise or social time? 
 
-* 
 
 ## Option C: Conduct and analyze a sample survey 
 
 You can be as creative as our practical constraints allow in designing your own survey. The minimal requirements will be to ensure responses to your survey provide information on at least one categorical variable and one numeric variables and to strategically incorporate randomness in subject selection. A few examples could be things like:
 
-* 
+* Referencing the college's website regarding student demographics, determine if there is evidence that introductory statistics courses (e.g. Stat 11) are representative of the student body. 
 
-* 
+* Is screen time related to the amount and quality of sleep time? 
 
-* 
