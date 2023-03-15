@@ -43,7 +43,8 @@ For projects (B) or (C), the type of data you use should involve at least one qu
 
 Your final project will be graded on a scale of 0-20 points possible. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. 
 
-|        | Component | Points Available | Description |
+\pagebreak 
+| Rubric | Component | Points Available | Description |
 | --- | --- | --- | --- |
 | Poster | Title                    | 0-1 | Is the title short, catchy, and relevant to the topic?      |                
 |        | Technical specifications | 0-1 | Is the poster SIZE? Was the topic approved on time? Was the poster printed on time? Is the font (except references) at least SIZE? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
@@ -55,6 +56,11 @@ Your final project will be graded on a scale of 0-20 points possible. All group 
 
 
 # Example Topics 
+
+## Option A: Relate Statistics to Another Class 
+
+Have you heard any mention of important statistical studies in your other courses? Would you like to dig into a particular application of statistics to, say, a humanities course? Can you find a reliable source and can you explain some of the statistical components? 
+
 
 ## Option B: Stat Problem Solving Data Challenge 
 
@@ -80,8 +86,20 @@ In addition to the data for download, the NCVS website has links to studies that
 
 ## Option C: Design and analyze an experiment 
 
+You can be as creative as our practical constraints allow in designing your own experiment. The minimal requirements will be to ensure there is a treatment with at least two levels, and to strategically incorporate randomness in subject selection and/or treatment assignment. A few examples could be things like:
 
+* How much of a beverage is lost to the packaging? (E.g. Compare the left over amounts of liquid in cans, bottles, squeeze pouches, etc amounts after the product is consumed.)
+
+* 
+
+* 
 
 ## Option C: Conduct and analyze a sample survey 
 
+You can be as creative as our practical constraints allow in designing your own survey. The minimal requirements will be to ensure responses to your survey provide information on at least one categorical variable and one numeric variables and to strategically incorporate randomness in subject selection. A few examples could be things like:
 
+* 
+
+* 
+
+* 
