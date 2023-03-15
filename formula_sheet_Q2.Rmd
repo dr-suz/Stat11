@@ -120,3 +120,7 @@ Suppose both $X$ and $Y$ are random variables that may or may not be related to 
 
 If $X \sim N(\mu, \sigma^2)$ then $Z = \frac{X - \mu}{\sigma} \sim N(0, 1).$
 
+## Binomial Random Variable 
+
+If $X \sim Bin(n,p)$ then $Pr(X = x) = nCx \cdot p^x \cdot (1-p)^{n-x}$, where $nCx = \frac{n!}{x!(n-x)!}$.
+
