@@ -37,17 +37,14 @@ You might conduct a virtual survey on some topic that interests you (e.g. twitte
 
 You and your group mates will create a poster summarizing your project and will present this to Prof Suzy on one of the last two days of class. You should use large print on your poster and aim for an attractive and well-organized display. Your poster and presentation must reflect you and your group's own original work. Plagiarism will be checked with software and a strong indication of plagiarized content will result in a grade of zero for all group members. 
 
-Please submit your final project idea/topic to Prof Suzy's for approval by the **end of March**.
-
-For projects (B) or (C), the type of data you use should involve at least one quantitative variable and one categorical variable. Typically people doing surveys will collect 5–8 variables on each subject. 
+Please submit your final project idea/topic to Prof Suzy's for approval by the **end of March**. You are encouraged to consider connecting your knowledge of statistics to the topics of another course in your project topic. For projects (B) or (C), the type of data you use should involve at least one quantitative variable and one categorical variable. Typically people doing surveys will collect 5–8 variables on each subject. 
 
 Your final project will be graded on a scale of 0-20 points possible. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. 
 
-\pagebreak 
 | Rubric | Component | Points Available | Description |
-| --- | --- | --- | --- |
+|:--- |:--- |:--- |:--- |
 | Poster | Title                    | 0-1 | Is the title short, catchy, and relevant to the topic?      |                
-|        | Technical specifications | 0-1 | Is the poster SIZE? Was the topic approved on time? Was the poster printed on time? Is the font (except references) at least SIZE? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
+|        | Technical specifications | 0-1 | Is the poster neatly organized and clearly legible? Was the topic approved on time? Was the poster printed on time? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
 |        | Main content             | 0-5 | How clear is the statement of question or purpose? Can a reader understand what data (or information) was analyzed? Are the methods adequate to address the main statement of question or purpose? Are the conclusions over- or under- stated?    |
 |        | References               | 0-5 | Are references cited properly at the bottom of the poster? Are they referenced throughout the poster, where appropriate? |
 | Presentation | Duration      | 0-2 |  Is the presentation finished within a 3-5 minute window?    |
@@ -86,7 +83,7 @@ In addition to the data for download, the NCVS website has links to studies that
 
 ## Option C: Design and analyze an experiment 
 
-You can be as creative as our practical constraints allow in designing your own experiment. The minimal requirements will be to ensure there is a treatment with at least two levels, and to strategically incorporate randomness in subject selection and/or treatment assignment. A few examples could be things like:
+You can be as creative as our practical constraints allow in designing your own experiment. The minimal requirements will be to ensure there is a treatment with at least two levels and at least one numerical variable and to strategically incorporate randomness in subject selection and/or treatment assignment. A few examples could be things like:
 
 * How much of a beverage is lost to the packaging? (E.g. Compare the left over amounts of liquid in cans, bottles, squeeze pouches, etc amounts after the product is consumed.)
 
