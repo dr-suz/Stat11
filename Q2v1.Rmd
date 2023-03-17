@@ -1,0 +1,223 @@
+---
+title: "Quiz 2 for Stat 11"
+date: "3.17.23"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+\vspace{4mm}
+**Name:** _____________________________________
+
+
+# Part 1: Multiple Choice
+
+**1.** The administration of a large university is interested in learning about the types of wellness programs that would interest its employees. Suppose that there are five categories of employees (administration, faculty, professional, staff, clerical, and maintenance) and the university decides to randomly select ten individuals from each category. What is this sampling plan called?
+
+(a) Cluster Sampling
+
+(b) Convenience Sampling
+
+(c) Stratified Sampling
+
+(d) Systematic Sampling
+
+(e) Simple Random Sampling
+
+\vspace{1cm}
+**2.**  Which of these can be modeled with a **Binomial** distribution?
+
+(a) the number of people we survey until we find someone who has taken Statistics
+
+(b) the number of people we survey until we find two people who have taken Statistics
+
+(c) the number of people in a class of 25 who have taken Statistics
+
+(d) the number of aces among the top 10 cards in a well-shuffled deck
+
+(e) the number of cards of each suit in a 10-card hand
+
+\vspace{1cm}
+**3.** Which of the following is/are TRUE about sampling?
+
+I. An attempt to take a census will always result in less bias than sampling.
+
+II. Sampling error is usually reduced when the sample size is larger.
+
+III. Sampling error is the result of random variations and is always present.
+
+(a) I only 
+
+(b) II only 
+
+(c) III only 
+
+(d) II and III only 
+
+(e) I, II, and III
+
+
+\vspace{1cm}
+**4.** We wish to compare the average ages of the math and science teachers at your high school. Which is the best way to collect the data?
+
+(a) Observational study 
+
+(b) Census 
+
+(c) Simulation
+
+(d) Sample survey 
+
+(e) Experiment 
+
+\vspace{1cm}
+**5.**  On a physical fitness test middle school boys are awarded one point for each push-up they can do, and a point for each sit-up. National results showed that boys average 18 push ups with a standard deviation of 4 push-ups, and 34 sit-ups with standard deviation 11. The mean of their combined (total) scores was therefore $18+34=52$ points. What is the standard deviation of their combined scores? Round to one decimal place.
+
+(a) 137 
+
+(b) 5.3 
+
+(c) 15 
+
+(d) 3.7
+
+(e) Cannot be determined
+
+\vspace{1cm}
+**6.**  Placebos are a tool for which of the following methods?
+
+(a) Sampling
+
+(b) Blinding
+
+(c) Blocking
+
+(d) Randomization
+
+(e) Control
+
+\vspace{1cm}
+**7.**  In an experiment what is the primary purpose of blinding?
+
+(a) Reduce bias
+
+(b) Reduce confounding
+
+(c) Reduce randomness
+
+(d) Reduce variation
+
+(e) Reduce undercoverage
+
+\vspace{1cm}
+**8.**  At the track, a gambler bets on the wrong horse in a 10-horse field nine times in a row. Later, when talking to a friend, he said he was confident that he would pick the winner the next time, because he was "due to pick a winner." Comment on his reasoning.
+
+(a) If he doesn't pick the winning horse next time, he will shortly after that.
+
+(b) This is false reasoning because there is no "law of averages" for independent events.
+ 
+(c) When there are 10 horses in a race and he has chosen the wrong horse nine times in a row, he statistically should pick a winner the next time.
+
+(d) This is false reasoning because he doesn't appear to be lucky.
+
+(e) None of the above apply.
+
+\vspace{1cm}
+**9.**  In a messy sock drawer, there are $25$ (single) socks. Ten of these socks are black, twelve of them are white, and three of them have colorful patterns on them.
+if you select two socks at random, what is the probability that you select two black socks?
+
+(a) $\left(1-\frac{3+12}{25}\right)\cdot\left(1-\frac{3+12-1}{25}\right)$
+
+(b) $\left(\frac{12}{25}\right)\cdot\left(\frac{11}{25}\right)$
+
+(c) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
+
+(d) $\left(\frac{10}{25}\right)\cdot \left(\frac{9}{24}\right)$
+
+(e) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
+
+
+
+\vspace{1cm}
+**10.**  Political analysts estimate the probability that Candidate A will run for president in 2016 is $45\%$, and the probability that Candidate B will run is $20\%$. If their political decisions are independent, then what is the probability that only Candidate A runs for president?
+
+(a) $0.45 + (1-0.2)$
+
+(b) $0.45(1-0.2)$
+ 
+(c) $(1-0.45)(1-0.2)$
+
+(d) $0.2(1-0.45)$ 
+
+(e) $(1-0.45) + 0.2$
+
+# Part 2: Fill in the blank
+
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+**11.** College students were given three choices of pizza toppings and asked to choose one favorite. The following table shows the results.
+
+| Toppings | freshman | sophomore | junior | senior |
+| --- | --- | --- | --- | --- |
+| cheese | 16 | 16 | 26 | 29 |
+| meat   | 25 | 29 | 16 | 16 |
+| veggie | 16 | 16 | 25 | 29 |
+
+<br>
+
+$Pr(\text{favorite topping is veggie} | \text{student is junior or senior}) = \rule{7cm}{0.15mm}$  
+
+\pagebreak 
+**12.** In a stats class, $57\%$ of students eat breakfast in the morning and $80\%$ of students floss their teeth. $46\%$ percent of students eat breakfast and also floss their teeth. 
+
+<br> 
+
+The probability that a student from this class eats breakfast or flosses is $\rule{7cm}{0.15mm}$.  
+
+
+\vspace{1cm}
+**13.**  Insurance company records indicate that $12\%$ of all teenage drivers have been ticketed for speeding and $9\%$ for going through a red light. If $4\%$ have been ticketed for both, what is the probability that a teenage driver has been issued a ticket for speeding but not for running a red light?
+ 
+\vspace{3cm} 
+ 
+\vspace{1cm}
+**14.**   A poll of 120 Ithacans found that 30 had visited the Museum of the Earth, and that 80 had been to Home Depot. If we can assume that going to Home Depot and going to the Museum of the Earth are independent events, how many of those polled had been to both?
+
+| Home Depot |\vline Museum Yes | Museum No | **Total** |
+| --- | --- | --- | --- | 
+| Yes |\vline ??  |  | **80** |
+| No |\vline   |  | **40** |
+| **Total** |\vline 30  | 90 | **120** |
+
+\vspace{3cm}
+ 
+\vspace{1cm}
+**15.**  Here is the distribution of workers a restaurant keeps on staff during a 1-hour shift. Suppose the restaurant is open for 8 hours each day and let $X$ be the random variable representing the total number of workers in a single day.
+
+| **Probability** | 0.10 | 0.25 | 0.55 | 0.10 |
+| --- | --- | --- | --- | --- | 
+| **Number of workers** | 3 | 4 | 5 | 6 |
+
+
+Assuming that each hour is independent of the others, 
+<br>
+$E(X) = \rule{7cm}{0.15mm}$ and  
+<br>
+<br> 
+$Var(X)=\rule{7cm}{0.15mm}$. 
+
+
+# Part 3: Free response 
+
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+**16.**  The length of a cat's tail is roughly normally distributed with a mean of 5 inches and a standard deviation of 2 inches. Use the Normal (Z) table of probabilities to find the approximate probability of having a cat with a 3.5 inch tail or shorter. (Hint: Draw a picture to show the area under the curve corresponding to this probability.) 
+
+\vspace{4cm} 
+
+\vspace{1cm}
+**17.**  Suppose we are modeling different features of cats at an adoption center that hosts $50$ cats. In the space below, make up a random variable that can be modeled as a Binomial($n$, $p$) distribution. Make sure you specify $n$ and $p$ and define failure and success. 
+
+\vspace{4cm} 
+
+\vspace{1cm}
+**18.**  Suppose you want to foster some cats until they are adopted and you have room to host $5$ cats total. The shelter you are obtaining the cats from has told you that about $65\%$ of their cats need to be treated for heart-worms. Use the table of Binomial probabilities to find the probability that no more than $2$ of the $5$ cats you will host will need to be treated for heart-worms.  

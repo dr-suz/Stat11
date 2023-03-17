@@ -1,6 +1,6 @@
 ---
 title: "Quiz 2 for Stat 11"
-date: "3.17.23"
+date: "3-17-23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
@@ -154,7 +154,7 @@ if you select two socks at random, what is the probability that you select two b
 
 **To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
 
-**X.** College students were given three choices of pizza toppings and asked to choose one favorite. The following table shows the results.
+**11.** College students were given three choices of pizza toppings and asked to choose one favorite. The following table shows the results.
 
 | Toppings | freshman | sophomore | junior | senior |
 | --- | --- | --- | --- | --- |
@@ -167,21 +167,20 @@ if you select two socks at random, what is the probability that you select two b
 $Pr(\text{favorite topping is veggie} | \text{student is junior or senior}) = \rule{7cm}{0.15mm}$  
 
 \pagebreak 
-**X.** In a stats class, $57\%$ of students eat breakfast in the morning and $80\%$ of students floss their teeth. $46\%$ percent of students eat breakfast and also floss their teeth. 
+**12.** In a stats class, $57\%$ of students eat breakfast in the morning and $80\%$ of students floss their teeth. $46\%$ percent of students eat breakfast and also floss their teeth. 
+
+<br> 
 
 The probability that a student from this class eats breakfast or flosses is $\rule{7cm}{0.15mm}$.  
 
-**Solution: 91%**
 
 \vspace{1cm}
-**X.**  Insurance company records indicate that $12\%$ of all teenage drivers have been ticketed for speeding and $9\%$ for going through a red light. If $4\%$ have been ticketed for both, what is the probability that a teenage driver has been issued a ticket for speeding but not for running a red light?
+**13.**  Insurance company records indicate that $12\%$ of all teenage drivers have been ticketed for speeding and $9\%$ for going through a red light. If $4\%$ have been ticketed for both, what is the probability that a teenage driver has been issued a ticket for speeding but not for running a red light?
  
- <br>
+\vspace{3cm} 
  
-$\rule{7cm}{0.15mm}$ **Solution: 8%**
-
 \vspace{1cm}
-**X.**   A poll of 120 Ithacans found that 30 had visited the Museum of the Earth, and that 80 had been to Home Depot. If we can assume that going to Home Depot and going to the Museum of the Earth are independent events, how many of those polled had been to both?
+**14.**   A poll of 120 Ithacans found that 30 had visited the Museum of the Earth, and that 80 had been to Home Depot. If we can assume that going to Home Depot and going to the Museum of the Earth are independent events, how many of those polled had been to both?
 
 | Home Depot |\vline Museum Yes | Museum No | **Total** |
 | --- | --- | --- | --- | 
@@ -189,12 +188,10 @@ $\rule{7cm}{0.15mm}$ **Solution: 8%**
 | No |\vline   |  | **40** |
 | **Total** |\vline 30  | 90 | **120** |
 
-<br>
-
-$\rule{7cm}{0.15mm}$ **Solution: 20**
-
+\vspace{3cm}
+ 
 \vspace{1cm}
-**X.**  Here is the distribution of workers a restaurant keeps on staff during a 1-hour shift. Suppose the restaurant is open for 8 hours each day and let $X$ be the random variable representing the total number of workers in a single day.
+**15.**  Here is the distribution of workers a restaurant keeps on staff during a 1-hour shift. Suppose the restaurant is open for 8 hours each day and let $X$ be the random variable representing the total number of workers in a single day.
 
 | **Probability** | 0.10 | 0.25 | 0.55 | 0.10 |
 | --- | --- | --- | --- | --- | 
@@ -213,39 +210,14 @@ $Var(X)=\rule{7cm}{0.15mm}$.
 
 **To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
 
-**X.**  The length of a cat's tail is roughly normally distributed with a mean of 5 inches and a standard deviation of 2 inches. Use the Normal (Z) table of probabilities to find the approximate probability of having a cat with a 3.5 inch tail or shorter. (Hint: Draw a picture to show the area under the curve corresponding to this probability.) 
+**16.**  The length of a cat's tail is roughly normally distributed with a mean of 5 inches and a standard deviation of 2 inches. Use the Normal (Z) table of probabilities to find the approximate probability of having a cat with a 3.5 inch tail or shorter. (Hint: Draw a picture to show the area under the curve corresponding to this probability.) 
 
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
+\vspace{4cm} 
 
 \vspace{1cm}
-**X.**  Suppose we are modeling different features of cats at an adoption center that hosts $50$ cats. In the space below, make up a random variable that can be modeled as a Binomial($n$, $p$) distribution. Make sure you specify $n$ and $p$ and define failure and success. 
+**17.**  Suppose we are modeling different features of cats at an adoption center that hosts $50$ cats. In the space below, make up a random variable that can be modeled as a Binomial($n$, $p$) distribution. Make sure you specify $n$ and $p$ and define failure and success. 
 
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
+\vspace{4cm} 
 
 \vspace{1cm}
-**X.**  Suppose you want to foster some cats until they are adopted and you have room to host $5$ cats total. The shelter you are obtaining the cats from has told you that about $65\%$ of their cats need to be treated for heart-worms. Use the table of Binomial probabilities to find the probability that no more than $2$ of the $5$ cats you will host will need to be treated for heart-worms.  
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
+**18.**  Suppose you want to foster some cats until they are adopted and you have room to host $5$ cats total. The shelter you are obtaining the cats from has told you that about $65\%$ of their cats need to be treated for heart-worms. Use the table of Binomial probabilities to find the probability that no more than $2$ of the $5$ cats you will host will need to be treated for heart-worms.  
