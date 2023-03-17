@@ -1,6 +1,6 @@
 ---
 title: "Quiz 2 for Stat 11"
-date: "3/17.23"
+date: "3/17/23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
@@ -10,37 +10,37 @@ output:
 
 # Part 1: Multiple Choice
 
-**X.** The administration of a large university is interested in learning about the types of wellness programs that would interest its employees. Suppose that there are five categories of employees (administration, faculty, professional, staff, clerical, and maintenance) and the university decides to randomly select ten individuals from each category. What is this sampling plan called?
+**1.** The administration of a large university is interested in learning about the types of wellness programs that would interest its employees. Suppose that there are five categories of employees (administration, faculty, professional, staff, clerical, and maintenance) and the university decides to randomly select ten individuals from each category. What is this sampling plan called?
 
-(a) Cluster Sampling
+(a) Stratified Sampling
 
 (b) Convenience Sampling
 
-(c) **Stratified Sampling**
+(c) Cluster Sampling
 
 (d) Systematic Sampling
 
 (e) Simple Random Sampling
 
 \vspace{1cm}
-**X.**  Which of these can be modeled with a **Binomial** distribution?
+**2.**  Which of these can be modeled with a **Binomial** distribution?
 
 (a) the number of people we survey until we find someone who has taken Statistics
 
-(b) the number of people we survey until we find two people who have taken Statistics
+(b) the number of people in a class of 25 who have taken Statistics
 
-(c) **the number of people in a class of 25 who have taken Statistics**
+(c) the number of people we survey until we find two people who have taken Statistics
 
 (d) the number of aces among the top 10 cards in a well-shuffled deck
 
 (e) the number of cards of each suit in a 10-card hand
 
 \vspace{1cm}
-**X.** Which of the following is/are TRUE about sampling?
+**3.** Which of the following is/are TRUE about sampling?
 
-I. An attempt to take a census will always result in less bias than sampling.
+I. Sampling error is usually reduced when the sample size is larger.
 
-II. Sampling error is usually reduced when the sample size is larger.
+II. An attempt to take a census will always result in less bias than sampling.
 
 III. Sampling error is the result of random variations and is always present.
 
@@ -48,106 +48,107 @@ III. Sampling error is the result of random variations and is always present.
 
 (b) II only 
 
-(c) III only 
+(c) I and III only 
 
-(d) **II and III only** 
+(d) II and III only
 
 (e) I, II, and III
 
 
 \vspace{1cm}
-**X.** We wish to compare the average ages of the math and science teachers at your high school. Which is the best way to collect the data?
+**4.** We wish to compare the average ages of the math and science teachers at your high school. Which is the best way to collect the data?
 
 (a) Observational study 
 
-(b) **Census** 
+(b) Experiment
 
-(c) Simulation
+(c) Sample survey
 
-(d) Sample survey 
+(d) Simulation 
 
-(e) Experiment 
+(e) Census
 
 \vspace{1cm}
-**X.**  On a physical fitness test middle school boys are awarded one point for each push-up they can do, and a point for each sit-up. National results showed that boys average 18 push ups with a standard deviation of 4 push-ups, and 34 sit-ups with standard deviation 11. The mean of their combined (total) scores was therefore $18+34=52$ points. What is the standard deviation of their combined scores? Round to one decimal place.
+**5.**  On a physical fitness test middle school boys are awarded one point for each push-up they can do, and a point for each sit-up. National results showed that boys average 18 push ups with a standard deviation of 4 push-ups, and 34 sit-ups with standard deviation 11. The mean of their combined (total) scores was therefore $18+34=52$ points. What is the standard deviation of their combined scores? Round to one decimal place.
 
 (a) 137 
 
-(b) 5.3 
+(b) 3.7 
 
-(c) 15 
+(c) 5.3 
 
-(d) 3.7
+(d) 15
 
-(e) **Cannot be determined** 
+(e) Cannot be determined
 
 \vspace{1cm}
-**X.**  Placebos are a tool for which of the following methods?
+**6.**  Placebos are a tool for which of the following methods?
 
-(a) Sampling
+(a) Blocking
 
-(b) **Blinding**
+(b) Randomization
 
-(c) Blocking
+(c) Sampling
 
-(d) Randomization
+(d) Blinding
 
 (e) Control
 
 \vspace{1cm}
-**X.**  In an experiment what is the primary purpose of blinding?
+**7.**  In an experiment what is the primary purpose of blinding?
 
-(a) **Reduce bias**
+(a) Reduce undercoverage
 
-(b) Reduce confounding
+(b) Reduce bias
 
-(c) Reduce randomness
+(c) Reduce confounding
 
-(d) Reduce variation
+(d) Reduce randomness
 
-(e) Reduce undercoverage
+(e) Reduce variation
+
 
 \vspace{1cm}
-**X.**  At the track, a gambler bets on the wrong horse in a 10-horse field nine times in a row. Later, when talking to a friend, he said he was confident that he would pick the winner the next time, because he was "due to pick a winner." Comment on his reasoning.
+**8.**  At the track, a gambler bets on the wrong horse in a 10-horse field nine times in a row. Later, when talking to a friend, he said he was confident that he would pick the winner the next time, because he was "due to pick a winner." Comment on his reasoning.
 
 (a) If he doesn't pick the winning horse next time, he will shortly after that.
 
-(b) **This is false reasoning because there is no "law of averages" for independent events.**
- 
-(c) When there are 10 horses in a race and he has chosen the wrong horse nine times in a row, he statistically should pick a winner the next time.
+(b) When there are 10 horses in a race and he has chosen the wrong horse nine times in a row, he statistically should pick a winner the next time.
+
+(c) This is false reasoning because there is no "law of averages" for independent events.
 
 (d) This is false reasoning because he doesn't appear to be lucky.
 
 (e) None of the above apply.
 
 \vspace{1cm}
-**X.**  In a messy sock drawer, there are $25$ (single) socks. Ten of these socks are black, twelve of them are white, and three of them have colorful patterns on them.
+**9.**  In a messy sock drawer, there are $25$ (single) socks. Ten of these socks are black, twelve of them are white, and three of them have colorful patterns on them.
 if you select two socks at random, what is the probability that you select two black socks?
 
-(a) $\left(1-\frac{3+12}{25}\right)\cdot\left(1-\frac{3+12-1}{25}\right)$
+(a) $\left(\frac{10}{25}\right)\cdot \left(\frac{9}{24}\right)$
 
-(b) $\left(\frac{12}{25}\right)\cdot\left(\frac{11}{25}\right)$
+(b) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
 
 (c) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
 
-(d) **$\left(\frac{10}{25}\right)\cdot \left(\frac{9}{24}\right)$**
+(d) $\left(1-\frac{3+12}{25}\right)\cdot\left(1-\frac{3+12-1}{25}\right)$
 
-(e) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
+(e) $\left(\frac{12}{25}\right)\cdot\left(\frac{11}{25}\right)$
 
 
 
 \vspace{1cm}
-**X.**  Political analysts estimate the probability that Candidate A will run for president in 2016 is $45\%$, and the probability that Candidate B will run is $20\%$. If their political decisions are independent, then what is the probability that only Candidate A runs for president?
+**10.**  Political analysts estimate the probability that Candidate A will run for president in 2016 is $45\%$, and the probability that Candidate B will run is $20\%$. If their political decisions are independent, then what is the probability that only Candidate A runs for president?
 
 (a) $0.45 + (1-0.2)$
 
-(b) **$0.45(1-0.2)$**
+(b) $(1-0.45) + 0.2$
  
 (c) $(1-0.45)(1-0.2)$
 
 (d) $0.2(1-0.45)$ 
 
-(e) $(1-0.45) + 0.2$
+(e) $0.45(1-0.2)$
 
 # Part 2: Fill in the blank
 
