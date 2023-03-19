@@ -1,0 +1,140 @@
+---
+title: "Stat 11 Week 10"
+subtitle: "Sampling Distributions and Confidence Intervals for Proportions" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+<span style="color:purple">notecard</span>
+<span style="color:blue">hypothetical</span>
+<span style="color:green">new terms</span>
+
+
+# 1. Sampling Distribution Models 
+
+Recal our Jelly Bean experiment from Week 7. 
+
+Created a sampling distribution for $X=$ number of successes out of $20$ trials. Unknown/uncertain (population) parameter is $p = $ proportion of green jelly beans (i.e. the proportion of "successes" in the entire population).
+
+$X \sim Binomial(20, p)$ 
+
+
+In class, we observed $24$ different values for $X$, i.e. $x_1, x_2, \dots, x_{24}$, which we plotted in the dot plot below. 
+
+![](dotplotimage)
+
+Out of our $25$ samples, we observed $24$ values for the number of successes. We didn't all observe the same number of green jelly beans, there was variability among our different samples (sampling variability). 
+
+This means that we could have calculated $24$ estimates for the model parameter, $p$: 
+$$\hat{p} = \frac{\text{number of successes}}{20}.$$
+Plotting these $24$ different values of $\hat{p}$ produces a sampling distribution for the sample proportion:
+
+![](phat histogram)
+
+We are going to focus first on methods of statistical inference that use model the sampling distribution (of the data) with a Normal probability model. (Later on, we may venture into methods that use non-Normal probability models such as a Student's t-distribution or the Chi-square distribution.) 
+
+
+# 2. Confidence Interval for an Unknown Proportion
+
+If we are interested in finding a useful guess (or estimate) for an unknown probability of success, we can generally use the Normal model to describe the sampling distribution of $\hat{p}$ and from this, generate a confidence interval for the parameter $p$. 
+
+If the following conditions hold...
+
+1. **Independence Assumption**: the observed successes and failures are all independent of one another. This is generally a reasonable assumption if strategic randomization has been used to obtain your sample of data.  
+
+2. **10\% Condition**: our sample represents no more than $10\%$ of the entire population under study. 
+
+3. **Success/Failure Condition**: we have at least $10$ failures and $10$ successes in our sample. 
+
+Then the sampling distribution of the estimator $\hat{p}$ follows a Normal distribution with expectation $E(\hat{p}) = p$ and variance $Var(\hat{p}) =  \frac{p(1-p)}{n}$ (and standard deviation $sd(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}$).   
+
+
+![](./images/wk10-normal-prop-curve.png)
+
+The standard error of our estimate, $\hat{p}$, is itself an estimate for the standard deviation of $\hat{p}$. In symbols, we write 
+$$SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$$
+Once we have an estimate for the spread of the sampling distribution of $\hat{p}$, we can make an educated guess as to what are some reasonable values for the unknown parameter, $p$. 
+
+In general, we can find an $a\%$ confidence interval for reasonable values of $p$ with the formula
+$$\hat{p} \pm [z^*_{a} \times SE(\hat{p})].$$ 
+
+$z^*_{a}$ is called a critical value, but really, this is just a quantile of a standard Normal distribution:
+ 
+[pic of critical value] 
+
+Because we are using a Normal model to describe the sampling distribution of $\hat{p}$, this procedure is often called the procedure for a one-proportion z-interval. 
+
+# 3. Interpreting Confidence Intervals 
+
+Each new sample of data has the potential to generate a new (slightly different) confidence interval (CI) for $p$. The lower and upper bounds of a CI are both functions of the random variable $X \sim Binomial(n,p)$, hence they are random variables as well, that is.... until we observe the data $x$. 
+
+
+Specific language interpreting confidence intervals: 
+
+  > "I am $a\%$ confident that the interval from LB to UP captures the true probability of success (or the true proportion of successes)." 
+  
+What this means is that, if our assumptions hold, we can guess the value of $p$ with a guaranteed level of accuracy, in the long run. 
+
+## Example - Contact Lenses 
+Suppose that $30\%$ of Swarthmore students wear contact lenses. The population of interest is all Swarthmore students and the variable we are measuring for each student is the binary, categorical variable that equals one if the individual wears contact lenses and equals zero if the individual does not wear contact lenses. 
+
+Suppose we get proper permissions to obtain a simple random sample of size $100$ registered Swarthmore students. What is the probability that more than one third of this random sample of students wear contacts? 
+
+REDO as example with CI 
+
+
+
+# 4. An Historical Remark 
+
+## A powerful method with a troubling origin 
+
+Modern statistical inference methods (confidence intervals and hypothesis tests) have proven to be powerful tools across many disciplines. Some of the most impressive real-world examples of the use of these methods (in my opinion) include the discovery of the Higgs Boson and the development of the first drug to treat HIV infection. These methods are useful in day-to-day social, scientific, and political work as well. For instance, sampling distribution theory can be used to target disaster relief efforts and provide quantitative evidence of discrimination or bias. 
+
+However, these methods of inference also grew out of the eugenics movement. In fact - "The history of statistics includes many regrettable elements related to systemic racism and eugenics. A recent article in Nautilus, entitled “[How Eugenics Shaped Statistics](https://nautil.us/how-eugenics-shaped-statistics-238014/),” is sobering, to put it mildly." 
+
+Source: 2021 paper on [Inclusivity in Statistics and Data Science Education](https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1906555)
+
+## What are eugenics and scientific racism?
+
+Eugenics is the scientifically erroneous and immoral theory of “racial improvement” and “planned breeding,” which gained popularity during the early 20th century. Eugenicists worldwide believed that they could perfect human beings and eliminate so-called social ills through genetics and heredity. They believed the use of methods such as involuntary sterilization, segregation and social exclusion would rid society of individuals deemed by them to be unfit.
+
+Scientific racism is an ideology that appropriates the methods and legitimacy of science to argue for the superiority of white Europeans and the inferiority of non-white people whose social and economic status have been historically marginalized. Like eugenics, scientific racism grew out of:
+
+* the misappropriation of revolutionary advances in medicine, anatomy and statistics during the 18th and 19th centuries.
+
+* Charles Darwin’s theory of evolution through the mechanism of natural selection.
+
+* Gregor Mendel’s laws of inheritance.
+
+Eugenic theories and scientific racism drew support from contemporary xenophobia, antisemitism, sexism, colonialism and imperialism, as well as justifications of slavery, particularly in the United States.
+
+Source: https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism 
+
+## Modern landscape 
+
+"[No] individual statistical analysis should be considered sufficient to establish scientific validity: research requires many sets of data along many lines of evidence, with a watchfulness for systematic error. Replicating and predicting findings in new data and new settings is a stronger way of validating claims than blessing results from an isolated study with statistical inferences." 
+  
+"Statistical thinking also involves a keen awareness of the pitfalls of data analysis and its interpretation"
+  
+"Statistical significance is not a measure of practical, clinical, or scientific significance"
+
+Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables Good Science](https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1518264)  
+  
+  
+[JEDI Organizing Group of the ASA](https://sites.google.com/nonlinearlearning.org/jedi-og/home) - upcoming event March 29 (could design final project around info learned in this event) or [list of articles](https://magazine.amstat.org/blog/category/jedi-corner/) 
+  
+  

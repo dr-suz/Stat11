@@ -1,0 +1,35 @@
+---
+title: "Stat 11 Week 10"
+subtitle: "Confidence Intervals for Means" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+<span style="color:purple">notecard</span>
+<span style="color:blue">hypothetical</span>
+<span style="color:green">new terms</span>
+
+
+# 1. Centroal Limit Theorem 
+
+(relate to sampling distribution models)
+
+
+# 2. Confidence Interval for an Unknown Mean 
+
+
+# 3. Calculating Confidence Intervals with Software 

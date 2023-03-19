@@ -1,7 +1,7 @@
 ---
 title: "Group Homework 4"
 author: "STAT011-S23"
-date: 'Due: X/X/23'
+date: 'Due: 3/31/23'
 output:
   html_document: default
 ---
@@ -84,11 +84,7 @@ State police believe that $70\%$ of the drivers traveling on I-95 exceed the spe
 
 # Probleem 3 
 
-Suppose that $30\%$ of Swarthmore students wear contact lenses. The population of interest is all Swarthmore students and the variable we are measuring for each student is the binary, categorical variable that equals one if the individual wears contact lenses and equals zero if the individual does not wear contact lenses. 
 
-**(a)** Describe a way we can obtain a simple random sample of size $100$ from this population. 
-
-**(b)** Suppose we follow your recommendations for part (a) and so we can use the CLT to model the sample proportion of students who wear contacts. Based on the CLT, find the approximate probability that more than one third of this random sample of students wear contacts.
 
 
 
@@ -116,12 +112,6 @@ A newspaper reports that the governor's approval rating stands at $65\%$. The ar
 
  Find and interpret a 95% confidence interval for the gas mileage of 2010 vehicles. Select the correct choice below and fill in the answer boxes within your choice.
  
-# yogurt 
-
-A consumer group tested 11 brands of vanilla yogurt and found the numbers below for calories per serving.
-a) Check the assumptions and conditions.
-b) A diet guide claims that you will get an average of  calories from a serving of vanilla yogurt. Use an appropriate hypothesis test to comment on their claim.
-
 
 # wax for skiing 
 

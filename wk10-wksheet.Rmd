@@ -1,0 +1,63 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: 'Week 10: Experiments with Confidence Intervals'
+output:
+  html_document: default
+  pdf_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** There are X questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+<br>
+<br>
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+
+# 1.   
+
+<br>
+<br>
+<br>
+
+# 2.  
+
+
+<br>
+<br>
+<br>
+
+
+# 3. 
+
+<br>
+<br>
+<br>
+
+
+# 4.  
+
+<br>
+<br>
+<br>
+
+
+# 5. 
+
+<br>
+<br>
+<br>
+
+

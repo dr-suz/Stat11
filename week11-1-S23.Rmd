@@ -1,0 +1,43 @@
+---
+title: "Stat 11 Week 11"
+subtitle: "Hypothesis Tests" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+<span style="color:purple">notecard</span>
+<span style="color:blue">hypothetical</span>
+<span style="color:green">new terms</span>
+
+
+# 1.  
+
+
+# 2. 
+
+
+
+
+
+# 3.  
+
+
+## Example: Pelaton 
+
+In 2023, a consumer group surveyed $200$ people who reported purchasing a Pelaton bike in 20XX. The found the following 
+a) Check the assumptions and conditions.
+b) In a commercial for their product, Pelaton claims that, on average, $92\%$ of the people who bought their bike are still actively using it to work out. Use an appropriate hypothesis test to comment on their claim.
