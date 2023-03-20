@@ -33,3 +33,48 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 # 3. Calculating Confidence Intervals with Software 
+
+
+
+
+
+# 4. An Historical Remark 
+
+## A powerful method with a troubling origin 
+
+Modern statistical inference methods (confidence intervals and hypothesis tests) have proven to be powerful tools across many disciplines. Some of the most impressive real-world examples of the use of these methods (in my opinion) include the discovery of the Higgs Boson and the development of the first drug to treat HIV infection. These methods are useful in day-to-day social, scientific, and political work as well. For instance, sampling distribution theory can be used to target disaster relief efforts and provide quantitative evidence of discrimination or bias. 
+
+However, these methods of inference also grew out of the eugenics movement. In fact - "The history of statistics includes many regrettable elements related to systemic racism and eugenics. A recent article in Nautilus, entitled “[How Eugenics Shaped Statistics](https://nautil.us/how-eugenics-shaped-statistics-238014/),” is sobering, to put it mildly." 
+
+Source: 2021 paper on [Inclusivity in Statistics and Data Science Education](https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1906555)
+
+## What are eugenics and scientific racism?
+
+Eugenics is the scientifically erroneous and immoral theory of “racial improvement” and “planned breeding,” which gained popularity during the early 20th century. Eugenicists worldwide believed that they could perfect human beings and eliminate so-called social ills through genetics and heredity. They believed the use of methods such as involuntary sterilization, segregation and social exclusion would rid society of individuals deemed by them to be unfit.
+
+Scientific racism is an ideology that appropriates the methods and legitimacy of science to argue for the superiority of white Europeans and the inferiority of non-white people whose social and economic status have been historically marginalized. Like eugenics, scientific racism grew out of:
+
+* the misappropriation of revolutionary advances in medicine, anatomy and statistics during the 18th and 19th centuries.
+
+* Charles Darwin’s theory of evolution through the mechanism of natural selection.
+
+* Gregor Mendel’s laws of inheritance.
+
+Eugenic theories and scientific racism drew support from contemporary xenophobia, antisemitism, sexism, colonialism and imperialism, as well as justifications of slavery, particularly in the United States.
+
+Source: https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism 
+
+## Modern landscape 
+
+"[No] individual statistical analysis should be considered sufficient to establish scientific validity: research requires many sets of data along many lines of evidence, with a watchfulness for systematic error. Replicating and predicting findings in new data and new settings is a stronger way of validating claims than blessing results from an isolated study with statistical inferences." 
+  
+"Statistical thinking also involves a keen awareness of the pitfalls of data analysis and its interpretation"
+  
+"Statistical significance is not a measure of practical, clinical, or scientific significance"
+
+Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables Good Science](https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1518264)  
+  
+  
+[JEDI Organizing Group of the ASA](https://sites.google.com/nonlinearlearning.org/jedi-og/home) - upcoming event March 29 (could design final project around info learned in this event) or [list of articles](https://magazine.amstat.org/blog/category/jedi-corner/) 
+  
+  
