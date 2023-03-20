@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ## Example - Recall our Jelly Bean exercise from Week 7 
 $$X \sim Binomial(20, p)$$ 
 
-Where $X=$ number of successes (green jelly beans) out of $n=20$ trials. The (population) parameter here was $p = $ probability of drawing a green jelly bean (or, equivalently, the proportion of green jelly beans in the entire population of the large bowl of jelly beans). 
+Where $X=$ number of successes (green jelly beans) out of $n=20$ trials. The (population) parameter here was $p =$ probability of drawing a green jelly bean (or, equivalently, the proportion of green jelly beans in the entire population of the large bowl of jelly beans). 
 
 In class, we observed $24$ different values for $X$, i.e. $x_1, x_2, \dots, x_{24}$, which we plotted in the dot plot below: 
 

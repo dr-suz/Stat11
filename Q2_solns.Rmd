@@ -1,0 +1,61 @@
+---
+title: "Quiz 2 Solutions"
+date: "3.17.23"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+
+# 1-10 
+
+| | V1 | V2 | V3 |
+|---|---|---|---|
+| 1 | c  |   |   |
+| 2 | c  |   |   |
+| 3 | d  |   |   |
+| 4 | b  |   |   |
+| 5 | e  |   |   |
+| 6 | b  |   |   |
+| 7 | a  |   |   |
+| 8 | b  |   |   |
+| 9 | d  |   |   |
+| 10 | b  |   |   |
+
+***
+
+# 11 
+
+
+# 12 
+
+Solution: $91\%$
+
+
+# 13 
+
+Solution: $8\%$ 
+
+# 14 
+
+Solution: $20$ 
+
+# 15 
+
+
+$E(X) = 3(0.1) + 4(0.25) + 5(0.55) + 6(0.1) = 4.65$
+
+$Var(X) = (3-E(X))^2(0.1) + (4-E(X))^2(0.25) + (5-E(X))^2(0.55) + (6-E(X))^2(0.1) = 0.6284$
+
+# 16 
+
+
+# 17 
+
+* in words, explain what follows a $Bin(n, p)$ distribution 
+
+* define $n=50$ 
+
+* define, in words, $p$ 
+
+# 18 
+
