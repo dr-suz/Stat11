@@ -1,6 +1,5 @@
 ---
 title: "Quiz 2 Solutions"
-date: "3.17.23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
@@ -8,46 +7,67 @@ output:
 
 # 1-10 
 
-| | V1 | V2 | V3 |
-|---|---|---|---|
-| 1 | c  |   |   |
-| 2 | c  |   |   |
-| 3 | d  |   |   |
-| 4 | b  |   |   |
-| 5 | e  |   |   |
-| 6 | b  |   |   |
-| 7 | a  |   |   |
-| 8 | b  |   |   |
-| 9 | d  |   |   |
-| 10 | b  |   |   |
+| | V1 - dots | V2 - slash | V3 - dash |
+| --- | --- | --- | --- |
+| 1 | c  | a  | e  |
+| 2 | c or d |  b or d |  a or d |
+| 3 | d  |  c |   c |
+| 4 | b  |  e | c  |
+| 5 | e  |  e | e  |
+| 6 | b  |  d | c  |
+| 7 | a  | b  | e  |
+| 8 | b  |  c | d  |
+| 9 | d  |  a | b  |
+| 10 | b  | d  |  b |
 
 ***
 
 # 11 
 
+$$\frac{25+29}{26+16+25+29+16+29}= 0.383$$
+
+or, equivalently, 
+
+$$\frac{\frac{25+29}{16+25+16+16+29+16+26+16+25+29+16+29}}{\frac{26+16+25+29+16+29}{16+25+16+16+29+16+26+16+25+29+16+29}}$$
 
 # 12 
 
-Solution: $91\%$
+
+Let $A=$ eat breakfast and $B=$ floss teeth. Then $Pr(A) = 0.57$, $Pr(B)=0.80$, and $Pr(A\text{ and }B) = 0.46$.
+
+Hence, $Pr(A\text{ or }B) = Pr(A) + Pr(B) - Pr(A\text{ and }B) = 0.57 + 0.80 - 0.46 = 0.91$
+
 
 
 # 13 
 
-Solution: $8\%$ 
+Let $A=$ ticket for speeding and $B=$ ticket for running red light. Then $Pr(A\text{ and }B) = 0.04$, $Pr(A)=0.12$, and $Pr(B) = 0.09$.
+
+Since $Pr(A \text{ and } B^C) + Pr(A \text{ and }B) = Pr(A)$, we have that $Pr(A\text{ and }B^C) = 0.12 -0.04 =0.08$.
+
+
 
 # 14 
 
-Solution: $20$ 
+Assuming independence means either: 
+
+$$Pr(\text{Yes HD} \mid \text{Yes Mu})= Pr(\text{Yes HD})$$
+i.e.$\frac{x}{30} = \frac{80}{120}$ meaning $x=20$, or, equivalently 
+
+$$Pr(\text{Yes HD and Yes Mu}) = Pr(\text{Yes HD})Pr(\text{YesMu})$$
+i.e. $\frac{x}{120} = \frac{30}{120} \cdot \frac{80}{120}$ meaning $x=20$. 
 
 # 15 
 
+* $E(X) = 3(0.1) + 4(0.25) + 5(0.55) + 6(0.1) = 4.65$
 
-$E(X) = 3(0.1) + 4(0.25) + 5(0.55) + 6(0.1) = 4.65$
-
-$Var(X) = (3-E(X))^2(0.1) + (4-E(X))^2(0.25) + (5-E(X))^2(0.55) + (6-E(X))^2(0.1) = 0.6284$
+* $Var(X) = (3-E(X))^2(0.1) + (4-E(X))^2(0.25) + (5-E(X))^2(0.55) + (6-E(X))^2(0.1) = 0.6284$
 
 # 16 
 
+$X \sim N(5, 2^2)$ so $Pr(X \leq 3.5) = Pr\left(Z \leq \frac{3.5-5}{2} \right) = Pr(Z \leq -0.75) = 0.227$
+
+(give most credit for work, little credit for correct reading of the Z table (since this involves some calculation work))
 
 # 17 
 
@@ -59,3 +79,6 @@ $Var(X) = (3-E(X))^2(0.1) + (4-E(X))^2(0.25) + (5-E(X))^2(0.55) + (6-E(X))^2(0.1
 
 # 18 
 
+$X \sim Binom(5, 0.65)$ and we want to find $Pr(X \leq 2) = Pr(X=0) + Pr(X=1) + Pr(X=2) =0.235$
+
+must display correct usage of binomial table 
