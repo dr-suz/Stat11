@@ -1,0 +1,63 @@
+---
+title: "Group Homework 4 Solutions"
+author: "STAT011-S23"
+date: 'Due: 3/31/23'
+output:
+  pfd_document: default
+---
+
+# Introduction and Purpose 
+
+The data set you will analyse in this homework..... The purpose of this assignment is ....data set consisting of $X$ variables and $X$ observations. 
+
+
+# Required Tech 
+
+## Excel 
+
+The skills necessary to complete this assignment in Excel are covered in the following seven videos:
+
+* Excel 2016 with Data Analysis Toolpak - Introduction to Common Procedures 
+
+* Excel 2016 with Data Analysis Toolpak - Descriptive Statistics and Confidence Intervals for a Mean 
+
+* Excel 2016 with **XLSTAT** Video - Hypothesis Tests and Confidence Intervals for a Proportion 
+
+* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for the Difference Between Proportions
+
+* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for One Mean
+
+
+## RStudio
+
+The skills necessary to complete this assignment in RStudio are covered in the following seven videos:
+
+* RStudio Video - Probability Distributions
+
+* RStudio Video - Statistical Inference - Inference on Proportions - One Sample  
+
+* RStudio Video - Statistical Inference - Inference on Mean - One Sample
+
+
+# Instructions
+
+If you are analyzing this data in Excel you first need to [download the data set for HW 4](https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `XXX.csv`. This may take a few moments as it is a large data set.
+
+If you are analyzing this data in RStudio, you will import the data with the following command
+```{r, eval=FALSE}
+EnvoyAir_flights <- read.delim(
+        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt",
+        sep=",")
+```
+This may take a few moments as it is a large data set. The data object is called `XXX`. 
+
+Once you have access to the data set, complete all parts of the XX problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#4.
+
+Topics: CIs and tests for proportion or mean, sampling distributions 
+
+In class and on this assignment see: hw06 and hw07 from F21 class 
+For in class only: see hw05 from F21 
+
+
+
+Use either the `pnorm()` function in R or a [table of standard normal probabilities]() if you are used to using Excel. 

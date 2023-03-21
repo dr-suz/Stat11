@@ -28,7 +28,7 @@ Where $X=$ number of successes (green jelly beans) out of $n=20$ trials. The (po
 
 In class, we observed $24$ different values for $X$, i.e. $x_1, x_2, \dots, x_{24}$, which we plotted in the dot plot below: 
 
-![](./images/wk7-dot-plot.png)
+![](./images/wk7-dot-plot.png){width=4in}
 
 Out of our $24$ samples, we observed $24$ values for the number of successes. We didn't all observe the same number of green jelly beans, there was variability among our different samples (<span style="color:green">sampling variability</span>). 
 
@@ -36,7 +36,7 @@ From this, we could have calculated $24$ estimates for the model parameter, $p$:
 $$\hat{p} = \frac{\text{number of successes}}{20},$$
 and visualized these $24$ different values of $\hat{p}$ with a histogram. 
 
-![](./images/wk10-phat-hist.png)
+![](./images/wk10-phat-hist.png){width=4in}
 
 This histogram represents the <span style="color:green">sampling distribution</span> for the sample proportion of green jelly beans. If we could have repeated this exercise at least $80$ more times, we'd have a histogram that looks more symmetric and unimodal. 
 
@@ -76,7 +76,7 @@ The conditions under which we can use a Normal model to generate an interval est
 If these conditions hold, then the sampling distribution of the estimator $\hat{p}$ follows a Normal distribution with expectation $E(\hat{p}) = p$ and variance $Var(\hat{p}) =  \frac{p(1-p)}{n}$ (and standard deviation $sd(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}$).   
 
 
-![](./images/wk10-normal-prop-curve.png)
+![](./images/wk10-normal-prop-curve.png){width=4in}
 
 The <span style="color:green">standard error</span> of our estimate, $\hat{p}$, is itself an estimate for the standard deviation of $\hat{p}$. In symbols, we write 
 $$SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{\hat{p}\hat{q}}{n}}.$$
@@ -86,7 +86,7 @@ In general, we can find an $a\%$ confidence interval for reasonable values of $p
 $$\hat{p} \pm [z^*_{a} \times SE(\hat{p})],$$ 
 where $z^*_{a}$ is called a <span style="color:green">critical value</span>, which is just a $a\%$ lower quantile of a standard Normal distribution:
  
-![](./images/wk10-critical-val.png)
+![](./images/wk10-critical-val.png){width=4in}
 
 Because we are using a Normal model to describe the sampling distribution of $\hat{p}$, this procedure is often called the <span style="color:green">procedure for a one-proportion z-interval</span>. 
 
@@ -99,7 +99,7 @@ Specific language interpreting confidence intervals:
 
   > "I am $a\%$ confident that the interval from LB to UB captures the true probability of success (or the true proportion of successes)." 
   
-What this means is that, if our assumptions hold, we can guess the value of $p$ with a guaranteed level of accuracy, in the long run. 
+What this means is that, if our assumptions hold, we can guess the value of $p$ with a guaranteed level of accuracy, **in the long run**. 
 
 
 
