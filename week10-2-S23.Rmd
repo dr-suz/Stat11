@@ -44,7 +44,7 @@ The amazing part of this theorem is that the data ($x_1, x_2, \dots, x_n$) can c
 # 2. Confidence Interval for an Unknown Mean 
 
 
-![](./images/wk10-normal-mean-curve.png){width=4in}
+![](./images/wk10-normal-CLT-curve.png){width=4in}
 
 In theory, we could find an $a\%$ confidence interval for the most plausible values of $\mu$ with the formula
 $$\bar{x} \pm \left[z^*_{a} \times \frac{\sigma}{\sqrt{n}}\right],$$ 
@@ -53,14 +53,14 @@ where $z^*_{a}$ is, again, the $a\%$ lower quantile of a standard Normal distrib
 
 Fortunately, there is another really useful theorem in statistics that tells us exactly what is the sampling distribution for a linear transformation of $\bar{X}$, and this transformation is a function of the <span style="color:green">standard error</span> $SE\left(\bar{X}\right)$. Once again, the standard error is itself an estimate for the standard deviation of the sampling distribution for $\bar{X}$.
 
-In practice, we find an $a\%$ confidence interval for the most plausible values of $\mu$ with the formula
+In practice, we find an $(a\times 100)\%$ confidence interval for the most plausible values of $\mu$ with the formula
 
 
 $$\bar{x} \pm \left[t^*_{a} \times SE(\bar{x})\right],\quad (*)$$
 
 where 
 $$SE(\bar{x}) = \sqrt{\frac{s^2}{n}}$$
-and $t^*_{a}$ is a critical value representing the lower $a\%$ quantile of a different symmetric, unimodal probability distribution called the <span style="color:green">Student's t-distribution</span>. 
+and $t^*_{a}$ is a critical value representing the lower $\frac{1-a}{2}\%$ quantile of a different symmetric, unimodal probability distribution called the <span style="color:green">Student's t-distribution</span>. 
 
 ![](./images/wk10-studt.png){width=6in} 
 
@@ -97,7 +97,7 @@ Again, what this means is that, if our assumptions hold, we can guess the value 
 
 ## CI for a population proportion 
 
-**Example:** Suppose the FDA has tested a random selection of a big-brand's fish products. In their sample of $n=22$ "red snapper" packages, they found that $x = 12$ of these packages actually contained another type of fish. Find a $90\%$ confidence interval for $p=$ the proportion of this brand's red snapper packages that are mislabeled. 
+**Example:** Suppose the FDA has tested a random selection of a big-brand's fish products. In their sample of $n=22$ "red snapper" packages, they found that $x = 12$ of these packages actually contained another type of fish. Find a **$90\%$** confidence interval for $p=$ the proportion of this brand's red snapper packages that are mislabeled. 
 
 ### In R
 ```{r echo=TRUE}
@@ -112,7 +112,7 @@ prop.test(x, n, conf.level=0.90)$conf.int
 
 ## CI for a population mean 
 
-**Example:** In a random sample of $n=50$ cars manufactured by the same company, a quality control expert measures the stopping distance of each vehicle. This data in contained in the second column of the data set [cars](). Find a $96\%$ confidence interval for the average stopping distance (in ft) of these cars. 
+**Example:** In a random sample of $n=50$ cars manufactured by the same company, a quality control expert measures the stopping distance of each vehicle. This data in contained in the second column of the data set [cars](). Find a **$95\%$** confidence interval for the average stopping distance (in ft) of these cars. 
 
 
 ### In R 

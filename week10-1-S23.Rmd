@@ -82,11 +82,11 @@ The <span style="color:green">standard error</span> of our estimate, $\hat{p}$, 
 $$SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{\hat{p}\hat{q}}{n}}.$$
 Once we have this estimate for the spread of the sampling distribution of $\hat{p}$, we can make an educated guess as to what are some reasonable values for the unknown parameter, $p$. 
 
-In general, we can find an $a\%$ confidence interval for reasonable values of $p$ with the formula
+In general, we can find an $(a\times 100)\%$ confidence interval for reasonable values of $p$ with the formula
 $$\hat{p} \pm [z^*_{a} \times SE(\hat{p})],$$ 
-where $z^*_{a}$ is called a <span style="color:green">critical value</span>, which is just a $a\%$ lower quantile of a standard Normal distribution:
+where $z^*_{a}$ is called a <span style="color:green">critical value</span>, which is just a $\frac{1-a}{2}\%$ lower quantile of a standard Normal distribution:
  
-![](./images/wk10-critical-val.png){width=4in}
+![](./images/wk10-normal-crit-val.png){width=4in}
 
 Because we are using a Normal model to describe the sampling distribution of $\hat{p}$, this procedure is often called the <span style="color:green">procedure for a one-proportion z-interval</span>. 
 

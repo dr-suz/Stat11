@@ -14,7 +14,7 @@ output:
 | 3 | d  |  c |   c |
 | 4 | b  |  e | c  |
 | 5 | e  |  e | e  |
-| 6 | b  |  d | c  |
+| 6 | b or e |  d or e| c or e |
 | 7 | a  | b  | e  |
 | 8 | b  |  c | d  |
 | 9 | d  |  a | b  |
