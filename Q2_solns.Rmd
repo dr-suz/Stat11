@@ -29,6 +29,13 @@ $$\frac{25+29}{26+16+25+29+16+29}= 0.383$$
 or, equivalently, 
 
 $$\frac{\frac{25+29}{16+25+16+16+29+16+26+16+25+29+16+29}}{\frac{26+16+25+29+16+29}{16+25+16+16+29+16+26+16+25+29+16+29}}$$
+## Rubric
+
+* 1 - correct 
+
+* ... 
+
+* 0 - blank/unanswered 
 
 # 12 
 
@@ -37,6 +44,19 @@ Let $A=$ eat breakfast and $B=$ floss teeth. Then $Pr(A) = 0.57$, $Pr(B)=0.80$, 
 
 Hence, $Pr(A\text{ or }B) = Pr(A) + Pr(B) - Pr(A\text{ and }B) = 0.57 + 0.80 - 0.46 = 0.91$
 
+## Rubric
+
+* 1 - correct 
+
+* 0.9 - correct but no work shown
+
+* 0.9 - correct work, wrong answer 
+
+* ? - correct answer but incorrect work 
+
+* ... 
+
+* 0 - blank/unanswered 
 
 
 # 13 
@@ -45,6 +65,17 @@ Let $A=$ ticket for speeding and $B=$ ticket for running red light. Then $Pr(A\t
 
 Since $Pr(A \text{ and } B^C) + Pr(A \text{ and }B) = Pr(A)$, we have that $Pr(A\text{ and }B^C) = 0.12 -0.04 =0.08$.
 
+## Rubric
+
+* 1 - correct 
+
+* 0.9 - correct work, wrong answer 
+
+* ... 
+
+* ? - correct answer but incorrect work 
+
+* 0 - blank/unanswered 
 
 
 # 14 
@@ -57,17 +88,67 @@ i.e.$\frac{x}{30} = \frac{80}{120}$ meaning $x=20$, or, equivalently
 $$Pr(\text{Yes HD and Yes Mu}) = Pr(\text{Yes HD})Pr(\text{YesMu})$$
 i.e. $\frac{x}{120} = \frac{30}{120} \cdot \frac{80}{120}$ meaning $x=20$. 
 
+## Rubric
+
+* 1 - correct 
+
+* ... 
+
+* correct answer, unclear work 
+
+* correct answer, incorrect work 
+
+* incorrect and no work shown 
+
+* answer incomplete 
+
+* 0 - blank/unanswered 
+
+
 # 15 
 
 * $E(X) = 3(0.1) + 4(0.25) + 5(0.55) + 6(0.1) = 4.65$
 
 * $Var(X) = (3-E(X))^2(0.1) + (4-E(X))^2(0.25) + (5-E(X))^2(0.55) + (6-E(X))^2(0.1) = 0.6284$
 
+* question actually meant that the distribution is for 1 hour shifts and the question asks about 8hr days... so really need to compute $E(8X)$ and $Var(8X)$.... but not grading this way b/c I asked specifically for $E(X)$ and $Var(X)$ 
+
+
+## Rubric
+
+* 0.1 - found $E(8X)$ and $Var(8X)$  
+
+* ... 
+
+* 0.5 - correct expectation 
+
+* ? - correct expectation but no work 
+
+* 0.5 - correct variance 
+
+* ? - correct variance but no work 
+
+* 0.4 - correct variance given incorrect expectation
+
+* ? - answer attempted but incorrect
+
+* 0 - blank/unanswered 
+
+
 # 16 
 
 $X \sim N(5, 2^2)$ so $Pr(X \leq 3.5) = Pr\left(Z \leq \frac{3.5-5}{2} \right) = Pr(Z \leq -0.75) = 0.227$
 
 (give most credit for work, little credit for correct reading of the Z table (since this involves some calculation work))
+
+## Rubric
+
+* 1 - correct 
+
+* ... 
+
+* 0 - blank/unanswered 
+
 
 # 17 
 
@@ -77,8 +158,25 @@ $X \sim N(5, 2^2)$ so $Pr(X \leq 3.5) = Pr\left(Z \leq \frac{3.5-5}{2} \right) =
 
 * define, in words, $p$ 
 
+## Rubric
+
+* 1 - correct 
+
+* ... 
+
+* 0 - blank/unanswered 
+
+
 # 18 
 
 $X \sim Binom(5, 0.65)$ and we want to find $Pr(X \leq 2) = Pr(X=0) + Pr(X=1) + Pr(X=2) =0.235$
 
 must display correct usage of binomial table 
+
+## Rubric
+
+* 1 - correct 
+
+* ... 
+
+* 0 - blank/unanswered 
