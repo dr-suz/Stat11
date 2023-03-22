@@ -47,7 +47,7 @@ The amazing part of this theorem is that the data ($x_1, x_2, \dots, x_n$) can c
 ![](./images/wk10-normal-mean-curve.png){width=4in}
 
 In theory, we could find an $a\%$ confidence interval for the most plausible values of $\mu$ with the formula
-$$\bar{x} \pm \left[z^*_{a} \times \frac{\sigma}{n}\right],$$ 
+$$\bar{x} \pm \left[z^*_{a} \times \frac{\sigma}{\sqrt{n}}\right],$$ 
 where $z^*_{a}$ is, again, the $a\%$ lower quantile of a standard Normal distribution. In practice however, we are unlikely to know what the standard deviation of the population, $\sigma$, is and so, just as before, we must come up with an estimate for the spread of the sampling distribution of $\bar{x}$. 
 
 

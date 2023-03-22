@@ -22,6 +22,10 @@ output:
 
 ***
 
+# Instructions given about showing work 
+
+"to be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning" 
+
 # 11 
 
 $$\frac{25+29}{26+16+25+29+16+29}= 0.383$$
@@ -116,7 +120,7 @@ i.e. $\frac{x}{120} = \frac{30}{120} \cdot \frac{80}{120}$ meaning $x=20$.
 
 ## Rubric
 
-* 0.1 - found $E(8X)$ and $Var(8X)$  
+* 0.1 - found $E(8X)$ and $Var(8X)$  (not necessary but EC perhaps?) 
 
 * ... 
 
@@ -129,6 +133,8 @@ i.e. $\frac{x}{120} = \frac{30}{120} \cdot \frac{80}{120}$ meaning $x=20$.
 * ? - correct variance but no work 
 
 * 0.4 - correct variance given incorrect expectation
+
+* ? - correct work for variance but incorrect answer
 
 * ? - answer attempted but incorrect
 
@@ -147,6 +153,10 @@ $X \sim N(5, 2^2)$ so $Pr(X \leq 3.5) = Pr\left(Z \leq \frac{3.5-5}{2} \right) =
 
 * ... 
 
+* 0.9 - correct z-score
+
+* 0.8 - correct z-score magnitude 
+
 * 0 - blank/unanswered 
 
 
@@ -160,9 +170,13 @@ $X \sim N(5, 2^2)$ so $Pr(X \leq 3.5) = Pr\left(Z \leq \frac{3.5-5}{2} \right) =
 
 ## Rubric
 
-* 1 - correct 
+* 0.45 - defined a valid probability of success for p
 
-* ... 
+* 0.45 - defined what follows the binomial distribution
+
+* ? - incomplete definition of the variable that follows the binomial distribution
+
+* 0.1 - defined number of trials/sample size
 
 * 0 - blank/unanswered 
 
