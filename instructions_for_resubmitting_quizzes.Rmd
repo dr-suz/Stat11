@@ -1,0 +1,36 @@
+---
+title: "Instructions for Re-submitting Quizzes"
+subtitle: "Stat 11 with Prof Suzy" 
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+
+
+# Overview 
+
+If you wish, you may re-do your answers for Quiz 1 and/or Quiz 2. Due to time limitations, no quiz re-dos will be eligible for partial credit on any of the fill-in-the-blank or free response questions. All questions on the re-do will be graded as correct or incorrect. While you are permitted to work with your classmates on your re-dos, please be aware that there are more than one version of both quizzes. Because of this, it is important that you make sure you submit a re-do for **your** version of the original quizzes.
+
+You will not be able to submit a re-do of Quiz 3 because of time constraints. However, it is my hope that in revisiting the first two quizzes, you will be better prepared for the final test on May 5th. 
+
+# Instructions 
+
+* Write the question number and your answer on a clean sheet of paper. Note you must re-do all questions, including ones that you got correct originally. 
+
+* For the multiple choice questions, write each question number and the letter of your answer on a new line. Capital letters are easier for me to read. 
+
+* For the fill-in-the-blank and free response questions, you do not need to rewrite the question. You will need to show all of your work and/or explain your reasoning for every question. Then you will circle your final answer. 
+
+* Once you've finished your re-do(s), you should scan your answer sheets to create separate PDF files for each quiz. (You can scan papers using the app called CamScanner on your smartphone.) Make sure the PDF files are legible. Then, upload the PDFs to the corresponding submission link(s) on Moodle. 
+
+* Re-dos must be submitted by May 5, 2023. 
+
+
