@@ -19,29 +19,59 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-
 # Recap and corrections
+
+Once you have finished the assigned reading for this week, please take a look at this [reference sheet for confidence intervals](https://profsuzy.github.io/Stat11/Cheat-sheet-4.html). It has been uploaded to our Moodle page. 
 
 ## CIs for a population proportion/probability of success
 
 ![](./images/wk10-normal-crit-val.png){width=4in}
 
+### Find a critical value for a 95% CI in R 
+
+```{r echo=TRUE, eval = FALSE}
+qnorm((1-0.95)/2, 0, 1)
+```
+
+### Find a critical value for a 95% CI in Excel 
+
+```{r echo=TRUE, eval = FALSE}
+NORM.INV((1-0.95)/2, 0, 1)
+```
+
+### Find a critical value for a 95% CI from a table of probabilities 
+
+Using a [Standard Normal Z Table](https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf) we first ...
 
 ## CIs for a population mean/expectation
 
 ![](./images/wk10-studt.png){width=6in} 
 
-# 1. 
+### Find a critical value for a 95% CI in R 
+
+```{r echo=TRUE, eval = FALSE}
+qt((1-0.95)/2, n-1)
+```
+
+### Find a critical value for a 95% CI in Excel 
+
+```{r echo=TRUE, eval = FALSE}
+T.INV((1-0.95)/2, n-1)
+```
+
+### Find a critical value for a 95% CI from a table of probabilities 
+
+Using a [t-distribution table](https://profsuzy.github.io/Stat11/) we first ...
+
+***
+
+# 1. Data Introduction 
 
 
-# 2. 
+# 2. Analysis Goal  
 
-practice estimating sample sizes, pratice with margin of error, certainty and precision 
-
-maybe also practice with the CLT 
+practice estimating sample sizes, practice with<span style="color:green"> margin of error</span>, certainty and precision 
 
 
-# 3. 
+
+# 3. Summary of Results  
