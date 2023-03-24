@@ -1,0 +1,45 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: 'Week 11: Practicing with Hypothesis Tests'
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+\vspace{1cm}
+**Name:** _____________________________________
+
+# Instructions:
+
+There are five questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+
+
+### 1.  
+\vspace{3cm}
+
+### 2.  
+
+\vspace{3cm}
+
+### 3.  
+
+
+
+### 4.  
+
+\vspace{3cm}
+
+
+### 5.
+
+\vspace{3cm}
