@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 10"
-subtitle: "Title" 
+subtitle: "More on Critical Values and In-class Worksheet" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -41,7 +41,8 @@ NORM.INV((1-0.95)/2, 0, 1)
 
 ### Find a critical value for a 95% CI from a table of probabilities 
 
-Using a [Standard Normal Z Table](https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf) we first ...
+Using a [Standard Normal Z Table](https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf) we first we first must set our confidence level to some value between $0$ and $1$, let's call this value $a$. Then, we evaluate $\frac{1-a}{2}$. This is the probability that we must find on the inside of the Z table. When we've found the value that is closest to $\frac{1-a}{2}$, we find the corresponding critical value by following the row and column margins. 
+
 
 ## CIs for a population mean/expectation
 
@@ -61,13 +62,15 @@ T.INV((1-0.95)/2, n-1)
 
 ### Find a critical value for a 95% CI from a table of probabilities 
 
-Using a [t-distribution table](https://profsuzy.github.io/Stat11/) we first ...
+Using a [t-distribution table](https://profsuzy.github.io/Stat11/t-distribution-table.pdf) we first must set our confidence level to some value between $0$ and $1$, let's call this value $a$. This is the probability (labeled as "A" in this table) that we must find at the top row of the t-distribution table. Second, we must find the degrees of freedom for our specific problem, i.e. $n-1$, along the first column. We then follow the row and collumn to find the corresponding critical t-value in the middle of the table. 
 
 ***
 
 # 1. Data Introduction 
 
 The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/) is related to two different data sets. The first data set consists of adults between ages $25$ and $30$ who were asked if they had graduated from high school. The second data set we will work with is data from experiments in 1882 that attempted to measure the speed of light.
+
+![](./images/wk10-graduation.png){height=3in} ![](./images/wk10-speed-of-light.png){height=3in}
 
 
 # 2. Analysis Goal  
