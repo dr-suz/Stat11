@@ -68,7 +68,7 @@ Using a [t-distribution table](https://profsuzy.github.io/Stat11/t-distribution-
 
 # 1. Data Introduction 
 
-The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/) is related to two different data sets. The first data set consists of adults between ages $25$ and $30$ who were asked if they had graduated from high school. The second data set we will work with is data from experiments in 1882 that attempted to measure the speed of light.
+The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/wk10-wksheet.html) is related to two different data sets. The first data set consists of adults between ages $25$ and $30$ who were asked if they had graduated from high school. The second data set we will work with is data from experiments in 1882 that attempted to measure the speed of light.
 
 ![](./images/wk10-graduation.png){height=3in} ![](./images/wk10-speed-of-light.png){height=3in}
 
