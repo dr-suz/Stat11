@@ -3,21 +3,9 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: 'Week 10: Experiments with Confidence Intervals'
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
-<br>
-**Name:** _____________________________________
-
-<br>
-**Instructions:** There are X questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
-
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
-
-<br>
-<br>
-<br>
-
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
 library(tidyverse)
@@ -25,39 +13,47 @@ knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown
 knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
 ```
 
+\vspace{1cm}
+**Name:** _____________________________________
 
-# 1.   
+# Instructions:
 
-<br>
-<br>
-<br>
+There are five questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
 
-# 2.  
-
-
-<br>
-<br>
-<br>
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
 
 
-# 3. 
+# Part 1: Graduation 
 
-<br>
-<br>
-<br>
+## It’s believed that as many as 25% of adults over $50$ never graduated from high school. We wish to see if this percentage is the same among the $25$ to $30$ age group.
+
+### 1. How many of this younger age group must we survey in order to estimate the proportion of non-grads to within $6\%$ with $90\%$ confidence?  
+
+\vspace{3cm}
+
+### 2. Suppose we want to cut the margin of error to $4\%$. What’s the necessary sample size?
+
+\vspace{3cm}
+
+### 3. What sample size would allow us to increase our confidence level to $95\%$ while reducing the margin of error to only $2\%$?
 
 
-# 4.  
 
-<br>
-<br>
-<br>
+\pagebreak 
+
+# Part 2: Speed of light 
+
+## In 1882, Michelson measured the speed of light (usually denoted c as in Einstein’s famous equation $E=mc^2$). His values are in $km/sec$ and have $299,000$ subtracted from them. He reported the results of $23$ trials with a mean of $756.22$ and a standard deviation of $107.12$. 
+
+### 4.  Find a 95% confidence interval for the true speed of light from these statistics and state in words what this interval means. Keep in mind that the speed of light is a physical constant that, as far as we know, has a value that is true throughout the universe.
+
+\vspace{3cm}
 
 
-# 5. 
+### 5. After his first attempt to determine the speed of light, Michelson conducted an “improved” experiment. In 1897, he reported results of $100$ trials with a mean of $852.4$ and a standard deviation of $79.0$. First, find the standard error of the mean for these data. Then, without computing it, determine how you would you expect a $95\%$ confidence interval for the second experiment to differ from the confidence interval for the first. Note at least three specific reasons why they might differ, and indicate the ways in which these differences would change the interval.
 
-<br>
-<br>
-<br>
+\vspace{3cm}
+
+### Bonus question: According to Stephen M. Stigler (The Annals of Statistics 5:4, 1075 [1977]), the true speed of light is $299,710.5$ $km/sec$, corresponding to a value of $710.5$ for Michelson’s 1897 measurements. What does this indicate about Michelson’s two experiments? Find a new confidence interval and explain using your confidence interval.
 
 
