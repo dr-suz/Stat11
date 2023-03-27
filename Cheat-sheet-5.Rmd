@@ -1,0 +1,78 @@
+---
+title: "Stat 11 Study Guides"
+subtitle: "Definitions and Terms to Know: Hypothesis Tests" 
+author: "Prof. Suzy Thornton"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+
+Hypothesis - A supposition; a proposition or principle which is supposed or taken for granted, in order to draw a conclusion or inference for proof of the point in question; something not proved, but assumed for the purpose of argument. (Webster’s Unabridged Dictionary, 1913)
+
+Null hypothesis – hypothesis specifies a parameter and a (null) value for that parameter, abbreviated H_0 (pronounced “H” – “not”). 
+	Hypothesized parameter value: p_0 or μ_0
+
+Alternative hypothesis – specifies a range of plausible values for the parameter should we reject the null.  Sometimes abbreviated as H_A or H_1 (pronounced “H” – “A” or “H” – “One”). The alternative hypothesis can be one- or two-sided but this must be determined for each problem separately.  
+ 
+Test Statistic (abbreviated T.S.) There are many different kinds of test statistics but the ones we will be using rely on the CLT and therefore assume the test statistic follows a Normal (or Student’s t) distribution. Such test statistics typically take this form:
+
+$$T.S. = \frac{}{}$$
+
+
+Significance level α∈(0,1) is the chance that out of many (hypothetical) repeated experiments, we make a Type I error my mistake. This is really just another way of expressing our confidence level:
+
+$$1 - \text{confidence level} = \text{significance level}$$ 
+
+Remember, that the confidence level (and hence the significance level) has to do with the idea of repeating a bunch of hypothetical experiments again and again. Note that you must decide what your significance level (or confidence level) is before you go through an calculate a CI or perform a hypothesis test. Your statistical conclusions are not valid if you go back and change this afterwards. 
+
+P-value – is the probability of the T.S. we observed or a larger/smaller/more extreme value occurring, given that the null hypothesis is true. A p-value is the estimated probability of observing a statistic value at least as far from the (null) hypothesized value as the one we have actually observed. 
+
+* A small p-value (relative to α) indicates that the statistic we have observed would be unlikely were the null hypothesis true. That leads us to doubt the null. 
+
+* A large p-value (relative to α) just tells us that we have insufficient evidence to doubt the null hypothesis. This does NOT prove the null hypothesis to be true.
+
+Type I error – the probability of a false positive, i.e. the probability of incorrectly rejecting the null hypothesis.
+
+Type II error – the probability of a false negative; i.e. the probability of incorrectly failing to reject the null hypothesis.
+
+Power – In contrast to the significance level of a hypothesis test, the power of a test is the probability that we correctly reject a false null hypothesis (out of many repeated, hypothetical experiments).
+
+Effect size – There are many uses of this phrase in applied statistics. As defined in your textbook however, this is the actual difference between the null hypothesis value of your parameter and the actual true value of the parameter. 
+
+Statistically significant result – This phrase is reserved for reporting that we observed a p-value that is smaller than our pre-determined significance level in a hypothesis test. 
+
+Hypothesis test assumption: The data was collected without bias and each observation is independent of the others and we can apply the CLT. 
+
+When to use hypothesis tests: When we have some value for the population parameter in mind and we want to find evidence that this value is incorrect. A hypothesis test can help us make a yes/no decision about the plausibility of the value of a parameter.
+
+
+# Four Steps for Any Hypothesis Test
+
+(Note: Anywhere you see <>’s you should replace the inside with problem-specific words or symbols.) 
+
+1. Define the null and alternative hypotheses in the context of the problem.
+
+$$H_0:\text{<parameter>} = <\text{hypothesized value}>\quad  \text{ and }\quad H_A: <\text{parameter}> \neq <\text{hypothesized value}> \\ \text{OR}\\
+H_0:<\text{parameter}> = <\text{hypothesized value}>\quad \text{ and }\quad  H_A: <\text{parameter}> > <\text{hypothesized value}>\\ \text{OR}\\
+H_0:<\text{parameter}> = <\text{hypothesized value}>\quad  \text{ and }\quad  H_A: <\text{parameter}> < <\text{hypothesized value}>$$
+
+2. Calculate the test statistic and find its distribution under the null hypothesis. That is, find
+$$T.S. \sim W$$
+where $W$ is typically 
+
+* a Normal random variable with mean p_0 and variance (p_0 (1-p_0))/n; or 
+
+* a Normal random variable with mean μ_0  and variance σ^2/n (if σ^2 is known); or  
+
+* a Student’s-t distributed random variable (with n-1 degrees of freedom). 
+
+3. Calculate the p-value for the test statistic in part 2 using statistical software. 
+
+4. State the full conclusion of your test. Do you fail to reject the null hypothesis or do you have enough evidence to reject the null? 
