@@ -19,30 +19,37 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-
 
 # 1. Complete Week 10 worksheet 
 
-mention what to do if don't have historical info for proportions (use $\hat{p}=0.5$)
+We are going to spend the majority of class today finishing up the worksheet on confidence intervals from last week. Please find your group mates and move your stuff to sit together for the remainder of class. We will quickly go over Problem 1 once more as a class. Then you will have $10$ minutes to complete Problems 2 and 3 with your group mates. 
+
+After this, we'll go over Problem 4 together as a class and then you'll have another $7$ minutes to finish Problem 5 with your group. If your group finishes early, please move on to the Bonus Problem. 
+
 
 # 2. Introduce hypothesis tests 
 
-Show new reference sheet 
+There is a new [reference sheet for hypothesis tests](https://profsuzy.github.io/Stat11/Cheat-sheet-5.html) uploaded on Moodle. Please take a look over this document as you read along with the assigned chapters for this week. 
 
 $$H_0: \text{null hypothesis} \quad H_A: \text{alternative hypothesis}$$ 
-$H_0$ specifies the entire sampling distribution of our sample estimate! 
+* $H_0$ specifies the entire sampling distribution of our sample estimate! There are different types of $H_A$. 
 
-Different types of $H_A$. Still choose you confidence level! The value $(1-a)$ is called the <span style="color:green">significance</span> level. Statistical significance is not the same thing as colloquial or practical significance. 
+* You still get to choose your own confidence level ($a$)! The value $(1-a)$ is called the <span style="color:green">significance level</span> of your hypothesis test. 
+
+* Statistical significance is not the same thing as colloquial or practical significance. 
+
+* The assumptions for hypothesis tests are the same as the assumptions for CIs. 
+
+* We still need to use the standard error for tests about population means but, unlike in CIs, we actually have the standard deviation (and don't need to use the standard error) for tests of population proportions.
+
+* The output of a hypothesis test is called a $p-$value. This is a conditional probability, the probability of the $\hat{p}$ or $\bar{x}$ value from you data or something even more rare occurring based on the sampling distribution of your estimator conditioned upon the assumption that $H_0$ is true and you actually know the exact sampling distribution. 
 
 
-Output of a test is called a $p-$value. This is a conditional probability, the probability of the $\hat{p}$ or $\bar{x}$ value from you data or something even more rare occurring based on the sampling distribution of your estimator conditioned upon the assumption that $H_0$ is true and you actually know the exact sampling distribution. 
-
-Assumptions - same as in CIs 
-
-standard error (still for tests about population means) but actually have standard deviation for tests of population proportions
 
 
+# 3. Announcements 
+
+* GHW #4 will be posted today and will be due next Wednesday, the 5th. 
+
+* Your final project proposal is due by the end of the day this Friday. 
 

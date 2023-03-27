@@ -27,7 +27,7 @@ header-includes:
 
   * Population variance: $\sigma^2$
 
-  *Population standard deviation: $\sigma$
+  * Population standard deviation: $\sigma$
 
 
 **Sample estimate** – these are values that approximate the population parameters, we can view them as random variables and consider their sampling distributions, or, once we observe a data set, we can plug in the data and get a point estimate which is an actual numerical guess
