@@ -1,15 +1,37 @@
 ---
 title: "Group Homework 4"
 author: "STAT011-S23"
-date: 'Due: 3/31/23'
+date: 'Due: 4/5/23'
 output:
+  pdf_document: default
   html_document: default
 ---
 
 # Introduction and Purpose 
 
-The data set you will analyse in this homework..... The purpose of this assignment is ....data set consisting of $X$ variables and $X$ observations. 
+The data set you will analyse in this homework gives some characteristics of $n=1414$ young female patients between the ages of $11$ to $26$ who came to clinics of Johns Hopkins Medical Institutions between $2006$ and $2008$ to begin the three-shot regimen of vaccinations with the anti-human papillomavirus (HPV) medication Gardasil. There are $10$ variables in this data set, $8$ of which are categorical.    
 
+The purpose of this assignment is to develop your ability to create confidence intervals and conduct hypotheses test with real data. Each question requires you to assess the necessary assumptions before reporting your result. The $10$ variable definitions are provided below for your reference. 
+
+1. Age = the patient's age in years
+
+2. AgeGroup = the age group in which the patient falls (0 = 11-17 years, 1 = 18-26 years)
+
+3. Race = the patient's race (0 = White, 1 = Black, 2 = Hispanic, 3 = Other/unknown)
+
+4. Shots = the number of shots that the patients completed during a period of 12 months from the time of the first shot
+
+5. Completed = did the patient complete the three-shot regimen within the recommended period of 12 months (0 = no, 1 = yes)
+
+6. InsuranceType = the type of insurance that the patient had (0 = no medical assistance, 1 = private payer [Blue Cross Blue Shield, Aetna, Cigna, United, Commercial, CareFirst], 2 = hospital based [EHF], 3 = military [USFHP, Tricare, MA])
+
+7. MedAssist = did the patient have some type of medical assistance (0 = no, 1 = yes)
+
+8. Location = the clinic that the patient attended (1 = Odenton, 2 = White Marsh, 3 = Johns Hopkins Outpatient Center, 4 = Bayview)
+
+9. LocationType = was the clinic in a suburban or an urban location (0 = suburban, 1 = urban)
+
+10. PracticeType = the type of practice that the patient visited (0 = pediatric, 1 = family practice, 2 = OB-GYN)
 
 # Required Tech 
 
@@ -41,89 +63,54 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 
 # Instructions
 
-If you are analyzing this data in Excel you first need to [download the data set for HW 4](https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `XXX.csv`. This may take a few moments as it is a large data set.
+If you are analyzing this data in Excel you first need to [download the data set for HW 4](https://github.com/ProfSuzy/Stat11/blob/main/Data/gardasil_data.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `gardasil.csv`. 
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
-EnvoyAir_flights <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt",
+gardasil <- read.delim(
+        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt",
         sep=",")
 ```
-This may take a few moments as it is a large data set. The data object is called `XXX`. 
+The data object is called `gardasil`. 
 
-Once you have access to the data set, complete all parts of the XX problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#4.
-
-Topics: CIs and tests for proportion or mean, sampling distributions 
-
-In class and on this assignment see: hw06 and hw07 from F21 class 
-For in class only: see hw05 from F21 
+Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#4.
 
 
 
-Use either the `pnorm()` function in R or a [table of standard normal probabilities]() if you are used to using Excel. 
 
 # Problem 1 
 
-Direct mail advertisers send junk mail to thousands of potential customers in the hope that some will buy the company's produce. The response rate is usually quite low. Suppose a company wants to determine what the response rate is for a new flyer. They send the flyer to $1000$ people randomly selected from their mailing list of over $200,000$ people. They get orders from $123$ of the $1000$ random recipients.
+Consider the mean age of $11$ to $26$ year old female patients who visited the clinic because they were interested in getting the HPV vaccine. 
 
+(a) Do do think that the two conditions necessary for the Central Limit Theorem to hold are reasonable in this example? Why/why not? 
 
-Find a $93\%$ confidence interval for the true response rate for the new flyer and explain what your confidence interval means in context. 
-
-
+(b) Regardless of your answer to (a), find an $85\%$ CI for the mean age of these patients. 
 
 
 # Problem 2 
 
-State police believe that $70\%$ of the drivers traveling on I-95 exceed the speed limit. They plan to set up a radar trap and check the speeds of $80$ cars. 
-
-(a) Do do think that the two conditions necessary for the CLT to hold are reasonable in this example? Why/why not? 
-
-(b) A newspaper reports that $80\%$ of the cars traveling on I-95 in the greater Philadelphia region are speeding. The article adds that this data is based on a random sample of $30$ cars traveling on a regular work day and that the margin of error was set at $3\%$. What level of confidence did the investigators use in their survey? 
-
+Find a $90\%$ confidence interval for $p=$ the probability that an $11$ to $26$ year old female will complete all three required shots. Interpret this interval within the context of the problem. 
 
 
 # Probleem 3 
 
-
-
-
+Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $0.1$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
 
 
 # Problem 4 
 
-Ayrshire cows produce, on average, $47$ lbs of milk per day with a standard deviation of $6$ lbs. Jersey cows on the other hand produce an average of $43$ lbs per day with a standard deviation of $5$ lbs. Assume that Normal models describe the milk production of these types of cows and use this information to answer the following questions. 
+Conduct a hypothesis test to determine if the average number of shots per patient is three or less than three. Choose your own confidence (and significance) level.
 
+(a) State the null and alternative hypotheses. 
 
-**(a)** Find the probability that a randomly selected Ayrshire cow produces more milk than a randomly selected Jersey cow.
+(b) Assess the necessary assumptions and conditions. 
 
-
-**(b)** Suppose a farmer has $20$ Jersey cows. Find the probability that the average production for this small herd exceeds $45$ lbs of milk a day. 
-
+(c) Regardless of your assessment in part (b), conduct the test in part (a) and state the p-value and your conclusion within the context of the problem. 
 
 
 
 # Problem 5 
 
-A newspaper reports that the governor's approval rating stands at $65\%$. The article adds that the poll is based on a random sample of $972$ adults and has a margin of error of $2.5\%$. What level of confidence did the pollsters use? 
-
-
-
-# Car and fuel economy 
-
- Find and interpret a 95% confidence interval for the gas mileage of 2010 vehicles. Select the correct choice below and fill in the answer boxes within your choice.
- 
-
-# wax for skiing 
-
-
-A company is developing a new high performance wax for cross country ski racing. In order to justify the price marketing wants, the wax needs to be very fast. Specifically, the mean time to finish their standard test course should be less than  seconds for a former Olympic champion. To test it, the champion will ski the course 8 times. The champion's times (selected at random) are XXXXXX seconds to complete the test course. Should they market the wax? Assume the assumptions and conditions for appropriate hypothesis testing are met for the sample. Use 0.05 as the P-value cutoff level.
-
-
-# Relevant HWs 
-
-* HW 8 Spring 20
-
-* HW 9 Spring 20 
-
-
-# Idea: Use gardasil data from Stat 21 Data folder 
+Based on this survey, conduct a $0.01$ significance level hypothesis test of 
+$$H_0: p=0.5 \quad \text{vs}\quad H_{A}: p< 0.5$$
+where $p=$ the probability that an $11$ to $26$ year old female who is interested in protection against HPV does not have any medical assistance. State the p-value and your conclusion within the context of the problem. 
