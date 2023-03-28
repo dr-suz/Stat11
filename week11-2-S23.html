@@ -12,7 +12,7 @@
 <meta name="author" content="Prof. Suzy Thornton" />
 
 
-<title>Stat 11 Study Guides</title>
+<title>Stat 11 Week 11</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1620,142 +1620,189 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Stat 11 Study Guides</h1>
-<h3 class="subtitle">Definitions and Terms to Know: Hypothesis
-Tests</h3>
+<h1 class="title toc-ignore">Stat 11 Week 11</h1>
+<h3 class="subtitle">Hypothesis Tests</h3>
 <h4 class="author">Prof. Suzy Thornton</h4>
+<h4 class="date">Spring 2023</h4>
 
 </div>
 
 
-<div id="overview-of-hypothesis-tests" class="section level1">
-<h1>Overview of Hypothesis Tests</h1>
-<p><strong>Hypothesis</strong> - A supposition; a proposition or
-principle which is supposed or taken for granted, in order to draw a
-conclusion or inference for proof of the point in question; something
-not proved, but assumed for the purpose of argument. (Webster’s
-Unabridged Dictionary, 1913)</p>
-<p><strong>Null hypothesis</strong> – hypothesis specifies a parameter
-and a (null) value for that parameter, abbreviated <span class="math inline">\(H_0\)</span> (pronounced “H” – “not”, as in,
-“there’s not anything interesting here”).</p>
+<div id="introducing-hypothesis-tests" class="section level1">
+<h1>1. Introducing Hypothesis Tests</h1>
+<p>There is a new <a href="https://profsuzy.github.io/Stat11/Cheat-sheet-5.html">reference
+sheet for hypothesis tests</a> uploaded on Moodle. Please take a look
+over this document as you read along with the assigned chapters for this
+week.</p>
+<p><span class="math display">\[H_0: \text{null hypothesis} \quad H_A:
+\text{alternative hypothesis}\]</span> * <span class="math inline">\(H_0\)</span> specifies the entire sampling
+distribution of our sample estimate! There are different types of <span class="math inline">\(H_A\)</span>.</p>
 <ul>
-<li>Hypothesized parameter value: <span class="math inline">\(p_0\)</span> or <span class="math inline">\(\mu_0\)</span></li>
+<li><p>You still get to choose your own confidence level (<span class="math inline">\(a\)</span>)! The value <span class="math inline">\((1-a)\)</span> is called the <span style="color:green">significance level</span> of your hypothesis
+test.</p></li>
+<li><p>Statistical significance is not the same thing as colloquial or
+practical significance.</p></li>
+<li><p>The assumptions for hypothesis tests are the same as the
+assumptions for CIs.</p></li>
+<li><p>We still need to use the standard error for tests about
+population means but, unlike in CIs, we actually have the standard
+deviation (and don’t need to use the standard error) for tests of
+population proportions.</p></li>
+<li><p>The output of a hypothesis test is called a <span class="math inline">\(p-\)</span>value. This is a conditional
+probability, the probability of the <span class="math inline">\(\hat{p}\)</span> or <span class="math inline">\(\bar{x}\)</span> value from you data or something
+even more rare occurring based on the sampling distribution of your
+estimator conditioned upon the assumption that <span class="math inline">\(H_0\)</span> is true and you actually know the
+exact sampling distribution.</p></li>
 </ul>
-<p><strong>Alternative hypothesis</strong> – specifies a range of
-plausible values for the parameter should we reject the null. Sometimes
-abbreviated as <span class="math inline">\(H_A\)</span> or <span class="math inline">\(H_1\)</span> (pronounced “H” – “A” or “H” –
-“One”). The alternative hypothesis can be one- or two-sided but this
-must be determined for each problem separately.</p>
-<p><strong>Test Statistic</strong> (abbreviated T.S.) - There are many
-different kinds of test statistics but the ones we will be using rely on
-the CLT and therefore assume the test statistic follows a Normal (or
-Student’s t) distribution. Such test statistics typically take this
-form:</p>
-<p><span class="math display">\[T.S. = \frac{\text{&lt;estimate&gt;} -
-\text{&lt;hypothesized parameter
-value&gt;}}{SE(\text{&lt;estimate&gt;})} \quad\text{OR}\quad
-T.S. = \frac{\text{&lt;estimate&gt;} - \text{&lt;hypothesized parameter
-value&gt;}}{st.dev(\text{&lt;estimate&gt;})} .\]</span></p>
-<p><strong>Significance level</strong> is the chance that out of many
-(typically hypothetical) repeated experiments, we make a Type I error by
-mistake. This is really just another way of expressing our confidence
-level:</p>
-<p><span class="math display">\[1 - \text{confidence level} =
-\text{significance level}.\]</span></p>
-<p>Remember, that the confidence level (and hence the significance
-level) has to do with the idea of repeating a bunch of hypothetical
-experiments again and again. You must decide what your significance
-level (or confidence level) is before you go through an calculate a CI
-or perform a hypothesis test. Your statistical conclusions are not valid
-if you go back and change this afterwards.</p>
-<p><strong>Type I error</strong> – the probability of a false positive,
-i.e. the probability of incorrectly rejecting the null hypothesis.</p>
-<p><strong>Type II error</strong> – the probability of a false negative;
-i.e. the probability of incorrectly failing to reject the null
-hypothesis.</p>
-<p><strong>Power</strong> – In contrast to the significance level of a
-hypothesis test, the power of a test is the probability that we
-correctly reject a false null hypothesis (out of many repeated,
-hypothetical experiments).</p>
-<p><strong>P-value</strong> – is the probability of the T.S. we observed
-or a larger/smaller/more extreme value occurring, given that the null
-hypothesis is true. A p-value is the estimated probability of observing
-a statistic value at least as far from the (null) hypothesized value as
-the one we have actually observed.</p>
-<ul>
-<li><p>A small p-value (relative to your significance level) indicates
-that the statistic we have observed would be unlikely were the null
-hypothesis true. That leads us to doubt the null.</p></li>
-<li><p>A large p-value (relative to your significance level) just tells
-us that we have insufficient evidence to doubt the null hypothesis. This
-does NOT prove the null hypothesis to be true.</p></li>
-</ul>
-<p><strong>Effect size</strong> – There are many uses of this phrase in
-applied statistics. As defined in your textbook however, this is the
-actual difference between the null hypothesis value of your parameter
-and the actual true value of the parameter.</p>
-<p><strong>Statistically significant result</strong> – This phrase is
-reserved for reporting that we observed a p-value that is smaller than
-our pre-determined significance level in a hypothesis test. An
-alternative phrase is <em>statistically detectable</em>. It is very
-important to keep in mind that a statistically significant/detectable
-result is NOT the same thing as a <em>practically significant</em>
-result.</p>
 </div>
-<div id="hypothesis-test-assumption" class="section level1">
-<h1>Hypothesis test assumption</h1>
-<p>The data was collected without bias and each observation is
-independent of the others and we can apply the CLT.</p>
+<div id="one-proportion-z-test" class="section level1">
+<h1>2. One proportion Z test</h1>
+<p>Recall that for large enough sample sizes, the sampling distribution
+of <span class="math inline">\(\hat{p}\)</span> follows a Normal
+distribution with mean <span class="math inline">\(p\)</span> and
+variance <span class="math inline">\(\frac{p(1-p)}{n}\)</span>:</p>
+<p>When we wanted to find a CI for the center of this sampling
+distribution, <span class="math inline">\(p\)</span>, we had to estimate
+the sampling variance using the standard error of <span class="math inline">\(\hat{p}\)</span>: <span class="math display">\[SE(\hat{p}) =
+\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.\]</span></p>
+<p>If we are conducting a hypothesis test for a particular value of
+<span class="math inline">\(p\)</span> however, then the null
+hypothesis</p>
+<p><span class="math display">\[H_0: p = p_0\]</span> specifies not only
+the mean of the sampling distribution of <span class="math inline">\(\hat{p}\)</span>, but also the variance!
+Regardless of the direction of the alternative hypothesis, the p-value
+for a particular hypothesis test is always calculated based upon the
+assumption that the value of the parameter in <span class="math inline">\(H_0\)</span> is actually correct. Once we have
+defined <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>, we must calculate the test statistic
+for a one proportion Z test:</p>
+<p><span class="math display">\[T.S. = \frac{\hat{p} -
+p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}.\]</span> If <span class="math inline">\(H_0\)</span> is correct then the center of the
+sampling distribution of <span class="math inline">\(\hat{p}\)</span> is
+<span class="math inline">\(p_0\)</span> and the variance is <span class="math inline">\(\frac{p_0(1-p_0)}{n}\)</span>. In this case, the
+test statistic above is just a standardized version of the Normal random
+variable <span class="math inline">\(\hat{p}\)</span> and therefore
+<span class="math inline">\(T.S. \sim N(0,1)\)</span>!</p>
+<p>Now, we take note of the direction of <span class="math inline">\(H_A\)</span>, say for example <span class="math inline">\(H_A: p &lt; p_0\)</span>, and compute the p-value
+associated with our observed test statistic by finding <span class="math display">\[Pr\left(Z &lt; T.S._{obs} \right).\]</span> If
+this probability is smaller than <span class="math inline">\((1-\text{confidence level})\)</span>, this
+indicates that the value we got for <span class="math inline">\(T.S.\)</span> is really unusual, given we’re
+assuming <span class="math inline">\(H_0\)</span> is correct. Therefore,
+small p-values indicate that there is evidence in the data for <span class="math inline">\(H_A\)</span> rather than for <span class="math inline">\(H_0\)</span>. We call this conclusion
+<em>rejecting the null</em>. On the other hand, if this (conditional)
+probability is large, we don’t have any evidence against <span class="math inline">\(H_0\)</span>. This <strong>does not</strong> mean
+that we’ve proven <span class="math inline">\(H_0\)</span>, just that we
+don’t have enough evidence to reject it!</p>
+<div id="example-peloton" class="section level2">
+<h2>Example: Peloton</h2>
+<p>In 2023, a consumer group surveyed <span class="math inline">\(200\)</span> people who reported purchasing a
+Peloton bike back in 2020. The found that of these <span class="math inline">\(200\)</span> customers, <span class="math inline">\(179\)</span> of them reported that they still
+actively use their bike to exercise. Based on this data and with a <span class="math inline">\(0.95\)</span> level of confidence, assess the
+claim that Peloton makes in a 2023 commercial that <span class="math inline">\(92\%\)</span> of the people who bought their bike
+are still actively using it to work out.</p>
+<p><br></p>
+<p>Based on a sample of size <span class="math inline">\(n=200\)</span>,
+we observe <span class="math inline">\(\hat{p}_{obs} =
+\frac{179}{200}\)</span> and want to test <span class="math display">\[H_0: p = 0.92 \quad \text{vs} \quad H_A: p &lt;
+0.92.\]</span> The value we observe for the test statistic is: <span class="math inline">\(T.S. = \frac{\frac{179}{200} -
+0.92}{\sqrt{\frac{0.92(1-0.92)}{200}}}= -1.303\)</span>. We can now
+calculate the p-value and determine our conclusion by comparing this to
+<span class="math inline">\((1-0.95) = 0.05\)</span>.</p>
+<div id="solve-in-r" class="section level3">
+<h3>Solve in R</h3>
+<pre class="r"><code>obs_test_stat = 
+pnorm(obs_test_stat, 0, 1, lower.tail=TRUE)</code></pre>
 </div>
-<div id="when-to-use-hypothesis-tests" class="section level1">
-<h1>When to use hypothesis tests</h1>
-<p>When we have some value for the population parameter in mind and we
-want to find evidence that this value is incorrect. A hypothesis test
-can help us make a yes/no decision about the plausibility of the value
-of a parameter.</p>
+<div id="solve-from-z-table" class="section level3">
+<h3>Solve from Z-table</h3>
+<p>We will do this in class together using the <a href="https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf">Z-table
+of Normal probabilities</a>.</p>
 </div>
-<div id="four-steps-of-a-hypothesis-test" class="section level1">
-<h1>Four Steps of a Hypothesis Test</h1>
-<p>(Note: Anywhere you see <span class="math inline">\({\color{red}&lt;}{\color{red}&gt;}\)</span>’s you
-should replace the inside with problem-specific words or symbols.)</p>
-<ol style="list-style-type: decimal">
-<li>Define the null and alternative hypotheses in the context of the
-problem.</li>
-</ol>
-<p><span class="math display">\[\begin{eqnarray}
-H_0:{\color{red}&lt;}\text{parameter}{\color{red}&gt;} =
-{\color{red}&lt;}\text{hypothesized
-value}{\color{red}&gt;}\quad  &amp;\text{ and }&amp;\quad H_A:
-{\color{red}&lt;}\text{parameter}{\color{red}&gt;} \neq
-{\color{red}&lt;}\text{hypothesized value}{\color{red}&gt;} \\  
-&amp;\text{OR}&amp; \\
-H_0:{\color{red}&lt;}\text{parameter}{\color{red}&gt;} =
-{\color{red}&lt;}\text{hypothesized value}{\color{red}&gt;}\quad
-&amp;\text{ and }&amp;\quad  H_A:
-{\color{red}&lt;}\text{parameter}{\color{red}&gt;} &gt;
-{\color{red}&lt;}\text{hypothesized value}{\color{red}&gt;} \\
-&amp;\text{OR}&amp;\\
-H_0:{\color{red}&lt;}\text{parameter}{\color{red}&gt;} =
-{\color{red}&lt;}\text{hypothesized
-value}{\color{red}&gt;}\quad  &amp;\text{ and }&amp;\quad  H_A:
-{\color{red}&lt;}\text{parameter}{\color{red}&gt;} &lt;
-{\color{red}&lt;} \text{hypothesized value}{\color{red}&gt;}
-\end{eqnarray}\]</span></p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>Calculate the test statistic and find its distribution under the
-null hypothesis. That is, find <span class="math display">\[T.S. \sim
-W\]</span> where <span class="math inline">\(W\)</span> is typically</p>
-<ul>
-<li><p>a Normal random variable with mean <span class="math inline">\(p_0\)</span> and variance <span class="math inline">\((p_0 (1-p_0))/n\)</span>; or</p></li>
-<li><p>a Normal random variable with mean <span class="math inline">\(\mu_0\)</span> and variance <span class="math inline">\(\sigma^2/n\)</span> (if <span class="math inline">\(\sigma^2\)</span> is known); or</p></li>
-<li><p>a Student’s-t distributed random variable (with <span class="math inline">\(n-1\)</span> degrees of freedom).</p></li>
-</ul></li>
-<li><p>Calculate the p-value for the test statistic in part 2 using
-statistical software.</p></li>
-<li><p>State the full conclusion of your test. Do you <em>fail to reject
-the null</em> hypothesis or do you have enough evidence to <em>reject
-the null</em>?</p></li>
-</ol>
+</div>
+</div>
+<div id="one-sample-t-test-for-the-mean" class="section level1">
+<h1>3. One sample t-test for the mean</h1>
+<p>The logic behind the one sample t-test for an unknown mean is very
+similar to that of the one proportion Z test. The main difference is
+that our null hypothesis here does not give us any information about the
+variance of the sampling distribution of <span class="math inline">\(\bar{x}\)</span>. Instead of ending up with a test
+statistic that follows the Standard Normal distribution, the test
+statistic here follows a Student’s t-distribution with <span class="math inline">\((n-1)\)</span> degrees of freedom.</p>
+<p>Here, the null hypothesis is a statement only about an unknown
+population mean, <span class="math inline">\(\mu\)</span></p>
+<p><span class="math display">\[H_0: \mu = \mu_0.\]</span></p>
+<p>Regardless of the direction of the alternative hypothesis, the
+p-value for a particular hypothesis test is always calculated based upon
+the assumption that the value of the parameter in <span class="math inline">\(H_0\)</span> is actually correct. Once we have
+defined <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>, we must calculate the test statistic
+for a one sample t-test for the mean:</p>
+<p><span class="math display">\[T.S. = \frac{\bar{x} -
+\mu_0}{\sqrt{\frac{s^2}{n}}}.\]</span> If <span class="math inline">\(H_0\)</span> is correct, then the center of the
+sampling distribution of <span class="math inline">\(\bar{x}\)</span> is
+<span class="math inline">\(\mu_0\)</span>. In this case, the test
+statistic above is follows a Student’s t-distribution with <span class="math inline">\((n-1)\)</span> degrees of freedom!</p>
+<p>Next, taking note of the direction of <span class="math inline">\(H_A\)</span>, say for example <span class="math inline">\(H_A: \mu &gt; \mu_0\)</span>, and compute the
+p-value associated with our observed test statistic by finding <span class="math display">\[Pr\left(W &gt; T.S._{obs} \right),\]</span> where
+<span class="math inline">\(W \sim t_{(n-1)}\)</span>. Once again, if
+this (conditional) probability is smaller than <span class="math inline">\((1-\text{confidence level})\)</span>, this
+indicates that the value we got for <span class="math inline">\(T.S._{obs}\)</span> is really unusual, given we’re
+assuming <span class="math inline">\(H_0\)</span> is correct. Therefore,
+small p-values indicate that we should reject the null hypothesis in
+favor of the alternative. However, if this (conditional) probability is
+large, we fail to reject <span class="math inline">\(H_0\)</span>, based
+on the data.</p>
+<div id="example-drinking-water-in-pa" class="section level2">
+<h2>Example: Drinking water in PA</h2>
+<p>At 6pm on March 25, 2023, the Philadelphia Water Department sent an
+emergency alert notifying residents of a chemical spill that occurred
+along a Delaware River tributary in Bristol Township. It turns out that
+more than <span class="math inline">\(8000\)</span> gallons of a
+water-based latex finishing solution from the Trinseo Altuglas chemical
+facility spilled into the Delaware River. To determine whether or not
+the city’s drinking water which is sourced from the Delaware River, is
+safe to drink, scientists need to determine if the chemical is diluted
+enough to be safe to drink. Let’s suppose the city is conducting a
+hypothesis test on a random sample of tap water throughout the city to
+determine if the water is safe to drink. Based on the (fake) data below,
+choose an appropriate confidence level and conduct a hypothesis test to
+determine if the water in Philadelphia is safe to drink. Suppose the
+wated is deemed safe if the concentration of latex product is less than
+<span class="math inline">\(250\)</span> ppm. (If you want to, you can
+read <a href="https://www.phila.gov/2023-03-26-citys-response-to-spill-of-a-latex-product-into-the-delaware-river/">updates
+about the chemical spill here</a>.)</p>
+<br> Suppose the following (made up) data represents the collection of
+<span class="math inline">\(n=70\)</span> random samples of <span class="math inline">\(1\)</span> gallon of tap water from different
+locations in the city and that the concentration of latex is measured in
+parts per million (ppm):
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["location"],"name":[1],"type":["int"],"align":["right"]},{"label":["latex_conc"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"621","2":"237.64","_rn_":"1"},{"1":"520","2":"212.98","_rn_":"2"},{"1":"150","2":"234.65","_rn_":"3"},{"1":"754","2":"199.25","_rn_":"4"},{"1":"256","2":"255.98","_rn_":"5"},{"1":"153","2":"242.68","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p><br></p>
+<pre class="r"><code>mean(pretend_water_data$latex_conc)</code></pre>
+<pre><code>## [1] 228.7041</code></pre>
+<pre class="r"><code>sd(pretend_water_data$latex_conc)</code></pre>
+<pre><code>## [1] 18.33824</code></pre>
+<p>Based on a sample of size <span class="math inline">\(n=70\)</span>,
+we observe ${x}_{obs} = $ 228.704 and $s = $18.338 and want to test
+<span class="math display">\[H_0: \mu = 250 \quad \text{vs} \quad H_A:
+\mu &gt; 250.\]</span> Let’s use a confidence level of <span class="math inline">\(0.99\)</span> since the consequences for an
+incorrect conclusion are rather dire in this example. The value we
+observe for the test statistic is: <span class="math inline">\(T.S. =
+\frac{228.704 - 250}{\frac{18.338}{\sqrt{70}}} = -9.716\)</span>. We can
+now calculate the p-value and determine our conclusion by comparing this
+to <span class="math inline">\((1-0.99) = 0.01\)</span>.</p>
+<div id="solve-in-excel" class="section level3">
+<h3>Solve in Excel</h3>
+<pre class="r"><code>obs_test_stat2 = 
+1 - T.DIST(obs_test_stat2, n-1, Cumulative=TRUE)  # note that the T.DIST function always returns the lower tail probability </code></pre>
+</div>
+<div id="solve-from-t-table" class="section level3">
+<h3>Solve from t-table</h3>
+<p>We will do this in class together using the <a href="https://profsuzy.github.io/Stat11/t-distribution-table.pdf">t-distribution
+table</a>.</p>
+</div>
+</div>
 </div>
 
 

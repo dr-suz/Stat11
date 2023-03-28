@@ -36,3 +36,7 @@ The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/wk11-wk
 
 # 3. Summary of Results  
 
+
+# two sided H_A 
+
+#  Error rates and power and pictures  ? 

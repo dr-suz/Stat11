@@ -25,7 +25,8 @@ header-includes:
  
 **Test Statistic** (abbreviated T.S.) - There are many different kinds of test statistics but the ones we will be using rely on the CLT and therefore assume the test statistic follows a Normal (or Student’s t) distribution. Such test statistics typically take this form:
 
-$$T.S. = \frac{\text{<estimate>} - \text{<hypothesized parameter value>}}{SE(\text{<estimate>})}$$
+$$T.S. = \frac{\text{<estimate>} - \text{<hypothesized parameter value>}}{SE(\text{<estimate>})} \quad\text{OR}\quad 
+T.S. = \frac{\text{<estimate>} - \text{<hypothesized parameter value>}}{st.dev(\text{<estimate>})} .$$
 
 
 **Significance level** is the chance that out of many (typically hypothetical) repeated experiments, we make a Type I error by mistake. This is really just another way of expressing our confidence level:

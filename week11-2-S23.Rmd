@@ -19,32 +19,115 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
+# 1. Introducing Hypothesis Tests
+
+There is a new [reference sheet for hypothesis tests](https://profsuzy.github.io/Stat11/Cheat-sheet-5.html) uploaded on Moodle. Please take a look over this document as you read along with the assigned chapters for this week. 
+
+$$H_0: \text{null hypothesis} \quad H_A: \text{alternative hypothesis}$$ 
+* $H_0$ specifies the entire sampling distribution of our sample estimate! There are different types of $H_A$. 
+
+* You still get to choose your own confidence level ($a$)! The value $(1-a)$ is called the <span style="color:green">significance level</span> of your hypothesis test. 
+
+* Statistical significance is not the same thing as colloquial or practical significance. 
+
+* The assumptions for hypothesis tests are the same as the assumptions for CIs. 
+
+* We still need to use the standard error for tests about population means but, unlike in CIs, we actually have the standard deviation (and don't need to use the standard error) for tests of population proportions.
+
+* The output of a hypothesis test is called a $p-$value. This is a conditional probability, the probability of the $\hat{p}$ or $\bar{x}$ value from you data or something even more rare occurring based on the sampling distribution of your estimator conditioned upon the assumption that $H_0$ is true and you actually know the exact sampling distribution. 
 
 
-# 1.  One proportion Z test
+# 2.  One proportion Z test
+
+Recall that for large enough sample sizes, the sampling distribution of $\hat{p}$ follows a Normal distribution with mean $p$ and variance $\frac{p(1-p)}{n}$:
 
 
+When we wanted to find a CI for the center of this sampling distribution, $p$, we had to estimate the sampling variance using the standard error of $\hat{p}$:
+$$SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$$
 
-## Example: Pelaton 
+If we are conducting a hypothesis test for a particular value of $p$ however, then the null hypothesis
 
-In 2023, a consumer group surveyed $200$ people who reported purchasing a Pelaton bike in 20XX. The found the following 
-a) Check the assumptions and conditions.
-b) In a commercial for their product, Pelaton claims that, on average, $92\%$ of the people who bought their bike are still actively using it to work out. Use an appropriate hypothesis test to comment on their claim.
+$$H_0: p = p_0$$ 
+specifies not only the mean of the sampling distribution of $\hat{p}$, but also the variance! Regardless of the direction of the alternative hypothesis, the p-value for a particular hypothesis test is always calculated based upon the assumption that the value of the parameter in $H_0$ is actually correct. Once we have defined $H_0$ and $H_A$, we must calculate the test statistic for a one proportion Z test:
 
+$$T.S. = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}.$$
+If $H_0$ is correct then the center of the sampling distribution of $\hat{p}$ is $p_0$ and the variance is $\frac{p_0(1-p_0)}{n}$. In this case, the test statistic above is just a standardized version of the Normal random variable $\hat{p}$ and therefore $T.S. \sim N(0,1)$! 
 
-
-
-# 2. One sample t-test for the mean 
-
-a linear function of the sample mean has a sampling distribution that follows a t-distribution with $(n-1)$ degrees of freedom 
-
-
-## Example 
+Now, we take note of the direction of $H_A$, say for example $H_A: p < p_0$, and compute the p-value associated with our observed test statistic by finding 
+$$Pr\left(Z < T.S._{obs} \right).$$
+If this probability is smaller than $(1-\text{confidence level})$, this indicates that the value we got for $T.S.$ is really unusual, given we're assuming $H_0$ is correct. Therefore, small p-values indicate that there is evidence in the data for $H_A$ rather than for $H_0$. We call this conclusion *rejecting the null*. On the other hand, if this (conditional) probability is large, we don't have any evidence against $H_0$. This **does not** mean that we've proven $H_0$, just that we don't have enough evidence to reject it! 
 
 
+## Example: Peloton 
+
+In 2023, a consumer group surveyed $200$ people who reported purchasing a Peloton bike back in 2020. The found that of these $200$ customers, $179$ of them reported that they still actively use their bike to exercise. Based on this data and with a $0.95$ level of confidence, assess the claim that Peloton makes in a 2023 commercial that $92\%$ of the people who bought their bike are still actively using it to work out. 
+
+<br> 
+
+Based on a sample of size $n=200$, we observe $\hat{p}_{obs} = \frac{179}{200}$ and want to test 
+$$H_0: p = 0.92 \quad \text{vs} \quad H_A: p < 0.92.$$
+The value we observe for the test statistic is: $T.S. = \frac{\frac{179}{200} - 0.92}{\sqrt{\frac{0.92(1-0.92)}{200}}}= -1.303$. We can now calculate the p-value and determine our conclusion by comparing this to $(1-0.95) = 0.05$. 
 
 
-# 3.  Error rates and power and pictures 
+### Solve in R 
+
+```{r echo=TRUE, eval = FALSE}
+obs_test_stat = 
+pnorm(obs_test_stat, 0, 1, lower.tail=TRUE)
+```
+
+### Solve from Z-table
+
+We will do this in class together using the [Z-table of Normal probabilities](https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf).
+
+
+# 3. One sample t-test for the mean 
+
+The logic behind the one sample t-test for an unknown mean is very similar to that of the one proportion Z test. The main difference is that our null hypothesis here does not give us any information about the variance of the sampling distribution of $\bar{x}$. Instead of ending up with a test statistic that follows the Standard Normal distribution, the test statistic here follows a Student's t-distribution with $(n-1)$ degrees of freedom.  
+
+Here, the null hypothesis is a statement only about an unknown population mean, $\mu$
+
+$$H_0: \mu = \mu_0.$$ 
+
+Regardless of the direction of the alternative hypothesis, the p-value for a particular hypothesis test is always calculated based upon the assumption that the value of the parameter in $H_0$ is actually correct. Once we have defined $H_0$ and $H_A$, we must calculate the test statistic for a one sample t-test for the mean:
+
+$$T.S. = \frac{\bar{x} - \mu_0}{\sqrt{\frac{s^2}{n}}}.$$
+If $H_0$ is correct, then the center of the sampling distribution of $\bar{x}$ is $\mu_0$. In this case, the test statistic above is follows a Student's t-distribution with $(n-1)$ degrees of freedom!  
+
+Next, taking note of the direction of $H_A$, say for example $H_A: \mu > \mu_0$, and compute the p-value associated with our observed test statistic by finding 
+$$Pr\left(W > T.S._{obs} \right),$$
+where $W \sim t_{(n-1)}$. Once again, if this (conditional) probability is smaller than $(1-\text{confidence level})$, this indicates that the value we got for $T.S._{obs}$ is really unusual, given we're assuming $H_0$ is correct. Therefore, small p-values indicate that we should reject the null hypothesis in favor of the alternative. However, if this (conditional) probability is large, we fail to reject $H_0$, based on the data. 
+
+## Example: Drinking water in PA 
+
+At 6pm on March 25, 2023, the Philadelphia Water Department sent an emergency alert notifying residents of a chemical spill that occurred along a Delaware River tributary in Bristol Township. It turns out that more than $8000$ gallons of a water-based latex finishing solution from the Trinseo Altuglas chemical facility spilled into the Delaware River. To determine whether or not the city's drinking water which is sourced from the Delaware River, is safe to drink, scientists need to determine if the chemical is diluted enough to be safe to drink. Let's suppose the city is conducting a hypothesis test on a random sample of tap water throughout the city to determine if the water is safe to drink. Based on the (fake) data below, choose an appropriate confidence level and conduct a hypothesis test to determine if the water in Philadelphia is safe to drink. Suppose the wated is deemed safe if the concentration of latex product is less than $250$ ppm. (If you want to, you can read [updates about the chemical spill here](https://www.phila.gov/2023-03-26-citys-response-to-spill-of-a-latex-product-into-the-delaware-river/).)
+
+<br>
+Suppose the following (made up) data represents the collection of $n=70$ random samples of $1$ gallon of tap water from different locations in the city and that the concentration of latex is measured in parts per million (ppm):
+```{r echo=FALSE, eval=TRUE}
+set.seed(109)
+pretend_water_data <- data.frame(location = sample(1:1000, 70, replace=FALSE),
+                                 latex_conc = round(rnorm(70, 225, 15),2))
+head(pretend_water_data)
+```
+<br> 
+
+```{r echo=TRUE, eval = TRUE}
+mean(pretend_water_data$latex_conc)
+sd(pretend_water_data$latex_conc)
+```
+
+Based on a sample of size $n=70$, we observe $\bar{x}_{obs} = $ `r round(mean(pretend_water_data$latex_conc),3)` and $s = $`r round(sd(pretend_water_data$latex_conc),3)` and want to test 
+$$H_0: \mu = 250 \quad \text{vs} \quad H_A: \mu > 250.$$
+Let's use a confidence level of $0.99$ since the consequences for an incorrect conclusion are rather dire in this example. The value we observe for the test statistic is: $T.S. = \frac{228.704 - 250}{\frac{18.338}{\sqrt{70}}} = -9.716$. We can now calculate the p-value and determine our conclusion by comparing this to $(1-0.99) = 0.01$. 
+
+### Solve in Excel 
+
+```{r echo=TRUE, eval = FALSE}
+obs_test_stat2 = 
+1 - T.DIST(obs_test_stat2, n-1, Cumulative=TRUE)  # note that the T.DIST function always returns the lower tail probability 
+```
+
+### Solve from t-table 
+
+We will do this in class together using the [t-distribution table](https://profsuzy.github.io/Stat11/t-distribution-table.pdf).
