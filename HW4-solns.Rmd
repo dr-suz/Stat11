@@ -110,10 +110,19 @@ Find a $90\%$ confidence interval for $p=$ the probability that an $11$ to $26$ 
 
 Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $0.1$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
 
+
+
 ## Solution 3
+
+Version 1) $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of non-white patients}}$ 
+
+
+Version 2) $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of patients who completed all three shots}}$
 
 
 ### For graders: 
+
+Note: There are actually a couple of valid ways to think about this problem. Either approach is correct. 
 
 
 # Problem 4 
