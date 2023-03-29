@@ -72,7 +72,7 @@ The value we observe for the test statistic is: $T.S. = \frac{\frac{179}{200} - 
 ### Solve in R 
 
 ```{r echo=TRUE, eval = FALSE}
-obs_test_stat = 
+obs_test_stat = -1.303
 pnorm(obs_test_stat, 0, 1, lower.tail=TRUE)
 ```
 
@@ -117,14 +117,14 @@ mean(pretend_water_data$latex_conc)
 sd(pretend_water_data$latex_conc)
 ```
 
-Based on a sample of size $n=70$, we observe $\bar{x}_{obs} = $ `r round(mean(pretend_water_data$latex_conc),3)` and $s = $`r round(sd(pretend_water_data$latex_conc),3)` and want to test 
+Based on a sample of size $n=70$, we observe $\bar{x}_{obs} =$ `r round(mean(pretend_water_data$latex_conc),3)` and $s =$ `r round(sd(pretend_water_data$latex_conc),3)` and want to test 
 $$H_0: \mu = 250 \quad \text{vs} \quad H_A: \mu > 250.$$
 Let's use a confidence level of $0.99$ since the consequences for an incorrect conclusion are rather dire in this example. The value we observe for the test statistic is: $T.S. = \frac{228.704 - 250}{\frac{18.338}{\sqrt{70}}} = -9.716$. We can now calculate the p-value and determine our conclusion by comparing this to $(1-0.99) = 0.01$. 
 
 ### Solve in Excel 
 
 ```{r echo=TRUE, eval = FALSE}
-obs_test_stat2 = 
+obs_test_stat2 = -9.716 
 1 - T.DIST(obs_test_stat2, n-1, Cumulative=TRUE)  # note that the T.DIST function always returns the lower tail probability 
 ```
 

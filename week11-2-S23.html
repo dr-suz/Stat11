@@ -1709,7 +1709,7 @@ calculate the p-value and determine our conclusion by comparing this to
 <span class="math inline">\((1-0.95) = 0.05\)</span>.</p>
 <div id="solve-in-r" class="section level3">
 <h3>Solve in R</h3>
-<pre class="r"><code>obs_test_stat = 
+<pre class="r"><code>obs_test_stat = -1.303
 pnorm(obs_test_stat, 0, 1, lower.tail=TRUE)</code></pre>
 </div>
 <div id="solve-from-z-table" class="section level3">
@@ -1784,7 +1784,8 @@ parts per million (ppm):
 <pre class="r"><code>sd(pretend_water_data$latex_conc)</code></pre>
 <pre><code>## [1] 18.33824</code></pre>
 <p>Based on a sample of size <span class="math inline">\(n=70\)</span>,
-we observe ${x}_{obs} = $ 228.704 and $s = $18.338 and want to test
+we observe <span class="math inline">\(\bar{x}_{obs} =\)</span> 228.704
+and <span class="math inline">\(s =\)</span> 18.338 and want to test
 <span class="math display">\[H_0: \mu = 250 \quad \text{vs} \quad H_A:
 \mu &gt; 250.\]</span> Let’s use a confidence level of <span class="math inline">\(0.99\)</span> since the consequences for an
 incorrect conclusion are rather dire in this example. The value we
@@ -1794,7 +1795,7 @@ now calculate the p-value and determine our conclusion by comparing this
 to <span class="math inline">\((1-0.99) = 0.01\)</span>.</p>
 <div id="solve-in-excel" class="section level3">
 <h3>Solve in Excel</h3>
-<pre class="r"><code>obs_test_stat2 = 
+<pre class="r"><code>obs_test_stat2 = -9.716 
 1 - T.DIST(obs_test_stat2, n-1, Cumulative=TRUE)  # note that the T.DIST function always returns the lower tail probability </code></pre>
 </div>
 <div id="solve-from-t-table" class="section level3">
