@@ -3,7 +3,6 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: 'Week 11: Practicing with Hypothesis Tests'
 output:
-  pdf_document: default
   html_document: default
 ---
 ```{r setup, echo=FALSE, include=FALSE}
@@ -23,23 +22,63 @@ There are five questions in this worksheet. You will work with your group member
 **Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
 
 
-
-### 1.  
-\vspace{3cm}
-
-### 2.  
-
-\vspace{3cm}
-
-### 3.  
+TO DO: incorporate power and Type I and II error; structure worksheet into parts; print off solutions and figure out how to find one-sided p-value from t-table before class
 
 
 
-### 4.  
+## 1. Calculating probabilities for a proportion 
+
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+
 
 \vspace{3cm}
 
+## 2.  Two-sided alternative Z-test for a proportion 
 
-### 5.
+A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. Test an appropriate hypothesis and state your conclusion. Be sure the appropriate assumptions and conditions are satisfied before you proceed
+
 
 \vspace{3cm}
+
+
+## 3. Calculating probabilities for a mean with the t-distribution 
+
+Organizers of a fishing tournament believe that the lake holds a sizable population of largemouth bass. They assume that the weights of these fish have a model that is skewed to the right with a mean of $3.5$ pounds and a standard deviation of $2.2$ pounds.
+
+a) Explain why a skewed model makes sense here.
+
+b) Explain why you cannot determine the probability that a largemouth bass randomly selected (“caught”) from the lake weighs over $3$ pounds.
+
+c) Each fisherman in the contest catches $5$ fish each day. Can you determine the probability that someone’s catch averages over $3$ pounds? Explain.
+
+d) The $12$ fishermen competing each caught the limit of $5$ fish. What’s the probability that the total catch of $60$ fish averaged more than $3$ pounds?
+
+
+
+
+\vspace{3cm}
+
+### 4. One-sided alternative t-test 
+
+Suppose we purchase $n=6$ random bags of chips marked with a net weight of $35.4$ grams. We then carefully weighing the contents in each bag to find the following weight data (in grams):
+
+```{r}
+chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
+```
+
+Is there evidence that the mean weight of these chip bags is less than advertised? 
+
+
+
+\vspace{3cm}
+
+### 5.  Two-sided alternative t-test 
+
+The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
+
+a) Why is this a one-sample test?
+
+b) If we believe the Missouri babies fairly represent American newborns, is there any evidence that U.S. babies and Australian babies do not weigh the same at birth?
+
+
+
