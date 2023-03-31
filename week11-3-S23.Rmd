@@ -44,11 +44,13 @@ Image source: https://towardsdatascience.com/everything-you-need-to-know-about-h
 * For hypothesis tests about $p$, we do not use $SE(\hat{p})$ and we check the *Success/Failure Condition* with $np_0$ (not  $n\hat{p}$). 
 
 * For two-sided alternatives we find the p-value by calculating 
-$$Pr(|Z|> T.S._{obs}), \text{ where $Z\sim N(0,1)$}$$
+$$Pr(Z > |T.S._{obs}|), \text{ where $Z\sim N(0,1)$}$$
 for tests of a proportion, $p$, or
-$$Pr(|W| > T.S._{obs}), \text{ where $W \sim t_{(n-1)}$},$$
+$$Pr(W > |T.S._{obs}|), \text{ where $W \sim t_{(n-1)}$},$$
 for tests of a mean, $\mu$. 
 
 * <span style="color:green">Type I Error</span> is the probability that we incorrectly reject $H_0$. This chance is controlled by whatever significance level we choose. 
   
 * <span style="color:green">Type II Error</span> is the probability that we incorrectly fail to reject $H_0$. The converse of a Type II error is called the <span style="color:green">power</span> of a hypothesis test.   
+
+![](./images/wk11-t-pvals.png)
