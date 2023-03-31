@@ -45,7 +45,7 @@ b) What would a Type I error mean in this situation?
 
 \pagebreak 
 
-# Part 2ß: Means 
+# Part 2: Means 
 
 ## 3. Calculating probabilities for a mean with the t-distribution 
 
