@@ -4,6 +4,7 @@ author: "STAT011 with Prof Suzy"
 date: 'Week 11: Practicing with Hypothesis Tests'
 output:
   html_document: default
+  pdf_document: default
 ---
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
@@ -22,7 +23,7 @@ There are five questions in this worksheet. You will work with your group member
 **Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
 
 
-TO DO: incorporate power and Type I and II error; structure worksheet into parts; print off solutions and figure out how to find one-sided p-value from t-table before class
+\vspace{1cm}
 
 
 # Part 1: Proportions 
@@ -32,16 +33,19 @@ TO DO: incorporate power and Type I and II error; structure worksheet into parts
 The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
 
 
-\vspace{3cm}
+\vspace{2cm}
 
 ## 2.  Two-sided alternative Z-test for a proportion 
 
-A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. Test an appropriate hypothesis and state your conclusion. Be sure the appropriate assumptions and conditions are satisfied before you proceed
+A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 
 
+a) Test an appropriate hypothesis and state your conclusion. Be sure the appropriate assumptions and conditions are satisfied before you proceed.
+
+b) What would a Type I error mean in this situation? 
 
 \pagebreak 
 
-# Part 1: Means 
+# Part 2ß: Means 
 
 ## 3. Calculating probabilities for a mean with the t-distribution 
 
@@ -68,8 +72,9 @@ Suppose we purchase $n=6$ random bags of chips marked with a net weight of $35.4
 chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
 ```
 
-Is there evidence that the mean weight of these chip bags is less than advertised? 
+a) Is there evidence that the mean weight of these chip bags is less than advertised? 
 
+b) What would a Type II error mean in this situation? 
 
 
 \vspace{3cm}
