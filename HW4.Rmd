@@ -3,8 +3,8 @@ title: "Group Homework 4"
 author: "STAT011-S23"
 date: 'Due: 4/5/23'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
@@ -69,7 +69,7 @@ If you are analyzing this data in RStudio, you will import the data with the fol
 ```{r, eval=FALSE}
 gardasil <- read.delim(
         "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt",
-        sep=",")
+        sep="\t")
 ```
 The data object is called `gardasil`. 
 
