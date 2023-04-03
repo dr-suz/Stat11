@@ -109,7 +109,7 @@ Often we may need to consider a (simple) **random sample** from the same populat
 
 - **R functions:** ` rt(n, df)` where $n$ is the size of the sample you wish to obtain and $df$ is the degrees of freedom of the distribution 
 
-- **Distribution parameters:** $\nu$ (pronounced "new") the *degrees of freedom*. Note, as $\nu$ increases, the Student's t-distribution and the Normal distribution converge and become indistinguishable from one another.  
+- **Distribution parameters:** $\nu$ (pronounced "new") the *degrees of freedom*. Note, as $\nu$ increases, the Student's t-distribution and the Normal distribution converge and become indistinguishable from one another. The degrees of freedom is just another model parameter (like mean, median, standard deviation, range, etc.) Roughly speaking, this is a parameter that tells us the number of values in our final calculation of a test statistic that are free to vary from one sample to the next. 
 
 - **Sample space:** $S = (-\infty, \infty)$
 

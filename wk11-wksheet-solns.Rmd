@@ -35,6 +35,8 @@ The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed 
 ### Solution 
 
 
+
+
 ## 2.  Two-sided alternative Z-test for a proportion 
 
 A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 

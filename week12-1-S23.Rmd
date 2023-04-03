@@ -25,16 +25,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 Today, we will cover the [solutions for Part 2 of last week's worksheet](https://profsuzy.github.io/Stat11/wk11-wksheet-solns.html). 
 
 
-## Error rates and power 
-
-The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
-
-* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
-
-* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
-
-* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
-
 
 # 2. Comparing Groups: Difference between proportions  
 
@@ -44,6 +34,7 @@ and variance
 $$Var(\hat{p}_1 - \hat{p}_2) = \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}.$$
 The estimate for the sampling standard deviation of $\hat{p}_1 - \hat{p}_2$ is the standard error: 
 $$SE(\hat{p}_1 - \hat{p}_2) = \sqrt{ \frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.$$
+
 ## Assumptions and conditions 
 
 * Independence assumption 

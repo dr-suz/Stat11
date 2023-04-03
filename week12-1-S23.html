@@ -1632,22 +1632,6 @@ display: none;
 <h1>1. Finishing up last week’s worksheet</h1>
 <p>Today, we will cover the <a href="https://profsuzy.github.io/Stat11/wk11-wksheet-solns.html">solutions
 for Part 2 of last week’s worksheet</a>.</p>
-<div id="error-rates-and-power" class="section level2">
-<h2>Error rates and power</h2>
-<p>The only way to reduce both types of error is to collect more
-evidence or, in statistical terms, to collect more data.</p>
-<ul>
-<li><p><span class="math inline">\(\alpha = Pr(\text{Type I
-error})\)</span>: If <span class="math inline">\(H_0\)</span> is true,
-this is the probability that we (incorrectly) reject it.</p></li>
-<li><p><span class="math inline">\(\beta = Pr(\text{Type II
-error})\)</span>: If <span class="math inline">\(H_0\)</span> is false,
-this is the probability that we (incorrectly) fail to reject
-it.</p></li>
-<li><p><span class="math inline">\(1-\beta = Power\)</span> If <span class="math inline">\(H_0\)</span> is false, this is the probability
-that we (correctly) reject it.</p></li>
-</ul>
-</div>
 </div>
 <div id="comparing-groups-difference-between-proportions" class="section level1">
 <h1>2. Comparing Groups: Difference between proportions</h1>
@@ -1659,8 +1643,9 @@ with expectation, <span class="math display">\[E(\hat{p}_1 - \hat{p}_2)
 for the sampling standard deviation of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> is the standard
 error: <span class="math display">\[SE(\hat{p}_1 - \hat{p}_2) = \sqrt{
 \frac{\hat{p}_1(1-\hat{p}_1)}{n_1} +
-\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.\]</span> ## Assumptions and
-conditions</p>
+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}.\]</span></p>
+<div id="assumptions-and-conditions" class="section level2">
+<h2>Assumptions and conditions</h2>
 <ul>
 <li><p>Independence assumption</p>
 <ul>
@@ -1672,6 +1657,7 @@ conditions</p>
 <li><p>Success/failure condition - both samples must contain enough
 failures and successes</p></li>
 </ul>
+</div>
 <div id="a-two-proportion-z-interval" class="section level2">
 <h2>A two-proportion z-interval</h2>
 <p><span class="math display">\[(\hat{p}_1 - \hat{p}_2) \pm
@@ -1700,7 +1686,7 @@ error: <span class="math display">\[SE(\bar{x}_1 - \bar{x}_2) =
 \sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2}},\]</span> where <span class="math inline">\(s_1^2 = \frac{1}{n_1-1}\sum_{i=1}^{n_1}(x_{1,i} -
 \bar{x}_1)^2\)</span> and <span class="math inline">\(s_2^2 =
 \frac{1}{n_2-1}\sum_{i=1}^{n_2}(x_{2,i} - \bar{x}_2)^2\)</span>.</p>
-<div id="assumptions-and-conditions" class="section level2">
+<div id="assumptions-and-conditions-1" class="section level2">
 <h2>Assumptions and conditions</h2>
 <ul>
 <li><p>Independence assumption</p>

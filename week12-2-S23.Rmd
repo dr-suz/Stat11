@@ -20,17 +20,23 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 
-# 1. Comparing groups examples 
+
+# 1. Paired t-test 
 
 
-# 2. Paired t-test 
+# 2. Effect size 
 
 
-# 3. Effect size 
 
-## Example with paired t-test 
+# 3. Blocking  
 
 
-# 4. Blocking  
+# 4. Error rates and power 
 
-## Example setting 
+The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
+
+* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
+
+* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
+
+* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
