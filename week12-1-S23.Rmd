@@ -57,7 +57,7 @@ $$SE(\hat{p}_1 - \hat{p}_2) = \sqrt{ \frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{
 * Success/failure condition - both samples must contain enough failures and successes 
 
 
-## Atwo-proportion z-interval 
+## A two-proportion z-interval 
 
 $$(\hat{p}_1 - \hat{p}_2) \pm \left[z^*_{a} \times SE(\hat{p}_1 - \hat{p}_2)\right],$$
 where, as before, $z_a^*$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a $N(0,1)$ distribution. 
