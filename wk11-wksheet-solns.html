@@ -471,16 +471,16 @@ Thus, by the CLT, if <span class="math inline">\(x_1,\dots,
 x_5=\)</span> weight of the five fish caught by the first fisherman,
 <span class="math inline">\(x_6,\dots, x_{10}=\)</span> weight of the
 five fish caught by the second fisherman, etc, then <span class="math display">\[\bar{X} \sim N\left(\mu=3.5,
-var=\frac{\sigma^2}{n}=2.2^2\right).\]</span> We can find the requested
-probability directly with R:</p></li>
+var=\frac{\sigma^2}{n}=\frac{2.2^2}{60}\right).\]</span> We can find the
+requested probability directly with R:</p></li>
 </ol>
-<pre class="r"><code>pnorm(60, 3.5, 2.2, lower.tail=FALSE)</code></pre>
-<pre><code>## [1] 9.330595e-146</code></pre>
+<pre class="r"><code>pnorm(3, 3.5, 2.2/sqrt(60), lower.tail=FALSE)</code></pre>
+<pre><code>## [1] 0.960834</code></pre>
 <p>Or, we can standardize the value of <span class="math inline">\(3\)</span> lbs by essentially finding what would
-have been our test statistic: <span class="math display">\[t = \frac{3 -
-3.5}{\frac{2.2}{\sqrt{60}}} = -1.76,\]</span> and based on the Z-table,
-this probability is approximately <span class="math inline">\(1 - Pr(Z
-\leq -1.76) = 0.961\)</span>.</p>
+have been our test statistic: <span class="math display">\[T.S. =
+\frac{3 - 3.5}{\frac{2.2}{\sqrt{60}}} = -1.76,\]</span> and based on the
+Z-table, this probability is approximately <span class="math inline">\(1
+- Pr(Z \leq -1.76) = 0.961\)</span>.</p>
 </div>
 </div>
 <div id="one-sided-alternative-t-test" class="section level2">
@@ -505,7 +505,7 @@ our significance level</p>
 <p><span class="math inline">\(\mu =\)</span> the mean weight of these
 types of chips; let’s proceed with a significance level of <span class="math inline">\(0.05\)</span></p>
 <p><strong>Step 2)</strong> Identify the null and alternative</p>
-<p><span class="math inline">\(H_0: \mu = 35.4 g\)</span> vs <span class="math inline">\(H_A: \mu &lt; 35.4\)</span></p>
+<p><span class="math inline">\(H_0: \mu = 35.4 g\)</span> vs <span class="math inline">\(H_A: \mu &lt; 35.4 g\)</span></p>
 <p><strong>Step 3)</strong> Assess the required assumptions and
 conditions</p>
 <p>Independence and randomization are reasonable as long as we selected

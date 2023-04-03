@@ -101,14 +101,14 @@ b) This is because we don't know the exact shape of the distribution, we know it
 c) Not very reliably. Since we can deduce the distribution of the size of the fish is skewed, a sample of size $n=5$ isn't large enough for us to justify using the Central Limit Theorem to approximate the sampling distribution of the mean weight of these five fish. 
 
 d) Now that we're considering a sample of size $n=12\times 5 =60$, we can use the CLT to find a good approximate answer to this question. (Provided the population of the fish is greater than $600$ and that the catches are all independent of one another,,that is.) In the problem setting, we are given the mean $\mu = 3.5$ and standard deviation $\sigma = 2.2$. Thus, by the CLT, if $x_1,\dots, x_5=$ weight of the five fish caught by the first fisherman, $x_6,\dots, x_{10}=$ weight of the five fish caught by the second fisherman, etc, then 
-$$\bar{X} \sim N\left(\mu=3.5, var=\frac{\sigma^2}{n}=2.2^2\right).$$
+$$\bar{X} \sim N\left(\mu=3.5, var=\frac{\sigma^2}{n}=\frac{2.2^2}{60}\right).$$
 We can find the requested probability directly with R:
 ```{r echo=TRUE}
-pnorm(60, 3.5, 2.2, lower.tail=FALSE)
+pnorm(3, 3.5, 2.2/sqrt(60), lower.tail=FALSE)
 ```
 
 Or, we can standardize the value of $3$ lbs by essentially finding what would have been our test statistic: 
-$$t = \frac{3 - 3.5}{\frac{2.2}{\sqrt{60}}} = -1.76,$$
+$$T.S. = \frac{3 - 3.5}{\frac{2.2}{\sqrt{60}}} = -1.76,$$
 and based on the Z-table, this probability is approximately $1 - Pr(Z \leq -1.76) = 0.961$.
 
 ## 4. One-sided alternative t-test 
@@ -134,7 +134,7 @@ $\mu =$ the mean weight of these types of chips; let's proceed with a significan
 
 **Step 2)** Identify the null and alternative 
 
-$H_0: \mu = 35.4 g$ vs $H_A: \mu < 35.4$ 
+$H_0: \mu = 35.4 g$ vs $H_A: \mu < 35.4 g$ 
 
 **Step 3)** Assess the required assumptions and conditions 
 
