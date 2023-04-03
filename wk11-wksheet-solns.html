@@ -378,6 +378,21 @@ college has <span class="math inline">\(522\)</span> students in its
 freshman class. How likely is it that more than <span class="math inline">\(10\%\)</span> of them are smokers?</p>
 <div id="solution" class="section level3">
 <h3>Solution</h3>
+<p>Provided we expect to observe enough success and enough failures, we
+can use Normal approximation to the Binomial distribution to find a good
+approximate answer to this question. In this problem setting we are told
+that the proportion of high schoolers who smoke, <span class="math inline">\(p=0.093\)</span>, based on a 2015 study. For a
+sample of <span class="math inline">\(n=522\)</span> freshmen, we know
+that the sampling distribution of <span class="math inline">\(\hat{p}\)</span> is going to follow a <span class="math inline">\(N\left(p, \frac{p(1-p)}{n}\right)\)</span>
+distribution.</p>
+<p>We are asked to find <span class="math inline">\(Pr(\hat{p} &gt;
+0.1)\)</span> which we can do directly with R:</p>
+<pre class="r"><code>pnorm(0.1, 0.093, sqrt(0.093*(1-0.093)/522),lower.tail=FALSE)</code></pre>
+<pre><code>## [1] 0.2909314</code></pre>
+<p>Or, we can standardize the value of <span class="math inline">\(0.1\)</span> by essentially finding what would
+have been our test statistic: <span class="math display">\[T.S. =
+\frac{0.1 - 0.093}{\sqrt{\frac{0.093(1-0.093)}{522}}} = 0.551,\]</span>
+and based on the Z-table, this probability is approximately <span class="math inline">\(1 - Pr(Z \leq 0.551) = 0.291\)</span>.</p>
 </div>
 </div>
 <div id="two-sided-alternative-z-test-for-a-proportion" class="section level2">

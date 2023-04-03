@@ -40,12 +40,12 @@ We are asked to find $Pr(\hat{p} > 0.1)$ which we can do directly with R:
 
 
 ```{r echo=TRUE}
-pnorm(3, 3.5, 2.2/sqrt(60), lower.tail=FALSE)
+pnorm(0.1, 0.093, sqrt(0.093*(1-0.093)/522),lower.tail=FALSE)
 ```
 
 Or, we can standardize the value of $0.1$ by essentially finding what would have been our test statistic: 
-$$T.S. = \frac{0.1 - 0.093}{\frac{}{}} = ,$$
-and based on the Z-table, this probability is approximately $1 - Pr(Z \leq -1.76) = $.
+$$T.S. = \frac{0.1 - 0.093}{\sqrt{\frac{0.093(1-0.093)}{522}}} = 0.551,$$
+and based on the Z-table, this probability is approximately $1 - Pr(Z \leq 0.551) = 0.291$.
 
 
 
@@ -87,6 +87,10 @@ We can find this in R with the following code:
 2*pnorm(-1.91, lower.tail=TRUE)
 ```
 
+
+```{r echo=FALSE, eval=FALSE}
+prop.test(7,n=469, p=0.03, alternative = "two.sided", correct=FALSE)$p.value. ## not showing this b/c R's default includes continuity correction which makes for a slightly different p-value 
+```
 
 b) Since we rejected $H_0$, it is possible that we made a Type I error. This would mean that we (by chance) incorrectly concluded that the data provides evidence suggesting the rate of twin births for teenage monther is different from $0.03$. 
 
