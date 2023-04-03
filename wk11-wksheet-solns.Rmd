@@ -34,6 +34,18 @@ The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed 
 
 ### Solution 
 
+Provided we expect to observe enough success and enough failures, we can use Normal approximation to the Binomial distribution to find a good approximate answer to this question. In this problem setting we are told that the proportion of high schoolers who smoke, $p=0.093$, based on a 2015 study. For a sample of $n=522$ freshmen, we know that the sampling distribution of $\hat{p}$ is going to follow a $N\left(p, \frac{p(1-p)}{n}\right)$ distribution.
+
+We are asked to find $Pr(\hat{p} > 0.1)$ which we can do directly with R: 
+
+
+```{r echo=TRUE}
+pnorm(3, 3.5, 2.2/sqrt(60), lower.tail=FALSE)
+```
+
+Or, we can standardize the value of $0.1$ by essentially finding what would have been our test statistic: 
+$$T.S. = \frac{0.1 - 0.093}{\frac{}{}} = ,$$
+and based on the Z-table, this probability is approximately $1 - Pr(Z \leq -1.76) = $.
 
 
 

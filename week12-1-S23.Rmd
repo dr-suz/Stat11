@@ -66,7 +66,7 @@ $$T.S. = \frac{(\hat{p}_1 - \hat{p}_2) - 0}{SE\left(\hat{p}_1 - \hat{p}_2 \right
 Under rather general conditions, the sampling distribution of the difference between two independent means is a Normal distribution with expectation,
 $$E(\bar{x}_1 - \bar{x}_2) = \mu_1 - \mu_2$$ 
 and variance 
-$$Var(\bar{\mu}_1 - \bar{\mu}_2) = \frac{\sigma^2_1}{n_1} + \frac{\sigma^2_2}{n_2}.$$
+$$Var(\bar{x}_1 - \bar{x}_2) = \frac{\sigma^2_1}{n_1} + \frac{\sigma^2_2}{n_2}.$$
 The estimate for the sampling standard deviation of $\bar{x}_1 - \bar{x}_2$ is the standard error: 
 $$SE(\bar{x}_1 - \bar{x}_2) = \sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2}},$$
 where $s_1^2 = \frac{1}{n_1-1}\sum_{i=1}^{n_1}(x_{1,i} - \bar{x}_1)^2$ and $s_2^2 = \frac{1}{n_2-1}\sum_{i=1}^{n_2}(x_{2,i} - \bar{x}_2)^2$.
