@@ -1,0 +1,208 @@
+---
+title: "In-Class Worksheet - Solutions"
+author: "STAT011 with Prof Suzy"
+date: 'Week 11: Practicing with Hypothesis Tests'
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+\vspace{1cm}
+**Name:** _____________________________________
+
+# Instructions:
+
+There are five questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+
+\vspace{1cm}
+
+
+# Part 1: Proportions 
+
+## 1. Calculating probabilities for a proportion 
+
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+
+### Solution 
+
+
+## 2.  Two-sided alternative Z-test for a proportion 
+
+A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 
+
+a) Test an appropriate hypothesis and state your conclusion. Be sure the appropriate assumptions and conditions are satisfied before you proceed.
+
+b) What would a Type I error mean in this situation? 
+
+
+### Solution 
+
+
+a) 
+
+
+**Step 1)** Define the unknown parameter and determine our significance level 
+
+$p =$  percentage of twin births to teenage girls; let's proceed with a significance level of $0.1$ 
+
+**Step 2)** Identify the null and alternative 
+
+$H_0: p = 0.03$ vs $H_A: p \neq 0.03$ 
+
+**Step 3)** Assess the required assumptions and conditions 
+
+Independence is reasonable since one mother having twins is independent of another mother having twins. The randomization condition may not be met but we could assume that this hospital has a representative sample of teen mothers with respect to twin births. If $H_0$ is true then we'd expect $np_0 = 14.07$ successes and $n(1-p_0)=454.93$ failures, which meets our condition on the sample size. Furthermore, this sample of $469$ teenage mothers is less than $10\%$ of all teen mothers.
+
+**Step 4)** Calculate the observed test statistic, and plot it
+
+$$T.S. = \frac{\frac{7}{469} - 0.03}{\sqrt{\frac{0.03(1-0.03)}{469}}} = -1.91$$
+
+**Step 5)** Shade the region corresponding to the p-value and then evaluate the p-value 
+
+We can find this in R with the following code: 
+```{r echo=TRUE}
+2*pnorm(-1.91, lower.tail=TRUE)
+```
+
+
+b) Since we rejected $H_0$, it is possible that we made a Type I error. This would mean that we (by chance) incorrectly concluded that the data provides evidence suggesting the rate of twin births for teenage monther is different from $0.03$. 
+
+
+# Part 2: Means 
+
+## 3. Calculating probabilities for a mean with the t-distribution 
+
+Organizers of a fishing tournament believe that the lake holds a sizable population of largemouth bass. They assume that the weights of these fish have a model that is skewed to the right with a mean of $3.5$ pounds and a standard deviation of $2.2$ pounds.
+
+a) Explain why a skewed model makes sense here.
+
+b) Explain why you cannot determine the probability that a largemouth bass randomly selected (“caught”) from the lake weighs over $3$ pounds.
+
+c) Each fisherman in the contest catches $5$ fish each day. Can you determine the probability that someone’s catch averages over $3$ pounds? Explain.
+
+d) The $12$ fishermen competing each caught the limit of $5$ fish. What’s the probability that the total catch of $60$ fish averaged more than $3$ pounds?
+
+
+### Solution 
+
+a) We would expect many smaller fish with a few larger fish. 
+
+b) This is because we don't know the exact shape of the distribution, we know it's skewed and therefore not Normal, but that's about all we know. 
+
+c) Not very reliably. Since we can deduce the distribution of the size of the fish is skewed, a sample of size $n=5$ isn't large enough for us to justify using the Central Limit Theorem to approximate the sampling distribution of the mean weight of these five fish. 
+
+d) Now that we're considering a sample of size $n=12\times 5 =60$, we can use the CLT to find a good approximate answer to this question. (Provided the population of the fish is greater than $600$ and that the catches are all independent of one another,,that is.) In the problem setting, we are given the mean $\mu = 3.5$ and standard deviation $\sigma = 2.2$. Thus, by the CLT, if $x_1,\dots, x_5=$ weight of the five fish caught by the first fisherman, $x_6,\dots, x_{10}=$ weight of the five fish caught by the second fisherman, etc, then 
+$$\bar{X} \sim N\left(\mu=3.5, var=\frac{\sigma^2}{n}=2.2^2\right).$$
+We can find the requested probability directly with R:
+```{r echo=TRUE}
+pnorm(60, 3.5, 2.2, lower.tail=FALSE)
+```
+
+Or, we can standardize the value of $3$ lbs by essentially finding what would have been our test statistic: 
+$$t = \frac{3 - 3.5}{\frac{2.2}{\sqrt{60}}} = -1.76,$$
+and based on the Z-table, this probability is approximately $1 - Pr(Z \leq -1.76) = 0.961$.
+
+## 4. One-sided alternative t-test 
+
+Suppose we purchase $n=6$ random bags of chips marked with a net weight of $35.4$ grams. We then carefully weighing the contents in each bag to find the following weight data (in grams):
+
+```{r echo=TRUE}
+chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
+```
+
+a) Is there evidence that the mean weight of these chip bags is less than advertised? 
+
+b) What would a Type II error mean in this situation? 
+
+
+### Solution 
+
+a) 
+
+**Step 1)** Define the unknown parameter and determine our significance level 
+
+$\mu =$ the mean weight of these types of chips; let's proceed with a significance level of $0.05$  
+
+**Step 2)** Identify the null and alternative 
+
+$H_0: \mu = 35.4 g$ vs $H_A: \mu < 35.4$ 
+
+**Step 3)** Assess the required assumptions and conditions 
+
+Independence and randomization are reasonable as long as we selected our sampling in a strategically random way. The nearly Normal condition might be violated however since there is one bag with an unusually heavy weight. Because of this, we'll do the test both with and without this extreme value removed and see how our results compare before drawing any conclusions. 
+
+**Step 4)** Calculate the observed test statistic, and plot it
+
+```{r echo=TRUE}
+mean(chips)
+sd(chips)
+```
+
+$$T.S. = \frac{35.533 - 35.4}{\frac{0.45}{\sqrt{6}}} = 0.726$$
+
+**Step 5)** Shade the region corresponding to the p-value and then evaluate the p-value 
+
+In R we could find this probability with:
+```{r echo=TRUE}
+pt(0.726, df=5, lower.tail=TRUE)
+```
+
+To re-do this analysis with the extreme data value removed, we're going to use the `t.test()` function in R which is a quicker way to do this analysis. 
+
+```{r echo=TRUE}
+chips_removed = c(35.5, 35.3, 35.1, 35.4, 35.5)
+t.test(chips_removed, alternative = "less", mu = 35.4)$p.value 
+```
+Notice that in either case, we have large p-values that indicate a lack of evidence against the null. 
+
+
+b) In this case, a Type II error is possible since we failed to reject $H_0$. Because the sample sizes are so small, these tests have very little statistical power and even if there was a difference, it'd be difficult to notice without collecting more data. Thus the Type II error is rather large. 
+
+## 5.  Two-sided alternative t-test 
+
+The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
+
+a) Why is this a one-sample test?
+
+b) If we believe the Missouri babies fairly represent American newborns, is there any evidence that U.S. babies and Australian babies do not weigh the same at birth?
+
+### Solution 
+
+a) The data from Australia are from a census, not a sample. So we only have one random sample of data from Missouri. 
+
+b) 
+
+
+**Step 1)** Define the unknown parameter and determine our significance level 
+
+$\mu =$ the mean weight of newborns in the US; let's proceed with a significance level of $0.05$ 
+
+**Step 2)** Identify the null and alternative 
+
+$H_0: \mu = 7.86lbs$ vs $H_A: \mu \neq 7.86lbs$ 
+
+**Step 3)** Assess the required assumptions and conditions 
+
+Independence and randomization are reasonable as long as the babies at this Missouri hospital are representative of all US newborns. Because the sample size is rather large, we don't need to worry about the nearly Normal condition.
+
+**Step 4)** Calculate the observed test statistic, and plot it
+
+$$T.S. = \frac{7.68 - 7.86}{\frac{1.31}{\sqrt{112}}} = -1.45$$
+
+**Step 5)** Shade the region corresponding to the p-value and then evaluate the p-value 
+
+```{r echo=TRUE}
+2*pt(-1.45, df=111, lower.tail=TRUE)
+```
+
+Since this p-value is larger than our significance level, we fail to reject the null and conclude that, based on this data, there is not enough statistical evidence to suggest that the average US baby's weight differs from the average Australian baby's weight. 
+
