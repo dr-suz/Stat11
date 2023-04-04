@@ -31,6 +31,19 @@ Additional topic for final:
 ## Practical vs statistical significance 
 
 
+## Types of conclusions 
+
+The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
+
+* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
+
+* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
+
+* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
+
+
+
+
 # Week 4 - Collecting data from experiments and observational studies
 
 *  

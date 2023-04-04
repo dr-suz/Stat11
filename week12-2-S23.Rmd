@@ -30,28 +30,21 @@ Random variable: $X$
 
 * Population mean, $\mu$ 
 
+  * In this case $X$ can follow just about any distribution because if the CLT applies, $\bar{X} \sim N(\mu, \sigma^2/n)$ 
+
 * Population proportion, $p$ 
+
+  * In this case $X \sim Bernoulli(p)$ 
 
 ## Two sample tests 
 
-Data: $x_1, x_2, \dots, x_{n_1}$ and $y_1, y_2 \dots, y_{n_2}$
+Data: $\{x_1, x_2, \dots, x_{n_1}\}$ and $\{y_1, y_2 \dots, y_{n_2}\}$
 
-Raandom variables: $X$ and $Y$ 
+Random variables: $X$ and $Y$ 
 
 * Difference in population means $\mu_1 - \mu_2$ 
 
 * Difference in population proportions, $p_1 - p_2$
-
-## Types of conclusions 
-
-The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
-
-* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
-
-* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
-
-* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
-
 
 ## Reality check 
 
