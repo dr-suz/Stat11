@@ -69,7 +69,7 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 If you are analyzing this data in Excel you first need to [download the data set for HW 4](https://github.com/ProfSuzy/Stat11/blob/main/Data/gardasil_data.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `gardasil.csv`. 
 
 If you are analyzing this data in RStudio, you will import the data with the following command
-```{r, eval=FALSE}
+```{r, eval=TRUE}
 gardasil <- read.delim(
         "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt",
         sep="\t")
@@ -91,8 +91,28 @@ Consider the mean age of $11$ to $26$ year old female patients who visited the c
 
 ## Solution 1 
 
+(a) To use the CLT we need to assume that the patients ages are all independent of one another and that this sample, although it is not random, is somehow representative of a larger population. This may not be unreasonable to assume. Because our sample size is so large, even though the age of the patients is concentrated around 18 years, we can use the CLT to approximate the probabilities associated with the mean age of this sample. 
 
-### For graders: 
+(b) An 85\% CI for the mean age of these patients is 18.385 years to 18.709 years. 
+
+One could use the code:
+```{r}
+t.test(gardasil$Age, conf.level=0.85)
+```
+Or, equivalently, 
+```{r}
+n=1413 
+xbar = mean(gardasil$Age)
+SE = sd(gardasil$Age)/sqrt(n)
+t_crit = qt((1-0.85)/2, df=n-1, lower.tail=FALSE)
+
+xbar - (t_crit*SE)
+xbar + (t_crit*SE)
+```
+
+### For graders
+
+Note there is a typo in the intro paragraph where I state that the sample size is $n=1414$. The correct sample size is $n=1413$ so please give credit to students who use either sample size. 
 
 
 # Problem 2 
@@ -101,8 +121,27 @@ Find a $90\%$ confidence interval for $p=$ the probability that an $11$ to $26$ 
 
 ## Solution 2
 
+We are 90\% confident that the proportion of 11-26 year old females who are interested in the HPV vaccine and actually complete the three required shots is between 31.17\% and 35.29\%.  
 
-### For graders: 
+One could use the following code:
+```{r}
+table(gardasil$Completed)
+prop.test(469, n=1413, conf.level = 0.9, correct=FALSE) 
+```
+Or, equivalently, 
+```{r}
+table(gardasil$Completed)
+n = 1413
+x = 469
+p_hat = x/n
+z_crit = qnorm((1-0.9)/2,0,1,lower.tail=FALSE)
+SE = sqrt(p_hat*(1-p_hat)/n)
+p_hat - (z_crit * SE)
+p_hat + (z_crit * SE)
+```
+
+
+### For graders
 
 
 
@@ -114,15 +153,56 @@ Determine how many **more** patients we would need to survey in order to find a 
 
 ## Solution 3
 
-Version 1) $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of non-white patients}}$ 
+**Version 1)** $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of non-white patients}}$ 
+
+```{r}
+table(gardasil$Race)
+n_nonW = 443+52+186
+
+table(gardasil$Completed[gardasil$Race!=0])
+x_complete = 189
+
+ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+p_hat = x_complete / n_nonW 
+
+(p_hat*(1-p_hat))/(ME/z_star)^2
+```
+The required sample size is $n \geq 78$, which is smaller than the sample we already have. Thus, we don't need any additional patients to produce the required CI. 
+
+**Version 2)** $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of patients who completed all three shots}}$
 
 
-Version 2) $\hat{p}=\frac{\text{number of non-white patients who have completed all three shots}}{\text{number of patients who completed all three shots}}$
+```{r}
+table(gardasil$Completed)
+n_complete = 469
+
+table(gardasil$Race[gardasil$Completed==1])
+x_nonW = 105+17+67 
+
+ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+p_hat = x_nonW / n_complete 
+
+(p_hat*(1-p_hat))/(ME/z_star)^2
+```
+The required sample size is $n \geq 93$, which is smaller than the sample we already have. Thus, we don't need any additional patients to produce the required CI. 
+
+
+**Version 3)** Suppose $\hat{p}$ is not yet observed and use a value of $0.5$ to answer the problem.
+
+```{r}
+ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+
+(0.5*(1-0.5))/(ME/z_star)^2
+```
+The required sample size is $n \geq 97$, which is smaller than the sample we already have. Thus, we don't need any additional patients to produce the required CI. 
 
 
 ### For graders: 
 
-Note: There are actually a couple of valid ways to think about this problem. Either approach is correct. 
+Note: There are actually a several valid ways to think about this problem. Any of the approaches above should be counted as correct. In any version, the correct answer is that we don't need any additional patients. Our data has more than enough observations to be able to estimate $p$ with this level of certainty and precision. 
 
 
 # Problem 4 
@@ -137,8 +217,28 @@ Conduct a hypothesis test to determine if the average number of shots per patien
 
 ## Solution 4
 
+(a) Let $\mu =$ average number of shots completed by interested 11-26 year old patients. We are testing 
+$$H_0: \mu = 3, \quad\text{vs}\quad H_A:\mu < 3.$$ 
 
-### For graders: 
+(b) 
+
+(c) The p-value for this test is incredibly small (basically zero) therefore, at any level of significance, we reject the null in favor of the alternative. This means that based on these data, there is evidence suggesting that the average number of shots completed by this population is less than the three required. 
+
+One could use the following code:
+```{r}
+t.test(gardasil$Shots, mu=3, alternative="less")
+```
+Or equivalently, 
+```{r}
+n=1413
+TestStat = (mean(gardasil$Shots) - 3)/(sd(gardasil$Shots)/sqrt(n))
+pt(TestStat, df=n-1, lower.tail = TRUE)
+```
+
+
+### For graders
+
+
 
 
 # Problem 5 
@@ -149,5 +249,24 @@ where $p=$ the probability that an $11$ to $26$ year old female who is intereste
 
 ## Solution 5
 
+One could use the following code: 
+```{r}
+table(gardasil$MedAssist)
+prop.test(1138, n=1413, p=0.5, alternative="less", correct=FALSE)
+```
 
-### For graders: 
+Or equivalently, 
+```{r}
+table(gardasil$MedAssist)
+n = 1413 
+x = 1138
+
+TestStat = ((x/n) - 0.5)/sqrt(.5*.5/n)
+
+pnorm(TestStat, lower.tail=TRUE)
+```
+
+The p-value for this test is actually $1$ therefore, at any level of significance, we fail to reject the null hypothesis. This means that based on these data, there is no evidence to suggest that the proportion of patients without medical assistance is less than 50\%.  
+
+
+### For graders 
