@@ -10,6 +10,10 @@ output:
 
 The data set you will analyse in this homework..... The purpose of this assignment is ....data set consisting of $X$ variables and $X$ observations. 
 
+**Have students choose from any of the other previous data sets in GHWs and explore the data and answer 1 inference question. (meant to mirror the work they'll have to do for their final project if doing Option B). To be graded for completion.**
+
+
+
 
 # Required Tech 
 
