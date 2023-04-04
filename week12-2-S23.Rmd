@@ -19,19 +19,30 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
+# 1. Recap: Hypothesis tests
 
 
-# 1. Paired t-test 
+## One sample tests 
 
+Data: $x_1, x_2, \dots, x_n$ 
 
-# 2. Effect size 
+Random variable: $X$
 
+* Population mean, $\mu$ 
 
+* Population proportion, $p$ 
 
-# 3. Blocking  
+## Two sample tests 
 
+Data: $x_1, x_2, \dots, x_{n_1}$ and $y_1, y_2 \dots, y_{n_2}$
 
-# 4. Error rates and power 
+Raandom variables: $X$ and $Y$ 
+
+* Difference in population means $\mu_1 - \mu_2$ 
+
+* Difference in population proportions, $p_1 - p_2$
+
+## Types of conclusions 
 
 The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
 
@@ -40,3 +51,59 @@ The only way to reduce both types of error is to collect more evidence or, in st
 * $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
 
 * $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
+
+
+## Reality check 
+
+[sophia's question about what you'd do by default and when to know if we need an actual test or interval]
+
+If you feel like you're starting to get lost with all the different statistical methods we've explored in this unit, don't fret! There are plenty of flow-chart-like guides to using different tests. For example, here is a [flow-chart created by a stats grad student](https://statsandr.com/blog/what-statistical-test-should-i-do/). You could also make your own! The starting point for using any of these kinds of guides is to first assess the data that you have (or want to have). What constitutes an observational unit? What are the variables and what are their types? Do you expect there to be any relationships among the variables given your knowledge of the subject? What kind of population is your sample representative of? 
+
+
+
+# 2. Paired t-test 
+
+[describe how this situation simplifies to the one sample t-test scenario]
+Paired data, transformed to new variable representing the difference, sample size is the number of pairs/differences  
+
+$$SE(\bar{d}) = \sqrt{\frac{s_d^2}{n}}$$
+
+## Assumptions and conditions 
+
+* Paired assumption 
+
+  * The two samples are strongly dependent in a paired manner. Specifically, each data point from one sample has a corresponding paired data point in the other sample. This typically is the case when our data represent before and after measurements on the same observational unit. Other examples include: 
+  
+  * the IQ scores of twins,
+  
+  * reaction times with dominant and non-dominant hands, 
+  
+  * happiness levels of married couples. 
+  
+* Independence assumption 
+
+  * Each observed difference (between a pair of data points) is independent of the other differences 
+
+* Randomization condition 
+
+* Nearly Normal Condition or the number of pairs is large enough for the CLT to approximate the sampling distribution of $\bar{x}_1$ and $\bar{x}_2$. 
+
+
+## Paired t-interval 
+
+$$\bar{d} \pm \left[t^*_{a, n-1} \times SE(\bar{d})  \right],$$
+where $t^*_a$ is the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution with $(n-1)$ degrees of freedom.
+
+## Paired t-test 
+
+Let $\mu_d = \mu_1 - \mu_2$ be the unknown true difference in the means of two dependent populations. 
+
+$$H_0: \mu_d = \Delta_0$$ 
+
+$$T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student's t dist with $(n-1)$ degrees of freedom}$$
+# 3. Examples of two sample inference questions 
+
+
+# 4. Looking ahead 
+
+Next class... 
