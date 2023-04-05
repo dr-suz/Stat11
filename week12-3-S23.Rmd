@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 12"
-subtitle: "Paired Samples and Blocks" 
+subtitle: "Paired Sample t procedures" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
@@ -21,12 +21,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 
-Movie connetion: everything everywhere all at once and p-values 
 
 
-
-
-# 2. Paired t-test 
+# 1. Paired two sample procedures  
 
 [describe how this situation simplifies to the one sample t-test scenario]
 Paired data, transformed to new variable representing the difference, sample size is the number of pairs/differences  
@@ -66,3 +63,8 @@ Let $\mu_d = \mu_1 - \mu_2$ be the unknown true difference in the means of two d
 $$H_0: \mu_d = \Delta_0$$ 
 
 $$T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student's t dist with $(n-1)$ degrees of freedom}$$
+# 2. Looking ahead 
+
+Instructions for creating your final project poster have been shared on Moodle.  
+ 
+ 

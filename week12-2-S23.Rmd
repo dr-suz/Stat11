@@ -129,7 +129,7 @@ If you feel like you're starting to get lost with all the different statistical 
 
 # 3. Looking ahead 
 
-* Next class, we will cover a <span style="color:green">paired t-test</span> for a difference in means. This is a special two-sample procedure that we use when our two samples are actually strongly connected in some way. We will also spend some time working through more examples of inference problems. 
+* Next class, we will finish these examples and cover a <span style="color:green">paired t-test</span> for a difference in means. This is a special two-sample procedure that we use when our two samples are actually strongly connected in some way. 
 
 * On Monday next week, you will have some time to work through an in-class worksheet with your classmates. In this worksheet, you will practice determining which method to use and setting up the solutions. You can then practice finding the solutions on your own as you study for Quiz 3. 
 
