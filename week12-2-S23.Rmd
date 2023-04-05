@@ -47,7 +47,7 @@ The National Perinatal Statistics Unit of the Sydney  Children’s Hospital repo
 
 <span style="color:blue">Q) Why do we bother with hypothesis tests?</span>
 
-Suppose we want to know if the probability of success is really $0.5$, i.e. $H_0: p = 0.5$. After collecting our data of observed successes and failures, why not just stop when we calculate $\hat{p}=0.81$? Since $0.81 > 0.5$, why can't we just conclude that no, the probability of success probably not really $0.5$?   
+<span style="color:blue"Suppose we want to know if the probability of success is really $0.5$, i.e. $H_0: p = 0.5$. After collecting our data of observed successes and failures, why not just stop when we calculate $\hat{p}=0.81$? Since $0.81 > 0.5$, why can't we just conclude that no, the probability of success is probably not really $0.5$?</span>   
 
 
 <br> 
@@ -67,12 +67,51 @@ Random variables: $X$ and $Y$
 
 * Difference in population proportions, $p_1 - p_2$
 
+
 ## Example: Hypothesis test for a difference in proportions 
 
+Do people who work for non-profits differ from those who work at for-profit companies when it comes to job satisfaction? 
+
+Separate random samples were collected by a polling agency to investigate the difference. Data collected from $422$ employees at non-profit organizations revealed. that $377$ of them were "highly satisfied". From the for-profit companies, $431$ out of $518$ employees reported the same level of satisfaction. 
+
+
+**Step 1)** Identify and define the population parameter and choose your significance level. 
+
+**Step 2)** State the null and alternative hypotheses.
+
+**Step 3)** Assess the required assumptions and conditions. 
+
+**Step 4)** Calculate the test statistic and plot it.
+
+**Step 5)** Shade the area under the curve that corresponds to your p-value and then calculate it.  
+
+<br>
 
 ## Example: Confidence interval for a difference in means 
 
+On average, how much more money do consumers spend at Target compared to Walmart? 
 
+Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. 
+
+| | Walmart | Target |
+|:---|:---|:---|
+| $\bar{x}$ | $\$45$ | $\$53$ |
+| s | $\$21$ | $\$19$ | 
+
+
+**Step 1)** Identify and define the population parameter and choose your confidence level. 
+
+**Step 2)** Calculate the sample estimate for the population parameter. 
+
+**Step 3)** Assess the required assumptions and conditions. 
+
+**Step 4)** Find the critical value corresponding to your confidence level. 
+
+**Step 5)** Calculate the standard error of your sample estimate. 
+
+**Step 6)** Calculate the lower and upper bounds of your confidence interval. 
+
+<br>
 
 ## Where to start? 
 
