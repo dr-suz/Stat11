@@ -88,7 +88,7 @@ where $s_1^2 = \frac{1}{n_1-1}\sum_{i=1}^{n_1}(x_{1,i} - \bar{x}_1)^2$ and $s_2^
 ## Two-sample independent t-interval 
 
 $$(\bar{x}_1 - \bar{x}_2) \pm \left[t^*_a \times SE(\bar{x}_1 - \bar{x}_2)  \right],$$
-where $t^*_a$ is again, the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution, but the degrees of freedom are difficulty to calculate, so we typically let computers do this part. 
+where $t^*_a$ is again, the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution, but the degrees of freedom are difficult to calculate, so we typically let computers do this part. 
 
 ## Two-sample independent t-test 
 

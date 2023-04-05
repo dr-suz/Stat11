@@ -47,7 +47,7 @@ The National Perinatal Statistics Unit of the Sydney  Children’s Hospital repo
 
 <span style="color:blue">Q) Why do we bother with hypothesis tests?</span>
 
-<span style="color:blue"Suppose we want to know if the probability of success is really $0.5$, i.e. $H_0: p = 0.5$. After collecting our data of observed successes and failures, why not just stop when we calculate $\hat{p}=0.81$? Since $0.81 > 0.5$, why can't we just conclude that no, the probability of success is probably not really $0.5$?</span>   
+<span style="color:blue">Suppose we want to know if the probability of success is really $0.5$, i.e. $H_0: p = 0.5$. After collecting our data of observed successes and failures, why not just stop when we calculate $\hat{p}=0.81$? Since $0.81 > 0.5$, why can't we just conclude that no, the probability of success is probably not really $0.5$?</span>   
 
 
 <br> 
@@ -70,7 +70,7 @@ Random variables: $X$ and $Y$
 
 ## Example: Hypothesis test for a difference in proportions 
 
-Do people who work for non-profits differ from those who work at for-profit companies when it comes to job satisfaction? 
+Are people who work for non-profits generally more satisfied with their jobs compared to those who work at for-profit companies?  
 
 Separate random samples were collected by a polling agency to investigate the difference. Data collected from $422$ employees at non-profit organizations revealed. that $377$ of them were "highly satisfied". From the for-profit companies, $431$ out of $518$ employees reported the same level of satisfaction. 
 
@@ -91,7 +91,7 @@ Separate random samples were collected by a polling agency to investigate the di
 
 On average, how much more money do consumers spend at Target compared to Walmart? 
 
-Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. 
+Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. Suppose a computer already calculated the degrees of freedom to be $162.75$. 
 
 | | Walmart | Target |
 |:---|:---|:---|
