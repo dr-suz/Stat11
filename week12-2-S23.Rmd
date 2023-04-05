@@ -19,24 +19,45 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-# 1. Recap: Hypothesis tests
+# 1. Recap: One sample tests 
 
+Data: $x_1, x_2, \dots, x_n$ corresponds to a column of our data set 
 
-## One sample tests 
-
-Data: $x_1, x_2, \dots, x_n$ 
-
-Random variable: $X$
+Random variable: $X$ corresponds to the probability model for the variable we observe in our data set 
 
 * Population mean, $\mu$ 
 
-  * In this case $X$ can follow just about any distribution because if the CLT applies, $\bar{X} \sim N(\mu, \sigma^2/n)$ 
+  * In this case $X$ can follow just about any distribution (skewed, bimodal, discrete, etc). We only care that $E(X) = \mu$ and $Var(X) = \sigma^2$. 
+  
+  * As long as the CLT applies, then the sampling distribution for the sample mean is: $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$. 
 
 * Population proportion, $p$ 
 
-  * In this case $X \sim Bernoulli(p)$ 
+  * In this case $X \sim Bernoulli(p)$ so $E(X) = p$ and $Var(X) = p(1-p)$. 
+  
+  * As long as we have enough failures and successes to use the Normal approximation to the Binomial distribution, then the sampling distribution for the sample proportion is: $\hat{p} \sim N\left(p, \frac{p(1-p)}{n} \right)$.
+  
+## Example: Week 11 Worksheet Problem 5 
 
-## Two sample tests 
+The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
+
+<br> 
+
+## Reality check 
+
+<span style="color:blue">Q) Why do we bother with hypothesis tests?</span>
+
+Suppose we want to know if the probability of success is really $0.5$, i.e. $H_0: p = 0.5$. After collecting our data of observed successes and failures, why not just stop when we calculate $\hat{p}=0.81$? Since $0.81 > 0.5$, why can't we just conclude that no, the probability of success probably not really $0.5$?   
+
+
+<br> 
+
+To answer this question, think back on some of the different examples we've solved. Does this approach work in the baby weight example above? Would it work in our experiment of randomly selecting $20$ jelly beans and counting the number of green ones? Would you be satisfied with this reasoning in the drinking water contamination example? 
+
+<br> 
+
+
+# 2. Recap: Two sample tests 
 
 Data: $\{x_1, x_2, \dots, x_{n_1}\}$ and $\{y_1, y_2 \dots, y_{n_2}\}$
 
@@ -46,57 +67,33 @@ Random variables: $X$ and $Y$
 
 * Difference in population proportions, $p_1 - p_2$
 
-## Reality check 
-
-[sophia's question about what you'd do by default and when to know if we need an actual test or interval]
-
-If you feel like you're starting to get lost with all the different statistical methods we've explored in this unit, don't fret! There are plenty of flow-chart-like guides to using different tests. For example, here is a [flow-chart created by a stats grad student](https://statsandr.com/blog/what-statistical-test-should-i-do/). You could also make your own! The starting point for using any of these kinds of guides is to first assess the data that you have (or want to have). What constitutes an observational unit? What are the variables and what are their types? Do you expect there to be any relationships among the variables given your knowledge of the subject? What kind of population is your sample representative of? 
+## Example: Hypothesis test for a difference in proportions 
 
 
-
-# 2. Paired t-test 
-
-[describe how this situation simplifies to the one sample t-test scenario]
-Paired data, transformed to new variable representing the difference, sample size is the number of pairs/differences  
-
-$$SE(\bar{d}) = \sqrt{\frac{s_d^2}{n}}$$
-
-## Assumptions and conditions 
-
-* Paired assumption 
-
-  * The two samples are strongly dependent in a paired manner. Specifically, each data point from one sample has a corresponding paired data point in the other sample. This typically is the case when our data represent before and after measurements on the same observational unit. Other examples include: 
-  
-  * the IQ scores of twins,
-  
-  * reaction times with dominant and non-dominant hands, 
-  
-  * happiness levels of married couples. 
-  
-* Independence assumption 
-
-  * Each observed difference (between a pair of data points) is independent of the other differences 
-
-* Randomization condition 
-
-* Nearly Normal Condition or the number of pairs is large enough for the CLT to approximate the sampling distribution of $\bar{x}_1$ and $\bar{x}_2$. 
+## Example: Confidence interval for a difference in means 
 
 
-## Paired t-interval 
 
-$$\bar{d} \pm \left[t^*_{a, n-1} \times SE(\bar{d})  \right],$$
-where $t^*_a$ is the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution with $(n-1)$ degrees of freedom.
+## Where to start? 
 
-## Paired t-test 
+If you feel like you're starting to get lost with all the different statistical methods we've explored in this unit, don't fret! There are plenty of flow-chart-like guides to using different tests. For example, here is a [flow-chart created by a stats grad student](https://statsandr.com/blog/what-statistical-test-should-i-do/). You could also make your own! The starting point for using any of these kinds of guides is to first assess the data that you have (or want to have). This means you need to be able to answer questions like: 
 
-Let $\mu_d = \mu_1 - \mu_2$ be the unknown true difference in the means of two dependent populations. 
+* What constitutes an observational unit? 
 
-$$H_0: \mu_d = \Delta_0$$ 
+* What are the variables and what are their types? 
 
-$$T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student's t dist with $(n-1)$ degrees of freedom}$$
-# 3. Examples of two sample inference questions 
+* Do you expect there to be any relationships among the variables given your knowledge of the subject? 
+
+* Is your sample random? If not, is your sample conceivably representative of any larger population? 
 
 
-# 4. Looking ahead 
 
-Next class... 
+# 3. Looking ahead 
+
+* Next class, we will cover a <span style="color:green">paired t-test</span> for a difference in means. This is a special two-sample procedure that we use when our two samples are actually strongly connected in some way. We will also spend some time working through more examples of inference problems. 
+
+* On Monday next week, you will have some time to work through an in-class worksheet with your classmates. In this worksheet, you will practice determining which method to use and setting up the solutions. You can then practice finding the solutions on your own as you study for Quiz 3. 
+
+* Wednesday's class next week will be devoted entirely to student questions. I'll provide a quick recap of the material we've covered thus far in Unit 3 but otherwise, class time is for you to ask me questions. 
+
+* Please check the calendar for updates. Group Homework \#5 will be released this week. It is going to be graded for completion and is designed to help you practice the different software tools we've used throughout the semester. The idea is that in completing GHW \#5, you will be refreshing your memory of the different methods we've learned about. This is especially helpful if you're doing the final project Option B.    

@@ -21,3 +21,48 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 
+Movie connetion: everything everywhere all at once and p-values 
+
+
+
+
+# 2. Paired t-test 
+
+[describe how this situation simplifies to the one sample t-test scenario]
+Paired data, transformed to new variable representing the difference, sample size is the number of pairs/differences  
+
+$$SE(\bar{d}) = \sqrt{\frac{s_d^2}{n}}$$
+
+## Assumptions and conditions 
+
+* Paired assumption 
+
+  * The two samples are strongly dependent in a paired manner. Specifically, each data point from one sample has a corresponding paired data point in the other sample. This typically is the case when our data represent before and after measurements on the same observational unit. Other examples include: 
+  
+  * the IQ scores of twins,
+  
+  * reaction times with dominant and non-dominant hands, 
+  
+  * happiness levels of married couples. 
+  
+* Independence assumption 
+
+  * Each observed difference (between a pair of data points) is independent of the other differences 
+
+* Randomization condition 
+
+* Nearly Normal Condition or the number of pairs is large enough for the CLT to approximate the sampling distribution of $\bar{x}_1$ and $\bar{x}_2$. 
+
+
+## Paired t-interval 
+
+$$\bar{d} \pm \left[t^*_{a, n-1} \times SE(\bar{d})  \right],$$
+where $t^*_a$ is the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution with $(n-1)$ degrees of freedom.
+
+## Paired t-test 
+
+Let $\mu_d = \mu_1 - \mu_2$ be the unknown true difference in the means of two dependent populations. 
+
+$$H_0: \mu_d = \Delta_0$$ 
+
+$$T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student's t dist with $(n-1)$ degrees of freedom}$$
