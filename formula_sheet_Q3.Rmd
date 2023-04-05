@@ -134,33 +134,62 @@ If $X \sim Bin(n,p)$ then $Pr(X = x) = nCx \cdot p^x \cdot (1-p)^{n-x}$, where $
 
 Under appropriate conditions, the sampling distribution for the sample proportion is 
 $$\hat{p} \sim N\left(p, \frac{p(1-p)}{n} \right).$$ 
-Under appropriate conditionss, the sampling distribution for the sample mean is
+The standard error for the sample proportion is $SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$
+
+
+Under appropriate conditions, the sampling distribution for the sample mean is
 $$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n} \right).$$
+The standard error for the sample mean is $SE(\bar{x}) = \frac{s}{\sqrt{n}}$.
 
 # Confidence Intervals 
 
 ## For a single proportion 
 
+$$\hat{p} \pm [z^*_{a} \times SE(\hat{p})]$$ 
+where $z^*_{a}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a $N(0,1)$ distribution for confidence level $a$. 
+
 ## For a single mean 
 
+$$\bar{x} \pm [t^*_{a,(n-1)} \times  SE(\bar{x})]$$ 
+where $t^*_{a, (n-1)}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a t-distribution with $n-1$ degrees of freedom, for confidence level $a$. 
+
 ## For a difference in proportions 
+
+$$(\hat{p}_1 - \hat{p}_2) \pm [z^*_{a} \times SE(\hat{p}_1 - \hat{p}_2)]$$ 
+where $SE(\hat{p}_1 - \hat{p}_2) =\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}$ and  $z^*_{a}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a $N(0,1)$ distribution for confidence level $a$. 
 
 ## For a difference in means 
 
 ### Independent samples 
 
+$$(\bar{x}_1 - \bar{x}_2) \pm [t^*_{a, (\nu)} \times SE(\bar{x}_1 - \bar{x}_2)]$$ 
+where $SE(\bar{x}_1 - \bar{x}_2) =\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$ and  $t^*_{a, (\nu)}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a t-distribution with $\nu$ degrees of freedom, for confidence level $a$. (These degrees of freedom will always be provided to you as they are complicated to derive.)
+
 ### Paired samples 
+
+$$\bar{d} \pm [t^*_{a, (n-1)} \times SE(\bar{d})]$$ 
+where $SE(\bar{d}) =$ and  $t^*_{a, (n-1)}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a t-distribution with $n-1$ degrees of freedom, for confidence level $a$. 
 
 # Hypothesis Tests 
 
 ## For a single proportion 
 
+We can test $H_0: p = p_0$ with the test statistic $T.S. = \frac{\hat{p} - p_0}{st.dev(\hat{p})}$, where $st.dev(\hat{p}) = \sqrt{\frac{p_0 (1-p_0)}{n}}$.
+
 ## For a single mean 
 
+We can test $H_0: \mu = \mu_0$ with the test statistic $T.S. = \frac{\bar{x} - \mu_0}{SE(\bar{x})}$.
+
 ## For a difference in proportions 
+
+We can test $H_0: p_1 - p_2 = 0$ with the test statistic $T.S. = \frac{(\hat{p}_1 - \hat{p}_2) - 0}{SE(\hat{p}_1 - \hat{p}_2)}$.
 
 ## For a difference in means 
 
 ### Independent samples 
 
+We can test $H_0: \mu_1 - \mu_2 = \Delta_0$ with the test statistic $T.S. = \frac{(\bar{x}_1 - \bar{x}_2) - \Delta_0}{SE(\bar{x}_1 - \bar{x}_2)}$.
+
 ### Paired samples 
+
+We can test $H_0: \mu_d = \Delta_0$ with the test statistic $T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})}$.
