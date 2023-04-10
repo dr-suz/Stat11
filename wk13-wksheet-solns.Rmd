@@ -61,19 +61,19 @@ Means of numerically ranked preferences (depends on how the question is asked bu
 
 7. Do cows tend to produce more milk if their handler speaks to them by name every day than if the handler does not speak to them by name? A farmer randomly assigned half of her cows to each group and then compared how much milk they produced after one month. 
 
-Means, two sample independent, hypothesis test, experiment. $H_0: \mu_{name} - \mu_{noname} = 0 $ vs $H_A: \mu_{name} - \mu_{noname} > 0$.  
+Means, two sample independent, hypothesis test, experiment. $H_0: \mu_{name} - \mu_{noname} = 0 $ vs $H_A: \mu_{name} - \mu_{noname} > 0$.  Causal, possibly generalizable. 
 \vspace{1cm}
 
 8. A recent survey investigated how much more likely American parents are to playing video games in their down-time compared to American adults who do not have children. 
 
-Proportions, two sample independent, confidence interval, observational study.  
+Proportions, two sample independent, confidence interval, observational study. Not causal, possible generalizable.   
 \vspace{1cm}
 
 9. A researcher is interested in studying whether Americans gained weight, on average, while in quarantine by virtue of the COVID-19 pandemic. She took a random sample of Americans and asked their weight before the pandemic and their weight after quarantine ended in mid-2021.
 
-Means, two sample paired, hypothesis test, observational study. $H_0: \mu_{pre} - \mu_{post} = 0$ vs $H_A: \mu_{pre} - \mu_{post} < 0$.  
+Means, two sample paired, hypothesis test, observational study. $H_0: \mu_{pre} - \mu_{post} = 0$ vs $H_A: \mu_{pre} - \mu_{post} < 0$. Generalizable, not causal.  
 \vspace{1cm}
 
 10. Do male science teachers tend to receive higher salaries than female science teachers and, if so, how much higher are their salaries?  
 
-Means, two sample independent, confidence interval, observational study. 
+Means, two sample independent, confidence interval, observational study. Not causal, possibly generalizable. 
