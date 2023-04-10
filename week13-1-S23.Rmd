@@ -1,0 +1,34 @@
+---
+title: "Stat 11 Week 13"
+subtitle: "Review of Unit 3" 
+author: "Prof. Suzy Thornton"
+date: "Spring 2023"
+lang: "en-US"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+
+
+# 1. Data Introduction 
+
+The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/wk13-wksheet.html) ....
+
+
+# 2. Analysis Goals  
+
+
+
+# 3. Summary of Results  
+
+* 
