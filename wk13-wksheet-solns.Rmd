@@ -1,0 +1,79 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: 'Week 13: Reviewing Methods of Unit 3 - Solutions'
+output:
+  html_document: default
+  pdf_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** There are 5 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+<br>
+<br>
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+
+# Research questions 
+
+1. One hundred insomnia patients are randomly selected for a clinical trial. Fifty are randomly assigned to a placebo and the other $50$ are given a mild sedative. Which subjects sleep more hours and how many more hours do they tend to sleep? 
+
+
+Means, two sample independent, confidence interval, experiment. Change in sleep is due to the sedative and generalizable to larger population of insomnia patients.  
+\vspace{1cm}
+
+2. Health recommendations suggest walking $10,000$ steps per day. Suppose that you collect data from a sample of Fitbit users and you want to determine if they average more than $10,000$ steps per day. 
+
+Means, one sample, hypothesis test, observational study. $H_0: \mu = 10000$ vs $H_A: \mu > 10000$. If data is randomly selected then conclusions are generalizable to larger population of Fitbit users. There is nothing to randomly assign.   
+\vspace{1cm}
+
+3. Are people who smoke tobacco cigarettes more likely to suffer from lung cancer than people who smoke marijuana cigarettes? 
+
+Proportions, two sample, hypothesis test, experiment (likely, not specified). $H_0: p_{tob} - p_{mj} = 0$ vs $H_A: p_{tob} - p_{mj} >0$. If data is randomly selected, then conclusions are generalizable to a larger population of tobacco or marijuana smokers. It is unethical to assign treatments so cause and effect conclusions can not be determined from this single study. 
+\vspace{1cm}
+
+4. The manager of a company’s human resource department examines employee attendance records to investigate whether more than $20\%$ of employee sick days are taken on Fridays.
+
+Proportions, one sample, hypothesis test, observational study (likely, not specified). $H_0: p = 0.2$ vs $H_A: p > 0.2$. If the manager randomly selects the sample of sick days, then the results are generalizable to the larger population of all sick days. There is nothing to randomly assign. 
+\vspace{1cm}
+
+5.  An advocacy organization surveys $960$ Canadians to see how many report being born in another country. Similarly, $1250$ U.S. citizens are asked whether or not they were born in a foreign country. The researchers want to determine if the proportion of foreign born people is the same in the United States as in Canada. 
+
+Proportions, two sample independent, hypothesis test, observational study. $H_0: p_{C} - p_{US} = 0$ vs $H_A: p_{C} - p_{US} \neq 0$. If randomization is used in the collection of data from each population, then results are generalizable to the larger population of citizens of each country. There is nothing to randomly assign.  
+\vspace{1cm}
+
+6.  A group of college freshmen are asked about the quality of the university cafeteria. A year later, the same students are asked about the cafeteria quality again. Do student's opinions change during their time at school? 
+
+Means of numerically ranked preferences (depends on how the question is asked but if only yes/no then can't pair), two sample paired, hypothesis test, observational study. $H_0: \mu_{diff} = 0$ vs $H_A: \mu_{diff} \neq 0$. If randomization is used in the collection of the initial people surveyed, then results are generalizable to that particular class of students (arguably also to the population of all students at this college). If use of the cafeteria is not randomly assigned, then we can't say anything about whether or not the additional time at the college is what causes the change in opinion.     
+\vspace{1cm}
+
+7. Do cows tend to produce more milk if their handler speaks to them by name every day than if the handler does not speak to them by name? A farmer randomly assigned half of her cows to each group and then compared how much milk they produced after one month. 
+
+Means, two sample independent, hypothesis test, experiment. $H_0: \mu_{name} - \mu_{noname} = 0 $ vs $H_A: \mu_{name} - \mu_{noname} > 0$.  
+\vspace{1cm}
+
+8. A recent survey investigated how much more likely American parents are to playing video games in their down-time compared to American adults who do not have children. 
+
+Proportions, two sample independent, confidence interval, observational study.  
+\vspace{1cm}
+
+9. A researcher is interested in studying whether Americans gained weight, on average, while in quarantine by virtue of the COVID-19 pandemic. She took a random sample of Americans and asked their weight before the pandemic and their weight after quarantine ended in mid-2021.
+
+Means, two sample paired, hypothesis test, observational study. $H_0: \mu_{pre} - \mu_{post} = 0$ vs $H_A: \mu_{pre} - \mu_{post} < 0$.  
+\vspace{1cm}
+
+10. Do male science teachers tend to receive higher salaries than female science teachers and, if so, how much higher are their salaries?  
+
+Means, two sample independent, confidence interval, observational study. 
