@@ -22,13 +22,21 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # 1. Data Introduction 
 
-The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/wk13-wksheet.html) ....
+The [in-class worksheet for Week 13](https://profsuzy.github.io/Stat11/wk13-wksheet.html) proposes ten different research questions. First you will familiarize yourself with each research question. Then you will work with your group mates to determine an analysis plan to answer each question.
 
 
 # 2. Analysis Goals  
 
+* Apply your understanding of the inference methods we've covered thus far including 
 
+  * One sample inference for a proportion or mean 
+  
+  * Two sample inference for proportions or means of independent groups 
+  
+  * Two sample inference for paired means 
+  
+* Recognize the important role of statistical analysis that does not involve any mathematical or computational calculations.  
 
 # 3. Summary of Results  
 
-* 
+* For various research questions, you can design a careful statistical inference procedure that can provide a relevant answer. 
