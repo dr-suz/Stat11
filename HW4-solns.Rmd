@@ -91,7 +91,7 @@ Consider the mean age of $11$ to $26$ year old female patients who visited the c
 
 ## Solution 1 
 
-(a) To use the CLT we need to assume that the patients ages are all independent of one another and that this sample, although it is not random, is somehow representative of a larger population. This may not be unreasonable to assume. Because our sample size is so large, even though the age of the patients is concentrated around 18 years, we can use the CLT to approximate the probabilities associated with the mean age of this sample. 
+(a) To use the Central Limit Theorem we need to assume that the patients ages are all independent of one another and that this sample, although it is not random, is somehow representative of a larger population. This may not be unreasonable to assume. (This sample size is also less than $10\%$ the size of any such larger population.) Because our sample size is so large, even though the age of the patients is concentrated around 18 years, we can use the CLT to approximate the probabilities associated with the mean age of this sample. 
 
 (b) An 85\% CI for the mean age of these patients is 18.385 years to 18.709 years. 
 
@@ -143,6 +143,7 @@ p_hat + (z_crit * SE)
 
 ### For graders
 
+For complete credit, answers must state the resulting interval within the context of the problem. 
 
 
 # Probleem 3 
@@ -202,7 +203,7 @@ The required sample size is $n \geq 97$, which is smaller than the sample we alr
 
 ### For graders: 
 
-Note: There are actually a several valid ways to think about this problem. Any of the approaches above should be counted as correct. In any version, the correct answer is that we don't need any additional patients. Our data has more than enough observations to be able to estimate $p$ with this level of certainty and precision. 
+There are actually a several valid ways to think about this problem. Please grade this problem for completion rather than for correctness.
 
 
 # Problem 4 
@@ -220,7 +221,8 @@ Conduct a hypothesis test to determine if the average number of shots per patien
 (a) Let $\mu =$ average number of shots completed by interested 11-26 year old patients. We are testing 
 $$H_0: \mu = 3, \quad\text{vs}\quad H_A:\mu < 3.$$ 
 
-(b) 
+(b) To use the Central Limit Theorem we need to assume that the patients ages are all independent of one another and that this sample, although it is not random, is somehow representative of a larger population. This may not be unreasonable to assume. (This sample size is also less than $10\%$ the size of any such larger population.) Because our sample size is so large, even though the age of the patients is concentrated around 18 years, we can use the CLT to approximate the probabilities associated with the mean age of this sample. 
+
 
 (c) The p-value for this test is incredibly small (basically zero) therefore, at any level of significance, we reject the null in favor of the alternative. This means that based on these data, there is evidence suggesting that the average number of shots completed by this population is less than the three required. 
 
@@ -238,6 +240,7 @@ pt(TestStat, df=n-1, lower.tail = TRUE)
 
 ### For graders
 
+Although the p-values differ slightly in the code above, they are both essentially zero. Please give credit for any answers to part (c) that state that the p-vale is approximately zero. 
 
 
 
@@ -270,3 +273,5 @@ The p-value for this test is actually $1$ therefore, at any level of significanc
 
 
 ### For graders 
+
+For complete credit, answers must state the correct result and interpret it in the context of the problem. 
