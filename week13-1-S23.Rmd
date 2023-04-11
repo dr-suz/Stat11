@@ -33,7 +33,7 @@ The [in-class worksheet for Week 13](https://profsuzy.github.io/Stat11/wk13-wksh
   
   * Two sample inference for proportions or means of independent groups 
   
-  * Two sample inference for paired means 
+  * Two paired samples inference for a mean  
   
 * Recognize the important role of statistical analysis that does not involve any mathematical or computational calculations.  
 
