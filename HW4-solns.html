@@ -298,17 +298,23 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+content: "";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "\e258";
-font-family: 'Glyphicons Halflings';
+content: "";
 border: none;
+}
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "";
+font-family: 'Glyphicons Halflings';
+display: inline-block;
+padding: 10px;
+border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -465,8 +471,48 @@ patients.</p></li>
 </ol>
 <div id="solution-1" class="section level2">
 <h2>Solution 1</h2>
+<ol style="list-style-type: lower-alpha">
+<li><p>To use the Central Limit Theorem we need to assume that the
+patients ages are all independent of one another and that this sample,
+although it is not random, is somehow representative of a larger
+population. This may not be unreasonable to assume. (This sample size is
+also less than <span class="math inline">\(10\%\)</span> the size of any
+such larger population.) Because our sample size is so large, even
+though the age of the patients is concentrated around 18 years, we can
+use the CLT to approximate the probabilities associated with the mean
+age of this sample.</p></li>
+<li><p>An 85% CI for the mean age of these patients is 18.385 years to
+18.709 years.</p></li>
+</ol>
+<p>One could use the code:</p>
+<pre class="r"><code>t.test(gardasil$Age, conf.level=0.85)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  gardasil$Age
+## t = 164.66, df = 1412, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is not equal to 0
+## 85 percent confidence interval:
+##  18.38483 18.70930
+## sample estimates:
+## mean of x 
+##  18.54706</code></pre>
+<p>Or, equivalently,</p>
+<pre class="r"><code>n=1413 
+xbar = mean(gardasil$Age)
+SE = sd(gardasil$Age)/sqrt(n)
+t_crit = qt((1-0.85)/2, df=n-1, lower.tail=FALSE)
+
+xbar - (t_crit*SE)</code></pre>
+<pre><code>## [1] 18.38483</code></pre>
+<pre class="r"><code>xbar + (t_crit*SE)</code></pre>
+<pre><code>## [1] 18.7093</code></pre>
 <div id="for-graders" class="section level3">
-<h3>For graders:</h3>
+<h3>For graders</h3>
+<p>Note there is a typo in the intro paragraph where I state that the
+sample size is <span class="math inline">\(n=1414\)</span>. The correct
+sample size is <span class="math inline">\(n=1413\)</span> so please
+give credit to students who use either sample size.</p>
 </div>
 </div>
 </div>
@@ -479,8 +525,44 @@ three required shots. Interpret this interval within the context of the
 problem.</p>
 <div id="solution-2" class="section level2">
 <h2>Solution 2</h2>
+<p>We are 90% confident that the proportion of 11-26 year old females
+who are interested in the HPV vaccine and actually complete the three
+required shots is between 31.17% and 35.29%.</p>
+<p>One could use the following code:</p>
+<pre class="r"><code>table(gardasil$Completed)</code></pre>
+<pre><code>## 
+##   0   1 
+## 944 469</code></pre>
+<pre class="r"><code>prop.test(469, n=1413, conf.level = 0.9, correct=FALSE) </code></pre>
+<pre><code>## 
+##  1-sample proportions test without continuity correction
+## 
+## data:  469 out of 1413, null probability 0.5
+## X-squared = 159.68, df = 1, p-value &lt; 2.2e-16
+## alternative hypothesis: true p is not equal to 0.5
+## 90 percent confidence interval:
+##  0.3116507 0.3528276
+## sample estimates:
+##         p 
+## 0.3319179</code></pre>
+<p>Or, equivalently,</p>
+<pre class="r"><code>table(gardasil$Completed)</code></pre>
+<pre><code>## 
+##   0   1 
+## 944 469</code></pre>
+<pre class="r"><code>n = 1413
+x = 469
+p_hat = x/n
+z_crit = qnorm((1-0.9)/2,0,1,lower.tail=FALSE)
+SE = sqrt(p_hat*(1-p_hat)/n)
+p_hat - (z_crit * SE)</code></pre>
+<pre><code>## [1] 0.3113122</code></pre>
+<pre class="r"><code>p_hat + (z_crit * SE)</code></pre>
+<pre><code>## [1] 0.3525236</code></pre>
 <div id="for-graders-1" class="section level3">
-<h3>For graders:</h3>
+<h3>For graders</h3>
+<p>For complete credit, answers must state the resulting interval within
+the context of the problem.</p>
 </div>
 </div>
 </div>
@@ -494,8 +576,70 @@ the patients in this sample have completed all three shots. Then,
 continue to solve the sample size estimation problem.)</p>
 <div id="solution-3" class="section level2">
 <h2>Solution 3</h2>
+<p><strong>Version 1)</strong> <span class="math inline">\(\hat{p}=\frac{\text{number of non-white patients
+who have completed all three shots}}{\text{number of non-white
+patients}}\)</span></p>
+<pre class="r"><code>table(gardasil$Race)</code></pre>
+<pre><code>## 
+##   0   1   2   3 
+## 732 443  52 186</code></pre>
+<pre class="r"><code>n_nonW = 443+52+186
+
+table(gardasil$Completed[gardasil$Race!=0])</code></pre>
+<pre><code>## 
+##   0   1 
+## 492 189</code></pre>
+<pre class="r"><code>x_complete = 189
+
+ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+p_hat = x_complete / n_nonW 
+
+(p_hat*(1-p_hat))/(ME/z_star)^2</code></pre>
+<pre><code>## [1] 77.0245</code></pre>
+<p>The required sample size is <span class="math inline">\(n \geq
+78\)</span>, which is smaller than the sample we already have. Thus, we
+don’t need any additional patients to produce the required CI.</p>
+<p><strong>Version 2)</strong> <span class="math inline">\(\hat{p}=\frac{\text{number of non-white patients
+who have completed all three shots}}{\text{number of patients who
+completed all three shots}}\)</span></p>
+<pre class="r"><code>table(gardasil$Completed)</code></pre>
+<pre><code>## 
+##   0   1 
+## 944 469</code></pre>
+<pre class="r"><code>n_complete = 469
+
+table(gardasil$Race[gardasil$Completed==1])</code></pre>
+<pre><code>## 
+##   0   1   2   3 
+## 280 105  17  67</code></pre>
+<pre class="r"><code>x_nonW = 105+17+67 
+
+ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+p_hat = x_nonW / n_complete 
+
+(p_hat*(1-p_hat))/(ME/z_star)^2</code></pre>
+<pre><code>## [1] 92.42093</code></pre>
+<p>The required sample size is <span class="math inline">\(n \geq
+93\)</span>, which is smaller than the sample we already have. Thus, we
+don’t need any additional patients to produce the required CI.</p>
+<p><strong>Version 3)</strong> Suppose <span class="math inline">\(\hat{p}\)</span> is not yet observed and use a
+value of <span class="math inline">\(0.5\)</span> to answer the
+problem.</p>
+<pre class="r"><code>ME = 0.1
+z_star = qnorm((1-0.95)/2,0,1,lower.tail=TRUE)
+
+(0.5*(1-0.5))/(ME/z_star)^2</code></pre>
+<pre><code>## [1] 96.03647</code></pre>
+<p>The required sample size is <span class="math inline">\(n \geq
+97\)</span>, which is smaller than the sample we already have. Thus, we
+don’t need any additional patients to produce the required CI.</p>
 <div id="for-graders-2" class="section level3">
 <h3>For graders:</h3>
+<p>There are actually a several valid ways to think about this problem.
+Please grade this problem for completion rather than for
+correctness.</p>
 </div>
 </div>
 </div>
@@ -513,8 +657,49 @@ the problem.</p></li>
 </ol>
 <div id="solution-4" class="section level2">
 <h2>Solution 4</h2>
+<ol style="list-style-type: lower-alpha">
+<li><p>Let <span class="math inline">\(\mu =\)</span> average number of
+shots completed by interested 11-26 year old patients. We are testing
+<span class="math display">\[H_0: \mu = 3, \quad\text{vs}\quad H_A:\mu
+&lt; 3.\]</span></p></li>
+<li><p>To use the Central Limit Theorem we need to assume that the
+patients ages are all independent of one another and that this sample,
+although it is not random, is somehow representative of a larger
+population. This may not be unreasonable to assume. (This sample size is
+also less than <span class="math inline">\(10\%\)</span> the size of any
+such larger population.) Because our sample size is so large, even
+though the age of the patients is concentrated around 18 years, we can
+use the CLT to approximate the probabilities associated with the mean
+age of this sample.</p></li>
+<li><p>The p-value for this test is incredibly small (basically zero)
+therefore, at any level of significance, we reject the null in favor of
+the alternative. This means that based on these data, there is evidence
+suggesting that the average number of shots completed by this population
+is less than the three required.</p></li>
+</ol>
+<p>One could use the following code:</p>
+<pre class="r"><code>t.test(gardasil$Shots, mu=3, alternative=&quot;less&quot;)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  gardasil$Shots
+## t = -42.232, df = 1412, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is less than 3
+## 95 percent confidence interval:
+##      -Inf 2.104947
+## sample estimates:
+## mean of x 
+##  2.068648</code></pre>
+<p>Or equivalently,</p>
+<pre class="r"><code>n=1413
+TestStat = (mean(gardasil$Shots) - 3)/(sd(gardasil$Shots)/sqrt(n))
+pt(TestStat, df=n-1, lower.tail = TRUE)</code></pre>
+<pre><code>## [1] 5.352127e-253</code></pre>
 <div id="for-graders-3" class="section level3">
-<h3>For graders:</h3>
+<h3>For graders</h3>
+<p>Although the p-values differ slightly in the code above, they are
+both essentially zero. Please give credit for any answers to part (c)
+that state that the p-vale is approximately zero.</p>
 </div>
 </div>
 </div>
@@ -528,8 +713,43 @@ protection against HPV does not have any medical assistance. State the
 p-value and your conclusion within the context of the problem.</p>
 <div id="solution-5" class="section level2">
 <h2>Solution 5</h2>
+<p>One could use the following code:</p>
+<pre class="r"><code>table(gardasil$MedAssist)</code></pre>
+<pre><code>## 
+##    0    1 
+## 1138  275</code></pre>
+<pre class="r"><code>prop.test(1138, n=1413, p=0.5, alternative=&quot;less&quot;, correct=FALSE)</code></pre>
+<pre><code>## 
+##  1-sample proportions test without continuity correction
+## 
+## data:  1138 out of 1413, null probability 0.5
+## X-squared = 527.08, df = 1, p-value = 1
+## alternative hypothesis: true p is less than 0.5
+## 95 percent confidence interval:
+##  0.0000000 0.8221124
+## sample estimates:
+##         p 
+## 0.8053786</code></pre>
+<p>Or equivalently,</p>
+<pre class="r"><code>table(gardasil$MedAssist)</code></pre>
+<pre><code>## 
+##    0    1 
+## 1138  275</code></pre>
+<pre class="r"><code>n = 1413 
+x = 1138
+
+TestStat = ((x/n) - 0.5)/sqrt(.5*.5/n)
+
+pnorm(TestStat, lower.tail=TRUE)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<p>The p-value for this test is actually <span class="math inline">\(1\)</span> therefore, at any level of
+significance, we fail to reject the null hypothesis. This means that
+based on these data, there is no evidence to suggest that the proportion
+of patients without medical assistance is less than 50%.</p>
 <div id="for-graders-4" class="section level3">
-<h3>For graders:</h3>
+<h3>For graders</h3>
+<p>For complete credit, answers must state the correct result and
+interpret it in the context of the problem.</p>
 </div>
 </div>
 </div>
