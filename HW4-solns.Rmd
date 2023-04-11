@@ -146,7 +146,7 @@ p_hat + (z_crit * SE)
 For complete credit, answers must state the resulting interval within the context of the problem. 
 
 
-# Probleem 3 
+# Problem 3 
 
 Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $0.1$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
 
