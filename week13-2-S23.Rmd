@@ -21,14 +21,28 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # Unit 3 topics (that we've covered thus far)
 
-* 
+* Statistical inference from a single sample of data 
 
-Additional topic for final: 
+* Statistical inference from multiple samples of data 
 
+
+
+
+
+# Week 10 - Sampling distributions and confidence intervals
+
+*  
 
 ## Effect size 
 
 ## Practical vs statistical significance 
+
+
+
+
+# Week 11 - Hypothesis tests for an unknown proportion or mean
+
+![](./images/wk13-everything.png)
 
 
 ## Types of conclusions 
@@ -44,58 +58,73 @@ The only way to reduce both types of error is to collect more evidence or, in st
 
 
 
-# Week 4 - Collecting data from experiments and observational studies
+
+# Week 12 - Inference from two samples (grouped data)
 
 *  
 
+## Example: Confidence interval for a difference in means (from Week 12)
 
-## Example 
- 
+On average, how much more money do consumers spend at Target compared to Walmart? 
 
+Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. Suppose a computer already calculated the degrees of freedom to be $162.75$. 
 
-
-# Week 6 - From randomness to probability and the laws of probability
-
-*  
-
-
-## Example 
- 
-
-# Week 7 - Random variables and probability models
-
-*  
+| | Walmart | Target |
+|:---|:---|:---|
+| $\bar{x}$ | $\$45$ | $\$53$ |
+| s | $\$21$ | $\$19$ | 
 
 
-## Example - Week 7 In-class Worksheet 
+**Step 1)** Identify and define the population parameter and choose your confidence level. 
 
+**Step 2)** Calculate the sample estimate for the population parameter. 
 
+**Step 3)** Assess the required assumptions and conditions. 
 
-Movie connection: everything everywhere all at once and p-values 
+**Step 4)** Find the critical value corresponding to your confidence level. 
 
+**Step 5)** Calculate the standard error of your sample estimate. 
 
+**Step 6)** Calculate the lower and upper bounds of your confidence interval. 
 
-***
+<br>
 
-# Study tips 
+## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
-## Have you....
+On average, how large is the difference in car insurance prices for customers of an online insurance company versus customers of a local insurance company? 
 
-1. Read the relevant sections of Chapters 10 - 15? 
+Find a $95\%$ confidence interval for the mean difference in insurance prices based on the data given below. 
 
-2. Completed IHW #5 - #10? 
+```{r echo=FALSE}
+insurance_diff = data.frame(local = c(568,872,451,1229,605,1021,783,844,907,712),
+                            online = c(391,602,488,903,677,1270,703,789,1008,702),
+                            PriceDiff = c(177,270,-37,326,-72,-249,80,55,-101,10))
+insurance_diff
+```
 
-3. Checked your answers to GHW #3 with the solution key? 
+```{r echo=TRUE}
+mean(insurance_diff$PriceDiff)
+sd(insurance_diff$PriceDiff)
 
-4. Taken notes on which topics or examples are most challenging to you? 
+t.test(insurance_diff$PriceDiff, mu=0, conf.level=0.95)
+```
 
-***
-  
-# Student Requested Examples 
-  
-## 
 
 ***
 
 # Looking ahead 
+
+* Week 14 - new statistical method (our last one for the semester)
+
+* Week 14 and 15 - begin discussions on ethical statistical practice 
+
+* Week 15 - Friday in-class poster presentation 
+
+  * You and your group mates are welcome to attend anytime between 9:30am-10:30am or 11:00am-12:30pm. 
+  
+  * Plan to spend at least 45 minutes in class and come early to hang up your poster in the room. (Prof Suzy will provide hanging supplies.) 
+  
+  * Prof Suzy will take turns meeting with each group for 5-7 minutes where you will present your topic. 
+  
+  * All participants will be asked to take some time and read the other posters. Each person will need to submit a 3-4 sentence summary ion another group's project in order to get credit for attendance this day. 
  
