@@ -103,7 +103,7 @@ Suppose researchers collected a systematic sample from $85$ Walmart customers an
 
 On average, how large is the difference in car insurance prices for customers of an online insurance company versus customers of a local insurance company? 
 
-Find a $95\%$ confidence interval for the mean difference in insurance prices based on the data given below. 
+Find a $95\%$ confidence interval for the mean difference in insurance prices based on the data given below. The data below represents randomly selected insurance profiles  (type of car, coverage, driving record, etc.) for 10 clients at a local provider and the corresponding quote from another online provider given their policy information. 
 
 ```{r echo=FALSE}
 insurance_diff = data.frame(local = c(568,872,451,1229,605,1021,783,844,907,712),
@@ -166,13 +166,48 @@ qt(0.025, df = 162.75, lower.tail=TRUE)
 
 **Step 1)** Identify and define the population parameter and choose your confidence level. 
 
+$\mu_{Diff} =$ the mean difference in insurance prices between online and local providers (local minus online)
+
+Let's use a 90\% confidence level to mix things up.
+
 **Step 2)** Calculate the sample estimate for the population parameter. 
+
+$\bar{d} = \$45.9$
 
 **Step 3)** Assess the required assumptions and conditions. 
 
+* Independence 
+
+    * 10\% condition 
+    
+    * Randomization condition
+
+* Sample size (or nearly Normal) condition 
+
+```{r}
+hist(insurance_diff$PriceDiff)
+```
+The data is representative of the local insurance company because these 10 profiles were randomly selected. It's not clear how large the local insurance company is but it's pretty likely that the company has more than 100 customers. Therefore, there isn't any strong indicator that the difference data is not independent. (I.e. we can assume within sample independence.) However, the sample size is rather small so in order to use the CLT, we need to check a histogram of the difference data. This histogram is symmetric and unimodal so it seems reasonable that the larger population of all possible differences between process for customers of this local company is approximately Normally distributed. There aren't any major red flags against any of the necessary assumptions for this method. 
+
 **Step 4)** Find the critical value corresponding to your confidence level. 
+
+$t^*_{0.90, dff=10-1}=1.833$ (note this is also the value you'd find using the t-table)
+
+```{r}
+qt(0.05, df=9, lower.tail=TRUE)
+```
 
 **Step 5)** Calculate the standard error of your sample estimate. 
 
+$SE(\bar{d}) = \frac{175.66}{\sqrt{10}} = 55.549$
+
 **Step 6)** Calculate the lower and upper bounds of your confidence interval. 
- 
+
+$45.9 \pm \left(1.833 \times 55.549 \right) = [-55.928,147.728]$
+
+Thus, we are $90\%$ confident that the true mean difference in insurance prices between this online and this local provider (local minus online) is between -\$55.928 and \$147.728. In other words, the local provider is anywhere from \$55.98 cheaper to \$147.73 more expensive than the online provider. 
+
+We can check our answer in R using the following code:  
+```{r}
+t.test(insurance_diff$PriceDiff, conf.level = 0.9)
+```
