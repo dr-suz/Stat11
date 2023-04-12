@@ -135,4 +135,44 @@ sd(insurance_diff$PriceDiff)
   * Prof Suzy will take turns meeting with each group for 5-7 minutes where you will present your topic. 
   
   * All participants will be asked to take some time and read the other posters. Each person will need to submit a 3-4 sentence summary ion another group's project in order to get credit for attendance this day. 
+  
+  
+*** 
+
+# Partial Solutions 
+
+
+## Example: Confidence interval for a difference in means (from Week 12)
+
+**Step 1)** $\mu_1 - \mu_2 =$ mean amount spent at Target minus mean amount spent at Walmart. We'll use a 95\% confidence level.
+
+**Step 2)** $\bar{x}_1 - \bar{x}_2 = 8$ 
+
+**Step 3)** Assess the required assumptions and conditions - done in class. 
+
+**Step 4)** We need the critical $t^*$ value corresponding to a 0.95 confidence level from a Student's t distribution with $162.75$ degrees of freedom. We can find this exactly using R and this value should be similar to the approximate critical value which you can read off the t-table. 
+
+```{r echo=TRUE}
+qt(0.025, df = 162.75, lower.tail=TRUE)
+```
+
+**Step 5)** $SE(\bar{x}_1 - \bar{x}_2) = \sqrt(\frac{19^2}{80} + \frac{21^2}{85}) = 3.115$
+
+**Step 6)** $ 8 \pm \left(1.975 \times 3.115 \right) = [\$1.848, \$14.152]$ with interpretation given in class.
+
+<br>
+
+## Example: Confidence interval for a mean difference of paired data (from Week 13)
+
+**Step 1)** Identify and define the population parameter and choose your confidence level. 
+
+**Step 2)** Calculate the sample estimate for the population parameter. 
+
+**Step 3)** Assess the required assumptions and conditions. 
+
+**Step 4)** Find the critical value corresponding to your confidence level. 
+
+**Step 5)** Calculate the standard error of your sample estimate. 
+
+**Step 6)** Calculate the lower and upper bounds of your confidence interval. 
  
