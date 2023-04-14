@@ -1,6 +1,6 @@
 ---
 title: "Quiz 3 for Stat 11"
-date: "4.14.23"
+date: "4-14-23"
 output:
   pdf_document: 
     extra_dependencies: ["amsmath","amssymb","amsfonts"]
@@ -13,28 +13,28 @@ output:
 
 **1.**  A matched pairs experiment is run comparing the answers of 25 married couples. How many degrees of freedom does this t-test have?    
 
-(a) 23 
+(a) 24  
 
 (b) 50 
 
-(c) 22 
+(c) 49 
 
-(d) 49 
+(d) 22 
 
-(e) **24** 
+(e) 23
 
 \vspace{1cm}
 **2.**  Data collected by child development scientists produced the following 90\% confidence interval for the average age (in months) at which children say their first word: $10.6 < \mu_{age} < 13.7$. What is the correct interpretation of these findings?
 
 (a) We are 90\% sure that the average age at which children in this sample said their first word was between 10.6 and 13.7 months. 
 
-(b) If we took many random samples of children, about 90\% of them would produce this confidence interval.
+(b) We are 90\% sure that a child will say their first word when he is between 10.6 and 13.7 months old. 
 
-(c) **We are 90% confident that the mean age at which children say their first word is between 10.6 and 13.7 months.** 
+(c) 90\% of the children in this sample said their first word when they were between 10.6 and 13.7 months old. 
 
-(d) 90\% of the children in this sample said their first word when they were between 10.6 and 13.7 months old. 
+(d) We are 90\% confident that the mean age at which children say their first word is between 10.6 and 13.7 months.
 
-(e) We are 90\% sure that a child will say their first word when he is between 10.6 and 13.7 months old. 
+(e) If we took many random samples of children, about 90\% of them would produce this confidence interval.
 
 \vspace{1cm}
 **3.** The manufacturer of a refrigerator system produces refrigerators that are supposed to maintain a true mean temperature, $\mu$, of 48 F, ideal for certain beverages. The owner of a beverage company does not agree with the refrigerator manufacturer, and will conduct a hypothesis test to determine whether the true mean temperature differs from this value. What type of test is this hypothesis test?
@@ -43,18 +43,18 @@ output:
 
 (b) upper-tailed 
 
-(c) **two-sided**
+(c) two-sided
 
 \vspace{1cm}
 **4.** Insurance companies track life expectancy information to assist in determining the cost of life insurance policies. Last year the average life expectancy of all policyholders was 77 years. ABI Insurance wants to determine if their clients now have a longer life expectancy, on average, so they randomly sample some of their recently paid policies. The insurance company will only change their premium structure if there is evidence that people who buy their policies are living longer than before. Which of the following statement is TRUE about this hypothesis test? 
 
-(a) It is a one tailed test about a proportion.
+(a) It is a one tailed test about a mean.
 
-(b) **It is a one tailed test about a mean.**
+(b) It is a one tailed test about a proportion.
 
-(c) It is a two tailed test about a proportion. 
+(c) It is a two tailed test about a mean. 
 
-(d) It is a two tailed test about a mean.
+(d) It is a two tailed test about a proportion.
 
 (e) None of these. 
 
@@ -63,9 +63,9 @@ output:
 
 (a) 1-proportion z-test
 
-(b) 1-sample t-test
+(b) 2-proportion z-test
 
-(c) **2-proportion z-test**
+(c) 1-sample t-test
 
 (d) 2-sample t-test
 
@@ -74,52 +74,53 @@ output:
 \vspace{1cm}
 **6.**  Assume that 10\% of students at a university wear contact lenses. We randomly pick 400 students. What is the **standard deviation** of the proportion of students in this group who may wear contact lenses?
 
-(a) $\frac{.10(1-.10)}{20}$
+(a) $.10^2$ 
 
 (b) $.10(1-.10)$ 
 
-(c) $.10^2$
+(c) $\frac{.10(1-.10)}{400}$
 
-(d) $\frac{.10(1-.10)}{400}$
+(d) $\frac{.10(1-.10)}{20}$
 
-(e) **$\sqrt{\frac{.10(1-.10)}{400}}$**
+(e) $\sqrt{\frac{.10(1-.10)}{400}}$
 
-\vspace{1cm}
+\pagebreak 
+
 **7.**  The college daily reported: "300 students living in university housing were polled. 180 said that they were satisfied with their living conditions. Based on this survey we conclude that 60\% of students living in dormitories are satisfied. The margin of error of the study is $\pm 6$ percentage points (with a 95\% degree of confidence). Which statement is correct?
 
-(a) A larger sample should be used to achieve the stated margin of error. 
+(a) The sample size is too small to achieve the stated margin of error. 
 
-(b) The sample size is too small to achieve the stated margin of error. 
+(b) The stated margin of error could have been achieved with a smaller sample size.
 
 (c) The margin of error is consistent with the sample size. 
 
-(d) **The stated margin of error could have been achieved with a smaller sample size.** 
- 
+(d)  A larger sample should be used to achieve the stated margin of error. 
+
 (e) There is not enough information to determine whether the margin of error is consistent with the sample size.
 
 \vspace{1cm}
 **8.**  Using the t-table, estimate the p-value for a test statistic that is less than or equal to $1.71$ with $23$ degrees of freedom. 
 
-(a) **$0.05$**
+(a) $0.025$
 
-(b) $0.10$
+(b) $0.05$
 
-(c) $0.90$
+(c) $0.10$
 
 (d) $0.45$
 
-(e) $0.025$
+(e) $0.90$
 
 \vspace{1cm}
 **9.**  Suppose that a device advertised to increase a car's gas mileage really does not work. (This is the true reality.) Without known the truth, we test this device on a small fleet of cars (with $H_0: \text{not effective}$ and a $0.05$ significance level), and our data results in a p-value of $0.004$. What probably happens as a result of our experiment?
 
-(a) **We reject $H_0$, making a Type I error.**
+(a) We reject $H_0$, making a Type II error. 
 
-(b) We correctly reject $H_0$.
+(b) We reject $H_0$, making a Type I error.
 
-(c) We fail to reject $H_0$, making a Type II error.
+(c) We correctly reject $H_0$.
 
-(d) We reject $H_0$, making a Type II error. 
+(d) We fail to reject $H_0$, making a Type II error.
 
 (e) We correctly fail to reject $H_0$.
 
@@ -131,16 +132,14 @@ output:
 
 (b) The probability the null is true given the observed statistic
 
-(c) The probability of the observed statistic given that the alternative hypothesis is true
+(c) The probability that the alternative hypothesis is true
 
-(d) The probability that the alternative hypothesis is true
+(d) The probability of the observed statistic given that the alternative hypothesis is true
 
-(e) **The probability of the observed statistic given that the null hypothesis is true**
+(e) The probability of the observed statistic given that the null hypothesis is true
 
 
 # Part 2: Fill in the blank
-
-**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
 
 **11.** Based on the Z-table, the critical value for a $90\%$ confidence interval for the difference in proportions 
 
@@ -181,9 +180,9 @@ $$T.S. = \rule{7cm}{0.15mm}$$
 \vspace{1cm}
 **15.**  A manufacturer claims that the mean amount of juice in its 16 ounce bottles are 16.1 ounces. A consumer advocacy group wants to perform a hypothesis test to determine whether the mean amount is actually less than this. Suppose the observed test statistic is calculated and plotted on the Student's t-distribution below. Shade the region that corresponds to the p-value of this test. 
 
-!()[./images/q3.png]{height=2in}
+![](./images/q3.png){height=2.5in}
 
-\pagebreak 
+\vspace{0.5cm}
 
 # Part 3: Free response 
 
@@ -191,17 +190,15 @@ $$T.S. = \rule{7cm}{0.15mm}$$
 
 **16.** Of 346 items tested, 12 are found to be defective. Construct a $98\%$ confidence interval for the percentage of all such items that are defective. (Note you do not need to simplify your equations.) 
 
-\vspace{3cm}
-
+\pagebreak
 
 For problems $17$ and $18$ consider the following setting. 
 
 *Managers are considering holding informational workshops to help decrease anxiety levels among employees. They randomly select 20 employees to participate in a pilot workshop. These employees were given a questionnaire to measure anxiety levels before and after participating in the workshop. A test was performed to determine if the workshop was successful in decreasing anxiety levels.* 
 
 **17.**  Assess the necessary assumptions and conditions for conducting a hypothesis test with this data to answer the research question. 
-\vspace{4cm} 
+\vspace{3cm} 
 
 \vspace{1cm}
 **18.**   The test results yielded a p-value of $0.008$. Supposing the pre-determined significance level is $0.05$, what is the conclusion of this study (in context)? 
-
-**Conclude that participating in the workshop decreases employee anxiety**
+ 
