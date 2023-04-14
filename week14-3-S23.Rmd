@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 14"
-subtitle: "Comparing Counts and History of Stats" 
+subtitle: "Practce with Comparing Counts and Ethical Stats" 
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
 lang: "en-US"
