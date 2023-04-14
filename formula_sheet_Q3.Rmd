@@ -8,7 +8,6 @@ output: pdf_document
 ```{r setup_pres, include=FALSE, echo=FALSE}
 rm(list=ls())
 library('tidyverse')
-library('gridExtra')
 
 #setwd("~/Google Drive Swat/Swat docs/Stat 21/Data")
 options(htmltools.dir.version = FALSE)
@@ -168,7 +167,7 @@ where $SE(\bar{x}_1 - \bar{x}_2) =\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$ an
 ### Paired samples 
 
 $$\bar{d} \pm [t^*_{a, (n-1)} \times SE(\bar{d})]$$ 
-where $SE(\bar{d}) =$ and  $t^*_{a, (n-1)}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a t-distribution with $n-1$ degrees of freedom, for confidence level $a$. 
+where $SE(\bar{d}) =\frac{s_{d}}{\sqrt{n}}$ and  $t^*_{a, (n-1)}$ is the lower (or upper) $\left(\frac{1-a}{2}\right)^{th}$ quantile of a t-distribution with $n-1$ degrees of freedom, for confidence level $a$. 
 
 # Hypothesis Tests 
 
