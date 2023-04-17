@@ -23,7 +23,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 ## Example: Testing a scientific theory 
 
-species of finches in an island of the Galapagos 
+"Darwin's finches (also known as the Galápagos finches) are a group of about 18 species of passerine birds. They are well known for their remarkable diversity in beak form and function." (Wikipedia article on Darwin's finishes)
+
+Suppose Darwin had surveyed and categorized the types of finches on (what is now known as) the Pinta island. He found that four different beak types could be found on this island the first occurring most frequently at around $56\%$, the second occurring around $30\%$ and the third and fourth types occurring around $7\%$ of the time each. A chi-square goodness of fit test could help Darwin test whether or not the distribution of these four beak types is the same on another island of the Galápagos, say San Cristobal. 
 
 
 * Chi-square goodness of fit 
@@ -54,18 +56,38 @@ We have already looked into this question using tables and the mathematical defi
 
 # 2. Discussion on the analysis of categorical data 
 
-ask: what examples come to mind when you think of categorical data? 
+<span style="color:blue">What examples come to mind when you think of categorical data?</span>
 
-share my sig article and rebuttal 
+<br>
+<br>
+<br>
 
-share genetics paper on race 
+<span style="color:blue">How do you think the number of categories for these variables are determined?</span>
 
-# 3.  
+<br>
+<br>
+<br>
 
 
-# 4. An Historical Remark (save for week 14)
+## Gender or sex
 
-## A powerful method with a troubling origin 
+[A call for better practices](https://profsuzy.github.io/Stat11/Towards_statistical_best_practices.pdf) 
+
+[A rebuttal](https://profsuzy.github.io/Stat11/a_big_ask.pdf) 
+
+[Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6)
+
+## Race 
+
+[Eugenics and scientific racism](https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism) statement from the National Human Genome Research Institute 
+
+[American Society of Human Genetics Statement Regarding Concepts of “Good Genes” and Human Genetics](https://www.ashg.org/publications-news/ashg-news/statement-regarding-good-genes-human-genetics/#:~:text=Genetics%20demonstrates%20that%20humans%20cannot,ancestry%20have%20no%20scientific%20evidence.)
+
+*** 
+
+# 3.  An Historical Remark  
+
+## A powerful language with a troubling origin 
 
 Modern statistical inference methods (confidence intervals and hypothesis tests) have proven to be powerful tools across many disciplines. Some of the most impressive real-world examples of the use of these methods (in my opinion) include the discovery of the Higgs Boson and the development of the first drug to treat HIV infection. These methods are useful in day-to-day social, scientific, and political work as well. For instance, sampling distribution theory can be used to target disaster relief efforts and provide quantitative evidence of discrimination or bias. 
 
@@ -98,8 +120,4 @@ Source: https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientifi
 "Statistical significance is not a measure of practical, clinical, or scientific significance"
 
 Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables Good Science](https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1518264)  
-  
-  
-[JEDI Organizing Group of the ASA](https://sites.google.com/nonlinearlearning.org/jedi-og/home) - upcoming event March 29 (could design final project around info learned in this event) or [list of articles](https://magazine.amstat.org/blog/category/jedi-corner/) 
-  
-  
+   
