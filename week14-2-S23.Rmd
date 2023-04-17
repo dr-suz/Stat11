@@ -24,13 +24,37 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 <span style="color:green">new terms</span>
 
 
-# 1.  Chi-square test of independence 
+# 1.  Chi-square tests
+
+* Chi-square goodness of fit 
+
+  * $H_0: p_{1} = p_{1,0}, p_{2} = p_{2,0}, p_{3} = p_{3,0}, \dots, p_{k} = p_{k,0}$
+
+* Chi-square test of homogeneity 
+
+  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{k}$
+  
+* Chi-square test of independence 
+
+  * $H_0:$ Categorical variable $X$ is independent of categorical variable $Y$. 
+
+
+
+Assumptions 
+Independence 
+Sample size 
+Asymptotic theorem 
+
+$$\frac{(Obs - Exp)^2}{} \stackrel{H_0}{\sim} \chi^2_{df}$$
+[image of chi-square distributions]
 
 
 # 2. Discussion on categorical variables 
 
 
+stakeholder analysis 
 
+ASA guidelines 
 
 
 # 3.  
