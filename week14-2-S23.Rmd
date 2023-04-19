@@ -19,42 +19,181 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-<span style="color:purple">notecard</span>
-<span style="color:blue">hypothetical</span>
-<span style="color:green">new terms</span>
-
 
 # 1.  Chi-square tests
 
 * Chi-square goodness of fit 
 
   * $H_0: p_{1} = p_{1,0}, p_{2} = p_{2,0}, p_{3} = p_{3,0}, \dots, p_{k} = p_{k,0}$
+  
+  | Level | A | B | C | 
+  |---|---|---|---|
+  | Counts | 14 | 6 | 12 |
 
 * Chi-square test of homogeneity 
 
   * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{k}$
   
+  | Level | A | B | C | 
+  |---|---|---|---|
+  | Counts | 10 | 9 | 12 |
+  
 * Chi-square test of independence 
 
   * $H_0:$ Categorical variable $X$ is independent of categorical variable $Y$. 
+  
+  | Level varb 1/Level varb 2 | A | B | C | 
+  |---:|---|---|---| 
+  | **D**| 5 | 8 | 13 | 
+  | **E**| 14 | 7 | 7 | 
+
+## Assumptions and conditions 
+
+### Goodness of fit test and test of homogeneity 
+
+1. **Counted data condition** - the data consists of counts of the levels of some categorical variable. Often times, the data is presented with the counts presented in a frequency table. 
+
+2. **Independence assumption** - the counts in each cell of a table summarizing the data should all be independent of each other. This is typically assessed through the randomization condition. 
+
+3. **Sample size assumption** - the *expected* number of counts in each possible cell of a frequency table of the data is large enough (typically, at least $5$). These tests are all asymptotic, just like the Central Limit Theorem. This means that they work in theory as our sample size increases infinitely. 
+
+### Test of independence
+
+1. **Counted data condition** - the data consists of counts of the levels of some categorical variable. Often times, the data is presented with the counts presented in a two-way contingency table/  
+
+2. **Representative sample** - often this means assessing the randomization condition. If we want to generalize our conclusions to a larger population, then we must be sure that our sample is representative of this population. 
+
+3. **Sample size assumption** - the *expected* number of counts in each possible cell of a frequency table of the data is large enough (typically, at least $5$). These tests are all asymptotic, just like the Central Limit Theorem. This means that they work in theory as our sample size increases infinitely. 
 
 
+## Test statistic 
 
-Assumptions 
-Independence 
-Sample size 
-Asymptotic theorem 
+$$T.S. = \sum_{\text{all cells}}\frac{(Obs-Exp)^2}{Exp}$$
 
-$$\frac{(Obs - Exp)^2}{} \stackrel{H_0}{\sim} \chi^2_{df}$$
-[image of chi-square distributions]
+## P-value 
+
+For all of these procedures, the p-value corresponds to the upper tail probability of a $\chi^2$ distribution with however many degrees of freedom 
+
+* Goodness of fit degrees of freedom are the number of categories/levels ($k$) minus one 
+
+* Homogeneity degrees of freedom are the number of categories/levels ($k$) minus one 
+
+* Independence degrees of freedom are $(R-1)(C-1)$ where $R$ is the number of categories/levels in the first categorical variable and $C$ is the number of categories/levels in the second categorical variable  
+
+The alternative hypothesis is always the negation of the null. I.e. $H_A:$ Not $H_0$. 
+
+## Using software 
+
+See pgs 696 and 697 of your textbook for instructions on how to perform any of these chi-square procedures in Excel or R. 
 
 
 # 2. Discussion on categorical variables 
 
+<span style="color:blue">How are the levels of a categorical variable determined?</span>
 
-stakeholder analysis 
+* Social and cultural context 
 
-ASA guidelines 
+* Motivation of the main research question 
 
 
-# 3.  
+## American Statistical Association: [Ethical Guidelines for Statistical Practice](https://www.amstat.org/your-career/ethical-guidelines-for-statistical-practice) 
+
+### PRINCIPLE A: Professional Integrity and Accountability
+
+1. Takes responsibility for evaluating potential tasks, assessing whether they have (or can attain) sufficient competence to execute each task and that the work and timeline are feasible. Does not solicit or deliver work for which they are not qualified or that they would not be willing to have peer reviewed.
+
+2. Uses methodology and data that are valid, relevant, and appropriate, without favoritism or prejudice, and in a manner intended to produce valid, interpretable, and reproducible results.
+
+3. Does not knowingly conduct statistical practices that exploit vulnerable populations or create or perpetuate unfair outcomes.
+
+4. Opposes efforts to predetermine or influence the results of statistical practices and resists pressure to selectively interpret data.
+
+5. Accepts full responsibility for their own work, does not take credit for the work of others, and gives credit to those who contribute. Respects and acknowledges the intellectual property of others.
+
+6. Strives to follow, and encourages all collaborators to follow, an established protocol for authorship. Advocates for recognition commensurate with each person’s contribution to the work. Recognizes that inclusion as an author does imply, while acknowledgement may imply, endorsement of the work.
+
+7. Discloses conflicts of interest, financial and otherwise, and manages or resolves them according to established policies, regulations, and laws.
+
+8. Promotes the dignity and fair treatment of all people. Neither engages in nor condones discrimination based on personal characteristics. Respects personal boundaries in interactions and avoids harassment, including sexual harassment, bullying, and other abuses of power or authority.
+
+9. Takes appropriate action when aware of deviations from these guidelines by others.
+
+10. Acquires and maintains competence through upgrading of skills as needed to maintain a high standard of practice.
+
+11. Follows applicable policies, regulations, and laws relating to their professional work, unless there is a compelling ethical justification to do otherwise.
+
+12. Upholds, respects, and promotes these guidelines. Those who teach, train, or mentor in statistical practice have a special obligation to promote behavior that is consistent with these guidelines.
+
+#### Think-pair-vote 
+
+<span style="color:purple">Q) Which of these points do you think is the most relevant in academic research?</span> 
+
+### PRINCIPLE B: Integrity of Data and Methods
+
+1. Communicates data sources and fitness for use, including data generation and collection processes and known biases. Discloses and manages any conflicts of interest relating to the data sources. Communicates data processing and transformation procedures, including missing data handling.
+
+2. Is transparent about assumptions made in the execution and interpretation of statistical practices, including methods used, limitations, possible sources of error, and algorithmic biases. Conveys results or applications of statistical practices in ways that are honest and meaningful.
+
+3. Communicates the stated purpose and the intended use of statistical practices. Is transparent regarding a priori versus post hoc objectives and planned versus unplanned statistical practices. Discloses when multiple comparisons are conducted and any relevant adjustments.
+
+4. Meets obligations to share the data used in the statistical practices (e.g., for peer review and replication) as allowable. Respects expectations of data contributors when using or sharing data. Exercises due caution to protect proprietary and confidential data, including all data that might inappropriately harm data subjects.
+
+5. Strives to promptly correct substantive errors discovered after publication or implementation. As appropriate, disseminates the correction publicly and/or to others relying on the results.
+
+6. For models and algorithms designed to inform or implement decisions repeatedly, develops and/or implements plans to validate assumptions and assess performance over time, as needed. Considers criteria and mitigation plans for model or algorithm failure and retirement.
+
+7. Explores and describes the effect of variation in human characteristics and groups on statistical practice when feasible and relevant.
+
+#### Think-pair-vote 
+
+<span style="color:purple">Q) Which of these points do you think is the most relevant in industry statistical applications?</span>
+
+### PRINCIPLE C: Responsibilities to Stakeholders
+
+1. Seeks to establish what stakeholders hope to obtain from any specific project. Strives to obtain sufficient subject-matter knowledge to conduct meaningful and relevant statistical practice.
+
+2. Regardless of personal or institutional interests or external pressures, does not use statistical practices to mislead any stakeholder.
+
+3. Uses practices appropriate to exploratory and confirmatory phases of a project, differentiating findings from each so the stakeholders can understand and apply the results.
+
+4. Informs stakeholders of the potential limitations on use and re-use of statistical practices in different contexts and offers guidance and alternatives, where appropriate, about scope, cost, and precision considerations that affect the utility of the statistical practice.
+
+5. Explains any expected adverse consequences from failing to follow through on an agreed-upon sampling or analytic plan.
+
+6. Strives to make new methodological knowledge widely available to provide benefits to society at large. Presents relevant findings, when possible, to advance public knowledge.
+
+7. Understands and conforms to confidentiality requirements for data collection, release, and dissemination and any restrictions on its use established by the data provider (to the extent legally required). Protects the use and disclosure of data accordingly. Safeguards privileged information of the employer, client, or funder.
+
+8. Prioritizes both scientific integrity and the principles outlined in these guidelines when interests are in conflict.
+
+#### Think-pair-vote 
+
+<span style="color:purple">Q) Which of these points do you think is the most relevant in government statistics?</span>
+
+### PRINCIPLE D: Responsibilities to Research Subjects, Data Subjects, or Those Directly Affected by Statistical Practices
+
+1. Keeps informed about and adheres to applicable rules, approvals, and guidelines for the protection and welfare of human and animal subjects. Knows when work requires ethical review and oversight.
+
+2. Makes informed recommendations for sample size and statistical practice methodology to avoid the use of excessive or inadequate numbers of subjects and excessive risk to subjects.
+
+3. For animal studies, seeks to leverage statistical practice to reduce the number of animals used, refine experiments to increase the humane treatment of animals, and replace animal use where possible.
+
+4. Protects people’s privacy and the confidentiality of data concerning them, whether obtained from the individuals directly, other persons, or existing records. Knows and adheres to applicable rules, consents, and guidelines to protect private information.
+
+5. Uses data only as permitted by data subjects’ consent, when applicable, or considers their interests and welfare when consent is not required. This includes primary and secondary uses, use of repurposed data, sharing data, and linking data with additional data sets.
+
+6. Considers the impact of statistical practice on society, groups, and individuals. Recognizes that statistical practice could adversely affect groups or the public perception of groups, including marginalized groups. Considers approaches to minimize negative impacts in applications or in framing results in reporting.
+
+7. Refrains from collecting or using more data than is necessary. Uses confidential information only when permitted and only to the extent necessary. Seeks to minimize the risk of re-identification when sharing de-identified data or results where there is an expectation of confidentiality. Explains any impact of de-identification on accuracy of results.
+
+8. To maximize contributions of data subjects, considers how best to use available data sources for exploration, training, testing, validation, or replication as needed for the application. The ethical statistical practitioner appropriately discloses how the data is used for these purposes and any limitations.
+
+9. Knows the legal limitations on privacy and confidentiality assurances and does not over-promise or assume legal privacy and confidentiality protections where they may not apply.
+
+10. Understands the provenance of the data—including origins, revisions, and any restrictions on usage—and fitness for use prior to conducting statistical practices.
+
+11. Does not conduct statistical practice that could reasonably be interpreted by subjects as sanctioning a violation of their rights. Seeks to use statistical practices to promote the just and impartial treatment of all individuals.
+
+#### Think-pair-share  
+
+<span style="color:purple">Q) Which of these points do you think will be most relevant to you personally?</span>
