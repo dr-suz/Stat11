@@ -1,0 +1,77 @@
+---
+title: "In-Class Worksheet"
+author: "STAT011 with Prof Suzy"
+date: 'Week 14: Practice with Chi-square Procedures'
+output:
+  pdf_document: default
+  html_document: default
+---
+<br>
+**Name:** _____________________________________
+
+<br>
+**Instructions:** There are 3 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+<br>
+<br>
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+
+# 1. Assess whether or not the problems listed below deal with count data. (Hint: There are four problems that do not deal with count data.)
+
+1.  A brokerage firm wants to see whether the type of account a customer has (Silver, Gold, or Platinum) affects the type of trades that customer makes (in person, by phone, or on the Internet). It collects a random sample of trades made for its customers over the past year and performs a test. Choose the correct answer below. 
+
+\vspace{0.5cm}
+
+2. The brokerage firm from (1) also wants to know if the type of account affects the size of the account (in dollars). It performs a test to see if the mean size of the account is the same for the three account types. Choose the correct answer below.
+
+\vspace{0.5cm}
+
+3. The academic research office at a large community college wants to see whether the distribution of courses chosen (Humanities, Social Science, or Science) is different for its residential and nonresidential students. It assembles last semester's data and performs a test. Choose the correct answer below.
+
+\vspace{0.5cm}
+
+4. A medical researcher wants to know if blood cholesterol level is related to heart disease. She examines a database of  patients, testing whether the cholesterol level (in milligrams) is related to whether or not a person has heart disease.
+
+\vspace{0.5cm}
+
+5. Is the quality of a car affected by what day it was built? A car manufacturer examines a random sample of the warranty claims filed over the past two years to test whether defects are randomly distributed across days of the workweek.
+
+\vspace{0.5cm}
+
+6. A student wants to find out whether political leaning (liberal, moderate, or conservative) is related to choice of major. He surveys  randomly chosen students and performs a test.
+
+\vspace{0.5cm}
+
+7. A sales representative who is on the road visiting clients thinks that, on average, he drives the same distance each day of the week. He keeps track of his mileage for several weeks and discovers that he averages  miles on Mondays,  miles on Tuesdays,  miles on Wednesdays,  miles on Thursdays, and  miles on Fridays. He wonders if this evidence contradicts his belief in a uniform distribution of miles across the days of the week. 
+
+\vspace{0.5cm}
+
+8. A study was performed examining epidurals as one factor that might inhibit successful breastfeeding of newborn babies. Suppose a broader study included several additional issues, including whether the mother drank alcohol, whether this was a first child, and whether the parents occasionally supplemented breastfeeding with bottled formula. 
+
+\vspace{0.5cm}
+
+9. Two different professors teach an introductory statistics course. The table shows the distribution of final grades they reported. We wonder whether one of these professors is an "easier" grader. 
+
+\vspace{0.5cm}
+
+10. A student studying the music preferences of her classmates wants to test her theory that men and women have different music preferences. For each respondant, she records their gender and what their favorite music genre is (hip hop, trap, rock, rap, folk, indie, other). 
+
+\vspace{0.5cm}
+
+# 2. For the six problems that do deal with count data, determine which chi-square test is appropriate. 
+
+\vspace{5cm}
+
+# 3. What are the null and alternative hypotheses for each of the problems in question 2 above? 
+
+\vspace{5cm}
