@@ -3,8 +3,8 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: 'Week 14: Practice with Chi-square Procedures'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 <br>
 **Name:** _____________________________________
@@ -28,15 +28,15 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 # 1. Assess whether or not the problems listed below deal with count data. (Hint: There are four problems that do not deal with count data.)
 
-1.  A brokerage firm wants to see whether the type of account a customer has (Silver, Gold, or Platinum) affects the type of trades that customer makes (in person, by phone, or on the Internet). It collects a random sample of trades made for its customers over the past year and performs a test. Choose the correct answer below. 
+1.  A brokerage firm wants to see whether the type of account a customer has (Silver, Gold, or Platinum) affects the type of trades that customer makes (in person, by phone, or on the Internet). It collects a random sample of trades made for its customers over the past year and performs a test.  
 
 \vspace{0.5cm}
 
-2. The brokerage firm from (1) also wants to know if the type of account affects the size of the account (in dollars). It performs a test to see if the mean size of the account is the same for the three account types. Choose the correct answer below.
+2. The brokerage firm from (1) also wants to know if the type of account affects the size of the account (in dollars). It performs a test to see if the mean size of the account is the same for the three account types. 
 
 \vspace{0.5cm}
 
-3. The academic research office at a large community college wants to see whether the distribution of courses chosen (Humanities, Social Science, or Science) is different for its residential and nonresidential students. It assembles last semester's data and performs a test. Choose the correct answer below.
+3. The academic research office at a large community college wants to see whether the distribution of courses chosen (Humanities, Social Science, or Science) is different for its residential and nonresidential students. It assembles last semester's data and performs a test.  
 
 \vspace{0.5cm}
 
@@ -48,7 +48,7 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 \vspace{0.5cm}
 
-6. A student wants to find out whether political leaning (liberal, moderate, or conservative) is related to choice of major. He surveys  randomly chosen students and performs a test.
+6. A student wants to find out whether political leaning (liberal, moderate, or conservative) is related to choice of major. He surveys randomly chosen students and performs a test.
 
 \vspace{0.5cm}
 

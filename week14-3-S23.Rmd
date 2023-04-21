@@ -62,25 +62,27 @@ Let's take a minute to review our previous in-class worksheets.
 
 ## Unit 1 
 
-  * [Visualizing Data](https://drive.google.com/file/d/1Re2fuTTffU-vjByu3G2Xj0ifuXXtU94s/view?usp=sharing) - link needs to be updated
+  * [Visualizing Data](https://profsuzy.github.io/Stat11/wk2-wksheet.html) and [followup activity about misleading conclusions from statistical analyses](https://profsuzy.github.io/Stat11/wk2-wksheet-followup.html)
 
-  * [Fitting a Linear Regression Model](https://profsuzy.github.io/Stat11/wk3-wksheet.pdf)
+  * [Fitting a Linear Regression Model](https://profsuzy.github.io/Stat11/wk3-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week3-3-S23.html)
   
 
 ## Unit 2 
 
-  * [Designing a Statistical Study](https://profsuzy.github.io/Stat11/wk4-wksheet.html)
+  * [Designing a Statistical Study](https://profsuzy.github.io/Stat11/wk4-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week4-3-S23.html)
   
-  * [Experimenting with Probability](https://profsuzy.github.io/Stat11/wk6-wksheet.html)
+  * [Experimenting with Probability](https://profsuzy.github.io/Stat11/wk6-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/wee6-3-S23.html)
   
-  * [More Experiments with Probability](https://profsuzy.github.io/Stat11/wk7-wksheet.html)
+  * [More Experiments with Probability](https://profsuzy.github.io/Stat11/wk7-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week7-3-S23.html)
     
 
 ## Unit 3 
 
- * [Experiments with Confidence Intervals](https://profsuzy.github.io/Stat11/wk10-wksheet.html)
+ * [Experiments with Confidence Intervals](https://profsuzy.github.io/Stat11/wk10-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week10-3-S23.html)
       
- * [Practicing with Hypothesis Tests](https://profsuzy.github.io/Stat11/wk11-wksheet.html)
+ * [Practicing with Hypothesis Tests](https://profsuzy.github.io/Stat11/wk11-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week11-3-S23.html) and [solutions](https://profsuzy.github.io/Stat11/wk11-wksheet-solns.html)
         
- * [Reviewing Methods of Unit 3](https://profsuzy.github.io/Stat11/wk13-wksheet.html)
+ * [Reviewing Methods of Unit 3](https://profsuzy.github.io/Stat11/wk13-wksheet.html) - [summary of results](https://profsuzy.github.io/Stat11/week13-3-S23.html) and [solutions](https://profsuzy.github.io/Stat11/wk13-wksheet-solns.html)
+ 
+ * [Solutions for Practice with Chi-square Procedures](https://profsuzy.github.io/Stat11/wk14-wksheet-solns.html)
           

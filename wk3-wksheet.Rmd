@@ -3,8 +3,8 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: "Week 3: Fitting a Linear Regression Model"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 <br>
 **Name:** _____________________________________
