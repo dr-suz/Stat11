@@ -55,3 +55,32 @@ Recall we have learned the following procedures:
 * Just because some data can be presented in tabular format doesn't mean that it is count data! 
 
 * Although the format of the null and alternative hypotheses are standard for each procedure, translating these statements about population parameters into a particular applied context takes careful thought. 
+
+# Reflection 
+
+Let's take a minute to review our previous in-class worksheets. 
+
+## Unit 1 
+
+  * [Visualizing Data](https://drive.google.com/file/d/1Re2fuTTffU-vjByu3G2Xj0ifuXXtU94s/view?usp=sharing) - link needs to be updated
+
+  * [Fitting a Linear Regression Model](https://profsuzy.github.io/Stat11/wk3-wksheet.pdf)
+  
+
+## Unit 2 
+
+  * [Designing a Statistical Study](https://profsuzy.github.io/Stat11/wk4-wksheet.html)
+  
+  * [Experimenting with Probability](https://profsuzy.github.io/Stat11/wk6-wksheet.html)
+  
+  * [More Experiments with Probability](https://profsuzy.github.io/Stat11/wk7-wksheet.html)
+    
+
+## Unit 3 
+
+ * [Experiments with Confidence Intervals](https://profsuzy.github.io/Stat11/wk10-wksheet.html)
+      
+ * [Practicing with Hypothesis Tests](https://profsuzy.github.io/Stat11/wk11-wksheet.html)
+        
+ * [Reviewing Methods of Unit 3](https://profsuzy.github.io/Stat11/wk13-wksheet.html)
+          
