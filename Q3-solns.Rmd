@@ -148,18 +148,22 @@ output:
 
 $p_1 - p_2$ is $\rule{2cm}{0.15mm}$.
 
+$\pm 1.645$ acceptable answers include $1.64$ and $1.65$
+
 
 \vspace{1cm}
 **12.** A survey asked people "On what percent of days (in a month) do you get more than 30 minutes of vigorous exercise?" Using their responses we want to estimate the difference in exercise frequency between young adults (between ages $18$ and $35$) and older adults (over age $35$). 
 
 \vspace{2cm}
 
-$H_0: \rule{7cm}{0.15mm}$
+$H_0: p_1 - p_2 = 0$
 
 \vspace{2cm}
 
-$H_A: \rule{7cm}{0.15mm}$
+$H_A: p_1 - p_2 \neq 0$
 
+
+will also accept that CI is more appropriate here. must define $p_1 =$ percent of days young adults get more than 30 mins of exercise, $p_2 =$ percent of days older adults get more than 30 mins of exercise
 
 \vspace{1cm}
 **13.**  Based on past experience, a bank believes that 4\% of the people who receive loans will not make payments on time. The bank has recently approved 300 loans. Based on the sampling distribution for the
@@ -168,6 +172,10 @@ $H_A: \rule{7cm}{0.15mm}$
 
 sample proportion, $\rule{7cm}{0.15mm}$ is the standard deviation of the proportion of clients in this group who may not make timely payments. (Note you do not need to simplify your equation.)
 
+$\sqrt{p(1-p)/n} = \sqrt{\frac{0.04(1-0.04)}{300}} = 0.01131$.
+
+partial credit for answering $\frac{0.04(1-0.04)}{300}} = 0.000128$.
+
 
 \vspace{1cm}
 **14.**  A report on the U.S. economy indicates that 28\% of Americans have experienced difficulty in making mortgage payments. A news organization randomly sampled 400 Americans from 10 cities named the "fastest dying cities in the U.S." (Forbes Magazine, August 2008) and found that 136 reported such difficulty. 
@@ -175,7 +183,7 @@ sample proportion, $\rule{7cm}{0.15mm}$ is the standard deviation of the proport
 To answer the question of whether or not this data indicates that the problem is more severe among these cities, we calculate the test statistic
 
 \vspace{1cm}
-$$T.S. = \rule{7cm}{0.15mm}$$
+$$T.S. = \frac{\frac{136}{400}-0.28}{\sqrt{\frac{\frac{136}{400}(1- \frac{136}{400})}{400}}}  = 2.533$$
 (Just plug the correct numbers into the correct formula, there is no need to simplify your answer.)
  
 \vspace{1cm}
@@ -191,7 +199,10 @@ $$T.S. = \rule{7cm}{0.15mm}$$
 
 **16.** Of 346 items tested, 12 are found to be defective. Construct a $98\%$ confidence interval for the percentage of all such items that are defective. (Note you do not need to simplify your equations.) 
 
-\vspace{3cm}
+$$\frac{12}{346} \pm \left(z^*_{a=0.98} \times \sqrt{\frac{\frac{12}{346}(1-\frac{12}{346})}{346}} \right) = [,]$$
+where $z^* = 2.325$. (give credit for using $2.32$ or $2.33$) give partial credit for $z^* = 2.55$ (corresponds to $94\%$ CI)
+
+\vspace{1cm}
 
 
 For problems $17$ and $18$ consider the following setting. 
@@ -199,9 +210,13 @@ For problems $17$ and $18$ consider the following setting.
 *Managers are considering holding informational workshops to help decrease anxiety levels among employees. They randomly select 20 employees to participate in a pilot workshop. These employees were given a questionnaire to measure anxiety levels before and after participating in the workshop. A test was performed to determine if the workshop was successful in decreasing anxiety levels.* 
 
 **17.**  Assess the necessary assumptions and conditions for conducting a hypothesis test with this data to answer the research question. 
-\vspace{4cm} 
+
+* Independence 
+
+* Sample size or nearly normal 
+
 
 \vspace{1cm}
 **18.**   The test results yielded a p-value of $0.008$. Supposing the pre-determined significance level is $0.05$, what is the conclusion of this study (in context)? 
 
-**Conclude that participating in the workshop decreases employee anxiety**
+Conclude that participation in the workshop corresponds with decreased employee anxiety. There is no random assignment (no control) but there is random selection. can generalize, no cause and effect. 
