@@ -131,13 +131,13 @@ Bartal, Inbal Ben-Ami, Jean Decety, and Peggy Mason. "Empathy and pro-social beh
 
 **Instructions:** First read the abstract. Then read the rest of the article. Note the errata at the end of the article. 
 
-## [Inference using non-random samples? Stop right there!](https://profsuzy.github.io/Stat11/Inference using non-random samples.pdf)  
+## [Inference using non-random samples? Stop right there!](https://profsuzy.github.io/Stat11/Inference using non‐random samples.pdf)  
 
 Hirschauer, N., Grüner, S., Musshoff, O., Becker, C. and Jantsch, A. (2021), Inference using non-random samples? Stop right there!. Significance, 18: 20-24. https://doi.org/10.1111/1740-9713.01568
 
 **Instructions:** First read the two boxes on Random Sampling Error and Correction for Selection Bias. Then read the rest of the article. 
 
-## [What protects the autonomy of the federal statistical agencies? An assessment of the procedures in place to protect the independence and objectivity of official us statistics](https://profsuzy.github.io/Stat11/Autonomy of tthe Federal Statistical Agencies.pdf)
+## [What protects the autonomy of the federal statistical agencies? An assessment of the procedures in place to protect the independence and objectivity of official us statistics](https://profsuzy.github.io/Stat11/Autonomy of the Federal Statistical Agencies.pdf)
 
 Constance F. Citro, Jonathan Auerbach, Katherine Smith Evans, Erica L. Groshen, J. Steven Landefeld, Jeri Mulrow, Thomas Petska, Steve Pierson, Nancy Potok, Charles J. Rothwell, John Thompson, James L. Woodworth & Edward Wu (2023) What Protects the Autonomy of the Federal Statistical Agencies? An Assessment of the Procedures in Place to Protect the Independence and Objectivity of Official U.S. Statistics, Statistics and Public Policy, DOI: 10.1080/2330443X.2023.2188062
 
