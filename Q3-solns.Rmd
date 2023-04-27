@@ -172,9 +172,9 @@ will also accept that CI is more appropriate here. must define $p_1 =$ percent o
 
 sample proportion, $\rule{7cm}{0.15mm}$ is the standard deviation of the proportion of clients in this group who may not make timely payments. (Note you do not need to simplify your equation.)
 
-$\sqrt{p(1-p)/n} = \sqrt{\frac{0.04(1-0.04)}{300}} = 0.01131$.
+full credit for $\sqrt{p(1-p)/n} = \sqrt{\frac{0.04(1-0.04)}{300}} = 0.01131$.
 
-partial credit for answering $\frac{0.04(1-0.04)}{300}} = 0.000128$.
+partial credit for $\frac{0.04(1-0.04)}{300} = 0.000128$.
 
 
 \vspace{1cm}
@@ -183,7 +183,10 @@ partial credit for answering $\frac{0.04(1-0.04)}{300}} = 0.000128$.
 To answer the question of whether or not this data indicates that the problem is more severe among these cities, we calculate the test statistic
 
 \vspace{1cm}
-$$T.S. = \frac{\frac{136}{400}-0.28}{\sqrt{\frac{\frac{136}{400}(1- \frac{136}{400})}{400}}}  = 2.533$$
+
+$$T.S. = \frac{\frac{136}{400}-0.28}{\sqrt{\frac{0.28(1- 0.28)}{400}}}  = 2.673 \text{(full credit)}$$
+
+$$T.S. = \frac{\frac{136}{400}-0.28}{\sqrt{\frac{\frac{136}{400}(1- \frac{136}{400})}{400}}}  = 2.533 \text{(partial credit)}$$
 (Just plug the correct numbers into the correct formula, there is no need to simplify your answer.)
  
 \vspace{1cm}
