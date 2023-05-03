@@ -259,7 +259,7 @@ III. Because he sent the survey to everyone, this is a census and the results ca
 
 (e) Residuals are the difference between observed responses and values predicted by the model.
 
-\vspace{1cm}
+\pagebreak 
 **18.**   For families who live in apartments the correlation between the family's income and the amount of rent they pay is $r=0.60$. Which of the following is/are possibly TRUE about this correlation?
 
 I. In general, families with higher incomes pay more in rent.
@@ -302,62 +302,62 @@ Suppose there had been an error and that the lowest hourly wage is actually $\$1
 
 (e) An increase in the median
 
+
+\pagebreak 
 # Part 2: Fill in the blank
 
-**21.** Vending machines on a college campus offer a variety of snacks. The purchasing agent believes that each type of snack is equally preferred by students and consequently orders equal quantities. The number of snacks sold from vending machines on this campus for the last six months is shown in the following table. The observed test statistic for determining if the purchasing agent's belief is supported is 
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning. (For numeric solutions, writing the correct formula with the correct values is fine, there is no need to simplify your answer.)**
 
-**TO DO: include table of data** 
+**21.** Vending machines on a college campus offer a variety of snacks. The purchasing agent believes that each type of snack is equally preferred by students and consequently orders equal quantities. The number of snacks sold from vending machines on this campus for the last six months is shown in the following table. 
 
+| Snack Type | Chips | Candy Bars | Crackers | Nuts |
+| --- | --- | --- | --- | --- |
+| Purchase Frequency | 159 | 198 | 174 | 149 | 
+
+
+The observed test statistic for determining if the purchasing agent's belief is supported is 
 \vspace{1cm}
 
-$\chi^2 = \rule{4cm}{0.15mm}$.
+$\chi^2 = \rule{8cm}{0.15mm}$.
 
 
-\vspace{1cm}
+\vspace{3cm}
 **22.**  A manufacturing process has a $70\%$ yield, meaning that $70\%$ of the products are acceptable and $30\%$ are defective. 
 
-\vspace{1cm}
 If three of the products are randomly selected, the probability that all three of them are acceptable is 
 
 \vspace{1.5cm}
-$\rule{2cm}{0.15mm}$.
+$\rule{8cm}{0.15mm}$.
 
 
-\vspace{2cm}
+\vspace{3cm}
 **23.** A professor divided the students in her business class into three groups: those who have never taken a statistics class, those who have taken only one semester of a statistics class, and those who have taken two or more semesters of statistics. The professor randomly assigns students to groups of three to work on a project for the course. 
 
-If $35\%$ of the students have never taken a statistics class, $25\%$ have taken only one semester of a statistics class, and the rest have taken two or more semesters of statistics, 
+If $35\%$ of the students have never taken a statistics class, $25\%$ have taken only one semester of a statistics class, and the rest have taken two or more semesters of statistics, then the probability that neither of the first two
 
 \vspace{1cm}
-The probability that neither of the first two groupmates you meet has studied any statistics is $\rule{2cm}{0.15mm}$ .   
+groupmates you meet has studied any statistics is $\rule{4cm}{0.15mm}$ .   
 
-\vspace{2cm}
-**24.**  An education researcher was interested in examining the effect of the teaching method and the effect of the particular teacher on students' scores on a reading test. In a study, there are two different teachers (Juliana and Felix) and three different teaching methods (method A, method B, and method C). The number of students participating in the study is 258. Students are randomly assigned to a teaching method and teacher. 
+\vspace{3cm}
+**24.**  Ten different families are tested for the number of gallons of water a day they use before and after viewing a conservation video. Given that $\bar{x}_{d} = 4.8$ and $s_d = 5.25$, a $90\%$ confidence interval for the mean of the differences in water usage 
 
-What are the different treatments? 
- 
-\vspace{0.7cm} 
-$\rule{6cm}{0.15mm} \hfill \rule{6cm}{0.15mm}$
-
-\vspace{0.7cm} 
-$\rule{6cm}{0.15mm} \hfill \rule{6cm}{0.15mm}$
-
-\vspace{0.7cm} 
-$\rule{6cm}{0.15mm} \hfill \rule{6cm}{0.15mm}$
- 
 \vspace{1cm}
+will be centered at $\rule{3cm}{0.15mm}$ and have a margin of error equal to $\rule{3cm}{0.15mm}$. 
+
+
+\vspace{3cm}
 **25.**  Suppose the yearly snowfall (in $cm$) in a certain town can be modeled with a Normal distribution with mean $57cm$ and standard deviation $8 cm$. Based on the Z-table, the (lower) 80th percentile 
 
 \vspace{1cm}
-is approximately $\rule{2cm}{0.15mm}$ $cm$'s of snow.  
+is approximately $\rule{3cm}{0.15mm}$ $cm$'s of snow.  
 
 
-\vspace{2cm}
-**26.** The ASQ (American Society for Quality) regularly conducts a salary survey of its membership, primarily quality management professionals. Based on the most recently published mean and standard deviation, a quality control specialist calculated the z-score associated with his own salary and found it was 2.50. 
+\vspace{3cm}
+**26.** The ASQ (American Society for Quality) regularly conducts a salary survey of its membership, primarily quality management professionals. Based on the most recently published mean and standard deviation, a quality control specialist calculated the z-score associated with his own salary and found it to be $2.50$. 
 
-\vspace{1cm}
+\vspace{1.5cm}
 
-This tells him that his salary is $\rule{2cm}{0.15mm}$ standard deviations $\rule{2cm}{0.15mm}$ the average salary. 
+This tells him that his salary is $\rule{3cm}{0.15mm}$ standard deviations $\rule{3cm}{0.15mm}$ the average salary. 
 
 \vspace{1cm}
 **27.** The following boxplots show monthly sales revenue figures (in thousands of dollars) for a discount office supply company with locations in three different regions of the U.S. (Northeast, Southeast, and West).
@@ -366,64 +366,67 @@ This tells him that his salary is $\rule{2cm}{0.15mm}$ standard deviations $\rul
 
 \vspace{1cm}
 
-$\rule{3cm}{0.15mm}$ has the lowest median sales revenue.
+$\rule{4cm}{0.15mm}$ has the lowest median sales revenue.
 
 \vspace{1cm}
 **28.** If we transform a numeric data set by adding the same constant to each data value, 
 
+\vspace{2cm}
+
+the $\rule{5cm}{0.15mm}$ and $\rule{5cm}{0.15mm}$ will change but 
+
 \vspace{1cm}
 
-the $\rule{3cm}{0.15mm}$ and $\rule{3cm}{0.15mm}$ will change but 
-
-\vspace{1cm}
-
-the $\rule{3cm}{0.15mm}$ will stay the same. 
+the $\rule{5cm}{0.15mm}$ will stay the same. 
 
 \vspace{1.5cm}
 **29.** In words (not symbols), the parameters of a Binomial distributed random variable are
 
 \vspace{1cm}
 
-$\rule{4cm}{0.15mm}$ and $\rule{4cm}{0.15mm}$. 
+$\rule{5cm}{0.15mm}$ and $\rule{5cm}{0.15mm}$. 
 
 \vspace{1cm}
 **30.** In words (not symbols), the parameters of a Normally distributed random variable are
 
 \vspace{1cm}
 
-$\rule{4cm}{0.15mm}$ and $\rule{4cm}{0.15mm}$. 
+$\rule{5cm}{0.15mm}$ and $\rule{5cm}{0.15mm}$. 
+
+\pagebreak 
 
 # Part 3: Free response 
 
-**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning. (For numeric solutions, writing the correct formula with the correct values is fine, there is no need to simplify your answer.)**
 
-\vspace{1cm}
 **31.** The following boxplots show the closing share prices for a sample of technology companies on the first trading days in August 2007 and in August 2002. 
 
 ![](./images/final_plot3.png){height=4in} 
 
-Describe the story this plot tells about the closing share prices in these two years. Make sure your answer includes comparisons of variability, medians, and the shape of the distributions.
+Describe the story this plot tells about the closing share prices in these two years. Make sure your answer includes comparisons of **variability**, **centrality**, and **the shape** of the two distributions.
 
 \vspace{4cm}
 **32.** A survey of randomly selected college students found that 45 of the 99 freshmen and 57 of the 100 sophomores surveyed had purchased used textbooks in the past year. Construct a $98\%$ confidence interval for the difference in the proportions of college freshmen and sophomores who purchased used textbooks.  
 
-\vspace{4cm}
-**33.** $5\%$ of trucks of a certain model have needed new engines after being driven between 0 and 100 miles. The manufacturer hopes that the redesign of one of the engine's components has solved this problem. State the hypotheses to test the efficacy of the new design and **define the parameters in your hypotheses with words**. 
+\vspace{5cm}
+
+**33.** $5\%$ of trucks of a certain model have needed new engines after being driven between 0 and 100 miles. The manufacturer hopes that the redesign of one of the engine's components has solved this problem. State (with symbols) the hypotheses to test the efficacy of the new design and **define the parameters in your hypotheses with words**. 
 
 $$H_0: \rule{3cm}{0.15mm}$$
-\vspace{1cm}
+\vspace{0.5cm}
 $$H_A: \rule{3cm}{0.15mm}$$
  
-\vspace{4cm}
-**34.** The number of hours per week that high school seniors spend on homework is normally distributed, with a mean of 10 hours and a standard deviation of 3 hours. 60 students are chosen at random. Let $X$ represent the mean number of hours spent on homework for this group. Plot the probability that $X$ is between 9.8 and 10.4 on the Normal curve below and then use the Z-table to approximate this probability. 
+\vspace{3cm}
+**34.** The number of hours per week that high school seniors spend on homework is normally distributed, with a mean of 10 hours and a standard deviation of 3 hours. 60 students are chosen at random. Let $\bar{X}$ represent the mean number of hours spent on homework for this group of 60 students. Plot the probability that $\bar{X}$ is between 9.8 and 10.4 on the Normal curve below (label the center and the standard deviation of the distribution) **and** use the Z-table to approximate this probability. 
+
+![](./images/normal_curve.png){width=5in}
 
 \vspace{6cm}
-**35.** Ten different families are tested for the number of gallons of water a day they use before and after viewing a conservation video. Given the summary statistics below, construct a $90\%$ confidence interval for the mean of the differences. 
+**35.** An education researcher was interested in examining the effect of the teaching method and the effect of the particular teacher on students' scores on a reading test. In a study, there are two different teachers (Juliana and Felix) and three different teaching methods (method A, method B, and method C). The number of students participating in the study is 258. Students are randomly assigned to a teaching method and teacher. 
 
-| $\mu_{d}$ | $4.8$ | 
-|---| --- |
-| $s_d$ | $5.25$ | 
+What are the different treatments in this experiment?
 
-\vspace{4cm}
-**36.** Write a question that can be answered with a Chi-square test for homogeneity. 
+
+\vspace{5cm}
+**36.** Write a question that can be answered with a hypothesis test for the difference in means (You do NOT need to perform the test or to create any data.)
  
