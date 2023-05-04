@@ -87,11 +87,11 @@ Which of the following best explains the result of a Type II error?
 \vspace{1cm}
 **6.** A certain population is strongly skewed to the right. We want to estimate its mean, so we will collect a sample. Which of the following statements should be TRUE if we use a large sample rather than a small one?
 
-I. The distribution of our sample data will be closer to normal.
+\noindent I. The distribution of our sample data will be closer to normal.
 
-II. The sampling model of the sample means will be closer to normal.
+\noindent II. The sampling model of the sample means will be closer to normal.
 
-III. The variability of the sample means will be greater.  
+\noindent III. The variability of the sample means will be greater.  
 
 
 (a) I only 
@@ -160,11 +160,11 @@ Given that a randomly selected bike has a kickstand, what are the chances that i
 \vspace{1cm}
 **11.** A school district administrator sent a survey to all teachers in the district. Only $30\%$ of the teachers responded to the survey. Which of the following is TRUE?
 
-I. The people that did not responded are likely to be similar to those that did so he should use them as the sample.
+\noindent I. The people that did not responded are likely to be similar to those that did so he should use them as the sample.
 
-II. This survey design suffered from non-response bias.
+\noindent II. This survey design suffered from non-response bias.
 
-III. Because he sent the survey to everyone, this is a census and the results can be applied to the whole population.   
+\noindent III. Because he sent the survey to everyone, this is a census and the results can be applied to the whole population.   
 
 (a) II only
 
@@ -262,11 +262,11 @@ III. Because he sent the survey to everyone, this is a census and the results ca
 \pagebreak 
 **18.**   For families who live in apartments the correlation between the family's income and the amount of rent they pay is $r=0.60$. Which of the following is/are possibly TRUE about this correlation?
 
-I. In general, families with higher incomes pay more in rent.
+\noindent I. In general, families with higher incomes pay more in rent.
 
-II. On average, families spend $60\%$ of their income on rent.
+\noindent II. On average, families spend $60\%$ of their income on rent.
 
-III. The regression line passes through $60\%$ of the data points.
+\noindent III. The regression line passes through $60\%$ of the data points.
 
 (a) I only
 
@@ -421,7 +421,7 @@ $$H_A: \rule{3cm}{0.15mm}$$
 
 ![](./images/normal_curve.png){width=5in}
 
-\vspace{6cm}
+\pagebreak 
 **35.** An education researcher was interested in examining the effect of the teaching method and the effect of the particular teacher on students' scores on a reading test. In a study, there are two different teachers (Juliana and Felix) and three different teaching methods (method A, method B, and method C). The number of students participating in the study is 258. Students are randomly assigned to a teaching method and teacher. 
 
 What are the different treatments in this experiment?
