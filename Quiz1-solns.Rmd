@@ -1,5 +1,6 @@
 ---
 title: "Quiz 1 for Stat 11"
+subtitle: "Solutions"
 date: "2.17.23"
 output:
   pdf_document: 
@@ -24,7 +25,7 @@ III. We should use median and IQR to summarize these data.
 
 (c) III only 
 
-(d) II and III only 
+**(d) II and III only**
 
 (e) I, II, and III
 
@@ -44,13 +45,13 @@ Which of the following statements is TRUE?
 
 (d) Both A and B
 
-(e) All of the above
+**(e) All of the above**
 
 
 \vspace{1cm}
 **X.** All but one of the statements below contain a mistake. Which one could be TRUE? 
 
-(a) The correlation between your golf score and the number of hours you practice is 0.36. 
+**(a) The correlation between your golf score and the number of hours you practice is 0.36.** 
 
 (b) The number of apricots on a tree and the amount of fertilizer have a 1.12 correlation. 
 
@@ -67,7 +68,7 @@ Which of the following statements is TRUE?
 
 (c) power 
 
-(d) linear 
+**(d) linear** 
 
 (e) quadratic 
 
@@ -80,7 +81,7 @@ II. On average, about $72\%$ of a company's profit results from advertising.
 
 III. On average, companies spend about $72\%$ of their profits on advertising.
 
-(a) none 
+**(a) none** 
 
 (b) I only 
 
@@ -103,7 +104,7 @@ III. On average, companies spend about $72\%$ of their profits on advertising.
 
 (d) The linear model is okay because about the same number of points are above and below the it. 
 
-(e) The linear model is no good because of the curve in the residuals.
+**(e) The linear model is no good because of the curve in the residuals.**
 
 \vspace{1cm}
 **X.** A residual plot that has no pattern is a sign of what?
@@ -116,7 +117,7 @@ III. On average, companies spend about $72\%$ of their profits on advertising.
 
 (d) The original data is straight and the regression line is not a good model. 
 
-(e) The original data is straight and the regression line is a good model. 
+**(e) The original data is straight and the regression line is a good model.** 
 
 \vspace{1cm}
 **X.** Which of the following is NOT a goal of re-expressing data? 
@@ -127,9 +128,9 @@ III. On average, companies spend about $72\%$ of their profits on advertising.
 
 (c) Make the scatter in a scatterplot spread out evenly rather than following a fan shape. 
 
-(d) Make the spread of several groups more alike. 
+**(d) Make the spread of several groups more alike.** 
 
-(e) All of these are goals of re-expressing data. 
+**(e) All of these are goals of re-expressing data.** 
 
 
 \vspace{1cm}
@@ -150,14 +151,14 @@ III. On average, companies spend about $72\%$ of their profits on advertising.
 
 (d) $26.2\%$ 
 
-(e) $24.5\%$ 
+**(e) $24.5\%$**
 
 \vspace{1cm}
 **X.** A company's manufacturing process uses 500 gallons of water at a time. A "scrubbing" machine then removes most of a chemical pollutant before pumping the water into a nearby lake. To meet federal regulations the treated water must not contain more than 80 parts per million (ppm) of the chemical. Because a fine is charged if regulations are not met, the company sets the machine to attain an average of 75 ppm in the treated water. The machine's output can be described by a normal model with standard deviation 4.2 ppm. 
 
 What percent of the batches of water discharged exceed the 80 ppm standard?
 
-(a) $3.89\%$ 
+**(a) $3.89\%$**
 
 (b) $11.7\%$ 
 
@@ -182,12 +183,16 @@ What percent of the batches of water discharged exceed the 80 ppm standard?
 | Oppose | 85 | 45 | 60 | 
 | Don't know | 5 | 7 | 20 | 
 
+**A: $44.5\%$**
+
 
 **X.** Based on data collected from its production processes, Crosstiles Inc. determines that the breaking strength of its most popular porcelain tile is normally distributed with a mean of 400 pounds per square inch and a standard deviation of 12.5 pounds per square inch. Based on the 68-95-99.7 Rule, about 
 
 \vspace{.25cm}
 
 $\rule{3cm}{0.15mm}$ percent of the popular porcelain tile will have breaking strengths between 375 and 425 pounds per square inch. 
+
+**A: $97.35\%$**
 
 
 \vspace{1cm}
@@ -199,6 +204,7 @@ $\rule{3cm}{0.15mm}$ percent of the popular porcelain tile will have breaking st
 
 $\rule{3cm}{0.15mm}$ is the dealer with the smallest price range of approximately $\rule{3cm}{0.15mm}$ dollars.  
 
+**A: Ace, 10,000**
 
 \vspace{1cm}
 **X.** At a local manufacturing plant, employees must complete new machine set ups within 30 minutes. Suppose new machine set-up times can be described by a normal model with a mean of 22 minutes and a standard deviation of 4 minutes. 
@@ -207,6 +213,7 @@ $\rule{3cm}{0.15mm}$ is the dealer with the smallest price range of approximatel
 
 $\rule{3cm}{0.15mm}$ percent of new machine set ups take more than 30 minutes. 
 
+**A: $2.5\%$**
 
 \vspace{1cm}
 **X.** Suppose the time it takes to process phone orders in a small florist/gift shop is normally distributed with a 
@@ -215,12 +222,13 @@ $\rule{3cm}{0.15mm}$ percent of new machine set ups take more than 30 minutes.
 
 mean of 6 minutes and a standard deviation of 1.24 minutes. An order that processes in $\rule{3cm}{0.15mm}$ minutes separates the 5\% of orders that take the most time to process from the rest of the orders.
 
+**A: 7.8**
+
 # Part 3: Free response 
 
 *A small independent organic food store offers a variety of specialty coffees. To determine whether price has an impact on sales, the managers kept track of how many pounds of each variety of coffee were sold last month.*
 
 ![](./images/Q1_table.png){height=3.5in}
-
 
 **X.** Interpret the correlation within the context of the data. 
 
@@ -233,15 +241,17 @@ $\rule{15cm}{0.15mm}$
 \vspace{0.5cm}
 $\rule{15cm}{0.15mm}$
 
-\vspace{1cm}
 
+**A: strong negative linear, asas price increases, lbs sold decreases, provided association is actually linear (verify with plot)** 
+
+\vspace{1cm}
 **X.** Most likely, in a simple linear regression model for this data, $\rule{3cm}{0.15mm}$ is the predictor variable and
 
 \vspace{.5cm}
 
 $\rule{3cm}{0.15mm}$ is the response variable. 
 
-
+**A: price, lbs sold** 
 
 *Data were collected on monthly sales revenues (in \$1,000s) and monthly advertising expenditures (\$100s) for a sample of drug stores. The regression line relating revenues $(Y)$ to advertising expenditure $(X)$ is estimated to be $\hat{y}_{i} = -48.3 + 9.00x_i$.*
 
@@ -250,11 +260,6 @@ $\rule{3cm}{0.15mm}$ is the response variable.
 **X.** Interpret the slope within the context of this data. (Make sure you specify the correct units of measurement.) 
 
 \vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
 
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
-
-\vspace{0.5cm}
-$\rule{15cm}{0.15mm}$
+**A: for every \$100 spent on advertising, the expected/ave/predicted sales revenue increases by \$9000** 
 
