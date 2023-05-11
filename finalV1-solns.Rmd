@@ -318,7 +318,7 @@ Suppose there had been an error and that the lowest hourly wage is actually $\$1
 The observed test statistic for determining if the purchasing agent's belief is supported is 
 \vspace{1cm}
 
-$\chi^2 = \rule{8cm}{0.15mm}$.
+$\chi^2 = 8.012$.
 
 
 \vspace{3cm}
@@ -327,7 +327,7 @@ $\chi^2 = \rule{8cm}{0.15mm}$.
 If three of the products are randomly selected, the probability that all three of them are acceptable is 
 
 \vspace{1.5cm}
-$\rule{8cm}{0.15mm}$.
+$0.343$
 
 
 \vspace{3cm}
@@ -336,20 +336,20 @@ $\rule{8cm}{0.15mm}$.
 If $35\%$ of the students have never taken a statistics class, $25\%$ have taken only one semester of a statistics class, and the rest have taken two or more semesters of statistics, then the probability that neither of the first two
 
 \vspace{1cm}
-groupmates you meet has studied any statistics is $\rule{4cm}{0.15mm}$ .   
+groupmates you meet has studied any statistics is $0.123$ .   
 
 \vspace{3cm}
 **24.**  Ten different families are tested for the number of gallons of water a day they use before and after viewing a conservation video. Given that $\bar{x}_{d} = 4.8$ and $s_d = 5.25$, a $90\%$ confidence interval for the mean of the differences in water usage 
 
 \vspace{1cm}
-will be centered at $\rule{3cm}{0.15mm}$ and have a margin of error equal to $\rule{3cm}{0.15mm}$. 
+will be centered at $4.8$ and have a margin of error equal to $3$. 
 
 
 \vspace{3cm}
 **25.**  Suppose the yearly snowfall (in $cm$) in a certain town can be modeled with a Normal distribution with mean $57cm$ and standard deviation $8 cm$. Based on the Z-table, the (lower) 80th percentile 
 
 \vspace{1cm}
-is approximately $\rule{3cm}{0.15mm}$ $cm$'s of snow.  
+is approximately $63.7$ $cm$'s of snow.  
 
 
 \vspace{3cm}
@@ -357,7 +357,7 @@ is approximately $\rule{3cm}{0.15mm}$ $cm$'s of snow.
 
 \vspace{1.5cm}
 
-This tells him that his salary is $\rule{3cm}{0.15mm}$ standard deviations $\rule{3cm}{0.15mm}$ the average salary. 
+This tells him that his salary is $2.5$ standard deviations $above$ the average salary. 
 
 \vspace{1cm}
 **27.** The following boxplots show monthly sales revenue figures (in thousands of dollars) for a discount office supply company with locations in three different regions of the U.S. (Northeast, Southeast, and West).
@@ -366,18 +366,14 @@ This tells him that his salary is $\rule{3cm}{0.15mm}$ standard deviations $\rul
 
 \vspace{1cm}
 
-$\rule{4cm}{0.15mm}$ has the lowest median sales revenue.
+$Southeast$ has the lowest median sales revenue.
 
 \vspace{1cm}
 **28.** If we transform a numeric data set by adding the same constant to each data value, 
 
 \vspace{2cm}
 
-the $\rule{5cm}{0.15mm}$ and $\rule{5cm}{0.15mm}$ will change but 
-
-\vspace{1cm}
-
-the $\rule{5cm}{0.15mm}$ will stay the same. 
+the *mean/median/mode* will change but the *range/IQR/variance/standard deviation* will stay the same. 
 
 \vspace{1.5cm}
 **29.** In words (not symbols), the parameters of a Binomial distributed random variable are
