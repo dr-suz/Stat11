@@ -7,6 +7,12 @@
   1. [Random sampling and study design](https://profsuzy.github.io/Stat11/Cheat-sheet-1.html)
   
   2. [Probability and random variables](https://profsuzy.github.io/Stat11/Cheat-sheet-2.html)
+
+  3. [Random variables and probability distributions](https://profsuzy.github.io/Stat11/Cheat-sheet-3.html)
+
+  4. [Confidence intervals](https://profsuzy.github.io/Stat11/Cheat-sheet-4.html)
+
+  5. [Hypothesis tests](https://profsuzy.github.io/Stat11/Cheat-sheet-5.html)
   
 ***
 
@@ -93,28 +99,70 @@
 
 * Statistical inference from multiple samples of data
 
-* Statistical inference for related variables
+* Statistical inference for categorical variables
 
 ### Class slides 
 
-* [Topic]() 
+* [Sampling distribution models and confidence intervals for a (population) proportion](https://profsuzy.github.io/Stat11/week10-1-S23.html)
 
+* [Confidence interval for a (population) mean](https://profsuzy.github.io/Stat11/week10-2-S23.html) 
+
+* [Worksheet practice with margin of error](https://profsuzy.github.io/Stat11/week10-3-S23.html)
+
+* [Hypothesis tests (one sample)](https://profsuzy.github.io/Stat11/week11-2-S23.html) (with a short [introduction](https://profsuzy.github.io/Stat11/week11-1-S23.html))
+
+* [Worksheet practice for one sample procedures](https://profsuzy.github.io/Stat11/week11-3-S23.html)
+
+* [Inference for a difference in (population) proportions](https://profsuzy.github.io/Stat11/week12-1-S23.html)
+
+* [Review of one sample t-procedures](https://profsuzy.github.io/Stat11/week12-2-S23.html)
+
+* [Paired sample t-procedure](https://profsuzy.github.io/Stat11/week12-3-S23.html)
+
+* [Worksheet practice: Which procedure to use?](https://profsuzy.github.io/Stat11/week13-1-S23.html) and a [review of unit 3 topics](https://profsuzy.github.io/Stat11/week13-2-S23.html)
 
 ### Group homework 
 
 4. [HW 4](https://profsuzy.github.io/Stat11/HW4.html)
 
+### Quiz 3
+
+* [Formula sheet for quiz 3](https://profsuzy.github.io/Stat11/formula_sheet_Q3.pdf)
+
+## Unit 3 (continued)
+
+### Class slides 
+
+* [Comparing counts with chi-square procedures - Part 1](https://profsuzy.github.io/Stat11/week14-1-S23.html)
+
+* [Comparing counts with chi-square procedures - Part 2](https://profsuzy.github.io/Stat11/week14-2-S23.html)
+
+* [Comparing counts with chi-square procedures - Part 3](https://profsuzy.github.io/Stat11/week14-3-S23.html)
+
+* [Guidance for ethical statistical practice](https://profsuzy.github.io/Stat11/week15-S23.html)
+
+
+### Group homework 
+
 5. [HW 5](https://profsuzy.github.io/Stat11/HW5.html)
+
+
+### Final exam
+
+* [Formula sheet for the final exam](https://profsuzy.github.io/Stat11/formula_sheet_final.pdf)
+***
+
+## Group project  
+
+* [Conduct a student research project](https://profsuzy.github.io/Stat11/final_proj.pdf)
+
+* [Create and present an academic poster](https://profsuzy.github.io/Stat11/final_proj_poster.html)
 
 ***
 
-## Final project example 
-
-
-
 # Sources 
 
-Much of the material in these links can be found elsewhere. An incomplete list of my sources is:
+Much of the material within these links can be found elsewhere. An incomplete list of my sources is:
 
 * the New York Times and ASA collaborative project [What's going on in this graph?](https://www.nytimes.com/2021/07/28/learning/introduction-to-whats-going-on-in-this-graph.html); 
 
