@@ -1,6 +1,6 @@
 # Stat 11: Introduction to Statistical Methods 1 
 
-* Example [syllabus](https://dr-suz.github.io/Stat11/Stat11_S23_Syllabus.html) and [calendar](https://dr-suz.github.io/Stat11/Stat11_S23_Calendar.html) 
+* Example [syllabus](https://dr-suz.github.io/Stat11/Stat11_S23_Syllabus.html) and [calendar](https://dr-suz.github.io/Stat11/Stat11_S23_Calendar.html). As you can see from the syllabus, in addition to the material posted here, I also utilize Pearson's MyLab for a total of 16 reading comprehension quizzes throughout the semester. 
 
 * Reference sheets for 
 
@@ -13,7 +13,8 @@
   4. [Confidence intervals](https://dr-suz.github.io/Stat11/Cheat-sheet-4.html)
 
   5. [Hypothesis tests](https://dr-suz.github.io/Stat11/Cheat-sheet-5.html)
-  
+ 
+
 ***
 
 ## Unit 1
@@ -42,7 +43,7 @@
 
 * [Review of Unit 1 topics](https://dr-suz.github.io/Stat11/week5-S23.html)
 
-### Group homework 
+### Homework projects 
 
 1. [HW 1](https://dr-suz.github.io/Stat11/HW1.html)
 
@@ -83,7 +84,7 @@
 
 * [Review of Unit 2 topics](https://dr-suz.github.io/Stat11/week9-S23.html)
 
-### Group homework 
+### Homework Project
 
 3. [HW 3](https://dr-suz.github.io/Stat11/HW3.html)
 
@@ -107,11 +108,11 @@
 
 * [Confidence interval for a (population) mean](https://dr-suz.github.io/Stat11/week10-2-S23.html) 
 
-* [Worksheet practice with margin of error](https://dr-suz.github.io/Stat11/week10-3-S23.html)
+* [In-calss practice with margin of error](https://dr-suz.github.io/Stat11/week10-3-S23.html)
 
 * [Hypothesis tests (one sample)](https://dr-suz.github.io/Stat11/week11-2-S23.html) (with a short [introduction](https://dr-suz.github.io/Stat11/week11-1-S23.html))
 
-* [Worksheet practice for one sample procedures](https://dr-suz.github.io/Stat11/week11-3-S23.html)
+* [In-class practice for one sample procedures](https://dr-suz.github.io/Stat11/week11-3-S23.html)
 
 * [Inference for a difference in (population) proportions](https://dr-suz.github.io/Stat11/week12-1-S23.html)
 
@@ -119,9 +120,9 @@
 
 * [Paired sample t-procedure](https://dr-suz.github.io/Stat11/week12-3-S23.html)
 
-* [Worksheet practice: Which procedure to use?](https://dr-suz.github.io/Stat11/week13-1-S23.html) and a [review of unit 3 topics](https://dr-suz.github.io/Stat11/week13-2-S23.html)
+* [In-class practice: Which procedure to use?](https://dr-suz.github.io/Stat11/week13-1-S23.html) and a [review of unit 3 topics](https://dr-suz.github.io/Stat11/week13-2-S23.html)
 
-### Group homework 
+### Homework Project 
 
 4. [HW 4](https://dr-suz.github.io/Stat11/HW4.html)
 
@@ -142,7 +143,7 @@
 * [Guidance for ethical statistical practice](https://dr-suz.github.io/Stat11/week15-S23.html)
 
 
-### Group homework 
+### Homework Project 
 
 5. [HW 5](https://dr-suz.github.io/Stat11/HW5.html)
 
