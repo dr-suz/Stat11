@@ -1,8 +1,8 @@
 # Stat 11: Introduction to Statistical Methods 1 
 
-* Example [syllabus](https://dr-suz.github.io/Stat11/Stat11_S23_Syllabus.html) and [calendar](https://dr-suz.github.io/Stat11/Stat11_S23_Calendar.html). As you can see from the syllabus, in addition to the material posted here, I also utilize Pearson's MyLab for a total of 16 reading comprehension quizzes throughout the semester. 
+* Example [syllabus](https://dr-suz.github.io/Stat11/SF23-syllabus.html) and [calendar](https://dr-suz.github.io/Stat11/F23-calendar.html). As you can see from the syllabus, in addition to the material posted here, I also utilize Pearson's MyLab for a total of 15 reading comprehension quizzes throughout the semester. 
 
-* Reference sheets for 
+* Here are some quick review reference sheets for 
 
   1. [Random sampling and study design](https://dr-suz.github.io/Stat11/Cheat-sheet-1.html)
   
