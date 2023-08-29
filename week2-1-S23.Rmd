@@ -2,7 +2,6 @@
 title: "Stat 11 Week 2"
 subtitle: "Standard Deviation and Statistical Normality" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -136,7 +135,7 @@ The Normal model has two model parameters: $\mu$, the mean, and $\sigma$, the st
 
 ## Example 
 
-Let's check to see if the data plotted in the histogram and stemplots below could plausibly com from a Normal distribution.
+Let's check to see if the data plotted in the histogram and stem plots below could plausibly com from a Normal distribution.
 
 ```{r echo=FALSE}
 set.seed(101)
@@ -154,14 +153,16 @@ The mean of this data is `r round(mean(data),2)` and the standard deviation is `
 
 # 5. Re-expressing Data: Standardization 
 
-When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data set relative to their respective means and standard deviations by converting them into **z-scores**:
+![](./images/apples-oranges.png)
 
+When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data point relative to its mean and standard deviation by converting them into **z-scores**:
 
+$$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}.$$ 
 
 Shift the data point according to the value of the mean of the data, then scale the data point according to the standard deviation of the data. 
 
 
-$$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}$$ 
+
 
 <span style="color:purple">What are the units of measurement for standardized numeric data points?</span> 
 
