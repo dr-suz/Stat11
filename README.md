@@ -33,13 +33,15 @@
 
 * [Standard deviation and Normality](https://dr-suz.github.io/Stat11/week2-1-S23.html)
 
-* [In-class practice with understanding data](https://dr-suz.github.io/Stat11/week2-3-S23.html) and [followup information](https://dr-suz.github.io/Stat11//followup-to-wk2-wksheet.html)
+* [In-class practice with reading data into RStudio or Excel](https://dr-suz.github.io/Stat11/week2-3-S23.html) 
+
+* [In-class practice recognizing misleading summaries of statistical reports](https://dr-suz.github.io/Stat11/wk2-wksheet-followup.html)
 
 * [Comparing distributions](https://dr-suz.github.io/Stat11/week3-1-S23.html)
 
 * [Linear regression](https://dr-suz.github.io/Stat11/week3-2-S23.html)
 
-* [In-class practice with linear regression](https://dr-suz.github.io/Stat11/week3-3-S23.html)
+* [In-class practice with simple linear regression](https://dr-suz.github.io/Stat11/week3-3-S23.html)
 
 * [Review of Unit 1 topics](https://dr-suz.github.io/Stat11/week5-S23.html)
 

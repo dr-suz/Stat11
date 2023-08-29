@@ -2,7 +2,6 @@
 title: "Stat 11 Week 2"
 subtitle: "Practicing with Data" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -19,6 +18,10 @@ header-includes:
 
 Most of the data sets you will work with in this class are formatted as comma separated files (.csv). Although cleaning, wrangling, and formatting data is no small task in applications of Statistics and Data Science, this will not be the main focus of our class. All group homework assignments will involve data that is already cleaned and formatted. The only time you may need to clean data yourself is for your final project at the end of the semester. This is something I will help you with so you won't be on your own unless you want to be! 
 
+
+<p align="center">![](./images/excel.png){width=100px}![](./images/indecision.png){width=200px}![](./images/rstudio.png){width=200px}</p>
+
+
 The choice to use Excel or RStudio is entirely up to you. You can find short, helpful tutorial videos on using Excel or RStudio for data analysis through the <span style="color:purple">MyLab Multimedia Library</span> link at the top of our Moodle page. If you are thinking about taking any computer science courses or if you would like a gently introduction into the world of programming, then I recommend that you use RStudio for all GHWs and your final project. If you are decidedly not at all interested in developing programming skills then you can use Excel for all GHWs and your final project. If you're not sure and would like a slower introduction to programming, then you may wish to use Excel for the first 1-2 GHWs and RStudio for the rest. Then you can decide which you prefer for your final project. These are only suggestions and I am here to help you along the way no matter which program you prefer to use. 
 
 Excel (or Google Sheets) are commonly used for basic statistical analysis across many disciplines and professions. R is an open-source statistically programming software that is used predominantly by statisticians and data scientists. RStudio is a friendlier user interface from which you can do R programming since the R software by itself has a bare-bones display that isn't as informative for new users. If you decide to major or minor in Statistics at Swarthmore, then you will need to know how to work with R (or RStudio). 
@@ -33,5 +36,5 @@ There are a couple of ways to input data into RStudio. Either way, you'll want t
 
  
 
-# Group work on [Week 2 worksheet](https://profsuzy.github.io/Stat11/wk2-wksheet.html)
+# Group work on [Week 2 worksheet](https://dr-suz.github.io/Stat11/wk2-wksheet.html)
 
