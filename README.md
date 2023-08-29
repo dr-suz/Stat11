@@ -31,11 +31,11 @@
 
 * [Data and statistics - part 2](https://dr-suz.github.io/Stat11/week1-2-S23.html)
 
+* [In-class practice recognizing misleading summaries of statistical reports](https://dr-suz.github.io/Stat11/wk1-wksheet.html)
+
 * [Standard deviation and Normality](https://dr-suz.github.io/Stat11/week2-1-S23.html)
 
-* [In-class practice with reading data into RStudio or Excel](https://dr-suz.github.io/Stat11/week2-3-S23.html) 
-
-* [In-class practice recognizing misleading summaries of statistical reports](https://dr-suz.github.io/Stat11/wk2-wksheet-followup.html)
+* [In-class practice reading data into RStudio or Excel](https://dr-suz.github.io/Stat11/week2-3-S23.html) 
 
 * [Comparing distributions](https://dr-suz.github.io/Stat11/week3-1-S23.html)
 
