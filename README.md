@@ -31,19 +31,24 @@
 
 * [Data and statistics - part 2](https://dr-suz.github.io/Stat11/week1-2-S23.html)
 
-* [In-class practice recognizing misleading summaries of statistical reports](https://dr-suz.github.io/Stat11/wk1-wksheet.html)
-
 * [Standard deviation and Normality](https://dr-suz.github.io/Stat11/week2-1-S23.html)
 
-* [In-class practice reading data into RStudio or Excel](https://dr-suz.github.io/Stat11/week2-3-S23.html) 
+* [Working with data in Excel and RStudio](https://dr-suz.github.io/Stat11/week2-3-S23.html) 
 
 * [Comparing distributions](https://dr-suz.github.io/Stat11/week3-1-S23.html)
 
 * [Linear regression](https://dr-suz.github.io/Stat11/week3-2-S23.html)
 
-* [In-class practice with simple linear regression](https://dr-suz.github.io/Stat11/week3-3-S23.html)
-
 * [Review of Unit 1 topics](https://dr-suz.github.io/Stat11/week5-S23.html)
+
+### Worksheets 
+
+* [Statistical reporting: What not to do!](https://dr-suz.github.io/Stat11/wk1-wksheet.html)
+
+* [Visualizing data](https://dr-suz.github.io/Stat11/wk2-wksheet.html)
+
+* [Simple linear regression](https://dr-suz.github.io/Stat11/week3-3-S23.html)
+
 
 ### Homework projects 
 
@@ -70,21 +75,23 @@
 
 * [Experiments and observational studies](https://dr-suz.github.io/Stat11/week4-2-S23.html)
 
-* [In-class practice with collecting data](https://dr-suz.github.io/Stat11/week4-3-S23.html)
-
 * [Random variables and probability rules - part 1](https://dr-suz.github.io/Stat11/week6-1-S23.html)
 
 * [Random variables and probability rules - part 2](https://dr-suz.github.io/Stat11/week6-2-S23.html)
 
-* [In-class practic with probability](https://dr-suz.github.io/Stat11/week6-3-S23.html)
-
-* [Random variables and their expectations](https://dr-suz.github.io/Stat11/week7-1-S23.html)
+* [Expected values of random variables](https://dr-suz.github.io/Stat11/week7-1-S23.html)
 
 * [Independence and properties of expectation](https://dr-suz.github.io/Stat11/week7-2-S23.html)
 
-* [In-class practice with random variables](https://dr-suz.github.io/Stat11/week7-3-S23.html)
-
 * [Review of Unit 2 topics](https://dr-suz.github.io/Stat11/week9-S23.html)
+
+### Worksheets
+
+* [In-class practice with collecting data](https://dr-suz.github.io/Stat11/week4-3-S23.html)
+
+* [In-class practic with probability](https://dr-suz.github.io/Stat11/week6-3-S23.html)
+
+* [In-class practice with random variables](https://dr-suz.github.io/Stat11/week7-3-S23.html)
 
 ### Homework Project
 
@@ -110,11 +117,7 @@
 
 * [Confidence interval for a (population) mean](https://dr-suz.github.io/Stat11/week10-2-S23.html) 
 
-* [In-calss practice with margin of error](https://dr-suz.github.io/Stat11/week10-3-S23.html)
-
 * [Hypothesis tests (one sample)](https://dr-suz.github.io/Stat11/week11-2-S23.html) (with a short [introduction](https://dr-suz.github.io/Stat11/week11-1-S23.html))
-
-* [In-class practice for one sample procedures](https://dr-suz.github.io/Stat11/week11-3-S23.html)
 
 * [Inference for a difference in (population) proportions](https://dr-suz.github.io/Stat11/week12-1-S23.html)
 
@@ -122,7 +125,15 @@
 
 * [Paired sample t-procedure](https://dr-suz.github.io/Stat11/week12-3-S23.html)
 
+
+### Worksheets
+
+* [In-calss practice with margin of error](https://dr-suz.github.io/Stat11/week10-3-S23.html)
+
+* [In-class practice for one sample procedures](https://dr-suz.github.io/Stat11/week11-3-S23.html)
+
 * [In-class practice: Which procedure to use?](https://dr-suz.github.io/Stat11/week13-1-S23.html) and a [review of unit 3 topics](https://dr-suz.github.io/Stat11/week13-2-S23.html)
+
 
 ### Homework Project 
 
