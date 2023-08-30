@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="STAT011-S23" />
+<meta name="author" content="STAT 11 with Prof. Suzy" />
 
 
-<title>Group Homework 1</title>
+<title>Project Homework 1</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -298,23 +298,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -355,9 +349,9 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Group Homework 1</h1>
-<h4 class="author">STAT011-S23</h4>
-<h4 class="date">Due: 2/6/23</h4>
+<h1 class="title toc-ignore">Project Homework 1</h1>
+<h4 class="author">STAT 11 with Prof. Suzy</h4>
+<h4 class="date">Due: Friday, Sept 22 by 11:59pm</h4>
 
 </div>
 
@@ -367,12 +361,12 @@ display: none;
 <p>The data set you will analyse in this homework records information
 about different items on the menu at a local Burger King restaurant. One
 purpose of this assignment is to practice using software to explore and
-summarize qualities of these data consisting of <span class="math inline">\(122\)</span> observations and <span class="math inline">\(17\)</span> columns (the first column identifies
-the item name, the next <span class="math inline">\(16\)</span> columns
-are different variables). Another purpose of this assignment is to begin
-to practice working with data through software. Most of your time on
-this assignment will be spent getting your software set up and on
-learning how to do basic exploratory statistics with either Excel or
+summarize qualities of these data consisting of <span class="math inline">\(122\)</span> observations and <span class="math inline">\(15\)</span> columns (the first column identifies
+the item name, the next <span class="math inline">\(14\)</span>
+correspond to different variables). Another purpose of this assignment
+is to begin to practice working with data through software. Most of your
+time on this assignment will be spent getting your software set up and
+on learning how to do basic exploratory statistics with either Excel or
 RStudio.</p>
 </div>
 <div id="required-tech" class="section level1">
@@ -409,14 +403,14 @@ Scatterplots (4:08)</p></li>
 </div>
 <div id="instructions" class="section level1">
 <h1>Instructions</h1>
-<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/Burger_King_items.csv">download
-the data set for HW 2</a> from our Stat 11 Github Data page. Do this by
-right clicking on the link “View Raw” and save the link with the name
+<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/dr-suz/Stat11/blob/main/Data/Burger_King_items.csv">download
+the data set</a>. There are several ways to do this but I think the
+simplest is to right click on this link and save it with the file name
 <code>Burger_King_items.csv</code>.</p>
 <p>If you are analyzing this data in RStudio, you will import the data
 with the following command</p>
 <pre class="r"><code>Burger_King_items &lt;- read.csv(
-    &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv&quot;)</code></pre>
+    &quot;https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Burger_King_items.csv&quot;)</code></pre>
 <p>The data object is called <code>Burger_King_items</code>.</p>
 <p>Once you have access to the data set, complete all parts of the five
 problems in this assignment. You are encouraged to work with your

@@ -1,15 +1,14 @@
 ---
-title: "Group Homework 1"
-author: "STAT011-S23"
-date: 'Due: 2/6/23'
+title: "Project Homework 1"
+author: "STAT 11 with Prof. Suzy"
+date: 'Due: Friday, Sept 22 by 11:59pm'
 output:
   html_document: default
-  pdf_document: default
 ---
 
 # Introduction and Purpose 
 
-The data set you will analyse in this homework records information about different items on the menu at a local Burger King restaurant. One purpose of this assignment is to practice using software to explore and summarize qualities of these data consisting of $122$ observations and $17$ columns (the first column identifies the item name, the next $16$ columns are different variables). Another purpose of this assignment is to begin to practice working with data through software. Most of your time on this assignment will be spent getting your software set up and on learning how to do basic exploratory statistics with either Excel or RStudio.
+The data set you will analyse in this homework records information about different items on the menu at a local Burger King restaurant. One purpose of this assignment is to practice using software to explore and summarize qualities of these data consisting of $122$ observations and $15$ columns (the first column identifies the item name, the next $14$ correspond to different variables). Another purpose of this assignment is to begin to practice working with data through software. Most of your time on this assignment will be spent getting your software set up and on learning how to do basic exploratory statistics with either Excel or RStudio.
 
 
 # Required Tech 
@@ -48,12 +47,12 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 
 # Instructions
 
-If you are analyzing this data in Excel you first need to [download the data set for HW 2](https://github.com/ProfSuzy/Stat11/blob/main/Data/Burger_King_items.csv) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `Burger_King_items.csv`.  
+If you are analyzing this data in Excel you first need to [download the data set](https://github.com/dr-suz/Stat11/blob/main/Data/Burger_King_items.csv). There are several ways to do this but I think the simplest is to right click on this link and save it with the file name `Burger_King_items.csv`.  
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
 Burger_King_items <- read.csv(
-    "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv")
+    "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Burger_King_items.csv")
 ```
 The data object is called `Burger_King_items`. 
 
