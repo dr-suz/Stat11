@@ -47,7 +47,9 @@ The skills necessary to complete this assignment in RStudio are covered in the f
 
 # Instructions
 
-If you are analyzing this data in Excel you first need to [download the data set](https://github.com/dr-suz/Stat11/blob/main/Data/Burger_King_items.csv). There are several ways to do this but I think the simplest is to right click on this link and save it with the file name `Burger_King_items.csv`.  
+If you are analyzing this data in Excel you first need to [download the data set](https://github.com/dr-suz/Stat11/blob/main/Data/Burger_King_items.csv). There are several ways to do this but I think the simplest is to follow this link and then download the raw file and save it with the file name `Burger_King_items.csv`. (The image below shows you were to find the download button.)
+
+<p align="center">![](./images/PHW1.png){width=600px}</p>
 
 If you are analyzing this data in RStudio, you will import the data with the following command
 ```{r, eval=FALSE}
@@ -56,7 +58,7 @@ Burger_King_items <- read.csv(
 ```
 The data object is called `Burger_King_items`. 
 
-Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#1.
+Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the link on Moodle for Project Homework \#1.
 
 
 # Problem 1 
