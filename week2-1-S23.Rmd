@@ -2,7 +2,6 @@
 title: "Stat 11 Week 2"
 subtitle: "Standard Deviation and Statistical Normality" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -55,19 +54,19 @@ For data that is
 
 the mode, the mean, and the median are all the same value! 
 
-![](./images/symmetric unimodal.png)
+![](./images/symmetric unimodal.png){width=500px}
 
 For data that is unimodal but not symmetric...
 
-![*The median is a better representation of the center of skewed data.*](./images/skew.png)
+![*The median is a better representation of the center of skewed data.*](./images/skew.png){width=500px}
 
 For data that is not unimodal but is symmetric...
 
-![*It is useful to know how many modes occur and where they are located.*](./images/bimodal symmetric.png)
+![*It is useful to know how many modes occur and where they are located.*](./images/bimodal symmetric.png){width=500px}
 
 For data that is not unimodal and not symmetric... 
 
-![*Histograms are indespensible because numerical summaries can be misleading by themselves.*](./images/neither symmetric nor unimodal.png)
+![*Histograms are indespensible because numerical summaries can be misleading by themselves.*](./images/neither symmetric nor unimodal.png){width=500px}
 
 # 2. Numerical measures of spread 
 
@@ -107,13 +106,18 @@ Standard deviation of a sample (more commonly called sample standard deviation):
 
 ## Example 
 
-![](./images/Thaim_long_jump.png){width=300px}![](./images/johnson-thompson_race.png){width=200px}
+![](./images/shacarri-richardson.jpg){width=300px}![](./images/ivana-vuleta.png){width=300px} 
 
-Thiam took the gold in the Olympics with a long jump of $6.58 m$ which was $0.41 m$ longer than the average jump. Johnson-Thompson won the $200 m$ race with a time of $23.26 s$ which was $1.32 s$ faster than the average run. Whose performance are you most impressed by? 
+<font size="1">Image credits: Denes Erdos/AP (L) and Reuters (R)</font>
 
-A statistician would answer this question by comparing how many standard deviations away from the mean Thiam's jump distance was vs how many standard deviations away from the mean  Johnson-Thompson's run time was. 
 
-Standard deviation is called the "statistician's ruler" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
+
+The 2023 World Athletics Championships in Budapest saw many athletes perform at their personal best in preparation for the Olympics. 
+Sha'Carri Richardson won first place for the USA in the women's $100m$ sprint with a time of $10.65s$, which was $0.252 s$ faster than the average time of her top $10$ competitors. Ivana Vuleta of Serbia won the women's long jump with a jump of $7.14 m$, a jump $0.357 m$ longer than the average distance of her top $10$ competitors. <span style="color:purple">Statistically speaking, whose performance are we most impressed by?</span>
+
+A statistician would answer this question by comparing how many standard deviations away from the mean Sha'Carri's run time was vs how many standard deviations away from the mean Ivana's jump distance was. 
+
+Standard deviation is called the \"statistician's ruler\" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
 
 
 
@@ -129,14 +133,14 @@ Normal/Gaussian model
 
 The first two conditions can be assessed visually by looking at a histogram of the data. The last condition can be assessed mathematically using what is called the **68/95/99.7 Rule**.
 
-![](./images/normal 68-95-997.png)
+![](./images/normal 68-95-997.png){width=700px}
 
 The Normal model has two model parameters: $\mu$, the mean, and $\sigma$, the standard deviation. These two parameters correspond directly to a measure of centrality and a measure of spread. (This isn't the case with other probability models and their model parameters.)
 
 
 ## Example 
 
-Let's check to see if the data plotted in the histogram and stemplots below could plausibly com from a Normal distribution.
+Let's check to see if the data plotted in the histogram and stem plots below could plausibly com from a Normal distribution.
 
 ```{r echo=FALSE}
 set.seed(101)
@@ -154,14 +158,21 @@ The mean of this data is `r round(mean(data),2)` and the standard deviation is `
 
 # 5. Re-expressing Data: Standardization 
 
-When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data set relative to their respective means and standard deviations by converting them into **z-scores**:
+![](./images/apples-oranges.png){width=300px}
+
+<font size="1">Image credit: jasneko on shirt.woot.com</font>
 
 
+
+
+When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data point relative to its mean and standard deviation by converting them into **z-scores**:
+
+$$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}.$$ 
 
 Shift the data point according to the value of the mean of the data, then scale the data point according to the standard deviation of the data. 
 
 
-$$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}$$ 
+
 
 <span style="color:purple">What are the units of measurement for standardized numeric data points?</span> 
 
@@ -173,7 +184,9 @@ Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_
 
 ## Example
 
-If we standardize the race time for all Olympic $200 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the jump distance for all Olympic long jumpers and make this distance unitless. 
+If we standardize the race time for all 2023 World Athletics Championship $100 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the jump distance for all long jumpers and make this distance unitless. 
 
-The magnitude and order still are meaningful but now it is much easier to answer questions like "whose performance was more impressive, Thiam or Johnson-Thompson?" because both sets of data are measured on the same (unitless) scale. 
+The magnitude and order still are meaningful but now it is much easier to answer questions like \"Whose performance was more impressive, Sha'Carri or Ivana?\" because both sets of data are measured on the same (unitless) scale. [Hint: You can statistically answer this question now provided I give you the standard deviation of the $100m$ race, $10.65s$, and the standard deviation of the long jump, $0.181m$.]
+
+
 

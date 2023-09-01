@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US" xml:lang="en-US">
 
 <head>
 
@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="STAT011-S23" />
+<meta name="author" content="Prof. Suzy Thornton" />
 
 
-<title>Group Homework 4</title>
+<title>Stat 11 Proposed Calendar</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -349,160 +349,184 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Group Homework 4</h1>
-<h4 class="author">STAT011-S23</h4>
-<h4 class="date">Due: 4/5/23</h4>
+<h1 class="title toc-ignore">Stat 11 Proposed Calendar</h1>
+<h4 class="author">Prof. Suzy Thornton</h4>
+<h4 class="date">Fall 2023</h4>
 
 </div>
 
 
-<div id="introduction-and-purpose" class="section level1">
-<h1>Introduction and Purpose</h1>
-<p>The data set you will analyse in this homework gives some
-characteristics of <span class="math inline">\(n=1414\)</span> young
-female patients between the ages of <span class="math inline">\(11\)</span> to <span class="math inline">\(26\)</span> who came to clinics of Johns Hopkins
-Medical Institutions between <span class="math inline">\(2006\)</span>
-and <span class="math inline">\(2008\)</span> to begin the three-shot
-regimen of vaccinations with the anti-human papillomavirus (HPV)
-medication Gardasil. There are <span class="math inline">\(10\)</span>
-variables in this data set, <span class="math inline">\(8\)</span> of
-which are categorical.</p>
-<p>The purpose of this assignment is to develop your ability to create
-confidence intervals and conduct hypotheses test with real data. Each
-question requires you to assess the necessary assumptions before
-reporting your result. The <span class="math inline">\(10\)</span>
-variable definitions are provided below for your reference.</p>
-<ol style="list-style-type: decimal">
-<li><p>Age = the patient’s age in years</p></li>
-<li><p>AgeGroup = the age group in which the patient falls (0 = 11-17
-years, 1 = 18-26 years)</p></li>
-<li><p>Race = the patient’s race (0 = White, 1 = Black, 2 = Hispanic, 3
-= Other/unknown)</p></li>
-<li><p>Shots = the number of shots that the patients completed during a
-period of 12 months from the time of the first shot</p></li>
-<li><p>Completed = did the patient complete the three-shot regimen
-within the recommended period of 12 months (0 = no, 1 = yes)</p></li>
-<li><p>InsuranceType = the type of insurance that the patient had (0 =
-no medical assistance, 1 = private payer [Blue Cross Blue Shield, Aetna,
-Cigna, United, Commercial, CareFirst], 2 = hospital based [EHF], 3 =
-military [USFHP, Tricare, MA])</p></li>
-<li><p>MedAssist = did the patient have some type of medical assistance
-(0 = no, 1 = yes)</p></li>
-<li><p>Location = the clinic that the patient attended (1 = Odenton, 2 =
-White Marsh, 3 = Johns Hopkins Outpatient Center, 4 = Bayview)</p></li>
-<li><p>LocationType = was the clinic in a suburban or an urban location
-(0 = suburban, 1 = urban)</p></li>
-<li><p>PracticeType = the type of practice that the patient visited (0 =
-pediatric, 1 = family practice, 2 = OB-GYN)</p></li>
-</ol>
-</div>
-<div id="required-tech" class="section level1">
-<h1>Required Tech</h1>
-<div id="excel" class="section level2">
-<h2>Excel</h2>
-<p>The skills necessary to complete this assignment in Excel are covered
-in the following seven videos:</p>
+<p>We will cover three different, but related, units in this
+one-semester course. These units roughly correspond to the first six
+parts of your textbook. The units are broken into the following subject
+areas:</p>
+<p><strong>Unit 1</strong></p>
 <ul>
-<li><p>Excel 2016 with Data Analysis Toolpak - Introduction to Common
-Procedures</p></li>
-<li><p>Excel 2016 with Data Analysis Toolpak - Descriptive Statistics
-and Confidence Intervals for a Mean</p></li>
-<li><p>Excel 2016 with <strong>XLSTAT</strong> Video - Hypothesis Tests
-and Confidence Intervals for a Proportion</p></li>
-<li><p>Excel 2016 with <strong>XLSTAT</strong> Video - Hypothesis Test
-and Confidence Interval for the Difference Between Proportions</p></li>
-<li><p>Excel 2016 with <strong>XLSTAT</strong> Video - Hypothesis Test
-and Confidence Interval for One Mean</p></li>
+<li>Exploring and understanding data</li>
+<li>Exploring and understanding relationships between variables</li>
 </ul>
-</div>
-<div id="rstudio" class="section level2">
-<h2>RStudio</h2>
-<p>The skills necessary to complete this assignment in RStudio are
-covered in the following seven videos:</p>
+<p><strong>Unit 2</strong></p>
 <ul>
-<li><p>RStudio Video - Probability Distributions</p></li>
-<li><p>RStudio Video - Statistical Inference - Inference on Proportions
-- One Sample</p></li>
-<li><p>RStudio Video - Statistical Inference - Inference on Mean - One
-Sample</p></li>
+<li>Collecting data</li>
+<li>Randomness and probability</li>
 </ul>
-</div>
-</div>
-<div id="instructions" class="section level1">
-<h1>Instructions</h1>
-<p>If you are analyzing this data in Excel you first need to <a href="https://github.com/ProfSuzy/Stat11/blob/main/Data/gardasil_data.txt">download
-the data set for HW 4</a> from our Stat 11 Github Data page. Do this by
-right clicking on the link “View Raw” and save the link with the name
-<code>gardasil.csv</code>.</p>
-<p>If you are analyzing this data in RStudio, you will import the data
-with the following command</p>
-<pre class="r"><code>gardasil &lt;- read.delim(
-        &quot;https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt&quot;,
-        sep=&quot;\t&quot;)</code></pre>
-<p>The data object is called <code>gardasil</code>.</p>
-<p>Once you have access to the data set, complete all parts of the five
-problems in this assignment. You are encouraged to work with your
-classmates on this assignment but you must hand in your own, unique
-write up of the solutions. In a Word document, clearly label each
-problem’s solution. Most solutions will include graphics which can be
-copied from Excel or RStudio and pasted into your solution document. All
-solutions require a written component. When you are ready to submit your
-assignment, save the Word document as a PDF and upload it to the Moodle
-link for Group Homework #4.</p>
-</div>
-<div id="problem-1" class="section level1">
-<h1>Problem 1</h1>
-<p>Consider the mean age of <span class="math inline">\(11\)</span> to
-<span class="math inline">\(26\)</span> year old female patients who
-visited the clinic because they were interested in getting the HPV
-vaccine.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Do do think that the two conditions necessary for the Central
-Limit Theorem to hold are reasonable in this example? Why/why
-not?</p></li>
-<li><p>Regardless of your answer to (a), find an <span class="math inline">\(85\%\)</span> CI for the mean age of these
-patients.</p></li>
-</ol>
-</div>
-<div id="problem-2" class="section level1">
-<h1>Problem 2</h1>
-<p>Find a <span class="math inline">\(90\%\)</span> confidence interval
-for <span class="math inline">\(p=\)</span> the probability that an
-<span class="math inline">\(11\)</span> to <span class="math inline">\(26\)</span> year old female will complete all
-three required shots. Interpret this interval within the context of the
-problem.</p>
-</div>
-<div id="probleem-3" class="section level1">
-<h1>Probleem 3</h1>
-<p>Determine how many <strong>more</strong> patients we would need to
-survey in order to find a <span class="math inline">\(95\%\)</span>
-confidence interval for the probability that a non-white patient
-completes all three shots to within a margin of error of <span class="math inline">\(0.1\)</span>? (Hint: First, figure out how many of
-the patients in this sample have completed all three shots. Then,
-continue to solve the sample size estimation problem.)</p>
-</div>
-<div id="problem-4" class="section level1">
-<h1>Problem 4</h1>
-<p>Conduct a hypothesis test to determine if the average number of shots
-per patient is three or less than three. Choose your own confidence (and
-significance) level.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>State the null and alternative hypotheses.</p></li>
-<li><p>Assess the necessary assumptions and conditions.</p></li>
-<li><p>Regardless of your assessment in part (b), conduct the test in
-part (a) and state the p-value and your conclusion within the context of
-the problem.</p></li>
-</ol>
-</div>
-<div id="problem-5" class="section level1">
-<h1>Problem 5</h1>
-<p>Based on this survey, conduct a <span class="math inline">\(0.01\)</span> significance level hypothesis test
-of <span class="math display">\[H_0: p=0.5 \quad \text{vs}\quad H_{A}:
-p&lt; 0.5\]</span> where <span class="math inline">\(p=\)</span> the
-probability that an <span class="math inline">\(11\)</span> to <span class="math inline">\(26\)</span> year old female who is interested in
-protection against HPV does not have any medical assistance. State the
-p-value and your conclusion within the context of the problem.</p>
-</div>
+<p><strong>Unit 3</strong></p>
+<ul>
+<li>Statistical inference from a single sample of data</li>
+<li>Statistical inference from multiple samples of data</li>
+<li>Statistical inference for related variables</li>
+</ul>
+<p><br><br></p>
+<p><strong>Office Hours</strong></p>
+<p>Held in SCI 136 on <strong>W F 10:20am-11:20am</strong> or virtually
+by appointment (see the syllabus for details).</p>
+<p><br><br></p>
+<p><span style="color:blue">Please understand that this calendar is
+subject to change depending on the discretion of your professor. Check
+back regularly for updates.</span>.</p>
+<p><br><br></p>
+<p>In the calendar below <strong>RCHW</strong> corresponds to reading
+comprehension homework assignments and <strong>PHW</strong> corresponds
+to project homework assignments.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Week</th>
+<th align="left">Date</th>
+<th align="left">Unit</th>
+<th align="left">Topics</th>
+<th align="left">Reading and homework assignments and assessment
+items</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Sept 5</td>
+<td align="left">1</td>
+<td align="left">Visualizing and summarizing data</td>
+<td align="left">Part 1: Ch 1-3 <br> RCHW 1+2</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Sept 11</td>
+<td align="left">1</td>
+<td align="left">Describing distributions with variability</td>
+<td align="left">Part 1: Ch 4-5 <br> RCHW 3+4</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Sept 18</td>
+<td align="left">1</td>
+<td align="left">Describing relationships between two numeric
+variables</td>
+<td align="left">Part 2: Ch 6 all, Ch 7 all, Ch 8.1-8.3 <br> PHW 1</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">Sept 25</td>
+<td align="left">2</td>
+<td align="left">Collecting data from experiments and observational
+studies</td>
+<td align="left">Part 3: Ch 10-11 (all) <br> PHW 2</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">Oct 2</td>
+<td align="left">1</td>
+<td align="left">Week 1-3 topics</td>
+<td align="left">RCHW 5 <br> <strong>Quiz 1</strong></td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">Oct 9</td>
+<td align="left">2</td>
+<td align="left">From randomness to probability and the laws of
+probability</td>
+<td align="left">Part 4: Ch 12-13 (all) <br> RCHW 6+7</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">Oct 16</td>
+<td align="left"></td>
+<td align="left">Fall Break</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">Oct 23</td>
+<td align="left">2</td>
+<td align="left">Random variables and probability models</td>
+<td align="left">Part 4: Ch 14 all, Ch 15.1, 15.3, 15.4, 15.5 <br> PHW 3
+<br> RCHW 8</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">Oct 30</td>
+<td align="left">2</td>
+<td align="left">Week 4,6,8 topics</td>
+<td align="left">RCHW 9+10 <br> <strong>Quiz 2</strong></td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">Nov 6</td>
+<td align="left">3</td>
+<td align="left">Sampling distributions and confidence intervals for a
+proportion and for a mean</td>
+<td align="left">Part 5: Ch 16-17 (all except 17.4) <br> RCHW 11+12</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">Nov 13</td>
+<td align="left">3</td>
+<td align="left">Hypothesis tests about a proportion or a mean</td>
+<td align="left">Part 5: Ch 18-19 (all) <br> PHW 4</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">Nov 20</td>
+<td align="left">3</td>
+<td align="left">Comparing grouped numeric data</td>
+<td align="left">Part 6: Ch 20-21 (all) <br> RCHW 13+14</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">Nov 27</td>
+<td align="left">3</td>
+<td align="left">Week 10-12 topics</td>
+<td align="left"><strong>Quiz 3</strong></td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">Dec 4</td>
+<td align="left">3</td>
+<td align="left">Comparing grouped categorical data</td>
+<td align="left">Part 6: Ch 22 (all) <br> RCHW 15</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">Dec 11</td>
+<td align="left"></td>
+<td align="left">Ethical statistical practice</td>
+<td align="left">PHW 5 <br> <strong>Final Project
+Presentations</strong></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Dec 17-23</td>
+<td align="left"></td>
+<td align="left"><strong>Final Exam</strong></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 
 
 

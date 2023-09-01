@@ -2,7 +2,6 @@
 title: "Stat 11 Week 1"
 subtitle: "What are Data and Statistics?" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -53,19 +52,19 @@ sample_data
 
 <br> 
 
-![](./images/week1-1-dwight.png)
+![](./images/week1-1-dwight.png){width=500px}
 
-  Dwight: We need to talk!
-  
-  Michael: Not now.
-  
-  Dwight: Which is higher? Assistant Regional Manager or Regional Director in Charge of Sales?
-  
-  Michael: I told you the titles are irrelevant. They just relate to pay scale.
-  
-  Dwight: Okay. So who gets paid more? Me or Andy?
-  
-  Michael: It is not a matter of more or less. Your pay is just different. Okay?^[Source: NBC's The Office S3E8] 
+  > **Dwight:** We need to talk!
+  >
+  > **Michael:** Not now.
+  >
+  > **Dwight:** Which is higher? Assistant Regional Manager or Regional Director in Charge of Sales?
+  >
+  > **Michael:** I told you the titles are irrelevant. They just relate to pay scale.
+  >
+  > **Dwight:** Okay. So who gets paid more? Me or Andy?
+  >
+  > **Michael:** It is not a matter of more or less. Your pay is just different. Okay?^[Source: NBC's The Office S3E8] 
 
 <br>
 
