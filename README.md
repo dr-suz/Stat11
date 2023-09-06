@@ -47,7 +47,7 @@
 
 * [Visualizing data](https://dr-suz.github.io/Stat11/wk2-wksheet.html)
 
-* [Simple linear regression](https://dr-suz.github.io/Stat11/week3-3-S23.html)
+* [Simple linear regression](https://dr-suz.github.io/Stat11/wk3-wksheet.html) (with a [short introduction](https://dr-suz.github.io/Stat11/week3-3-S23.html))
 
 
 ### Homework projects 
