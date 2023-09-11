@@ -31,7 +31,7 @@ For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that corr
 
 <span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
 
-<span style="color:purple">Example 2:</span> The length of Olympic long jumps in meters. 
+<span style="color:purple">Example 2:</span> The length of Olympic hammer throws in meters. 
 
 
 # 1. Numerical measures of centrality 
@@ -106,16 +106,16 @@ Standard deviation of a sample (more commonly called sample standard deviation):
 
 ## Example 
 
-![](./images/shacarri-richardson.jpg){width=300px}![](./images/ivana-vuleta.png){width=300px} 
+![](./images/shacarri-richardson.jpg){height=200px}  ![](./images/camryn-rogers.png){height=200px} 
 
-<font size="1">Image credits: Denes Erdos/AP (L) and Reuters (R)</font>
+<font size="1">Image credits: Denes Erdos/AP (L) Charlie Crowhurst/Getty Images for IAAF (R)</font>
 
 
 
 The 2023 World Athletics Championships in Budapest saw many athletes perform at their personal best in preparation for the Olympics. 
-Sha'Carri Richardson won first place for the USA in the women's $100m$ sprint with a time of $10.65s$, which was $0.252 s$ faster than the average time of her top $10$ competitors. Ivana Vuleta of Serbia won the women's long jump with a jump of $7.14 m$, a jump $0.357 m$ longer than the average distance of her top $10$ competitors. <span style="color:purple">Statistically speaking, whose performance are we most impressed by?</span>
+Sha'Carri Richardson won first place for the USA in the women's $100m$ sprint with a time of $10.65s$, which was $0.252 s$ faster than the average time of her top $10$ competitors. Camryn Rogers of Canada won the women's hammer throw with a throw of $77.22 m$, a throw $3.383 m$ longer than the average distance of her top $10$ competitors. <span style="color:purple">Statistically speaking, whose performance are we most impressed by?</span>
 
-A statistician would answer this question by comparing how many standard deviations away from the mean Sha'Carri's run time was vs how many standard deviations away from the mean Ivana's jump distance was. 
+A statistician would answer this question by comparing how many standard deviations away from the mean Sha'Carri's run time was vs how many standard deviations away from the mean Camryn's hammer throw distance was. 
 
 Standard deviation is called the \"statistician's ruler\" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
 
@@ -184,9 +184,9 @@ Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_
 
 ## Example
 
-If we standardize the race time for all 2023 World Athletics Championship $100 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the jump distance for all long jumpers and make this distance unitless. 
+If we standardize the race time for all 2023 World Athletics Championship $100 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the hammer throw distance for all competitors in this event and make the distance unitless. 
 
-The magnitude and order still are meaningful but now it is much easier to answer questions like \"Whose performance was more impressive, Sha'Carri or Ivana?\" because both sets of data are measured on the same (unitless) scale. [Hint: You can statistically answer this question now provided I give you the standard deviation of the $100m$ race, $10.65s$, and the standard deviation of the long jump, $0.181m$.]
+The magnitude and order still are meaningful but now it is much easier to answer questions like \"Whose performance was more impressive, Sha'Carri or Camryn?\" because both sets of data are measured on the same (unitless) scale. [Hint: You can statistically answer this question now provided I give you the standard deviation of the $100m$ race, $10.65s$, and the standard deviation of the hammer throw, $2.16m$.]
 
 
 
