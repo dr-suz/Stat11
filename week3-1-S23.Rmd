@@ -17,17 +17,17 @@ header-includes:
 
 # 1. What is a (probability) distribution? 
 
-The (probability) distribution of a random variable must supply information about all possible values the variable can take on and how frequently (or infrequently) the random variable will take on these values. 
+The <span style="color:green">(probability) distribution</span> of a random variable must supply information about all possible values the variable can take on and how frequently (or infrequently) the random variable will take on these values. 
 
 In short, a distribution specifies the **possibilities** and corresponding **probabilities** of a random variable. A <span style="color:green">density plot</span> can reflect this information graphically. (You can think of a density plot/curve as a smoothed-out version of a histogram.)
 
 ## Recall: Normal/Gaussian Distribution 
 
-Last class we introduced the Normal (probability) model. A special feature of the Normal model is the **68/95/99.7** rule that describes how common (or rare) certain number values around the mean are. This rule applies to the *density plot* of the Normal model below.
+Last class we introduced the Normal (probability) model. A special feature of the Normal model is the *68/95/99.7* rule that describes how common (or rare) certain number values around the mean are. This rule applies to the *density plot* of the Normal model below.
 
 ![](./images/normal 68-95-997.png)
 
-We also discussed how for a sample of numeric data, it is helpful to have a sense of the **center** value(s) and the **spread** of the values. The same is true for numeric random variables, i.e. numeric variables that live in the math world and are used as *models* for observable samples of numeric data. 
+We also discussed how for a sample of numeric data, it is helpful to have a sense of the **center** value(s) and the **spread** of the values. The same is true for <span style="color:green">random variables</span>, (RV for short) i.e. special functions that exist in the math/theory world and are used as *models* for observable samples of numeric data. 
 
 When talking about a distribution of a sample of data (from the real world), we can refer to the distribution of the sample as the <span style="color:green">sampling distribution</span>. When referring to a probability distribution (that exists in the mathematical modeling world), we just call this a distribution for a random variable. 
 
