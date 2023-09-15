@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week 2"
+title: "Stat 11 Week 3"
 subtitle: "Working with Data in Excel and RStudio" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
