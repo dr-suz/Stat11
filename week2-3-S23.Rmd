@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Worksheet"
+title: "Stat 11 Week 3"
 subtitle: "Working with Data in Excel and RStudio" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
@@ -14,7 +14,7 @@ header-includes:
 ---
 
 
-# Intro to Excel and RStudio with  
+# Intro to Excel and RStudio   
 
 Most of the data sets you will work with in this class are formatted as comma separated files (.csv). Although cleaning, wrangling, and formatting data is no small task in applications of Statistics and Data Science, this will not be the main focus of our class. All group homework assignments will involve data that is already cleaned and formatted. The only time you may need to clean data yourself is for your final project at the end of the semester. (This is something I will help you with so you won't be on your own unless you want to be!) 
 

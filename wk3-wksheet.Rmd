@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: "Week 3: Fitting a Linear Regression Model"
+date: "Week 4: Fitting a Linear Regression Model"
 output:
   html_document: default
   pdf_document: default

@@ -1678,13 +1678,13 @@ increase in <span class="math inline">\(x\)</span>.</p>
 predictor and the other variable plays the role of the response. This is
 a statistical model because we are assuming that the equation of a line
 can explain the relationship between the predictor and response except
-for some tiny random error, <span class="math inline">\(\epsilon\)</span>: <span class="math display">\[y_i = b + m x_i + \epsilon.\]</span> The SLR
+for some tiny random error, <span class="math inline">\(\varepsilon\)</span>: <span class="math display">\[y_i = b + m x_i + \varepsilon.\]</span> The SLR
 model is also called the line of best fit. It is <em>best</em> in the
 sense that the y-intercept and slope of the regression equation minimize
 the sum of the distances between each response data point (<span class="math inline">\(y\)</span>) and the corresponding estimate, or
-<span style="color:green">fitted value</span> of <span class="math inline">\(y\)</span> based on the regression line (<span class="math inline">\(\hat{y}\)</span>).</p>
+<span style="color:green">fitted value</span>, of <span class="math inline">\(y\)</span> based on the regression line <span class="math inline">\((\hat{y})\)</span>.</p>
 <p>The fitted regression model is then a regular equation for a line
-<span class="math display">\[\hat{y}_i = b_0 + b_1 x_i\]</span> where
+<span class="math display">\[{\hat{y}}_i = b_0 + b_1 x_i\]</span> where
 the y-intercept is <span class="math inline">\(b_0 = \bar{y} - b_1
 \bar{x}\)</span> and the slope is <span class="math inline">\(b_1 =
 \frac{s_{xy}}{\sqrt{s_x s_y}} \cdot \frac{s_y}{s_x}\)</span></p>
@@ -1696,12 +1696,12 @@ what the SLR model predicts will be the <span class="math inline">\(y\)</span>-v
 Analyzing this error, called the <span style="color:green">residual
 error</span>, gives us a sense of how well we can predict the response
 variable based on the predictor/explanatory variable.</p>
-<p><span class="math display">\[\text{Residual} = e = y - \hat{y} =
-\text{observed value} - \text{predicted value}\]</span> Informally, you
-can think of the residuals, <span class="math inline">\((e_1, e_2,
-\dots, e_n)\)</span>, as possible values for the tiny random error, or
-<span style="color:green">random noise</span>, <span class="math inline">\(\epsilon\)</span>.</p>
-<p>The SLR model assumes that the random noise, <span class="math inline">\(\epsilon\)</span> follows a Normal probability
+<p><span class="math display">\[\text{Residual} = e_i = y_i -
+{\hat{y}}_i = \text{observed value} - \text{predicted value}\]</span>
+Informally, you can think of the residuals, <span class="math inline">\((e_1, e_2, \dots, e_n)\)</span>, as possible
+values for the tiny random error, or <span style="color:green">random
+noise</span>, <span class="math inline">\(\varepsilon\)</span>.</p>
+<p>The SLR model assumes that the random noise, <span class="math inline">\(\varepsilon\)</span> follows a Normal probability
 distribution (so the 68/95/99.7 rule applies). We investigate properties
 of the residuals in order to help us assess whether or not this
 assumption seems reasonable. First, we need to describe the center and
@@ -1726,7 +1726,7 @@ consisting of foot length and height for 20 individuals</a></p>
 <div id="correlation-coefficient" class="section level2">
 <h2>Correlation coefficient</h2>
 <p>The <span style="color:green">correlation coefficient</span> in a SLR
-model is just the sample correlation between <span class="math inline">\((x_1, \dots, x_n)\)</span> and <span class="math inline">\((y_1, dots, y_n)\)</span>.</p>
+model is just the sample correlation between <span class="math inline">\((x_1, \dots, x_n)\)</span> and <span class="math inline">\((y_1, \dots, y_n)\)</span>.</p>
 <p>In the context of a SLR model, the correlation coefficient represents
 the number of standard deviations by which the <span class="math inline">\(y\)</span> variable is expected to change for a
 one standard deviation change in the <span class="math inline">\(x\)</span> variable.</p>
@@ -1757,10 +1757,10 @@ determination</span>, or R-squared for short.</p>
 interpretation.</p>
 <p><span class="math inline">\(R^2 = \left(\frac{s_{xy}}{\sqrt{s_x
 s_y}}\right)^2 = \frac{s_{xy}^2}{s_x s_y}\)</span> represents the
-fraction/proportion of the variation in the observed <span class="math inline">\(y\)</span>-values that is ``accounted for” by a
+fraction/proportion of the variation in the observed <span class="math inline">\(y\)</span>-values that is &quot;accounted for&quot; by a
 linear function of <span class="math inline">\(x\)</span>.</p>
 <p><span class="math inline">\(R^2\)</span> is what statisticians refer
-to as a <span style="color:green">``goodness of fit” measure</span>
+to as a <span style="color:green">&quot;goodness of fit&quot; measure</span>
 because in some sense, the value of <span class="math inline">\(R^2\)</span> reflects the successfullness of the
 model at relating <span class="math inline">\(y\)</span> to <span class="math inline">\(x\)</span>.</p>
 </div>

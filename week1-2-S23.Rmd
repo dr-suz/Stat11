@@ -106,7 +106,7 @@ miniscule_samp <- rchisq(60, .2)
 log_samp <- log(miniscule_samp)
 
 hist(miniscule_samp, breaks=20, main="Sample of size n=60", xlab="Really Small Numeric Data", ylab="Frequency")
-hist(log_samp, breaks=20, main="Sample of size n=70", xlab="Transformed (nat. log) Numeric Data", ylab="Frequency")
+hist(log_samp, breaks=20, main="Sample of size n=60", xlab="Transformed (nat. log) Numeric Data", ylab="Frequency")
 ```
 
 <span style="color:purple">Is it honest to visualize transformed data?</span>
@@ -200,11 +200,11 @@ You can explore for yourself some of the vast, creative world of data visualizat
 
 - *Read* your textbook! <span style="color:purple">By next class, you should have read all of chapters 1-3 in your textbook.</span>
 
-- *Practice* asking and answering questions in class and while you read your textbook or do your homework. <span style="color:purple">By next class, you should have attempted Individual Homeworks 1 and 2.</span> 
+- *Practice* asking and answering questions in class and while you read your textbook or do your homework. <span style="color:purple">By next class, you should have attempted Reading Comp Homeworks 1 and 2.</span> 
 
-- Attend *Office Hours* as often as possible, this time is for you so use it! <span style="color:purple">My office hours have been posted on Moodle.</span>
+- Attend *Office Hours* as often as possible, this time is for you so use it! <span style="color:purple">My office hours can be found in our course calendar and syllabus.</span>
 
-- *Communicate* with your professor. <span style="color:purple">Do you not yet have your textbook? Can you not attend any of my office hours? Let me know ASAP!</span> 
+- *Communicate* with your professor. <span style="color:purple">Do you not yet have your textbook? Access to Pearson MyLab? Can you not attend any of my office hours? Let me know ASAP!</span> 
 
 - Allow yourself *room to grow*. We learn and live at our own paces. You're not perfect and you don't have to be.
 

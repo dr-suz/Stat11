@@ -29,18 +29,18 @@ For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that corr
 
 ## Examples
 
-<span style="color:purple">Example 1:</span> The time it takes Olympic runners to complete a race in seconds. 
+Example 1: The time it takes Olympic runners to complete a race in seconds. 
 
-<span style="color:purple">Example 2:</span> The length of Olympic long jumps in meters. 
+Example 2: The length of Olympic hammer throws in meters. 
 
 
 # 1. Numerical measures of centrality 
 
-* Mean: $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i = \frac{1}{n}\left(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_{n} \right)$
+* <span style="color:green">Mean</span>: $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i = \frac{1}{n}\left(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_{n} \right)$
 
-* Mode: the highest peak(s)
+* <span style="color:green">Mode</span>: the highest peak(s)
 
-* Median: 50\% of the data is larger and 50\% of the data is smaller than this value 
+* <span style="color:green">Median</span>: 50\% of the data is larger and 50\% of the data is smaller than this value 
 
 <span style="color:purple">Suppose the numeric data is measuring centimeters. What are the units of measurement for the mean? For the median? For the mode?</span>  
 
@@ -48,9 +48,9 @@ For a set of $n$ numeric data points, $x_1, x_2, \dots, x_{n-1}, x_n$, that corr
 
 For data that is 
 
-- unimodal <span style="color:green">(exactly one peak)</span>
+- <span style="color:green">unimodal</span> (exactly one peak)
 
-- symmetric about the mode <span style="color:green">(mirrored at the mode)</span>
+- <span style="color:green">symmetric about the mode</span> (mirrored at the mode)
 
 the mode, the mean, and the median are all the same value! 
 
@@ -70,11 +70,11 @@ For data that is not unimodal and not symmetric...
 
 # 2. Numerical measures of spread 
 
-* Range: $(x_{min}, x_{max})$ 
+* <span style="color:green">Range</span>: $x_{max} - x_{min}$ 
 
-* Interquartile range: the range of two values where 25\% of the data are smaller than the lower number and 75\% of the data are smaller than the higher number  
+* <span style="color:green">Interquartile range</span>: the range of two values where 25\% of the data are smaller than the lower number and 75\% of the data are smaller than the higher number  
 
-* Variance (or standard deviation): Average distance from the mean (or square root of this average distance)
+* <span style="color:green">Variance (or standard deviation)</span>: Average distance from the mean (or square root of this average distance)
 
 ## When to use which? 
 
@@ -97,25 +97,27 @@ For data that is not unimodal but is symmetric... or for data that is not unimod
 # 3. What is variance (or standard deviation)? 
 
 
-Variance of a sample (more commonly called "sample variance"): $\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2 = \frac{1}{n-1}\left((x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots + (x_{n-1} - \bar{x})^2 + (x_n - \bar{x})^2 \right)$
+Variance of a sample (more commonly called "sample variance"): $s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2 = \frac{1}{n-1}\left((x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \dots + (x_{n-1} - \bar{x})^2 + (x_n - \bar{x})^2 \right)$
 
-Standard deviation of a sample (more commonly called sample standard deviation): $\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$
+Standard deviation of a sample (more commonly called sample standard deviation): $s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2}$
 
 <span style="color:purple">Suppose the numeric data is measuring centimeters. What are the units of measurement for the variance? For standard deviation?</span>  
 
 
 ## Example 
 
-![](./images/shacarri-richardson.jpg){width=300px}![](./images/ivana-vuleta.png){width=300px} 
+![](./images/shacarri-richardson.jpg){height=200px}  ![](./images/camryn-rogers.png){height=200px} 
 
-<font size="1">Image credits: Denes Erdos/AP (L) and Reuters (R)</font>
+<font size="1">Image credits: Denes Erdos/AP (L) Charlie Crowhurst/Getty Images for IAAF (R)</font>
 
 
 
 The 2023 World Athletics Championships in Budapest saw many athletes perform at their personal best in preparation for the Olympics. 
-Sha'Carri Richardson won first place for the USA in the women's $100m$ sprint with a time of $10.65s$, which was $0.252 s$ faster than the average time of her top $10$ competitors. Ivana Vuleta of Serbia won the women's long jump with a jump of $7.14 m$, a jump $0.357 m$ longer than the average distance of her top $10$ competitors. <span style="color:purple">Statistically speaking, whose performance are we most impressed by?</span>
+Sha'Carri Richardson won first place for the USA in the women's $100m$ sprint with a time of $10.65s$, which was $0.252 s$ faster than the average time of her top $10$ competitors. Camryn Rogers of Canada won the women's hammer throw with a throw of $77.22 m$, a throw $3.383 m$ longer than the average distance of her top $10$ competitors. 
 
-A statistician would answer this question by comparing how many standard deviations away from the mean Sha'Carri's run time was vs how many standard deviations away from the mean Ivana's jump distance was. 
+<span style="color:purple">Statistically speaking, whose performance are we most impressed by?</span>
+
+A statistician would answer this question by comparing how many standard deviations away from the mean Sha'Carri's run time was vs how many standard deviations away from the mean Camryn's hammer throw distance was. 
 
 Standard deviation is called the \"statistician's ruler\" because it allows us to compare the spread of data relative to it's own mean. In other words, standard deviation is a measure that allows us to compare apples to oranges! 
 
@@ -123,13 +125,13 @@ Standard deviation is called the \"statistician's ruler\" because it allows us t
 
 # 4. What is the Normal model? 
 
-Normal/Gaussian model 
+<span style="color:green">Normal/Gaussian model</span>
 
 - unimodal
 
 - symmetric about the mode 
 
-- not too spread out from the mode <span style="color:green">(almost no data points lie really far away from the mode)</span>
+- not too spread out from the mode (almost no data points lie really far away from the mode)
 
 The first two conditions can be assessed visually by looking at a histogram of the data. The last condition can be assessed mathematically using what is called the **68/95/99.7 Rule**.
 
@@ -165,7 +167,7 @@ The mean of this data is `r round(mean(data),2)` and the standard deviation is `
 
 
 
-When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data point relative to its mean and standard deviation by converting them into **z-scores**:
+When comparing many variables that are all measured in different units, we might decide that we want to convert each variable into the same units so that the different data sets are easier to compare. To do this, we first must compute the mean and standard deviation of each data set, relative to its own units of measurement (e.g. average length in $m$ or average run in $s$). Then, we standardize each data point relative to its mean and standard deviation by converting them into <span style="color:green">**z-scores**</span>:
 
 $$z_i = \frac{x_i - \bar{x}}{st.dev.(x_1, x_2, \dots, x_n)}.$$ 
 
@@ -184,9 +186,9 @@ Therefore the standardization process makes it so that $\bar{z} = \frac{1}{n}(z_
 
 ## Example
 
-If we standardize the race time for all 2023 World Athletics Championship $100 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the jump distance for all long jumpers and make this distance unitless. 
+If we standardize the race time for all 2023 World Athletics Championship $100 m$ runners, then we get a set of times that are not measured in seconds or minutes, but are unitless! Similarly, we can standardize the hammer throw distance for all competitors in this event and make the distance unitless. 
 
-The magnitude and order still are meaningful but now it is much easier to answer questions like \"Whose performance was more impressive, Sha'Carri or Ivana?\" because both sets of data are measured on the same (unitless) scale. [Hint: You can statistically answer this question now provided I give you the standard deviation of the $100m$ race, $10.65s$, and the standard deviation of the long jump, $0.181m$.]
+The magnitude and order still are meaningful but now it is much easier to answer questions like \"Whose performance was more impressive, Sha'Carri or Camryn?\" because both sets of data are measured on the same (unitless) scale. [Hint: You can statistically answer this question now provided I give you the standard deviation of the $100m$ race, $0.14s$, and the standard deviation of the hammer throw, $2.16m$.]
 
 
 

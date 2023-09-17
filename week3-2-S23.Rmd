@@ -57,12 +57,12 @@ $$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2, \quad s_y = \sum_{i=1}^{n}(y_i - \bar{y
 
 The idea behind a simple linear regression (SLR) model is to *model* a linear association between two numeric variables with the equation for a line. Recall the equation for a line is $y = f(x) = mx +b$ where $b$ is the <span style="color:green">y-intercept</span> and $m$ is the <span style="color:green">slope</span>, or, $m$ is the constant (non-changing) amount that $y$ changes for a single unit increase in $x$. 
 
-When fitting a SLR model, one numeric variable plays the role of a predictor and the other variable plays the role of the response. This is a statistical model because we are assuming that the equation of a line can explain the relationship between the predictor and response except for some tiny random error, $\epsilon$:
-$$y_i = b + m x_i + \epsilon.$$ 
-The SLR model is also called the line of best fit. It is *best* in the sense that the y-intercept and slope of the regression equation minimize the sum of the distances between each response data point ($y$) and the corresponding estimate, or <span style="color:green">fitted value</span> of $y$ based on the regression line ($\hat{y}$).   
+When fitting a SLR model, one numeric variable plays the role of a predictor and the other variable plays the role of the response. This is a statistical model because we are assuming that the equation of a line can explain the relationship between the predictor and response except for some tiny random error, $\varepsilon$:
+$$y_i = b + m x_i + \varepsilon.$$ 
+The SLR model is also called the line of best fit. It is *best* in the sense that the y-intercept and slope of the regression equation minimize the sum of the distances between each response data point ($y$) and the corresponding estimate, or <span style="color:green">fitted value</span>, of $y$ based on the regression line $(\hat{y})$.   
 
 The fitted regression model is then a regular equation for a line 
-$$\hat{y}_i = b_0 + b_1 x_i$$
+$${\hat{y}}_i = b_0 + b_1 x_i$$
 where the y-intercept is $b_0 = \bar{y} - b_1 \bar{x}$ and the slope is $b_1 = \frac{s_{xy}}{\sqrt{s_x s_y}} \cdot \frac{s_y}{s_x}$
 
 
@@ -71,10 +71,10 @@ where the y-intercept is $b_0 = \bar{y} - b_1 \bar{x}$ and the slope is $b_1 = \
 The error associated with our linear model is the difference between what the SLR model predicts will be the $y$-value, given some input, $x$, and what the actual observed $y$-value is from the original data set. Analyzing this error, called the <span style="color:green">residual error</span>, gives us a sense of how well we can predict the response variable based on the predictor/explanatory variable.
 
 
-$$\text{Residual} = e = y - \hat{y} = \text{observed value} - \text{predicted value}$$
-Informally, you can think of the residuals, $(e_1, e_2, \dots, e_n)$, as possible values for the tiny random error, or <span style="color:green">random noise</span>, $\epsilon$.  
+$$\text{Residual} = e_i = y_i - {\hat{y}}_i = \text{observed value} - \text{predicted value}$$
+Informally, you can think of the residuals, $(e_1, e_2, \dots, e_n)$, as possible values for the tiny random error, or <span style="color:green">random noise</span>, $\varepsilon$.  
 
-The SLR model assumes that the random noise, $\epsilon$ follows a Normal probability distribution (so the 68/95/99.7 rule applies). We investigate properties of the residuals in order to help us assess whether or not this assumption seems reasonable. First, we need to describe the center and spread of the residuals. 
+The SLR model assumes that the random noise, $\varepsilon$ follows a Normal probability distribution (so the 68/95/99.7 rule applies). We investigate properties of the residuals in order to help us assess whether or not this assumption seems reasonable. First, we need to describe the center and spread of the residuals. 
 
 * Due to the formula for the fitted regression model, the mean of the residuals is always zero, i.e. $\bar{e}=0$.
 
@@ -91,7 +91,7 @@ The SLR model assumes that the random noise, $\epsilon$ follows a Normal probabi
 
 ## Correlation coefficient 
 
-The <span style="color:green">correlation coefficient</span> in a SLR model is just the sample correlation between $(x_1, \dots, x_n)$ and $(y_1, dots, y_n)$.
+The <span style="color:green">correlation coefficient</span> in a SLR model is just the sample correlation between $(x_1, \dots, x_n)$ and $(y_1, \dots, y_n)$.
 
 In the context of a SLR model, the correlation coefficient represents the number of standard deviations by which the $y$ variable is expected to change for a one standard deviation change in the $x$ variable. 
 
@@ -114,9 +114,9 @@ For simple linear regression $R^2 = r^2$, is called the <span style="color:green
 
 Although this is just the square of the correlation coefficient, $R^2$ actually has a useful interpretation. 
 
-$R^2 = \left(\frac{s_{xy}}{\sqrt{s_x s_y}}\right)^2 = \frac{s_{xy}^2}{s_x s_y}$ represents the fraction/proportion of the variation in the observed $y$-values that is ``accounted for" by a linear function of $x$.  
+$R^2 = \left(\frac{s_{xy}}{\sqrt{s_x s_y}}\right)^2 = \frac{s_{xy}^2}{s_x s_y}$ represents the fraction/proportion of the variation in the observed $y$-values that is \"accounted for\" by a linear function of $x$.  
 
-$R^2$ is what statisticians refer to as a <span style="color:green">``goodness of fit" measure</span> because in some sense, the value of $R^2$ reflects the successfullness of the model at relating $y$ to $x$.
+$R^2$ is what statisticians refer to as a <span style="color:green">\"goodness of fit\" measure</span> because in some sense, the value of $R^2$ reflects the successfullness of the model at relating $y$ to $x$.
 
 
 
