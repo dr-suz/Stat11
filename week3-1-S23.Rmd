@@ -123,10 +123,26 @@ ggplot(data=norm_dat,aes(x=non_std)) +
 #hist(rnorm(1e6), main="Standard Normal Density and Histogram", xlab="Quantiles", density=1)
 ```
 
+
 ## General Normal distribution
 
 ![](./images/week2_quantiles.png)
 
+## Finding Normal quantiles in Excel 
+
+In a blank cell, type $=$ and then the following code but replacing everything in brackets (including the brackets \< \>)  with the appropriate values for your particular problem. Then hit Return/Enter to see the result. Note that Excel always calculates lower quantiles. (See some [additional documentation](https://www.thoughtco.com/use-norm-inv-function-in-excel-3885662) for this function.)
+
+```{r eval=FALSE}
+NORM.INV(<probability>, <mean>, <sd>)
+```
+
+## Finding Normal quantiles in R 
+
+Use the following code but erase everything in brackets (including the brackets \< \>) and replace with the appropriate values for your particular problem. Then highlight the code and execute it to see the result. Note that R allows you to compute lower or upper quantiles. 
+
+```{r eval=FALSE}
+qnorm(<probability>, mean=<?>, sd=<?>, lower.tail= <TRUE/FALSE>)
+```
 
 # 4. Re-expressing (transforming) data 
 
