@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 3"
-subtitle: "Working with Data in Excel and RStudio" 
+subtitle: "Working with Data in Excel and R" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
 output:
@@ -19,19 +19,19 @@ header-includes:
 Most of the data sets you will work with in this class are formatted as comma separated files (.csv). Although cleaning, wrangling, and formatting data is no small task in applications of Statistics and Data Science, this will not be the main focus of our class. All group homework assignments will involve data that is already cleaned and formatted. The only time you may need to clean data yourself is for your final project at the end of the semester. (This is something I will help you with so you won't be on your own unless you want to be!) 
 
 
-<p align="center">![](./images/excel.png){width=100px}![](./images/indecision.png){width=200px}![](./images/rstudio.png){width=200px}</p>
+<p align="center">![](./images/excel.png){width=100px}![](./images/indecision.png){width=200px}![](./images/r.jpg){width=100px}</p>
 
 
 The choice to use Excel or RStudio is entirely up to you. You can find short, helpful tutorial videos on using Excel or RStudio for data analysis through the <span style="color:purple">MyLab Multimedia Library</span> link at the top of our Moodle page. If you are thinking about taking any computer science courses or if you would like a gently introduction into the world of programming, then I recommend that you use RStudio for all project homework assignments and your final project. If you are decidedly not at all interested in developing programming skills then you can use Excel for all project homework assignments and your final project. If you're not sure and would like a slower introduction to programming, then you may wish to use Excel for the first 1-2 project homework assignments and RStudio for the rest. Then you can decide which you prefer for your final project. These are only suggestions and I am here to help you along the way no matter which program you prefer to use. 
 
-Excel (or Google Sheets) are commonly used for basic statistical analysis across many disciplines and professions. R is an open-source statistically programming software that is used predominantly by statisticians and data scientists. RStudio is a friendlier user interface from which you can do R programming since the R software by itself has a bare-bones display that isn't as informative for new users. If you decide to major or minor in Statistics at Swarthmore, then you will need to know how to work with R (or RStudio). 
+Excel (or Google Sheets) are commonly used for basic statistical analysis across many disciplines and professions. R is an open-source statistically programming software that is used predominantly by statisticians and data scientists. <!--RStudio is a friendlier user interface from which you can do R programming since the R software by itself has a bare-bones display that isn't as informative for new users.--> If you decide to major or minor in Statistics at Swarthmore, then you will need to know how to work with R (or RStudio). 
 
 ## Opening data in Excel
 
 Since the majority of the data you'll encounter in this class is already in .csv format, opening the data file in Excel is pretty easy once you have Microsoft Excel downloaded on your computer. Simply download the data file and once the download is complete, right-click on the file and navigate to "Open With" and select "Excel". You may need to save the file as a .xlxs document after you've done some data analysis within the document. 
 
-## Reading data into RStudio
+## Reading data into R
 
-There are a couple of ways to input data into RStudio. Either way, you'll want to open up a blank R script file (ending in the extension .R) so you can keep track of your coding work. For all project homework assignments, you will **not** need to download the (.csv) data file. Simply copy and paste the data-import code (provided to you in the assignment) into your R script file. Run this code and verify that the name of the data object is displayed in the "Environment" tab in the upper right-hand corner of your window. 
+First, you'll want to open up a blank R script file by going to File -> New Document. This document (ending in the extension .R) allows you to save and return to your code. For all project homework assignments, you will **not** need to download the (.csv) data file. Simply copy and paste the data-import code (provided to you in each assignment) into your R script file. Once you run this code, by highlighting it and selecting Edit -> Execute, you'll have imported the data object into your working environment and can refer to it by name in subsequent code. 
 
  
