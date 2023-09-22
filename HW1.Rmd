@@ -84,6 +84,25 @@ This is a three part question. Create a histogram for the variable `Sodium.mg.` 
 
 This is a three part question. What is the proportion (or percent) of menu items have more than the daily recommended intake of $2300mg$ of sodium? What is the proportion (or percent) of menu items that have between $500mg$ and $1000mg$ of sodium? Which item(s) on the menu is (are) at the lower $20^{th}$ percentile for the amount of sodium they contain? 
 
+## Hint
+
+### In Excel 
+
+* Step 1: Put the values of the sodium variable in order from smallest to largest by highlighting the entire data set and then going to Data -> Sort. Sort by the column for sodium and make sure you select the option to include a header row.  
+
+* Step 2: Find the sample size. 
+
+* Step 3: The first two questions are answerable after you count the number of cells corresponding to each question. The third question requires you to break the ordered data into fifths. 
+
+
+### In R 
+
+* Step 1: Put the values of the sodium variable in order from smallest to largest using the code `sort(Burger_King_items$Sodium.mg.)`
+
+* Step 2: Find the sample size. 
+
+* Step 3: The first two questions are answerable after you count the number of data points corresponding to each question. The third question requires you to break the ordered data into fifths. 
+
 
 
 # Problem 5 
