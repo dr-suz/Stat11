@@ -1,8 +1,6 @@
 ---
-title: "Stat 11 Week 5"
-subtitle: "Review of Unit 1" 
+title: "Stat 11 Review of Unit 1" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -71,7 +69,7 @@ Simpson’s paradox - the imbalance of the groups that makes it possible for the
   
   * Variance vs IQR 
 
-* Normal model and the 68/95/99.7% rule 
+* Normal model and the 68/95/99.7 rule 
 
 * Transforming variables 
 
@@ -142,19 +140,19 @@ A CEO complains that the winners of his "rookie junior executive of the year" aw
   * No thickening or thinning 
 
 
-# Student Requested Examples 
+<!--  Student Requested Examples -->
 
-## Contingency tables for two categorical variables 
+<!-- ## Contingency tables for two categorical variables 
 
 ### 1. Determining independence 
 
-From pg 82 of your textbook: "variables are said to be independent if the conditional distribution of one variables is the same for each category of the other. We'll show how to check for independence in a later chapter." 
+From pg 82 of your textbook: "variables are said to be independent if the conditional distribution of one variables is the same for each category of the other. We'll show how to check for independence in a later chapter." -->
 
 
 
-## Interpreting results of transformed data 
+<!--## Interpreting results of transformed data -->
 
-### 1. Comparing athletes' performance 
+<!-- ### 1. Comparing athletes' performance 
 
 **200 $m$ race** $(x_1, \dots x_n)$
 
@@ -168,7 +166,9 @@ $\bar{y} = 6.17m , \quad sd(y_1, \dots, y_m) = 0.247m$
 
 Thiam's distance: $6.58m$
 
-### 2. Transformations in SLR models 
+### 2. -->
+
+### Transformations in SLR models 
 
 
 Recall our in-class example of fitting a SLR model to predict gator weight based on the length of alligators in areal photographs. 
@@ -215,7 +215,7 @@ In the gator model above, the slope of the regression model for the original dat
 The slope of the regression model for the transformed data is a little more complicated to interpret. The slope of $0.04$ means that, based on this model, each additional inch of length (in the areal photograph) corresponds to an average increase in log(weight) of $0.04 \ln (lbs)$. (Note that since it is difficult to think in terms of logarithm of $lbs$, we would most likely want to report the interpretation of the slope within the context of the original units of the data. That is, each additional inch corresponds to a multiplicative increase in weight by `r exp(0.04)` $lbs$.)   
 
 
-### 3. Normal QQ Plots to assess residuals 
+### 3. Normal QQ Plots to assess the distribution of the residuals 
 
 A Normal QQ plot of the residuals for the regression model of the original gator data is shown below. 
 

@@ -12,7 +12,7 @@
 <meta name="author" content="Prof. Suzy Thornton" />
 
 
-<title>Stat 11 Week 5</title>
+<title>Stat 11 Review of Unit 1</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1569,23 +1569,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1626,10 +1620,8 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Stat 11 Week 5</h1>
-<h3 class="subtitle">Review of Unit 1</h3>
+<h1 class="title toc-ignore">Stat 11 Review of Unit 1</h1>
 <h4 class="author">Prof. Suzy Thornton</h4>
-<h4 class="date">Spring 2023</h4>
 
 </div>
 
@@ -1736,7 +1728,7 @@ variance</h1>
 <li><p>Mean vs median</p></li>
 <li><p>Variance vs IQR</p></li>
 </ul></li>
-<li><p>Normal model and the 68/95/99.7% rule</p></li>
+<li><p>Normal model and the 68/95/99.7 rule</p></li>
 <li><p>Transforming variables</p>
 <ul>
 <li><p>Shifts and scales</p></li>
@@ -1808,37 +1800,30 @@ change the slope or intercept of the regression equation</p></li>
 <li><p>No thickening or thinning</p></li>
 </ul></li>
 </ul>
-</div>
-</div>
-<div id="student-requested-examples" class="section level1">
-<h1>Student Requested Examples</h1>
-<div id="contingency-tables-for-two-categorical-variables" class="section level2">
-<h2>Contingency tables for two categorical variables</h2>
-<div id="determining-independence" class="section level3">
-<h3>1. Determining independence</h3>
-<p>From pg 82 of your textbook: “variables are said to be independent if
-the conditional distribution of one variables is the same for each
-category of the other. We’ll show how to check for independence in a
-later chapter.”</p>
-</div>
-</div>
-<div id="interpreting-results-of-transformed-data" class="section level2">
-<h2>Interpreting results of transformed data</h2>
-<div id="comparing-athletes-performance" class="section level3">
-<h3>1. Comparing athletes’ performance</h3>
-<p><strong>200 <span class="math inline">\(m\)</span> race</strong>
-<span class="math inline">\((x_1, \dots x_n)\)</span></p>
-<p><span class="math inline">\(\bar{x} =24.58s , \quad sd(x_1, \dots,
-x_n) = 0.654s\)</span></p>
-<p>Johnson-Thompson’s time: <span class="math inline">\(23.26s\)</span></p>
-<p><strong>Long jump</strong> <span class="math inline">\((y_1, \dots,
-y_m)\)</span></p>
-<p><span class="math inline">\(\bar{y} = 6.17m , \quad sd(y_1, \dots,
-y_m) = 0.247m\)</span></p>
-<p>Thiam’s distance: <span class="math inline">\(6.58m\)</span></p>
-</div>
+<!--  Student Requested Examples -->
+<!-- ## Contingency tables for two categorical variables 
+
+### 1. Determining independence 
+
+From pg 82 of your textbook: "variables are said to be independent if the conditional distribution of one variables is the same for each category of the other. We'll show how to check for independence in a later chapter." -->
+<!--## Interpreting results of transformed data -->
+<!-- ### 1. Comparing athletes' performance 
+
+**200 $m$ race** $(x_1, \dots x_n)$
+
+$\bar{x} =24.58s , \quad sd(x_1, \dots, x_n) = 0.654s$
+
+Johnson-Thompson's time: $23.26s$
+
+**Long jump** $(y_1, \dots, y_m)$ 
+
+$\bar{y} = 6.17m , \quad sd(y_1, \dots, y_m) = 0.247m$ 
+
+Thiam's distance: $6.58m$
+
+### 2. -->
 <div id="transformations-in-slr-models" class="section level3">
-<h3>2. Transformations in SLR models</h3>
+<h3>Transformations in SLR models</h3>
 <p>Recall our in-class example of fitting a SLR model to predict gator
 weight based on the length of alligators in areal photographs.</p>
 <p>The fitted regression equation was: <span class="math inline">\(\hat{weight}_i = -393.26 + 5.90(length)\)</span>.
@@ -1939,8 +1924,8 @@ likely want to report the interpretation of the slope within the context
 of the original units of the data. That is, each additional inch
 corresponds to a multiplicative increase in weight by 1.0408108 <span class="math inline">\(lbs\)</span>.)</p>
 </div>
-<div id="normal-qq-plots-to-assess-residuals" class="section level3">
-<h3>3. Normal QQ Plots to assess residuals</h3>
+<div id="normal-qq-plots-to-assess-the-distribution-of-the-residuals" class="section level3">
+<h3>3. Normal QQ Plots to assess the distribution of the residuals</h3>
 <p>A Normal QQ plot of the residuals for the regression model of the
 original gator data is shown below.</p>
 <pre class="r"><code>qqnorm(mod1$residuals)
