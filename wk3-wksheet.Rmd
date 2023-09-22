@@ -20,10 +20,19 @@ knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown
 knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
 ```
 
+## Import data in Excel 
+
+Copy and past the data from the following link: https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Gators.csv
+
+## Import data in R 
+```{r}
+gators <- read.csv("https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Gators.csv")
+```
+
+
+## Scatter plot of the data 
+
 ```{r echo=FALSE, verbose=FALSE}
-
-gators <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Gators.csv")
-
 ggplot(gators, aes(x=Weight.lbs., y=Length.in.)) +
   geom_point() + 
   labs(title = "Weight and Length of Captured Alligators") +

@@ -1,8 +1,9 @@
 ---
-title: "Group Homework 2"
+title: "Project Homework 2"
 author: "STAT011-S23"
 date: 'Due: Friday, Sept 29 by 11:59pm'
 output:
+  pdf_document: default
   html_document: default
 ---
 
