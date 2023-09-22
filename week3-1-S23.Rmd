@@ -147,10 +147,10 @@ qnorm(<probability>, mean=<?>, sd=<?>, lower.tail= <TRUE/FALSE>)
 
 ## Finding Normal probabilities in Excel
 
-In a blank cell, type $=$ and then the following code but replacing everything in brackets (including the brackets \< \>)  with the appropriate values for your particular problem. Then hit Return/Enter to see the result. Note that Excel always calculates lower tailed probabilities. (See some [additional documentation](https://www.statology.org/normal-distribution-probability-excel/) for this function.)
+In a blank cell, type $=$ and then the following code but replacing everything in brackets (including the brackets \< \>)  with the appropriate values for your particular problem. Then hit Return/Enter to see the result. Note that Excel always calculates lower tailed probabilities. (See some [additional documentation](https://www.statology.org/normal-distribution-probability-excel/) for this function.) Don't worry about the last arguement, for our purposes it will always need to be set to "TRUE". 
 
 ```{r eval=FALSE}
-NORMDIST(<quantile>, <mean>, <sd>)
+NORM.DIST(<quantile>, <mean>, <sd>, TRUE)
 ```
 
 ## Finding Normal probabilities in R 
