@@ -49,3 +49,6 @@ $$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2, \quad s_y = \sum_{i=1}^{n}(y_i - \bar{y
 
 $$r = \frac{s_{xy}}{\sqrt{s_x s_y}}$$
 
+### Coefficient of determination/R-squared
+
+$$R = \left(\frac{s_{xy}}{\sqrt{s_{x}s_{y}}} \right)^2$$
