@@ -3,8 +3,8 @@ title: "Project Homework 2"
 author: "STAT011-S23"
 date: 'Due: Friday, Sept 29 by 11:59pm'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
@@ -48,7 +48,7 @@ The skills necessary to complete this assignment in R are covered in the followi
 
 # Instructions
 
-If you are analyzing this data in Excel you first need to [download the data set for HW 1](https://github.com/ProfSuzy/Stat11/blob/main/Data/EnvoyAir_flights.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `EnvoyAir_flights.csv`. This may take a few moments as it is a large data set.
+If you are analyzing this data in Excel you first need to [download the data set for HW 1](https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/EnvoyAir_flights.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `EnvoyAir_flights.csv`. This may take a few moments as it is a large data set.
 
 If you are analyzing this data in R, you will import the data with the following command
 ```{r, eval=FALSE}
