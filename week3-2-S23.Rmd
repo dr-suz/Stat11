@@ -2,7 +2,6 @@
 title: "Stat 11 Week 3"
 subtitle: "Simple Linear Regression" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -102,7 +101,7 @@ $$r = \frac{s_{xy}}{\sqrt{s_x s_y}}.$$
 
 ## Slope 
 
-Note that $b_1 = \frac{s_{xy}}{\sqrt{s_x s_y}} \cdot \frac{s_y}{s_x} = r \frac{s_y}{s_x}$. Just as in any mathematical linear equation, $b_1$ represents the (constant) amount of change we expect in $y$ if we increase $x$ by one unit. 
+Note that $b_1 = \frac{s_{xy}}{\sqrt{s_x s_y}} \cdot \frac{s_y}{s_x} = r \frac{s_y}{s_x}$. Just as in any mathematical linear equation, $b_1$ represents the amount of change we expect in $y$ if we increase $x$ by one unit. Unlike ordinary mathematical formulas however, the slope here represents an **average** amount of change in $y$, not an actual amount. This is because we assume $y$ is a function of a random variable, $\varepsilon$.  
 
 ![](./images/foot and height.png){width=4in}
 
