@@ -2,7 +2,6 @@
 title: "Stat 11 Week 3"
 subtitle: "Practice with Data: Modeling Two Numeric Variables" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -36,6 +35,25 @@ gators <- read.csv("https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/
 ```
 
 * To open this data set in Excel go to the [link to download the Gator data set](https://github.com/ProfSuzy/Stat11/blob/main/Data/Gators.csv). Right click on the button called "Raw" and select "Save Link As". Erase the pre-filled name - and file extension! - and fill in "Gators.xlsx" and select "Save". Then navigate to this file and open it in Microsoft Excel (NOT Apple Numbers and NOT Google Sheets, although they are pretty much the same thing in practice).  
+
+## R code for SLR models 
+
+After importing your data, you can fit a simple linear regression model by using the following code.
+```{r eval=FALSE}
+slr <- lm(<response> ~ <predictor>)
+```
+
+You can then see all the details of your linear model by using the summary function.
+```{r eval=FALSE}
+summary(slr)
+```
+
+Finally, to create a plot of your data with the linear regression line overlayed, use the following code. 
+```{r eval=FALSE}
+plot(<predictor> , <response>)
+abline(slr)
+```
+
 
 # 3. Summary of Results 
 

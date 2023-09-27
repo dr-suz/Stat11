@@ -46,7 +46,7 @@ ggplot(gators, aes(x=Weight.lbs., y=Length.in.)) +
 
 \vspace{2cm}
 
-# 2. What are the slope and intercept of the line of best fit through this data? What is the interpretation of the slop within this context? 
+# 2. What are the slope and intercept of the line of best fit through this data? What is the interpretation of the slope within this context? 
 
 \vspace{2cm}
 

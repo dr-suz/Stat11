@@ -1624,7 +1624,6 @@ display: none;
 <h3 class="subtitle">Practice with Data: Modeling Two Numeric
 Variables</h3>
 <h4 class="author">Prof. Suzy Thornton</h4>
-<h4 class="date">Spring 2023</h4>
 
 </div>
 
@@ -1658,6 +1657,19 @@ to this file and open it in Microsoft Excel (NOT Apple Numbers and NOT
 Google Sheets, although they are pretty much the same thing in
 practice).</li>
 </ul>
+<div id="r-code-for-slr-models" class="section level2">
+<h2>R code for SLR models</h2>
+<p>After importing your data, you can fit a simple linear regression
+model by using the following code.</p>
+<pre class="r"><code>slr &lt;- lm(&lt;response&gt; ~ &lt;predictor&gt;)</code></pre>
+<p>You can then see all the details of your linear model by using the
+summary function.</p>
+<pre class="r"><code>summary(slr)</code></pre>
+<p>Finally, to create a plot of your data with the linear regression
+line overlayed, use the following code.</p>
+<pre class="r"><code>plot(&lt;predictor&gt; , &lt;response&gt;)
+abline(slr)</code></pre>
+</div>
 </div>
 <div id="summary-of-results" class="section level1">
 <h1>3. Summary of Results</h1>
