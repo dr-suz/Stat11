@@ -1,0 +1,84 @@
+---
+title: "In-Class Worksheet - Solutions"
+author: "STAT011 with Prof Suzy"
+date: "Week 4: Fitting a Linear Regression Model"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+**Instructions:** Wildlife researchers are monitoring a Florida alligator population by taking areal photographs and attempting to estimate the weights of the gators based on the length of the gators in the images. The data set `Gators.csv` contains the variables `Length` and `Weight` for a sample of alligators who have been captured and studied. This data is shown in the scatterplot below. Import the `Gators` data set into either Excel or RStudio and then answer the following questions. 
+<br>
+
+```{r setup, echo=FALSE, include=FALSE}
+require(knitr)
+library(tidyverse)
+knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
+knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+```
+
+## Import data in Excel 
+
+Copy and past the data from the following link: https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Gators.csv
+
+## Import data in R 
+```{r}
+gators <- read.csv("https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Gators.csv")
+```
+
+
+## Scatter plot of the data 
+
+```{r echo=FALSE, verbose=FALSE}
+ggplot(gators, aes(x=Weight.lbs., y=Length.in.)) +
+  geom_point() + 
+  labs(title = "Weight and Length of Captured Alligators") +
+  xlab("Weight (lbs)") + ylab("Length (in)")
+
+#lm(Weight.lbs.~Length.in., gators)$residuals %>% abs() %>% max
+```
+<br>
+
+# 1. Choose which variable should be the response and justify this choice in 1-2 sentences.  
+
+\vspace{2cm}
+
+# 2. What are the slope and intercept of the line of best fit through this data? What is the interpretation of the slope within this context? 
+
+```{r}
+slr <- lm(gators$Weight.lbs. ~ gators$Length.in.)
+summary(slr)
+```
+
+# 3.  Does the linear model seem to be a good fit for this data? If so, describe why. If not, what could be done to make a linear model more appropriate? 
+
+If we plot the data and the regression line, it becomes obvious that the relationship between length (in inches) and weight (in lbs) is non-linear. 
+
+```{r}
+plot(gators$Length.in., gators$Weight.lbs.)
+abline(slr)
+```
+
+This is a sign that we should try transforming one or more of the variables to see if we can find a more linear relationship. For example, I'm going to transform the response variable by taking the natural logarithm (the function in R for this is `log()` ):
+
+```{r}
+slr_transformed <- lm(log(gators$Weight.lbs.) ~ gators$Length.in.)
+summary(slr_transformed)
+plot(gators$Length.in., log(gators$Weight.lbs.))
+abline(slr_transformed)
+```
+
+
+This transformation worked! Our estimated regression equation for the transformed data is
+$$\hat{ln(Weight)} = 1.34 + 0.035(length).$$ 
+Now the interpretation of the slope is: for each additional inch in length (in the photographs), we expect the natural logarithm of the weight of the aligator to increase by $0.035$ lbs. We can un-do the transformation by raising $e$ to the power of the left hand side and the right hand side of our regression equation:
+$$e^{\hat{ln(Weight)}} = \hat{Weight} = e^{1.34 + 0.035(length)} = e^{1.34} \times (e^{0.035})^{length}.$$
+From simplifying this equation we can tell that the effect of an additional inche in length is actually a multiplicative increase in weight by $e^{0.035}=1.036$ lbs, on average. 
+
+# 4. The largest residual has a value of 165.62. Explain the meaning of this value in 1-2 sentences. 
+
+\vspace{3cm}
+
+# 5. If you were a wildlife researcher who needed to know the different weights of alligators, would you decide to use this method? Give a statistically informed justification of your answer. (Hint: Report and interpret the $R^2$ value and/or the correlation coefficient.)
+
+Even though the $R^2$ values is large, I would not use the original linear regression equation to estimate gator weight because the relationship between length (in inches) and weight (in lbs) is non-linear. 
