@@ -79,15 +79,23 @@ Simpson’s paradox - the imbalance of the groups that makes it possible for the
 
 * Quantiles and quartiles  
 
-  * Normal QQ Plots 
+  * Normal QQ Plots - vertical axis plots the sample quantiles (that is, the sample arranged from smallest to largest), the horizontal axis plots the standardized z-scores for each of the sample quantiles. If the data are from a Normal distribution, then the standardized z-scores should follow a Standard Normal distribution. A strong, positive linear relationship between the z-score quantiles (that is, the theoretical quantiles from a N(0,1) distribution) and the sample quantiles indicates that your sample is from a Normal distribution.  
+
+
+![](./images/normalQQex.png)
+
+<small>Source: https://www.skymark.com/resources/tools/normal_test_plot.asp#:~:text=Right%20Skew%20%2D%20If%20the%20plotted,long%20tail%20to%20the%20left.</small>
 
 ## Example 
 
 Corey has 4929 songs in his computer's music library. The lengths of the songs have a mean of 242.4 seconds and standard deviation of 114.51 seconds with the accompanying Normal probability plot of song lengths.
 
-![](./images/wk5-qqplot.png)
+![](./images/wk5-qqplot.png){height=300}
 
 <span style="color:purple">Q: Is this distribution Normal? If not, how does it differ from a Normal model?</span>
+
+
+For additional practice, see the plots on pg 145 of your textbook and the [examples at the bottom of this webpage](https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm).
 
 
 # Week 3 - Describing relationships between two numeric variables 
@@ -102,7 +110,7 @@ Corey has 4929 songs in his computer's music library. The lengths of the songs h
 
 * Variable roles 
 
-* Variable transformations
+* Variable transformations - transforming a numeric variable can change its shape and spread 
 
 * <span style="color:green">Regression to the mean</span> 
 
@@ -133,11 +141,11 @@ A CEO complains that the winners of his "rookie junior executive of the year" aw
 
 * Model assumptions met  
 
-  * Linearity 
+  * Linearity between the predictor and response 
   
   * No outliers 
   
-  * No thickening or thinning 
+  * No thickening or thinning in the residuals plot
 
 
 <!--  Student Requested Examples -->
@@ -179,7 +187,9 @@ mod2 = lm(log(Weight.lbs.) ~ Length.in., gators)
 
 ### 1. Transformations  
 
-Recall our in-class example of fitting a SLR model to predict gator weight based on the length of alligators in areal photographs. 
+In SLR, transforming a variable can help with finding a **linear relationship** and it can help **stabilize the variance** of the residuals, both key assumptions for using a SLR model. 
+
+Refer to the solutions for our in-class worksheet on fitting a SLR model to predict gator weight based on the length of alligators in areal photographs. 
 
 ### 2. When to use $r$ vs $R^2$? 
 
@@ -199,7 +209,16 @@ In the gator model above, the slope of the regression model for the original dat
 The slope of the regression model for the transformed data is a little more complicated to interpret. The slope of $0.04$ means that, based on this model, each additional inch of length (in the areal photograph) corresponds to an average increase in log(weight) of $0.04 \ln (lbs)$. (Note that since it is difficult to think in terms of logarithm of $lbs$, we would most likely want to report the interpretation of the slope within the context of the original units of the data. That is, each additional inch corresponds to a multiplicative increase in weight by `r exp(0.04)` $lbs$.)  --> 
 
 
-### 3. Normal QQ Plots to assess the distribution of the residuals 
+### 3. Residual plots 
+
+In a SLR model, we can use residual plots to help us asses both the assumption of a linear association between our predictor and response **and** the assumption that the variance of our noise, $\varepsilon$, is a single, constant number (that we can estimate with the standard error, $SE = \sqrt{(\sum_{i=1}^{n} e_i^2)/(n-2)}$). 
+
+For SLR models, a residual plot may have the predictor, $x$, on the horizontal axis or it may have the fitted values, $\hat{y}$, on the horizontal axis. The vertical axis of a residual plot is always the residuals, $e$. In either case, we are hoping to see an amorphous blob of points in this scatter plot without any discernible patterns. You can find a few examples of "good" and "bad" residual plots [on this website](https://www.statology.org/good-vs-bad-residual-plot/).
+
+
+
+
+<!-- Normal QQ Plots to assess the distribution of the residuals 
 
 A Normal QQ plot of the residuals for the regression model of the original gator data is shown below. 
 
@@ -215,6 +234,6 @@ qqnorm(mod2$residuals)
 qqline(mod2$residuals)
 ```
 
-Ideally, we'd see an rather strong linear trend between the sample quantiles of the residuals and the theoretical residuals from a standard Normal distribution. 
+Ideally, we'd see an rather strong linear trend between the sample quantiles of the residuals and the theoretical residuals from a standard Normal distribution. -->
 
 
