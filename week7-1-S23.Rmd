@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 7"
-subtitle: "Random Variables and their Expectation" 
+title: "Stat 11 Week 10"
+subtitle: "Expected Values of Random Variables" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -52,25 +51,6 @@ $$Var(X) = \sum_{x \in S} \left[(x-E(X))^2\times Pr(x)\right]$$
 The standard deviation of a random variable $X$ is still just the square root of the variance: $st.dev(X) = \sqrt{Var(X)}$. 
 
 
-## Week 6 In-Class Worksheet: Part 2 
-
-**Instructions:** Let's plan a trip. Suppose $8$ of us are going to travel to attend one of two international statistics conferences. (The rest of us are attending non-statistical conferences, naturally.) We need to request funding so we can travel to and from our destinations. Suppose $3$ of us are flying to Toronto, Canada for the 2023 Joint Statistical Meeting and $5$ of us are flying to the International Chinese Statistical Association conference in Chengdu, China.  
-
-Airline ticket prices vary from time to time, but for simplicity, let's assume we're going to purchase all tickets for the same destination at the same price. Suppose also that past experience has shown that tickets to Toronto have a mean price of $\$563$, with a standard deviation of $\$70$, while the mean airfare to Chengdu is $\$5400$, with a standard deviation of $\$750$.
-
-<span style="color:purple">4. Define two random variables and use them to express the total amount of funding we will need to request to fly to both of these statistics conferences.</span>
-
-<br>
-<br>
-
-One possible solution is to let $X$ represent the random cost of an airline ticket from PHL to Toronto, and let $Y$ represent the random cost of an airline ticket from PHL to Chengdu: 
-
-$$X = \text{ cost of a flight from PHL to Toronto} \\ Y = \text{ cost of a flight from PHL to Chendu}$$
-
-Then, according to the information above, we have that 
-
-$$E(X) = 563, \quad Var(X) = 70^2 \\ E(Y) = 5400, \quad Var(Y) = 750^2.$$
-
 
 
 # 3. Correlation and Covariance 
@@ -83,7 +63,7 @@ $$Cov(X,Y) = E\left[(X-E(X))\cdot(Y-E(Y)) \right] = \sum_{(x,y) \in S} \left[(x-
 
 ## Example: Modeling ariline tickets 
 
-<span style="color:purple">Q) How could we interpret the covariance between the price of a ticket from PHL to Toronto and the price of a ticket from PHL to Chengdu?</span> 
+<span style="color:purple">Q) How could we interpret the covariance between the price of a ticket from Philadelphia to Toronto and the price of a ticket from Philadelphia to Chengdu?</span> 
 
 
 Note, the covariance between any random variable and itself is actually just another way of expressing the variance: $Cov(X,X) = Var(X)$. 

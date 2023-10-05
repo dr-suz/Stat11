@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 7"
-subtitle: "More Experiments with Probability" 
+title: "Stat 11 Week 10"
+subtitle: "Probability Worksheet" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -14,19 +13,6 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
-
-# Recap
-
-## Example 3 - Week 6 In-Class Worksheet: Part 2 
-
-Assume tickets to Toronto have a mean price of $\$563$, with a standard deviation of $\$70$, while the mean airfare to Chengdu is $\$5400$, with a standard deviation of $\$750$.
-
-Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the cost of a flight from PHL to Chengdu}$. Then the total cost of airfare to these conferences is: $3X + 5Y$.
-
-<span style="color:purple">Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
-
-
-<br>
 
 
 # 1. Data Introduction 
@@ -42,7 +28,7 @@ You are going to collect a random sample of these candies and evaluate the compa
 
 One goal of this exercise is to explore features of the binomial probability distribution and eventually, to see how a Normal probability distribution can approximate a binomial distribution for a large enough sample size. The other goal is to use the expectation and standard deviation of random variables to characterize whether or not the observed proportions in a sample match up with the claims about the package contents from the candy company.  
 
-Click this link to view the [worksheet for more experiments with probability](https://profsuzy.github.io/Stat11/wk7-wksheet.html). 
+Click this link to view the [worksheet for more experiments with probability](https://dr-suz.github.io/Stat11/wk7-wksheet.html). 
 
 
 

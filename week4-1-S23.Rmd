@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 4"
+title: "Stat 11 Week 6"
 subtitle: "Sample Surveys" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:

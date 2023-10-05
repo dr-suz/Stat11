@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 4"
+title: "Stat 11 Week 7"
 subtitle: "Experiments and Observational Studies" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -24,17 +23,6 @@ Observational studies are the most common types of statistical studies because t
 
 ![](./images/wk4-table.png)
 
-<br>
-<br>
-
-# Pop attendance quiz: What is your favorite kind of bias and why? 
-
-[Wikipedia has a nice collection of common types of sampling biases.](https://en.wikipedia.org/wiki/Sampling_bias)
-
-This is also a friendly reminder that your attendance in class is required and repeated unexcused absences will negatively impact your course grade. 
-
-<br>
-<br>
 
 # 2. Randomized, Comparative Experiments 
 
@@ -48,7 +36,7 @@ Below is the abstract for an article about [massage-like stroking boosting the i
 
   > Recent clinical evidence suggests that the therapeutic effect of massage involves the immune system and that this can be exploited as an adjunct therapy together with standard drug-based approaches. In this study, we investigated the mechanisms behind these effects exploring the immunomodulatory function of stroking as a surrogate of massage-like therapy in mice. C57/BL6 mice were stroked daily for 8 days either with a soft brush or directly with a gloved hand and then analysed for differences in their immune repertoire compared to control non-stroked mice. Our results show that hand- but not brush-stroked mice demonstrated a significant increase in thymic and splenic T cell number ($p<0.05$; $p<0.01$). These effects were not associated with significant changes in CD4/CD8 lineage commitment or activation profile. The boosting effects on T cell repertoire of massage-like therapy were associated with a decreased noradrenergic innervation of lymphoid organs and counteracted the immunosuppressive effect of hydrocortisone in vivo. Together our results in mice support the hypothesis that massage-like therapies might be of therapeutic value in the treatment of immunodeficiencies and related disorders and suggest a reduction of the inhibitory noradrenergic tone in lymphoid organs as one of the possible explanations for their immunomodulatory function.
 
-<span style="color:green">Answer the following questions about this study:</span>
+<span style="color:purple">Answer the following questions about this study:
 
 (a) Are the conclusions of this study generalizable and if so to which population? 
 
@@ -60,7 +48,7 @@ Below is the abstract for an article about [massage-like stroking boosting the i
 
 (e) What is the response variable?
 
-(f) Which of the following apply to this experiment: completely randomized, blocked, matched design, blind? 
+(f) Which of the following apply to this experiment: completely randomized, blocked, matched design, blind? </span>
 
 
 ## Four principles of experimental design 
@@ -100,6 +88,4 @@ The American Statistical Association has also developed [Ethical Guidelines for 
 
 ## Reference Sheet 
 
-As there is a lot of new terminology that we have covered, I've put together a brief [reference sheet for sampling and study design](https://profsuzy.github.io/Stat11/Cheat-sheet-1.html). If you notice any typos or mistakes in this sheet please let me know. It is meant as an additional reference for you to use while you study the Unit 1 material.   
-
-# Reminder: GHW #2 is due in one week (Feb 15)
+As there is a lot of new terminology that we have covered, I've put together a brief [reference sheet for sampling and study design](https://dr-suz.github.io/Stat11/Cheat-sheet-1.html). If you notice any typos or mistakes in this sheet please let me know. It is meant as an additional reference for you to use while you study the Unit 1 material.   

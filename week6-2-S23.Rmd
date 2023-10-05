@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 6"
-subtitle: "More Probability Rules" 
+title: "Stat 11 Week 9"
+subtitle: "Random Variables and Probability Rules - Part 2" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:

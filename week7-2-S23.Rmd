@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 7"
+title: "Stat 11 Week 10"
 subtitle: "Independence and Properties of Expectation" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -32,10 +31,7 @@ $$\text{and}$$
 
 $$Cor(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.$$
 
-## Student Question - How to calculate covariance 
-
-Note: This isn't something you'll be asked to do on Quiz 2 or on the Final. If we have time, at the end of class today I will cover an example on how to calculate the covariance between two discrete random variables. 
-
+Note: You do not be expected to know how to calculate the covariance of two random variables. 
 
 # 1. Independent Random Variables 
 
@@ -116,21 +112,6 @@ Suppose both $X$ and $Y$ are random variables that may or may not be related to 
 * If $X$ and $Y$ are independent random variables, then $Cov(X,Y)=0$. 
 
 
-## Example 3 - Week 6 In-Class Worksheet: Part 2 
-
-**Instructions:** Let's plan a trip. Suppose $8$ of us are going to travel to attend one of two international statistics conferences. (The rest of us are attending non-statistical conferences, naturally.) We need to request funding so we can travel to and from our destinations. Suppose $3$ of us are flying to Toronto, Canada for the 2023 Joint Statistical Meeting and $5$ of us are flying to the International Chinese Statistical Association conference in Chengdu, China.  
-
-Airline ticket prices vary from time to time, but for simplicity, let's assume we're going to purchase all tickets for the same destination at the same price. Suppose also that past experience has shown that tickets to Toronto have a mean price of $\$563$, with a standard deviation of $\$70$, while the mean airfare to Chengdu is $\$5400$, with a standard deviation of $\$750$.
-
-<span style="color:blue">4. Define two random variables and use them to express the total amount of funding we will need to request to fly to both of these statistics conferences.</span>
-
-Let $X = \text{ the cost of a flight from PHL to Toronto}$ and $Y = \text{ the cost of a flight from PHL to Chengdu}$. Then the total cost of airfare to these conferences is: $3X + 5Y$.
-
-<span style="color:blue">How could we interpret the covariance between the price of a ticket from PHL to Toronto and the price of a ticket from PHL to Chengdu?</span> 
-
-<br>
-
-<span style="color:purple">5. Find the expected value and standard deviation of the total cost of the one-way-trip to our destinations. Do we need to make any assumptions in calculating these means or standard deviations?</span>
 
 
 ***

@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 4"
-subtitle: "Practice with Data" 
+title: "Stat 11 Week 7"
+subtitle: "Practice designing statistical studies" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -31,14 +30,12 @@ header-includes:
 
 * For the baseball data we are going to design an experiment to answer a statistical question. 
 
-Click this link to view the [worksheet for sampling and study design](https://profsuzy.github.io/Stat11/wk4-wksheet.html). 
+Click this link to view the [worksheet for sampling and study design](https://dr-suz.github.io/Stat11/wk4-wksheet.html). 
 
 # 3. Summary of Results  
 
 * Ideally, much of the statistical work to answer a research question will occur before the data has even been collected! 
 
 * If the data quality is poor, no statistical analysis, no matter how sophisticated, can make sense of it! 
-
-# Reminder: GHW #2 is due in one week (Feb 15)
 
 
