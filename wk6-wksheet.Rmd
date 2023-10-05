@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: "Week 6: Experimenting with Probability"
+date: "Week 9: Probability"
 output:
   html_document: default
 ---
@@ -9,9 +9,12 @@ output:
 **Name:** _____________________________________
 
 <br>
-**Instructions:** There are 2 parts to this worksheet. First, spend a few minutes thinking about your answers to Part 1. Then, when instructed by your professor, get into groups to finalize your answer to Part 1. Your instructor will tell you when to move on to Part 2 with your group. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+**Instructions:** There are 2 parts to this worksheet. First, spend a few minutes thinking about your answers to Part 1. Then, when instructed by your professor, get into groups to finalize your answer to Part 1. Your instructor will tell you when to move on to Part 2 with your group. 
 
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+
+<!--Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:-->
 <br>
 <br>
 <br>

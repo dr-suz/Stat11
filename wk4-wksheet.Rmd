@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: 'Week 4: Designing a Statistical Study'
+date: 'Week 6: Sampling and design'
 output:
   pdf_document: default
   html_document: default
@@ -10,9 +10,11 @@ output:
 **Name:** _____________________________________
 
 \vspace{1cm}
-**Instructions:** There are two parts to this worksheet. First, work on the five questions in Part 1 by yourself. Then, when instructed by your professor, get into groups to discuss your answers to Part 1 and move on to complete Part 2. Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+**Instructions:** There are two parts to this worksheet. First, work on the five questions in Part 1 by yourself. Then, when instructed by your professor, get into groups to discuss your answers to Part 1 and move on to complete Part 2. 
 
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+<!-- Before getting started however, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:-->
 
 \vspace{2cm}
 ```{r setup, echo=FALSE, include=FALSE}
