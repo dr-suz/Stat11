@@ -13,7 +13,18 @@ header-includes:
 - \usepackage{xcolor}
 ---
 
+# Review Quiz 1 
 
+![](./images/grades.png){height=3in}
+Source: https://www.bloglovin.com/blogs/drawing-on-math-6712237/grades-2067306239
+
+![](./images/blooms.jpeg){height=3in}
+
+Source: https://sketchplanations.com/sneaky-averages
+
+* [Key assumptions of linear regression models in practice](https://statmodeling.stat.columbia.edu/2013/08/04/19470/)
+
+* Understanding the Normal model with pictures - let's go over problems 10-15 together on the board...
 
 # Main Ideas 
 
