@@ -1,0 +1,201 @@
+---
+title: "Quiz 1 for Stat 11"
+date: "Makeup"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+\vspace{4mm}
+**Name:** _____________________________________
+
+# Part 1: Multiple Choice (3 points each)
+
+**1.** Which is TRUE of the data shown in the histogram below?
+
+![](../Stat11/images/Q1_hist.png){height=1in}
+
+I. The distribution is skewed to the right.
+II. The mean is probably smaller than the median.
+III. We should use median and IQR to summarize these data.
+
+(a) I only 
+
+(b) II only 
+
+(c) II and III only  
+
+(d) I and III only
+
+(e) I, II, and III
+
+
+\vspace{.5cm}
+**2.** The following box plots show the closing share prices for a sample of technology companies on the first trading days in August 2007 and in August 2002. 
+
+![](../Stat11/images/Q1_boxplots.png){height=2in}
+
+Which of the following statements is TRUE?
+
+(a) The distribution of closing prices in August 2007 appears more symmetric than the distribution of closing prices in August 2002.
+
+(b) Closing prices are more variable in August 2007 compared to August 2002.
+
+(c) The median closing share price is higher in August 2007 compared to August 2002. 
+
+(d) Both A and B
+
+(e) All of the above
+
+
+\vspace{.5cm}
+**3.** A regression analysis of students' college grade point averages (GPAs) and their high school GPAs found $R^2=0.311$. Which of these statements is TRUE?
+
+I. High school GPA accounts for $31.1\%$ of college GPA.
+
+II. $31.1\%$ of college GPAs can be correctly predicted with this model.
+
+III. $31.1\%$ of the variance in college GPA can be accounted for by the model. 
+
+(a) I only
+
+(b) II only
+
+(c) III only
+
+(d) I and II only
+
+(e) None
+
+\vspace{.5cm}
+**4.** Data were collected on monthly sales revenues (in \$1,000s) and monthly advertising expenditures (\$100s) for a sample of drug stores. The regression line relating revenues $(Y)$ to advertising expenditure $(X)$ is estimated to be $\hat{y}_{i} = -48.3 + 9.00x_i$. Which of the following is a valid interpretation of the slope in this model? 
+
+(a) Without spending any money on monthly advertising, the company can expect to operate at a deficit of about $48.3$ dollars. 
+
+(b) Without spending any money on monthly advertising, the company can expect to operate at a deficit of about $48,300$ dollars. 
+
+(c) For every additional dollar spent on advertising, these drug stores will see an increase of nine dollars in sales revenue. 
+
+(d) For every additional $100$ dollars spend on advertising, these drug stores will see an average increase of $9000$ dollars in sales revenue.
+
+(e) For every additional $100$ dollars spend on advertising, these drug stores will see an increase of $9000$ dollars in sales revenue.
+
+
+\vspace{.5cm}
+**5.** Which statement about correlation is TRUE?
+
+I. Regression for transformed numeric data tends to result in a higher correlation.
+
+II. If $r=0.95$, the response variable increases as the explanatory variable increases.
+
+III. An outlier always decreases the correlation.
+
+(a) I only
+
+(b) II only
+
+(c) III only
+
+(d) II and III only
+
+(e) None
+
+\vspace{.5cm}
+**6.** A residual plot that has no pattern is a sign of what?
+
+(a) The model is not a good one, because there is no pattern. 
+
+(b) The original data is curved and the regression line is not a good model. 
+
+(c) The original data is curved and the regression line is a good model. 
+
+(d) The original data is straight and the regression line is not a good model. 
+
+(e) The original data is straight and the regression line is a good model. 
+
+
+\vspace{.5cm}
+**7.** A clothing store uses comment cards to get feedback from its customers about newly added items. It recently introduced plus size fashion wear. Customers who purchased the items were asked to fill out an online comment survey giving $10\%$ off the next purchase. The data are summarized in the table below. What percentage of customers were at least satisfied with the item(s) purchased (Satisfied or Very satisfied)?
+
+| Response | Frequency | 
+| --- | --- |
+| Very satisfied | 15 |
+| Satisfied | 30 |
+| Less than fully satisfied | 12 |
+| Not satisfied | 4 |
+
+(a) $26.2\%$
+
+(b) $73.8\%$
+
+(c) $49.2\%$ 
+
+(d) $24.5\%$ 
+
+(e) $68.9\%$
+
+\vspace{.5cm}
+**8.**  A small independent organic food store offers a variety of specialty coffees. To determine whether price has an impact on sales, the managers kept track of how many pounds of each variety of coffee were sold last month. Which of the following statements is incorrect? 
+
+![](../Stat11/images/Q1_table.png){height=2.5in}
+
+(a) Without plotting the data it is impossible to tell if a linear regression model is appropriate.  
+
+(b) If the form of the scatter plot of this data is linear, then for each additional dollar in the price per pound, the pounds sold of that product decreases by the same amount.   
+
+(c) If the form of the scatter plot of this data is linear, then there is a strong, negative, linear association between the pounds sold and the price per pound. 
+
+(d)The correlation of $-0.927$ assures us that the association between the pounds sold and the price per pound is extremely linear.
+
+(e) A linear model predicting the pounds sold as a linear function of the price per pound explains approximately $86\%$ of the variability in the store's pounds sold over the last month.
+
+
+
+# Part 2: Fill in the blank (4 points each)
+
+**9.** A regional survey was carried out to gauge public opinion on an Arizona Immigration Law. 
+
+\vspace{.25cm}
+
+Based on the results shown below, $\rule{3cm}{0.15mm}$ percent of the public oppose the law. (You do not need to simplify your answer, you can simply write the formula to calculate the answer.)
+
+| Response | Democrat | Republican | Independent | 
+|:--- |:--- |:--- |:--- |
+| Favor | 49 | 92 | 35 |
+| Oppose | 85 | 45 | 55 | 
+| Don't know | 6 | 8 | 20 | 
+
+
+\vspace{2cm}
+**10.** The box plots show prices of used cars (in thousands of dollars) advertised for sale at three different car dealers. 
+
+
+![](../Stat11/images/Q1_boxplots2.png){height=3.5in}
+
+\vspace{0.25cm}
+
+$\rule{3cm}{0.15mm}$ is the dealer with the largest price range of approximately $\rule{3cm}{0.15mm}$ dollars.  
+
+
+
+# Part 3: Math "essay" questions (10 points each) 
+
+*To receive full credit on each of the following questions you must show your work and/or explain your reasoning. This can include formulas, pictures, or written sentences.* 
+
+**11.** Suppose the time it takes to process phone orders in a small flower shop is normally distributed with a 
+mean of $5$ minutes and a standard deviation of $1$ minute. Using the 68/95/99.7 rule, approximately $2.5\%$ of phone orders take no more than how many minutes to prepare?
+
+\vspace{7cm}
+**12.** Suppose a larger flower shop that caters to local businesses and local government for large events also record the amount of time it takes to process and complete same-day phone orders. If their processing time is normally distributed with a mean of $2$ hours and a standard deviation of $0.5$ hours, then what's the probability that a random same-day phone order will take between $2$ and $3$ hours to prepare? Use the 68/95/99.7 rule to approximate your answer. 
+
+\vspace{7cm}
+**13.** Last Valentine's Day, the small flower shop prepared a phone order in a record time of $1.56$ minutes. The large flower shop also broke a record for a same-day phone order that was completed in $0.48$ hours. Determine which shop we are *statistically* most impressed by by comparing the z-scores for each of the record times. 
+
+\vspace{7cm}
+**You must use the z-table to answer questions 14 and 15 below. Note that there are two sides to this table.**
+
+
+**14.** Find each of the z-scores from Question 13 on the Z-table by following the vertical and horizontal margins of the table to the closest possible values. The numbers in the middle of the table show the lower tailed probabilities corresponding to these two Standard Normal quantiles. What is the larger of these two probabilities? (Your answer should be a number from the z-table. To show your work, report both probabilities and circle the larger one.) 
+
+\vspace{3cm}
+**15.** In the middle of the z-table, find the lower tailed probability of $0.9875$. Find the values at the row and column margins of this probability; this is the lower-tailed $98.75$ quantile. Using this Standard Normal quantile, find the $98.75$ quantile of the **large** flower shop's phone order processing time (in hours).  
+
