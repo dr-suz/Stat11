@@ -1,0 +1,41 @@
+---
+title: "Alternate Syllabus for: Stat 11 Introduction to Statistical Methods"
+author: "Prof. Suzy Thornton"
+date: "Fall 2023"
+lang: "en-US"
+output:
+  html_document:
+subtitle: Syllabus and Course Policies
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
+---
+
+
+# Course Policies - Alternative
+
+## Course Grade - Alternative
+
+Your entire course grade is determined by each course component listed above **and** your attendance in class. If there are no penalties accrued from unexcused absences then homework assignments will account for $25\%$ of your overall grade (reading comprehension assignments count for $15\%$ and project assignments count for $10\%$), each of the three in-class quizzes will account for <span style="color:red">$15\%$</span> of your overall course grade, and your group final project will account for <span style="color:red">$30\%$</span> of your overall course grade. If you decide to use this option, then you will not need to take the final exam on December 20th. 
+
+You can estimate your course grade at any time using the following formula: 
+$$0.15(\text{reading_comp_completed}) + 0.10(\text{hw_project_average}) + 0.15(\text{quiz1} + \text{quiz2} + \text{quiz3}) + 0.3(\text{final_project}),$$
+where each grade component is some number between $0$ and $100$. To convert your numeric grade to a letter grade, I will use the following:
+
+| Numeric grade | Letter grade | 
+|:--- |:---- |
+| $\geq 97$ | A$+$ | 
+| $[95, 97)$ | A | 
+| $[90, 95)$ | A$-$ | 
+| $[87, 90)$ | B$+$ | 
+| $[85, 87)$ | B | 
+| $[80, 85)$ | B$-$ | 
+| $[77, 80)$ | C$+$ |
+| $[75, 77)$ | C | 
+| $[70, 75)$ | C$-$ | 
+| $[67, 70)$ | D$+$ | 
+| $[65, 67)$ | D | 
+| $[60, 65)$ | D$-$ | 
+| $<  60$ | F | 

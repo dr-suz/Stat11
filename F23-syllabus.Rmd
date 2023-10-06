@@ -74,7 +74,7 @@ There will be one group project that you will present on the last week of class.
 
 ### Final Exam 
 
-The final exam will take place during the finals period <span style="color:red">(exact time/day TBD)</span> and it will be cumulative. The exam schedule will be posted by the registrar once it is determined. Do not schedule any travel plans during finals week as **makeups will not be permitted for the final exam**. 
+The final exam will take place on December 20th from 9am-12pm in room SCI 183. **Makeups will not be permitted for the final exam**. 
 
 
 # Course Policies 
@@ -85,9 +85,23 @@ Your entire course grade is determined by each course component listed above **a
 
 You can estimate your course grade at any time using the following formula: 
 $$0.15(\text{reading_comp_completed}) + 0.10(\text{hw_project_average}) + 0.10(\text{quiz1} + \text{quiz2} + \text{quiz3}) + 0.25(\text{final_project}) + 0.20(\text{final_exam}),$$
-where each grade component is some number between $0$ and $100$.
+where each grade component is some number between $0$ and $100$. To convert your numeric grade to a letter grade, I will use the following:
 
-
+| Numeric grade | Letter grade | 
+|:--- |:---- |
+| $\geq 97$ | A$+$ | 
+| $[95, 97)$ | A | 
+| $[90, 95)$ | A$-$ | 
+| $[87, 90)$ | B$+$ | 
+| $[85, 87)$ | B | 
+| $[80, 85)$ | B$-$ | 
+| $[77, 80)$ | C$+$ |
+| $[75, 77)$ | C | 
+| $[70, 75)$ | C$-$ | 
+| $[67, 70)$ | D$+$ | 
+| $[65, 67)$ | D | 
+| $[60, 65)$ | D$-$ | 
+| $<  60$ | F | 
 
 ## Academic Integrity 
 
