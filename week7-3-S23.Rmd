@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week 10"
+title: "Stat 11 Week 9"
 subtitle: "Probability Worksheet" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"

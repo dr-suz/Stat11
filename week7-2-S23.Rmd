@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week 10"
+title: "Stat 11 Week 9"
 subtitle: "Independence and Properties of Expectation" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"

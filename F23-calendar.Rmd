@@ -59,15 +59,15 @@ In the calendar below **RCHW** corresponds to reading comprehension homework ass
 | 5 | Oct 2 | 1, 2  | Collecting data from experiments and observational studies | **Quiz 1** <br> Part 3: Ch 10-11  |
 | 6 | Oct 9 | 2 |  Collecting data from experiments and observational studies <br> From randomness to probability and the laws of probability |  Part 3: Ch 10-11 <br> Part 4: Ch 12-13  <br> RCHW 5+6 |
 | 7 | Oct 16 |  | Fall Break |   |
-| 8 | Oct 23 | 2 |  Random variables and probability models | Part 4: Ch 14, Ch 15.1, 15.3, 15.4, 15.5 <br> PHW 3 <br> RCHW 7+8 |
-| 9 | Oct 30 | 2 |  Unit 2 topics | RCHW 9+10 <br> **Quiz 2** |
-| 10 | Nov 6 | 3 | Sampling distributions and confidence intervals for a proportion and for a mean | Part 5: Ch 16-17 (all except 17.4) <br> RCHW 11+12 |
-| 11 | Nov 13 | 3 | Hypothesis tests about a proportion or a mean | Part 5: Ch 18-19 <br> PHW 4 |
-| 12 | Nov 20 | 3 | Comparing grouped numeric data | Part 6: Ch 20-21 <br> RCHW 13+14 |
-| 13 | Nov 27 | 3 | Unit 3 topics | **Quiz 3** |
-| 14 | Dec 4 | 3 | Comparing grouped categorical data | Part 6: Ch 22 <br> RCHW 15 |
-| 15 | Dec 11 |  | Ethical statistical practice | PHW 5 <br> **Final Project Presentations** |
-|  |  Dec 17-23  |  |  **Final Exam** |  |
+| 8 | Oct 23 | 2 |  From randomness to probability and the laws of probability  | Part 4: Ch 14  <br> PHW 3 <br> RCHW 7 |
+| 9 | Oct 30 | 2 |  Random variables and probability models | Part 4: Ch 15.1, 15.3, 15.4, 15.5 <br> RCHW 8, 9, 10 |
+| 10 | Nov 6 | 2 | Unit 2 topics | **Quiz 2** |
+| 11 | Nov 13 | 3 |  Sampling distributions and confidence intervals for a proportion and for a mean |  Part 5: Ch 16-17 (except 17.4) <br> RCHW 11+12 |
+| 12 | Nov 20 | 3 | Hypothesis tests about a proportion or a mean  | Part 5: Ch 18-19 <br> PHW 4   |
+| 13 | Nov 27 | 3 | Comparing grouped numeric data <br> Comparing grouped categorical data | Part 6: Ch 20-23 <br> PHW 5 <br> RCHW 13  |
+| 14 | Dec 4 | 3 | Unit 3 topics  | RCHW 14+15 <br> **Quiz 3**  |
+| 15 | Dec 11 | 3 |  Ethical statistical practice |  **Final Project Presentations** |
+|  |  Dec 20  | 1-3 |  **Final Exam** |  |
 
 
 
