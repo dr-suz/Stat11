@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week 7"
+title: "Stat 11 Week 6"
 subtitle: "Practice designing statistical studies" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"

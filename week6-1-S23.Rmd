@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week 9"
+title: "Stat 11 Week 6 & 8"
 subtitle: "Random Variables and Probability Rules - Part 1" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
