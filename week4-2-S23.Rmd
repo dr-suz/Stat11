@@ -38,17 +38,14 @@ Below is the abstract for an article about [massage-like stroking boosting the i
 
 <span style="color:purple">Answer the following questions about this study:
 
-(a) Are the conclusions of this study generalizable and if so to which population? 
+(a) What is the response variable? 
 
-(b) Does this study provide evidence of a cause and effect relationship between the treatment and the response variable? 
+(b) How many treatments are there and what are they? 
 
-(c) What factors are being considered and how many levels are there of each? 
+(c) Are the conclusions of this study generalizable and if so to which population? 
 
-(d) How many treatments are there? 
-
-(e) What is the response variable?
-
-(f) Which of the following apply to this experiment: completely randomized, blocked, matched design, blind? </span>
+(d) Does this study provide evidence of a cause and effect relationship between the treatment and the response variable? 
+</span>
 
 
 ## Four principles of experimental design 
