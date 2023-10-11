@@ -3,8 +3,8 @@ title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
 date: 'Week 6: Sampling and design'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 \vspace{.5cm}
 **Name:** _____________________________________
