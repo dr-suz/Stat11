@@ -3,8 +3,8 @@ title: "Project Homework 3"
 author: "STAT011-S23"
 date: 'Due: 10/27/23'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
