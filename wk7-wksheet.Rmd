@@ -60,7 +60,7 @@ Send one member of your group to the front of the class to select one random sam
 <br>
 
 
-# 5. If we were to draw larger random samples of the candies, say $n=200$, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Using both the binomial probability table and the Normal (Z) table, find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. Explain why these values are so close. 
+# 5. If we were to draw larger random samples of the candies, say $n=200$, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Using both the binomial probability table and the Normal (Z) table, find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. Are these values similar? Explain why or why not.  
 
 <br>
 <br>
