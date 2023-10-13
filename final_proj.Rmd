@@ -1,7 +1,6 @@
 ---
 title: "Final Project"
 author: "STAT 011 with Prof Suzy"
-date: "Spring '23"
 output:
   bookdown::pdf_document2: 
     toc: no
@@ -19,37 +18,37 @@ options(digits = 3)
 
 # Overview 
 
-Your final project will consist of a poster presentation, shared and presented during the last week of classes. The topic of your final project is open-ended so feel free to choose something that interests you. Your project and poster presentation will be completed in groups of 3-4 people and should broadly fit into one of the three categories below: 
+Your final project will consist of a poster presentation presented on the last day of class. The topic of your final project is open-ended so feel free to choose something that interests you and your group mates. Your project and poster presentation will be completed in groups of 2-3 people and should broadly fit into one of the three categories below: 
 
-## Option A: Research report on a topic that interests you 
+## Option A: Original survey or experiment 
 
-This could be a topic we have touched on in class, or something you learned about in another class or through your own reading or experience. Such a project might involve reading articles in journals, newspapers, magazines, and books; summarizing and discussing the statistical issues involved; and drawing conclusions. Examples of possible topics include the use of DNA fingerprinting in court cases, the use of statistics in standardized testing, the use of election polls in the media, the role of statistics and data science in epidemiology.  
+You might design a survey or experiment on some topic that interests you (e.g. twitter poll, on-campus experiment). Such a project might involve developing a survey or set of questions, selecting a strategically random sample, and gathering the data to analyze. You’ll have to identify and define your variables of interest before collecting data. If you are going to ask your peers to participate, be considerate and make the activity as quick and easy to complete as possible. For this option, prioritize study design so that you have high quality data, rather than a large quantity of data. 
 
 ## Option B: Analysis of an existing data set 
 
-You might apply some exploratory or inferential technique we have learned in class to a data set that has already been collected and is publicaly available. You can find data sets on the web using sites such as www.census.gov and www.city-data.com for demographic data, www.leesmovieinfo.net for movie earnings, etc., and use it to answer some question you’re interested in. The CDC also has extensive data sets on the Coronavirus at https://www.cdc.gov/DataStatistics/. 
+You might apply some exploratory or inferential technique we have learned in class to a data set that has already been collected and is publicly available. You can find data sets on the web using sites such as www.census.gov and www.city-data.com for demographic data, www.leesmovieinfo.net for movie earnings, etc., and use it to answer some question you’re interested in. The difficult part of this option is in finding quality data that is easy to understand. There's no shortage of poor quality data on the internet! 
 
-## Option C: Original survey or experiment 
+## Option C: Research report on a topic that interests you 
 
-You might conduct a virtual survey on some topic that interests you (e.g. twitter poll, email poll, Swarthmore poll/experiment). Such a project might involve developing a survey or set of questions, selecting a strategically random sample, and gathering the data to analyze. You’ll have to identify and define your variables of interest before collecting data. If you are going to ask your peers to participate, be considerate and make the activity as quick and painless as possible.
+This could be a topic we have touched on in class, or something you learned about in another class or through your own reading or experience. Such a project might involve reading articles in journals, newspapers, magazines, and books; summarizing and discussing the statistical issues involved; and drawing conclusions. Examples of possible topics include the use of DNA fingerprinting in court cases, the use of statistics in standardized testing, the use of election polls in the media, the role of statistics and data science in epidemiology. The difficult part of this option is that you will be teaching yourself something new. 
 
 # Requirements/Rubric
 
-You and your group mates will create a poster summarizing your project and will present this to Prof Suzy on one of the last two days of class. You should use large print on your poster and aim for an attractive and well-organized display. Your poster and presentation must reflect you and your group's own original work. Plagiarism will be checked with software and a strong indication of plagiarized content will result in a grade of zero for all group members. 
+You and your group mates will create a poster summarizing your project and will present your results to Prof Suzy on the last day of class. You should use large print on your poster and aim for an attractive and well-organized display. Your poster and presentation must reflect you and your group's own original work. Plagiarism may be checked with software and a strong indication of plagiarized content will result in a grade of zero for all group members. For projects (A) or (B), the type of data you use should involve at least one quantitative variable and one categorical variable. Typically people doing surveys will collect 5–8 variables on each subject. 
 
-Please submit your final project idea/topic to Prof Suzy's for approval by the **end of March**. You are encouraged to consider connecting your knowledge of statistics to the topics of another course in your project topic. For projects (B) or (C), the type of data you use should involve at least one quantitative variable and one categorical variable. Typically people doing surveys will collect 5–8 variables on each subject. 
-
-Your final project will be graded on a scale of 0-20 points possible. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. 
+Your final project proposal is due by **November 13**. The poster and presentation are due in class on **December 13**. Your final project will be graded on a scale of 0-20 points possible. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. I recommend choosing your groups based on common statistical interests rather than on existing friendships. 
 
 | Rubric | Component | Points Available | Description |
 |:--- |:--- |:--- |:--- |
+| Proposal | Subject                | 0-3 | Is the project objective clearly defined and answerable within the time allotted?    |   
+|          | Group members          | 0-3 | Does each group member understand their role and accept responsibility for the quality and completion of the project?      |   
 | Poster | Title                    | 0-1 | Is the title short, catchy, and relevant to the topic?      |                
-|        | Technical specifications | 0-1 | Is the poster neatly organized and clearly legible? Was the topic approved on time? Was the poster printed on time? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
+|        | Technical specifications | 0-3 | Is the poster neatly organized and clearly legible? Was the topic approved on time? Was the poster printed on time? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
 |        | Main content             | 0-5 | How clear is the statement of question or purpose? Can a reader understand what data (or information) was analyzed? Are the methods adequate to address the main statement of question or purpose? Are the conclusions over- or under- stated?    |
-|        | References               | 0-5 | Are references cited properly at the bottom of the poster? Are they referenced throughout the poster, where appropriate? |
-| Presentation | Duration      | 0-2 |  Is the presentation finished within a 3-5 minute window?    |
+|        | References               | 0-2 | Are references cited properly at the bottom of the poster? Are they referenced throughout the poster, where appropriate? |
+| Presentation | Duration      | 0-1 |  Is the presentation finished within a 3-5 minute window?    |
 |              | Participation | 0-1 |  Did all group members contribute to the presentation and/or poster?    |
-|              | Use of poster | 0-5 |  Is the poster referenced during the presentation? Are presenter(s)' comments consistent with the information on the poster?    |
+|              | Use of poster | 0-1 |  Is the poster referenced during the presentation? Are presenter(s)' comments consistent with the information on the poster?    |
 
 
 # Example Topics 
@@ -58,28 +57,6 @@ Your final project will be graded on a scale of 0-20 points possible. All group 
 
 Have you heard any mention of important statistical studies in your other courses? Would you like to dig into a particular application of statistics to, say, a humanities course? Can you find a reliable source and can you explain some of the statistical components? 
 
-
-## Option B: Stat Problem Solving Data Challenge 
-
-Professor Suzy Thornton will accompany interested students through an exploration of this year's Computing, Government, and Graphics sections of the American Statistical Association's annual Data Challenge Expo.
-
-**Where:** Math/Stat Lounge 
-
-**When:** 5-8pm on March 20 and 21 $~$ $~$ [RSVP for one or both days here](https://docs.google.com/forms/d/e/1FAIpQLScnAnslj5c2pSD94vNPfcv65ipIFoEdBaNF01-x9S7imnxKlg/viewform)
-
-The challenge data set we'll be working with is the [National Crime Victimization Survey (NCVS) of 2020](www.icpsr.umich.edu/web/NACJD/studies/38090/summary). The NCVS has gathered data on personal and household crimes since 1973. The primary goals of the survey are to collect information about victims, to explore the consequences of crime, and to estimate the number and types of crimes that go unreported.
-
-You are welcome to additionally (or alternatively) consider related data sets:
-
-* [NCVS Series and Supplements data](www.icpsr.umich.edu/web/NACJD/series/95)
-
-* [Annual Survey of Jails 2020](www.icpsr.umich.edu/web/NACJD/studies/38408)
-
-* [National Prisoner Statistics](www.icpsr.umich.edu/web/NACJD/studies/38249)
-
-* [American Community Survey](www.census.gov/programs-surveys/acs)
-
-In addition to the data for download, the NCVS website has links to studies that utilize the NCVS data. These studies may serve as inspiration or background for your final project. 
 
 ## Option C: Design and analyze an experiment 
 
