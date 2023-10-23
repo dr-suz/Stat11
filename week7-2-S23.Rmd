@@ -31,13 +31,15 @@ $$\text{and}$$
 
 $$Cor(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.$$
 
-Note: You do not be expected to know how to calculate the covariance of two random variables. 
+**Note:** You are NOT expected to know how to calculate the covariance of two random variables, but, if you would like to see an example, see section 4 at the bottom of these notes. 
+
+<br>
 
 # 1. Independent Random Variables 
 
 Independence is a complicated concept in probability and statistics. We're going to dig into the nitty gritty details to make sure we [really understand what independence means](https://youtu.be/jCUiGArhW2M?start=1).
 
-<span style="color:blue">Q1) What does it mean for two *random events*, say, $A$ and $B$, to be independent?</span>
+Q1) <span style="color:blue">What does it mean for two *random events*, say, $A$ and $B$, to be independent?</span>
 
 <br>
 
@@ -45,9 +47,11 @@ A1) For any two random events, $A$ and $B$, to be independent, they must satisfy
 
 <br>
 
-## Example 1 - Determining if two events are independent
+<br>
 
-You play two games against the same opponent. The probability you win the first game is $0.4$. If you win the first game, the probability you also win the second is $0.2$. If you lose the first game, the probability that you win the second is $0.3$. Let $A$ be the event that you win the first game and let $B$ be the event that you win the second game. 
+## Example 1 - Determining if two *events* are independent
+
+You play two games against the same opponent. The probability you win the first game is $0.4$. If you win the first game, the probability you also win the second is $0.2$. If you lose the first game, the probability that you win the second is $0.3$. Let $A$ be the event that you win the first game and let $B$ be the event that you win the second game. Answer the following questions about the results of this game. (Hint: Drawing a tree-diagram may be helpful here.)
 
 <span style="color:purple">a) What is the probability that you win the second game?</span> 
 
@@ -62,16 +66,16 @@ You play two games against the same opponent. The probability you win the first 
 <br> 
 <br>
 
-**Note:** There is a law of probability that we haven't covered yet called *the law of total probability*. This law can be proved given the five laws of probability we have covered and it states that, for any events $A$ and $B$, 
+**Mote:** There is a law of probability that we haven't covered yet called <span style="color:green">the law of total probability</span>. This law can be proved given the five laws of probability we have covered and it states that, for any events $A$ and $B$, 
 $$Pr(B) = Pr(B\text{ and }A) + Pr(B \text{ and } A^C).$$ 
-This law isn't mentioned by name in your textbook but it is used implicitly in Bayes' Rule which you will read about. 
+This law isn't mentioned by name in your textbook but it is used implicitly in <span style="color:green">Bayes' Rule</span> which you will read about. 
 
 
 ***
 
 
 
-<span style="color:blue">Q2) What does it mean for two *random variables*, say, $X$ and $Y$ to be independent?</span> 
+Q2) <span style="color:blue">What does it mean for two *random variables*, say, $X$ and $Y$, to be independent?</span> 
 
 <br> 
 
@@ -79,7 +83,11 @@ A2) We say that two random variables, $X$ and $Y$, are independent if the values
 
 <br> 
 
-## Example 2 - Determining if two variables are independent
+## Example 2 - Determining if two *variables* are independent
+
+<span style="color:purple">Based on the table below, are the two (categorical) variables independent of each other?<\span> (Hint: It may be helpful to list out all the elements of the sample space for each variable.)
+
+<br> 
 
 |     | Drug A | Drug B | Placebo | Row totals |
 |:--- |:--- |:--- |:--- |:--- |
@@ -130,9 +138,9 @@ For a sample of data from this Normal distribution, we observe the values of $x_
 **Sample estimates**: $\bar{x} = \frac{1}{n} \sum_{i = 1}^{n} x_i$ and $s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})$ 
 
 
-### Quantiles and probabilities 
+### Example - Quantiles and probabilities for flights
 
-For the sake of this exercise, let's assume that the cost of airline tickets can be modeled with a Normal distribution. 
+For the sake of this exercise, let's assume that the cost of airline tickets can be modeled with a $N(563, 70)$ distribution.  
 
 <span style="color:purple">What's the probability that the cost of a flight from PHL to Toronto exceeds $\$700$?</span>  
 
@@ -158,7 +166,7 @@ qnorm(myProbability, mean = 563, sd = 70, lower.tail=TRUE)
 <br>
 
 If we'd rather not use R for these questions, we can still find approximate answers for both questions above by reading a [Z-table](https://www.z-table.com/) consisting of probabilities and quantiles for a standard Normal distribution. (Note: This requires a little bit of additional work since we first have to transform our Normally distributed random variable to a standard Normal random variable.)  
-$$Z = \frac{X - \mu}{\sigma} \sim N(0, 1)$$
+$$Z = \frac{X - \mu}{\sigma} = \frac{X - 563}{70}\sim N(0, 1)$$
 
 # 4. Time permitting: Example calculating the covariance between two discrete random variables 
 

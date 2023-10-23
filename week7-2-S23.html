@@ -1641,15 +1641,17 @@ variable, say, <span class="math inline">\(Y\)</span> we can also derive
 }y)) \right]\]</span> <span class="math display">\[\text{and}\]</span></p>
 <p><span class="math display">\[Cor(X,Y) =
 \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.\]</span></p>
-<p>Note: You do not be expected to know how to calculate the covariance
-of two random variables.</p>
+<p><strong>Note:</strong> You are NOT expected to know how to calculate
+the covariance of two random variables, but, if you would like to see an
+example, see section 4 at the bottom of these notes.</p>
+<p><br></p>
 </div>
 <div id="independent-random-variables" class="section level1">
 <h1>1. Independent Random Variables</h1>
 <p>Independence is a complicated concept in probability and statistics.
 We’re going to dig into the nitty gritty details to make sure we <a href="https://youtu.be/jCUiGArhW2M?start=1">really understand what
 independence means</a>.</p>
-<p><span style="color:blue">Q1) What does it mean for two <em>random
+<p>Q1) <span style="color:blue">What does it mean for two <em>random
 events</em>, say, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, to be independent?</span></p>
 <p><br></p>
 <p>A1) For any two random events, <span class="math inline">\(A\)</span>
@@ -1658,14 +1660,17 @@ satisfy <span class="math inline">\(Pr(A \text{ and } B) = Pr(A) \times
 Pr(B)\)</span> or, equivalently, <span class="math inline">\(Pr(A \mid
 B) = Pr(A)\)</span>.</p>
 <p><br></p>
+<p><br></p>
 <div id="example-1---determining-if-two-events-are-independent" class="section level2">
-<h2>Example 1 - Determining if two events are independent</h2>
+<h2>Example 1 - Determining if two <em>events</em> are independent</h2>
 <p>You play two games against the same opponent. The probability you win
 the first game is <span class="math inline">\(0.4\)</span>. If you win
 the first game, the probability you also win the second is <span class="math inline">\(0.2\)</span>. If you lose the first game, the
 probability that you win the second is <span class="math inline">\(0.3\)</span>. Let <span class="math inline">\(A\)</span> be the event that you win the first
 game and let <span class="math inline">\(B\)</span> be the event that
-you win the second game.</p>
+you win the second game. Answer the following questions about the
+results of this game. (Hint: Drawing a tree-diagram may be helpful
+here.)</p>
 <p><span style="color:purple">a) What is the probability that you win
 the second game?</span></p>
 <p><br></p>
@@ -1675,16 +1680,15 @@ both games?</span></p>
 <p><span style="color:purple">c) Are the outcomes of these two games
 independent?</span></p>
 <p><br> <br></p>
-<p><strong>Note:</strong> There is a law of probability that we haven’t
-covered yet called <em>the law of total probability</em>. This law can
-be proved given the five laws of probability we have covered and it
-states that, for any events <span class="math inline">\(A\)</span> and
-<span class="math inline">\(B\)</span>, <span class="math display">\[Pr(B) = Pr(B\text{ and }A) + Pr(B \text{ and }
-A^C).\]</span> This law isn’t mentioned by name in your textbook but it
-is used implicitly in Bayes’ Rule which you will read about.</p>
+<p><strong>Mote:</strong> There is a law of probability that we haven’t
+covered yet called <span style="color:green">the law of total
+probability</span>. This law can be proved given the five laws of
+probability we have covered and it states that, for any events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math display">\[Pr(B) =
+Pr(B\text{ and }A) + Pr(B \text{ and } A^C).\]</span> This law isn’t
+mentioned by name in your textbook but it is used implicitly in <span style="color:green">Bayes’ Rule</span> which you will read about.</p>
 <hr />
-<p><span style="color:blue">Q2) What does it mean for two <em>random
-variables</em>, say, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> to be independent?</span></p>
+<p>Q2) <span style="color:blue">What does it mean for two <em>random
+variables</em>, say, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, to be independent?</span></p>
 <p><br></p>
 <p>A2) We say that two random variables, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, are independent if the values that
 <span class="math inline">\(X\)</span> takes on are in no way related
@@ -1695,7 +1699,13 @@ formulas above) of any random event in the sample space of <span class="math inl
 <p><br></p>
 </div>
 <div id="example-2---determining-if-two-variables-are-independent" class="section level2">
-<h2>Example 2 - Determining if two variables are independent</h2>
+<h2>Example 2 - Determining if two <em>variables</em> are
+independent</h2>
+<p><span style="color:purple">Based on the table below, are the two
+(categorical) variables independent of each other?&lt;&gt; (Hint: It may
+be helpful to list out all the elements of the sample space for each
+variable.)</p>
+<p><br></p>
 <table>
 <thead>
 <tr class="header">
@@ -1781,10 +1791,11 @@ values of <span class="math inline">\(x_1, x_2, \dots, x_n\)</span>.</p>
 <p><strong>Sample estimates</strong>: <span class="math inline">\(\bar{x} = \frac{1}{n} \sum_{i = 1}^{n}
 x_i\)</span> and <span class="math inline">\(s^2 =
 \frac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})\)</span></p>
-<div id="quantiles-and-probabilities" class="section level3">
-<h3>Quantiles and probabilities</h3>
+<div id="example---quantiles-and-probabilities-for-flights" class="section level3">
+<h3>Example - Quantiles and probabilities for flights</h3>
 <p>For the sake of this exercise, let’s assume that the cost of airline
-tickets can be modeled with a Normal distribution.</p>
+tickets can be modeled with a <span class="math inline">\(N(563,
+70)\)</span> distribution.</p>
 <p><span style="color:purple">What’s the probability that the cost of a
 flight from PHL to Toronto exceeds <span class="math inline">\(\$700\)</span>?</span></p>
 <p><br></p>
@@ -1805,8 +1816,8 @@ and quantiles for a standard Normal distribution. (Note: This requires a
 little bit of additional work since we first have to transform our
 Normally distributed random variable to a standard Normal random
 variable.)<br />
-<span class="math display">\[Z = \frac{X - \mu}{\sigma} \sim N(0,
-1)\]</span></p>
+<span class="math display">\[Z = \frac{X - \mu}{\sigma} = \frac{X -
+563}{70}\sim N(0, 1)\]</span></p>
 </div>
 </div>
 </div>
