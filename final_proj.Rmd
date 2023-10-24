@@ -36,42 +36,57 @@ This could be a topic we have touched on in class, or something you learned abou
 
 You and your group mates will create a poster summarizing your project and will present your results to Prof Suzy on the last day of class. You should use large print on your poster and aim for an attractive and well-organized display. Your poster and presentation must reflect you and your group's own original work. Plagiarism may be checked with software and a strong indication of plagiarized content will result in a grade of zero for all group members. For projects (A) or (B), the type of data you use should involve at least one quantitative variable and one categorical variable. Typically people doing surveys will collect 5–8 variables on each subject. 
 
-Your final project proposal is due by **November 13**. The poster and presentation are due in class on **December 13**. Your final project will be graded on a scale of 0-20 points possible. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. I recommend choosing your groups based on common statistical interests rather than on existing friendships. 
+Your final project proposal is due by **November 13**. The poster and presentation are due in class on **December 13**. Your final project will be graded on a scale of 0-20 points according to the rubric below. All group members will receive the same grade *unless* the majority of the group members bring a specific complaint to Prof Suzy about a member not participating. In this case, a student who is not participating may receive a lower grade than their group mates. I recommend choosing your groups based on common statistical interests rather than on existing friendships. 
 
-| Rubric | Component | Points Available | Description |
+| Rubric Component |  | Points Available | Description |
 |:--- |:--- |:--- |:--- |
-| Proposal | Subject                | 0-3 | Is the project objective clearly defined and answerable within the time allotted?    |   
+| **Proposal** | Subject                | 0-3 | Is the project objective clearly defined and answerable within the time allotted?    |   
 |          | Group members          | 0-3 | Does each group member understand their role and accept responsibility for the quality and completion of the project?      |   
-| Poster | Title                    | 0-1 | Is the title short, catchy, and relevant to the topic?      |                
+
+
+\pagebreak 
+
+| Rubric Component |  | Points Available | Description |
+|:--- |:--- |:--- |:--- |
+| **Poster** | Title                    | 0-1 | Is the title short, catchy, and relevant to the topic?      |                
 |        | Technical specifications | 0-3 | Is the poster neatly organized and clearly legible? Was the topic approved on time? Was the poster printed on time? Does the poster contain sections for Background, Methodology, Results, and Discussion? Does the poster include at least one relevant graphic?     |
 |        | Main content             | 0-5 | How clear is the statement of question or purpose? Can a reader understand what data (or information) was analyzed? Are the methods adequate to address the main statement of question or purpose? Are the conclusions over- or under- stated?    |
 |        | References               | 0-2 | Are references cited properly at the bottom of the poster? Are they referenced throughout the poster, where appropriate? |
-| Presentation | Duration      | 0-1 |  Is the presentation finished within a 3-5 minute window?    |
+
+
+\pagebreak 
+
+| Rubric Component |  | Points Available | Description |
+|:--- |:--- |:--- |:--- |
+| **Presentation** | Duration      | 0-1 |  Is the presentation finished within a 3-5 minute window?    |
 |              | Participation | 0-1 |  Did all group members contribute to the presentation and/or poster?    |
 |              | Use of poster | 0-1 |  Is the poster referenced during the presentation? Are presenter(s)' comments consistent with the information on the poster?    |
 
 
 # Example Topics 
 
-## Option A: Relate Statistics to Another Class 
-
-Have you heard any mention of important statistical studies in your other courses? Would you like to dig into a particular application of statistics to, say, a humanities course? Can you find a reliable source and can you explain some of the statistical components? 
-
-
-## Option C: Design and analyze an experiment 
+## Option A: Design and analyze an experiment 
 
 You can be as creative as our practical constraints allow in designing your own experiment. The minimal requirements will be to ensure there is a treatment with at least two levels and at least one numerical variable and to strategically incorporate randomness in subject selection and/or treatment assignment. A few examples could be things like:
 
 * How much of a beverage is lost to the packaging? (E.g. Compare the left over amounts of liquid in cans, bottles, squeeze pouches, etc amounts after the product is consumed.)
 
-* Does mood and/or energy improve with daily exercise or social time? 
+* Does mood and/or energy improve with daily exercise or daily social time? 
 
 
-## Option C: Conduct and analyze a sample survey 
+## Option A: Conduct and analyze a sample survey 
 
 You can be as creative as our practical constraints allow in designing your own survey. The minimal requirements will be to ensure responses to your survey provide information on at least one categorical variable and one numeric variables and to strategically incorporate randomness in subject selection. A few examples could be things like:
 
 * Referencing the college's website regarding student demographics, determine if there is evidence that introductory statistics courses (e.g. Stat 11) are representative of the student body. 
 
-* Is screen time related to the amount and quality of sleep time? 
+* Is screen time correlated to the amount and quality of sleep time? 
 
+
+## Option C: Relate Statistics to Another Class 
+
+Have you heard any mention of important statistical studies in your other courses? Would you like to dig into a particular application of statistics to, say, a humanities course? Can you find a reliable source and can you explain some of the statistical components? For example, you could 
+
+* Show how time-series models are used in economics and compare them to simple linear regression models. 
+
+* Investigate the historical use of statistics in the human sciences and report on major developments and controversies. 
