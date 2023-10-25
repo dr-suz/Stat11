@@ -62,7 +62,7 @@ In the calendar below **RCHW** corresponds to reading comprehension homework ass
 | 8 | Oct 23 | 2 |  From randomness to probability and the laws of probability  | Part 4: Ch 14  <br> PHW 3 <br> RCHW 7 |
 | 9 | Oct 30 | 2 |  Random variables and probability models | Part 4: Ch 15.1, 15.3, 15.4, 15.5 <br> RCHW 8, 9, 10 |
 | 10 | Nov 6 | 2 | Unit 2 topics | **Quiz 2** |
-| 11 | Nov 13 | 3 |  Sampling distributions and confidence intervals for a proportion and for a mean |  Part 5: Ch 16-17 (except 17.4) <br> RCHW 11+12 |
+| 11 | Nov 13 | 3 |  Sampling distributions and confidence intervals for a proportion and for a mean |  **Final project proposal** <br> Part 5: Ch 16-17 (except 17.4) <br> RCHW 11+12 |
 | 12 | Nov 20 | 3 | Hypothesis tests about a proportion or a mean  | Part 5: Ch 18-19 <br> PHW 4   |
 | 13 | Nov 27 | 3 | Comparing grouped numeric data <br> Comparing grouped categorical data | Part 6: Ch 20-23 <br> PHW 5 <br> RCHW 13  |
 | 14 | Dec 4 | 3 | Unit 3 topics  | RCHW 14+15 <br> **Quiz 3**  |
