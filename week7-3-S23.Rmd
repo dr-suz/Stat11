@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 9"
-subtitle: "Probability Worksheet" 
+subtitle: "Probability and Sampling Distributions Worksheet" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
 output:
@@ -17,7 +17,7 @@ header-includes:
 
 # 1. Data Introduction 
 
-There are 50 different flavored candies in a large bag of 1300 candy beans. Eight of these flavors are green colored. According to the company's website, $15\%$ of the candies in any given package are green.
+There are 50 different flavored candies in a large bag of 1300 candy beans. Eight of these flavors contain a green color. According to the company's website, $15\%$ of the candies in any given package are green.
 
 ![](./images/candies.png)
 

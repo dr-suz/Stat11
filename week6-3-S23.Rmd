@@ -66,6 +66,7 @@ We can model the total cost of airfare to and from these conferences as a functi
 **5. Find the expected value and standard deviation of the cost of the one-way-trip to get all students to their destinations. Do we need to make any assumptions in calculating these means or standard deviations?**
 
 
-$$E(3X + 5Y) =  E(3X) + E(5Y) = 3 E(X) + 5 E(Y) =  3(563) + 5(5400) = 28,689$$
-$$Var(3X + 5Y) =  Var(3X) + Var(5Y) = 3^2 Var(X) + 5^2 Var(Y) =  9(70^2) + 25(750^2) = 14,106,600$$
+$$E(3X + 5Y) =  E(3X) + E(5Y) = 3 E(X) + 5 E(Y) =  3(563) + 5(5400) = 28,689 \text{ dollars}$$
+$$Var(3X + 5Y) =  Var(3X) + Var(5Y) = 3^2 Var(X) + 5^2 Var(Y) =  9(70^2) + 25(750^2) = 14,106,600 \text{ dollars}^2$$
+$$sd(3X+5Y) = \sqrt{14,106,600} = 4,755.88 \text{ dollars}$$ 
 Variance formula assumes $Cov(X,Y)=0$. 
