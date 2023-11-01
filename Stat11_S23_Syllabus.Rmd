@@ -2,9 +2,10 @@
 title: "Stat 11 Introduction to Statistical Methods"
 author: "Prof. Suzy Thornton"
 date: "Spring 2023"
-lang: "en-US"
 output:
-  html_document:
+  pdf_document: default
+  html_document: null
+lang: "en-US"
 subtitle: Syllabus and Course Policies
 header-includes:
 - \usepackage{amsmath}
