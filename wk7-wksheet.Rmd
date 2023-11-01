@@ -5,20 +5,15 @@ date: 'Week 9: Probability and Sampling Distributions Worksheet'
 output:
   html_document: default
   pdf_document: default
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \usepackage{amsfonts}
+- \usepackage{xcolor}
 ---
 <br>
 **Name:** _____________________________________
 
-<br>
-**Instructions:** There are 5 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. 
-
-<!--You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
-
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson: --> 
-
-<br>
-<br>
-<br>
 
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
@@ -27,53 +22,50 @@ knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown
 knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
 ```
 
-***
 
-**Instructions:** Send one member of your group to the front of the class to select one random sample of $20$ candies. Calculate the proportion of these candies that are green colored. Once you've recorded this value, return the candies to the large bag and have a different group member select a new sample of $20$ candies. Repeat this once more (with a third group member) so that you and your group have collected a total of three samples and recorded the number of green candies in each of these samples. 
+# Part 1
 
-
-# 1.  What are the three different proportions of green candies that your group observed? 
-
-<br>
-<br>
-<br>
+Send one member of your group to the front of the class to select one random sample of $20$ candies. Calculate the proportion of these candies that are green colored. Once you've recorded this value, return the candies to the large bag and have a different group member select a new sample of $20$ candies. Repeat this once again with a third group member. Then answer question 1. 
 
 
+## 1.  What are the three different proportions of green candies that your group observed? What is a statistical reason why your professor wanted you to send a different person to collect each sample?  
 
-**Note:** If the company's claim that $15\%$ of the candies in any given package are green is true, the the number of green candies in a random sample of 20 candies follows a binomial distribution, specifically, $Bin(n=20,p=0.15)$. 
-
-# 2.  What are the expected value and standard deviation of the number of green candies in your sample? How many standard deviations above (or below) the expected value is the number of green candies you observed? (Hint: Use the reference sheet on common random variables to find the formulas for the expectation and variance of a binomial random variable.)
-
-
-<br>
-<br>
-<br>
+ $$\vspace{4cm}$$
 
 
-**Instructions:** Go draw three dots on the dot plot in front of the class. ELABORATE 
+# Part 2 
+Repeat everything you did once more so that you have another three observations of the proportion of green candies in a sample of size 20. Record these three new observations below. 
+
+ $$\vspace{4cm}$$
 
 
-# 3. Based on the dot plot at the front of the class, we can tell what a histogram of the $\hat{p}$, the proportion of green candies in random samples of size 20 looks like. Describe the histogram and from this plot, determine the probability of a sample of size $20$ containing $4$ green candies or fewer.
+**Note:** If the company's claim is true, that is $15\%$ of the candies in any given package have green colors, then the number of green candies in a random sample of 20 candies follows a binomial distribution, specifically, $Bin(n=20,p=0.15)$. 
 
-<br>
-<br>
-<br>
+## 2.  What are the expected value and standard deviation of the number of green candies in your sample? How many standard deviations above (or below) the expected value is the number of green candies you observed? (Hint: Use the reference sheet on common random variables to find the formulas for the expectation and variance of a binomial random variable.)
 
-
-**Instructions:** Open the binomial table of probabilities from our Moodle page. Discuss with your group how you think you can interpret the values in this table. (Hint: It's purpose is similar to that of a Z table for Normal probabilities.)
+$$\vspace{4cm}$$
 
 
-# 4. Use a binomial probability table to calculate the theoretical probability of of observing $4$ green candies or fewer in a random sample of size $20$. How close is this value to your answer in Problem 3? 
+# Part 3
 
-<br>
-<br>
-<br>
+Have a group member go to the chalkboard and plot each of your five observed counts on the dot plot.
 
 
-# 5. If we were to draw larger random samples of the candies, say $n=200$, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Using both the binomial probability table and the Normal (Z) table, find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. Are these values similar? Explain why or why not.  
+## 3. Based on the dot plot at the front of the class, we can tell what a histogram of the $\hat{p}$, the proportion of green candies in random samples of size 20 looks like. Describe the histogram and from this plot, determine the probability of a sample of size $20$ containing $4$ green candies or fewer.
 
-<br>
-<br>
-<br>
+$$\vspace{4cm}$$
+
+# Part 4 
+
+Open the binomial table of probabilities from our Moodle page. Discuss with your group how you think you can interpret the values in this table. (Hint: It's purpose is similar to that of a Z table for Normal probabilities.)
+
+
+## 4. Use a binomial probability table to calculate the theoretical probability of of observing $4$ green candies or fewer in a random sample of size $20$. How close is this value to your answer in Problem 3? 
+
+$$\vspace{4cm}$$
+
+## 5. If we were to draw larger random samples of the candies, then the Central Limit Theorem (more on this in Unit 3) tells us that the Normal distribution can approximate a binomial distribution. Use the binomial probability table to find the probability of observing $20\%$ or fewer green candies in a random sample of size $n=200$. (We will compare this to an approximation from a Normal distribution after Quiz 2.)
+
+$$\vspace{4cm}$$
 
 
