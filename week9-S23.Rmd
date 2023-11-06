@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 9"
+title: "Stat 11 Week 10"
 subtitle: "Review of Unit 2" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -26,30 +25,48 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 * Randomness and probability
 
 
-# Week 4 - Collecting data from experiments and observational studies
+# Collecting data from experiments and observational studies
 
 * Sample surveys 
+
+* Sampling bias
 
 * Experiments and observational studies 
 
 
-## Example 
-
-<span style="color:purple">What role does randomness play in both observational studies and experiments?</span>
+Q1) <span style="color:purple">What role does randomness play in both observational studies and experiments?</span>
 
 
-<span style="color:purple">What role does randomness play in experiments alone?</span>
+Q2) <span style="color:purple">What role does randomness play in experiments alone?</span>
 
 
 
-# Week 6 - From randomness to probability and the laws of probability
+# From randomness to probability and the laws of probability
 
-* Random variables 
+* Random variables - Bernoulli, binomial, and normal 
+
+  * Expectation, variance, and their properties 
+  
+  * Independent categorical variables 
 
 * Probability rules 
 
+  * Independent events
+  
+  * Disjoint events 
+  
+  * Conditional probabilities 
+  
+      * tree diagrams 
 
-## Example 
+        * A tree diagram is most helpful when a problem seems to be describing a conditional probability. 
+
+        * In a tree diagram, all branches extending from the same node must add to 1. 
+
+        * At end end of a tree diagram, all outcomes at the far right should be disjoint (i.e. it should not be possible for any of these outcomes to occur simultaneously) and their probabilities should also sum to 1. 
+
+
+## Example - Laws of probabilitiy 
 
 Suppose you are given four numbers in a bag that all add to 1.
 
@@ -62,14 +79,43 @@ The arbitrary numbers $a$, $b$, $c$, and $d$ are probabilities in the Venn diagr
 
 <span style="color:purple">If we swap the numbers in the bag for $a$, $b$, $c$, and $d$ at random, what is the probability that the events $A$ and $B$ are independent?</span> (Hint: Consider showing that $A$ and $B$ are independent if and only if $ac=bd$.)
 
-# Week 7 - Random variables and probability models
-
-* Expectation of random variables 
-
-* Independence 
 
 
-## Example - Week 7 In-class Worksheet 
+## Example - Binomial probabilities 
+
+Suppose we are considering a random event that can be modeled as a series of independent successes or failures. Let's say the probability of a success is $0.3$ and the probability of a failure is $0.7$. Find the following probabilities:
+
+1) The probability of observing three successes (in a row). 
+
+2) The probability of observing three successes out of $10$ trials. 
+
+
+## Example -  calculate $E(X)$, $Var(X)$, and $sd(X)$
+
+Suppose we have a discrete random variable $X$ with the following probability distribution:
+
+| x | 23 | -14 | 75 | 0 |
+|:--- |:--- |:--- |:--- |:--- |
+| Pr(X=x) | 0.20 | 0.10 | 0.15 | 0.50 |
+
+* $E(X) = \sum_{x}[x \cdot Pr(X=x)]$ 
+
+* $Var(X) = \sum_{x}\{[x-E(X)]^2 \cdot Pr(X=x)\}$ 
+
+* $sd(X) = \sqrt{Var(X)}$ 
+
+
+
+### Example - Tree diagram 
+
+A Diner employs three dishwashers. Al washes $40\%$ of the dishes and breaks only $1\%$ of those he handles. Betty and Chuck each wash $30\%$ of the dishes and Better breaks only $1\%$ of hers, but Chuck breaks $3\%$ of the dishes he washes. 
+
+You're eating at the diner one night and hear a dish break in the kitchen. What's the probability that Chuck is on the job? 
+
+
+
+
+<!-- ## Example - Week 7 In-class Worksheet 
 
 Recall how we collected a sample of the number of green jelly beans out of random samples of size $20$ beans. 
 
@@ -97,89 +143,22 @@ Using these results, let's go over the answers for questions 3 - 5 on the worksh
 
   > Solution to 5: Let $X=$ number of green candies and $p=0.15=$probability of observing a green candy. By the CLT, for large enough $n$, $X \approx N(np, np(1-p))$. In this problem, $np=200\cdot0.15=30$ and $np(1-p)=200(0.15)(1-0.15)=25.5$. We are asked for $Pr(X \leq 0.2\cdot 200)=Pr(X \leq 40)$ but we only have a table of Standard Normal probabilities. Thus we must find $Pr(Z \leq \frac{40-30}{\sqrt{25.5}})=Pr(Z \leq 1.98)=0.9761$. So, the probability we observe $20\%$ or fewer green candies out of a random sample of $n=200$ candies is approximately $97.61\%$, according to the Z table. 
   
-  > (Note, we could find this probability in R with the following code: pnorm(((.2\*200) - (200\*.15))/sqrt(200\*.15\*(1-.15)), 0, 1, lower.tail=TRUE). If you do this, you'll see that the answer really closely matches that of the following code: pbinom(.2\*200, trials=200, 0.15, lower.tail=TRUE), justifiying the use of the CLT.)
+  > (Note, we could find this probability in R with the following code: pnorm(((.2\*200) - (200\*.15))/sqrt(200\*.15\*(1-.15)), 0, 1, lower.tail=TRUE). If you do this, you'll see that the answer really closely matches that of the following code: pbinom(.2\*200, trials=200, 0.15, lower.tail=TRUE), justifying the use of the CLT.)
   
   > The Steps to solving this problem involve: 
 
   Step 1) Convert the quantile given in the problem into a quantile of the Standard Normal distribution. 
     
-  Step 2) Find the probability associated with this standardized quantile using the Table of Standard Normal probabilities. 
+  Step 2) Find the probability associated with this standardized quantile using the Table of Standard Normal probabilities. -->
 
-### Continuity correction 
 
-You were assigned to read a section that discusses the continuity correction technique. This is not something that you will be assessed on as I just want you to be familiar with the idea for your own edification. 
 
-***
-
-# Study tips 
-
-## Have you....
-
-1. Read the relevant sections of Chapters 10 - 15? 
-
-2. Completed IHW #5 - #10? 
-
-3. Checked your answers to GHW #3 with the solution key? 
-
-4. Taken notes on which topics or examples are most challenging to you? 
-
-***
   
-# Student Requested Examples 
-  
-## Binomial probabilities 
-
-Suppose we are considering a random event that can be modeled as a series of independent successes or failures. Let's say the probability of a success is $0.3$ and the probability of a failure is $0.7$. Find the following probabilities:
-
-1) The probability of observing three successes (in a row). 
-
-2) The probability of observing three successes out of $10$ trials. 
 
 
-### Note about showing your work 
+<!---### Note about showing your work 
 
-If you use a graphing calculator on your quiz, you may be able to compute Binomial and/or Normal probabilities directly. However, for any fill-in-the-blank or free-response questions, you will not get full credit if you simply write the answer without showing any work or explaining your reasoning. Therefore, it is not enough to know how to find these probabilities in a graphing calculate. It is better to understand and apply formulas from the formula sheet and/or to use approximations from a Binomial or Normal table of probabilities. 
-
-
-## Derive $E(X)$, $Var(X)$, and $sd(X)$, for a random variable $X$. 
-
-Suppose we have a discrete random variable $X$ with the following probability distribution:
-
-| x | 23 | -14 | 75 | 0 |
-|:--- |:--- |:--- |:--- |:--- |
-| Pr(X=x) | 0.20 | 0.10 | 0.15 | 0.50 |
-
-* $E(X) = \sum_{x}[x \cdot Pr(X=x)]$ 
-
-* $Var(X) = \sum_{x}\{[x-E(X)]^2 \cdot Pr(X=x)\}$ 
-
-* $sd(X) = \sqrt{Var(X)}$ 
-
-## Tree diagram 
-
-* According to your textbook, "it is a good idea to make a tree diagram any time you plan to use the General Multiplication Rule." [pg 408] 
-
-* In a tree diagram, all branches extending from the same node must add to 1. 
-
-* At end end of a tree diagram, all outcomes at the far right should be disjoint (i.e. it should not be possible for any of these outcomes to occur simultaneously) and their probabilities should also sum to 1. 
-
-### Example - Tree diagram 
-
-Suzy's Diner employs three dishwashers. Al washes $40\%$ of the dishes and breaks only $1\%$ of those he handles. Betty and Chuck each wash $30\%$ of the dishes and Better breaks only $1\%$ of hers, but Chuck breaks $3\%$ of the dishes he washes. 
-
-You're eating at the diner one night and hear a dish break in the kitchen. What's the probability that Chuck is on the job? 
-
-
-***
-
-# Looking ahead 
-
-Start to think about who you would like to work with on your final group project. (Groups must be of 3-4 people each.) Detailed instructions for the final project are posted on Moodle. 
-
-What kind of question do you want to use your statistics skills to answer? And, just as importantly, what kind of question can you answer in five weeks? 
-
-If you want to get a head start, you are welcome to attend the Stat Problem Solving Data Challenge hosted by Prof Suzy on Monday and Tuesday, March 20 and 21. (There will be pizza!)
-
+If you use a graphing calculator on your quiz, you may be able to compute Binomial and/or Normal probabilities directly. However, for any fill-in-the-blank or free-response questions, you will not get full credit if you simply write the answer without showing any work or explaining your reasoning. Therefore, it is not enough to know how to find these probabilities in a graphing calculate. It is better to understand and apply formulas from the formula sheet and/or to use approximations from a Binomial or Normal table of probabilities. --->
 
 
 
@@ -229,7 +208,7 @@ Therefore, $Pr(A \text{ and } B \text{ are independent}) = 8/24 = 1/3$.
 
 ![](./images/wk9-tree-example.png)
 
-## Follow-up question related to Example - Week 7 In-class Worksheet 
+<!-- ## Follow-up question related to Example - Week 7 In-class Worksheet 
 
 What if in question 5, I had instead asked you to find the lower $20\%$ quantile for the distribution of $X=$ the number of green candies, using the CLT? This still requires understanding how to convert between non-Standard Normal distributions and Standard Normal distributions. To answer this question, follow these steps:
 
@@ -237,4 +216,4 @@ Step 1) Find the lower $20\%$ quantile of a standard Normal distribution (using 
 
 Step 2) Un-standardize this quantile using the fact that (based on the CLT) we have $E(X) = np = 200(0.15) = 30$ and $Var(X) = np(1-p) = 200(0.15)(1-0.15) = 25.5$. 
 
-Now we have that the lower $20\%$ quantile for the number of green candies is $(-0.84)\sqrt{25.5} + 30 = 25.758.$
+Now we have that the lower $20\%$ quantile for the number of green candies is $(-0.84)\sqrt{25.5} + 30 = 25.758.$ --> 
