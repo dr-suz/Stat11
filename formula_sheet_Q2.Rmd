@@ -14,7 +14,6 @@ library('gridExtra')
 options(htmltools.dir.version = FALSE)
 ```
 
-# Sample Statistics 
 
 ## For a sample of data
 
@@ -50,6 +49,10 @@ $$s_x = \sum_{i=1}^{n}(x_i - \bar{x})^2, \quad s_y = \sum_{i=1}^{n}(y_i - \bar{y
 
 $$r = \frac{s_{xy}}{\sqrt{s_x s_y}}$$
 
+### Coefficient of determination/R-squared
+
+$$R = \left(\frac{s_{xy}}{\sqrt{s_{x}s_{y}}} \right)^2$$
+
 
 
 # Probability 
@@ -68,23 +71,22 @@ $$Pr(S)=1$$
 
 $$Pr(A^{C}) = 1 - Pr(A)$$
 
-### 4) For any events in the sample space of a random variable, say, $A$ and $B$, we compute the probability of event A or event B or both events A and B occurring with the  formula:
+### 4) For any disjoint events in the sample space of a random variable, say, $A$ and $B$, we have:
 
-$$Pr(A \text{ or } B) = Pr(A) + Pr(B) - Pr(A \text{ and } B)$$
+$$Pr(A \text{ or } B) = Pr(A) + Pr(B)$$
+**Generalized version of the addition rule:** For any events in the sample space, 
+$$Pr(A \text{ or } B) = Pr(A) + Pr(B) - Pr(A \cap B)$$
 
-### 5) If an event $A$ is independent of another event $B$, then the probability that both events occur is the product of the probabilities of the two individual events:
+### 5) If an event $A$ is independent of another event $B$, then:
 
-$$Pr(A\text{ and } B) = Pr(A)\times Pr(B).$$ 
+$$Pr(A\cap B) = Pr(A)\times Pr(B).$$ 
 
+**Generalized version of the multiplication rule:** For any events in the sample space, 
+$$Pr(A\cap B) = Pr(A)\times Pr(B \mid A).$$
 
 ## Definition of conditional probability
 
-$$Pr(B \mid A) = \frac{Pr(A \text{ and } B)}{Pr(A)}$$
-
-## General multiplication rule 
-
-For any random events $A$ and $B$ (that need not be independent),
-$$Pr(A \text{ and }B) = Pr(A) \times Pr(B \mid A).$$ 
+$$Pr(B \mid A) = \frac{Pr(A \cap B)}{Pr(A)}$$
 
 ## Law of total probability 
 
