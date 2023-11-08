@@ -123,6 +123,7 @@ Suppose the probability that a US resident has traveled to Canada is $0.18$ and 
 
 (c) not traveled to either country? 
 
+(d) Is whether or not someone has traveled to Mexico independent of them having traveled to Canada? 
 
 ### Example - Contingency table 
 
@@ -244,10 +245,23 @@ Therefore, $Pr(A \text{ and } B \text{ are independent}) = 8/24 = 1/3$. -->
 
 ### Venn diagram 
 
+![](./images/venn-ex.png)
+Let $C$ be the event someone has traveled to Canada and let $M$ be the event someone has traveled to Mexico. 
+
+(a) $Pr(C \cap M^C) = Pr(C) - Pr(C \cap M) = 0.18-0.04 = 0.14$ 
+
+(b) Interpreting this "either... or" as an "exclusive or" then we have $Pr(C \cap M^C) + Pr(M \cap C^{C}) = 0.14 + 0.01 = 0.15$. 
+
+(c) $Pr(C^{C} \cap M^{C}) = 1 - Pr(C \cup M) = 1 - [Pr(C) + Pr(M) - Pr(C \cap M)] = 1 - [0.18 + 0.09 - 0.04] = 0.77$
+
+(d) Since $Pr(C \cap M) = 0.04$ but $Pr(C)\times Pr(M) = 0.18 \cdot 0.09 = 0.0162$, these are not independent events
 
 
 ### Contingency table 
 
+![](./images/contin-tab1.png)
+
+![](./images/contin-tab2.png)
 
 
 <!-- ## Follow-up question related to Example - Week 7 In-class Worksheet 
