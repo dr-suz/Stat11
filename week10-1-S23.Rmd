@@ -27,26 +27,32 @@ Where $X=$ number of successes (green jelly beans) out of $n=20$ trials. The (po
 
 In class, we observed $24$ different values for $X$, i.e. $x_1, x_2, \dots, x_{24}$, which we plotted in the dot plot below: 
 
-![](./images/sec4dotplot.png){width=4in}
+![](./images/sec4dotplot.png){width=7in}
 
 
-<!--![](./images/sec5dotplot.png){width=4in}-->
+![](./images/sec5dotplot.png){width=7in}
 
-Out of our $xx$ samples, we observed $xx$ values for the sample proportion, $\hat{p}$. We didn't all observe the same number of green jelly beans, there was variability in the values of $\hat{p}$ among our samples. We call this the <span style="color:green">sampling variability of $\hat{p}$</span>. 
+Out of our $24$ samples, we observed $24$ values for the sample proportion, $\hat{p}$. We didn't all observe the same number of green jelly beans, there was variability in the values of $\hat{p}$ among our samples. We call this the <span style="color:green">sampling variability of $\hat{p}$</span>. 
 
-If we didn't know the true (population) proportion was $p=0.15$, we could have used this exercise to calculate $xx$ sample proportions to estimate the unknown model parameter, $p$.
+If we didn't know the true (population) proportion was $p=0.15$, we could have used this exercise to calculate $24$ sample proportions to estimate the unknown model parameter, $p$.
 $$\hat{p} = \frac{\text{number of successes}}{20}, \quad p=\begin{cases}\text{the true proportion of successes in the population} \\ \text{the true probability of a success}\end{cases}$$
-Although we visualized these $xx$ different values of $\hat{p}$ with a dot plot, we could have also used a histogram. 
+Although we visualized these $24$ different values of $\hat{p}$ with a dot plot, we could have also used a histogram. 
 
-![](./images/sec4hist.png){width=4in}
-
-
-<!--![](./images/sec5hist.png){width=4in}-->
-
-The histogram above represents the <span style="color:green">sampling distribution</span> of the sample proportion ($\hat{p}$). 
+![](./images/sec4hist.png){width=5in}
 
 
-<span style="color:red">If we could have repeated this exercise at least $80$ more times, we'd have a histogram that looks more symmetric and unimodal.</span> 
+![](./images/sec5hist.png){width=5in}
+
+
+We're going to combine all the data across both Stat 11 sections. The histogram for this is shown below and we now have $n=48$ observations of $\hat{p}$ represented. 
+
+
+![](./images/combinedhist.png){width=5in}
+
+The histogram above represents the <span style="color:green">sampling distribution</span> of the sample proportion $(\hat{p})$. 
+
+
+<!--<span style="color:red">If we could have repeated this exercise at least $80$ more times, we'd have a histogram that looks more symmetric and unimodal.</span> -->
 
 
 For now, we are going to focus on methods of statistical inference that use a Normal probability model to model the sampling distribution. Next class, we'll discuss the <span style="color:green">Central Limit Theorem</span> which helps illustrate the usefulness of the Normal probability model. Later on, we will venture into methods that use non-Normal probability models such as a Student's t-distribution or the Chi-square distribution.  
