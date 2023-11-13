@@ -3,9 +3,7 @@ title: "Stat 11 Week 11"
 subtitle: "Sampling Distributions and Confidence Intervals for Proportions" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
-output:
-  html_document:
-    df_print: paged
+output: html_document 
 header-includes:
 - \usepackage{amsmath}
 - \usepackage{amssymb}
@@ -32,11 +30,11 @@ In class, we observed $24$ different values for $X$, i.e. $x_1, x_2, \dots, x_{2
 
 ![](./images/sec5dotplot.png){width=7in}
 
-Out of our $24$ samples, we observed $24$ values for the sample proportion, $\hat{p}$. We didn't all observe the same number of green jelly beans, there was variability in the values of $\hat{p}$ among our samples. We call this the <span style="color:green">sampling variability of $\hat{p}$</span>. 
+Out of our $24$ samples, we observed $24$ values for the sample proportion, $\widehat{p}$. We didn't all observe the same number of green jelly beans, there was variability in the values of $\widehat{p}$ among our samples. We call this the <span style="color:green">sampling variability of $\widehat{p}$ </span>. 
 
 If we didn't know the true (population) proportion was $p=0.15$, we could have used this exercise to calculate $24$ sample proportions to estimate the unknown model parameter, $p$.
-$$\hat{p} = \frac{\text{number of successes}}{20}, \quad p=\begin{cases}\text{the true proportion of successes in the population} \\ \text{the true probability of a success}\end{cases}$$
-Although we visualized these $24$ different values of $\hat{p}$ with a dot plot, we could have also used a histogram. 
+$$\widehat{p} = \frac{\text{number of successes}}{20}, \quad p=\begin{cases}\text{the true proportion of successes in the population} \\ \text{the true probability of a success}\end{cases}$$
+Although we visualized these $24$ different values of $\widehat{p}$  with a dot plot, we could have also used a histogram. 
 
 ![](./images/sec4hist.png){width=5in}
 
@@ -44,12 +42,12 @@ Although we visualized these $24$ different values of $\hat{p}$ with a dot plot,
 ![](./images/sec5hist.png){width=5in}
 
 
-We're going to combine all the data across both Stat 11 sections. The histogram for this is shown below and we now have $n=48$ observations of $\hat{p}$ represented. 
+We're going to combine all the data across both Stat 11 sections. The histogram for this is shown below and we now have $n=48$ observations of $\widehat{p}$ represented. 
 
 
 ![](./images/combinedhist.png){width=5in}
 
-The histogram above represents the <span style="color:green">sampling distribution</span> of the sample proportion $(\hat{p})$. 
+The histogram above represents the <span style="color:green">sampling distribution</span> of the sample proportion $(\widehat{p})$. 
 
 
 <!--<span style="color:red">If we could have repeated this exercise at least $80$ more times, we'd have a histogram that looks more symmetric and unimodal.</span> -->
@@ -60,7 +58,7 @@ For now, we are going to focus on methods of statistical inference that use a No
 
 # 2. Confidence Interval for an Unknown Proportion
 
-When we are interested in finding a useful guess (or <span style="color:green">estimate</span>) for an unknown model parameter, such as the true probability of success, $p$, we can often use the Normal model to describe the sampling distribution of our estimate ($\hat{p}$ in this case). Once we know the sampling distribution (wich tells us all the possibilities and corresponding probabilities for different values of $\hat{p}$), we can use this to generate a <span style="color:green">confidence interval</span> for the parameter $p$. Thus rather than estimating $p$ with a single number, we can use the laws of probability to characterize which values of $p$ we think make the most sense based on the data. 
+When we are interested in finding a useful guess (or <span style="color:green">estimate</span>) for an unknown model parameter, such as the true probability of success, $p$, we can often use the Normal model to describe the sampling distribution of our estimate ($\widehat{p}$ in this case). Once we know the sampling distribution (wich tells us all the possibilities and corresponding probabilities for different values of $\widehat{p}$), we can use this to generate a <span style="color:green">confidence interval</span> for the parameter $p$. Thus rather than estimating $p$ with a single number, we can use the laws of probability to characterize which values of $p$ we think make the most sense based on the data. 
 
 ## Example - Contact Lenses 
 
@@ -82,7 +80,7 @@ The **conditions and assumptions** under which we can use a Normal model to gene
 **3.** The <span style="color:green">Success/Failure Condition</span>: we have at least $10$ failures and $10$ successes in our sample. 
 
 
-If these conditions seem to hold, then we can confidently model the sampling distribution of $\hat{p}$ with a Normal distribution with expectation $E(\hat{p}) = p$ and variance $Var(\hat{p}) =  \frac{p(1-p)}{n}$ (and standard deviation $sd(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}$).   
+If these conditions seem to hold, then we can confidently model the sampling distribution of $\widehat{p}$ with a Normal distribution with expectation $E(\widehat{p}) = p$ and variance $Var(\widehat{p}) =  \frac{p(1-p)}{n}$ (and standard deviation $sd(\widehat{p}) = \sqrt{\frac{p(1-p)}{n}}$).   
 
 
 ![](./images/wk10-normal-prop-curve.png){width=4in}
@@ -95,21 +93,20 @@ Suppose we obtain the necessary permissions to survey a random selection of $100
 
 **Step 3)** Assess the necessary assumptions and conditions and if they seem reasonable. 
 
-**Step 4)** Set your confidence level at $a\%$ and find an $a\%$ confidence interval for $p$. 
 
 ***
 
-The <span style="color:green">standard error</span> of our estimate, $\hat{p}$, is itself an estimate for the standard deviation of $\hat{p}$. In symbols, we write 
-$$SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{\hat{p}\hat{q}}{n}}.$$
-Once we have this estimate for the spread of the sampling distribution of $\hat{p}$, we can make an educated guess as to what are some reasonable values for the unknown parameter, $p$. 
+The <span style="color:green">standard error</span> of our estimate, $\widehat{p}$, is itself an estimate for the standard deviation of $\widehat{p}$. In symbols, we write 
+$$SE(\widehat{p}) = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} = \sqrt{\frac{\widehat{p}\widehat{q}}{n}}.$$
+Once we have this estimate for the spread of the sampling distribution of $\widehat{p}$, we can make an educated guess as to what are some reasonable values for the unknown parameter, $p$. 
 
 In general, we can find an $(a\times 100)\%$ confidence interval for reasonable values of $p$ with the formula
-$$\hat{p} \pm [z^*_{a} \times SE(\hat{p})],$$ 
+$$\widehat{p} \pm [z^*_{a} \times SE(\widehat{p})],$$ 
 where $z^*_{a}$ is called a <span style="color:green">critical value</span>, which is just a $\frac{1-a}{2}\%$ lower quantile of a standard Normal distribution:
  
 ![](./images/wk10-normal-crit-val.png){width=4in}
 
-Because we are using a Normal model to describe the sampling distribution of $\hat{p}$, this procedure is often called the <span style="color:green">procedure for a one-proportion z-interval</span>. 
+Because we are using a Normal model to describe the sampling distribution of $\widehat{p}$, this procedure is often called the <span style="color:green">procedure for a one-proportion z-interval</span>. 
 
 ## Example continued - Contact Lenses 
 
