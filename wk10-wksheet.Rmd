@@ -1,7 +1,7 @@
 ---
 title: "In-Class Worksheet"
 author: "STAT011 with Prof Suzy"
-date: 'Week 10: Experiments with Confidence Intervals'
+date: 'Week 11: Computing Confidence Intervals'
 output:
   pdf_document: default
   html_document: default
@@ -18,9 +18,11 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 # Instructions:
 
-There are five questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+There are five questions in this worksheet. You will work with your group members to answer each question. Begin working on Part 1 and then move on to Part 2 once instructed by your professor. 
 
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
+<!--Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+
+**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:-->
 
 
 # Part 1: Graduation 
