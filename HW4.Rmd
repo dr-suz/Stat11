@@ -1,7 +1,7 @@
 ---
-title: "Group Homework 4"
-author: "STAT011-S23"
-date: 'Due: 4/5/23'
+title: "Project Homework 4"
+author: "STAT 11 with Prof Suzy"
+date: 'Due: 11/27/23'
 output:
   html_document: default
   pdf_document: default
@@ -9,7 +9,7 @@ output:
 
 # Introduction and Purpose 
 
-The data set you will analyse in this homework gives some characteristics of $n=1414$ young female patients between the ages of $11$ to $26$ who came to clinics of Johns Hopkins Medical Institutions between $2006$ and $2008$ to begin the three-shot regimen of vaccinations with the anti-human papillomavirus (HPV) medication Gardasil. There are $10$ variables in this data set, $8$ of which are categorical.    
+The data set you will analyse in this homework gives some characteristics of $n=1413$ young female patients between the ages of $11$ to $26$ who came to clinics of Johns Hopkins Medical Institutions between $2006$ and $2008$ to begin the three-shot regimen of vaccinations with the anti-human papillomavirus (HPV) medication Gardasil. There are $10$ variables in this data set, $8$ of which are categorical.    
 
 The purpose of this assignment is to develop your ability to create confidence intervals and conduct hypotheses test with real data. Each question requires you to assess the necessary assumptions before reporting your result. The $10$ variable definitions are provided below for your reference. 
 
@@ -37,43 +37,32 @@ The purpose of this assignment is to develop your ability to create confidence i
 
 ## Excel 
 
-The skills necessary to complete this assignment in Excel are covered in the following seven videos:
-
-* Excel 2016 with Data Analysis Toolpak - Introduction to Common Procedures 
-
-* Excel 2016 with Data Analysis Toolpak - Descriptive Statistics and Confidence Intervals for a Mean 
-
-* Excel 2016 with **XLSTAT** Video - Hypothesis Tests and Confidence Intervals for a Proportion 
-
-* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for the Difference Between Proportions
-
-* Excel 2016 with **XLSTAT** Video - Hypothesis Test and Confidence Interval for One Mean
+The skills necessary to complete this assignment in Excel are covered in our class notes for Unit 3 titled [Confidence Intervals for Means](https://dr-suz.github.io/Stat11/week10-2-S23.html).
 
 
-## RStudio
+## R
 
-The skills necessary to complete this assignment in RStudio are covered in the following seven videos:
+The skills necessary to complete this assignment in R are covered in our class notes for Unit 3 titled [Confidence Intervals for Means](https://dr-suz.github.io/Stat11/week10-2-S23.html) or in the following videos:
 
-* RStudio Video - Probability Distributions
+* R Video - Statistical Inference - Inference on Proportions - One Sample 
 
-* RStudio Video - Statistical Inference - Inference on Proportions - One Sample  
+* R Video - Statistical Inference - Inference on Proportions - Two Samples
 
-* RStudio Video - Statistical Inference - Inference on Mean - One Sample
-
+* R Video - Statistical Inference - Inference on Mean - One Sample 
 
 # Instructions
 
 If you are analyzing this data in Excel you first need to [download the data set for HW 4](https://github.com/ProfSuzy/Stat11/blob/main/Data/gardasil_data.txt) from our Stat 11 Github Data page. Do this by right clicking on the link "View Raw" and save the link with the name `gardasil.csv`. 
 
-If you are analyzing this data in RStudio, you will import the data with the following command
+If you are analyzing this data in R, you will import the data with the following command
 ```{r, eval=FALSE}
 gardasil <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt",
+        "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/gardasil_data.txt",
         sep="\t")
 ```
 The data object is called `gardasil`. 
 
-Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#4.
+Once you have access to the data set, complete all parts of the five problems in this assignment. You are encouraged to work with your classmates on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or R and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Project Homework \#4.
 
 
 
@@ -94,7 +83,7 @@ Find a $90\%$ confidence interval for $p=$ the probability that an $11$ to $26$ 
 
 # Probleem 3 
 
-Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $0.1$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
+Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $1\%$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
 
 
 # Problem 4 
