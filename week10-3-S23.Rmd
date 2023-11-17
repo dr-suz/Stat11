@@ -1,6 +1,6 @@
 ---
 title: "Stat 11 Week 11"
-subtitle: "More on Critical Values and In-class Worksheet" 
+subtitle: "Confidence Intervals Worksheet" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
 output:

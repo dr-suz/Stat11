@@ -30,7 +30,7 @@ Last class, we used the fact that for a large enough sample (with at least $10$ 
 
 That is, under certain conditions, we have that 
 
-$$\bar{X} \sim N\left(\mu, \frac{\sigma}{n} \right).$$
+$$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}} \right).$$
 
 <center>![](./images/wk10-normal-CLT-curve.png){width=4in}</center>
 
@@ -46,8 +46,8 @@ The amazing part of this theorem is that the data ($x_1, x_2, \dots, x_n$) can c
 # 2. Confidence Interval for an Unknown Mean 
 
 In theory, we could find an $a\%$ confidence interval for the most plausible values of $\mu$ with the formula
-$$\bar{x} \pm \left[z^*_{a} \times \frac{\sigma}{\sqrt{n}}\right],$$ 
-where $z^*_{a}$ is, again, the $a\%$ lower quantile of a standard Normal distribution. In practice however, we are unlikely to know what the standard deviation of the population, $\sigma$, is and so, just as before, we must come up with an estimate for the spread of the sampling distribution of $\bar{x}$. 
+$$\bar{x}_{obs} \pm \left[z^*_{a} \times \frac{\sigma}{\sqrt{n}}\right],$$ 
+where $z^*_{a}$ is, again, the $a\%$ lower quantile of a standard Normal distribution. In practice however, we are unlikely to know what the standard deviation of the population, $\sigma$, is and so, just as before, we must come up with an estimate for the spread of the sampling distribution of $\bar{X}$. 
 
 
 Fortunately, there is another really useful theorem in statistics that tells us exactly what is the sampling distribution for a linear transformation of $\bar{X}$, and this transformation is a function of the <span style="color:green">standard error</span> $SE\left(\bar{X}\right)$. Once again, the standard error is itself an estimate for the standard deviation of the sampling distribution for $\bar{X}$.
@@ -55,7 +55,7 @@ Fortunately, there is another really useful theorem in statistics that tells us 
 In practice, we find an $(a\times 100)\%$ confidence interval for the most plausible values of $\mu$ with the formula
 
 
-$$\bar{x} \pm \left[t^*_{a} \times SE(\bar{x})\right],\quad (*)$$
+$$\bar{x}_{obs} \pm \left[t^*_{a} \times SE(\bar{x})\right],\quad (*)$$
 
 where 
 $$SE(\bar{x}) = \sqrt{\frac{s^2}{n}}$$

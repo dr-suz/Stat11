@@ -96,12 +96,12 @@ Suppose we obtain the necessary permissions to survey a random selection of $100
 
 ***
 
-The <span style="color:green">standard error</span> of our estimate, $\widehat{p}$, is itself an estimate for the standard deviation of $\widehat{p}$. In symbols, we write 
-$$SE(\widehat{p}) = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}} = \sqrt{\frac{\widehat{p}\widehat{q}}{n}}.$$
+The <span style="color:green">standard error</span> of our estimate, $\widehat{p}$, is itself an estimate for the standard deviation of the sampling distribution of $\widehat{p}$. In symbols, we write 
+$$SE(\widehat{p}) = \sqrt{\frac{\widehat{p}_{obs}(1-\widehat{p}_{obs})}{n}}.$$
 Once we have this estimate for the spread of the sampling distribution of $\widehat{p}$, we can make an educated guess as to what are some reasonable values for the unknown parameter, $p$. 
 
 In general, we can find an $(a\times 100)\%$ confidence interval for reasonable values of $p$ with the formula
-$$\widehat{p} \pm [z^*_{a} \times SE(\widehat{p})],$$ 
+$$\widehat{p}_{obs} \pm [z^*_{a} \times SE(\widehat{p})],$$ 
 where $z^*_{a}$ is called a <span style="color:green">critical value</span>, which is just a $\frac{1-a}{2}\%$ lower quantile of a standard Normal distribution:
  
 ![](./images/wk10-normal-crit-val.png){width=4in}
