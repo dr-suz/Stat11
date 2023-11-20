@@ -12,7 +12,7 @@
 <meta name="author" content="Prof. Suzy Thornton" />
 
 
-<title>Stat 11 Week 11</title>
+<title>Stat 11 Week 12</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1620,17 +1620,16 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Stat 11 Week 11</h1>
-<h3 class="subtitle">Hypothesis Tests</h3>
+<h1 class="title toc-ignore">Stat 11 Week 12</h1>
+<h3 class="subtitle">One Sample Hypothesis Tests</h3>
 <h4 class="author">Prof. Suzy Thornton</h4>
-<h4 class="date">Spring 2023</h4>
 
 </div>
 
 
 <div id="introducing-hypothesis-tests" class="section level1">
 <h1>1. Introducing Hypothesis Tests</h1>
-<p>There is a new <a href="https://profsuzy.github.io/Stat11/Cheat-sheet-5.html">reference
+<p>There is a new <a href="https://dr-suz.github.io/Stat11/Cheat-sheet-5.html">reference
 sheet for hypothesis tests</a> uploaded on Moodle. Please take a look
 over this document as you read along with the assigned chapters for this
 week.</p>
@@ -1649,7 +1648,7 @@ population means but, unlike in CIs, we actually have the standard
 deviation (and don’t need to use the standard error) for tests of
 population proportions.</p></li>
 <li><p>The output of a hypothesis test is called a <span class="math inline">\(p-\)</span>value. This is a conditional
-probability, the probability of the <span class="math inline">\(\hat{p}\)</span> or <span class="math inline">\(\bar{x}\)</span> value from you data or something
+probability, the probability of the <span class="math inline">\(\widehat{p}\)</span> or <span class="math inline">\(\bar{x}\)</span> value from you data or something
 even more rare occurring based on the sampling distribution of your
 estimator conditioned upon the assumption that <span class="math inline">\(H_0\)</span> is true and you actually know the
 exact sampling distribution.</p></li>
@@ -1658,29 +1657,28 @@ exact sampling distribution.</p></li>
 <div id="one-proportion-z-test" class="section level1">
 <h1>2. One proportion Z test</h1>
 <p>Recall that for large enough sample sizes, the sampling distribution
-of <span class="math inline">\(\hat{p}\)</span> follows a Normal
+of <span class="math inline">\(\widehat{p}\)</span> follows a Normal
 distribution with mean <span class="math inline">\(p\)</span> and
 variance <span class="math inline">\(\frac{p(1-p)}{n}\)</span>:</p>
 <p>When we wanted to find a CI for the center of this sampling
 distribution, <span class="math inline">\(p\)</span>, we had to estimate
-the sampling variance using the standard error of <span class="math inline">\(\hat{p}\)</span>: <span class="math display">\[SE(\hat{p}) =
-\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.\]</span></p>
+the sampling variance using the standard error of <span class="math inline">\(\widehat{p}\)</span>: <span class="math display">\[SE(\widehat{p}) =
+\sqrt{\frac{\widehat{p}_{obs}(1-\widehat{p}_{obs})}{n}}.\]</span></p>
 <p>If we are conducting a hypothesis test for a particular value of
 <span class="math inline">\(p\)</span> however, then the null
 hypothesis</p>
 <p><span class="math display">\[H_0: p = p_0\]</span> specifies not only
-the mean of the sampling distribution of <span class="math inline">\(\hat{p}\)</span>, but also the variance!
+the mean of the sampling distribution of <span class="math inline">\(\widehat{p}\)</span>, but also the variance!
 Regardless of the direction of the alternative hypothesis, the p-value
 for a particular hypothesis test is always calculated based upon the
 assumption that the value of the parameter in <span class="math inline">\(H_0\)</span> is actually correct. Once we have
 defined <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span>, we must calculate the test statistic
 for a one proportion Z test:</p>
-<p><span class="math display">\[T.S. = \frac{\hat{p} -
+<p><span class="math display">\[T.S. = \frac{\widehat{p} -
 p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}.\]</span> If <span class="math inline">\(H_0\)</span> is correct then the center of the
-sampling distribution of <span class="math inline">\(\hat{p}\)</span> is
-<span class="math inline">\(p_0\)</span> and the variance is <span class="math inline">\(\frac{p_0(1-p_0)}{n}\)</span>. In this case, the
+sampling distribution of <span class="math inline">\(\widehat{p}\)</span> is <span class="math inline">\(p_0\)</span> and the variance is <span class="math inline">\(\frac{p_0(1-p_0)}{n}\)</span>. In this case, the
 test statistic above is just a standardized version of the Normal random
-variable <span class="math inline">\(\hat{p}\)</span> and therefore
+variable <span class="math inline">\(\widehat{p}\)</span> and therefore
 <span class="math inline">\(T.S. \sim N(0,1)\)</span>!</p>
 <p>Now, we take note of the direction of <span class="math inline">\(H_A\)</span>, say for example <span class="math inline">\(H_A: p &lt; p_0\)</span>, and compute the p-value
 associated with our observed test statistic by finding <span class="math display">\[Pr\left(Z &lt; T.S._{obs} \right).\]</span> If
@@ -1701,7 +1699,7 @@ claim that Peloton makes in a 2023 commercial that <span class="math inline">\(9
 are still actively using it to work out.</p>
 <p><br></p>
 <p>Based on a sample of size <span class="math inline">\(n=200\)</span>,
-we observe <span class="math inline">\(\hat{p}_{obs} =
+we observe <span class="math inline">\(\widehat{p}_{obs} =
 \frac{179}{200}\)</span> and want to test <span class="math display">\[H_0: p = 0.92 \quad \text{vs} \quad H_A: p &lt;
 0.92.\]</span> The value we observe for the test statistic is: <span class="math inline">\(T.S. = \frac{\frac{179}{200} -
 0.92}{\sqrt{\frac{0.92(1-0.92)}{200}}}= -1.303\)</span>. We can now
@@ -1714,7 +1712,7 @@ pnorm(obs_test_stat, 0, 1, lower.tail=TRUE)</code></pre>
 </div>
 <div id="solve-from-z-table" class="section level3">
 <h3>Solve from Z-table</h3>
-<p>We will do this in class together using the <a href="https://profsuzy.github.io/Stat11/Standard-Normal-Ztable.pdf">Z-table
+<p>We will do this in class together using the <a href="https://dr-suz.github.io/Stat11/Standard-Normal-Ztable.pdf">Z-table
 of Normal probabilities</a>.</p>
 </div>
 </div>

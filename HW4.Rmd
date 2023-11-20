@@ -3,8 +3,8 @@ title: "Project Homework 4"
 author: "STAT 11 with Prof Suzy"
 date: 'Due: 11/27/23'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
@@ -81,9 +81,9 @@ Consider the mean age of $11$ to $26$ year old female patients who visited the c
 Find a $90\%$ confidence interval for $p=$ the probability that an $11$ to $26$ year old female will complete all three required shots. Interpret this interval within the context of the problem. 
 
 
-# Probleem 3 
+# Problem 3 
 
-Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a non-white patient completes all three shots to within a margin of error of $1\%$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
+Determine how many **more** patients we would need to survey in order to find a $95\%$ confidence interval for the probability that a patient completes all three shots to within a margin of error of $1\%$? (Hint: First, figure out how many of the patients in this sample have completed all three shots. Then, continue to solve the sample size estimation problem.)
 
 
 # Problem 4 
