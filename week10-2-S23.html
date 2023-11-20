@@ -1633,10 +1633,10 @@ display: none;
 least <span class="math inline">\(10\)</span> successes and at least
 <span class="math inline">\(10\)</span> failures, etc.), the histogram
 of the sampling distribution of <span class="math inline">\(\widehat{p}\)</span> becomes symmetric and
-unimodal and in fact can be approximated by a <span class="math inline">\(N\left(p, \frac{p(1-p)}{n}\right)\)</span> density
-curve. This is actually a result of an incredibly influential theorem in
-statistics called the <span style="color:green">Central Limit Theorem
-(CLT)</span>.</p>
+unimodal and in fact can be approximated by a <span class="math inline">\(N\left(p, \sqrt{\frac{p(1-p)}{n}}\right)\)</span>
+density curve. This is actually a result of an incredibly influential
+theorem in statistics called the <span style="color:green">Central Limit
+Theorem (CLT)</span>.</p>
 <blockquote>
 <p>If we have <span class="math inline">\(n\)</span> independent random
 variables, <span class="math inline">\(X_1, X_2, \dots, X_n\)</span>,
@@ -1662,7 +1662,7 @@ probability distribution… including the <span class="math inline">\(Binomial(n
 <div id="confidence-interval-for-an-unknown-mean" class="section level1">
 <h1>2. Confidence Interval for an Unknown Mean</h1>
 <p>In theory, we could find an <span class="math inline">\(a\%\)</span>
-confidence interval for the most plausible values of <span class="math inline">\(\mu\)</span> with the formula <span class="math display">\[\bar{x} \pm \left[z^*_{a} \times
+confidence interval for the most plausible values of <span class="math inline">\(\mu\)</span> with the formula <span class="math display">\[\bar{x}_{obs} \pm \left[z^*_{a} \times
 \frac{\sigma}{\sqrt{n}}\right],\]</span> where <span class="math inline">\(z^*_{a}\)</span> is, again, the <span class="math inline">\(a\%\)</span> lower quantile of a standard Normal
 distribution. In practice however, we are unlikely to know what the
 standard deviation of the population, <span class="math inline">\(\sigma\)</span>, is and so, just as before, we
@@ -1678,7 +1678,7 @@ sampling distribution for <span class="math inline">\(\bar{X}\)</span>.</p>
 <p>In practice, we find an <span class="math inline">\((a\times
 100)\%\)</span> confidence interval for the most plausible values of
 <span class="math inline">\(\mu\)</span> with the formula</p>
-<p><span class="math display">\[\bar{x} \pm \left[t^*_{a} \times
+<p><span class="math display">\[\bar{x}_{obs} \pm \left[t^*_{a} \times
 SE(\bar{x})\right],\quad (*)\]</span></p>
 <p>where <span class="math display">\[SE(\bar{x}) =
 \sqrt{\frac{s^2}{n}}\]</span> and <span class="math inline">\(t^*_{a}\)</span> is a critical value representing

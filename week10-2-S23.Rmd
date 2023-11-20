@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # 1. Central Limit Theorem 
 
-Last class, we used the fact that for a large enough sample (with at least $10$ successes and at least $10$ failures, etc.), the histogram of the sampling distribution of $\widehat{p}$ becomes symmetric and unimodal and in fact can be approximated by a $N\left(p, \frac{p(1-p)}{n}\right)$ density curve. This is actually a result of an incredibly influential theorem in statistics called the <span style="color:green">Central Limit Theorem (CLT)</span>. 
+Last class, we used the fact that for a large enough sample (with at least $10$ successes and at least $10$ failures, etc.), the histogram of the sampling distribution of $\widehat{p}$ becomes symmetric and unimodal and in fact can be approximated by a $N\left(p, \sqrt{\frac{p(1-p)}{n}}\right)$ density curve. This is actually a result of an incredibly influential theorem in statistics called the <span style="color:green">Central Limit Theorem (CLT)</span>. 
 
 
 > If we have $n$ independent random variables, $X_1, X_2, \dots, X_n$, that all follow the same probability distribution with expectation $\mu$ and variance $\sigma^2$, then (almost always) the sampling distribution of the sample mean, $\bar{X}$ follows a Normal distribution with expectation $\mu$ and variance $\frac{\sigma^2}{n}$.
