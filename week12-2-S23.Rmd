@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 12"
+title: "Stat 11 Week X"
 subtitle: "Examples of statistical inference" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:

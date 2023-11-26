@@ -12,7 +12,7 @@
 <meta name="author" content="Prof. Suzy Thornton" />
 
 
-<title>Stat 11 Week 12</title>
+<title>Stat 11 Week 13</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1620,21 +1620,15 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Stat 11 Week 12</h1>
+<h1 class="title toc-ignore">Stat 11 Week 13</h1>
 <h3 class="subtitle">Comparing Groups</h3>
 <h4 class="author">Prof. Suzy Thornton</h4>
-<h4 class="date">Spring 2023</h4>
 
 </div>
 
 
-<div id="finishing-up-last-weeks-worksheet" class="section level1">
-<h1>1. Finishing up last week’s worksheet</h1>
-<p>Today, we will cover the <a href="https://profsuzy.github.io/Stat11/wk11-wksheet-solns.html">solutions
-for Part 2 of last week’s worksheet</a>.</p>
-</div>
 <div id="comparing-groups-difference-between-proportions" class="section level1">
-<h1>2. Comparing Groups: Difference between proportions</h1>
+<h1>1. Comparing Groups: Difference between proportions</h1>
 <p>Under rather general conditions, the sampling distribution of the
 difference between two independent proportions is a Normal distribution
 with expectation, <span class="math display">\[E(\hat{p}_1 - \hat{p}_2)
@@ -1673,9 +1667,30 @@ of a <span class="math inline">\(N(0,1)\)</span> distribution.</p>
 0}{SE\left(\hat{p}_1 - \hat{p}_2 \right)} \stackrel{H_0}{\sim}
 N(0,1)\]</span></p>
 </div>
+<div id="example-hypothesis-test-for-a-difference-in-proportions" class="section level2">
+<h2>Example: Hypothesis test for a difference in proportions</h2>
+<p>Are people who work for non-profits generally more satisfied with
+their jobs compared to those who work at for-profit companies?</p>
+<p>Separate random samples were collected by a polling agency to
+investigate the difference. Data collected from <span class="math inline">\(422\)</span> employees at non-profit organizations
+revealed. that <span class="math inline">\(377\)</span> of them were
+“highly satisfied”. From the for-profit companies, <span class="math inline">\(431\)</span> out of <span class="math inline">\(518\)</span> employees reported the same level of
+satisfaction.</p>
+<p><strong>Step 1)</strong> Identify and define the population parameter
+and choose your significance level.</p>
+<p><strong>Step 2)</strong> State the null and alternative
+hypotheses.</p>
+<p><strong>Step 3)</strong> Assess the required assumptions and
+conditions.</p>
+<p><strong>Step 4)</strong> Calculate the test statistic and plot
+it.</p>
+<p><strong>Step 5)</strong> Shade the area under the curve that
+corresponds to your p-value and then calculate it.</p>
+<p><br></p>
+</div>
 </div>
 <div id="comparing-groups-difference-between-two-means" class="section level1">
-<h1>3. Comparing Groups: Difference between two means</h1>
+<h1>2. Comparing Groups: Difference between two means</h1>
 <p>Under rather general conditions, the sampling distribution of the
 difference between two independent means is a Normal distribution with
 expectation, <span class="math display">\[E(\bar{x}_1 - \bar{x}_2) =
@@ -1705,7 +1720,7 @@ the CLT to approximate the sampling distribution of <span class="math inline">\(
 <p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm \left[t^*_a
 \times SE(\bar{x}_1 - \bar{x}_2)  \right],\]</span> where <span class="math inline">\(t^*_a\)</span> is again, the <span class="math inline">\(\left(\frac{1-a}{2}\right)^{th}\)</span> lower
 quantile of a Student’s t-distribution, but the degrees of freedom are
-difficulty to calculate, so we typically let computers do this part.</p>
+difficult to calculate, so we typically let computers do this part.</p>
 </div>
 <div id="two-sample-independent-t-test" class="section level2">
 <h2>Two-sample independent t-test</h2>
@@ -1726,16 +1741,137 @@ justifiable.)</p>
 s_{pool}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}},\]</span> where <span class="math inline">\(s_{pool} = \sqrt{\frac{(n_1-1)s_1^2 +
 (n_2-1)s_2^2}{(n_1-1) + (n_2-2)}}.\)</span></p>
 </div>
+<div id="example-confidence-interval-for-a-difference-in-means" class="section level2">
+<h2>Example: Confidence interval for a difference in means</h2>
+<p>On average, how much more money do consumers spend at Target compared
+to Walmart?</p>
+<p>Suppose researchers collected a systematic sample from <span class="math inline">\(85\)</span> Walmart customers and <span class="math inline">\(80\)</span> Target customers by asking them for
+their purchase amount as they left the stores. The data they collected
+is summarized in the table below. Suppose a computer already calculated
+the degrees of freedom to be <span class="math inline">\(162.75\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Walmart</th>
+<th align="left">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\bar{x}\)</span></td>
+<td align="left"><span class="math inline">\(\$45\)</span></td>
+<td align="left"><span class="math inline">\(\$53\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">s</td>
+<td align="left"><span class="math inline">\(\$21\)</span></td>
+<td align="left"><span class="math inline">\(\$19\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 1)</strong> Identify and define the population parameter
+and choose your confidence level.</p>
+<p><strong>Step 2)</strong> Calculate the sample estimate for the
+population parameter.</p>
+<p><strong>Step 3)</strong> Assess the required assumptions and
+conditions.</p>
+<p><strong>Step 4)</strong> Find the critical value corresponding to
+your confidence level.</p>
+<p><strong>Step 5)</strong> Calculate the standard error of your sample
+estimate.</p>
+<p><strong>Step 6)</strong> Calculate the lower and upper bounds of your
+confidence interval.</p>
+<p><br></p>
 </div>
-<div id="looking-ahead" class="section level1">
-<h1>4. Looking ahead</h1>
-<p>Next class, we will discuss how to conduct inference for the
-difference of paired sample means. That is, we will consider confidence
-intervals and hypothesis tests for <span class="math inline">\((\mu_1 -
+</div>
+<div id="comparing-groups-difference-between-two-paired-means" class="section level1">
+<h1>3. Comparing groups: Difference between two paired means</h1>
+<p>Now we will discuss how to conduct inference for the difference of
+paired sample means. That is, we will consider confidence intervals and
+hypothesis tests for <span class="math inline">\((\mu_1 -
 \mu_2)\)</span> when there is a strong relationship between the two
 populations sampled.</p>
 <p>Spoiler alert: This special case actually just simplifies to a
 one-sample t-test for a mean!</p>
+<p>For data with paired numeric variables, we will create a new variable
+representing their difference and then conduct inference on the single
+variable that represents this differenced data. The sample size in these
+problems is actually the number of pairs or differences.</p>
+<p><span class="math display">\[SE(\bar{d}) =
+\sqrt{\frac{s_d^2}{n}}\]</span></p>
+<div id="assumptions-and-conditions-2" class="section level2">
+<h2>Assumptions and conditions</h2>
+<ul>
+<li><p>Paired assumption</p>
+<ul>
+<li><p>The two samples are strongly dependent in a paired manner.
+Specifically, each data point from one sample has a corresponding paired
+data point in the other sample. This typically is the case when our data
+represent before and after measurements on the same observational unit.
+Other examples include:</p></li>
+<li><p>the IQ scores of twins,</p></li>
+<li><p>reaction times with dominant and non-dominant hands,</p></li>
+<li><p>happiness levels of married couples.</p></li>
+</ul></li>
+<li><p>Independence assumption</p>
+<ul>
+<li>Each observed difference (between a pair of data points) is
+independent of the other differences</li>
+</ul></li>
+<li><p>Randomization condition</p></li>
+<li><p>Nearly Normal Condition or the number of pairs is large enough
+for the CLT to approximate the sampling distribution of <span class="math inline">\(\bar{x}_1\)</span> and <span class="math inline">\(\bar{x}_2\)</span>.</p></li>
+</ul>
+</div>
+<div id="paired-t-interval" class="section level2">
+<h2>Paired t-interval</h2>
+<p><span class="math display">\[\bar{d} \pm \left[t^*_{a, n-1} \times
+SE(\bar{d})  \right],\]</span> where <span class="math inline">\(t^*_a\)</span> is the <span class="math inline">\(\left(\frac{1-a}{2}\right)^{th}\)</span> lower
+quantile of a Student’s t-distribution with <span class="math inline">\((n-1)\)</span> degrees of freedom.</p>
+</div>
+<div id="paired-t-test" class="section level2">
+<h2>Paired t-test</h2>
+<p>Let <span class="math inline">\(\mu_d = \mu_1 - \mu_2\)</span> be the
+unknown true difference in the means of two dependent populations.</p>
+<p><span class="math display">\[H_0: \mu_d = \Delta_0\]</span></p>
+<p><span class="math display">\[T.S. = \frac{\bar{d} -
+\Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student&#39;s t dist
+with $(n-1)$ degrees of freedom}\]</span></p>
+</div>
+</div>
+<div id="in-summary" class="section level1">
+<h1>4. In summary</h1>
+<p>Data: <span class="math inline">\(\{x_1, x_2, \dots,
+x_{n_1}\}\)</span> and <span class="math inline">\(\{y_1, y_2 \dots,
+y_{n_2}\}\)</span></p>
+<p>Random variables: <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p>
+<ul>
+<li><p>Difference in population means <span class="math inline">\(\mu_1
+- \mu_2\)</span></p></li>
+<li><p>Difference in population proportions, <span class="math inline">\(p_1 - p_2\)</span></p></li>
+<li><p>Difference in paired means simplifies to inference for a single
+mean <span class="math inline">\(\mu\)</span></p></li>
+</ul>
+<div id="where-to-start" class="section level2">
+<h2>Where to start?</h2>
+<p>If you feel like you’re starting to get lost with all the different
+statistical methods we’ve explored in this unit, don’t fret! There are
+plenty of flow-chart-like guides to using different tests. For example,
+here is a <a href="https://statsandr.com/blog/what-statistical-test-should-i-do/">flow-chart
+created by a stats grad student</a>. You could also make your own! The
+starting point for using any of these kinds of guides is to first assess
+the data that you have (or want to have). This means you need to be able
+to answer questions like:</p>
+<ul>
+<li><p>What constitutes an observational unit?</p></li>
+<li><p>What are the variables and what are their types?</p></li>
+<li><p>Do you expect there to be any relationships among the variables
+given your knowledge of the subject?</p></li>
+<li><p>Is your sample random? If not, is your sample conceivably
+representative of any larger population?</p></li>
+</ul>
+</div>
 </div>
 
 

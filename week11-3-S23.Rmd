@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 11"
-subtitle: "Hypothesis Tests" 
+title: "Stat 11 Week X"
+subtitle: "Practice Hypothesis Tests" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -22,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # 1. Data Introduction 
 
-The [in-class worksheet for this week](https://profsuzy.github.io/Stat11/wk11-wksheet.html) is all about practicing with one-sample hypothesis tests!
+The [in-class worksheet for this week](https://dr-suz.github.io/Stat11/wk11-wksheet.html) is all about practicing with one-sample hypothesis tests!
 
 The image below shows the region corresponding to the p-value for different alternative hypotheses. Recall, p-values characterize how unusual or unexpected our observed value of the test statistic (or something even more extreme) is - given the assumption that $H_0$ is correct. What "more extreme" means depends on the direction of $H_A$.   
 
@@ -54,3 +53,28 @@ for tests of a mean, $\mu$.
 * <span style="color:green">Type II Error</span> is the probability that we incorrectly fail to reject $H_0$. The converse of a Type II error is called the <span style="color:green">power</span> of a hypothesis test.   
 
 ![](./images/wk11-t-pvals.png)
+
+***
+
+
+
+# 1. Data Introduction 
+
+The [in-class worksheet for Week 13](https://dr-suz.github.io/Stat11/wk13-wksheet.html) proposes ten different research questions. First you will familiarize yourself with each research question. Then you will work with your group mates to determine an analysis plan to answer each question.
+
+
+# 2. Analysis Goals  
+
+* Apply your understanding of the inference methods we've covered thus far including 
+
+  * One sample inference for a proportion or mean 
+  
+  * Two sample inference for proportions or means of independent groups 
+  
+  * Two paired samples inference for a mean  
+  
+* Recognize the important role of statistical analysis that does not involve any mathematical or computational calculations.  
+
+# 3. Summary of Results  
+
+* For various research questions, you can design a careful statistical inference procedure that can provide a relevant answer. 

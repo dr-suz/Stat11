@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 12"
+title: "Stat 11 Week 13"
 subtitle: "Comparing Groups" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -20,13 +19,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 
-# 1. Finishing up last week's worksheet 
-
-Today, we will cover the [solutions for Part 2 of last week's worksheet](https://profsuzy.github.io/Stat11/wk11-wksheet-solns.html). 
-
-
-
-# 2. Comparing Groups: Difference between proportions  
+# 1. Comparing Groups: Difference between proportions  
 
 Under rather general conditions, the sampling distribution of the difference between two independent proportions is a Normal distribution with expectation,
 $$E(\hat{p}_1 - \hat{p}_2) = p_1 - p_2$$ 
@@ -60,8 +53,27 @@ $$H_0: p_1 - p_2 = 0$$
 $$T.S. = \frac{(\hat{p}_1 - \hat{p}_2) - 0}{SE\left(\hat{p}_1 - \hat{p}_2 \right)} \stackrel{H_0}{\sim} N(0,1)$$
 
 
+## Example: Hypothesis test for a difference in proportions 
 
-# 3. Comparing Groups: Difference between two means
+Are people who work for non-profits generally more satisfied with their jobs compared to those who work at for-profit companies?  
+
+Separate random samples were collected by a polling agency to investigate the difference. Data collected from $422$ employees at non-profit organizations revealed. that $377$ of them were "highly satisfied". From the for-profit companies, $431$ out of $518$ employees reported the same level of satisfaction. 
+
+
+**Step 1)** Identify and define the population parameter and choose your significance level. 
+
+**Step 2)** State the null and alternative hypotheses.
+
+**Step 3)** Assess the required assumptions and conditions. 
+
+**Step 4)** Calculate the test statistic and plot it.
+
+**Step 5)** Shade the area under the curve that corresponds to your p-value and then calculate it.  
+
+<br>
+
+
+# 2. Comparing Groups: Difference between two means
 
 Under rather general conditions, the sampling distribution of the difference between two independent means is a Normal distribution with expectation,
 $$E(\bar{x}_1 - \bar{x}_2) = \mu_1 - \mu_2$$ 
@@ -104,11 +116,101 @@ In this special case, we use a pooled standard error for $(\bar{x}_1 - \bar{x}_2
 $$SE_{pool}(\bar{x}_1 - \bar{x}_2) = s_{pool}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}},$$
 where $s_{pool} = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{(n_1-1) + (n_2-2)}}.$
 
-# 4. Looking ahead 
+## Example: Confidence interval for a difference in means 
 
-Next class, we will discuss how to conduct inference for the difference of paired sample means. That is, we will consider confidence intervals and hypothesis tests for $(\mu_1 - \mu_2)$ when there is a strong relationship between the two populations sampled. 
+On average, how much more money do consumers spend at Target compared to Walmart? 
+
+Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. Suppose a computer already calculated the degrees of freedom to be $162.75$. 
+
+| | Walmart | Target |
+|:---|:---|:---|
+| $\bar{x}$ | $\$45$ | $\$53$ |
+| s | $\$21$ | $\$19$ | 
+
+
+**Step 1)** Identify and define the population parameter and choose your confidence level. 
+
+**Step 2)** Calculate the sample estimate for the population parameter. 
+
+**Step 3)** Assess the required assumptions and conditions. 
+
+**Step 4)** Find the critical value corresponding to your confidence level. 
+
+**Step 5)** Calculate the standard error of your sample estimate. 
+
+**Step 6)** Calculate the lower and upper bounds of your confidence interval. 
+
+<br>
+
+# 3. Comparing groups: Difference between two paired means  
+
+Now we will discuss how to conduct inference for the difference of paired sample means. That is, we will consider confidence intervals and hypothesis tests for $(\mu_1 - \mu_2)$ when there is a strong relationship between the two populations sampled. 
 
 Spoiler alert: This special case actually just simplifies to a one-sample t-test for a mean! 
+
+For data with paired numeric variables, we will create a new variable representing their difference and then conduct inference on the single variable that represents this differenced data. The sample size in these problems is actually the number of pairs or differences.   
+
+$$SE(\bar{d}) = \sqrt{\frac{s_d^2}{n}}$$
+
+## Assumptions and conditions 
+
+* Paired assumption 
+
+  * The two samples are strongly dependent in a paired manner. Specifically, each data point from one sample has a corresponding paired data point in the other sample. This typically is the case when our data represent before and after measurements on the same observational unit. Other examples include: 
+  
+  * the IQ scores of twins,
+  
+  * reaction times with dominant and non-dominant hands, 
+  
+  * happiness levels of married couples. 
+  
+* Independence assumption 
+
+  * Each observed difference (between a pair of data points) is independent of the other differences 
+
+* Randomization condition 
+
+* Nearly Normal Condition or the number of pairs is large enough for the CLT to approximate the sampling distribution of $\bar{x}_1$ and $\bar{x}_2$. 
+
+
+## Paired t-interval 
+
+$$\bar{d} \pm \left[t^*_{a, n-1} \times SE(\bar{d})  \right],$$
+where $t^*_a$ is the $\left(\frac{1-a}{2}\right)^{th}$ lower quantile of a Student's t-distribution with $(n-1)$ degrees of freedom.
+
+## Paired t-test 
+
+Let $\mu_d = \mu_1 - \mu_2$ be the unknown true difference in the means of two dependent populations. 
+
+$$H_0: \mu_d = \Delta_0$$ 
+
+$$T.S. = \frac{\bar{d} - \Delta_0}{SE(\bar{d})} \stackrel{H_0}{\sim} \text{Student's t dist with $(n-1)$ degrees of freedom}$$
+
+
+# 4. In summary 
+
+Data: $\{x_1, x_2, \dots, x_{n_1}\}$ and $\{y_1, y_2 \dots, y_{n_2}\}$
+
+Random variables: $X$ and $Y$ 
+
+* Difference in population means $\mu_1 - \mu_2$ 
+
+* Difference in population proportions, $p_1 - p_2$
+
+* Difference in paired means simplifies to inference for a single mean $\mu$ 
+
+## Where to start? 
+
+If you feel like you're starting to get lost with all the different statistical methods we've explored in this unit, don't fret! There are plenty of flow-chart-like guides to using different tests. For example, here is a [flow-chart created by a stats grad student](https://statsandr.com/blog/what-statistical-test-should-i-do/). You could also make your own! The starting point for using any of these kinds of guides is to first assess the data that you have (or want to have). This means you need to be able to answer questions like: 
+
+* What constitutes an observational unit? 
+
+* What are the variables and what are their types? 
+
+* Do you expect there to be any relationships among the variables given your knowledge of the subject? 
+
+* Is your sample random? If not, is your sample conceivably representative of any larger population? 
+
 
 
 
