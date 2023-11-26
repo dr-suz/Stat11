@@ -1,7 +1,7 @@
 ---
-title: "Group Homework 5"
-author: "STAT011-S23"
-date: 'Due: 4/28/23'
+title: "Project Homework 5"
+author: "STAT011 with Prof Suzy"
+date: 'Due: '
 output:
   pdf_document: default
   html_document: default
@@ -13,39 +13,39 @@ The data set you will analyse in this homework is your choice! You can choose fr
 
 # Instructions
 
-Choose which data set you would like to analyze. If you are using Excel, you can download the data sets from our [Stat 11 Github Data page](https://github.com/ProfSuzy/Stat11/tree/main/Data). Do this by right clicking on the link "View Raw" and save the link with the name `XXX.csv`. 
+Choose which data set you would like to analyze. If you are using Excel, you can download the data sets from our [Stat 11 Github Data page](https://github.com/dr-suz/Stat11/tree/main/Data). Do this by right clicking on the link "View Raw" and save the link with the name `XXX.csv`. 
 
 If you are using R, you can import any of our previous data sets with the following commands:
 ```{r, eval=FALSE}
 Burger_King_items <- read.csv(
-    "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/Burger_King_items.csv")
+    "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/Burger_King_items.csv")
 ```
 
 ```{r, eval=FALSE}
 EnvoyAir_flights <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/EnvoyAir_flights.txt",
+        "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/EnvoyAir_flights.txt",
         sep=",")
 ```
 
 ```{r, eval=FALSE}
 arthritis <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/arthritis.csv",
+        "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/arthritis.csv",
         sep=",")
 ```
 
 ```{r, eval=FALSE}
 titanic <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/titanic.csv",
+        "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/titanic.csv",
         sep=",")
 ```
 
 ```{r, eval=FALSE}
 gardasil <- read.delim(
-        "https://raw.githubusercontent.com/ProfSuzy/Stat11/main/Data/gardasil_data.txt",
+        "https://raw.githubusercontent.com/dr-suz/Stat11/main/Data/gardasil_data.txt",
         sep="\t")
 ```
 
-You are encouraged to work with your classmates (in particular, with your final project group mates) on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Group Homework \#5.
+You are encouraged to work with your classmates (in particular, with your final project group mates) on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Project Homework \#5.
 
 
 # Problem 1 
@@ -66,7 +66,7 @@ Choose a numeric and a categorical variable (these can be the same as the ones y
 
 # Problem 4 
 
-Define your population of interest and define a relevant proportion related to this population. Conduct a hypothesis test about this unknown proportion using the data. (Don't repeat Problem 5 from GHW \#4.) Make sure your answer includes: 
+Define your population of interest and define a relevant proportion related to this population. Conduct a hypothesis test about this unknown proportion using the data. (Don't repeat Problem 5 from PHW \#4.) Make sure your answer includes: 
 
 1) the definition of your parameter and your significance level; 
 
@@ -82,7 +82,7 @@ Define your population of interest and define a relevant proportion related to t
 
 # Problem 5 
 
-Define your population of interest and define a relevant population mean that you will estimate with a confidence interval. (Don't repeat Problem 1 from GHW \#4.) Make sure your answer includes: 
+Define your population of interest and define a relevant population mean that you will estimate with a confidence interval. (Don't repeat Problem 1 from PHW \#4.) Make sure your answer includes: 
 
 1) the definition of your parameter and your confidence level;
 
