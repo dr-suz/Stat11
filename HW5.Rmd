@@ -1,15 +1,15 @@
 ---
 title: "Project Homework 5"
 author: "STAT011 with Prof Suzy"
-date: 'Due: '
+date: 'Due by Tuesday, 12/5/23 11:59pm'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Introduction and Purpose 
 
-The data set you will analyse in this homework is your choice! You can choose from any of the previous data sets we've used in the first four group homework assignments. The purpose of this assignment is for you to practice using all the software analysis techniques you've learned this semester. (If you are doing Option B or C for your final project, this should help refresh you memory on all the different ways you can analyze your data.) This assignment will be graded for completion (do you have the required components) not correctness. 
+The purpose of this assignment is for you to practice using software for statistical inference and to practice assessing which of the chi-squared procedures to use for different problem settings. Problems 1 and 2 require you to analyse data of your choice from any of the previous data sets we've used in the first four PHW assignments. These first two problems will be graded for completion. Problems 3, 4, and 5 are all related to one another and do not require any data analysis. These problems will be graded for correctness. 
 
 # Instructions
 
@@ -45,26 +45,10 @@ gardasil <- read.delim(
         sep="\t")
 ```
 
-You are encouraged to work with your classmates (in particular, with your final project group mates) on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Project Homework \#5.
+You are encouraged to work with your classmates (in particular, with your final project group mates) on this assignment but you must hand in your own, unique write up of the solutions. In a Word document, clearly label each problem's solution. Most solutions will include graphics which can be copied from Excel or RStudio and pasted into your solution document. All solutions require a written component. When you are ready to submit your assignment, save the Word document as a PDF and upload it to the Moodle link for Project Hw \#5.
 
 
 # Problem 1 
-
-(a) Choose a numeric variable to describe. Create a histogram to accompany your description.  
-
-(b) Choose a categorical variable to describe. Create a table to accompany your description.  
-
-# Problem 2 
-
-Choose a numeric and a categorical variable (these can be the same as the ones you created in Problem 1). Describe any apparent relationships between these two variables and create bar charts to accompany your description.  
-
-# Problem 3 
-
-(a) Choose two numeric variables. Describe any apparent or suspected relationships between these two variables and create a scatterplot to accompany your description.
-
-(b) Determine if a linear regression model could appropriately describe the relationship between these numeric variables. 
-
-# Problem 4 
 
 Define your population of interest and define a relevant proportion related to this population. Conduct a hypothesis test about this unknown proportion using the data. (Don't repeat Problem 5 from PHW \#4.) Make sure your answer includes: 
 
@@ -80,7 +64,7 @@ Define your population of interest and define a relevant proportion related to t
 
 
 
-# Problem 5 
+# Problem 2
 
 Define your population of interest and define a relevant population mean that you will estimate with a confidence interval. (Don't repeat Problem 1 from PHW \#4.) Make sure your answer includes: 
 
@@ -95,5 +79,44 @@ Define your population of interest and define a relevant population mean that yo
 5) the standard error of your sample mean;
 
 6) the lower and upper bounds of your interval interpreted in context.
+
+*** 
+
+
+# Problem 3
+
+Assess whether or not the problems listed below deal with count data for a categorical variable. (Hint: There are four problems that do not deal with count data.)
+
+**Scenario 1.**  A brokerage firm wants to see whether the type of account a customer has (Silver, Gold, or Platinum) affects the type of trades that customer makes (in person, by phone, or on the Internet). It collects a random sample of trades made for its customers over the past year and performs a test.  
+
+**Scenario 2.** The brokerage firm from (1) also wants to know if the type of account affects the size of the account (in dollars). It performs a test to see if the mean size of the account is the same for the three account types. 
+
+**Scenario 3.** The academic research office at a large community college wants to see whether the distribution of courses chosen (Humanities, Social Science, or Science) is different for its residential and nonresidential students. It assembles last semester's data and performs a test.  
+
+**Scenario 4.** A medical researcher wants to know if blood cholesterol level is related to heart disease. She examines a database of  patients, testing whether the cholesterol level (in milligrams) is related to whether or not a person has heart disease.
+
+**Scenario 5.** Is the quality of a car affected by what day it was built? A car manufacturer examines a random sample of the warranty claims filed over the past two years to test whether defects are randomly distributed across days of the workweek.
+
+**Scenario 6.** A student wants to find out whether political leaning (liberal, moderate, or conservative) is related to choice of major. He surveys randomly chosen students and performs a test.
+
+**Scenario 7.** A sales representative who is on the road visiting clients thinks that, on average, he drives the same distance each day of the week. He keeps track of his mileage for several weeks and discovers that he averages  miles on Mondays,  miles on Tuesdays,  miles on Wednesdays,  miles on Thursdays, and  miles on Fridays. He wonders if this evidence contradicts his belief in a uniform distribution of miles across the days of the week. 
+
+**Scenario 8.** A study was performed examining epidurals as one factor that might inhibit successful breastfeeding of newborn babies. Suppose a broader study included several additional issues, including whether the mother drank alcohol, whether this was a first child, and whether the parents occasionally supplemented breastfeeding with bottled formula. 
+
+**Scenario 9.** Two different professors teach an introductory statistics course. The table shows the distribution of final grades they reported. We wonder whether one of these professors is an "easier" grader. 
+
+**Scenario 10.** A student studying the music preferences of her classmates wants to test her theory that men and women have different music preferences. For each respondent, she records their gender and what their favorite music genre is (hip hop, trap, rock, rap, folk, indie, other). 
+
+
+
+# Problem 4
+
+For the six scenarios in Problem 3 that do deal with count data, determine which chi-square test is appropriate for each. 
+
+
+
+# Problem 5
+
+State the null and alternative hypotheses for each of the scenarios in problem 4. Make sure you state the hypotheses both in symbols and in words.  
 
 
