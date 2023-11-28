@@ -117,6 +117,6 @@ For the six scenarios in Problem 3 that do deal with count data, determine which
 
 # Problem 5
 
-State the null and alternative hypotheses for each of the scenarios in problem 4. Make sure you state the hypotheses both in symbols and in words.  
+State the null and alternative hypotheses for each of the scenarios in problem 4. 
 
 
