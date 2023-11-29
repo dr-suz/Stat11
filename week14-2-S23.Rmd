@@ -1,5 +1,5 @@
 ---
-title: "Stat 11 Week X"
+title: "Stat 11 Week 13"
 subtitle: "Comparing Counts with Chi Square Procedures" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
