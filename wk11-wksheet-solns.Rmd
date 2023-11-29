@@ -18,13 +18,7 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 # Instructions:
 
-There are five questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
-
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
-
-
-\vspace{1cm}
-
+There are five questions in this worksheet. You will work with your group members to answer each question. 
 
 # Part 1: Proportions 
 
