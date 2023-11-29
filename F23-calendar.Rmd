@@ -64,7 +64,7 @@ In the calendar below **RCHW** corresponds to reading comprehension homework ass
 | 10 | Nov 6 | 2 | Unit 2 topics | **Quiz 2** |
 | 11 | Nov 13 | 3 |  Sampling distributions and confidence intervals for a proportion and for a mean |  **Final project proposal** <br> Part 5: Ch 16-17 (except 17.4) <br> RCHW 11+12 |
 | 12 | Nov 20 | 3 | Hypothesis tests about a proportion or a mean  | Part 5: Ch 18-19 <br> PHW 4   |
-| 13 | Nov 27 | 3 | Comparing grouped numeric data <br> Comparing grouped categorical data | Part 6: Ch 20-23 <br> PHW 5 <br> RCHW 13  |
+| 13 | Nov 27 | 3 | Comparing grouped numeric data <br> Comparing grouped categorical data | Part 6: Ch 20-22 <br> PHW 5 <br> RCHW 13  |
 | 14 | Dec 4 | 3 | Unit 3 topics  | RCHW 14+15 <br> **Quiz 3**  |
 | 15 | Dec 11 | 3 |  Ethical statistical practice |  **Final Project Presentations** |
 |  |  Dec 20  | 1-3 |  **Final Exam** |  |
