@@ -29,7 +29,7 @@ Suppose Darwin had surveyed and categorized the types of finches on (what is now
 
 * Chi-square goodness of fit 
 
-  * $H_0: p_{1} = p_{1,0}, p_{2} = p_{2,0}, p_{3} = p_{3,0}, \dots, p_{k} = p_{k,0}$
+  * $H_0: p_{1} = 0.56, p_{2} = 0.3, p_{3} = 0.07, p_{4}=0.07$, where $p_1$, $p_2$, $p_3$, $p_4$ are the proportions of each type of bird in the San Cristobal island.  
 
 
 ## Example: Jelly bean flavors 
@@ -38,7 +38,19 @@ Are all the flavors of jelly beans evenly distributed in the packages sold at a 
 
 * Chi-square test of homogeneity 
 
-  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{k}$
+  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{50}$, where each $p_j$, for $j=1,\dots,50$ corresponds to one of the $50$ different flavors of jelly beans. 
+  
+## Example: Race and ethinic composition of the USA 
+
+The US Census collects detailed race and ethnicity information about people living in different regions of the USA. Suppose we wish to know whether the racial and ethnic composition of people living in the USA is distributed the same across five different regions of the country (shown below).
+
+![](./images/usa-regions.png){height=200px}
+
+* Chi-square test of homogeneity 
+
+  * $H_0: p_{1,w} = p_{1,mw} = p_{1,sw} =  p_{1,s} = p_{1,ne};\text{ }p_{2,w} = p_{2,mw} = p_{2,sw} =  p_{2,s} = p_{2,ne};\text{ etc.}$ for each $p_{j,\cdot}$ corresponds to one of $j$ different categorizations of race and ethnicity. 
+  
+  * $H_0$: The distribution of the categorical variable race and ethnicity is the same across each of the five regions. 
 
 
 ## Example revisited: Titanic data 
@@ -48,36 +60,11 @@ For passengers of the Titanic, we have some natural categorical variables of int
 We have already looked into this question using tables and the mathematical definition of independent events but, it turns out there is another way for us to test whether or not survival was independent of a passenger's class. 
 
 
-* Chi-square test of independence 
+* Chi-square test for independence 
 
-  * $H_0:$ Categorical variable $X$ is independent of categorical variable $Y$. 
+  * $H_0:$ The categorical variable survival is independent of the categorical variable class. 
 
 # 2.  Performing Chi-square tests
-
-* Chi-square goodness of fit 
-
-  * $H_0: p_{1} = p_{1,0}, p_{2} = p_{2,0}, p_{3} = p_{3,0}, \dots, p_{k} = p_{k,0}$
-  
-  | Level | A | B | C | 
-  |---|---|---|---|
-  | Counts | 14 | 6 | 12 |
-
-* Chi-square test of homogeneity 
-
-  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{k}$
-  
-  | Level | A | B | C | 
-  |---|---|---|---|
-  | Counts | 10 | 9 | 12 |
-  
-* Chi-square test of independence 
-
-  * $H_0:$ Categorical variable $X$ is independent of categorical variable $Y$. 
-  
-  | Level varb 1/Level varb 2 | A | B | C | 
-  |---:|---|---|---| 
-  | **D**| 5 | 8 | 13 | 
-  | **E**| 14 | 7 | 7 | 
 
 ## Assumptions and conditions 
 
