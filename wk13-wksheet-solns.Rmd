@@ -1,7 +1,7 @@
 ---
-title: "In-Class Worksheet"
+title: "In-Class Worksheet - Solutions"
+subtitle: "Practicing Statistical Inference" 
 author: "STAT011 with Prof Suzy"
-date: 'Week 13: Reviewing Methods of Unit 3 - Solutions'
 output:
   html_document: default
   pdf_document: default
@@ -10,13 +10,8 @@ output:
 **Name:** _____________________________________
 
 <br>
-**Instructions:** There are 5 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+**Instructions:** There are 5 questions in this worksheet. The first four questions are solvable with hypothesis tests about one or two proportions or means. The last question asks you to consider when to use each of the chi-square tests for categorical variable. You will work with your group members to answer each question.
 
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
-
-<br>
-<br>
-<br>
 
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
@@ -26,54 +21,40 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 ```
 
 
-# Research questions 
+# Problem 1 
 
-1. One hundred insomnia patients are randomly selected for a clinical trial. Fifty are randomly assigned to a placebo and the other $50$ are given a mild sedative. Which subjects sleep more hours and how many more hours do they tend to sleep? 
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+  
+
+# Problem 2 
+  
+A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 
+
+  
+# Problem 3
+  
+The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
 
 
-Means, two sample independent, confidence interval, experiment. Change in sleep is due to the sedative and generalizable to larger population of insomnia patients.  
-\vspace{1cm}
+# Problem 4 
+  
+Suppose we purchase $n=6$ random bags of chips marked with a net weight of $35.4$ grams. We then carefully weighing the contents in each bag to find the following weight data (in grams):
+    
+```{r echo=TRUE}
+chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
+```
+  
+Is there evidence that the mean weight of these chip bags is less than advertised? 
 
-2. Health recommendations suggest walking $10,000$ steps per day. Suppose that you collect data from a sample of Fitbit users and you want to determine if they average more than $10,000$ steps per day. 
 
-Means, one sample, hypothesis test, observational study. $H_0: \mu = 10000$ vs $H_A: \mu > 10000$. If data is randomly selected then conclusions are generalizable to larger population of Fitbit users. There is nothing to randomly assign.   
-\vspace{1cm}
+# Problem 5   
 
-3. Are people who smoke tobacco cigarettes more likely to suffer from lung cancer than people who smoke marijuana cigarettes? 
+Which of the three chi-square tests — goodness-of-fit, homogeneity, or independence — would you use in each of the following situations?
 
-Proportions, two sample, hypothesis test, experiment (likely, not specified). $H_0: p_{tob} - p_{mj} = 0$ vs $H_A: p_{tob} - p_{mj} >0$. If data is randomly selected, then conclusions are generalizable to a larger population of tobacco or marijuana smokers. It is unethical to assign treatments so cause and effect conclusions can not be determined from this single study. 
-\vspace{1cm}
+* A restaurant manager wonders whether customers who dine on Friday nights have the same preferences among the four “chef’s special” entrees as those who dine on Saturday nights. One weekend he has the wait staff record which entrees were ordered each night. Assuming these customers to be typical of all weekend diners, he’ll compare the distributions of meals chosen Friday and Saturday.
 
-4. The manager of a company’s human resource department examines employee attendance records to investigate whether more than $20\%$ of employee sick days are taken on Fridays.
+* Company policy calls for parking spaces to be assigned to everyone at random, but you suspect that may not be so. There are three lots of equal size: lot A, next to the building; lot B, a bit farther away; and lot C, on the other side of the highway. You gather data about 120 managers to see how many were assigned parking in each lot.
 
-Proportions, one sample, hypothesis test, observational study (likely, not specified). $H_0: p = 0.2$ vs $H_A: p > 0.2$. If the manager randomly selects the sample of sick days, then the results are generalizable to the larger population of all sick days. There is nothing to randomly assign. 
-\vspace{1cm}
+* Is a student’s social life affected by where the student lives? A campus survey asked a random sample of students whether they lived in a dormitory, in off-campus housing, or at home, and whether they had been out on a date 0, 1–2, 3–4, or 5 or more times in the past two weeks.
 
-5.  An advocacy organization surveys $960$ Canadians to see how many report being born in another country. Similarly, $1250$ U.S. citizens are asked whether or not they were born in a foreign country. The researchers want to determine if the proportion of foreign born people is the same in the United States as in Canada. 
-
-Proportions, two sample independent, hypothesis test, observational study. $H_0: p_{C} - p_{US} = 0$ vs $H_A: p_{C} - p_{US} \neq 0$. If randomization is used in the collection of data from each population, then results are generalizable to the larger population of citizens of each country. There is nothing to randomly assign.  
-\vspace{1cm}
-
-6.  A group of college freshmen are asked about the quality of the university cafeteria. A year later, the same students are asked about the cafeteria quality again. Do student's opinions change during their time at school? 
-
-Means of numerically ranked preferences (depends on how the question is asked but if only yes/no then can't pair), two sample paired, hypothesis test, observational study. $H_0: \mu_{diff} = 0$ vs $H_A: \mu_{diff} \neq 0$. If randomization is used in the collection of the initial people surveyed, then results are generalizable to that particular class of students (arguably also to the population of all students at this college). If use of the cafeteria is not randomly assigned, then we can't say anything about whether or not the additional time at the college is what causes the change in opinion.     
-\vspace{1cm}
-
-7. Do cows tend to produce more milk if their handler speaks to them by name every day than if the handler does not speak to them by name? A farmer randomly assigned half of her cows to each group and then compared how much milk they produced after one month. 
-
-Means, two sample independent, hypothesis test, experiment. $H_0: \mu_{name} - \mu_{noname} = 0 $ vs $H_A: \mu_{name} - \mu_{noname} > 0$.  Causal, possibly generalizable. 
-\vspace{1cm}
-
-8. A recent survey investigated how much more likely American parents are to playing video games in their down-time compared to American adults who do not have children. 
-
-Proportions, two sample independent, confidence interval, observational study. Not causal, possible generalizable.   
-\vspace{1cm}
-
-9. A researcher is interested in studying whether Americans gained weight, on average, while in quarantine by virtue of the COVID-19 pandemic. She took a random sample of Americans and asked their weight before the pandemic and their weight after quarantine ended in mid-2021.
-
-Means, two sample paired, hypothesis test, observational study. $H_0: \mu_{pre} - \mu_{post} = 0$ vs $H_A: \mu_{pre} - \mu_{post} < 0$. Generalizable, not causal.  
-\vspace{1cm}
-
-10. Do male science teachers tend to receive higher salaries than female science teachers and, if so, how much higher are their salaries?  
-
-Means, two sample independent, confidence interval, observational study. Not causal, possibly generalizable. 
+  

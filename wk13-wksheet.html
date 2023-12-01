@@ -350,120 +350,76 @@ display: none;
 
 
 <h1 class="title toc-ignore">In-Class Worksheet</h1>
+<h3 class="subtitle">Practicing Statistical Inference</h3>
 <h4 class="author">STAT011 with Prof Suzy</h4>
-<h4 class="date">Week 13: Reviewing Methods of Unit 3</h4>
 
 </div>
 
 
 <p><br> <strong>Name:</strong> _____________________________________</p>
 <p><br> <strong>Instructions:</strong> There are 5 questions in this
-worksheet. You will work with your group members to answer each
-question. Before getting started, take a moment and reflect on ways in
-which you can show your assigned group members respect. You may also
-view this initial <a href="https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing">list
-of examples</a> that we will add to over the semester.</p>
-<p><strong>Briefly,</strong> in the space below, specify one way in
-which you will work to show your group members respect during today’s
-lesson:</p>
-<p><br> <br> <br></p>
-<div id="by-yourself-read-each-problem-setting-and-determine-if-the-problem-is-about-proportions-or-means." class="section level2">
-<h2>1. By yourself, read each problem setting and determine if the
-problem is about proportions or means.</h2>
-
+worksheet. The first four questions are solvable with hypothesis tests
+about one or two proportions or means. The last question asks you to
+consider when to use each of the chi-square tests for categorical
+variable. You will work with your group members to answer each
+question.</p>
+<div id="problem-1" class="section level1">
+<h1>Problem 1</h1>
+<p>The Centers for Disease Control and Prevention reports that <span class="math inline">\(9.3\%\)</span> of surveyed high school students
+reported in 2015 that they had smoked cigarettes in the past 30 days. A
+college has <span class="math inline">\(522\)</span> students in its
+freshman class. How likely is it that more than <span class="math inline">\(10\%\)</span> of them are smokers?</p>
 </div>
-<div id="on-your-own-guess-which-of-the-following-statistical-inference-techniques-is-most-relevant-for-each-problem." class="section level2">
-<h2>2. On your own, guess which of the following statistical inference
-techniques is most relevant for each problem.</h2>
-<p><strong>Statistical inference techniques</strong></p>
-<p>A. One-sample t-procedures for a mean.</p>
-<p>B. Two-sample t-procedures for comparing means.</p>
-<p>C. Paired-sample t-procedures.</p>
-<p>D. One-sample z-procedures for a proportion.</p>
-<p>E. Two-sample z-procedures for comparing proportions.</p>
+<div id="problem-2" class="section level1">
+<h1>Problem 2</h1>
+<p>A national vital statistics report indicated that about <span class="math inline">\(3\%\)</span> of all births produced twins. Is the
+rate of twin births the same among very young mothers? Data from a large
+city hospital found that only <span class="math inline">\(7\)</span>
+sets of twins were born to <span class="math inline">\(469\)</span>
+teenage girls.</p>
 </div>
-<div id="with-your-group-go-over-your-answers-from-problem-2.-once-you-all-agree-on-which-inference-technique-to-use-determine-whether-a-confidence-interval-or-a-hypothesis-test-is-most-appropriate-for-each-problem." class="section level2">
-<h2>3. With your group, go over your answers from Problem 2. Once you
-all agree on which inference technique to use, determine whether a
-confidence interval or a hypothesis test is most appropriate for each
-problem.</h2>
+<div id="problem-3" class="section level1">
+<h1>Problem 3</h1>
+<p>The National Perinatal Statistics Unit of the Sydney Children’s
+Hospital reports that the mean birth weight of all babies born in birth
+centers in Australia in a recent year was <span class="math inline">\(3564\)</span> grams—about <span class="math inline">\(7.86\)</span> pounds. A Missouri hospital reports
+that the average weight of <span class="math inline">\(112\)</span>
+babies born there last year was <span class="math inline">\(7.68\)</span> pounds, with a standard deviation of
+<span class="math inline">\(1.31\)</span> pounds. We want to see if U.S.
+babies weigh the same, on average, as Australian babies.</p>
+</div>
+<div id="problem-4" class="section level1">
+<h1>Problem 4</h1>
+<p>Suppose we purchase <span class="math inline">\(n=6\)</span> random
+bags of chips marked with a net weight of <span class="math inline">\(35.4\)</span> grams. We then carefully weighing
+the contents in each bag to find the following weight data (in
+grams):</p>
+<pre class="r"><code>chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)</code></pre>
+<p>Is there evidence that the mean weight of these chip bags is less
+than advertised?</p>
+</div>
+<div id="problem-5" class="section level1">
+<h1>Problem 5</h1>
+<p>Which of the three chi-square tests — goodness-of-fit, homogeneity,
+or independence — would you use in each of the following situations?</p>
 <ul>
-<li><p>Confidence interval: useful when we are interested in estimating
-an actual effect size.</p></li>
-<li><p>Hypothesis test: useful when we primarily need to make a
-decision.</p></li>
+<li><p>A restaurant manager wonders whether customers who dine on Friday
+nights have the same preferences among the four “chef’s special” entrees
+as those who dine on Saturday nights. One weekend he has the wait staff
+record which entrees were ordered each night. Assuming these customers
+to be typical of all weekend diners, he’ll compare the distributions of
+meals chosen Friday and Saturday.</p></li>
+<li><p>Company policy calls for parking spaces to be assigned to
+everyone at random, but you suspect that may not be so. There are three
+lots of equal size: lot A, next to the building; lot B, a bit farther
+away; and lot C, on the other side of the highway. You gather data about
+120 managers to see how many were assigned parking in each lot.</p></li>
+<li><p>Is a student’s social life affected by where the student lives? A
+campus survey asked a random sample of students whether they lived in a
+dormitory, in off-campus housing, or at home, and whether they had been
+out on a date 0, 1–2, 3–4, or 5 or more times in the past two
+weeks.</p></li>
 </ul>
-</div>
-<div id="with-your-group-go-over-the-research-questions-that-you-would-answer-with-a-hypothesis-test-and-specify-the-null-and-alternative." class="section level2">
-<h2>4. With your group, go over the research questions that you would
-answer with a hypothesis test and specify the null and alternative.</h2>
-
-</div>
-<div id="analyze-each-research-question-and-determine-if-the-data-was-collected-through-an-observational-study-or-an-experiment.-determine-how-this-information-would-impact-the-scope-of-your-conclusions-in-each-problem." class="section level2">
-<h2>5. Analyze each research question and determine if the data was
-collected through an observational study or an experiment. Determine how
-this information would impact the scope of your conclusions in each
-problem.</h2>
-<div style="page-break-after: always;"></div>
-</div>
-<div id="research-questions" class="section level1">
-<h1>Research questions</h1>
-<ol style="list-style-type: decimal">
-<li>One hundred insomnia patients are randomly selected for a clinical
-trial. Fifty are randomly assigned to a placebo and the other <span class="math inline">\(50\)</span> are given a mild sedative. Which
-subjects sleep more hours and how many more hours do they tend to
-sleep?</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li>Health recommendations suggest walking <span class="math inline">\(10,000\)</span> steps per day. Suppose that you
-collect data from a sample of Fitbit users and you want to determine if
-they average more than <span class="math inline">\(10,000\)</span> steps
-per day.</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li>Are people who smoke tobacco cigarettes more likely to suffer from
-lung cancer than people who smoke marijuana cigarettes?</li>
-</ol>
-<ol start="4" style="list-style-type: decimal">
-<li>The manager of a company’s human resource department examines
-employee attendance records to investigate whether more than <span class="math inline">\(20\%\)</span> of employee sick days are taken on
-Fridays.</li>
-</ol>
-<ol start="5" style="list-style-type: decimal">
-<li>An advocacy organization surveys <span class="math inline">\(960\)</span> Canadians to see how many report
-being born in another country. Similarly, <span class="math inline">\(1250\)</span> U.S. citizens are asked whether or
-not they were born in a foreign country. The researchers want to
-determine if the proportion of foreign born people is the same in the
-United States as in Canada.</li>
-</ol>
-<ol start="6" style="list-style-type: decimal">
-<li>A group of college freshmen are asked about the quality of the
-university cafeteria. A year later, the same students are asked about
-the cafeteria quality again. Do student’s opinions change during their
-time at school?</li>
-</ol>
-<ol start="7" style="list-style-type: decimal">
-<li>Do cows tend to produce more milk if their handler speaks to them by
-name every day than if the handler does not speak to them by name? A
-farmer randomly assigned half of her cows to each group and then
-compared how much milk they produced after one month.</li>
-</ol>
-<ol start="8" style="list-style-type: decimal">
-<li>A recent survey investigated how much more likely American parents
-are to playing video games in their down-time compared to American
-adults who do not have children.</li>
-</ol>
-<ol start="9" style="list-style-type: decimal">
-<li>A researcher is interested in studying whether Americans gained
-weight, on average, while in quarantine by virtue of the COVID-19
-pandemic. She took a random sample of Americans and asked their weight
-before the pandemic and their weight after quarantine ended in
-mid-2021.</li>
-</ol>
-<ol start="10" style="list-style-type: decimal">
-<li>Do male science teachers tend to receive higher salaries than female
-science teachers and, if so, how much higher are their salaries?</li>
-</ol>
 </div>
 
 

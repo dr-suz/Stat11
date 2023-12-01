@@ -1,22 +1,17 @@
 ---
 title: "In-Class Worksheet"
+subtitle: "Practicing Statistical Inference" 
 author: "STAT011 with Prof Suzy"
-date: 'Week 13: Reviewing Methods of Unit 3'
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 <br>
 **Name:** _____________________________________
 
 <br>
-**Instructions:** There are 5 questions in this worksheet. You will work with your group members to answer each question. Before getting started, take a moment and reflect on ways in which you can show your assigned group members respect. You may also view this initial [list of examples](https://docs.google.com/document/d/1emP8SiS2IO-_blKdVmVp-CJTr0NLlKG4vzMnphH-P7E/edit?usp=sharing) that we will add to over the semester.
+**Instructions:** There are 5 questions in this worksheet. The first four questions are solvable with hypothesis tests about one or two proportions or means. The last question asks you to consider when to use each of the chi-square tests for categorical variable. You will work with your group members to answer each question.
 
-**Briefly,** in the space below, specify one way in which you will work to show your group members respect during today's lesson:
-
-<br>
-<br>
-<br>
 
 ```{r setup, echo=FALSE, include=FALSE}
 require(knitr)
@@ -26,77 +21,40 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 ```
 
 
-## 1.  By yourself, read each problem setting and determine if the problem is about proportions or means. 
+# Problem 1 
 
-\vspace{1cm}
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+  
 
-## 2.  On your own, guess which of the following statistical inference techniques is most relevant for each problem. 
+# Problem 2 
+  
+A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 
 
-**Statistical inference techniques** 
-
-A. One-sample t-procedures for a mean.
-
-B. Two-sample t-procedures for comparing means.
-
-C. Paired-sample t-procedures.
-
-D. One-sample z-procedures for a proportion.
-
-E. Two-sample z-procedures for comparing proportions.
+  
+# Problem 3
+  
+The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
 
 
-## 3.  With your group, go over your answers from Problem 2. Once you all agree on which inference technique to use, determine whether a confidence interval or a hypothesis test is most appropriate for each problem. 
+# Problem 4 
+  
+Suppose we purchase $n=6$ random bags of chips marked with a net weight of $35.4$ grams. We then carefully weighing the contents in each bag to find the following weight data (in grams):
+    
+```{r echo=TRUE}
+chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
+```
+  
+Is there evidence that the mean weight of these chip bags is less than advertised? 
 
 
-* Confidence interval: useful when we are interested in estimating an actual effect size.
+# Problem 5   
 
-* Hypothesis test: useful when we primarily need to make a decision. 
+Which of the three chi-square tests — goodness-of-fit, homogeneity, or independence — would you use in each of the following situations?
 
+* A restaurant manager wonders whether customers who dine on Friday nights have the same preferences among the four “chef’s special” entrees as those who dine on Saturday nights. One weekend he has the wait staff record which entrees were ordered each night. Assuming these customers to be typical of all weekend diners, he’ll compare the distributions of meals chosen Friday and Saturday.
 
-## 4.  With your group, go over the research questions that you would answer with a hypothesis test and specify the null and alternative. 
+* Company policy calls for parking spaces to be assigned to everyone at random, but you suspect that may not be so. There are three lots of equal size: lot A, next to the building; lot B, a bit farther away; and lot C, on the other side of the highway. You gather data about 120 managers to see how many were assigned parking in each lot.
 
-\vspace{1cm}
+* Is a student’s social life affected by where the student lives? A campus survey asked a random sample of students whether they lived in a dormitory, in off-campus housing, or at home, and whether they had been out on a date 0, 1–2, 3–4, or 5 or more times in the past two weeks.
 
-## 5. Analyze each research question and determine if the data was collected through an observational study or an experiment. Determine how this information would impact the scope of your conclusions in each problem. 
-
-\pagebreak 
-
-# Research questions 
-
-1. One hundred insomnia patients are randomly selected for a clinical trial. Fifty are randomly assigned to a placebo and the other $50$ are given a mild sedative. Which subjects sleep more hours and how many more hours do they tend to sleep? 
-
-\vspace{1cm}
-
-2. Health recommendations suggest walking $10,000$ steps per day. Suppose that you collect data from a sample of Fitbit users and you want to determine if they average more than $10,000$ steps per day. 
-
-\vspace{1cm}
-
-3. Are people who smoke tobacco cigarettes more likely to suffer from lung cancer than people who smoke marijuana cigarettes? 
-
-\vspace{1cm}
-
-4. The manager of a company’s human resource department examines employee attendance records to investigate whether more than $20\%$ of employee sick days are taken on Fridays.
-
-\vspace{1cm}
-
-5.  An advocacy organization surveys $960$ Canadians to see how many report being born in another country. Similarly, $1250$ U.S. citizens are asked whether or not they were born in a foreign country. The researchers want to determine if the proportion of foreign born people is the same in the United States as in Canada. 
-
-\vspace{1cm}
-
-6.  A group of college freshmen are asked about the quality of the university cafeteria. A year later, the same students are asked about the cafeteria quality again. Do student's opinions change during their time at school? 
-
-\vspace{1cm}
-
-7. Do cows tend to produce more milk if their handler speaks to them by name every day than if the handler does not speak to them by name? A farmer randomly assigned half of her cows to each group and then compared how much milk they produced after one month. 
-
-\vspace{1cm}
-
-8. A recent survey investigated how much more likely American parents are to playing video games in their down-time compared to American adults who do not have children. 
-
-\vspace{1cm}
-
-9. A researcher is interested in studying whether Americans gained weight, on average, while in quarantine by virtue of the COVID-19 pandemic. She took a random sample of Americans and asked their weight before the pandemic and their weight after quarantine ended in mid-2021.
-
-\vspace{1cm}
-
-10. Do male science teachers tend to receive higher salaries than female science teachers and, if so, how much higher are their salaries?  
+  
