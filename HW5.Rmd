@@ -105,6 +105,14 @@ Assess whether or not the problems listed below deal with count data for a categ
 
 **Scenario 9.** Two different professors teach an introductory statistics course. The table shows the distribution of final grades they reported. We wonder whether one of these professors is an "easier" grader. 
 
+|    | Prof A | Prof B |
+| --- | --- | --- |
+| A | 3 | 9 |
+| B | 11 | 12 | 
+| C | 14 | 8 |
+| D | 9  | 2 |
+| F | 3 | 1 |
+
 **Scenario 10.** A student studying the music preferences of her classmates wants to test her theory that men and women have different music preferences. For each respondent, she records their gender and what their favorite music genre is (hip hop, trap, rock, rap, folk, indie, other). 
 
 
