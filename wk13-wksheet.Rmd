@@ -3,8 +3,8 @@ title: "In-Class Worksheet"
 subtitle: "Practicing Statistical Inference" 
 author: "STAT011 with Prof Suzy"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 <br>
 **Name:** _____________________________________
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown
 
 # Problem 1 
 
-The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. *If $15\%$ of these students are smokers, is this evidence that the CDCs report is outdated?* 
   
 
 # Problem 2 

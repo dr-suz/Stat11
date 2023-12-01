@@ -49,12 +49,12 @@ The US Census collects detailed race and ethnicity information about people livi
 
 Are all the flavors of jelly beans evenly distributed in the packages sold at a supermarket? 
 
-* Chi-square test of homogeneity (with one population/group) OR a chi-square goodness of fit test 
+* Chi-square goodness of fit test 
 
-  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{50}$, where each $p_j$, for $j=1,\dots,50$ corresponds to one of the $50$ different flavors of jelly beans. 
+  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{50}=1/50$, where each $p_j$, for $j=1,\dots,50$ corresponds to one of the $50$ different flavors of jelly beans.  
   
   
-
+* Note: I had previously stated this as an example of a test of homogeneity (because we are testing whether or not all the proportions are the same), however, based on your textbook, this would instead be an example of the goodness-of-fit test since we actually have a value for each proportion in our null hypothesis. (If you look at other statistical references besides your textbook, you may find that various sources distinguish between these procedures in different ways. For your quiz, stick with the way your textbook distinguishes them.)
 
 ## Example revisited: Titanic data 
 
