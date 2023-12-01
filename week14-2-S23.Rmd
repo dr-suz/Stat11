@@ -32,14 +32,6 @@ Suppose Darwin had surveyed and categorized the types of finches on (what is now
   * $H_0: p_{1} = 0.56, p_{2} = 0.3, p_{3} = 0.07, p_{4}=0.07$, where $p_1$, $p_2$, $p_3$, $p_4$ are the proportions of each type of bird in the San Cristobal island.  
 
 
-## Example: Jelly bean flavors 
-
-Are all the flavors of jelly beans evenly distributed in the packages sold at a supermarket? 
-
-* Chi-square test of homogeneity 
-
-  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{50}$, where each $p_j$, for $j=1,\dots,50$ corresponds to one of the $50$ different flavors of jelly beans. 
-  
 ## Example: Race and ethinic composition of the USA 
 
 The US Census collects detailed race and ethnicity information about people living in different regions of the USA. Suppose we wish to know whether the racial and ethnic composition of people living in the USA is distributed the same across five different regions of the country (shown below).
@@ -51,6 +43,17 @@ The US Census collects detailed race and ethnicity information about people livi
   * $H_0: p_{1,w} = p_{1,mw} = p_{1,sw} =  p_{1,s} = p_{1,ne};\text{ }p_{2,w} = p_{2,mw} = p_{2,sw} =  p_{2,s} = p_{2,ne};\text{ etc.}$ for each $p_{j,\cdot}$ corresponds to one of $j$ different categorizations of race and ethnicity. 
   
   * $H_0$: The distribution of the categorical variable race and ethnicity is the same across each of the five regions. 
+
+
+## Example: Jelly bean flavors 
+
+Are all the flavors of jelly beans evenly distributed in the packages sold at a supermarket? 
+
+* Chi-square test of homogeneity (with one population/group) OR a chi-square goodness of fit test 
+
+  * $H_0: p_{1} = p_{2} = p_{3} =  \cdots = p_{50}$, where each $p_j$, for $j=1,\dots,50$ corresponds to one of the $50$ different flavors of jelly beans. 
+  
+  
 
 
 ## Example revisited: Titanic data 
