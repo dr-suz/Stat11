@@ -132,12 +132,12 @@ If $X \sim Bin(n,p)$ then $Pr(X = x) = nCx \cdot p^x \cdot (1-p)^{n-x}$, where $
 # Sampling Distributions
 
 Under appropriate conditions, the sampling distribution for the sample proportion is 
-$$\hat{p} \sim N\left(p, \frac{p(1-p)}{n} \right).$$ 
+$$\hat{p} \sim N\left(p, \sqrt{\frac{p(1-p)}{n}} \right).$$ 
 The standard error for the sample proportion is $SE(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.$
 
 
 Under appropriate conditions, the sampling distribution for the sample mean is
-$$\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n} \right).$$
+$$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}} \right).$$
 The standard error for the sample mean is $SE(\bar{x}) = \frac{s}{\sqrt{n}}$.
 
 # Confidence Intervals 
