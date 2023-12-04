@@ -28,7 +28,19 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 * Statistical inference for categorical variables 
 
+## Example using the CLT to estimate a probability 
 
+(Note: This is the old version of Problem 1 from the in-class worksheet for week 13.)
+
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+
+**Step 1)** Define the probability model. 
+
+**Step 2)** Determine the sampling distribution for the sample statistic and draw the density plot.
+
+**Step 3)** Plot the observed sample statistic and shade the region of interest on the density plot. 
+
+**Step 4)** Use software or a table to find the answer. 
 
 # Sampling distributions and confidence intervals
 
