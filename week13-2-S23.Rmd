@@ -1,8 +1,7 @@
 ---
-title: "Stat 11 Week 13"
+title: "Stat 11 Week 14"
 subtitle: "Review of Unit 3" 
 author: "Prof. Suzy Thornton"
-date: "Spring 2023"
 lang: "en-US"
 output:
   html_document:
@@ -19,15 +18,19 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
 
-# Unit 3 topics (that we've covered thus far)
+# Unit 3 topics  
+
+* Using the CLT to estimate probabilities and quantiles 
 
 * Statistical inference from a single sample of data 
 
-* Statistical inference from multiple samples of data 
+* Statistical inference from two samples of data 
+
+* Statistical inference for categorical variables 
 
 
 
-# Week 10 - Sampling distributions and confidence intervals
+# Sampling distributions and confidence intervals
 
 * Sampling distributions of sample estimates are (often) determined using the Central Limit Theorem 
 
@@ -37,53 +40,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 * Critical values corresponding to particular confidence levels 
 
-
-## Effect size 
- 
-Confidence intervals provide an (interval) estimate for the effect of interest. Hence, confidence intervals, and not hypothesis tests, can inform us about the effect size. This makes it easier for us to compare the results of our statistical analysis to a practical understanding of what kind of "effect" would be important in a particular problem setting. 
-
-Practical significance is not determined by statistical significance! Statistical significance is not determined by practical significance!
-
-
-
-# Week 11 - Hypothesis tests for an unknown proportion or mean
-
-Hypotheses are typically designed so that what we want to prove is expressed in the alternative. For all of the methods that we've covered thus far, the null hypothesis is always going to be of the form
-$$H_0: \text{<parameter> } = \text{ some number}$$
-
-
-## Types of conclusions 
-
-The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
-
-* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
-
-* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
-
-* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
-
-The logic of hypothesis tests is similar to the logic behind inter-universe travel in the movie Everything Everywhere All at Once...
-
-![](./images/wk13-everything.png)
-
-
-# Week 12 - Inference from two samples (grouped data)
-
-* Two independent groups 
-
-* Two paired groups of data 
-
-## Example: Confidence interval for a difference in means (from Week 12)
-
-On average, how much more money do consumers spend at Target compared to Walmart? 
-
-Suppose researchers collected a systematic sample from $85$ Walmart customers and $80$ Target customers by asking them for their purchase amount as they left the stores. The data they collected is summarized in the table below. Suppose a computer already calculated the degrees of freedom to be $162.75$. 
-
-| | Walmart | Target |
-|:---|:---|:---|
-| $\bar{x}$ | $\$45$ | $\$53$ |
-| s | $\$21$ | $\$19$ | 
-
+## Steps for finding a confidence interval 
 
 **Step 1)** Identify and define the population parameter and choose your confidence level. 
 
@@ -97,9 +54,56 @@ Suppose researchers collected a systematic sample from $85$ Walmart customers an
 
 **Step 6)** Calculate the lower and upper bounds of your confidence interval. 
 
-<br>
+<!--## Effect size 
+ 
+Confidence intervals provide an (interval) estimate for the effect of interest. Hence, confidence intervals, and not hypothesis tests, can inform us about the effect size. This makes it easier for us to compare the results of our statistical analysis to a practical understanding of what kind of "effect" would be important in a particular problem setting. 
 
-## Example: Confidence interval for a mean difference of paired data (from Week 13)
+Practical significance is not determined by statistical significance! Statistical significance is not determined by practical significance! --> 
+
+
+
+# Hypothesis tests 
+
+Hypotheses are typically designed so that what we want to prove is expressed in the alternative. For all of the methods that we've covered thus far, the null hypothesis is always going to be of the form
+$$H_0: \text{<parameter> } = \text{ some number}$$
+
+
+## Types of conclusions 
+
+Below is a table showing all possible conclusions we can make from a hypothesis test and all possible mistakes we could make. We will cover the different types of mistakes (or errors) next class. 
+
+![](./images/statistical_error.png){height=500px}
+
+The only way to reduce both types of error is to collect more evidence or, in statistical terms, to collect more data.
+
+* $\alpha = Pr(\text{Type I error})$: If $H_0$ is true, this is the probability that we (incorrectly) reject it.
+
+* $\beta = Pr(\text{Type II error})$: If $H_0$ is false, this is the probability that we (incorrectly) fail to reject it. 
+
+* $1-\beta = Power$ If $H_0$ is false, this is the probability that we (correctly) reject it.  
+
+<!--The logic of hypothesis tests is similar to the logic behind inter-universe travel in the movie Everything Everywhere All at Once...
+
+![](./images/wk13-everything.png)-->
+
+
+
+## Steps for conducting a hypothesis test 
+
+**Step 1)** Identify and define the population parameter and choose your significance level.
+
+**Step 2)** State the null and alternative hypotheses.
+
+**Step 3)** Assess the required assumptions and conditions.
+
+**Step 4)** Calculate the test statistic and plot it.
+
+**Step 5)** Shade the area under the curve that corresponds to your p-value and then calculate it. State your conclusion. 
+
+
+
+
+<!--## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
 On average, how large is the difference in car insurance prices for customers of an online insurance company versus customers of a local insurance company? 
 
@@ -116,28 +120,10 @@ insurance_diff
 mean(insurance_diff$PriceDiff)
 sd(insurance_diff$PriceDiff)
 ```
+-->
 
-
-***
-
-# Looking ahead 
-
-* Week 14 - new statistical method (our last one for the semester)
-
-* Week 14 and 15 - begin discussions on ethical statistical practice 
-
-* Week 15 - Friday in-class poster presentation 
-
-  * You and your group mates are welcome to attend anytime between 9:30am-10:30am or 11:00am-12:30pm. 
   
-  * Plan to spend at least 45 minutes in class and come early to hang up your poster in the room. (Prof Suzy will provide hanging supplies.) 
-  
-  * Prof Suzy will take turns meeting with each group for 5-7 minutes where you will present your topic. 
-  
-  * All participants will be asked to take some time and read the other posters. Each person will need to submit a 3-4 sentence summary ion another group's project in order to get credit for attendance this day. 
-  
-  
-*** 
+<!--*** 
 
 # Partial Solutions 
 
@@ -211,3 +197,4 @@ We can check our answer in R using the following code:
 ```{r}
 t.test(insurance_diff$PriceDiff, conf.level = 0.9)
 ```
+--> 
