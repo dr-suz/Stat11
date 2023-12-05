@@ -1726,6 +1726,48 @@ it.</p>
 <p><strong>Step 5)</strong> Shade the area under the curve that
 corresponds to your p-value and then calculate it. State your
 conclusion.</p>
+</div>
+</div>
+<div id="student-requested-examples" class="section level1">
+<h1>Student Requested Examples</h1>
+<div id="two-tailed-hypothesis-test-for-an-unknown-mean" class="section level2">
+<h2>Two-tailed hypothesis test for an unknown mean</h2>
+<p>A technology committee wants to perform a test to see if the mean
+amount of time students are spending in the lab has increased from 55
+minutes. They wish to determine if the school needs to increase lab fees
+to keep up with lab use. The sample of data recorded below are the lab
+times for <span class="math inline">\(12\)</span> students.</p>
+<pre class="r"><code>lab_time &lt;-c(52, 57,54, 76,62,52,74, 53, 136, 73, 8, 62)
+mean(lab_time)</code></pre>
+<pre><code>## [1] 63.25</code></pre>
+<pre class="r"><code>sd(lab_time)</code></pre>
+<pre><code>## [1] 28.92663</code></pre>
+<p><strong>Question:</strong> What is the result of a type I error? What
+is the result of a type II error? Which error is more consequential?</p>
+</div>
+<div id="two-tailed-hypothesis-test-for-paired-means" class="section level2">
+<h2>Two-tailed hypothesis test for paired means</h2>
+<p>Having done poorly on their Biology final exams in June, six students
+repeat the course in summer school and take another exam in August. Here
+are the exam scores:</p>
+<p><span class="math display">\[\begin{align*}
+\text{June }\quad&amp; 54 \quad  49 \quad 68 \quad 66 \quad 62 \quad
+62  \\
+\text{Aug }\quad&amp; 50 \quad 65 \quad 74  \quad 64 \quad 68 \quad
+72  \\  
+\text{Aug - June }\quad&amp; -4 \quad 16 \quad 6  \quad -2 \quad 6 \quad
+10  
+\end{align*}\]</span></p>
+<p>If we consider these students to be representative of all students
+who might attend this summer school in other years, do these results
+provide evidence that the program is worthwhile?</p>
+<pre class="r"><code>d &lt;- c(-4, 16, 6, -2, 6, 10)
+mean(d)</code></pre>
+<pre><code>## [1] 5.333333</code></pre>
+<pre class="r"><code>sd(d)</code></pre>
+<pre><code>## [1] 7.447595</code></pre>
+<p><strong>Question:</strong> What is the result of a type I error? What
+is the result of a type II error? Which error is more consequential?</p>
 <!--## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
 On average, how large is the difference in car insurance prices for customers of an online insurance company versus customers of a local insurance company? 
@@ -1807,7 +1849,7 @@ $\bar{d} = \$45.9$
 
 * Sample size (or nearly Normal) condition 
 
-<img src="week13-2-S23_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="week13-2-S23_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 The data is representative of the local insurance company because these 10 profiles were randomly selected. It's not clear how large the local insurance company is but it's pretty likely that the company has more than 100 customers. Therefore, there isn't any strong indicator that the difference data is not independent. (I.e. we can assume within sample independence.) However, the sample size is rather small so in order to use the CLT, we need to check a histogram of the difference data. This histogram is symmetric and unimodal so it seems reasonable that the larger population of all possible differences between process for customers of this local company is approximately Normally distributed. There aren't any major red flags against any of the necessary assumptions for this method. 
 
 **Step 4)** Find the critical value corresponding to your confidence level. 

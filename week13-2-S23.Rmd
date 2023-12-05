@@ -114,6 +114,42 @@ The only way to reduce both types of error is to collect more evidence or, in st
 
 
 
+# Student Requested Examples 
+
+## Two-tailed hypothesis test for an unknown mean 
+
+A technology committee wants to perform a test to see if the mean amount of time students are spending in the lab has increased from 55 minutes. They wish to determine if the school needs to increase lab fees to keep up with lab use. The sample of data recorded below are the lab times for $12$ students. 
+
+```{r echo=TRUE}
+lab_time <-c(52, 57,54, 76,62,52,74, 53, 136, 73, 8, 62)
+mean(lab_time)
+sd(lab_time)
+```
+
+
+**Question:** What is the result of a type I error? What is the result of a type II error? Which error is more consequential? 
+
+## Two-tailed hypothesis test for paired means
+
+Having done poorly on their Biology final exams in June, six students repeat the course in summer school and take another exam in August. Here are 
+the exam scores:
+
+\begin{align*}
+\text{June }\quad& 54 \quad  49 \quad 68 \quad 66 \quad 62 \quad 62  \\
+\text{Aug }\quad& 50 \quad 65 \quad 74  \quad 64 \quad 68 \quad 72  \\  
+\text{Aug - June }\quad& -4 \quad 16 \quad 6  \quad -2 \quad 6 \quad 10  
+\end{align*}
+
+If we consider these students to be representative of all students who might attend this summer school in other years, do 
+these results provide evidence that the program is worthwhile?
+
+```{r echo=TRUE}
+d <- c(-4, 16, 6, -2, 6, 10)
+mean(d)
+sd(d)
+```
+
+**Question:** What is the result of a type I error? What is the result of a type II error? Which error is more consequential? 
 
 <!--## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
