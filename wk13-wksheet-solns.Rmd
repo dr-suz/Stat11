@@ -6,34 +6,81 @@ output:
   html_document: default
   pdf_document: default
 ---
-<br>
-**Name:** _____________________________________
 
-<br>
-**Instructions:** There are 5 questions in this worksheet. The first four questions are solvable with hypothesis tests about one or two proportions or means. The last question asks you to consider when to use each of the chi-square tests for categorical variable. You will work with your group members to answer each question.
+# Problem 1 (old)
 
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. *How likely is it that more than $10\%$ of them are smokers?*
 
-```{r setup, echo=FALSE, include=FALSE}
-require(knitr)
-library(tidyverse)
-knitr::opts_chunk$set(message = FALSE) # include this if you don't want markdown to knit messages
-knitr::opts_chunk$set(warning = FALSE) # include this if you don't want markdown to knit warnings
+**Answer: Use the CLT to approximate an unknown probability**  
+
+Let $p=$ the probability that a randomly selected high-school aged student is a smoker. Under the assumption of independent data and provided we have a large enough sample so we have at least $10$ "successes" (smokers) and $10$ "failures" (non-smokers), the Central Limit Theorem tells us that 
+$$\hat{p} \sim N\left(p, \sqrt{\frac{p(1-p)}{n}} \right).$$
+We can use the CDC's data as a reasonable estimate for the unknown model parameter $p$ and then solve for the probability that we get a $\widehat{p}$ value of $0.1$ or something larger. 
+
+For example, in R we can find the probability with the following code: 
+```{r echo=TRUE}
+pnorm(0.1, mean=0.093, sd=sqrt(0.093*(1-0.093)/522), lower.tail=FALSE)
 ```
 
-
-# Problem 1 
-
-The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. How likely is it that more than $10\%$ of them are smokers?
+To find the answer with the Z-table you will have on your quiz, you need to first find the Z-score of the quantile $0.1$. Then you can read from the table that $Pr\left(Z<\frac{0.1-0.093}{\sqrt{\frac{0.093(1-0.093)}{522}}}\right) = 0.7088$ and so the answer is $1-0.7088=0.2912.$ I.e. the probability that at least $10\%$ of the freshman class are smokers is (approximately) $0.29$.
   
+# Problem 1 (new) 
+
+The Centers for Disease Control and Prevention reports that $9.3\%$ of surveyed high school students reported in 2015 that they had smoked cigarettes in the past 30 days. A college has $522$ students in its freshman class. *If $15\%$ of these students are smokers, is this evidence that the CDCs report is outdated?* 
+
+**Answer: Conduct a hypothesis test about an unknown probability** 
+
+Let $p=$ the probability that a randomly selected high-school aged student is a smoker. We want to determine if the value of $p$ given by the CDC is still accurate given that we observe $15\%$ of a freshman class of size $522$ are smokers. We will do this by testing the following hypotheses:
+
+$$H_0: p=0.093, \quad H_A: p \neq 0.093.$$
+Let's use a significance level of $0.05$. We need to assess the required assumptions and conditions (independent data,$10\%$ condition, and success/failure condition). If they seem reasonable then we will calculate the test statistic
+$$T.S._{obs} = \frac{\hat{p}_{obs}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.15 - 0.093}{\sqrt{\frac{0.093(1-0.093)}{522}}} = 4.484,$$
+and plot it on a Standard Normal distribution. Since this is a two-sided alternative, we will compute the probability that a standard Normal random variable is greater than $4.484$ and add to this the probability that a standard Normal random variable is less than $-4.484$. 
+
+Using the following R code we find the p-value which is approximately zero. (You can check that the answer with the Z-table is similar on your own.)
+
+```{r echo=TRUE}
+2*pnorm(4.484,mean=0,sd=1,lower.tail=FALSE)
+```
+Since the p-value is smaller than our significance level, we have enough evidence in this data to call into question the statistic reported by the CDC. There is enough statistical evidence in this sample of $522$ freshman to reject the null in favor of the alternative, meaning, the CDC's proportion of high-school smokers seems to be outdated and no longer applicable. 
+
 
 # Problem 2 
   
 A national vital statistics report indicated that about $3\%$ of all births produced twins. Is the rate of twin births the same among very young mothers? Data from a large city hospital found that only $7$ sets of twins were born to $469$ teenage girls. 
 
+**Answer:** 
+
+Let $p=$ the probability that a young mother gives birth to a set of twins. Let's set our significance level at $0.05$. We want to test the following hypotheses:
+$$H_0: p=0.03, \quad H_A: p\neq0.03.$$
+If the necessary assumptions and conditions are met (note we do NOT have enough successes), then we calculate our test statistic
+$$T.S._{obs} = \frac{\frac{7}{469}-0.03}{\sqrt{\frac{\frac{7}{469}(1-\frac{7}{469})}{469}}} = -2.692,$$
+and plot it on a Standard Normal curve. Since this is a two-sided alternative, we will compute the probability that a standard Normal random variable is less than $-2.692$ and add to this the probability that a standard Normal random variable is greater than $2.692$. 
+
+Using the following R code we find the p-value which is approximately 0.007. (You can check that the answer with the Z-table is similar on your own.)
+
+```{r echo=TRUE}
+2*pnorm(-2.692,mean=0,sd=1,lower.tail=TRUE)
+```
+Since this p-value is smaller than our significance level, we reject the null in favor of the alternative. 
   
 # Problem 3
   
 The National Perinatal Statistics Unit of the Sydney  Children’s Hospital reports that the mean birth weight of all  babies born in birth centers in Australia in a recent year was $3564$ grams—about $7.86$ pounds. A Missouri hospital reports that the average weight of $112$ babies born there last year was $7.68$ pounds, with a standard deviation of $1.31$ pounds. We want to see if U.S. babies weigh the same, on average, as Australian babies.
+
+**Answer:** 
+Let $\mu=$ the mean weight of U.S. babies. Let's choose a significance level of $0.05$. We want to test the following hypotheses:
+$$H_0: \mu = 7.86, \quad H_A:\mu \neq 7.86.$$ 
+If the assumption of independent data is met then, because our sample size is larger than $30$, we can determine the answer by calculating the following test statistic:
+$$T.S._{obs} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} = \frac{7.68 - 7.86}{\frac{1.31}{\sqrt{112}}} = -1.454,$$
+and plotting it on a Student's t-distribution with $111$ degrees of freedom. Since this is a two-sided alternative, we will compute the probability that a Student's t random variable is less than $-1.454$ and add to this the probability that a Student's t random variable is greater than $1.454$. 
+
+Using the following R code we find the p-value which is approximately 0.149. (You can check that the answer with the Z-table is similar on your own.)
+
+```{r echo=TRUE}
+2*pt(-1.454,df=111,lower.tail=TRUE)
+```
+Since this p-value is larger than our significance level, we fail to reject the null. I.e. this data does not provide enough evidence to conclude that the mean weight of US babies is different from the mean weight of Australian babies.  
 
 
 # Problem 4 
@@ -46,6 +93,23 @@ chips = c(35.5, 35.3, 35.1, 36.4, 35.4, 35.5)
   
 Is there evidence that the mean weight of these chip bags is less than advertised? 
 
+**Answer:** 
+
+Let $\mu=$ the mean weight of this brand and size of chip bags. Let's set our significance level to $0.05$. We want to test the following hypotheses: 
+$$H_0: \mu = 35.4,\quad H_A: \mu < 35.4.$$
+We must assess the required assumptions and conditions. In particular, since our sample size is $6$, we need to plot the data and see if it looks "nearly Normal". 
+```{r echo=TRUE}
+hist(chips)
+```
+With such a small sample size it is really difficult to tell if the bag weight is nearly Normally distributed. Nevertheless, let's proceed with the test for illustrative purposes. After finding the sample mean, $\bar{x} = $ `r mean(chips)` and sample standard deviation, $s=$`r sd(chips)`, we calculate the test statistic
+$$T.S._{obs} = \frac{35.5333-35.4}{\frac{0.45}{\sqrt{6}}} = 0.726,$$
+and plot it on a Student's t-distribution with $5$ degrees of freedom. Since this is a one-sided alternative, we calculate the p-value with the following R code: 
+
+```{r echo=TRUE}
+pt(0.726, df=5, lower.tail=TRUE)
+```
+
+You can verify this is similar to the answer you would get using the t-table. Since the p-value is larger than our significance level, we fail to reject the null hypothesis. 
 
 # Problem 5   
 
@@ -53,8 +117,13 @@ Which of the three chi-square tests — goodness-of-fit, homogeneity, or indepen
 
 * A restaurant manager wonders whether customers who dine on Friday nights have the same preferences among the four “chef’s special” entrees as those who dine on Saturday nights. One weekend he has the wait staff record which entrees were ordered each night. Assuming these customers to be typical of all weekend diners, he’ll compare the distributions of meals chosen Friday and Saturday.
 
+**Answer: test for homogeneity of the variable "Chef's special" over the two populations of Friday night diners and Saturday night diners**
+
 * Company policy calls for parking spaces to be assigned to everyone at random, but you suspect that may not be so. There are three lots of equal size: lot A, next to the building; lot B, a bit farther away; and lot C, on the other side of the highway. You gather data about 120 managers to see how many were assigned parking in each lot.
+
+**Answer: test for goodness of fit where $H_0: p_{A} = 1/3, p_{B} = 1/3, p_{C}=1.3$ and $p_{A}$ the probability that an employee is assigned to lot A, etc.**
 
 * Is a student’s social life affected by where the student lives? A campus survey asked a random sample of students whether they lived in a dormitory, in off-campus housing, or at home, and whether they had been out on a date 0, 1–2, 3–4, or 5 or more times in the past two weeks.
 
+**Answer: test for independence of the two categorical variables "housing" and "dating frequency" among the population of students**
   

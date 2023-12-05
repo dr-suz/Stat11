@@ -3,8 +3,8 @@ title: "Project Homework 5"
 author: "STAT011 with Prof Suzy"
 date: 'Due by Tuesday, 12/5/23 11:59pm'
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Introduction and Purpose 
@@ -119,7 +119,7 @@ Assess whether or not the problems listed below deal with count data for a categ
 
 # Problem 4
 
-For the six scenarios in Problem 3 that do deal with count data, determine which chi-square test is appropriate for each. 
+For the six scenarios in Problem 3 that do deal with count data, determine which **(if any)** chi-square test is appropriate for each. 
 
 
 
