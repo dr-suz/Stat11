@@ -1733,10 +1733,9 @@ conclusion.</p>
 <div id="two-tailed-hypothesis-test-for-an-unknown-mean" class="section level2">
 <h2>Two-tailed hypothesis test for an unknown mean</h2>
 <p>A technology committee wants to perform a test to see if the mean
-amount of time students are spending in the lab has increased from 55
-minutes. They wish to determine if the school needs to increase lab fees
-to keep up with lab use. The sample of data recorded below are the lab
-times for <span class="math inline">\(12\)</span> students.</p>
+amount of time students are spending in the lab has changed from a
+historical average of 55 minutes. The sample of data recorded below are
+the lab times for <span class="math inline">\(12\)</span> students.</p>
 <pre class="r"><code>lab_time &lt;-c(52, 57,54, 76,62,52,74, 53, 136, 73, 8, 62)
 mean(lab_time)</code></pre>
 <pre><code>## [1] 63.25</code></pre>
@@ -1744,9 +1743,21 @@ mean(lab_time)</code></pre>
 <pre><code>## [1] 28.92663</code></pre>
 <p><strong>Question:</strong> What is the result of a type I error? What
 is the result of a type II error? Which error is more consequential?</p>
+<p><strong>Answer:</strong> A type I error would mean that the committee
+concludes the average time in labs has changed from 55 minutes when it
+has not in reality changed. A type II error however would be the
+committee concluding that the average time in labs is not significantly
+different from 55 minutes when in fact it really has increased or
+decreased. It isn’t clear which error is more consequential here.
+Perhaps a type I error is more consequential for students (as this could
+lead to procedural changes in lab fees for example), but a type II error
+is probably more consequential for the school as this erroneous
+conclusion may mean that necessary procedural changes aren’t implemented
+and that faculty and staff are doing more work with limited
+resourses.</p>
 </div>
-<div id="two-tailed-hypothesis-test-for-paired-means" class="section level2">
-<h2>Two-tailed hypothesis test for paired means</h2>
+<div id="upper-tailed-hypothesis-test-for-paired-means" class="section level2">
+<h2>Upper-tailed hypothesis test for paired means</h2>
 <p>Having done poorly on their Biology final exams in June, six students
 repeat the course in summer school and take another exam in August. Here
 are the exam scores:</p>
@@ -1768,6 +1779,16 @@ mean(d)</code></pre>
 <pre><code>## [1] 7.447595</code></pre>
 <p><strong>Question:</strong> What is the result of a type I error? What
 is the result of a type II error? Which error is more consequential?</p>
+<p><strong>Answer:</strong> A type I error means that we conclude the
+summer school program is worthwhile (and improves student learning) when
+it does not actually do so. A type II error means we conclude the summer
+school program is not useful when in fact it really is. In this case, a
+type I error is probably more consequential because this would impact
+future students who may be forced to take a summer class that is
+actually a waste of their time. The consequence of a type II error
+however would probably be additional work done to improve the summer
+school program which, although costly, would benefit students who take
+the summer course anyway.</p>
 <!--## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
 On average, how large is the difference in car insurance prices for customers of an online insurance company versus customers of a local insurance company? 

@@ -118,7 +118,7 @@ The only way to reduce both types of error is to collect more evidence or, in st
 
 ## Two-tailed hypothesis test for an unknown mean 
 
-A technology committee wants to perform a test to see if the mean amount of time students are spending in the lab has increased from 55 minutes. They wish to determine if the school needs to increase lab fees to keep up with lab use. The sample of data recorded below are the lab times for $12$ students. 
+A technology committee wants to perform a test to see if the mean amount of time students are spending in the lab has changed from a historical average of 55 minutes. The sample of data recorded below are the lab times for $12$ students. 
 
 ```{r echo=TRUE}
 lab_time <-c(52, 57,54, 76,62,52,74, 53, 136, 73, 8, 62)
@@ -129,10 +129,11 @@ sd(lab_time)
 
 **Question:** What is the result of a type I error? What is the result of a type II error? Which error is more consequential? 
 
-## Two-tailed hypothesis test for paired means
+**Answer:** A type I error would mean that the committee concludes the average time in labs has changed from 55 minutes when it has not in reality changed. A type II error however would be the committee concluding that the average time in labs is not significantly different from 55 minutes when in fact it really has increased or decreased. It isn't clear which error is more consequential here. Perhaps a type I error is more consequential for students (as this could lead to procedural changes in lab fees for example), but a type II error is probably more consequential for the school as this erroneous conclusion may mean that necessary procedural changes aren't implemented and that faculty and staff are doing more work with limited resourses. 
 
-Having done poorly on their Biology final exams in June, six students repeat the course in summer school and take another exam in August. Here are 
-the exam scores:
+## Upper-tailed hypothesis test for paired means
+
+Having done poorly on their Biology final exams in June, six students repeat the course in summer school and take another exam in August. Here are the exam scores:
 
 \begin{align*}
 \text{June }\quad& 54 \quad  49 \quad 68 \quad 66 \quad 62 \quad 62  \\
@@ -150,6 +151,8 @@ sd(d)
 ```
 
 **Question:** What is the result of a type I error? What is the result of a type II error? Which error is more consequential? 
+
+**Answer:** A type I error means that we conclude the summer school program is worthwhile (and improves student learning) when it does not actually do so. A type II error means we conclude the summer school program is not useful when in fact it really is. In this case, a type I error is probably more consequential because this would impact future students who may be forced to take a summer class that is actually a waste of their time. The consequence of a type II error however would probably be additional work done to improve the summer school program which, although costly, would benefit students who take the summer course anyway. 
 
 <!--## Example: Confidence interval for a mean difference of paired data (from Week 13)
 
