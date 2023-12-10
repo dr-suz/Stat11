@@ -1,6 +1,6 @@
 ---
-title: "Stat 11 Week X"
-subtitle: "Categorical data and ethical statistics" 
+title: "Stat 11 Week 15"
+subtitle: "Statistics in the Real World" 
 author: "Prof. Suzy Thornton"
 lang: "en-US"
 output:
@@ -19,45 +19,13 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 
 
-
-# 1. Discussion on the analysis of categorical data 
-
-<span style="color:blue">What examples come to mind when you think of categorical data?</span>
-
-<br>
-<br>
-<br>
-
-<span style="color:blue">How do you think the number of categories for these variables are determined?</span>
-
-<br>
-<br>
-<br>
-
-
-## Gender or sex
-
-[A call for better practices](https://profsuzy.github.io/Stat11/Towards_statistical_best_practices.pdf) 
-
-[A rebuttal](https://profsuzy.github.io/Stat11/a_big_ask.pdf) 
-
-[Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6)
-
-## Race 
-
-[Eugenics and scientific racism](https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism) statement from the National Human Genome Research Institute 
-
-[American Society of Human Genetics Statement Regarding Concepts of “Good Genes” and Human Genetics](https://www.ashg.org/publications-news/ashg-news/statement-regarding-good-genes-human-genetics/#:~:text=Genetics%20demonstrates%20that%20humans%20cannot,ancestry%20have%20no%20scientific%20evidence.)
-
-
-
-# 2.  An Historical Remark  
+# 1.  Some Historical Context  
 
 ## A powerful language with a troubling origin 
 
 Modern statistical inference methods (confidence intervals and hypothesis tests) have proven to be powerful tools across many disciplines. Some of the most impressive real-world examples of the use of these methods (in my opinion) include the discovery of the Higgs Boson and the development of the first drug to treat HIV infection. These methods are useful in day-to-day social, scientific, and political work as well. For instance, sampling distribution theory can be used to target disaster relief efforts and provide quantitative evidence of discrimination or bias. 
 
-However, these methods of inference also grew out of the eugenics movement. In fact - "The history of statistics includes many regrettable elements related to systemic racism and eugenics. A recent article in Nautilus, entitled “[How Eugenics Shaped Statistics](https://nautil.us/how-eugenics-shaped-statistics-238014/),” is sobering, to put it mildly." 
+However, these methods of inference also grew out of the eugenics movement. In fact - "The history of statistics includes many regrettable elements related to systemic racism and eugenics. A recent article in Nautilus, entitled [How Eugenics Shaped Statistics](https://nautil.us/how-eugenics-shaped-statistics-238014/), is sobering, to put it mildly." 
 
 Source: 2021 paper on [Inclusivity in Statistics and Data Science Education](https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1906555)
 
@@ -87,21 +55,9 @@ Source: https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientifi
 
 Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables Good Science](https://www.tandfonline.com/doi/full/10.1080/00031305.2018.1518264)  
 
+# 2. Principles and Guidelines 
 
-
-
-# 3. Discussion on categorical variables 
-
-<span style="color:blue">How are the levels of a categorical variable determined?</span>
-
-* Social and cultural context 
-
-* Motivation of the main research question 
-
-
-
-
-## American Statistical Association: [Ethical Guidelines for Statistical Practice](https://www.amstat.org/your-career/ethical-guidelines-for-statistical-practice) 
+In 2016, the American Statistical Association developed (and has continued to revisit and update) the following [Ethical Guidelines for Statistical Practice](https://www.amstat.org/your-career/ethical-guidelines-for-statistical-practice). These guidelines are special in that they are not meant only for professional statisticians. These guidelines are designed to assist any statistical practitioner who wishes to use the language of statistics in an ethical manner. 
 
 ### PRINCIPLE A: Professional Integrity and Accountability
 
@@ -129,9 +85,9 @@ Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables
 
 12. Upholds, respects, and promotes these guidelines. Those who teach, train, or mentor in statistical practice have a special obligation to promote behavior that is consistent with these guidelines.
 
-#### Think-pair-vote 
+<!-- #### Think-pair-vote 
 
-<span style="color:purple">Q) Which of these points do you think is the most relevant in academic research?</span> 
+<span style="color:purple">Q) Which of these points do you think is the most relevant in academic research?</span> -->
 
 ### PRINCIPLE B: Integrity of Data and Methods
 
@@ -149,9 +105,9 @@ Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables
 
 7. Explores and describes the effect of variation in human characteristics and groups on statistical practice when feasible and relevant.
 
-#### Think-pair-vote 
+<!--#### Think-pair-vote 
 
-<span style="color:purple">Q) Which of these points do you think is the most relevant in industry statistical applications?</span>
+<span style="color:purple">Q) Which of these points do you think is the most relevant in industry statistical applications?</span> -->
 
 ### PRINCIPLE C: Responsibilities to Stakeholders
 
@@ -171,9 +127,9 @@ Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables
 
 8. Prioritizes both scientific integrity and the principles outlined in these guidelines when interests are in conflict.
 
-#### Think-pair-vote 
+<!--#### Think-pair-vote 
 
-<span style="color:purple">Q) Which of these points do you think is the most relevant in government statistics?</span>
+<span style="color:purple">Q) Which of these points do you think is the most relevant in government statistics?</span> -->
 
 ### PRINCIPLE D: Responsibilities to Research Subjects, Data Subjects, or Those Directly Affected by Statistical Practices
 
@@ -199,8 +155,53 @@ Source: [Statistical Inference Enables Bad Science; Statistical Thinking Enables
 
 11. Does not conduct statistical practice that could reasonably be interpreted by subjects as sanctioning a violation of their rights. Seeks to use statistical practices to promote the just and impartial treatment of all individuals.
 
-#### Think-pair-share  
+<!--#### Think-pair-share  
 
-<span style="color:purple">Q) Which of these points do you think will be most relevant to you personally?</span>
+<span style="color:purple">Q) Which of these points do you think will be most relevant to you personally?</span> -->
 
-   
+
+# 3. Examples from this semester 
+
+## Visualizing Numeric Data 
+
+We've seen how histograms are useful descriptors for numeric data but how they can vary widely depending on the sample size and the bin size. We discussed how in descriptive analyses it is important to have both visual and mathematical summaries for numeric data. This came up again in Unit 3 when we need to assess the "nearly Normal" condition for inference for an unknown mean with a small sample size. 
+
+<span style="color:red">[include some links to bad/misleading graphics]</span>
+
+## Organizing and Collecting Data 
+
+## Considering Categorical Variables 
+
+<span style="color:blue">How are the levels of a categorical variable determined?</span>
+
+* Social and cultural context 
+
+* Motivation of the main research question 
+
+<span style="color:red">[something about balance of transparancy and data privacy, respecting personal identities and gathering useful information, see if can find examples in public health]</span>
+
+### Race 
+
+[Eugenics and scientific racism](https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism) statement from the National Human Genome Research Institute 
+
+[American Society of Human Genetics Statement Regarding Concepts of “Good Genes” and Human Genetics](https://www.ashg.org/publications-news/ashg-news/statement-regarding-good-genes-human-genetics/#:~:text=Genetics%20demonstrates%20that%20humans%20cannot,ancestry%20have%20no%20scientific%20evidence.)
+
+
+### Gender or sex
+
+[A call for better practices](https://profsuzy.github.io/Stat11/Towards_statistical_best_practices.pdf) 
+
+[A rebuttal](https://profsuzy.github.io/Stat11/a_big_ask.pdf) 
+
+[Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6)
+
+<span style="color:red">[include example chi-square procedure from AMSTAT article]</span>
+
+
+## Assumptions and Conditions in Statistical Inference 
+
+All statistical inference methods rely on some one (or more) assumption(s). By definition, an assumption is not something that we can ever prove is true. We may be able to disprove an assumption with a clever counterexample. In some sense, playing "the devil's advocate" is an important part of robust statistical inference. An analyst who earnestly tries to find counterexamples of a required assumption (like that of having independent data), will be able to present an analysis within the context of its limitations. A statistical analysis conducted with this kind of rigor and shared transparently ultimately improves upon the quality of science. However, a lack of transparency can often lead to better individual outcomes such as more publications and funding awards, at least in the short-term. For example <span style="color:red">(autism and vaccines research and other forged data examples - maybe even 2016 election data ex.)</span>
+
+
+<span style="color:purple">Q) What do you think is an effective way to hold statistical practitioners accountable for their work?</span>
+
