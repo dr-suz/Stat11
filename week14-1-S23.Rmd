@@ -166,7 +166,7 @@ In 2016, the American Statistical Association developed (and has continued to re
 
 We've seen how histograms are useful descriptors for numeric data but how they can vary widely depending on the sample size and the bin size. We discussed how in descriptive analyses it is important to have both visual and mathematical summaries for numeric data. This came up again in Unit 3 when we need to assess the "nearly Normal" condition for inference for an unknown mean with a small sample size. 
 
-<span style="color:red">[include some links to bad/misleading graphics]</span>
+Here's a [Reddit page](https://www.reddit.com/r/dataisugly/) that's dedicated to bad data visualizations. Take a look around and see what you think about some of the top examples on this page. 
 
 ## Organizing and Collecting Data 
 
@@ -178,7 +178,7 @@ We've seen how histograms are useful descriptors for numeric data but how they c
 
 * Motivation of the main research question 
 
-<span style="color:red">[something about balance of transparancy and data privacy, respecting personal identities and gathering useful information, see if can find examples in public health]</span>
+Researchers must often consider a balance between transparency of their research methods and data privacy. (For example, researchers must be careful about [data identifiability](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html).) Another careful balance in statistical analyses involves respecting personal identities while still gathering useful information from data. 
 
 ### Race 
 
@@ -195,12 +195,12 @@ We've seen how histograms are useful descriptors for numeric data but how they c
 
 [Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6)
 
-<span style="color:red">[include example chi-square procedure from AMSTAT article]</span>
+Here's [an example of a chi-squared procedure](https://magazine.amstat.org/blog/2022/06/01/jedi_june22/) that can yeild very different results depending on how gender is categorized.
 
 
 ## Assumptions and Conditions in Statistical Inference 
 
-All statistical inference methods rely on some one (or more) assumption(s). By definition, an assumption is not something that we can ever prove is true. We may be able to disprove an assumption with a clever counterexample. In some sense, playing "the devil's advocate" is an important part of robust statistical inference. An analyst who earnestly tries to find counterexamples of a required assumption (like that of having independent data), will be able to present an analysis within the context of its limitations. A statistical analysis conducted with this kind of rigor and shared transparently ultimately improves upon the quality of science. However, a lack of transparency can often lead to better individual outcomes such as more publications and funding awards, at least in the short-term. For example <span style="color:red">(autism and vaccines research and other forged data examples - maybe even 2016 election data ex.)</span>
+All statistical inference methods rely on some one (or more) assumption(s). One of the fundamental assumptions that can be easily overlooked is in assessing whether or not the sample of data being analyzed is actually representative of the population to which the results are being generalized. By definition, an assumption is not something that we can ever prove is true. We may be able to disprove an assumption with a clever counterexample. In some sense, playing "the devil's advocate" is an important part of robust statistical inference. An analyst who earnestly tries to find counterexamples of a required assumption (like that of having independent data), will be able to present an analysis within the context of its limitations. A statistical analysis conducted with this kind of rigor and shared transparently ultimately improves upon the quality of science. However, a lack of transparency can often lead to better individual outcomes such as more publications and funding awards, at least in the short-term. For example here's a [case of a bad statistical analysis](https://magazine.amstat.org/blog/2021/02/01/miller-controversy-perspective/) (and some more writing on this example for those who are interested [here](https://williamsrecord.com/434506/news/professor-of-mathematics-steven-miller-issues-legal-statement-suggesting-ballot-irregularities-in-pa-conclusions-repudiated-by-statisticians-and-political-scientists/) and [here](https://williamsrecord.com/435109/opinions/a-rebuttal-to-steven-millers-report-on-pa-gop-mail-in-ballot-requests/)) (finding a confidence interval for a difference in proportions).
 
 
 <span style="color:purple">Q) What do you think is an effective way to hold statistical practitioners accountable for their work?</span>
