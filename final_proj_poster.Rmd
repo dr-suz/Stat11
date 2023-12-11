@@ -1,7 +1,6 @@
 ---
 title: "Creating your Final Project Poster"
 author: "STAT 011 with Prof Suzy"
-date: "Spring '23"
 output:
   bookdown::html_document2: 
     code_folding: show
@@ -20,15 +19,13 @@ library(gcookbook)
 options(digits = 3)
 ```
 
-Instructions for printing your poster at the Media Center are available on their [website](https://www.swarthmore.edu/language-and-media-centers/media-center). Your poster should be 48x35 inches (landscape is standard, but you can also choose portrait). 
+Instructions for printing your poster at the Media Center are available on their [website](https://www.swarthmore.edu/language-and-media-centers/media-center). Your poster should be 48x35 inches (landscape or portrait orientation is fine). 
 
 $~$
 
-$~$ $~$  \Large  **Do not wait until the last minute to print your poster**
-
 \normalsize 
 
-Your poster should include:
+A poster should typically include information such as:
 
 1. Title
 2. Group members
@@ -51,13 +48,8 @@ Your poster should include:
     + Were there any additional analyses that you would have liked to carry out had you had more time?
 
 
-*Note:* If you think different section headers would better represent your poster, you are welcome to change these sections. Please ask me if you have any questions. 
 
-
-
-# Creating Your Poster in PowerPoint, Google Slides, or Keynote
-
-There are many templates available online - if you find one you like better than the examples below, feel free to use it! Make sure you change the page size to be the appropriate dimensions, and edit away. Regardless of how you create your poster, *please* change the default color scheme. You can also start from scratch, but I find it's much easier to work from a template. 
+There are many poster templates available online - if you find one you like better than the examples below, feel free to use it! 
 
 Resources: 
 
