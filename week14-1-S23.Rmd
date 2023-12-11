@@ -189,9 +189,9 @@ Researchers must often consider a balance between transparency of their research
 
 ### Gender or sex
 
-[A call for better practices](https://profsuzy.github.io/Stat11/Towards_statistical_best_practices.pdf) 
+[A call for better practices](https://dr-suz.github.io/Stat11/Towards_statistical_best_practices.pdf) 
 
-[A rebuttal](https://profsuzy.github.io/Stat11/a_big_ask.pdf) 
+[A rebuttal](https://dr-suz.github.io/Stat11/a_big_ask.pdf) 
 
 [Sex and gender analysis improves science and engineering](https://www.nature.com/articles/s41586-019-1657-6)
 
