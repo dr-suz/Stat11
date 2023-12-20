@@ -1,0 +1,437 @@
+---
+title: "Stat 011 Test 3"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 12pt
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(png)
+options(knitr.kable.NA = '')
+
+#vg_data <- read_csv("~/Google Drive/Swat docs/Stat11_S20/Midterm1/vgsalesGlobale.csv")
+#vg_subset <- vg_data %>% filter((Publisher=="Nintendo")|
+#                                (Publisher=="Namco Bandai Games")|(Publisher=="Electronic Arts")) %>% 
+#                         filter(Global_Sales <= 4)
+theme_set(theme_bw())
+```
+
+\hspace{1in} **Do not flip this page until instructed to do so.** 
+
+\vspace{.2in}
+
+**Instructions:** The first part of this test is multiple choice questions that do not require any additional explanation or work. No extra work will be considered in the grading of these questions but you can get partial credit for many of these questions as some answers may be better than others. For each of the multiple choice questions, base your choice off of which answer you think is the best or most appropriate. The last part of this test is free response questions. For these questions, you must show all your work and/or provide enough justification and explain your reasoning in order to get full credit or be considered for partial credit.  
+
+**Take a deep breath.** 
+\vspace{2mm}
+
+**Test organization:** There are $25$ questions in total on this test and they are organized into three subsections: Section 1 contains  20 multiple choice or matching questions (the first 10 are worth 2 points and the last 10 are worth 4 points), Section 2 contains 5 free-response questions (each is worth 6 points), Section 3 contains two  extra credit opportunities. If you need additional paper you may come to the front of the class and pick some up. The problems within each section are roughly organized by increasing level of difficulty. 
+
+\vspace{.2in}
+
+**First and Last Name:** _____________________________
+
+\vspace{.2in}
+
+**Swarthmore Username:** ______________________________
+
+\vspace{0.5cm}
+
+
+You have prepared for this test and with a clear and well-rested mind, you are ready to show me what you have learned this semester. As with the previous tests, the purpose of this exam is to measure your understanding of the material we have covered. This is nothing more than a metric for your professor to evaluate your preparedness to think statistically at this particular moment in time and in this particular setting. This is not a perfect measure of your knowledge and does not predict your future statistical skills. 
+
+
+**Take a deep breath, once more.** 
+
+
+\pagebreak
+
+Page intentionally left blank. 
+
+\pagebreak 
+
+# Section 1: Multiple Choice Questions
+## The following questions (1-10) are worth 2 points each. 
+
+**1.** Which of the following is not like the others? **Circle one.** 
+
+(a) `prop.test()`
+
+(b) `chisq.test()`
+
+(c) `t.test()`
+
+\vspace{2mm}
+
+
+**2.** Which of the following is not like the others? **Circle one.** 
+
+(a) Scatter plot
+
+(b) Contingency table 
+
+(c) Bar chart 
+
+(d) Box plots 
+
+
+\vspace{2mm}
+
+**3.**  A 5-number summary *does not* tell you information about which of the following? **Circle all that apply.** 
+
+(a) The range of values a variables takes on.  
+
+(b) The location of the values of a variable.   
+
+(c) The number of modes a variable has. 
+
+(d) How skewed the values of a variable are. 
+
+\pagebreak 
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("./images/MusicConsumptionL.png", dpi=300)
+```
+
+**4.**  The graph above appeared in the New York Times *What’s Going On in This Graph?* series. It breaks down how we consumed music in 2018 by genre to compare traditional sales (defined as sales and radio play) with the combination of traditional sales and streaming (defined as playing music online). Which of the following statements are supported by this graph? **Circle all that apply.** 
+
+(a) Traditional music sales indicate that musical preference is more evenly split than is indicated by considering traditional sales and streaming.
+
+(b) R\&B/Hip-Hop is the most popular musical genre based on streaming alone. 
+
+(c) People are more likely to buy rock music through traditional sales than to stream it. 
+
+(d) There is no statistically discernible difference in the popularity of pop music and R\&B/Hip-Hop based on traditional sales only. 
+
+\vspace{2mm}
+
+**5.** Suppose Katie wants to investigate whether Swarthmore upperclassmen (juniors and seniors) tend to read more than Swarthmore underclassmen (freshmen and sophomores). Would she collect data to investigate this question using random sampling, random assignment, or both? **Circle one.** 
+
+(a) Random sampling only 
+
+(b) Random assignment only 
+
+(c) Both random sampling and random assignment
+
+\vspace{2mm}
+
+**6.** An article on the CNN web page begins with the sentence, "Family doctors overwhelmingly believe that religious faith can help patients heal, according to a survey released Monday." Later, the article states, "Medical researchers say the benefits of religion may be as simple as helping the immune system by reducing stress," and Dr. Harold Koenig is reported saying that "people who regularly attend church have half the rate of depression of infrequent churchgoers." Which of the following critiques applies to this statement? **Circle all that apply.** 
+
+(a) The conclusion isn't possible without knowing how the data was collected. 
+
+(b) The conclusion isn't possible without knowing the significance level. 
+
+(c) The conclusion isn't possible because this is based on an observational study. 
+
+(d) The conclusion isn't possible without knowing the p-value. 
+
+\vspace{2mm}
+
+**7.** Bella flips a fair coin 10 times. Which is more likely – that the flips result in 5 heads and 5 tails, or that the flips result in 6 of one outcome and 4 of the other? **Circle one.** 
+
+(a) 5 of each is more likely. 
+
+(b) 6-4 split is more likely. 
+
+(c) These are equally likely.
+
+\vspace{2mm}
+
+**8.** Suppose that Judith and Andrew want to select a random sample of Delaware County residents and ask each person whether or not they spent Thanksgiving day at their own home. Suppose also that Andrew wants to estimate the population proportion with a margin of error of $0.04$ and $95\%$ confidence level, and Judith wants to estimate the population proportion with a margin of error $0.02$ at a $95\%$ confidence level. Who would need to use a larger sample size? **Circle one.** 
+
+(a) Judith needs to use a larger sample size.
+
+(b) Andrew needs to use a larger sample size. 
+
+(c) They would both need the same sample size.
+
+(d) There is not enough information to answer this question. 
+
+\vspace{2mm}
+
+```{r echo=FALSE}
+shade_under_curve = function(p, d, left=NULL, right=NULL, distrib, fill, ...){
+  
+  if(!is.null(left)){
+    
+    shade = rbind(c(d[1, "x"], 0), d[d$x<left,], c(left,0))
+    
+  } else if(!is.null(right)){
+    
+    shade = rbind(c(right,0), d[d$x>right,], c(d[nrow(d), "x"], 0))
+    
+  }
+  
+  value = c(left, right)
+  
+  ytop<-distrib(value,...)
+  
+  p + geom_segment(aes(x=value,y=0,xend=value,yend=ytop)) +
+    geom_polygon(data = shade, aes(x, y), alpha=0.2, fill=fill) 
+}
+```
+
+```{r echo=FALSE}
+
+mean_ = 0
+sd_ = 4
+
+x = seq(qnorm(c(0.001), mean_, sd_),qnorm(c(0.999), mean_, sd_),0.001) 
+
+distdata = data.frame(x=x,y=dnorm(x,mean_,sd_))
+
+p = qplot(x=distdata$x,y=distdata$y,geom="line") 
+```
+
+
+**9.** Suppose Ell conducts a hypothesis test to determine whether or not there is a statistically discernible difference in the average life span of field mice, $\mu_{f}$, and city mice, $\mu_{c}$ (measured in months). 
+
+```{r echo=FALSE, fig.align='c', fig.height=3}
+#shade_under_curve(p, distdata, right=qnorm(0.025, mean_, sd_, lower.tail=FALSE), distrib=dnorm, mean=mean_, sd=sd_, fill = "red")  
+p2 = shade_under_curve(p, distdata, left=qnorm(0.034/2, mean_, sd_), distrib=dnorm, mean=mean_, sd=sd_, fill = "green") 
+shade_under_curve(p2, distdata, right=qnorm(1-0.034/2, mean_, sd_), distrib=dnorm, mean=mean_, sd=sd_, fill = "green") + 
+  labs(title="Sampling distribution of the difference in means") + 
+  xlab(" ") + ylab(" ") + 
+  theme(axis.text.y = element_blank(), axis.ticks.y=element_blank())
+```
+
+The plot above represents the theoretical sampling distribution of the difference in sample means, $\bar{X}_{f} - \bar{X}_{c}$, under the null hypothesis. The region shaded in green corresponds to Ell's p-value. Suppose the $\bar{x}_{f,obs} > \bar{x}_{c, obs}$. Which of the following numbers is closest to the observed difference in mean life spans? **Circle one.** 
+
+(a) $5$
+
+(b) $7$
+
+(c) $8$
+
+(d) $10$ 
+
+\vspace{2mm}
+
+**10.**  Suppose Freddy is also interested in testing for a difference in the average life span of field mice, $\mu_{f}$, and city mice, $\mu_{c}$ and Freddy collects another random sample of the same size and sets an $\alpha = 0.05$ level of significance. 
+
+
+```{r echo=FALSE, fig.align='c', fig.height=3}
+#shade_under_curve(p, distdata, right=qnorm(0.025, mean_, sd_, lower.tail=FALSE), distrib=dnorm, mean=mean_, sd=sd_, fill = "red")  
+p2 = shade_under_curve(p, distdata, left=qnorm(0.05/2, mean_, sd_), distrib=dnorm, mean=mean_, sd=sd_, fill = "blue") 
+shade_under_curve(p2, distdata, right=qnorm(1-0.05/2, mean_, sd_), distrib=dnorm, mean=mean_, sd=sd_, fill = "blue") + 
+  labs(title="Sampling distribution of the difference in means") + 
+  xlab(" ") + ylab(" ") + 
+  theme(axis.text.y = element_blank(), axis.ticks.y=element_blank())
+```
+
+If the area under the curve in the plot above is equal to $0.05/2 = 0.025$, then which of the following observed differences in means would lead Freddy to reject the null in favor of the alternative? **Circle all that apply.** 
+
+(a)  $\bar{x}_{f,obs} - \bar{x}_{c, obs} = -5$
+
+(b)  $\bar{x}_{f,obs} - \bar{x}_{c, obs} = 5$
+
+(c)  $\bar{x}_{f,obs} - \bar{x}_{c, obs} = -10$
+
+(d) $\bar{x}_{f,obs} - \bar{x}_{c, obs} = 10$
+
+
+
+\pagebreak
+
+## The following questions (11-20) are worth 5 points each. 
+
+**11.** Which would be larger – the standard deviation of the weights of $1000$ randomly selected African lions, or the standard deviation of the weights of $10$ randomly selected (domestic) house cats? **Circle one.** 
+
+(a) The standard deviation of the lions' weights.  
+
+(b) The standard deviation of the house cats' weights. 
+
+(c) It is not possible to tell without observing the data first. 
+
+
+
+**12.** Suppose Michael collects a random sample of mice from a nearby field to determine if the average length of the field mice is smaller than 3 inches, that is, 
+$$H_0: \mu = 3in \quad\text{vs}\quad H_A: \mu < 3in.$$
+Which of the following will *not change* if Ariza collects an independent random sample (with the same sample size) from the same population and performs the same analysis? **Circle all that apply.** 
+
+(a) $\bar{x}$ 
+
+(b) The $p-$value
+
+(c) $\mu$ 
+
+(d) $SE(\bar{x})$ 
+
+
+**13.** Suppose Tyrique collects a random sample of data to conduct a two-sided hypothesis test of whether two population means differ. The p-value turns out to be $0.088$. What can you say about a $95\%$ confidence interval for the difference in population means, calculated from the same sample of data? **Circle one.** 
+
+(a) The interval includes only negative values. 
+
+(b) The interval includes both negative and positive values. 
+
+(c) The interval includes only positive values. 
+
+(d) We can't say anything about the values the interval contains. 
+
+
+
+**14.** Suppose Helena conducts a hypothesis test about a population mean and calculates a t-test statistic equal to $0.74$. Which of the following is the best interpretation of this value? **Circle one.** 
+
+(a) If the null hypothesis were true, the probability would be $0.74$ of obtaining a sample mean as far as observed from the hypothesized value of the population mean. 
+
+(b) The probability is $0.74$ that the null hypothesis is true. 
+
+(c) The sample mean is $0.74$ standard errors greater than the hypothesized value of the population mean. 
+
+(d) The sample mean is equal to $0.74$ times the standard error.
+
+
+\pagebreak 
+
+
+```{r echo=FALSE, fig.align='c', fig.height=3}
+set.seed(101)
+wait_dat = tibble(mins = c(rchisq(15, 2), rchisq(12, 6)), lot = c(rep("Arrivals", 15), rep("Departures",12)))
+
+wait_dat %>% ggplot(aes(x=mins)) + geom_boxplot() + 
+  xlab("idling time (in minutes)")
+```
+
+**15.** The box plot above represents of the amount of time a random sample of different cars are permitted to idle in the pickup lane outside an airport before a parking attendant approaches and makes the driver move their car. Suppose people from arriving flights appear at the pickup lane in need of a ride on an average at about every three minutes. For a taxi driver sitting in the pickup lane at the *best possible* 3-minute interval, what is the probability that a passenger in need of a ride appears before the parking attendant makes him move his cab? **Circle one.**
+
+(a) $5\%$
+
+(b) $10\%$
+
+(c) $50\%$
+
+(d) $70\%$
+
+
+\vspace{3mm}
+
+Suppose you take a random sample of $70$ (physical copies of) books from all Swarthmore libraries. For problems 16-19, indicate the appropriate inference procedure from the four listed below. (You may or may not use all four procedures.)
+
+  1) z-interval for proportion
+
+  2) z-test for proportion
+
+  3) t-interval for mean 
+
+  4) t-test for mean
+  
+\vspace{2mm}
+
+
+**16.** How old, on average, is a book from this library? 
+
+\vspace{1mm}
+
+**17.** Are $65\%$ of books in this library less than $10$ years old? 
+
+\vspace{1mm}
+
+**18.** What percentage of books in this library contain fewer than $250$ pages? 
+
+\vspace{1mm}
+
+**19.** What percentage of books in this library have been borrowed at least once in the past $5$ years?  
+
+\vspace{1mm}
+
+**20.** For each of the four example research questions below, indicate which Chi-squared procedure should be used to answer the question. (You may or may not use all three procedures.)
+
+  1) Chi-squared test for homogeneity 
+
+  2) Chi-squared test for goodness-of-fit 
+
+  3) Chi-squared test for independence 
+
+
+(a) A business selling desk organizers suspects that the blue version is twice as popular as the white version and three times as popular as the black version. At the end of the month, do the sales of this item match her hypothesized popularity? 
+
+(b) Is a person’s favorite color is associated with their favorite sport?
+
+(c) Does the use of steroids in collegiate athletics differ across the three NCAA divisions?
+
+(d) Is someone's education level related to their marital status? 
+
+\vspace{1mm}
+
+# Section 2: Free Response Questions
+
+## The following questions are worth 6 points each. 
+
+You do not need to write in complete sentences but your answers must be clear and legible to receive full credit.  
+
+
+**21.** An internet company is planning to test which of two online ad campaigns is more effective in generating clicks on their site. Suppose you are hired to conduct this test. Address the following questions. 
+
+* What are the observational units and the variable(s) of interest and their type(s)? 
+
+* What is the parameter of interest? 
+
+* Should you answer this question with a hypothesis test or a confidence interval? 
+
+
+
+\vspace{2in}
+
+For questions 22 and 23 consider the following scenario:
+
+Anthropologists have found two burial mounds in the same region. They know several tribes lived in the region and that the tribes have been reliably classified according to different lengths of skulls. They measure a random sample of $50$ skulls from each burial mound and want to determine if the two mounds correspond to different tribes. Suppose they calculate a $95\%$ confidence interval for the difference in skull length to be between $0.056$in and $0.103$in and they calculate a p-value of $0.0082$. 
+
+**22.** Explain the meaning of the confidence interval within the context of this problem. 
+
+
+\vspace{2in}
+
+
+**23.** Explain the meaning of the p-value within the context of this problem. 
+
+
+
+\pagebreak
+
+**24.** Your aunt tells you about a news report claiming that scientists found "evidence that time spent on social media increases the risk of depression by more than $80\%$". You look up the study and it turns out that a professor who coauthored the paper reporting this study works at a university near your aunt's home. Suppose you have arranged to meet with this professor the next time you're in town visiting your aunt. Outline 3-5 (realistic) steps you should take (either before, during, or after your meeting) to assess the reliability of the conclusions from the study. 
+
+
+
+\vspace{3in}
+
+
+**25.** What is a statistical method that you had heard about before taking this class? What was your impression of this method then and how does that compare to your impression now? Give a specific example of something you learned this semester that changed (or did not change) your impression of this method. 
+
+
+
+
+<!--\pagebreak
+
+# Section 3: Extra Credit 
+
+All extra credit applies to your grade on this test up to $100$ total possible points.
+
+## The following is worth 3 points 
+
+You run some R code and get the following error message: 
+
+Error in tibble(sample) %>% ggplot(., aes(x = sample)) : could not find function "%>%"
+
+\vspace{1cm}
+What do you need to do to get the code to run? 
+
+
+\vspace{2in}
+
+
+## The following is worth 6 points 
+
+If the response rate to my end of the semester evaluation form is at least $89\%$ of our class size, six percentage points will be added to everyone's Test 3 grade. --> 
+
+
+
+

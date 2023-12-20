@@ -1,0 +1,246 @@
+---
+title: "Stat 011 Test 2"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+fontsize: 12pt
+geometry: margin=1in
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(kableExtra)
+library(knitr)
+library(tidyverse)
+library(png)
+options(knitr.kable.NA = '')
+
+#vg_data <- read_csv("~/Google Drive/Swat docs/Stat11_S20/Midterm1/vgsalesGlobale.csv")
+#vg_subset <- vg_data %>% filter((Publisher=="Nintendo")|
+#                                (Publisher=="Namco Bandai Games")|(Publisher=="Electronic Arts")) %>% 
+#                         filter(Global_Sales <= 4)
+theme_set(theme_bw())
+```
+
+You must show all work and/or explain your reasoning in order to get full credit or be considered for partial credit. You do not need a calculator but can use one if you'd like. For any calculation problems, simply writing out the formula to find the answer will suffice. You are not allowed to receive or share any information during the exam.
+
+\vspace{.5in}
+
+**First and Last Name:** _____________________________
+
+\vspace{.5in}
+
+**Swarthmore Username:** ______________________________
+
+\vspace{0.5cm}
+
+
+You did a great job listening to and participating in our class discussions about this material. **Take a deep breath.** The purpose of this test is to measure your understanding of the material we have covered so far. This is not a perfect measure of your knowledge and does not predict your future statistical skills. Remember that you will have the opportunity to submit corrections to any problems you do not get full credit for the first time. 
+
+There are 10 questions in total on this test and they are organized into XX subsections: problems about XX, problems about XX, and critical thinking problems. If you need additional paper you may come to the front of the class and pick some up. 
+
+Problems XXXX do not require any supporting written statements. All of the other problems do. You **do not** need to write in complete sentences for any of these questions but make sure that I can understand you clearly and can read your handwriting. 
+
+\vspace{1in}
+
+
+\hspace{1in} **Do not flip this page until instructed to do so.** 
+
+
+
+
+
+\pagebreak
+
+
+
+
+**1.** Consider the following probabilities and order them from smallest to largest. 
+
+(A) The probability that a randomly chosen American adult 
+
+(B) The probability that 
+
+(C) The probability that 
+
+
+(a) $A \leq B \leq C$
+
+(b) C, B, A
+
+(c) B, A, C
+
+(d) C, B, A
+ 
+
+**X.** Which of the following dot plots do you think are real and which are made up? Justify your answer for each. 
+
+(A)
+```{r echo=FALSE}
+set.seed(101)
+samp.df = tibble(heads=rbinom(20, prob=.5, size=10), trial = 1:20)
+ggplot(samp.df, aes(x=trial, y=heads)) + 
+  ylim(0,10) + #
+  xlab(" ") +
+  geom_dotplot(binaxis='y', stackdir='up') + coord_flip()  + 
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() )
+```
+
+(B)
+```{r echo=FALSE}
+samp.df2 = tibble(heads=c(2,3,3,4,rep(5,4), rep(6,5), rep(7,3), 8, 9,9,10), trial=1:20)
+ggplot(samp.df2, aes(x=trial, y=heads)) + 
+  ylim(0,10) + #
+  xlab(" ") +
+  geom_dotplot(binaxis='y', stackdir='up') + coord_flip()  + 
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() )
+```
+
+(C)
+```{r echo=FALSE}
+samp.df3 = tibble(heads=c(2,3,3,3, rep(4,4), rep(5,6), rep(6,3), 7, 8,8), trial = 1:20)
+ggplot(samp.df3, aes(x=trial, y=heads)) + 
+  ylim(0,10) + #
+  xlab(" ") +
+  geom_dotplot(binaxis='y', stackdir='up') + coord_flip()  + 
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() )
+```
+
+(D)
+```{r echo=FALSE}
+samp.df4 = tibble(heads=c(7,8,8, rep(9,4), rep(10,4), rep(11,4), rep(12,2), rep(13,3)), trial = 1:20)
+ggplot(samp.df4, aes(x=trial, y=heads)) + 
+  ylim(0,20) + #
+  xlab(" ") +
+  geom_dotplot(binaxis='y', stackdir='up') + coord_flip()  + 
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() )
+``` 
+(E)
+```{r echo=FALSE}
+samp.df5 = tibble(heads=c(2,3,3,rep(4,2), rep(5, 9), rep(6,3), 7,7, 9), trial = 1:20)
+ggplot(samp.df5, aes(x=trial, y=heads)) + 
+  ylim(0,10) + #
+  xlab(" ") +
+  geom_dotplot(binaxis='y', stackdir='up') + coord_flip()  + 
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() )
+``` 
+
+
+**3.** Complete the following table and calculate the different probabilities. 
+
+Race and socioeconomic or covid in CA 
+
+
+**4.** Draw a Venn Diagram based on the previous question. One random variable represent the categorical variable race and the other random variable represent the categorical variable socioeconomic status. 
+
+How many levels would you use for this categorical variable? 
+ 
+ 
+ 
+Residentialsegregation also systematically shapes health-care
+access, utilisation, and quality at the neighbourhood, health-care system, provider, and
+individual leve $^{[1]}$ 
+ 
+**X.**  https://watermark.silverchair.com/mxp001.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAscwggLDBgkqhkiG9w0BBwagggK0MIICsAIBADCCAqkGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQML_rmj3L9ykJBFHnUAgEQgIICeiphyPJ2Zq0odz308Wbw1vlnZtm57vmn_DJAPJOGVKSOSAym5M0LvqHNPe1gXI8yp35eeo6qHmq3SaxYVKF5WhlgcCo-9XwAxUl1tp7UuY735MjLjzAj8XQWtlunI7LjIhLuRnzzSPdFtzhxvfNM1ctrgvFtxxDKxjKU-X1wiNTLhA1dRJicieW8_v2M6ouuuWkI1pXHGHq6skaUvF0lN4Mdp85TkrKjYkQ4btVsAOrswiWhS9CyMuu3duUbTDRq8HBdOc1ximnWnK7nStXjD2hfvKobrOVA75P67C_hb1ChVRyQz_qAXSN_PC-V_CMdgPe6qMQPMzgBVYHXq9Z0ezrjoRlwl4EateYvkm4mB33peGh2Gr0hf-N_0JMXYAFkbfgaqpYKIpTissJ0jvWenSJs6Dg1R2qKRtDMeNhaNwlYUX5fRoA8pVjWUp0UbhAYCjQiX6JGwzt1eWL8Emk7jgBQfiUMDoTu-Mx7ziRYLJ6X_cEhYlMSq5cB-TZkBmODfyvGqZ1m2IgMmDfyraIiTuoeQYU0B0qmmnt8QDfR6oV7M8y2xnzQ0hTd2bbgNSoio1MkwoZ6CWOzOdi_SW6kRqQ7B3988zD9bRxDnAoJoNINLfzLK7nzxoERJPYbY6T2iL2cMXkJGfSAvqeoO0U04Y9YIrZBh5FWy9jpOh3vfXc5eBuF-zbE6W0x2iWVgOhNYquNu0OuQadGGrPccdaMWsBS5DfDm9vT0efahrFOCP7GrIf013udFSoZl9E7JYnHubLxd6lJKr_80e9vME48WncZOdKmwYfLngERMDoRCwBod0XoTlFm-Xa8dKU8GF2QXFS5KH16SBXWyBc
+
+
+**X.** 
+
+
+
+***
+
+Last year, the NYC Department of Health and Mental Hygiene conducted several Health Opinion Polls of adults ages 18 or older to measure New Yorkers’ knowledge, opinions, and experiences related to health and security. Data were collected via online panels which have known limitations such as coverage and selection bias, and low participation rates. Nevertheless, public opinion polling is a valuable tool to measure how people experience government policies and whether experiences differ across marginalized groups. These data provide direction for action in responding to New Yorkers’ needs as the City continues to confront the COVID-19 pandemic. 
+
+In one poll of  $1,200$ adults conducted from March 26 - March 31, 2020, the prevalence of adults facing the threat of eviction was $10.6\%$$^{[2]}$ 
+
+
+**X.** Which of the R code chunks on the next page produce a $90\%$ confidence interval for the proportion of New Yorkers' who are facing the threat of eviction? 
+
+
+
+**7.** Draw a picture of the distribution of the test statistic as a function of the sampling proportion $\hat{p}$. Label the center of the curve, the observed value of the test statistic, and shade the region corresponding to the p-value. 
+
+**X.**
+Critique the following responses for clarity and correctness.
+
+1. A $90\%$ confidence interval is used to show that $90\%$ of the time when you pick a sample from the population (adults in NYC) you will find the proportion adults facing the threat of eviction lies between the interval $(0.092, 0.122)$.
+
+2. There is a $90\%$ chance that $0.092 \leq  p \leq 0.122$.
+
+3. This means that if we took many, many simple random samples and constructed a confidence interval based on each sample, $90\%$ of the resulting confidence intervals would contain the true proportion. 
+
+(A)
+```{r}
+prop.test(x=.106*1200, n = 1200, conf.level = 0.90)
+```
+
+(B)
+```{r}
+prop.test(x=.106, n = 1200, conf.level = 0.90)
+```
+
+(C)
+```{r}
+prop.test(x=.106*1200, n = 1200, p = .106, alternative="less", conf.level = 0.90)
+```
+
+
+
+***
+
+**X.**
+According to a 2015 assessment by the U.S. Department of Housing and Urban Development, 564,708 people were homeless on a given night in the United States. At a minimum, 140,000 or 25 percent of these people were seriously mentally ill and 250,000 or 45 percent had any mental illness. By comparison, a 2016 study found that 4.2 percent of U.S. adults have been diagnosed with a serious mental illness.$^{[4]}$
+
+What is the probability of experiencing homelessness, given that someone has a serious mental illness? Show all your work. 
+
+
+**X.** Is homelessness independent of mental illness? Justify your answer with at least two reasons.  
+
+
+
+
+Homelessness among people with mental illness and addictions has emerged as a significant health and social issue in North America (1,2). Various approaches have been developed to support this population, including assertive community treatment (ACT) (3) and intensive case management (ICM) (4). However, unless these programs are paired with permanent housing, their effectiveness in reducing homelessness and improving mental health and psychosocial outcomes is limited.
+
+Pathways to Housing developed Housing First, a novel approach for this population. In contrast to “treatment first” approaches, Housing First provides immediate access to housing in the community with rent supplements and with no requirements for a person’s housing readiness. 
+
+
+In a 2015 a longitudinal study of $n=119$ people experiencing homelessness was conducted across five cities in Canada. Participants were randomly chosen to receive a Housing First intervention and were surveyed 18 months after being housed and were asked if they had experienced a major negative life change in the time since. Out of the $119$ participants receiving this intervention, only $10$ indicated having experienced a negative life change since receiving housing. 
+
+Human rights activists want to encourage policy-makers to adopt a Housing First approach to address increasing rates of homelessness. Namely, activists want to show that the effects of Housing First interventions are not arbitrary.  They want to show policy makers that observing only $10$ individuals having experienced negative life changes since the intervention is not due simply to chance, they want to argue that whether or not a formerly houseless individual experiences a negative life event or not after receiving housing is 
+
+Make an arguement for why this wouldn't be random and one for why it would be... 
+
+
+
+
+
+**X.** Define the population parameter $p$ in the context of this question. Suppose you are a policy maker who is skeptical of the Housing First policy. What might you propose is the probability that someone who is homeless is going to experience a negative life event within an $18$ month period? 
+
+
+**X.** Now, suppose you are a proponent of the Housing First policy and you wish to statistically evaluate the probability that someone who is homeless is going to experience a negative life event within an $18$ month period based on the data collected in the study above. Design a hypothesis test by stating your null and alternative hypotheses in terms of $p$. Also, make sure you specify how likely you are to incorrectly reject your null hypothesis.  
+
+
+**X.** Which of the following R-commands will produce a p-value 
+
+
+
+**Sources** 
+
+$[1]$  https://med.emory.edu/departments/human-genetics/dei/documents_images/documents/lancet_2017_structural-racism-and-health-inequities.pdf
+
+$[2]$  https://www1.nyc.gov/assets/doh/downloads/pdf/epi/databrief123.pdf 
+
+$[3]$  https://ps.psychiatryonline.org/doi/full/10.1176/appi.ps.201400201
+
+$[4]$  https://www.bbrfoundation.org/blog/homelessness-and-mental-illness-challenge-our-society
+
+$[5]$  
