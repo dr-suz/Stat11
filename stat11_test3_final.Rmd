@@ -64,11 +64,11 @@ Page intentionally left blank.
 
 **1.** Which of the following is not like the others? **Circle one.** 
 
-(a) `prop.test()`
+(a) A hypothesis test about an unknown proportion.
 
-(b) `chisq.test()`
+(b) A Chi-square test of homogeneity.
 
-(c) `t.test()`
+(c) A t-test for an unknown mean.
 
 \vspace{2mm}
 
