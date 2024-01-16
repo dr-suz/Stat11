@@ -1,0 +1,189 @@
+---
+title: "Quiz 3 for Stat 11"
+date: "4.14.23"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+\vspace{4mm}
+**Name:** _____________________________________
+
+
+# Part 1: Multiple Choice
+
+**1.**  A matched pairs experiment is run comparing the answers of 25 married couples. How many degrees of freedom does this t-test have?    
+
+(a) 23 
+
+(b) 50 
+
+(c) 25 
+
+(d) 49 
+
+(e) 24
+
+\vspace{1cm}
+**2.**  Data collected by child development scientists produced the following 90\% confidence interval for the average age (in months) at which children say their first word: $10.6 < \mu_{age} < 13.7$. What is the correct interpretation of these findings?
+
+(a) We are 90\% sure that the average age at which children in this sample said their first word was between 10.6 and 13.7 months. 
+
+(b) If we took many random samples of children, about 90\% of them would produce this confidence interval.
+
+(c) We are 90% confident that the mean age at which children say their first word is between 10.6 and 13.7 months.
+
+(d) 90\% of the children in this sample said their first word when they were between 10.6 and 13.7 months old. 
+
+(e) We are 90\% sure that a child will say their first word when he is between 10.6 and 13.7 months old. 
+
+
+\vspace{1cm}
+**3.**  At one SAT test site students taking the test for a second time volunteered to inhale supplemental oxygen for 10 minutes before the test. In fact, some received oxygen, but others (randomly assigned) were given just normal air. Test results showed that 42 of 66 students who breathed oxygen improved their SAT scores, compared to only 35 of 63 students who did not get the oxygen. 
+
+Which procedure should we use to see if there is evidence that breathing extra oxygen can help test-takers think more clearly?
+
+(a) 1-proportion z-test
+
+(b) 1-sample t-test
+
+(c) 2-proportion z-test
+
+(d) 2-sample t-test
+
+(e) matched pairs t-test
+
+\vspace{1cm}
+**4.**  Assume that 10\% of students at a university wear contact lenses. We randomly pick 400 students. What is the **standard deviation** of the proportion of students in this group who may wear contact lenses?
+
+(a) $\frac{.10(1-.10)}{20}$
+
+(b) $.10(1-.10)$ 
+
+(c) $.10^2$
+
+(d) $\frac{.10(1-.10)}{400}$
+
+(e) $\sqrt{\frac{.10(1-.10)}{400}}$
+
+\vspace{1cm}
+**5.**  The college daily reported: "300 students living in university housing were polled. 180 said that they were satisfied with their living conditions. Based on this survey we conclude that 60\% of students living in dormitories are satisfied. The margin of error of the study is $\pm 6$ percentage points (with a 95\% degree of confidence). Which (one) of the following statements is correct?
+
+(a) A larger sample should be used to achieve the stated margin of error. 
+
+(b) The sample size is too small to achieve the stated margin of error. 
+
+(c) The margin of error is consistent with the sample size. 
+
+(d) The stated margin of error could have been achieved with a smaller sample size.
+ 
+(e) There is not enough information to determine whether the margin of error is consistent with the sample size.
+
+\vspace{1cm}
+**6.**  Using the t-table, estimate the p-value for a test statistic that is less than or equal to $1.71$ with $23$ degrees of freedom. 
+
+(a) $0.05$
+
+(b) $0.10$
+
+(c) $0.90$
+
+(d) $0.45$
+
+(e) $0.025$
+
+\vspace{1cm}
+**7.** Suppose that a device advertised to increase a car's gas mileage really does not work. (This is the true reality.) Without known the truth, we test this device on a small fleet of cars (with $H_0: \text{not effective}$ and a $0.05$ significance level), and our data results in a p-value of $0.004$. What probably happens as a result of our experiment?
+
+(a) We reject $H_0$, making a Type I error.
+
+(b) We correctly reject $H_0$.
+
+(c) We fail to reject $H_0$, making a Type II error.
+
+(d) We reject $H_0$, making a Type II error. 
+
+(e) We correctly fail to reject $H_0$.
+
+
+\vspace{1cm}
+**8.** What does a p-value indicate? 
+
+(a) The probability that the null hypothesis is true
+
+(b) The probability the null is true given the observed statistic
+
+(c) The probability of the observed statistic given that the alternative hypothesis is true
+
+(d) The probability that the alternative hypothesis is true
+
+(e) The probability of the observed statistic given that the null hypothesis is true
+
+
+# Part 2: Fill in the blank  
+
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+
+**9.** Census data for New York City indicate that 29.2% of the under-18 population is white, 28.2% Black, 31.5% Latino, 9.1% Asian, and 2% other races or ethnicities. The New York Civil Liberties Union points out that, of 26,181 police officers, 64.8% are white, 14.5% black, 19.1% Latino, and 1.4% Asian. Do the police officers reflect the ethnic composition of the city’s youth?  
+
+
+\vspace{1cm}
+**10.** A survey asked people "On what percent of days (in a month) do you get more than 30 minutes of vigorous exercise?" Using their responses we want to estimate the difference in exercise frequency between young adults (between ages $18$ and $35$) and older adults (over age $35$). 
+
+\vspace{2cm}
+**11.** The manufacturer of a refrigerator system produces refrigerators that are supposed to maintain a true mean temperature, $\mu$, of 48 F, ideal for certain beverages. The owner of a beverage company does not agree with the refrigerator manufacturer, and will conduct a hypothesis test to determine whether the true mean temperature differs from this value. 
+
+\vspace{2cm}
+**12.** Insurance companies track life expectancy information to assist in determining the cost of life insurance policies. Last year the average life expectancy of all policyholders was 77 years. ABI Insurance wants to determine if their clients now have a longer life expectancy, on average, so they randomly sample some of their recently paid policies. The insurance company will only change their premium structure if there is evidence that people who buy their policies are living longer than before. 
+
+<!--will also accept that CI is more appropriate here. must define $p_1 =$ percent of days young adults get more than 30 mins of exercise, $p_2 =$ percent of days older adults get more than 30 mins of exercise-->
+
+# Part 3: Free response 
+
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+\vspace{1cm}
+**13.**  Based on past experience, a bank believes that 4\% of the people who receive loans will not make payments on time. The bank has recently approved 300 loans. Based on the sampling distribution for the
+
+\vspace{2cm}
+sample proportion, $\rule{7cm}{0.15mm}$ is the standard deviation of the proportion of clients in this group who may not make timely payments. (Note you do not need to simplify your equation.)
+
+
+\vspace{1cm}
+**14.**  A report on the U.S. economy indicates that 28\% of Americans have experienced difficulty in making mortgage payments. A news organization randomly sampled 400 Americans from 10 cities named the "fastest dying cities in the U.S." (Forbes Magazine, August 2008) and found that 136 reported such difficulty. 
+
+To answer the question of whether or not this data indicates that the problem is more severe among these cities, we calculate the (observed) test statistic (Just plug the correct numbers into the correct formula, there is no need to simplify your answer.)
+
+\vspace{1cm}
+
+$$T.S._{obs} = \text{   } \rule{7cm}{0.15mm}$$
+
+
+ 
+\vspace{1cm}
+**15.**  A manufacturer claims that the mean amount of juice in its 16 ounce bottles are 16.1 ounces. A consumer advocacy group wants to perform a hypothesis test to determine whether the mean amount is actually less than this. Suppose the observed test statistic is $-2.11$. Plot this on the Student's t-distribution below and shade the region that corresponds to the p-value of this test. 
+
+!()[./images/q3.png]{height=2in}
+
+
+**16.** Of 346 items tested, 12 are found to be defective. Construct a $98\%$ confidence interval for the percentage of all such items that are defective. (Note you do not need to simplify your equations.) 
+
+
+\vspace{3cm}
+
+For problems $17$ and $18$ consider the following setting. 
+
+*Managers are considering holding informational workshops to help decrease anxiety levels among employees. They randomly select 20 employees to participate in a pilot workshop. These employees were given a questionnaire to measure anxiety levels before and after participating in the workshop. A test was performed to determine if the workshop was successful in decreasing anxiety levels.* 
+
+**17.**  Assess the necessary assumptions and conditions for conducting a hypothesis test with this data to answer the research question. 
+
+<!--
+* Independence 
+
+* Sample size or nearly normal -->
+
+
+\vspace{1cm}
+**18.**   The test results yielded a p-value of $0.008$. Supposing the pre-determined significance level is $0.05$, what is the conclusion of this study (in context)? 
+
+<!--Conclude that participation in the workshop corresponds with decreased employee anxiety. There is no random assignment (no control) but there is random selection. can generalize, no cause and effect. -->

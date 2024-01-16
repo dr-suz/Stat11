@@ -1,0 +1,200 @@
+---
+title: "Quiz 2 for Stat 11 (Solutions)"
+date: "9-10-23"
+output:
+  pdf_document: 
+    extra_dependencies: ["amsmath","amssymb","amsfonts"]
+---
+\vspace{4mm}
+**Name:** _____________________________________
+
+
+# Part 1: Multiple Choice (3 points each)
+
+**1.** The administration of a large university is interested in learning about the types of wellness programs that would interest its employees. Suppose that there are five categories of employees (administration, faculty, professional, staff, clerical, and maintenance) and the university decides to randomly select ten individuals from each category. What is this sampling plan called?
+
+(a) Cluster Sampling
+
+(b) Convenience Sampling
+
+(c) Stratified Sampling
+
+(d) Systematic Sampling
+
+(e) Simple Random Sampling
+
+\vspace{1cm}
+**2.**  Which of these can be modeled with a *Binomial* distribution?
+
+(a) whether or not a student has taken Statistics
+
+(b) the number of people we survey until we find two people who have taken Statistics
+
+(c) the number of people in a class of 25 who have taken Statistics
+
+(d) the number of people we survey until we find someone who has taken Statistics
+
+(e) the number of people registered for a Statistics class
+
+\vspace{1cm}
+**3.** We wish to compare the average ages of the math and science teachers at a high school. Which is the best way to collect the data?
+
+(a) Sample survey 
+
+(b) Experiment
+
+(c) Simulation
+
+(d) Observational study 
+
+(e) Census  
+
+\vspace{1cm}
+**4.**  On a physical fitness test middle school boys are awarded one point for each push-up they can do, and a point for each sit-up. National results showed that this group of boys average *18 push ups with a standard deviation of 4 push-ups, and average 34 sit-ups with standard deviation 11*. The mean of their combined (total) scores was therefore $18+34=52$ points. What is the standard deviation of their combined scores? 
+
+(a) 3.7  
+
+(b) 5.3 
+
+(c) 15 
+
+(d) 137
+
+(e) Cannot be determined
+
+
+\vspace{1cm}
+**5.**  In an experiment what is the primary purpose of blinding?
+
+(a) Reduce under coverage
+
+(b) Reduce randomness
+
+(c) Reduce confounding
+
+(d) Reduce variation
+
+(e) Reduce bias
+
+\vspace{1cm}
+**6.**  At the track, a gambler bets on the wrong horse in a 10-horse field nine times in a row. Later, when talking to a friend, he said he was confident that he would pick the winner the next time, because he was "due to pick a winner." Which of the comments below is most correct. 
+
+(a) If he doesn't pick the winning horse next time, he will shortly after that.
+
+(b) This is false reasoning because he doesn't appear to be lucky. 
+ 
+(c) This is false reasoning because there is no "law of averages" for independent events.
+
+(d) When there are 10 horses in a race and he has chosen the wrong horse nine times in a row, he statistically should pick a winner the next time.
+
+(e) None of the above apply.
+
+\vspace{1cm}
+**7.**  In a messy sock drawer, there are $25$ (single) socks. Ten of these socks are black, twelve of them are white, and three of them have colorful patterns on them. If you select two socks at random, what is the probability that you select two black socks?
+
+(a) $\left(1-\frac{3+12}{25}\right)\cdot\left(1-\frac{3+12-1}{25}\right)$
+
+(b) $\left(\frac{12}{25}\right)\cdot\left(\frac{11}{25}\right)$
+
+(c) $\left(\frac{10}{25}\right)\cdot \left(\frac{9}{24}\right)$
+
+(d) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
+
+(e) $\left(\frac{10}{25}\right)\cdot\left(\frac{9}{25}\right)$
+
+
+
+\vspace{1cm}
+**8.**  Political analysts estimate the probability that Candidate A will run for president in 2016 is $45\%$, and the probability that Candidate B will run is $20\%$. If their political decisions are independent, then what is the probability that only Candidate A runs for president?
+
+(a) $(1-0.45) + 0.2$
+
+(b) $0.2(1-0.45)$
+ 
+(c) $(1-0.45)(1-0.2)$
+
+(d) $0.45(1-0.2)$ 
+
+(e) $0.45 + (1-0.2)$
+
+# Part 2: Fill in the blank (4 points each)
+
+**To be eligible for partial credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+**9.**   A poll of 120 Ithacans found that 45 had visited the Museum of the Earth, and that 75 had been to Home Depot. Suppose we can assume that going to Home Depot and going to the Museum of the Earth are *independent events*. 
+
+Of all the people polled $\rule{3cm}{0.15mm}$ people have been to both. 
+
+| Home Depot |\vline Museum Yes | Museum No | **Total** |
+| --- | --- | --- | --- | 
+| Yes |\vline ??  |  | **75** |
+| No |\vline   |  | **45** |
+| **Total** |\vline 30  | 90 | **120** |
+
+\vspace{3cm}
+**10.**  Below is the distribution of the number of workers a restaurant keeps on staff for a 1-hour shift. Suppose the restaurant is open for 8 hours each day. 
+
+| **Probability** | 0.10 | 0.10 | 0.55 | 0.25 |
+| --- | --- | --- | --- | --- | 
+| **Number of workers per hour** | 3 | 4 | 5 | 6 |
+
+The expected value of the total number of workers who were present in the entire work day is 
+
+\vspace{1cm}
+
+$\rule{7cm}{0.15mm}$. 
+
+
+\vspace{3cm}
+**11.** 
+Hoping to learn what issues may resonate with voters in the coming election, the campaign director for a  candidate randomly selects blocks from each of the state's election districts. Staff members go there and interview all the residents they can find. The residents were asked to select the most important issues from a prepared list.
+
+The sampling technique used here is multistage. $\rule{3cm}{0.15mm}$ sampling occurs first with the districts 
+
+\vspace{1cm}
+
+as strata and $\rule{3cm}{0.15mm}$ sampling occurs next within each district.
+
+\vspace{2cm}
+**12.**  An experiment is run to determine which batteries last longest among several brands of AAA batteries. Every possible combination of battery brand and electronic device is tested in a random order. The twelve runs are ordered randomly. The time (in minutes) that each battery lasts under continuous usage is recorded. 
+
+The different devices (TV remote, hand-held game, flashlight and digital camera) serve as a $\rule{3cm}{0.15mm}$ in this experiment by accounting for the variability between the lengths of time batteries last in different devices.
+
+ 
+# Part 3: Math "essay" questions (10 points each) 
+
+**For full credit, your answer must show all of your work and/or explain all of your reasoning.**
+
+**13.** College students were given three choices of pizza toppings and asked to choose one favorite. Based on the following table showing the results, find the three requested probabilities below. (You do not need to simplify your answer.)
+
+| Toppings |  senior | junior | sophomore | freshman  |
+| --- | --- | --- | --- | --- |
+| cheese | 29 | 26 | 16  |  16 |
+| meat   | 16  | 16  | 29  | 25 |
+| veggie | 29 | 25 | 16 | 16 |
+
+
+
+$Pr(\text{favorite topping is NOT veggie}) = \rule{7cm}{0.15mm}$  
+
+\vspace{1cm}
+
+$Pr(\text{favorite topping is veggie} | \text{student is junior or senior}) = \rule{7cm}{0.15mm}$  
+
+\vspace{1cm}
+
+$Pr(\text{favorite topping is veggie} \cap \text{student is freshman}) = \rule{7cm}{0.15mm}$  
+
+\pagebreak
+**14.** In a stats class, $86\%$ of students eat breakfast in the morning and $55\%$ of students floss their teeth. $42\%$ percent of students eat breakfast and also floss their teeth. Find the probability that a student from this class eats breakfast or flosses (this is an *inclusive* or).  
+
+
+\vspace{4cm}
+**15.**  Insurance company records indicate that $13\%$ of all teenage drivers have been ticketed for speeding and $8\%$ have been ticketed for driving through a red light. If $5\%$ have been ticketed for both, what is the probability that a teenage driver has been issued a ticket for speeding but NOT for running a red light?
+
+\vspace{4cm}
+**16.**  Suppose the length of a cat's tail is roughly normally distributed with a mean of 12.5 cm and a standard deviation of 5 cm. Use the Normal (Z) table of probabilities to find the approximate probability of having a cat with a 8.75 cm tail or shorter. (Hint: Draw a picture to show the area under the curve corresponding to this probability.) 
+
+
+\vspace{4cm}
+**17.**  Suppose you want to foster some cats until they are adopted and you have room to host $4$ cats total. The shelter you are obtaining the cats from has told you that $60\%$ of their cats need to be treated for heart-worms. Use the table of Binomial probabilities to find the probability that no more than $2$ of the $4$ cats you will host will need to be treated for heart-worms.  
